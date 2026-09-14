@@ -17,6 +17,13 @@ function warleek_option_fields() {
 		'steam_appid'   => array( 'Steam-AppID',           'int',  '1867240', 'AppID von WARDOGS für den Patch-Notes-Sync.' ),
 		'clan_tag'      => array( 'Clan-Tag',              'text', '[WLK]',   'Wird an einzelnen Stellen (z. B. Clan-Seite, Dogtag-Zeile) angezeigt.' ),
 		'kontakt_email' => array( 'Kontakt-E-Mail',        'email','',        'Für Kontakt-Hinweise auf der About-us-Seite.' ),
+		'twitter_handle'=> array( 'X/Twitter-Handle',      'text', '',        'Ohne @, z. B. warleek. Für twitter:site/creator-Metas.' ),
+		'youtube_url'   => array( 'YouTube-Kanal',         'url',  '',        'Wird im Organization-Schema (sameAs) verlinkt.' ),
+		'twitch_url'    => array( 'Twitch-Kanal',          'url',  '',        'Wird im Organization-Schema (sameAs) verlinkt.' ),
+		'instagram_url' => array( 'Instagram',             'url',  '',        'Wird im Organization-Schema (sameAs) verlinkt.' ),
+		'tiktok_url'    => array( 'TikTok',                'url',  '',        'Wird im Organization-Schema (sameAs) verlinkt.' ),
+		'steam_group_url'=> array( 'Steam-Gruppe',         'url',  '',        'Link zur Steam-Community-Gruppe von Warleek.' ),
+		'fb_app_id'     => array( 'Facebook App-ID',       'text', '',        'Optional, für fb:app_id.' ),
 	);
 }
 

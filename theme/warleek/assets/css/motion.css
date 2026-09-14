@@ -9,7 +9,7 @@
 :root {
 	--wl-smoke-mask: url("../img/smoke-mask.svg");
 	--wl-smoke-tex: url("../img/smoke-tex.svg");
-	--wl-vt-dur: 620ms;
+	--wl-vt-dur: 520ms;
 }
 
 /* Alte Seite: löst sich als Rauch auf (Maske wächst + verschiebt sich, Helligkeit sinkt). */
@@ -22,7 +22,7 @@
 }
 /* Neue Seite: kommt darunter hoch, leicht skaliert, mit Fade. */
 ::view-transition-new(root) {
-	animation: wl-rise-in 520ms cubic-bezier(0.2, 0.7, 0.2, 1) 120ms both;
+	animation: wl-rise-in 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 ::view-transition-group(root) { animation-duration: var(--wl-vt-dur); }
 
@@ -54,11 +54,11 @@
 
 /* Smoke-Drift im Hero: zwei Texturlagen, langsam gegenläufig. Rein dekorativ (vom JS eingefügt). */
 .wl-smoke {
-	position: absolute; inset: -20% -10%; z-index: 0; pointer-events: none;
-	background: var(--wl-smoke-tex) center / 140% 140% repeat;
-	mix-blend-mode: screen; opacity: 0.14;
-	animation: wl-drift 48s linear infinite alternate;
-	will-change: transform;
+	position: absolute; inset: -15% -10%; z-index: 0; pointer-events: none;
+	background: var(--wl-smoke-tex) center / 160% 160% repeat;
+	mix-blend-mode: screen; opacity: 0.12;
+	animation: wl-drift 60s linear infinite alternate;
+	will-change: transform; contain: strict;
 }
 .wl-smoke--2 { opacity: 0.09; background-size: 200% 200%; animation-duration: 70s; animation-direction: alternate-reverse; }
 @keyframes wl-drift {
@@ -86,11 +86,7 @@
 .wp-element-button:hover::after, .wl-chat__btn:hover::after { transform: skewX(-20deg) translateX(480%); }
 
 /* Hero-Einstieg: Inhalt fährt hoch. */
-.wl-hero__inner > * { animation: wl-rise-in 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-.wl-hero__inner > :nth-child(2) { animation-delay: 0.08s; }
-.wl-hero__inner > :nth-child(3) { animation-delay: 0.16s; }
-.wl-hero__inner > :nth-child(4) { animation-delay: 0.24s; }
-.wl-hero__inner > :nth-child(5) { animation-delay: 0.32s; }
+.wl-hero__inner { animation: wl-rise-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 
 /* Reduced Motion: nur Fades, keine Smoke-/Flare-Layer. */
 @media (prefers-reduced-motion: reduce) {
@@ -99,8 +95,18 @@
 	@keyframes wl-fade { from { opacity: 0; } to { opacity: 1; } }
 	.wl-smoke, .wl-flare-bar { display: none !important; }
 	.site-brand .wp-block-site-logo::before { animation: none; }
-	.wl-hero__inner > * { animation: wl-fade 300ms ease both; }
+	.wl-hero__inner { animation: wl-fade 300ms ease both; }
 	.wl-reveal { transition: opacity 0.3s ease; transform: none; }
 	.wp-element-button::after, .wl-chat__btn::after { display: none; }
 	.wl-card, .wl-card:hover, .wl-chat__btn:hover, .wl-archive-list .wp-block-post:hover { transform: none; transition: none; }
 }
+
+/* Video-Pause-Button (WCAG 2.2.2: bewegte Inhalte > 5 s müssen pausierbar sein) */
+.wl-video-toggle {
+	position: absolute; right: 1rem; bottom: 1rem; z-index: 3;
+	display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.75rem;
+	background: rgba(13, 17, 15, 0.7); color: var(--wp--preset--color--leek-light); border: var(--wl-border); border-radius: 999px;
+	font-family: var(--wp--preset--font-family--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+}
+.wl-video-toggle:hover, .wl-video-toggle:focus-visible { border-color: var(--wp--preset--color--leek); color: var(--wp--preset--color--leek); }
+.wl-video-toggle svg { width: 0.9em; height: 0.9em; fill: currentColor; }

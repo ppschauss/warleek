@@ -37,7 +37,7 @@ function warleek_render_chat_buttons( $attrs = array() ) {
 		if ( $url ) {
 			$out .= '<a class="wl-chat__btn wl-chat__btn--' . $key . '" href="' . esc_url( $url ) . '" target="_blank" rel="noopener">' . warleek_icon( $key ) . '<span>' . esc_html( $label_full ) . '</span></a>';
 		} else {
-			$out .= '<span class="wl-chat__btn wl-chat__btn--' . $key . ' is-pending" title="Link folgt in Kürze" aria-disabled="true">' . warleek_icon( $key ) . '<span>' . esc_html( $label ) . '</span></span>';
+			$out .= '<span class="wl-chat__btn wl-chat__btn--' . $key . ' is-pending" title="Link folgt in Kürze" aria-disabled="true">' . warleek_icon( $key ) . '<span>' . esc_html( $label ) . '</span><span class="screen-reader-text"> – Link folgt in Kürze</span></span>';
 		}
 	}
 	return $out . '</div>';

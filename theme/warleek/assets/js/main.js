@@ -19,17 +19,28 @@
 		// Smoke-Layer im Hero (rein dekorativ).
 		var hero = d.querySelector('.wl-hero');
 		if (hero && !reduce) {
-			['wl-smoke', 'wl-smoke wl-smoke--2'].forEach(function (cls) {
-				var s = d.createElement('div'); s.className = cls; s.setAttribute('aria-hidden', 'true');
-				hero.insertBefore(s, hero.firstChild);
-			});
+			var sm = d.createElement('div'); sm.className = 'wl-smoke'; sm.setAttribute('aria-hidden', 'true');
+			hero.insertBefore(sm, hero.firstChild);
 		}
 
 		// Hero-Video: bei reduced-motion / Datensparmodus entfernen (Poster/Bild bleibt), sonst abspielen.
 		d.querySelectorAll('.wl-hero__video video').forEach(function (v) {
 			if (reduce || saveData) { v.closest('.wl-hero__video').remove(); return; }
-			v.muted = true; v.setAttribute('playsinline', '');
+			v.muted = true; v.setAttribute('playsinline', ''); v.setAttribute('aria-hidden', 'true'); v.setAttribute('tabindex', '-1');
 			var p = v.play(); if (p && p.catch) { p.catch(function () {}); }
+			// Pause-Button (Barrierefreiheit: bewegte Inhalte müssen anhaltbar sein)
+			var host = v.closest('.wl-hero') || v.parentNode, btn = d.createElement('button');
+			var icoPause = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2h4v12H3zM9 2h4v12H9z"/></svg>';
+			var icoPlay = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2l10 6-10 6z"/></svg>';
+			btn.type = 'button'; btn.className = 'wl-video-toggle'; btn.setAttribute('aria-pressed', 'false');
+			btn.innerHTML = icoPause + '<span>Video pausieren</span>';
+			btn.addEventListener('click', function () {
+				var paused = v.paused;
+				if (paused) { v.play(); } else { v.pause(); }
+				btn.innerHTML = (paused ? icoPause : icoPlay) + '<span>' + (paused ? 'Video pausieren' : 'Video abspielen') + '</span>';
+				btn.setAttribute('aria-pressed', paused ? 'false' : 'true');
+			});
+			host.appendChild(btn);
 		});
 
 		// Reveal on scroll.
@@ -38,7 +49,10 @@
 			var io = new IntersectionObserver(function (entries) {
 				entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
 			}, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+			var vh = window.innerHeight || 800;
 			targets.forEach(function (t, i) {
+				// Elemente, die beim Laden schon sichtbar sind, nicht verstecken (kein „Aufploppen").
+				if (t.getBoundingClientRect().top < vh * 0.9) { return; }
 				t.classList.add('wl-reveal');
 				t.style.transitionDelay = ((i % 6) * 60) + 'ms';
 				io.observe(t);

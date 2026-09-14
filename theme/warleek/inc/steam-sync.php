@@ -73,6 +73,7 @@ function warleek_steam_upsert_patchnote( array $item, $force = false ) {
 	if ( preg_match( '#^\s*<h2>(.*?)</h2>#is', $html, $hm ) && 0 === strcasecmp( trim( html_entity_decode( wp_strip_all_tags( $hm[1] ), ENT_QUOTES, 'UTF-8' ) ), trim( (string) ( $item['title'] ?? '' ) ) ) ) {
 		$html = preg_replace( '#^\s*<h2>.*?</h2>#is', '', $html, 1 );
 	}
+	$html  = warleek_normalize_headings( $html );
 	$plain = html_entity_decode( trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( preg_replace( '/<\/(p|li|h[1-6]|blockquote|tr)>/i', ' ', $html ) ) ) ), ENT_QUOTES, 'UTF-8' );
 	$title = trim( (string) ( $item['title'] ?? '' ) );
 	if ( $title && 0 === strcasecmp( mb_substr( $plain, 0, mb_strlen( $title ) ), $title ) ) { $plain = trim( mb_substr( $plain, mb_strlen( $title ) ) ); }
@@ -94,10 +95,53 @@ function warleek_steam_upsert_patchnote( array $item, $force = false ) {
 	if ( $existing ) {
 		$data['ID'] = $existing;
 		$id = wp_update_post( wp_slash( $data ), true );
-		return is_wp_error( $id ) ? $id : array( 'id' => $existing, 'action' => 'updated' );
+		if ( is_wp_error( $id ) ) { return $id; }
+		warleek_localize_remote_images( $existing );
+		return array( 'id' => $existing, 'action' => 'updated' );
 	}
 	$id = wp_insert_post( wp_slash( $data ), true );
-	return is_wp_error( $id ) ? $id : array( 'id' => (int) $id, 'action' => 'created' );
+	if ( is_wp_error( $id ) ) { return $id; }
+	warleek_localize_remote_images( (int) $id );
+	return array( 'id' => (int) $id, 'action' => 'created' );
+}
+
+/**
+ * Lädt Bilder vom Steam-CDN in die Mediathek und ersetzt die URLs im Beitrag
+ * (Datenschutz: Besucher laden nichts von Valve-Servern). Dedupe über Option warleek_steam_img_map.
+ */
+function warleek_localize_remote_images( $post_id ) {
+	$post = get_post( $post_id );
+	if ( ! $post ) { return; }
+	$html = $post->post_content;
+	if ( ! preg_match_all( '#https?://[a-z0-9.\-]*(?:steamstatic\.com|akamaihd\.net|steamusercontent\.com)/[^"\'\s<>]+#i', $html, $m ) ) { return; }
+	require_once ABSPATH . 'wp-admin/includes/file.php';
+	require_once ABSPATH . 'wp-admin/includes/media.php';
+	require_once ABSPATH . 'wp-admin/includes/image.php';
+	$map     = (array) get_option( 'warleek_steam_img_map', array() );
+	$changed = false;
+	foreach ( array_unique( $m[0] ) as $url ) {
+		$key = md5( $url );
+		if ( empty( $map[ $key ] ) || ! get_post( $map[ $key ] ) ) {
+			$att = media_sideload_image( $url, $post_id, 'Patch-Notes-Bild (Steam)', 'id' );
+			if ( is_wp_error( $att ) ) { continue; }
+			$map[ $key ] = (int) $att;
+			update_post_meta( (int) $att, '_warleek_steam_src', esc_url_raw( $url ) );
+		}
+		$att_id = (int) $map[ $key ];
+		$tag    = wp_get_attachment_image( $att_id, 'large', false, array( 'loading' => 'lazy', 'alt' => '', 'decoding' => 'async' ) );
+		if ( $tag ) {
+			// kompletten <img>-Tag mit dieser Quelle durch responsives Markup (srcset, width/height) ersetzen
+			$html = preg_replace( '#<img[^>]*src=["\']' . preg_quote( $url, '#' ) . '["\'][^>]*>#i', wp_make_link_relative( $tag ), $html, -1, $n );
+			if ( $n ) { $changed = true; }
+		} else {
+			$local = wp_get_attachment_url( $att_id );
+			if ( $local ) { $html = str_replace( $url, wp_make_link_relative( $local ), $html ); $changed = true; }
+		}
+	}
+	update_option( 'warleek_steam_img_map', $map, false );
+	if ( $changed ) {
+		wp_update_post( array( 'ID' => $post_id, 'post_content' => wp_slash( $html ) ) );
+	}
 }
 
 /**
@@ -170,4 +214,16 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		}
 	}
 	WP_CLI::add_command( 'warleek', 'Warleek_CLI' );
+}
+
+
+/** Überschriften so verschieben, dass die erste Ebene im Inhalt h2 ist (Titel ist h1). */
+function warleek_normalize_headings( $html ) {
+	if ( ! preg_match( '#<h([2-6])\b#i', $html, $m ) ) { return $html; }
+	$first = (int) $m[1]; // erste Überschrift im Inhalt → h2, Rest relativ dazu (min. h2)
+	if ( 2 === $first ) { return $html; }
+	$shift = $first - 2;
+	return preg_replace_callback( '#<(/?)h([2-6])\b#i', function ( $x ) use ( $shift ) {
+		return '<' . $x[1] . 'h' . max( 2, (int) $x[2] - $shift );
+	}, $html );
 }
