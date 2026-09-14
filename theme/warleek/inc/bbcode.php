@@ -75,8 +75,8 @@ function warleek_bbcode_to_html( $bb ) {
 		}
 		return $stash( '<' . $tag . '>' . $lis . '</' . $tag . '>' );
 	}, $text );
-	$text = preg_replace_callback( '/\[table\](.*?)\[\/table\]/is', function ( $m ) use ( $stash ) {
-		$t = preg_replace( array( '/\[tr\]/i', '/\[\/tr\]/i', '/\[th\]/i', '/\[\/th\]/i', '/\[td\]/i', '/\[\/td\]/i', '/\[\/?p\]/i' ),
+	$text = preg_replace_callback( '/\[table(?:\s[^\]]*)?\](.*?)\[\/table\]/is', function ( $m ) use ( $stash ) {
+		$t = preg_replace( array( '/\[tr(?:\s[^\]]*)?\]/i', '/\[\/tr\]/i', '/\[th(?:\s[^\]]*)?\]/i', '/\[\/th\]/i', '/\[td(?:\s[^\]]*)?\]/i', '/\[\/td\]/i', '/\[\/?p\]/i' ),
 			array( '<tr>', '</tr>', '<th>', '</th>', '<td>', '</td>', '' ), $m[1] );
 		return $stash( '<figure class="wp-block-table"><table>' . preg_replace( '/\s*\n\s*/', '', $t ) . '</table></figure>' );
 	}, $text );
@@ -94,7 +94,7 @@ function warleek_bbcode_to_html( $bb ) {
 	}, $text );
 
 	// 4) Unbekannte Tags entfernen (z. B. [table], [tr], [td], [noparse], [dynamiclink]).
-	$text = preg_replace( '/\[\/?[a-z0-9]+(?:=[^\]]*)?\]/i', '', $text );
+	$text = preg_replace( '/\[\/?[a-z0-9]+(?:[=\s][^\]]*)?\]/i', '', $text );
 
 	// 5) Absätze bauen: Platzhalter-Zeilen → Block, Textzeilen → <p> mit <br>.
 	$out    = '';

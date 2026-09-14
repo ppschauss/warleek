@@ -245,3 +245,14 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 .wl-columns .wp-block-column .wp-block-image { margin: -1.5rem -1.5rem 0.5rem; }
 .wl-columns .wp-block-column .wp-block-image img { border-radius: var(--wl-radius-lg) var(--wl-radius-lg) 0 0; aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
 .wl-patchlist__all { background: none; border: 0 !important; padding: 0.25rem 0; }
+
+/* Mobile-Feinschliff */
+.wl-hero h1 { overflow-wrap: anywhere; hyphens: auto; -webkit-hyphens: auto; }
+.wl-hero--home h1 { font-size: clamp(2.5rem, 9vw, 5.5rem); }
+.wl-hero--page h1 { font-size: clamp(2.2rem, 8vw, 4rem); }
+@media (max-width: 600px) {
+	.wp-block-table table, .wl-prose table { font-size: 0.85rem; }
+	.wp-block-table th, .wp-block-table td, .wl-prose th, .wl-prose td { padding: 0.5rem 0.5rem; }
+	.wl-stat__num { font-size: 2.2rem; }
+	h2 { overflow-wrap: anywhere; hyphens: auto; -webkit-hyphens: auto; }
+}

@@ -69,6 +69,10 @@ function warleek_steam_upsert_patchnote( array $item, $force = false ) {
 
 	$ts    = (int) ( $item['date'] ?? time() );
 	$html  = warleek_bbcode_to_html( $contents );
+	// Führende Überschrift entfernen, wenn sie dem Titel entspricht (Steam wiederholt den Titel oft als [h1]).
+	if ( preg_match( '#^\s*<h2>(.*?)</h2>#is', $html, $hm ) && 0 === strcasecmp( trim( html_entity_decode( wp_strip_all_tags( $hm[1] ), ENT_QUOTES, 'UTF-8' ) ), trim( (string) ( $item['title'] ?? '' ) ) ) ) {
+		$html = preg_replace( '#^\s*<h2>.*?</h2>#is', '', $html, 1 );
+	}
 	$plain = html_entity_decode( trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( preg_replace( '/<\/(p|li|h[1-6]|blockquote|tr)>/i', ' ', $html ) ) ) ), ENT_QUOTES, 'UTF-8' );
 	$title = trim( (string) ( $item['title'] ?? '' ) );
 	if ( $title && 0 === strcasecmp( mb_substr( $plain, 0, mb_strlen( $title ) ), $title ) ) { $plain = trim( mb_substr( $plain, mb_strlen( $title ) ) ); }
