@@ -35,7 +35,7 @@ function warleek_bbcode_to_html( $bb ) {
 	$text = preg_replace( '/\[u\](.*?)\[\/u\]/is', '<u>$1</u>', $text );
 	$text = preg_replace( '/\[strike\](.*?)\[\/strike\]/is', '<s>$1</s>', $text );
 	$text = preg_replace( '/\[spoiler\](.*?)\[\/spoiler\]/is', '<span class="wl-spoiler">$1</span>', $text );
-	$text = preg_replace_callback( '/\[url=([^\]]+)\](.*?)\[\/url\]/is', function ( $m ) {
+	$text = preg_replace_callback( '/\[url=(?:&quot;)?([^\]&]+)(?:&quot;)?\](.*?)\[\/url\]/is', function ( $m ) {
 		$href = warleek_bbcode_url( $m[1] );
 		return $href ? '<a href="' . $href . '" rel="noopener" target="_blank">' . $m[2] . '</a>' : $m[2];
 	}, $text );
@@ -43,11 +43,19 @@ function warleek_bbcode_to_html( $bb ) {
 		$href = warleek_bbcode_url( $m[1] );
 		return $href ? '<a href="' . $href . '" rel="noopener" target="_blank">' . $m[1] . '</a>' : $m[1];
 	}, $text );
+	$text = preg_replace_callback( '/\[img\s+src=&quot;([^&]+)&quot;[^\]]*\](.*?)\[\/img\]/is', function ( $m ) {
+		$src = warleek_bbcode_url( $m[1] );
+		return $src ? '<img src="' . $src . '" alt="" loading="lazy">' : '';
+	}, $text );
+	$text = preg_replace_callback( '/\[dynamiclink\s+href=&quot;([^&]+)&quot;[^\]]*\](.*?)\[\/dynamiclink\]/is', function ( $m ) {
+		$href = warleek_bbcode_url( $m[1] );
+		return $href ? '<a href="' . $href . '" rel="noopener" target="_blank">' . ( trim( $m[2] ) ?: $href ) . '</a>' : '';
+	}, $text );
 	$text = preg_replace_callback( '/\[img\](.*?)\[\/img\]/is', function ( $m ) {
 		$src = warleek_bbcode_url( $m[1] );
 		return $src ? '<img src="' . $src . '" alt="" loading="lazy">' : '';
 	}, $text );
-	$text = preg_replace_callback( '/\[previewyoutube=([A-Za-z0-9_-]+)(?:;[^\]]*)?\](.*?)\[\/previewyoutube\]/is', function ( $m ) {
+	$text = preg_replace_callback( '/\[previewyoutube=(?:&quot;)?([A-Za-z0-9_-]+)(?:;[^\]&]*)?(?:&quot;)?\](.*?)\[\/previewyoutube\]/is', function ( $m ) {
 		return '<a href="https://www.youtube.com/watch?v=' . $m[1] . '" rel="noopener" target="_blank">Video auf YouTube</a>';
 	}, $text );
 
@@ -61,10 +69,22 @@ function warleek_bbcode_to_html( $bb ) {
 		$items = preg_split( '/\[\*\]/', $m[2] );
 		$lis   = '';
 		foreach ( $items as $it ) {
-			$it = trim( $it );
+			$it = trim( preg_replace( '/\[\/?p\]/i', "\n", $it ) );
+			$it = preg_replace( "/\n{2,}/", "\n", $it );
 			if ( '' !== $it ) { $lis .= '<li>' . str_replace( "\n", '<br>', $it ) . '</li>'; }
 		}
 		return $stash( '<' . $tag . '>' . $lis . '</' . $tag . '>' );
+	}, $text );
+	$text = preg_replace_callback( '/\[table\](.*?)\[\/table\]/is', function ( $m ) use ( $stash ) {
+		$t = preg_replace( array( '/\[tr\]/i', '/\[\/tr\]/i', '/\[th\]/i', '/\[\/th\]/i', '/\[td\]/i', '/\[\/td\]/i', '/\[\/?p\]/i' ),
+			array( '<tr>', '</tr>', '<th>', '</th>', '<td>', '</td>', '' ), $m[1] );
+		return $stash( '<figure class="wp-block-table"><table>' . preg_replace( '/\s*\n\s*/', '', $t ) . '</table></figure>' );
+	}, $text );
+	$text = preg_replace_callback( '/\[p\](.*?)\[\/p\]/is', function ( $m ) use ( $stash ) {
+		$inner = trim( $m[1] );
+		if ( '' === $inner ) { return "\n"; }
+		if ( preg_match( '/^@@WLB\d+@@$/', $inner ) ) { return "\n" . $inner . "\n"; }
+		return $stash( '<p>' . str_replace( "\n", '<br>', $inner ) . '</p>' );
 	}, $text );
 	$text = preg_replace_callback( '/\[quote(?:=[^\]]*)?\](.*?)\[\/quote\]/is', function ( $m ) use ( $stash ) {
 		return $stash( '<blockquote>' . str_replace( "\n", '<br>', trim( $m[1] ) ) . '</blockquote>' );
