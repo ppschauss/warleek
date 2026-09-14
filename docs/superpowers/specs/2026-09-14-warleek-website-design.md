@@ -11,6 +11,14 @@ der Marke **Warleek** (warleek.de). Die Seite soll für die Keywords
 (Discord, WhatsApp, Telegram) leiten und mit Spiel-Content (FOB, Logistik, Gameplay,
 Equipment, Guides, automatische Patch Notes) organischen Traffic aufbauen.
 
+**Harte Anforderung – Editierbarkeit:** Alle Texte und Bilder müssen von Patrick im WP-Backend
+änderbar sein. Daraus folgt: sämtlicher Seiteninhalt liegt als Blöcke in Seiten/Beiträgen (kein Text
+in Templates/Patterns hart verdrahtet, Patterns sind nur Startvorlagen, die beim Seed in Seiten
+eingesetzt werden), alle Bilder/Videos werden per Seed in die **Mediathek** importiert und über
+Beitragsbild/Bild-Block/Cover-Block referenziert, das Logo läuft über das WP-Website-Logo, Chat-Links
+und Clan-Tag über die Optionsseite. Im Theme selbst liegen nur Fonts, CSS/JS und dekorative Texturen
+(Smoke/Flare), die keinen inhaltlichen Charakter haben.
+
 **Nicht-Ziele:** kein Forum, keine Nutzerregistrierung, kein Server-Status, keine
 Turnierverwaltung, keine Mehrsprachigkeit (nur Deutsch).
 
