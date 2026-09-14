@@ -69,7 +69,8 @@ function warleek_seed_media( $assets_dir ) {
 function warleek_img( array $media, $key, $size = 'full' ) {
 	if ( empty( $media[ $key ] ) ) { return array(); }
 	$id = $media[ $key ];
-	return array( 'id' => $id, 'url' => wp_get_attachment_image_url( $id, $size ), 'alt' => get_post_meta( $id, '_wp_attachment_image_alt', true ) );
+	// Root-relativ, damit Dev (LAN/Tailscale/Domain) und Prod dieselben Inhalte nutzen können.
+	return array( 'id' => $id, 'url' => wp_make_link_relative( wp_get_attachment_image_url( $id, $size ) ), 'alt' => get_post_meta( $id, '_wp_attachment_image_alt', true ) );
 }
 
 /* ------------------------------------------------------------ Upsert */
@@ -147,7 +148,7 @@ function warleek_seed_pages( array $pages, array $media, array $site ) {
 				'image' => ! empty( $h['image'] ) ? warleek_img( $media, $h['image'], 'full' ) : array(),
 			);
 			if ( ! empty( $h['video'] ) && ! empty( $media['video-hero-mp4'] ) ) {
-				$hero['video'] = array( 'id' => $media['video-hero-mp4'], 'url' => wp_get_attachment_url( $media['video-hero-mp4'] ), 'poster' => ! empty( $media['video-hero-poster'] ) ? wp_get_attachment_image_url( $media['video-hero-poster'], 'full' ) : '' );
+				$hero['video'] = array( 'id' => $media['video-hero-mp4'], 'url' => wp_make_link_relative( wp_get_attachment_url( $media['video-hero-mp4'] ) ), 'poster' => ! empty( $media['video-hero-poster'] ) ? wp_make_link_relative( wp_get_attachment_image_url( $media['video-hero-poster'], 'full' ) ) : '' );
 			}
 			$content .= warleek_build_hero( $hero );
 		}
