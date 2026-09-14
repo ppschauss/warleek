@@ -1,0 +1,21 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"div"} /-->
+<!-- wp:group {"tagName":"main","className":"wl-main wl-article","layout":{"type":"constrained"}} -->
+<main class="wp-block-group wl-main wl-article">
+	<!-- wp:group {"className":"wl-article__meta","layout":{"type":"flex"}} -->
+	<div class="wp-block-group wl-article__meta">
+		<!-- wp:paragraph {"className":"wl-tag wl-tag--alert"} --><p class="wl-tag wl-tag--alert">Patch Notes</p><!-- /wp:paragraph -->
+		<!-- wp:post-date {"format":"d.m.Y","className":"wl-tag wl-tag--sand"} /-->
+	</div>
+	<!-- /wp:group -->
+	<!-- wp:post-title {"level":1} /-->
+	<!-- wp:post-content {"className":"wl-prose wl-patchnote-body","layout":{"type":"constrained"}} /-->
+	<!-- wp:shortcode -->[warleek_source]<!-- /wp:shortcode -->
+	<!-- wp:group {"className":"wl-section wl-section--tight","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group wl-section wl-section--tight">
+		<!-- wp:heading --><h2 class="wp-block-heading">Weitere Patch Notes</h2><!-- /wp:heading -->
+		<!-- wp:warleek/patchnotes-latest {"count":4} /-->
+	</div>
+	<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"div"} /-->

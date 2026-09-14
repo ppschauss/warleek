@@ -1,0 +1,30 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"div"} /-->
+<!-- wp:group {"tagName":"main","className":"wl-main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group wl-main">
+	<!-- wp:group {"className":"wl-archive-head","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group wl-archive-head">
+		<!-- wp:paragraph {"className":"wl-eyebrow"} --><p class="wl-eyebrow">Automatisch von Steam</p><!-- /wp:paragraph -->
+		<!-- wp:heading {"level":1} --><h1 class="wp-block-heading">Wardogs Patch Notes</h1><!-- /wp:heading -->
+		<!-- wp:paragraph {"className":"wl-lead"} --><p class="wl-lead">Alle offiziellen WARDOGS-Updates, Hotfixes und Changelogs – stündlich von Steam synchronisiert, damit du nichts verpasst.</p><!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+	<!-- wp:query {"queryId":12,"query":{"inherit":true},"align":"wide"} -->
+	<div class="wp-block-query alignwide">
+		<!-- wp:post-template {"className":"wl-archive-list","layout":{"type":"default"}} -->
+			<!-- wp:post-date {"format":"d.m.Y"} /-->
+			<!-- wp:post-title {"isLink":true,"level":2} /-->
+			<!-- wp:post-excerpt {"moreText":"Patch Notes lesen →","excerptLength":30} /-->
+		<!-- /wp:post-template -->
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph --><p>Noch keine Patch Notes importiert – der Sync läuft stündlich.</p><!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"div"} /-->

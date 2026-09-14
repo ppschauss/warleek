@@ -1,0 +1,31 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"div"} /-->
+<!-- wp:group {"tagName":"main","className":"wl-main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group wl-main">
+	<!-- wp:group {"className":"wl-archive-head","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group wl-archive-head">
+		<!-- wp:paragraph {"className":"wl-eyebrow"} --><p class="wl-eyebrow">Wardogs Guides · Thema</p><!-- /wp:paragraph -->
+		<!-- wp:query-title {"type":"archive","showPrefix":false,"level":1} /-->
+		<!-- wp:term-description {"className":"wl-lead"} /-->
+	</div>
+	<!-- /wp:group -->
+	<!-- wp:query {"queryId":11,"query":{"inherit":true,"perPage":12},"align":"wide"} -->
+	<div class="wp-block-query alignwide">
+		<!-- wp:post-template {"className":"wl-archive-list","layout":{"type":"default"}} -->
+			<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"3/2"} /-->
+			<!-- wp:post-terms {"term":"guide-thema"} /-->
+			<!-- wp:post-title {"isLink":true,"level":2} /-->
+			<!-- wp:post-excerpt {"moreText":"Guide lesen →","excerptLength":24} /-->
+		<!-- /wp:post-template -->
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph --><p>Zu diesem Thema gibt es noch keine Guides.</p><!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"div"} /-->

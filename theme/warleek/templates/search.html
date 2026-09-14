@@ -2,17 +2,24 @@
 <!-- wp:group {"tagName":"main","className":"wl-main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group wl-main">
 	<!-- wp:group {"className":"wl-archive-head","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group wl-archive-head"><!-- wp:query-title {"type":"archive","level":1} /--></div>
+	<div class="wp-block-group wl-archive-head">
+		<!-- wp:query-title {"type":"search","level":1} /-->
+		<!-- wp:search {"label":"Suche","showLabel":false,"placeholder":"Suchen …","buttonText":"Suchen"} /-->
+	</div>
 	<!-- /wp:group -->
-	<!-- wp:query {"queryId":1,"query":{"inherit":true},"align":"wide"} -->
+	<!-- wp:query {"queryId":13,"query":{"inherit":true},"align":"wide"} -->
 	<div class="wp-block-query alignwide">
 		<!-- wp:post-template {"className":"wl-archive-list","layout":{"type":"default"}} -->
-			<!-- wp:post-date {"format":"d.m.Y"} /-->
 			<!-- wp:post-title {"isLink":true,"level":2} /-->
 			<!-- wp:post-excerpt {"excerptLength":24} /-->
 		<!-- /wp:post-template -->
-		<!-- wp:query-no-results --><!-- wp:paragraph --><p>Keine Inhalte gefunden.</p><!-- /wp:paragraph --><!-- /wp:query-no-results -->
-		<!-- wp:query-pagination --><!-- wp:query-pagination-previous /--><!-- wp:query-pagination-next /--><!-- /wp:query-pagination -->
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph --><p>Nichts gefunden. Probier einen anderen Begriff – oder frag direkt im Discord.</p><!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+		<!-- wp:query-pagination -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
 	</div>
 	<!-- /wp:query -->
 </main>

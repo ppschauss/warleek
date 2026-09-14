@@ -66,3 +66,21 @@ function warleek_snapshot_mode() {
 	}
 }
 add_action( 'wp_head', 'warleek_snapshot_mode', 99 );
+
+/* ------------------------------------------------------- Navigation-Ref */
+/**
+ * Header/Footer-Parts referenzieren ihre Menüs über Klassen (wl-nav-main / wl-nav-footer)
+ * statt über feste IDs; der Seed speichert die IDs der wp_navigation-Posts in Optionen.
+ * So bleibt das Theme portabel (Dev ≠ Prod-IDs) und die Menüs sind im Website-Editor editierbar.
+ */
+function warleek_navigation_ref( $parsed ) {
+	if ( 'core/navigation' !== $parsed['blockName'] || ! empty( $parsed['attrs']['ref'] ) ) { return $parsed; }
+	$cls = $parsed['attrs']['className'] ?? '';
+	$opt = str_contains( $cls, 'wl-nav-footer' ) ? 'warleek_nav_footer_id' : ( str_contains( $cls, 'wl-nav-main' ) ? 'warleek_nav_main_id' : '' );
+	if ( $opt ) {
+		$id = (int) get_option( $opt, 0 );
+		if ( $id && 'publish' === get_post_status( $id ) ) { $parsed['attrs']['ref'] = $id; }
+	}
+	return $parsed;
+}
+add_filter( 'render_block_data', 'warleek_navigation_ref' );

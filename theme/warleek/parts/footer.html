@@ -1,5 +1,38 @@
-<!-- wp:group {"tagName":"footer","className":"site-footer","layout":{"type":"constrained","wideSize":"1240px"}} -->
-<footer class="wp-block-group site-footer">
-	<!-- wp:paragraph --><p>© Warleek</p><!-- /wp:paragraph -->
+<!-- wp:group {"tagName":"footer","className":"site-footer","align":"full","layout":{"type":"constrained","wideSize":"1240px"}} -->
+<footer class="wp-block-group site-footer alignfull">
+	<!-- wp:columns {"align":"wide"} -->
+	<div class="wp-block-columns alignwide">
+		<!-- wp:column {"width":"40%"} -->
+		<div class="wp-block-column" style="flex-basis:40%">
+			<!-- wp:group {"className":"site-brand","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"0.75rem"}}} -->
+			<div class="wp-block-group site-brand">
+				<!-- wp:site-logo {"width":40,"shouldSyncIcon":false} /-->
+				<!-- wp:site-title {"level":0,"isLink":true} /-->
+			</div>
+			<!-- /wp:group -->
+			<!-- wp:site-tagline /-->
+			<!-- wp:paragraph {"className":"wl-dogtag"} --><p class="wl-dogtag">Warleek // DACH // seit 2026</p><!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Navigation</h3><!-- /wp:heading -->
+			<!-- wp:navigation {"className":"wl-nav-footer","overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"}} /-->
+		</div>
+		<!-- /wp:column -->
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Mitspielen</h3><!-- /wp:heading -->
+			<!-- wp:warleek/chat-buttons {"layout":"row"} /-->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+	<!-- wp:group {"align":"wide","className":"site-footer__meta","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+	<div class="wp-block-group alignwide site-footer__meta">
+		<!-- wp:paragraph --><p>Warleek ist ein unabhängiges Fan-Projekt und steht in keiner Verbindung zum Entwickler oder Publisher von WARDOGS. WARDOGS ist eine Marke des jeweiligen Rechteinhabers.</p><!-- /wp:paragraph -->
+		<!-- wp:paragraph --><p><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></p><!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
 </footer>
 <!-- /wp:group -->
