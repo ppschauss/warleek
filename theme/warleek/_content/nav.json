@@ -1,0 +1,94 @@
+{
+ "main": [
+  {
+   "label": "Community",
+   "url": "/community/",
+   "children": [
+    {
+     "label": "Übersicht: Community · Team · Clan",
+     "url": "/community/"
+    },
+    {
+     "label": "Wardogs Community",
+     "url": "/community/wardogs-community/"
+    },
+    {
+     "label": "Wardogs Team",
+     "url": "/community/wardogs-team/"
+    },
+    {
+     "label": "Wardogs Clan",
+     "url": "/community/wardogs-clan/"
+    }
+   ]
+  },
+  {
+   "label": "Wardogs",
+   "url": "/wardogs/",
+   "children": [
+    {
+     "label": "Das Spiel erklärt",
+     "url": "/wardogs/"
+    },
+    {
+     "label": "FOB",
+     "url": "/wardogs/fob/"
+    },
+    {
+     "label": "Logistik",
+     "url": "/wardogs/logistik/"
+    },
+    {
+     "label": "Gameplay",
+     "url": "/wardogs/gameplay/"
+    },
+    {
+     "label": "Equipment",
+     "url": "/wardogs/equipment/"
+    }
+   ]
+  },
+  {
+   "label": "Guides",
+   "url": "/guides/"
+  },
+  {
+   "label": "Patch Notes",
+   "url": "/patch-notes/"
+  },
+  {
+   "label": "Chat",
+   "url": "/wardogs-chat/"
+  },
+  {
+   "label": "About us",
+   "url": "/about-us/"
+  }
+ ],
+ "footer": [
+  {
+   "label": "Community",
+   "url": "/community/"
+  },
+  {
+   "label": "Wardogs Clan",
+   "url": "/community/wardogs-clan/"
+  },
+  {
+   "label": "Wardogs Discord",
+   "url": "/wardogs-discord/"
+  },
+  {
+   "label": "Guides",
+   "url": "/guides/"
+  },
+  {
+   "label": "Patch Notes",
+   "url": "/patch-notes/"
+  },
+  {
+   "label": "About us",
+   "url": "/about-us/"
+  }
+ ]
+}

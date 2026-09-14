@@ -1,0 +1,26 @@
+{
+ "title": "Warleek",
+ "tagline": "Wardogs Community, Team & Clan für Deutschland, Österreich und die Schweiz",
+ "themen": {
+  "einsteiger": {
+   "name": "Einsteiger",
+   "desc": "Die ersten Runden, die ersten Fehler, die ersten Erfolge."
+  },
+  "fob": {
+   "name": "FOB",
+   "desc": "Vorgeschobene Basis: bauen, versorgen, halten."
+  },
+  "logistik": {
+   "name": "Logistik",
+   "desc": "Paletten fahren, Cash verdienen, Team am Leben halten."
+  },
+  "gameplay": {
+   "name": "Gameplay",
+   "desc": "Zone, drei Teams, Economy, Kommunikation."
+  },
+  "equipment": {
+   "name": "Equipment",
+   "desc": "Loadouts, Werkzeug, Fahrzeuge – was sich wann lohnt."
+  }
+ }
+}
