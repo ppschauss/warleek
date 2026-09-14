@@ -1,0 +1,142 @@
+{
+ "hero-home.webp": {
+  "alt": "Wardogs-Szene: Konvoi aus Logistik-LKW fährt bei Dämmerung durch ein verlassenes Industrietal in den Bergen",
+  "use": "hero-home",
+  "size": 75838
+ },
+ "hero-community.webp": {
+  "alt": "Wardogs Community: Spieler sitzen abends gemeinsam an einer Feuertonne im Lager",
+  "use": "hero-community",
+  "size": 59248
+ },
+ "hero-team.webp": {
+  "alt": "Wardogs Team: Soldaten besprechen am Feierabend eine Karte an der Ladefläche eines LKW",
+  "use": "hero-team",
+  "size": 56172
+ },
+ "hero-clan.webp": {
+  "alt": "Wardogs Clan: Squad rückt geschlossen durch Morgennebel zwischen Industrieruinen vor",
+  "use": "hero-clan",
+  "size": 77622
+ },
+ "hero-chat.webp": {
+  "alt": "Wardogs Chat: Funkgerät und Smartphone mit Chat am Plate Carrier",
+  "use": "hero-chat",
+  "size": 42804
+ },
+ "hero-discord.webp": {
+  "alt": "Wardogs Discord: Kommandozelt mit Laptop, Headset und Funkgeräten bei Nacht",
+  "use": "hero-discord",
+  "size": 49382
+ },
+ "hero-hub.webp": {
+  "alt": "Wardogs Gameplay: drei Kolonnen laufen auf eine umkämpfte Zone in einem Industrietal zu",
+  "use": "hero-hub",
+  "size": 123948
+ },
+ "hero-fob.webp": {
+  "alt": "Wardogs FOB: vorgeschobene Basis im Bau mit HESCO-Wällen, Sandsäcken und Versorgungspaletten",
+  "use": "hero-fob",
+  "size": 96772
+ },
+ "hero-logistik.webp": {
+  "alt": "Wardogs Logistik: Blick aus dem Versorgungs-LKW, Helikopter mit Palette am Haken",
+  "use": "hero-logistik",
+  "size": 57168
+ },
+ "hero-gameplay.webp": {
+  "alt": "Wardogs Gameplay: Feuergefecht hinter einem Autowrack in einer Industriestraße",
+  "use": "hero-gameplay",
+  "size": 97144
+ },
+ "hero-equipment.webp": {
+  "alt": "Wardogs Equipment: Plate Carrier, Gewehr, Helm, Funkgerät und Medkit auf einem Tisch",
+  "use": "hero-equipment",
+  "size": 97008
+ },
+ "hero-about.webp": {
+  "alt": "Warleek: Dogtags am Holzpfosten neben einem Lauch in einer Blechdose",
+  "use": "hero-about",
+  "size": 81354
+ },
+ "hero-guides.webp": {
+  "alt": "Wardogs Guides: Notizbuch mit taktischen Skizzen auf einer Versorgungskiste",
+  "use": "hero-guides",
+  "size": 51278
+ },
+ "og-default.jpg": {
+  "alt": "Warleek – Wardogs Community, Team & Clan für Deutschland, Österreich und die Schweiz",
+  "use": "og-default",
+  "size": 93157
+ },
+ "guide-erste-runde.webp": {
+  "alt": "Neuling steht am Spawn-Tor und blickt ins Tal, ein Veteran legt ihm die Hand auf die Schulter",
+  "use": "guide-erste-runde",
+  "size": 45280
+ },
+ "guide-fob-bau.webp": {
+  "alt": "Zwei Soldaten bauen Sandsackwall und Wachturm in einer halbfertigen FOB",
+  "use": "guide-fob-bau",
+  "size": 94242
+ },
+ "guide-logistik-run.webp": {
+  "alt": "Soldat zurrt eine Versorgungspalette auf einem LKW fest",
+  "use": "guide-logistik-run",
+  "size": 53792
+ },
+ "guide-geld.webp": {
+  "alt": "Hände zählen Geldscheine auf einer Munitionskiste",
+  "use": "guide-geld",
+  "size": 50814
+ },
+ "guide-squad-funk.webp": {
+  "alt": "Squad Leader kniet und spricht ins Funk-Headset, das Squad hört zu",
+  "use": "guide-squad-funk",
+  "size": 59752
+ },
+ "guide-fahrzeuge.webp": {
+  "alt": "Helikopter hebt mit Palette am Haken vom Industrie-Helipad ab",
+  "use": "guide-fahrzeuge",
+  "size": 61848
+ },
+ "video/hero.mp4": {
+  "alt": "Wardogs Hero-Loop: Rauch zieht über ein Industrietal, Konvoi in der Dämmerung",
+  "use": "video-hero-mp4",
+  "size": 364808
+ },
+ "video/hero.webm": {
+  "alt": "Wardogs Hero-Loop (WebM)",
+  "use": "video-hero-webm",
+  "size": 197303
+ },
+ "video/hero-poster.webp": {
+  "alt": "Wardogs-Szene: Konvoi in der Dämmerung im Industrietal (Poster)",
+  "use": "video-hero-poster",
+  "size": 53952
+ },
+ "logo/warleek-icon.svg": {
+  "alt": "Warleek Logo – Dogtag mit Lauch",
+  "use": "logo-icon",
+  "size": 10481
+ },
+ "logo/warleek-icon.png": {
+  "alt": "Warleek Logo – Dogtag mit Lauch (PNG)",
+  "use": "logo-icon-png",
+  "size": 46796
+ },
+ "logo/warleek-crest.png": {
+  "alt": "Warleek Wappen – gekreuzte Dogtags mit Lauch",
+  "use": "logo-crest",
+  "size": 86775
+ },
+ "logo/warleek-lockup.png": {
+  "alt": "Warleek Logo mit Schriftzug",
+  "use": "logo-lockup",
+  "size": 34241
+ },
+ "logo/favicon-512.png": {
+  "alt": "Warleek Favicon",
+  "use": "favicon",
+  "size": 57442
+ }
+}
