@@ -12,7 +12,8 @@
 	--wl-header-h: 72px;
 	color-scheme: dark;
 }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; }
+@media (hover: hover) { html { scroll-behavior: smooth; } }
 body { min-height: 100vh; background-image: radial-gradient(1200px 600px at 80% -10%, rgba(74, 90, 68, 0.28), transparent 60%); }
 img, video { max-width: 100%; height: auto; }
 ::selection { background: var(--wp--preset--color--leek); color: var(--wp--preset--color--base); }
@@ -26,11 +27,7 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
    Containing Block für position:fixed erzeugen und das mobile Overlay-Menü im Header einsperren.
    Der Blur liegt deshalb auf einem Pseudo-Element. */
 .site-header { position: sticky; top: 0; z-index: 50; border-bottom: var(--wl-border); }
-.site-header::before {
-	content: ""; position: absolute; inset: 0; z-index: -1;
-	background: rgba(13, 17, 15, 0.86);
-	backdrop-filter: blur(12px) saturate(140%); -webkit-backdrop-filter: blur(12px) saturate(140%);
-}
+.site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(13, 17, 15, 0.94); }
 .site-header > .alignwide { min-height: var(--wl-header-h); }
 .site-brand { text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
 .site-brand .wp-block-site-logo img { width: 44px; height: 44px; object-fit: contain; }
@@ -104,7 +101,8 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 .wl-lead { font-size: var(--wp--preset--font-size--large); color: var(--wp--preset--color--text); line-height: 1.55; }
 .wl-muted { color: var(--wp--preset--color--steel); }
 .wl-center { text-align: center; }
-.wl-section { padding-top: var(--wp--preset--spacing--60); padding-bottom: var(--wp--preset--spacing--60); }
+.wl-section { padding-top: var(--wp--preset--spacing--60); padding-bottom: var(--wp--preset--spacing--60); content-visibility: auto; contain-intrinsic-size: auto 700px; }
+.wl-main--home > .wp-block-post-content > .wl-hero, .wl-hero { content-visibility: visible; }
 .wl-section--surface { background: var(--wp--preset--color--surface); border-top: var(--wl-border); border-bottom: var(--wl-border); }
 .wl-section--tight { padding-top: var(--wp--preset--spacing--50); padding-bottom: var(--wp--preset--spacing--50); }
 .wl-section__head { max-width: 760px; margin-bottom: var(--wp--preset--spacing--50); }
@@ -135,14 +133,13 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 	background: var(--wp--preset--color--surface); border: var(--wl-border); border-radius: var(--wl-radius-lg);
 	transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
-.wl-card:hover { transform: translateY(-4px); border-color: rgba(155, 225, 93, 0.45); box-shadow: var(--wl-shadow); }
+.wl-card:hover { border-color: rgba(155, 225, 93, 0.45); box-shadow: var(--wl-shadow); }
 .wl-card h3 { margin: 0; font-size: 1.5rem; }
 .wl-card h3 a { color: inherit; text-decoration: none; }
 .wl-card h3 a::after { content: ""; position: absolute; inset: 0; }
 .wl-card p { margin: 0; color: var(--wp--preset--color--steel); }
 .wl-card__img { margin: -1.5rem -1.5rem 0.5rem; aspect-ratio: 3 / 2; overflow: hidden; border-radius: var(--wl-radius-lg) var(--wl-radius-lg) 0 0; background: var(--wp--preset--color--surface-2); }
 .wl-card__img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
-.wl-card:hover .wl-card__img img { transform: scale(1.04); }
 .wl-card__more { margin-top: auto; padding-top: 0.5rem; font-family: var(--wp--preset--font-family--heading); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; color: var(--wp--preset--color--leek); }
 .wl-card--num { padding-top: 2.25rem; }
 .wl-card__num { position: absolute; top: 1rem; right: 1.25rem; font-family: var(--wp--preset--font-family--heading); font-size: 3rem; font-weight: 800; line-height: 1; color: rgba(155, 225, 93, 0.16); }
@@ -168,7 +165,7 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 .wl-chat__btn svg { width: 1.25em; height: 1.25em; flex: none; fill: currentColor; }
-.wl-chat__btn:hover { transform: translateY(-2px); box-shadow: var(--wl-glow); background: var(--wp--preset--color--leek-light); color: var(--wp--preset--color--base); }
+.wl-chat__btn:hover { box-shadow: var(--wl-glow); background: var(--wp--preset--color--leek-light); color: var(--wp--preset--color--base); }
 .wl-chat__btn--whatsapp, .wl-chat__btn--telegram { background: transparent; color: var(--wp--preset--color--leek-light); border-color: rgba(154, 168, 150, 0.4); }
 .wl-chat__btn--whatsapp:hover, .wl-chat__btn--telegram:hover { background: var(--wp--preset--color--surface-2); color: var(--wp--preset--color--leek); border-color: var(--wp--preset--color--leek); }
 .wl-chat__btn.is-pending { opacity: 0.55; cursor: not-allowed; pointer-events: none; }
@@ -244,7 +241,7 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 .wl-archive-head h1 { margin: 0 0 0.5rem; }
 .wl-archive-list { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
 .wl-archive-list .wp-block-post { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.5rem; background: var(--wp--preset--color--surface); border: var(--wl-border); border-radius: var(--wl-radius-lg); transition: transform 0.25s ease, border-color 0.25s ease; }
-.wl-archive-list .wp-block-post:hover { transform: translateY(-4px); border-color: rgba(155, 225, 93, 0.45); }
+.wl-archive-list .wp-block-post:hover { border-color: rgba(155, 225, 93, 0.45); }
 .wl-archive-list .wp-block-post-featured-image { margin: -1.5rem -1.5rem 0.5rem; }
 .wl-archive-list .wp-block-post-featured-image img { border-radius: var(--wl-radius-lg) var(--wl-radius-lg) 0 0; aspect-ratio: 3 / 2; object-fit: cover; }
 .wl-archive-list .wp-block-post-title { font-size: 1.5rem; margin: 0; }
@@ -268,6 +265,7 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 .wp-block-columns { gap: 1.5rem; }
 
 /* Bildbreite-Fallback für Content-Bilder in Spalten */
+.site-footer { content-visibility: auto; contain-intrinsic-size: auto 420px; }
 .wl-columns .wp-block-column { background: var(--wp--preset--color--surface); border: var(--wl-border); border-radius: var(--wl-radius-lg); padding: 1.5rem; }
 .wl-columns .wp-block-column h3 { margin-top: 0.5rem; }
 .wl-columns .wp-block-column .wp-block-image { margin: -1.5rem -1.5rem 0.5rem; }

@@ -36,6 +36,26 @@ function warleek_block_styles() {
 }
 add_action( 'init', 'warleek_block_styles' );
 
+/* ------------------------------------------------------------ Performance */
+/** Core-Block-CSS nur für tatsächlich genutzte Blöcke laden (statt der kompletten Block-Library). */
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+/** Interactivity-API-Script nur laden, wenn ein Block es braucht (Navigation-Overlay) – WP macht das bereits; hier nichts erzwingen. */
+
+/** Quellcode-Gruß ganz oben im <head>. */
+function warleek_source_greeting() {
+	echo "\n<!--\n"
+		. "     ___                    W A R L E E K  //  DACH  //  seit 2026\n"
+		. "    /   \\   <- Dogtag        Wardogs Community · Team · Clan\n"
+		. "    | ~ |   <- Lauch         Du liest Quellcode. Respekt. Die FOB braucht trotzdem Build-Supplies.\n"
+		. "    \\___/                    Wer hier reinschaut, passt zu uns: /wardogs-discord/\n"
+		. "\n"
+		. "    Kein Tracking, keine Cookies, keine externen Requests. Fonts, Bilder, Video: alles von hier.\n"
+		. "    Patch Notes kommen stündlich von Steam (BBCode -> HTML, 22 Tests, alle grün – bis Valve wieder ein Tag erfindet).\n"
+		. "    Bugs? #fragen im Discord. Cheats? Nicht hier. Teamkills? Nur mit dem Ural, und nur aus Versehen.\n"
+		. "-->\n";
+}
+add_action( 'wp_head', 'warleek_source_greeting', 0 );
+
 /* ----------------------------------------------------------------- Assets */
 function warleek_assets() {
 	foreach ( array( 'main' => 'css/main.css', 'motion' => 'css/motion.css' ) as $handle => $rel ) {
@@ -129,3 +149,17 @@ add_filter( 'comments_array', '__return_empty_array', 20 );
 add_action( 'admin_menu', function () { remove_menu_page( 'edit-comments.php' ); } );
 
 /** Externe YouTube-Links in Patch Notes: rel="noopener nofollow", kein Embed. */
+
+/**
+ * Hero-Video lazy: Server liefert das <video> ohne src/autoplay/poster (data-Attribute),
+ * main.js aktiviert es nur auf Desktop und nur, wenn der Hero sichtbar ist.
+ * → Mobile lädt keine 350 KB Video, Desktop startet es erst bei Bedarf.
+ */
+function warleek_lazy_hero_video( $content, $block ) {
+	if ( 'core/video' !== $block['blockName'] || ! str_contains( $block['attrs']['className'] ?? '', 'wl-hero__video' ) ) { return $content; }
+	$content = preg_replace( '/\s(autoplay|loop|muted|playsinline)\b(="[^"]*")?/i', '', $content );
+	$content = preg_replace( '/\ssrc="([^"]+)"/i', ' data-src="$1" preload="none" muted playsinline', $content, 1 );
+	$content = preg_replace( '/\sposter="([^"]+)"/i', ' data-poster="$1"', $content, 1 );
+	return $content;
+}
+add_filter( 'render_block', 'warleek_lazy_hero_video', 10, 2 );
