@@ -22,6 +22,7 @@ $cases = [
 	['[p][url="https://x.de/a?b=1"]Link[/url][/p]', '<p><a href="https://x.de/a?b=1" rel="noopener" target="_blank">Link</a></p>'],
 	['[h1][img src="{STEAM_CLAN_IMAGE}/1/a.png"][/img][/h1][h2]Exploits[/h2][list][*][p]Fixed[/p][/list]', '<h2><img src="https://clan.akamai.steamstatic.com/images/1/a.png" alt="" loading="lazy"></h2><h3>Exploits</h3><ul><li>Fixed</li></ul>'],
 	['[table][tr][th]A[/th][th]B[/th][/tr][tr][td][p]1[/p][/td][td]2[/td][/tr][/table]', '<figure class="wp-block-table"><table><tr><th>A</th><th>B</th></tr><tr><td>1</td><td>2</td></tr></table></figure>'],
+	['[list][*][p]Eins[/p][/*][*][p]Zwei[/p][/*][/list]', '<ul><li>Eins</li><li>Zwei</li></ul>'],
 ];
 $fail = 0;
 foreach ( $cases as [$in, $want] ) {

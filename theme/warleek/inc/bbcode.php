@@ -66,7 +66,7 @@ function warleek_bbcode_to_html( $bb ) {
 	}, $text );
 	$text = preg_replace_callback( '/\[(list|olist)\](.*?)\[\/\1\]/is', function ( $m ) use ( $stash ) {
 		$tag   = 'olist' === strtolower( $m[1] ) ? 'ol' : 'ul';
-		$items = preg_split( '/\[\*\]/', $m[2] );
+		$items = preg_split( '/\[\*\]/', preg_replace( '/\[\/\*\]/', '', $m[2] ) );
 		$lis   = '';
 		foreach ( $items as $it ) {
 			$it = trim( preg_replace( '/\[\/?p\]/i', "\n", $it ) );

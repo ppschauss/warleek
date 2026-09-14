@@ -244,3 +244,4 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 .wl-columns .wp-block-column h3 { margin-top: 0.5rem; }
 .wl-columns .wp-block-column .wp-block-image { margin: -1.5rem -1.5rem 0.5rem; }
 .wl-columns .wp-block-column .wp-block-image img { border-radius: var(--wl-radius-lg) var(--wl-radius-lg) 0 0; aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
+.wl-patchlist__all { background: none; border: 0 !important; padding: 0.25rem 0; }

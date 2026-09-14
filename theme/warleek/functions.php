@@ -84,3 +84,6 @@ function warleek_navigation_ref( $parsed ) {
 	return $parsed;
 }
 add_filter( 'render_block_data', 'warleek_navigation_ref' );
+
+/** Im Snapshot-Modus kein Lazy-Loading (Screenshots sollen alle Bilder zeigen). */
+add_filter( 'wp_lazy_loading_enabled', function ( $enabled ) { return isset( $_GET['snap'] ) ? false : $enabled; } );

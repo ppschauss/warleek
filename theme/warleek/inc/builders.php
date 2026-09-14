@@ -50,11 +50,12 @@ function warleek_b_group( $inner, array $opts = array() ) {
 	$a     = array();
 	if ( ! empty( $opts['tag'] ) ) { $a['tagName'] = $opts['tag']; }
 	if ( ! empty( $opts['full'] ) ) { $a['align'] = 'full'; }
+	elseif ( ! empty( $opts['wide_align'] ) ) { $a['align'] = 'wide'; }
 	if ( $class ) { $a['className'] = $class; }
 	$a['layout'] = array( 'type' => $opts['layout'] ?? 'constrained' );
-	if ( ! empty( $opts['wide'] ) ) { $a['layout']['wideSize'] = $opts['wide']; }
+	if ( ! empty( $opts['wide'] ) ) { $a['layout']['contentSize'] = $opts['content'] ?? '760px'; $a['layout']['wideSize'] = $opts['wide']; }
 	$tag = $opts['tag'] ?? 'div';
-	$cls = trim( 'wp-block-group ' . ( ! empty( $opts['full'] ) ? 'alignfull ' : '' ) . $class );
+	$cls = trim( 'wp-block-group ' . ( ! empty( $opts['full'] ) ? 'alignfull ' : ( ! empty( $opts['wide_align'] ) ? 'alignwide ' : '' ) ) . $class );
 	return '<!-- wp:group' . warleek_battr( $a ) . ' --><' . $tag . ' class="' . esc_attr( $cls ) . '">' . "\n" . $inner . '</' . $tag . '><!-- /wp:group -->' . "\n";
 }
 function warleek_b_image( array $img, $class = '', $size = 'large' ) {
@@ -171,7 +172,7 @@ function warleek_build_hero( array $a ) {
 		$inner .= warleek_b_group( $tags, array( 'class' => 'wl-hero__meta', 'layout' => 'flex' ) );
 	}
 	$cls = 'wl-hero' . ( ! empty( $a['home'] ) ? ' wl-hero--home' : '' ) . ( ! empty( $a['page'] ) ? ' wl-hero--page' : '' );
-	return warleek_b_group( $media . warleek_b_group( $inner, array( 'class' => 'wl-hero__inner', 'wide' => '1240px' ) ), array( 'class' => $cls, 'full' => true, 'layout' => 'default' ) );
+	return warleek_b_group( $media . warleek_b_group( $inner, array( 'class' => 'wl-hero__inner', 'wide' => '1240px', 'content' => '1240px' ) ), array( 'class' => $cls, 'full' => true, 'layout' => 'default' ) );
 }
 
 /** Drei Stufen. $tiers: [{title, text, items[], url, cta}] */
@@ -187,7 +188,7 @@ function warleek_build_tiers( array $tiers ) {
 		if ( ! empty( $t['url'] ) ) { $inner .= warleek_b_buttons( array( array( 'label' => $t['cta'] ?? 'Mehr erfahren', 'url' => $t['url'], 'ghost' => $i < 3 ) ) ); }
 		$out .= warleek_b_group( $inner, array( 'class' => 'wl-tier wl-tier--' . $i, 'layout' => 'default' ) );
 	}
-	return warleek_b_group( $out, array( 'class' => 'wl-tiers', 'layout' => 'default' ) );
+	return warleek_b_group( $out, array( 'class' => 'wl-tiers', 'layout' => 'default', 'wide_align' => true ) );
 }
 
 /** Chat-CTA-Band. $a: h2, text, layout(row|grid) */
@@ -227,7 +228,7 @@ function warleek_build_stats( array $stats ) {
 			array( 'class' => 'wl-stat', 'layout' => 'default' )
 		);
 	}
-	return warleek_b_group( $out, array( 'class' => 'wl-stats', 'layout' => 'default' ) );
+	return warleek_b_group( $out, array( 'class' => 'wl-stats', 'layout' => 'default', 'wide_align' => true ) );
 }
 
 /** Team. $members: [{name, role, text, image{id,url,alt}}] */
@@ -241,7 +242,7 @@ function warleek_build_team( array $members ) {
 		if ( ! empty( $m['text'] ) ) { $inner .= warleek_b_paragraph( $m['text'] ); }
 		$out .= warleek_b_group( $inner, array( 'class' => 'wl-member', 'layout' => 'default' ) );
 	}
-	return warleek_b_group( $out, array( 'class' => 'wl-team', 'layout' => 'default' ) );
+	return warleek_b_group( $out, array( 'class' => 'wl-team', 'layout' => 'default', 'wide_align' => true ) );
 }
 
 /** Karten-Spalten. $items: [{title, html, image{id,url,alt}, url}] */

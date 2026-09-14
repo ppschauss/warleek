@@ -69,7 +69,9 @@ function warleek_steam_upsert_patchnote( array $item, $force = false ) {
 
 	$ts    = (int) ( $item['date'] ?? time() );
 	$html  = warleek_bbcode_to_html( $contents );
-	$plain = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( $html ) ) );
+	$plain = html_entity_decode( trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( preg_replace( '/<\/(p|li|h[1-6]|blockquote|tr)>/i', ' ', $html ) ) ) ), ENT_QUOTES, 'UTF-8' );
+	$title = trim( (string) ( $item['title'] ?? '' ) );
+	if ( $title && 0 === strcasecmp( mb_substr( $plain, 0, mb_strlen( $title ) ), $title ) ) { $plain = trim( mb_substr( $plain, mb_strlen( $title ) ) ); }
 	$data  = array(
 		'post_type'     => 'patchnote',
 		'post_status'   => 'publish',

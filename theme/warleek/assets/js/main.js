@@ -3,7 +3,7 @@
 	'use strict';
 	var d = document, root = d.documentElement;
 	root.classList.add('wl-js');
-	var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	var reduce = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) || !!d.getElementById('warleek-snap');
 	var saveData = navigator.connection && navigator.connection.saveData;
 
 	function ready(fn) { if (d.readyState !== 'loading') fn(); else d.addEventListener('DOMContentLoaded', fn); }

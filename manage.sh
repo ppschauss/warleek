@@ -76,7 +76,7 @@ shot() {
   local path="${1:-/}" w="${2:-1440}" out="${3:-shots/shot.png}" h="${4:-2400}"
   local sep='?'; [[ "$path" == *\?* ]] && sep='&'
   docker exec wh-web-check chromium --headless=new --no-sandbox --disable-dev-shm-usage --hide-scrollbars \
-    --screenshot=/tmp/shot.png --window-size="$w,$h" "http://$HOSTIP:$PORT${path}${sep}snap=1" >/dev/null 2>&1 || true
+    --virtual-time-budget=6000 --screenshot=/tmp/shot.png --window-size="$w,$h" "http://$HOSTIP:$PORT${path}${sep}snap=1" >/dev/null 2>&1 || true
   docker cp wh-web-check:/tmp/shot.png "$out"
   echo "→ $out"
 }

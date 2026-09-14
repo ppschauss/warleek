@@ -114,8 +114,8 @@ function warleek_render_section( array $s, array $media, array $site ) {
 		case 'stats':      return warleek_build_stats( $s['items'] );
 		case 'tiers':      return warleek_build_tiers( $site['tiers'] );
 		case 'chat':       return warleek_build_chat_cta( array( 'eyebrow' => $s['eyebrow'] ?? 'Wardogs Chat', 'h2' => $s['h2'] ?? 'Rein in den Chat', 'text' => $s['text'] ?? '', 'layout' => $s['layout'] ?? 'row' ) );
-		case 'patchnotes': return warleek_b_block( 'patchnotes-latest', array( 'count' => (int) ( $s['count'] ?? 3 ) ) );
-		case 'guides':     return warleek_b_block( 'guides-grid', array( 'count' => (int) ( $s['count'] ?? 6 ), 'thema' => $s['thema'] ?? '' ) );
+		case 'patchnotes': return warleek_b_group( warleek_b_block( 'patchnotes-latest', array( 'count' => (int) ( $s['count'] ?? 3 ) ) ), array( 'layout' => 'default', 'wide_align' => true ) );
+		case 'guides':     return warleek_b_group( warleek_b_block( 'guides-grid', array( 'count' => (int) ( $s['count'] ?? 6 ), 'thema' => $s['thema'] ?? '' ) ), array( 'layout' => 'default', 'wide_align' => true ) );
 		case 'faq':        return warleek_build_faq( $s['items'], $s['heading'] ?? 'Häufige Fragen' );
 		case 'cta':        return warleek_build_cta( $s );
 		case 'team':
