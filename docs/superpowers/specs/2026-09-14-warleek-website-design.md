@@ -153,7 +153,7 @@ Zeilenumbrüche → `<br>`/`<p>`. Unbekannte Tags werden entfernt. Ausgabe wird 
 
 ### Lokale Dev (`manage.sh`)
 Befehle: `up | down | wpcli <args> | seed | sync | zip | urls | shot <pfad>`
-- Container `warleek-db` (mariadb:11), `warleek-wp` (wordpress:php8.3-apache), Netz `warleek-net`, Port **8086**.
+- Container `warleek-db` (mariadb:11), `warleek-wp` (wordpress:php8.3-apache), Netz `warleek-net`, Port **8088**.
 - Theme per Bind-Mount, Dev-Login `admin / warleekadmin` (nur lokal).
 - Dynamischer `WP_HOME`/`WP_SITEURL`-Fix aus dem bestehenden WP-Setup (Zugriff via IP/Hostname) – Dev-only.
 - `seed`: legt Seiten/Guides/Navigation aus `_content/*.json` an, setzt Startseite, Permalinks, Optionen.
