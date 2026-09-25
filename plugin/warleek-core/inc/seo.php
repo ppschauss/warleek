@@ -7,8 +7,15 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
+/**
+ * Übernimmt ein SEO-Plugin die Meta-Ausgabe?
+ * Rank Math gibt im Frontend erst nach dem Setup-Assistenten aus – bis dahin liefern wir selbst,
+ * sonst hätte eine frisch installierte Seite gar keine Titles/Descriptions.
+ */
 function warleek_seo_plugin_active() {
-	return class_exists( 'RankMath' ) || defined( 'WPSEO_VERSION' );
+	if ( defined( 'WPSEO_VERSION' ) ) { return true; }
+	if ( class_exists( 'RankMath' ) ) { return (bool) get_option( 'rank_math_is_configured' ); }
+	return false;
 }
 
 /** Titel: eigenes Meta > Standard. */

@@ -4,6 +4,7 @@
  * Slug: warleek/stats
  * Categories: warleek
  */
+if ( ! function_exists( 'warleek_build_stats' ) ) { return; }
 echo warleek_build_stats( array(
 	array( 'num' => '100', 'label' => 'Spieler pro Match' ),
 	array( 'num' => '3', 'label' => 'Teams' ),

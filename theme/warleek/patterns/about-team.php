@@ -4,6 +4,7 @@
  * Slug: warleek/about-team
  * Categories: warleek
  */
+if ( ! function_exists( 'warleek_build_team' ) ) { return; }
 echo warleek_build_team( array(
 	array( 'name' => 'Name', 'role' => 'Gründer · Squad Lead', 'text' => 'Kurzbeschreibung, was die Person bei Warleek macht.' ),
 	array( 'name' => 'Name', 'role' => 'Logistik', 'text' => 'Kurzbeschreibung.' ),

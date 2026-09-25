@@ -185,42 +185,14 @@ function warleek_unschedule_sync() {
 }
 add_action( 'switch_theme', 'warleek_unschedule_sync' );
 
-/* ----------------------------------------------------------------- WP-CLI */
-if ( defined( 'WP_CLI' ) && WP_CLI ) {
-	/**
-	 * Warleek-Befehle.
-	 */
-	class Warleek_CLI {
-		/**
-		 * Synchronisiert Patch Notes von Steam.
-		 *
-		 * ## OPTIONS
-		 *
-		 * [--force]
-		 * : Auch unveränderte Einträge neu schreiben.
-		 *
-		 * ## EXAMPLES
-		 *
-		 *     wp warleek sync-patchnotes
-		 *     wp warleek sync-patchnotes --force
-		 *
-		 * @subcommand sync-patchnotes
-		 */
-		public function sync_patchnotes( $args, $assoc ) {
-			$r = warleek_sync_patchnotes( ! empty( $assoc['force'] ) );
-			WP_CLI::log( sprintf( 'created: %d updated: %d skipped: %d', $r['created'], $r['updated'], $r['skipped'] ) );
-			if ( $r['error'] ) { WP_CLI::error( $r['error'] ); }
-			WP_CLI::success( 'Patch Notes synchronisiert.' );
-		}
-	}
-	WP_CLI::add_command( 'warleek', 'Warleek_CLI' );
-}
 
-
-/** Überschriften so verschieben, dass die erste Ebene im Inhalt h2 ist (Titel ist h1). */
+/**
+ * Überschriften so verschieben, dass die erste Ebene im Inhalt h2 ist (der Titel ist h1).
+ * Steam-Ankündigungen beginnen oft mit [h1] oder [h3] – das würde die Gliederung brechen.
+ */
 function warleek_normalize_headings( $html ) {
 	if ( ! preg_match( '#<h([2-6])\b#i', $html, $m ) ) { return $html; }
-	$first = (int) $m[1]; // erste Überschrift im Inhalt → h2, Rest relativ dazu (min. h2)
+	$first = (int) $m[1];
 	if ( 2 === $first ) { return $html; }
 	$shift = $first - 2;
 	return preg_replace_callback( '#<(/?)h([2-6])\b#i', function ( $x ) use ( $shift ) {

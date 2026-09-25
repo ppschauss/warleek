@@ -7,17 +7,9 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'WARLEEK_VERSION', '0.1.0' );
+if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '1.0.0' ); }
 define( 'WARLEEK_DIR', get_template_directory() );
 define( 'WARLEEK_URI', get_template_directory_uri() );
-
-foreach ( array( 'options', 'bbcode', 'cpt-guide', 'cpt-patchnote', 'steam-sync', 'builders', 'blocks', 'seo' ) as $warleek_inc ) {
-	$warleek_file = WARLEEK_DIR . '/inc/' . $warleek_inc . '.php';
-	if ( file_exists( $warleek_file ) ) {
-		require_once $warleek_file;
-	}
-}
-unset( $warleek_inc, $warleek_file );
 
 /* ------------------------------------------------------------------ Setup */
 function warleek_setup() {
@@ -35,6 +27,14 @@ function warleek_block_styles() {
 	register_block_style( 'core/button', array( 'name' => 'ghost', 'label' => 'Umriss' ) );
 }
 add_action( 'init', 'warleek_block_styles' );
+
+/* ------------------------------------------------------- Plugin-Hinweis */
+/** Ohne Warleek Core fehlen CPTs, Blöcke und Optionen – Hinweis für Redakteure. */
+function warleek_require_core_notice() {
+	if ( function_exists( 'warleek_opt' ) || ! current_user_can( 'activate_plugins' ) ) { return; }
+	echo '<div class="notice notice-error"><p><strong>Warleek:</strong> Das Plugin <em>Warleek Core</em> ist nicht aktiv. Ohne es fehlen Guides, Patch Notes, Chat-Buttons und die Einstellungen. Bitte im Plugin-Bereich aktivieren.</p></div>';
+}
+add_action( 'admin_notices', 'warleek_require_core_notice' );
 
 /* ------------------------------------------------------------ Performance */
 /** Core-Block-CSS nur für tatsächlich genutzte Blöcke laden (statt der kompletten Block-Library). */
@@ -87,68 +87,12 @@ function warleek_snapshot_mode() {
 }
 add_action( 'wp_head', 'warleek_snapshot_mode', 99 );
 
-/* ------------------------------------------------------- Navigation-Ref */
-/**
- * Header/Footer-Parts referenzieren ihre Menüs über Klassen (wl-nav-main / wl-nav-footer)
- * statt über feste IDs; der Seed speichert die IDs der wp_navigation-Posts in Optionen.
- * So bleibt das Theme portabel (Dev ≠ Prod-IDs) und die Menüs sind im Website-Editor editierbar.
- */
-function warleek_navigation_ref( $parsed ) {
-	if ( 'core/navigation' !== $parsed['blockName'] || ! empty( $parsed['attrs']['ref'] ) ) { return $parsed; }
-	$cls = $parsed['attrs']['className'] ?? '';
-	$opt = str_contains( $cls, 'wl-nav-footer' ) ? 'warleek_nav_footer_id' : ( str_contains( $cls, 'wl-nav-main' ) ? 'warleek_nav_main_id' : '' );
-	if ( $opt ) {
-		$id = (int) get_option( $opt, 0 );
-		if ( $id && 'publish' === get_post_status( $id ) ) { $parsed['attrs']['ref'] = $id; }
-	}
-	return $parsed;
-}
-add_filter( 'render_block_data', 'warleek_navigation_ref' );
+
 
 /** Im Snapshot-Modus kein Lazy-Loading (Screenshots sollen alle Bilder zeigen). */
 add_filter( 'wp_lazy_loading_enabled', function ( $enabled ) { return isset( $_GET['snap'] ) ? false : $enabled; } );
 
-/* ------------------------------------------------------ Datenschutz */
-/**
- * Keine Requests zu Dritten: Emoji-Script (s.w.org), oEmbed-Discovery, RSD/WLW, Generator,
- * Shortlink, dns-prefetch. Kommentare/Pingbacks/XML-RPC sind aus (kein Gravatar, keine Trackbacks).
- */
-function warleek_privacy_hardening() {
-	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-	remove_action( 'wp_print_styles', 'print_emoji_styles' );
-	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-	remove_action( 'admin_print_styles', 'print_emoji_styles' );
-	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-	add_filter( 'emoji_svg_url', '__return_false' );
-	remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
-	remove_action( 'wp_head', 'wp_oembed_add_host_js' );
-	remove_action( 'wp_head', 'rsd_link' );
-	remove_action( 'wp_head', 'wlwmanifest_link' );
-	remove_action( 'wp_head', 'wp_generator' );
-	remove_action( 'wp_head', 'wp_shortlink_wp_head' );
-	remove_action( 'wp_head', 'rest_output_link_wp_head' );
-	remove_action( 'wp_head', 'feed_links_extra', 3 );
-	add_filter( 'wp_resource_hints', function ( $urls, $rel ) { return 'dns-prefetch' === $rel ? array() : $urls; }, 10, 2 );
-	add_filter( 'xmlrpc_enabled', '__return_false' );
-	add_filter( 'embed_oembed_discover', '__return_false' );
-}
-add_action( 'init', 'warleek_privacy_hardening' );
 
-/** Kommentare & Pingbacks komplett aus (Community läuft im Discord). */
-function warleek_disable_comments() {
-	foreach ( get_post_types() as $pt ) {
-		if ( post_type_supports( $pt, 'comments' ) ) { remove_post_type_support( $pt, 'comments' ); remove_post_type_support( $pt, 'trackbacks' ); }
-	}
-}
-add_action( 'init', 'warleek_disable_comments', 20 );
-add_filter( 'comments_open', '__return_false', 20 );
-add_filter( 'pings_open', '__return_false', 20 );
-add_filter( 'comments_array', '__return_empty_array', 20 );
-add_action( 'admin_menu', function () { remove_menu_page( 'edit-comments.php' ); } );
-
-/** Externe YouTube-Links in Patch Notes: rel="noopener nofollow", kein Embed. */
 
 /**
  * Hero-Video lazy: Server liefert das <video> ohne src/autoplay/poster (data-Attribute),

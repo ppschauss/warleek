@@ -87,31 +87,6 @@ function warleek_render_option_field( $args ) {
 	);
 }
 
-function warleek_options_menu() {
-	add_options_page( 'Warleek', 'Warleek', 'manage_options', 'warleek', 'warleek_render_options_page' );
-}
-add_action( 'admin_menu', 'warleek_options_menu' );
-
-function warleek_render_options_page() {
-	if ( ! current_user_can( 'manage_options' ) ) { return; }
-	$last_run = (int) get_option( 'warleek_sync_last_run', 0 );
-	$last_err = get_option( 'warleek_sync_last_error', '' );
-	?>
-	<div class="wrap">
-		<h1>Warleek</h1>
-		<form action="options.php" method="post">
-			<?php settings_fields( 'warleek' ); do_settings_sections( 'warleek' ); submit_button(); ?>
-		</form>
-		<hr>
-		<h2>Patch-Notes-Sync</h2>
-		<p>Letzter Lauf: <?php echo $last_run ? esc_html( wp_date( 'd.m.Y H:i', $last_run ) ) : '—'; ?>
-			<?php if ( $last_err ) : ?> · <span style="color:#b32d2e">Fehler: <?php echo esc_html( $last_err ); ?></span><?php endif; ?></p>
-		<p>Der Sync läuft stündlich per WP-Cron. Manuell: <code>wp warleek sync-patchnotes</code> oder
-			<a class="button" href="<?php echo esc_url( wp_nonce_url( admin_url( 'options-general.php?page=warleek&warleek_sync=1' ), 'warleek_sync' ) ); ?>">Jetzt synchronisieren</a></p>
-	</div>
-	<?php
-}
-
 /** Manueller Sync-Trigger über die Optionsseite. */
 function warleek_handle_manual_sync() {
 	if ( ! isset( $_GET['warleek_sync'] ) || ! current_user_can( 'manage_options' ) ) { return; }
@@ -120,7 +95,7 @@ function warleek_handle_manual_sync() {
 		$r = warleek_sync_patchnotes( true );
 		set_transient( 'warleek_sync_notice', $r, 60 );
 	}
-	wp_safe_redirect( admin_url( 'options-general.php?page=warleek' ) );
+	wp_safe_redirect( admin_url( 'admin.php?page=warleek' ) );
 	exit;
 }
 add_action( 'admin_init', 'warleek_handle_manual_sync' );
@@ -136,7 +111,7 @@ function warleek_sync_admin_notice() {
 	$err = get_option( 'warleek_sync_last_error', '' );
 	if ( $err && ! $r ) {
 		$screen = get_current_screen();
-		if ( $screen && in_array( $screen->id, array( 'dashboard', 'settings_page_warleek', 'edit-patchnote' ), true ) ) {
+		if ( $screen && in_array( $screen->id, array( 'dashboard', 'toplevel_page_warleek', 'edit-patchnote' ), true ) ) {
 			printf( '<div class="notice notice-warning"><p>Warleek: Der letzte Steam-Sync ist fehlgeschlagen (%s). Bestehende Patch Notes bleiben unverändert.</p></div>', esc_html( $err ) );
 		}
 	}

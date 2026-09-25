@@ -39,3 +39,22 @@ Ursache nicht JS/DOM (DOM 313–405 Knoten, keine Long Tasks), sondern GPU-Last:
 - `content-visibility:auto` für Sektionen und Footer, Core-Block-CSS nur für genutzte Blöcke (`should_load_separate_core_block_assets`).
 - Ergebnis Startseite mobil: 776 KB → **367 KB**, 15 Requests; Lighthouse **mobile Perf 98, A11y 100**, LCP 2,3 s, TBT 0 ms, CLS 0, Speed Index 1,5 s. Desktop lädt Video (793 KB) und spielt es; mobiles Menü weiterhin per Klick verifiziert.
 - Quellcode-Gruß: HTML-Kommentar im `<head>` + gestylte `console.log`-Nachricht.
+
+## Warleek Core (Plugin) – 25.09.2026
+Architektur getrennt: Theme = Design, Plugin = Funktion + Inhalte (CPTs, Steam-Sync, Optionen, Blöcke, Builder, SEO, Privacy, Installer, WP-CLI). Theme zeigt ohne Plugin einen Hinweis, Patterns sind per `function_exists` abgesichert; Plugin warnt, wenn das Theme fehlt.
+
+**Installer**: Admin-Seite *Warleek → Installation* mit Statusübersicht (9 Punkte) und sechs Schritten, einzeln oder als Kette per AJAX. Dazu `wp warleek install [--force|--skip-plugins]`, `wp warleek status`, `wp warleek sync-patchnotes`.
+
+**Test auf frischer WordPress-Instanz (Port 8089, leere DB, nur die beiden Zips):**
+- Theme- und Plugin-Zip installiert, „Komplett installieren“ im Browser geklickt: alle sechs Schritte grün – Rank Math installiert und aktiviert, 27 Medien, 15 Seiten, 6 Guides, Menüs/Startseite/Logo/Favicon/Permalinks, 3 Patch Notes. Keine JS-Fehler.
+- Frontend danach: alle geprüften URLs 200, Titel „Wardogs Community Deutschland, Österreich & Schweiz | Warleek“, Hero/Stufen/Patch-Liste/Logo vorhanden, mobiles Overlay-Menü per Klick geprüft (390×844, 15/15 Links).
+- Zweiter Durchlauf: 31 Attachments → 31, 17 Seiten → 17, „0 neu“ – idempotent.
+
+**Drei Fehler, die erst dieser Test gezeigt hat und behoben sind:**
+1. `warleek_normalize_headings()` war beim Verschieben des WP-CLI-Blocks verloren gegangen → Fatal beim Sync. Ergänzt; zusätzlich prüft ein Skript alle `warleek_*`-Aufrufe gegen die Definitionen (89 Funktionen, 0 fehlend).
+2. Die Seed-Funktionen schrieben Fortschritt per `echo` → zerstörte die JSON-Antwort der AJAX-Schritte. Ersetzt durch `warleek_log()`, jeder Schritt läuft zusätzlich in einem Output-Buffer mit try/catch.
+3. Rank Math leitet nach der Aktivierung im `admin_init` auf seinen Assistenten um → der folgende AJAX-Schritt bekam HTML. Während eines Schritts ist `wp_redirect` jetzt abgeschaltet, Aktivierung erfolgt „silent“, und das JS meldet Nicht-JSON-Antworten verständlich.
+
+**SEO-Übergabe:** Rank Math gibt im Frontend erst nach seinem Setup-Assistenten aus. `warleek_seo_plugin_active()` prüft deshalb `rank_math_is_configured` – bis dahin liefert Warleek Core Titles, Descriptions, OG, Dublin Core selbst. Auf der frischen Instanz verifiziert.
+
+**Pakete:** `warleek-theme.zip` (1,3 MB), `warleek-core.zip` (2,4 MB, Inhalte und Medien enthalten).

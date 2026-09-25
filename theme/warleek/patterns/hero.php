@@ -5,6 +5,7 @@
  * Categories: warleek
  * Description: Großer Hero mit Bild/Video, Eyebrow, H1, Lead, Buttons und Dogtag-Zeile.
  */
+if ( ! function_exists( 'warleek_build_hero' ) ) { return; }
 echo warleek_build_hero( array(
 	'home'    => true,
 	'eyebrow' => 'Wardogs Community · Deutschland · Österreich · Schweiz',

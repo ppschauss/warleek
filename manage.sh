@@ -13,13 +13,14 @@ PORT=8088
 DBPASS=wppass
 HOSTIP=${HOSTIP:-192.168.0.161}
 THEME_MOUNT="$(pwd)/theme/warleek:/var/www/html/wp-content/themes/warleek"
+PLUGIN_MOUNT="$(pwd)/plugin/warleek-core:/var/www/html/wp-content/plugins/warleek-core"
 ASSETS_MOUNT="$(pwd)/assets-src:/assets-src:ro"
 # Dynamische Site-URL (einzeilig für docker run -e) — behebt localhost-Redirect. Dev-only!
 CONFIG_EXTRA='if(isset($_SERVER["HTTP_HOST"])){$s=(!empty($_SERVER["HTTPS"])&&$_SERVER["HTTPS"]!=="off")?"https":"http";if(!defined("WP_HOME"))define("WP_HOME",$s."://".$_SERVER["HTTP_HOST"]);if(!defined("WP_SITEURL"))define("WP_SITEURL",$s."://".$_SERVER["HTTP_HOST"]);}'
 
 wpcli() {
   docker run --rm --network "$NET" --entrypoint wp \
-    -v "$WPV:/var/www/html" -v "$THEME_MOUNT" -v "$ASSETS_MOUNT" \
+    -v "$WPV:/var/www/html" -v "$THEME_MOUNT" -v "$PLUGIN_MOUNT" -v "$ASSETS_MOUNT" \
     -e WORDPRESS_DB_HOST="$DB" -e WORDPRESS_DB_USER=wp -e WORDPRESS_DB_PASSWORD="$DBPASS" -e WORDPRESS_DB_NAME=wordpress \
     --user 33 wordpress:cli "$@"
 }
@@ -41,7 +42,7 @@ up() {
     -e TZ=Europe/Berlin \
     -e WORDPRESS_DB_HOST="$DB" -e WORDPRESS_DB_USER=wp -e WORDPRESS_DB_PASSWORD="$DBPASS" -e WORDPRESS_DB_NAME=wordpress \
     -e WORDPRESS_CONFIG_EXTRA="$CONFIG_EXTRA" \
-    -v "$WPV:/var/www/html" -v "$THEME_MOUNT" -v "$ASSETS_MOUNT" \
+    -v "$WPV:/var/www/html" -v "$THEME_MOUNT" -v "$PLUGIN_MOUNT" -v "$ASSETS_MOUNT" \
     wordpress:php8.3-apache >/dev/null
   echo "gestartet auf Port $PORT → http://$HOSTIP:$PORT"
 }
@@ -52,6 +53,7 @@ install() {
     --admin_user=admin --admin_password=warleekadmin --admin_email=admin@warleek.de --skip-email
   wpcli language core install de_DE --activate || true
   wpcli theme activate warleek
+  wpcli plugin activate warleek-core
   wpcli option update timezone_string Europe/Berlin
   wpcli option update blogdescription "Wardogs Community, Team & Clan für Deutschland, Österreich und die Schweiz"
   wpcli rewrite structure '/%postname%/' --hard
@@ -59,16 +61,17 @@ install() {
 }
 
 seed() {
-  wpcli eval-file wp-content/themes/warleek/seed.php
+  wpcli warleek install "$@"
   wpcli rewrite flush --hard
 }
 
 sync() { wpcli warleek sync-patchnotes "$@"; }
 
 zipit() {
-  rm -f warleek.zip
-  (cd theme && zip -qr ../warleek.zip warleek -x 'warleek/_content/*' 'warleek/seed.php' 'warleek/tests/*')
-  ls -la warleek.zip
+  rm -f warleek-theme.zip warleek-core.zip
+  (cd theme && zip -qr ../warleek-theme.zip warleek)
+  (cd plugin && zip -qr ../warleek-core.zip warleek-core -x 'warleek-core/tests/*')
+  ls -la warleek-theme.zip warleek-core.zip
 }
 
 shot() {
@@ -88,7 +91,7 @@ case "$1" in
   logs)    docker logs -f "$WP" ;;
   install) shift; install "$@" ;;
   wp)      shift; wpcli "$@" ;;
-  seed)    seed ;;
+  seed)    shift; seed "$@" ;;
   sync)    shift; sync "$@" ;;
   zip)     zipit ;;
   shot)    shift; shot "$@" ;;
