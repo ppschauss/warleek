@@ -106,7 +106,7 @@ add_action( 'init', 'warleek_register_blocks' );
 
 /** Editor-Registrierung ohne Build-Schritt (ServerSideRender-Vorschau). */
 function warleek_register_block_editor_script() {
-	wp_register_script( 'warleek-blocks', false, array( 'wp-blocks', 'wp-element', 'wp-server-side-render', 'wp-block-editor', 'wp-components' ), WARLEEK_VERSION, true );
+	wp_register_script( 'warleek-blocks', false, array( 'wp-blocks', 'wp-element', 'wp-server-side-render', 'wp-block-editor', 'wp-components' ), WARLEEK_CORE_VERSION, true );
 	$js = <<<'JS'
 (function(wp){
 	var el=wp.element.createElement, SSR=wp.serverSideRender, IC=wp.blockEditor.InspectorControls, PB=wp.components.PanelBody, TC=wp.components.TextControl, RC=wp.components.RangeControl, SC=wp.components.SelectControl;

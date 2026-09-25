@@ -13,7 +13,7 @@ if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) { return; }
 /**
  * Warleek-Verwaltung.
  */
-class Warleek_CLI {
+class Warleek_Core_CLI {
 
 	/**
 	 * Installiert Inhalte, Medien, Menüs und das SEO-Plugin.
@@ -70,4 +70,4 @@ class Warleek_CLI {
 		WP_CLI\Utils\format_items( 'table', $rows, array( 'Punkt', 'OK', 'Detail' ) );
 	}
 }
-WP_CLI::add_command( 'warleek', 'Warleek_CLI' );
+if ( ! class_exists( 'Warleek_CLI' ) ) { WP_CLI::add_command( 'warleek', 'Warleek_Core_CLI' ); }

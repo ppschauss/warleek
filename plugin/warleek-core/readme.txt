@@ -4,7 +4,7 @@ Tags: community, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 1.0.1 =
+* Verträglich mit älteren Warleek-Themes (0.1.x), die die Funktionsmodule noch selbst mitbrachten: das Plugin erkennt das, überlässt dem Theme den Funktionsteil, stellt nur den Installer bereit und weist auf das Theme-Update hin. Vorher schlug die Aktivierung mit einem Fatal Error fehl.
+* WP-CLI-Klasse umbenannt (Warleek_Core_CLI), damit sie nie mit einer Theme-Variante kollidiert.
+* Keine PHP-Warnung mehr wegen doppelt definierter Konstante WARLEEK_VERSION.
 
 = 1.0.0 =
 * Erste Veröffentlichung: CPTs, Steam-Sync, Optionen, Blöcke, SEO-Metas, Datenschutz-Hardening und Klick-Installer.

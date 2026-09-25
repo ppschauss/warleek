@@ -24,7 +24,7 @@ function warleek_steam_fetch_news( $appid, $count = 30 ) {
 		'feeds'     => 'steam_community_announcements',
 		'format'    => 'json',
 	), WARLEEK_STEAM_NEWS_API );
-	$res = wp_remote_get( $url, array( 'timeout' => 15, 'user-agent' => 'Warleek/' . WARLEEK_VERSION . ' (+https://warleek.de)' ) );
+	$res = wp_remote_get( $url, array( 'timeout' => 15, 'user-agent' => 'Warleek/' . WARLEEK_CORE_VERSION . ' (+https://warleek.de)' ) );
 	if ( is_wp_error( $res ) ) { return $res; }
 	$code = wp_remote_retrieve_response_code( $res );
 	if ( 200 !== (int) $code ) { return new WP_Error( 'steam_http', 'Steam-API HTTP ' . $code ); }

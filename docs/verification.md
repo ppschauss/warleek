@@ -58,3 +58,19 @@ Architektur getrennt: Theme = Design, Plugin = Funktion + Inhalte (CPTs, Steam-S
 **SEO-Übergabe:** Rank Math gibt im Frontend erst nach seinem Setup-Assistenten aus. `warleek_seo_plugin_active()` prüft deshalb `rank_math_is_configured` – bis dahin liefert Warleek Core Titles, Descriptions, OG, Dublin Core selbst. Auf der frischen Instanz verifiziert.
 
 **Pakete:** `warleek-theme.zip` (1,3 MB), `warleek-core.zip` (2,4 MB, Inhalte und Medien enthalten).
+
+## Hotfix 1.0.1 – Aktivierung neben altem Theme (25.09.2026)
+**Meldung des Nutzers:** „Das Plugin konnte nicht aktiviert werden, da es einen fatalen Fehler ausgelöst hat.“
+
+**Reproduziert** auf frischer Instanz mit dem Theme-Stand aus dem ersten Paket (Commit 67823d6, Theme 0.1.0 mit eigenem `inc/`):
+`PHP Fatal error: Cannot redeclare warleek_option_fields() (previously declared in themes/warleek/inc/options.php:11) in plugins/warleek-core/inc/options.php:11`.
+Ursache: Bis 0.1.x brachte das Theme die Funktionsmodule mit; Plugin 1.0.0 deklariert dieselben Funktionen erneut. Beim Aktivieren lädt WordPress die Plugin-Datei in einer Anfrage, in der das Theme bereits geladen ist → Fatal.
+
+**Behoben in 1.0.1:**
+- Das Plugin prüft beim Laden, ob das aktive Theme noch `inc/options.php` hat. Falls ja: nur der Installer wird geladen, der Funktionsteil bleibt beim Theme, und im Backend steht ein Hinweis mit der Bitte, das Theme zu aktualisieren.
+- WP-CLI-Klasse heißt jetzt `Warleek_Core_CLI` und wird nur registriert, wenn keine `Warleek_CLI` existiert.
+- `WARLEEK_VERSION` wird nur gesetzt, wenn kein altes Theme die Konstante selbst definiert (sonst PHP-Warnung → „headers already sent“).
+
+**Nachgetestet:**
+- Altes Theme 0.1.0 + Plugin 1.0.1: Aktivierung erfolgreich, Installer-Seite erreichbar, alle sechs Schritte grün (Rank Math, 27 Medien, 15 Seiten, 6 Guides, Menüs, Patch Notes), Frontend 200 auf allen geprüften URLs, keine Fatals im Log.
+- Neues Theme 1.0.0 + Plugin 1.0.1 (Dev-Instanz): unverändert, `WARLEEK_CORE_LEGACY_THEME` false, Status vollständig, Tests grün.
