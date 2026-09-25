@@ -82,3 +82,16 @@ Auf Wunsch übernommen: Inhaltsbreite 80vw (Desktop) bzw. 95vw (Mobil), Bilder i
 - Patch-Notes-Bilder: Einbindung von `large` auf `full` mit `sizes="(max-width: 781px) 95vw, 80vw"` umgestellt, sonst wurden 1024-px-Dateien auf ~1150 px hochskaliert. Bestehende Bilder neu importiert (Quellen 2560×1440).
 - Aufklappmenü: `min-width: 280px` und kein Umbruch, weil der Eintrag „Übersicht: Community · Team · Clan“ im schmalen Menü dreizeilig wurde.
 - Geprüft: alle Seiten 200, mobiles Overlay-Menü weiterhin vollflächig (15/15 Links), Lighthouse mobil Performance 98 / A11y 100, CLS 0, LCP 2,3 s.
+
+## Feste Breiten entfernt (25.09.2026)
+**Rückmeldung:** „mich stört es wirklich immens, dass der text content nur auf 720px beschränkt ist“.
+
+**Ursache:** Nicht das CSS, sondern das Blockmarkup. Die Builder schrieben `"layout":{"contentSize":"760px","wideSize":"1240px"}` in jede Sektion; WordPress erzeugt daraus eine eigene Container-Regel, die jede globale Breite überstimmt. Header und Footer hatten `wideSize:1240px` fest im Template, der Hero zusätzlich `max-width:760px` im CSS. Die vorherige Umstellung auf 80vw wirkte deshalb nur dort, wo keine Inline-Breite gesetzt war.
+
+**Behoben:**
+- Builder schreiben keine Pixelbreiten mehr ins Markup (nur noch, wenn ausdrücklich eine Breite übergeben wird).
+- Neues immer geladenes Modul `inc/layout.php`: entfernt beim Rendern `contentSize`/`wideSize` aus Blöcken mit den Klassen `wl-section` und `wl-hero__inner`, damit bestehende Seiten ohne Neuanlage die aktuelle Breite übernehmen. Eigene Breiten aus dem Editor bleiben unangetastet.
+- `wideSize:1240px` aus header.html und footer.html entfernt, `.wl-hero__inner > *` und `.wl-section__head` ohne Pixel-Deckel.
+- theme.json: contentSize 80vw, wideSize 92vw (CSS überschreibt sie auf Mobil mit 95vw).
+
+**Geprüft:** Startseite, FOB, Guide, Clan, Patch Note – keine `max-width:760px`-Regel mehr im Dokument; Text läuft über die volle Inhaltsbreite; mobiles Menü unverändert (15/15 Links); Tests grün. Zusätzlich gegengetestet auf der Testinstanz mit altem Theme 0.1.0 (Filter greift, keine Fatals) und mit Theme 1.1.1.

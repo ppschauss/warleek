@@ -53,7 +53,11 @@ function warleek_b_group( $inner, array $opts = array() ) {
 	elseif ( ! empty( $opts['wide_align'] ) ) { $a['align'] = 'wide'; }
 	if ( $class ) { $a['className'] = $class; }
 	$a['layout'] = array( 'type' => $opts['layout'] ?? 'constrained' );
-	if ( ! empty( $opts['wide'] ) ) { $a['layout']['contentSize'] = $opts['content'] ?? '760px'; $a['layout']['wideSize'] = $opts['wide']; }
+	// Keine festen Pixelbreiten ins Markup schreiben: sonst überstimmt der Block die
+	// globalen Layout-Breiten (theme.json / CSS-Variablen) und der Text klebt für immer
+	// auf der Breite, die beim Anlegen galt.
+	if ( ! empty( $opts['content'] ) ) { $a['layout']['contentSize'] = $opts['content']; }
+	if ( ! empty( $opts['wide'] ) ) { $a['layout']['wideSize'] = $opts['wide']; }
 	$tag = $opts['tag'] ?? 'div';
 	$cls = trim( 'wp-block-group ' . ( ! empty( $opts['full'] ) ? 'alignfull ' : ( ! empty( $opts['wide_align'] ) ? 'alignwide ' : '' ) ) . $class );
 	return '<!-- wp:group' . warleek_battr( $a ) . ' --><' . $tag . ' class="' . esc_attr( $cls ) . '">' . "\n" . $inner . '</' . $tag . '><!-- /wp:group -->' . "\n";
@@ -172,7 +176,7 @@ function warleek_build_hero( array $a ) {
 		$inner .= warleek_b_group( $tags, array( 'class' => 'wl-hero__meta', 'layout' => 'flex' ) );
 	}
 	$cls = 'wl-hero' . ( ! empty( $a['home'] ) ? ' wl-hero--home' : '' ) . ( ! empty( $a['page'] ) ? ' wl-hero--page' : '' );
-	return warleek_b_group( $media . warleek_b_group( $inner, array( 'class' => 'wl-hero__inner', 'wide' => '1240px', 'content' => '1240px' ) ), array( 'class' => $cls, 'full' => true, 'layout' => 'default' ) );
+	return warleek_b_group( $media . warleek_b_group( $inner, array( 'class' => 'wl-hero__inner' ) ), array( 'class' => $cls, 'full' => true, 'layout' => 'default' ) );
 }
 
 /** Drei Stufen. $tiers: [{title, text, items[], url, cta}] */
@@ -268,5 +272,5 @@ function warleek_build_section( $inner, array $o = array() ) {
 	if ( ! empty( $o['text'] ) ) { $head .= warleek_b_paragraph( $o['text'], 'wl-lead' ); }
 	if ( $head ) { $head = warleek_b_group( $head, array( 'class' => 'wl-section__head', 'layout' => 'default' ) ); }
 	$cls = 'wl-section' . ( ! empty( $o['surface'] ) ? ' wl-section--surface' : '' ) . ( ! empty( $o['class'] ) ? ' ' . $o['class'] : '' );
-	return warleek_b_group( $head . $inner, array( 'class' => $cls, 'full' => true, 'wide' => '1240px' ) );
+	return warleek_b_group( $head . $inner, array( 'class' => $cls, 'full' => true ) );
 }

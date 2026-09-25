@@ -3,7 +3,7 @@
  * Plugin Name:       Warleek Core
  * Plugin URI:        https://warleek.de
  * Description:       Funktionskern und Installer der Warleek-Website: Guides & Patch Notes (automatisch von Steam), Chat-Optionen, eigene Blöcke, SEO-Metas – plus ein Klick-Installer für alle Inhalte, Bilder und das benötigte SEO-Plugin.
- * Version:           1.0.2
+ * Version:           1.1.0
  * Requires at least: 6.6
  * Requires PHP:      8.1
  * Author:            Warleek
@@ -17,7 +17,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'WARLEEK_CORE_VERSION', '1.0.2' );
+define( 'WARLEEK_CORE_VERSION', '1.1.0' );
 define( 'WARLEEK_CORE_FILE', __FILE__ );
 define( 'WARLEEK_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WARLEEK_CORE_URI', plugin_dir_url( __FILE__ ) );
@@ -47,8 +47,8 @@ define( 'WARLEEK_CORE_LEGACY_THEME', $warleek_legacy );
 if ( ! $warleek_legacy && ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', WARLEEK_CORE_VERSION ); }
 
 $warleek_modules = $warleek_legacy
-	? array( 'installer' )                                                                                   // Funktionen kommen aus dem alten Theme
-	: array( 'options', 'bbcode', 'cpt-guide', 'cpt-patchnote', 'steam-sync', 'builders', 'blocks', 'seo', 'privacy', 'installer', 'cli' );
+	? array( 'layout', 'installer' )                                                                          // Funktionen kommen aus dem alten Theme
+	: array( 'options', 'bbcode', 'cpt-guide', 'cpt-patchnote', 'steam-sync', 'builders', 'blocks', 'seo', 'privacy', 'layout', 'installer', 'cli' );
 
 foreach ( $warleek_modules as $warleek_module ) {
 	$warleek_path = WARLEEK_CORE_DIR . 'inc/' . $warleek_module . '.php';
