@@ -74,3 +74,11 @@ Ursache: Bis 0.1.x brachte das Theme die Funktionsmodule mit; Plugin 1.0.0 dekla
 **Nachgetestet:**
 - Altes Theme 0.1.0 + Plugin 1.0.1: Aktivierung erfolgreich, Installer-Seite erreichbar, alle sechs Schritte grün (Rank Math, 27 Medien, 15 Seiten, 6 Guides, Menüs, Patch Notes), Frontend 200 auf allen geprüften URLs, keine Fatals im Log.
 - Neues Theme 1.0.0 + Plugin 1.0.1 (Dev-Instanz): unverändert, `WARLEEK_CORE_LEGACY_THEME` false, Status vollständig, Tests grün.
+
+## Breiteres Layout + weiße Untermenü-Schrift (25.09.2026)
+Auf Wunsch übernommen: Inhaltsbreite 80vw (Desktop) bzw. 95vw (Mobil), Bilder im Fließtext ebenso, Untermenü-Schrift weiß.
+- Umsetzung über `--wp--style--global--content-size` im CSS statt in theme.json, weil die Breite je nach Bildschirm unterschiedlich sein soll. Die Wide-Breite wurde auf 92vw (Desktop) / 95vw (Mobil) mitgezogen, sonst wären Karten und Raster schmaler als der Fließtext gewesen.
+- Zwischenstand verworfen: ein Lesbarkeits-Limit von 80ch für Absätze ließ den Text gegenüber den Überschriften eingerückt erscheinen (constrained Layout zentriert schmalere Kinder). Entfernt – die gewünschte Breite gilt jetzt unverändert.
+- Patch-Notes-Bilder: Einbindung von `large` auf `full` mit `sizes="(max-width: 781px) 95vw, 80vw"` umgestellt, sonst wurden 1024-px-Dateien auf ~1150 px hochskaliert. Bestehende Bilder neu importiert (Quellen 2560×1440).
+- Aufklappmenü: `min-width: 280px` und kein Umbruch, weil der Eintrag „Übersicht: Community · Team · Clan“ im schmalen Menü dreizeilig wurde.
+- Geprüft: alle Seiten 200, mobiles Overlay-Menü weiterhin vollflächig (15/15 Links), Lighthouse mobil Performance 98 / A11y 100, CLS 0, LCP 2,3 s.

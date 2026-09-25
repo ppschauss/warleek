@@ -4,7 +4,7 @@ Tags: community, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 1.0.2 =
+* Bilder aus Patch Notes werden in Originalgröße mit srcset eingebunden (vorher „large“, dadurch auf breiten Layouts unscharf).
 
 = 1.0.1 =
 * Verträglich mit älteren Warleek-Themes (0.1.x), die die Funktionsmodule noch selbst mitbrachten: das Plugin erkennt das, überlässt dem Theme den Funktionsteil, stellt nur den Installer bereit und weist auf das Theme-Update hin. Vorher schlug die Aktivierung mit einem Fatal Error fehl.

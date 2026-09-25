@@ -299,3 +299,37 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 	.wl-card p, .wl-muted, .wl-member p, .wl-stat__label, .wl-patchlist p { color: var(--wp--preset--color--text); }
 }
 @media (forced-colors: active) { .wl-hero::after, .wl-smoke, .wl-flare-bar { display: none; } .wl-chat__btn, .wp-element-button { border: 2px solid ButtonText; } }
+
+/* =====================================================================
+   Breiter Inhalt. Die Layout-Breiten aus theme.json werden hier per
+   Custom Property überschrieben, weil sie je nach Bildschirmbreite
+   unterschiedlich sein sollen – das kann theme.json nicht.
+   Die Wide-Breite bleibt größer als die Inhaltsbreite, sonst wären
+   Karten und Raster schmaler als der Fließtext.
+   ===================================================================== */
+:root {
+	--wp--style--global--content-size: 80vw;
+	--wp--style--global--wide-size: 92vw;
+}
+@media (max-width: 781px) {
+	:root {
+		--wp--style--global--content-size: 95vw;
+		--wp--style--global--wide-size: 95vw;
+	}
+}
+
+/* Bilder im Fließtext (u. a. die Screenshots in den Patch Notes) über die volle Inhaltsbreite. */
+p img {
+	width: 80vw;
+	max-width: 100%;
+	height: auto;
+	border-radius: var(--wl-radius);
+}
+@media (max-width: 781px) { p img { width: 95vw; } }
+
+/* Untermenü im Header: weiße Schrift (Kontrast auf dunklem Aufklappmenü). */
+.wp-block-navigation:not(.has-text-color) .wp-block-navigation__submenu-container { color: #fff; }
+.wp-block-navigation:not(.has-text-color) .wp-block-navigation__submenu-container a:not(:hover) { color: #fff; }
+/* Der erste Eintrag ist ein langer Übersichtstitel – im Aufklappmenü nicht umbrechen lassen. */
+.site-nav .wp-block-navigation__submenu-container { min-width: 280px; }
+.site-nav .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container .wp-block-navigation-item__content { white-space: nowrap; }

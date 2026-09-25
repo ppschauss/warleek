@@ -128,7 +128,9 @@ function warleek_localize_remote_images( $post_id ) {
 			update_post_meta( (int) $att, '_warleek_steam_src', esc_url_raw( $url ) );
 		}
 		$att_id = (int) $map[ $key ];
-		$tag    = wp_get_attachment_image( $att_id, 'large', false, array( 'loading' => 'lazy', 'alt' => '', 'decoding' => 'async' ) );
+		// 'full' statt 'large': die Screenshots laufen über die volle Inhaltsbreite (80vw),
+		// mit srcset wählt der Browser trotzdem die passende Größe.
+		$tag    = wp_get_attachment_image( $att_id, 'full', false, array( 'loading' => 'lazy', 'alt' => '', 'decoding' => 'async', 'sizes' => '(max-width: 781px) 95vw, 80vw' ) );
 		if ( $tag ) {
 			// kompletten <img>-Tag mit dieser Quelle durch responsives Markup (srcset, width/height) ersetzen
 			$html = preg_replace( '#<img[^>]*src=["\']' . preg_quote( $url, '#' ) . '["\'][^>]*>#i', wp_make_link_relative( $tag ), $html, -1, $n );
