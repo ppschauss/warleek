@@ -1,0 +1,26 @@
+/* Warleek – breiteres Layout, weiße Untermenü-Schrift.
+   Für Design → Individuelles CSS (falls das Theme nicht aktualisiert wird). */
+
+:root {
+	--wp--style--global--content-size: 80vw;
+	--wp--style--global--wide-size: 92vw;
+}
+@media (max-width: 781px) {
+	:root {
+		--wp--style--global--content-size: 95vw;
+		--wp--style--global--wide-size: 95vw;
+	}
+}
+
+p img {
+	width: 80vw;
+	max-width: 100%;
+	height: auto;
+	border-radius: 6px;
+}
+@media (max-width: 781px) { p img { width: 95vw; } }
+
+.wp-block-navigation:not(.has-text-color) .wp-block-navigation__submenu-container { color: #fff; }
+.wp-block-navigation:not(.has-text-color) .wp-block-navigation__submenu-container a:not(:hover) { color: #fff; }
+.site-nav .wp-block-navigation__submenu-container { min-width: 280px; }
+.site-nav .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container .wp-block-navigation-item__content { white-space: nowrap; }
