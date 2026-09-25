@@ -15,6 +15,7 @@ Wardogs-Community-Website **Warleek** (warleek.de): Block-Theme `theme/warleek` 
 - Asset-URLs root-relativ, Fonts self-hosted (DSGVO), keine externen Requests außer Steam-CDN in Patch Notes.
 - Spielzahlen immer mit „Stand: <Monat Jahr>" (Early Access). Faktenbasis: `docs/research/wardogs-facts.md`.
 - Shell-Hinweis: `cd` persistiert nicht zuverlässig zwischen Befehlen → absolute Pfade / `git -C`.
+- Nach einem Branch-Wechsel, der `theme/` oder `plugin/` neu anlegt, zeigt der Bind-Mount ins Leere (alter Inode) → `./manage.sh up` neu starten, sonst fehlen im Container Plugin/Theme.
 - Screenshots: `?snap=1` friert Motion ein, deaktiviert Lazy-Loading; `--disable-dev-shm-usage` ist Pflicht.
 
 ## Docs
