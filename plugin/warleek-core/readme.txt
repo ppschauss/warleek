@@ -47,6 +47,7 @@ Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und 
 == Changelog ==
 
 = 2.0.0 =
+* Updates über GitHub-Releases: Theme und Plugin melden neue Versionen im WordPress-Dashboard und lassen sich dort mit einem Klick aktualisieren.
 * Guide-Import aus Markdown (Backend-Tab und WP-CLI) samt ZIP, Bildern, Trockenlauf und Themenerkennung.
 * Patch Notes werden ins Deutsche übersetzt (Claude-API) und bekommen eine Kurzfassung „Das Wichtigste in Kürze"; das englische Original bleibt zum Aufklappen erhalten.
 * Umbau zur Guide- und Tipps-Seite: Community-, Team- und Clan-Seiten entfallen, `/community/` wird zur Partner-Seite.
