@@ -91,19 +91,43 @@ function warleek_img( array $media, $key, $size = 'full' ) {
 /* ------------------------------------------------------------ Upsert */
 function warleek_upsert_post( array $data, $type, $parent = 0, $force = false ) {
 	$existing = get_posts( array( 'post_type' => $type, 'name' => $data['post_name'], 'post_parent' => $parent, 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) );
-	$data = array_merge( $data, array( 'post_type' => $type, 'post_status' => 'publish', 'post_parent' => $parent ) );
+
 	if ( $existing ) {
+		$id = (int) $existing[0];
+
 		// Was jemand bewusst in den Papierkorb gelegt hat, holt der Installer nicht zurück.
-		if ( 'trash' === get_post_status( $existing[0] ) ) {
+		if ( 'trash' === get_post_status( $id ) ) {
 			warleek_log( 'übersprungen (im Papierkorb): ' . $data['post_name'] );
 			return 0;
 		}
-		$data['ID'] = (int) $existing[0];
+
+		// Veröffentlichungsstatus nicht anfassen: Ein Entwurf bleibt ein Entwurf.
+		$data['post_parent'] = $parent;
+		$data['post_type']   = $type;
+		$data['ID']          = $id;
+
+		// Von Hand bearbeitete Texte nicht überschreiben. Erkennbar daran, dass der
+		// aktuelle Inhalt nicht mehr dem entspricht, was der Seed zuletzt geschrieben hat.
+		$seed_hash = (string) get_post_meta( $id, '_warleek_seed_hash', true );
+		if ( ! $force && $seed_hash && md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) !== $seed_hash ) {
+			unset( $data['post_content'], $data['post_excerpt'] );
+			warleek_log( 'Inhalt behalten (im Editor geändert): ' . $data['post_name'] );
+		}
+
 		wp_update_post( wp_slash( $data ) );
+		if ( isset( $data['post_content'] ) ) {
+			// Den zurückgelesenen Wert hashen – WordPress normalisiert beim Speichern.
+			update_post_meta( $id, '_warleek_seed_hash', md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) );
+		}
 		warleek_log( "update: {$data['post_name']}" );
-		return (int) $existing[0];
+		return $id;
 	}
-	$id = wp_insert_post( wp_slash( $data ) );
+
+	$data = array_merge( $data, array( 'post_type' => $type, 'post_status' => 'publish', 'post_parent' => $parent ) );
+	$id   = wp_insert_post( wp_slash( $data ) );
+	if ( $id && ! is_wp_error( $id ) && isset( $data['post_content'] ) ) {
+		update_post_meta( $id, '_warleek_seed_hash', md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) );
+	}
 	warleek_log( "create: {$data['post_name']} (#$id)" );
 	return (int) $id;
 }
