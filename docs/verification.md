@@ -131,3 +131,18 @@ Partner-Inhaltstyp · Themen-Chips, Suche, Lesezeit, verwandte Guides · Themen 
 - **GitHub-Repo `ppschauss/warleek` und Release `v2.0.0`** sind noch nicht angelegt. Erst danach lässt sich der Update-Kanal echt prüfen (Version lokal senken → Dashboard bietet beide Pakete an).
 - **Anthropic-Schlüssel** in `wp-config.php` (`WARLEEK_ANTHROPIC_KEY`), sonst bleiben die Patch Notes englisch.
 - **Chat-Links, Impressum, Datenschutz, About-us, Partner-Einträge** enthalten Platzhalter.
+
+### Update-Kanal echt durchgespielt (29.09.2026, ohne GitHub)
+Das GitHub-Repo existiert noch nicht, deshalb lief die Probe gegen eine lokale Attrappe: ein nginx-Container im Testnetz liefert `warleek-update.json` und beide Pakete, ein mu-Plugin biegt `warleek_update_manifest_url` dorthin um. Alles danach ist der echte Weg – Transient, Update-Filter, WordPress-Installer.
+
+Ablauf auf einer frischen Instanz (`bin/test-instance.sh fresh|install`, Theme und Plugin als echte Zip-Kopien, **keine** Bind-Mounts): 2.0.0 installiert, Inhalte geseedet, eine Seite von Hand ergänzt. Dann Testpakete 2.0.1 gebaut und angeboten.
+
+- Dashboard bietet **beide** Pakete an: `warleek-core 2.0.0 → 2.0.1`, Theme `warleek 2.0.0 → 2.0.1`.
+- Update eingespielt: beide „Updated", Ordnernamen bleiben `warleek/` und `warleek-core/` (kein `repo-2.0.1/`), Plugin bleibt aktiv, Theme bleibt aktiviert.
+- Inhalte unberührt: 13 Seiten, 7 Guides, 2 Partner, 3 Patch Notes, 8 Weiterleitungen – vor und nach dem Update identisch; die Handänderung an `/wardogs/fob/` hat das Update überlebt (gleiche Prüfsumme).
+- Nach dem Update wird kein weiteres Update mehr gemeldet.
+- Fehlerpfad: Manifest-Adresse auf eine nicht vorhandene Datei gebogen → `warleek_update_manifest()` liefert `false`, im Zwischenspeicher steht kurzzeitig `fehler`, es wird kein Update gemeldet, Seite und Update-Seite laufen normal weiter.
+
+**Ein Stolperstein, den erst die echte Probe gezeigt hat:** WordPress lehnt Downloads von privaten Netzadressen ab (`wp_http_validate_url`) – der erste Versuch scheiterte mit „Es wurde keine gültige URL angegeben". Das betrifft nur die lokale Attrappe (Docker-Netz 172.x); für die Probe wurde der Host per `http_request_host_is_external` freigegeben. Bei github.com greift die Sperre nicht.
+
+**Noch nicht geprüft:** der echte Abruf von `https://github.com/ppschauss/warleek/releases/latest/download/warleek-update.json` – dafür muss das Repo samt Release existieren.

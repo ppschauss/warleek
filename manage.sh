@@ -55,7 +55,7 @@ install() {
   wpcli theme activate warleek
   wpcli plugin activate warleek-core
   wpcli option update timezone_string Europe/Berlin
-  wpcli option update blogdescription "Wardogs Community, Team & Clan für Deutschland, Österreich und die Schweiz"
+  wpcli option update blogdescription "Wardogs Guides, Tipps und Patch Notes auf Deutsch – für Deutschland, Österreich und die Schweiz"
   wpcli rewrite structure '/%postname%/' --hard
   echo "Installiert. Admin: $url/wp-admin  (admin / warleekadmin)"
 }
