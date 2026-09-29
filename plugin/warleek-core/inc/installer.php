@@ -280,6 +280,11 @@ function warleek_install_steps() {
 			'description' => 'Erster Sync der offiziellen WARDOGS-Updates; danach stündlich automatisch.',
 			'callback'    => 'warleek_step_patchnotes',
 		),
+		'translate' => array(
+			'label'       => 'Patch Notes übersetzen',
+			'description' => 'Holt die deutsche Fassung samt Kurzfassung über die Claude-API. Ohne API-Schlüssel wird der Schritt übersprungen.',
+			'callback'    => 'warleek_step_translate',
+		),
 	);
 }
 
@@ -432,6 +437,30 @@ function warleek_step_patchnotes( $force = false ) {
 	return array( 'ok' => true, 'msg' => sprintf( '%d neu, %d aktualisiert, %d unverändert.', $r['created'], $r['updated'], $r['skipped'] ) );
 }
 
+/** Nachträglich übersetzen, was beim Sync englisch geblieben ist. */
+function warleek_step_translate( $force = false ) {
+	if ( ! function_exists( 'warleek_translate_enabled' ) || ! warleek_translate_enabled() ) {
+		return array( 'ok' => true, 'msg' => 'Übersprungen – kein API-Schlüssel hinterlegt (Einstellungen → Warleek).' );
+	}
+	$posts = get_posts( array( 'post_type' => 'patchnote', 'posts_per_page' => -1, 'orderby' => 'date', 'order' => 'DESC' ) );
+	$done = 0; $failed = 0; $skipped = 0; $last = '';
+	foreach ( $posts as $post ) {
+		$src = get_post_meta( $post->ID, '_warleek_src_html', true );
+		if ( ! $src ) { $skipped++; continue; }
+		$res = warleek_maybe_translate( get_post_meta( $post->ID, '_warleek_src_title', true ) ?: $post->post_title, $src, $post->ID, $force );
+		if ( is_wp_error( $res ) ) {
+			if ( 'warleek_tr_budget' === $res->get_error_code() ) { break; }
+			$last = $res->get_error_message(); $failed++; warleek_store_translation( $post->ID, null, $last ); continue;
+		}
+		if ( ! $res ) { $skipped++; continue; }
+		wp_update_post( wp_slash( array( 'ID' => $post->ID, 'post_title' => $res['title'], 'post_content' => $res['html'] ) ) );
+		warleek_store_translation( $post->ID, $res );
+		warleek_log( 'übersetzt: ' . $res['title'] );
+		$done++;
+	}
+	return array( 'ok' => 0 === $failed, 'msg' => sprintf( '%d übersetzt, %d unverändert, %d fehlgeschlagen.%s', $done, $skipped, $failed, $last ? ' Zuletzt: ' . $last : '' ) );
+}
+
 /** Einen Schritt ausführen (mit Speicher-/Zeitpuffer für Shared Hosting). */
 function warleek_run_step( $slug, $force = false ) {
 	$steps = warleek_install_steps();
@@ -497,10 +526,20 @@ function warleek_install_status() {
 		array( 'label' => 'Partner', 'ok' => (int) wp_count_posts( 'partner' )->publish > 0, 'detail' => (int) wp_count_posts( 'partner' )->publish . ' angelegt' ),
 		array( 'label' => 'Weiterleitungen', 'ok' => count( (array) get_option( 'warleek_redirects', array() ) ) > 0, 'detail' => count( (array) get_option( 'warleek_redirects', array() ) ) . ' alte URLs' ),
 		array( 'label' => 'Patch Notes', 'ok' => (int) $notes->publish > 0, 'detail' => (int) $notes->publish . ' importiert' . ( $sync ? ', zuletzt ' . wp_date( 'd.m.Y H:i', $sync ) : '' ) ),
+		array( 'label' => 'Übersetzung', 'ok' => function_exists( 'warleek_translate_enabled' ) && warleek_translate_enabled(), 'detail' => warleek_translated_count() ),
 		array( 'label' => 'Startseite & Logo', 'ok' => $front && $logo, 'detail' => $front ? ( $logo ? 'gesetzt' : 'Logo fehlt' ) : 'Startseite fehlt' ),
 		array( 'label' => 'Permalinks', 'ok' => '/%postname%/' === get_option( 'permalink_structure' ), 'detail' => get_option( 'permalink_structure' ) ?: 'Standard (Zahlen)' ),
 		array( 'label' => 'Chat-Links', 'ok' => count( $links ) > 0, 'detail' => count( $links ) . ' von 3 gesetzt' ),
 	);
+}
+
+/** Wie viele Patch Notes liegen auf Deutsch vor? */
+function warleek_translated_count() {
+	if ( ! function_exists( 'warleek_translate_enabled' ) ) { return 'Modul fehlt'; }
+	if ( ! warleek_translate_enabled() ) { return 'aus – kein API-Schlüssel'; }
+	$all = (int) wp_count_posts( 'patchnote' )->publish;
+	$q   = new WP_Query( array( 'post_type' => 'patchnote', 'posts_per_page' => 1, 'fields' => 'ids', 'meta_key' => '_warleek_tr_hash', 'meta_compare' => 'EXISTS' ) );
+	return sprintf( '%d von %d auf Deutsch', (int) $q->found_posts, $all );
 }
 
 /* ===================================================================== Admin */

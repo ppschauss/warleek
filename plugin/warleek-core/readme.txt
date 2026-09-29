@@ -19,7 +19,8 @@ Warleek Core enthält alles Funktionale der Website warleek.de:
 * **Optionsseite** für Discord, WhatsApp, Telegram, Clan-Tag, Social-Profile und Steam-AppID
 * **Eigene Blöcke**: Chat-Buttons, neueste Patch Notes, Guides-Raster
 * **SEO-Metas**: Dublin Core, Open Graph, Twitter Cards, Organization-Schema – tritt automatisch zurück, sobald Rank Math eingerichtet ist
-* **Datenschutz**: keine Emoji-Skripte, kein oEmbed, kein XML-RPC, keine Kommentare
+* **Deutsche Patch Notes**: Übersetzung und Kurzfassung über die Claude-API (serverseitig; es werden nur die öffentlichen Ankündigungstexte übertragen, keine Besucherdaten)
+* **Datenschutz**: keine Emoji-Skripte, kein oEmbed, kein XML-RPC, keine Kommentare, keine externen Requests im Browser
 * **Installer**: legt Seiten, Guides, Menüs, Startseite, Logo und Favicon an und installiert Rank Math – wiederholbar, ohne Doppelte anzulegen
 
 == Installation ==
@@ -45,6 +46,7 @@ Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und 
 == Changelog ==
 
 = 2.0.0 =
+* Patch Notes werden ins Deutsche übersetzt (Claude-API) und bekommen eine Kurzfassung „Das Wichtigste in Kürze"; das englische Original bleibt zum Aufklappen erhalten.
 * Umbau zur Guide- und Tipps-Seite: Community-, Team- und Clan-Seiten entfallen, `/community/` wird zur Partner-Seite.
 * Neuer Inhaltstyp **Partner** mit Karten-Block, Plattform-Chip und Sortierung.
 * Guide-Bibliothek mit Themen-Chips, Suche, einheitlicher Sortierung, Seitenumbruch und Lesezeit; verwandte Guides zeigen dasselbe Thema ohne den gerade gelesenen.

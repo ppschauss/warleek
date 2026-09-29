@@ -47,7 +47,8 @@ add_action( 'init', 'warleek_register_patchnote_cpt' );
 function warleek_patchnote_source_link( $post_id ) {
 	$url = get_post_meta( $post_id, 'steam_url', true );
 	if ( ! $url ) { return ''; }
-	return '<p class="wl-source">Quelle: offizielle <a href="' . esc_url( $url ) . '" rel="noopener nofollow" target="_blank">Steam-Ankündigung</a> des WARDOGS-Entwicklers. Warleek ist ein unabhängiges Fan-Projekt; Inhalte der Patch Notes gehören dem Entwickler.</p>';
+	$note = function_exists( 'warleek_translation_note' ) ? warleek_translation_note( $post_id ) : '';
+	return $note . '<p class="wl-source">Quelle: offizielle <a href="' . esc_url( $url ) . '" rel="noopener nofollow" target="_blank">Steam-Ankündigung</a> des WARDOGS-Entwicklers. Warleek ist ein unabhängiges Fan-Projekt; Inhalte der Patch Notes gehören dem Entwickler.</p>';
 }
 
 /** Patch Notes im Archiv nach Steam-Veröffentlichung sortieren (= post_date, vom Sync gesetzt). */

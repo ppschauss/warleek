@@ -60,6 +60,64 @@ class Warleek_Core_CLI {
 	}
 
 	/**
+	 * Übersetzt Patch Notes ins Deutsche (Claude-API).
+	 *
+	 * ## OPTIONS
+	 *
+	 * [--id=<id>]
+	 * : Nur diese Patch Note.
+	 *
+	 * [--limit=<n>]
+	 * : Höchstens so viele übersetzen (Standard: das eingestellte Budget).
+	 *
+	 * [--retranslate]
+	 * : Auch bereits übersetzte Notes neu übersetzen (kostet erneut).
+	 *
+	 * [--dry-run]
+	 * : Nur zeigen, was übersetzt würde.
+	 *
+	 * @subcommand translate-patchnotes
+	 */
+	public function translate_patchnotes( $args, $assoc ) {
+		if ( ! warleek_translate_enabled() ) {
+			WP_CLI::error( 'Übersetzung ist aus oder es fehlt der API-Schlüssel (Einstellungen → Warleek).' );
+		}
+		$dry   = ! empty( $assoc['dry-run'] );
+		$retr  = ! empty( $assoc['retranslate'] );
+		$limit = isset( $assoc['limit'] ) ? (int) $assoc['limit'] : (int) warleek_opt( 'translate_budget', 5 );
+
+		$q = array( 'post_type' => 'patchnote', 'posts_per_page' => -1, 'orderby' => 'date', 'order' => 'DESC' );
+		if ( ! empty( $assoc['id'] ) ) { $q['p'] = (int) $assoc['id']; }
+		$posts = get_posts( $q );
+
+		$done = 0; $skipped = 0; $failed = 0;
+		foreach ( $posts as $post ) {
+			if ( $done >= $limit ) { break; }
+			$src_html  = get_post_meta( $post->ID, '_warleek_src_html', true );
+			$src_title = get_post_meta( $post->ID, '_warleek_src_title', true );
+			if ( ! $src_html ) {
+				WP_CLI::log( '– ' . $post->post_title . ': kein englisches Original hinterlegt (erst neu synchronisieren)' );
+				$skipped++;
+				continue;
+			}
+			if ( ! $retr && get_post_meta( $post->ID, '_warleek_tr_hash', true ) ) {
+				$skipped++;
+				continue;
+			}
+			if ( $dry ) { WP_CLI::log( '→ würde übersetzen: ' . $post->post_title ); $done++; continue; }
+
+			$res = warleek_maybe_translate( $src_title ?: $post->post_title, $src_html, $post->ID, $retr );
+			if ( is_wp_error( $res ) ) { WP_CLI::warning( $post->post_title . ': ' . $res->get_error_message() ); $failed++; continue; }
+			if ( ! $res ) { $skipped++; continue; }
+			wp_update_post( wp_slash( array( 'ID' => $post->ID, 'post_title' => $res['title'], 'post_content' => $res['html'] ) ) );
+			warleek_store_translation( $post->ID, $res );
+			WP_CLI::log( '✓ ' . $res['title'] );
+			$done++;
+		}
+		WP_CLI::success( sprintf( '%d übersetzt, %d übersprungen, %d fehlgeschlagen.', $done, $skipped, $failed ) );
+	}
+
+	/**
 	 * Zeigt den Installationsstatus.
 	 */
 	public function status( $args, $assoc ) {

@@ -49,8 +49,8 @@ function warleek_source_greeting() {
 		. "    | ~ |   <- Lauch         Du liest Quellcode. Respekt. Steht auch alles in den Guides.\n"
 		. "    \\___/                    Wer hier reinschaut, passt zu uns: /community/\n"
 		. "\n"
-		. "    Kein Tracking, keine Cookies, keine externen Requests. Fonts, Bilder, Video: alles von hier.\n"
-		. "    Guides: selbst gespielt. Patch Notes: von Steam, übersetzt. Zahlen: mit Stand-Datum.\n"
+		. "    Kein Tracking, keine Cookies, keine externen Requests im Browser. Fonts, Bilder, Video: alles von hier.\n"
+		. "    Guides: selbst gespielt. Patch Notes: von Steam geholt und serverseitig übersetzt. Zahlen: mit Stand-Datum.\n"
 		. "    Patch Notes kommen stündlich von Steam (BBCode -> HTML, 22 Tests, alle grün – bis Valve wieder ein Tag erfindet).\n"
 		. "    Bugs? #fragen im Discord. Cheats? Nicht hier. Teamkills? Nur mit dem Ural, und nur aus Versehen.\n"
 		. "-->\n";

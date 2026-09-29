@@ -386,3 +386,11 @@ p img {
 	.wl-filterbar__search { max-width: none; }
 	.wl-chip { font-size: 0.85rem; padding: 0.3rem 0.65rem; }
 }
+
+/* Patch Notes: Kurzfassung und englisches Original */
+.wl-summary { margin-bottom: var(--wp--preset--spacing--40); }
+.wl-summary ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+.wl-summary li { margin-bottom: 0.3rem; }
+.wl-original { margin-top: var(--wp--preset--spacing--40); border-top: var(--wl-border); }
+.wl-original summary { font-size: 1.05rem; }
+.wl-original details > :not(summary) { color: var(--wp--preset--color--steel); font-size: 0.95rem; }

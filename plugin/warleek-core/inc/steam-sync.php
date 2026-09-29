@@ -74,13 +74,27 @@ function warleek_steam_upsert_patchnote( array $item, $force = false ) {
 		$html = preg_replace( '#^\s*<h2>.*?</h2>#is', '', $html, 1 );
 	}
 	$html  = warleek_normalize_headings( $html );
+
+	// Deutsche Fassung holen. Schlägt das fehl, bleibt die englische stehen –
+	// eine misslungene Übersetzung darf den Sync nie scheitern lassen.
+	$title_en   = trim( (string) ( $item['title'] ?? '' ) );
+	$html_en    = $html;
+	$translated = function_exists( 'warleek_maybe_translate' ) ? warleek_maybe_translate( $title_en, $html_en, $existing, $force ) : null;
+	$tr_error   = '';
+	if ( is_wp_error( $translated ) ) {
+		$tr_error   = $translated->get_error_message();
+		$translated = null;
+	}
+	if ( $translated ) {
+		$html = $translated['html'];
+	}
 	$plain = html_entity_decode( trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( preg_replace( '/<\/(p|li|h[1-6]|blockquote|tr)>/i', ' ', $html ) ) ) ), ENT_QUOTES, 'UTF-8' );
 	$title = trim( (string) ( $item['title'] ?? '' ) );
 	if ( $title && 0 === strcasecmp( mb_substr( $plain, 0, mb_strlen( $title ) ), $title ) ) { $plain = trim( mb_substr( $plain, mb_strlen( $title ) ) ); }
 	$data  = array(
 		'post_type'     => 'patchnote',
 		'post_status'   => 'publish',
-		'post_title'    => sanitize_text_field( $item['title'] ?? 'Patch Note' ),
+		'post_title'    => sanitize_text_field( $translated['title'] ?? ( $item['title'] ?? 'Patch Note' ) ),
 		'post_content'  => $html,
 		'post_excerpt'  => mb_substr( $plain, 0, 160 ) . ( mb_strlen( $plain ) > 160 ? '…' : '' ),
 		'post_date'     => wp_date( 'Y-m-d H:i:s', $ts ),
@@ -90,19 +104,35 @@ function warleek_steam_upsert_patchnote( array $item, $force = false ) {
 			'steam_url'          => esc_url_raw( (string) ( $item['url'] ?? '' ) ),
 			'steam_published_at' => $ts,
 			'_warleek_hash'      => $hash,
+			'_warleek_src_title' => $title_en,
+			'_warleek_src_html'  => $html_en,
 		),
 	);
 	if ( $existing ) {
 		$data['ID'] = $existing;
 		$id = wp_update_post( wp_slash( $data ), true );
 		if ( is_wp_error( $id ) ) { return $id; }
+		warleek_store_translation( $existing, $translated, $tr_error );
 		warleek_localize_remote_images( $existing );
 		return array( 'id' => $existing, 'action' => 'updated' );
 	}
 	$id = wp_insert_post( wp_slash( $data ), true );
 	if ( is_wp_error( $id ) ) { return $id; }
+	warleek_store_translation( (int) $id, $translated, $tr_error );
 	warleek_localize_remote_images( (int) $id );
 	return array( 'id' => (int) $id, 'action' => 'created' );
+}
+
+/** Übersetzungsergebnis bzw. Fehler an der Patch Note ablegen. */
+function warleek_store_translation( $post_id, $translated, $error = '' ) {
+	if ( $translated ) {
+		update_post_meta( $post_id, '_warleek_tr_hash', $translated['hash'] );
+		update_post_meta( $post_id, '_warleek_summary', $translated['summary'] );
+		update_post_meta( $post_id, '_warleek_tr_model', $translated['model'] );
+		delete_post_meta( $post_id, '_warleek_tr_error' );
+		return;
+	}
+	if ( $error ) { update_post_meta( $post_id, '_warleek_tr_error', $error ); }
 }
 
 /**

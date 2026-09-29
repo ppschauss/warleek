@@ -24,6 +24,11 @@ function warleek_option_fields() {
 		'tiktok_url'    => array( 'TikTok',                'url',  '',        'Wird im Organization-Schema (sameAs) verlinkt.' ),
 		'steam_group_url'=> array( 'Steam-Gruppe',         'url',  '',        'Link zur Steam-Community-Gruppe von Warleek.' ),
 		'fb_app_id'     => array( 'Facebook App-ID',       'text', '',        'Optional, für fb:app_id.' ),
+		'anthropic_api_key'  => array( 'Anthropic API-Schlüssel', 'password', '', 'Für die deutsche Übersetzung der Patch Notes. Sicherer: als Konstante WARLEEK_ANTHROPIC_KEY in der wp-config.php – die hat Vorrang.' ),
+		'translate_enabled'  => array( 'Patch Notes übersetzen',  'bool',     '1', 'Aus: Patch Notes bleiben englisch.' ),
+		'translate_model'    => array( 'Modell',                  'text',     'claude-opus-5', 'claude-opus-5 (Standard), claude-sonnet-5 oder claude-haiku-4-5 als günstigere Alternativen.' ),
+		'translate_max_chars'=> array( 'Längengrenze (Zeichen)',  'int',      '20000', 'Längere Patch Notes bleiben englisch, statt eine teure Anfrage zu riskieren.' ),
+		'translate_budget'   => array( 'Übersetzungen je Lauf',   'int',      '5',   'Deckel pro Sync-Lauf. Der stündliche Cron holt den Rest nach.' ),
 	);
 }
 
@@ -54,6 +59,12 @@ function warleek_sanitize_options( $input ) {
 			case 'url':   $out[ $key ] = $val ? esc_url_raw( $val ) : ''; break;
 			case 'int':   $out[ $key ] = $val ? (string) absint( $val ) : ''; break;
 			case 'email': $out[ $key ] = $val ? sanitize_email( $val ) : ''; break;
+			case 'bool':  $out[ $key ] = $val ? '1' : '0'; break;
+			case 'password':
+				// Leeres Feld bedeutet „unverändert" – sonst würde jedes Speichern den Schlüssel löschen.
+				$old = (array) get_option( 'warleek_options', array() );
+				$out[ $key ] = '' === $val ? ( $old[ $key ] ?? '' ) : sanitize_text_field( $val );
+				break;
 			default:      $out[ $key ] = sanitize_text_field( $val );
 		}
 	}
@@ -80,6 +91,22 @@ function warleek_render_option_field( $args ) {
 	$def  = $args['def'];
 	$opts = (array) get_option( 'warleek_options', array() );
 	$val  = isset( $opts[ $key ] ) ? $opts[ $key ] : '';
+	if ( 'bool' === $def[1] ) {
+		printf(
+			'<label><input type="checkbox" id="warleek_%1$s" name="warleek_options[%1$s]" value="1" %2$s> aktiv</label><p class="description">%3$s</p>',
+			esc_attr( $key ), checked( '1', $val ?: $def[2], false ), esc_html( $def[3] )
+		);
+		return;
+	}
+	if ( 'password' === $def[1] ) {
+		printf(
+			'<input type="password" id="warleek_%1$s" name="warleek_options[%1$s]" value="" class="regular-text" autocomplete="new-password" placeholder="%2$s"><p class="description">%3$s</p>',
+			esc_attr( $key ),
+			esc_attr( $val ? '•••••••• (gespeichert – leer lassen, um ihn zu behalten)' : 'sk-ant-…' ),
+			esc_html( $def[3] )
+		);
+		return;
+	}
 	$type = 'int' === $def[1] ? 'number' : ( 'url' === $def[1] ? 'url' : ( 'email' === $def[1] ? 'email' : 'text' ) );
 	printf(
 		'<input type="%1$s" id="warleek_%2$s" name="warleek_options[%2$s]" value="%3$s" class="regular-text" placeholder="%4$s"><p class="description">%5$s</p>',
