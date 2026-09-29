@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="688" viewBox="0 0 1024 688" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="1024" height="688" fill="#161c18"/>
+  <text x="512" y="52" fill="#eef5e6" font-size="27" text-anchor="middle" font-weight="700">Die schnelle Landung – von der Seite gesehen</text>
+
+  <!-- Beschriftungen, von oben nach unten lesbar -->
+  <g text-anchor="middle">
+    <text x="170" y="128" fill="#c7b58f" font-size="24" font-weight="700">1 · tief und schnell</text>
+    <text x="170" y="158" fill="#8a938c" font-size="20">Kollektiv auf Reiseflug,</text>
+    <text x="170" y="184" fill="#8a938c" font-size="20">Baumwipfelhöhe halten</text>
+
+    <text x="560" y="128" fill="#9be15d" font-size="24" font-weight="700">2 · Nase hoch, Kollektiv runter</text>
+    <text x="560" y="158" fill="#8a938c" font-size="20">beides gleichzeitig –</text>
+    <text x="560" y="184" fill="#8a938c" font-size="20">das tötet die Fahrt in Sekunden</text>
+
+    <text x="878" y="238" fill="#c7b58f" font-size="24" font-weight="700">3 · absetzen</text>
+    <text x="878" y="268" fill="#8a938c" font-size="20">nachregeln,</text>
+    <text x="878" y="294" fill="#8a938c" font-size="20">aufsetzen</text>
+  </g>
+
+  <!-- Flugbahn -->
+  <path d="M80,360 L520,360 Q660,360 720,452 L790,560" fill="none" stroke="#9be15d" stroke-width="4"/>
+
+  <!-- Helikopter-Silhouetten (Seitenansicht: Rumpf + Rotor) -->
+  <g stroke="#c7b58f" stroke-width="3" fill="none">
+    <g transform="translate(170,360)">
+      <path d="M-30,0 L22,0"/><path d="M22,0 L34,-6"/><path d="M-30,0 L-38,-8"/><path d="M-26,-14 L26,-14"/><path d="M0,-14 L0,0"/>
+    </g>
+  </g>
+  <g stroke="#9be15d" stroke-width="3" fill="none">
+    <g transform="translate(590,392) rotate(-34)">
+      <path d="M-30,0 L22,0"/><path d="M22,0 L34,-6"/><path d="M-30,0 L-38,-8"/><path d="M-26,-14 L26,-14"/><path d="M0,-14 L0,0"/>
+    </g>
+  </g>
+  <g stroke="#c7b58f" stroke-width="3" fill="none">
+    <g transform="translate(790,548) rotate(-8)">
+      <path d="M-30,0 L22,0"/><path d="M22,0 L34,-6"/><path d="M-30,0 L-38,-8"/><path d="M-26,-14 L26,-14"/><path d="M0,-14 L0,0"/>
+    </g>
+  </g>
+
+  <!-- Kollektiv-Anzeige unter den Phasen -->
+  <g>
+    <rect x="130" y="418" width="80" height="16" rx="4" fill="#1f2822" stroke="#4a5a44"/>
+    <rect x="132" y="420" width="52" height="12" rx="3" fill="#c7b58f"/>
+    <text x="170" y="456" fill="#8a938c" font-size="19" text-anchor="middle">Kollektiv</text>
+
+    <rect x="550" y="470" width="80" height="16" rx="4" fill="#1f2822" stroke="#4a5a44"/>
+    <rect x="552" y="472" width="8" height="12" rx="3" fill="#9be15d"/>
+    <text x="590" y="508" fill="#9be15d" font-size="19" text-anchor="middle">Kollektiv ganz unten</text>
+  </g>
+
+  <!-- Boden und Bäume -->
+  <g fill="#1f2822">
+    <path d="M150,600 l18,-58 l18,58 Z"/>
+    <path d="M320,600 l18,-50 l18,50 Z"/>
+    <path d="M470,600 l18,-56 l18,56 Z"/>
+    <path d="M640,600 l18,-46 l18,46 Z"/>
+  </g>
+  <path d="M40,600 L984,600" stroke="#4a5a44" stroke-width="4"/>
+  <text x="60" y="588" fill="#8a938c" font-size="19">Baumhöhe</text>
+
+  <text x="512" y="656" fill="#8a938c" font-size="22" text-anchor="middle">Tief bleiben schützt vor Flugabwehr – die Fahrt wird erst über dem Landepunkt abgebaut.</text>
+</svg>

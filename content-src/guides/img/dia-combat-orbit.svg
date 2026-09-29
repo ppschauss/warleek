@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="688" viewBox="0 0 1024 688" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <rect width="1024" height="688" fill="#161c18"/>
+  <text x="512" y="50" fill="#eef5e6" font-size="27" text-anchor="middle" font-weight="700">Combat Orbit – von oben gesehen</text>
+
+  <!-- Orbit -->
+  <ellipse cx="512" cy="340" rx="290" ry="196" fill="none" stroke="#4a5a44" stroke-width="3" stroke-dasharray="14 10"/>
+
+  <!-- Sichtlinien zum Ziel -->
+  <g stroke="#9be15d" stroke-width="2" stroke-dasharray="6 7" opacity="0.6">
+    <line x1="778" y1="340" x2="548" y2="340"/>
+    <line x1="512" y1="536" x2="512" y2="376"/>
+    <line x1="246" y1="340" x2="476" y2="340"/>
+    <line x1="512" y1="144" x2="512" y2="304"/>
+  </g>
+
+  <!-- Ziel -->
+  <circle cx="512" cy="340" r="32" fill="#1f2822" stroke="#e0843a" stroke-width="3"/>
+  <line x1="512" y1="318" x2="512" y2="362" stroke="#e0843a" stroke-width="3"/>
+  <line x1="490" y1="340" x2="534" y2="340" stroke="#e0843a" stroke-width="3"/>
+  <text x="512" y="398" fill="#e0843a" font-size="22" text-anchor="middle">Ziel</text>
+
+  <!-- Helikopter: Nase (Spitze) zeigt immer zum Ziel -->
+  <g fill="#9be15d">
+    <g transform="translate(802,340) rotate(-90)"><path d="M0,-18 L12,17 L0,10 L-12,17 Z"/></g>
+    <g transform="translate(512,556) rotate(0)"><path d="M0,-18 L12,17 L0,10 L-12,17 Z"/></g>
+    <g transform="translate(222,340) rotate(90)"><path d="M0,-18 L12,17 L0,10 L-12,17 Z"/></g>
+    <g transform="translate(512,124) rotate(180)"><path d="M0,-18 L12,17 L0,10 L-12,17 Z"/></g>
+  </g>
+
+  <!-- Bewegungsrichtung: Pfeile außerhalb des Orbits -->
+  <defs>
+    <marker id="pf" markerWidth="11" markerHeight="11" refX="7" refY="5.5" orient="auto">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#c7b58f"/>
+    </marker>
+  </defs>
+  <g stroke="#c7b58f" stroke-width="3" fill="none">
+    <path d="M872,268 a 330,232 0 0 1 -30,110" marker-end="url(#pf)"/>
+    <path d="M152,412 a 330,232 0 0 1 -30,-110" marker-end="url(#pf)"/>
+  </g>
+  <text x="884" y="250" fill="#c7b58f" font-size="21">Flugrichtung</text>
+
+  <!-- Erklärung, zwei klar getrennte Spalten -->
+  <g font-size="22">
+    <text x="60" y="618" fill="#9be15d">Gieren hält die Nase auf dem Ziel.</text>
+    <text x="60" y="650" fill="#c7b58f">Rollen bestimmt das Tempo seitwärts.</text>
+    <text x="600" y="618" fill="#8a938c">Kollektiv: Höhe.</text>
+    <text x="600" y="650" fill="#8a938c">Pitch: Neigung des Blicks.</text>
+  </g>
+</svg>

@@ -128,3 +128,17 @@ Quelle: wardogs.zone/database/vehicles, metaforge.app
 - Startpunkt: Mesh und Sichtweite Mittel, Shading und Post-Processing Niedrig, Globale Beleuchtung **aus**, Schatten Mittel, Spiegelungen/Effekte sehr niedrig, DLSS/FSR auf Qualität.
 - Ruckler trotz guter FPS: Shader-Kompilierung nach Updates, VRAM-Druck, langsamer Datenträger (NVMe hilft), Hintergrundprogramme.
 - Quellen: g2a.com, hdopti.com, theclick.gg, lagofast.com
+
+### HOTAS (aus zwei Video-Guides, 29.09.2026)
+Quellen: **Sim Controls**, „WARDOGS HOTAS Setup Guide | Better Controls & Sensitivity" (youtube.com/watch?v=wtRRZ8nPfFM, VKB Gladiator + TWCS) und **Tote Torres**, „How I Set Up My HOTAS for War Dogs Helicopters" (youtube.com/watch?v=IHcD8c_iqD0, Logitech G940). Ausgewertet über die automatischen englischen Untertitel.
+
+- **Eingabemodell:** Wardogs behandelt die Stick-Achsen im Kern wie Tastatureingaben – solange ein Ausschlag anliegt, dreht der Helikopter weiter. Die Mittelstellung ist das Äquivalent zu „Taste loslassen". Fliegen heißt: Ausschlag geben, zur Mitte zurück.
+- **Empfindlichkeit:** Werte unter 1.0 senken nicht nur die Empfindlichkeit um die Mitte, sondern auch die **maximale Drehrate** am Anschlag. Beide Quellen bleiben deshalb bei ≥ 1.0 (Tote Torres 1.05 auf Pitch/Roll/Yaw; Standard soll bei 0.90 liegen). Nach oben unklar, ob dabei eine Deadzone am äußeren Ende entsteht.
+- **Deadzone:** nur nötig, wenn der Stick sich nicht selbst zentriert (Sim Controls: 0.02 auf Pitch und Roll bei ausgebauten Federn; keine auf Yaw-Twist und Kollektiv). Tote Torres nutzt eine kleine Deadzone nur auf den Pedalen wegen mechanischen Spiels.
+- **Kollektiv:** Die einzige Achse mit sichtbarer Anzeige im Spiel – damit lässt sich der physische Hebelweg auf den Spielwert kalibrieren (Sim Controls: 0.6 bei invertierter Achse; Tote Torres: 0.65, Standardwert). Selbstzentrierendes Kollektiv abschalten.
+- **Kurven:** Wardogs hat **keine** eigene Response-Kurve. Sim Controls baut sie im Treiber (flach um die Mitte, voll am Anschlag) und nennt das die Lösung für das Empfindlichkeitsproblem. Tote Torres rät ausdrücklich **ab**: Das Flugmodell sei träge, man wolle schnelle Eingaben. **Widerspruch ist im Guide so benannt**, nicht aufgelöst.
+- **Flugassistenten:** Stability Assist, Auto-Hover, Envelope Limits, Turn Coordination – beide Quellen: komplett aus.
+- **Sichtfeld:** Cockpit rund 110 statt 90 (Tunnelblick vermeiden), Außenansicht maximal.
+- **Steuertechnik:** Gieren führt die Nase, Rollen nur Mikrokorrekturen. **Combat Orbit**: Nase per Gieren auf dem Ziel halten, Seitwärtstempo per Rollen, Höhe per Kollektiv.
+- **Schnelle Landung:** tief und schnell anfliegen, über dem Landepunkt Nase hoch **und** Kollektiv ganz nach unten – vernichtet die Fahrt in Sekunden. Dasselbe Manöver dient zum Ausschalten erhöht stehender Flugabwehr.
+- **Bekannte Schwächen (Stand EA):** Kamerarotation am HOTAS ruckelt und ist kaum einstellbar; Kartenbedienung umständlich; keine Achsenanzeige für Pitch/Roll/Yaw.

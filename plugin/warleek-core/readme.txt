@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.2.0
+Stable tag: 2.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.3.0 =
+* Zwei neue HOTAS-Guides, ausgewertet aus zwei englischsprachigen Video-Guides: Empfindlichkeit, Deadzone und Kurven – sowie Flugtechnik mit Combat Orbit und schneller Landung.
+* Drei eigene Schaubilder (Kennlinien, Combat Orbit, Landeprofil) als SVG gezeichnet und gerendert – statt Bildschirmfotos aus fremden Videos.
+* Faktenbasis um den HOTAS-Abschnitt erweitert, inklusive des offenen Widerspruchs zwischen beiden Quellen zum Thema Kurven.
 
 = 2.2.0 =
 * Bilder im Fließtext: Guides können Bilder mitten im Text tragen, referenziert über einen Asset-Schlüssel (`![Alt](bild-hot-zone)`), optional mit Bildunterschrift (`![Alt](schluessel "Unterschrift")`).

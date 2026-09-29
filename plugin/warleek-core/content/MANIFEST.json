@@ -373,5 +373,40 @@
         "alt": "Zweibein auf der Mauerkante, Schaft in der Schulter: die stabilste Haltung, die das Spiel kennt.",
         "use": "bild-zweibein",
         "size": 66448
+    },
+    "dia-kurve.webp": {
+        "alt": "Drei Kennlinien im Vergleich: linear bei 1.0, abgesenkt auf 0.3 und eine Kurve aus dem Stick-Treiber.",
+        "use": "dia-kurve",
+        "size": 45702
+    },
+    "guide-hotas-settings.webp": {
+        "alt": "Joystick und Schubhebel eines HOTAS-Aufbaus auf einem dunklen Schreibtisch im Monitorlicht",
+        "use": "guide-hotas-settings",
+        "size": 35714
+    },
+    "bild-tieffliegen.webp": {
+        "alt": "Ein leichter Helikopter fliegt dicht über einem Flusslauf zwischen Baumreihen.",
+        "use": "bild-tieffliegen",
+        "size": 61668
+    },
+    "dia-combat-orbit.webp": {
+        "alt": "Draufsicht: Der Helikopter umkreist das Ziel, die Nase bleibt darauf gerichtet.",
+        "use": "dia-combat-orbit",
+        "size": 30342
+    },
+    "dia-quickstop.webp": {
+        "alt": "Seitenansicht in drei Phasen: tief anfliegen, Nase hoch und Kollektiv runter, absetzen.",
+        "use": "dia-quickstop",
+        "size": 34002
+    },
+    "bild-flare-landung.webp": {
+        "alt": "Ein Helikopter setzt mit hochgezogener Nase auf, Staub fliegt zur Seite weg.",
+        "use": "bild-flare-landung",
+        "size": 95776
+    },
+    "guide-hotas-fliegen.webp": {
+        "alt": "Blick aus dem Cockpit eines leichten Helikopters, der in steiler Schräglage ein Industriegelände umkreist",
+        "use": "guide-hotas-fliegen",
+        "size": 74690
     }
 }
