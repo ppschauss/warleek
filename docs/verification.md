@@ -118,3 +118,16 @@ Auf Wunsch übernommen: Inhaltsbreite 80vw (Desktop) bzw. 95vw (Mobil), Bilder i
 
 ### Neu in 2.0.0
 Partner-Inhaltstyp · Themen-Chips, Suche, Lesezeit, verwandte Guides · Themen Einsteiger und Technik · Markdown-Import (Backend und CLI) · deutsche Patch Notes über die Claude-API mit Kurzfassung und englischem Original · Update-Kanal über GitHub-Releases · Zurückziehen mit 301 statt verwaister Seiten.
+
+### Generalprobe auf frischer Instanz (Port 8089, leere Datenbank, nur die beiden Zips)
+- Installer im Browser durchgeklickt, alle neun Schritte grün: `plugins`, `media` (34 neu), `pages` (12), `guides` (7), `retire` (8 Weiterleitungen), `partners` (2), `nav`, `patchnotes` (3 neu), `translate` (ohne Schlüssel übersprungen) – `errors: []`.
+- Alle geprüften URLs 200: `/`, `/guides/`, `/wardogs/einsteiger/`, `/wardogs/technik/`, `/community/`, `/patch-notes/`, `/guides/wardogs-hotas-dual-stick/`, `/thema/technik/`, `/about-us/`.
+- `/wardogs-discord/` und `/community/wardogs-clan/` → 301 auf `/community/`.
+- Titel der Startseite: „Wardogs Guides & Tipps auf Deutsch | Warleek".
+- Mobiles Menü per Klick: Overlay 390×844, 17/17 Links sichtbar.
+- Lighthouse mobil `/guides/`: Performance 92, Accessibility 100, SEO 100.
+
+### Noch offen (braucht Zugang oder Inhalte vom Betreiber)
+- **GitHub-Repo `ppschauss/warleek` und Release `v2.0.0`** sind noch nicht angelegt. Erst danach lässt sich der Update-Kanal echt prüfen (Version lokal senken → Dashboard bietet beide Pakete an).
+- **Anthropic-Schlüssel** in `wp-config.php` (`WARLEEK_ANTHROPIC_KEY`), sonst bleiben die Patch Notes englisch.
+- **Chat-Links, Impressum, Datenschutz, About-us, Partner-Einträge** enthalten Platzhalter.

@@ -1,5 +1,5 @@
 <?php
-// Aufruf: wp eval-file wp-content/themes/warleek/tests/steam-sync-test.php
+// Aufruf: wp eval-file wp-content/plugins/warleek-core/tests/steam-sync-test.php
 $items = json_decode( file_get_contents( __DIR__ . '/fixtures/steam-news.json' ), true )['appnews']['newsitems'];
 $want  = array( '1843481262698449' => true, '1843481262693807' => false, '1843481262693332' => true, '1843481262691760' => false, '1843481262690549' => true, '1842846814456311' => false );
 $fail  = 0;
