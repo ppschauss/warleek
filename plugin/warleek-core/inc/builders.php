@@ -145,6 +145,11 @@ function warleek_node_to_block( DOMNode $node, DOMDocument $doc ) {
 			$img = $node->getElementsByTagName( 'img' )->item( 0 );
 			if ( $img ) { return warleek_b_image( array( 'url' => $img->getAttribute( 'src' ), 'alt' => $img->getAttribute( 'alt' ), 'id' => (int) $img->getAttribute( 'data-id' ) ), $class ); }
 			return '';
+		case 'pre':
+			// Code-Block: Inhalt bleibt unangetastet, damit Pfade und Registry-Schlüssel stimmen.
+			$code = $node->getElementsByTagName( 'code' )->item( 0 );
+			$text = $code ? $code->textContent : $node->textContent;
+			return '<!-- wp:code --><pre class="wp-block-code"><code>' . esc_html( $text ) . '</code></pre><!-- /wp:code -->' . "\n";
 		case 'hr':
 			return '<!-- wp:separator --><hr class="wp-block-separator has-alpha-channel-opacity"/><!-- /wp:separator -->' . "\n";
 		default:
@@ -179,31 +184,6 @@ function warleek_build_hero( array $a ) {
 	return warleek_b_group( $media . warleek_b_group( $inner, array( 'class' => 'wl-hero__inner' ) ), array( 'class' => $cls, 'full' => true, 'layout' => 'default' ) );
 }
 
-/** Drei Stufen. $tiers: [{title, text, items[], url, cta}] */
-function warleek_build_tiers( array $tiers ) {
-	$out = '';
-	$i   = 0;
-	foreach ( $tiers as $t ) {
-		$i++;
-		$inner  = warleek_b_paragraph( esc_html( $t['eyebrow'] ?? 'Stufe ' . $i ), 'wl-eyebrow' );
-		$inner .= warleek_b_heading( esc_html( $t['title'] ), 3 );
-		$inner .= warleek_b_paragraph( $t['text'] );
-		if ( ! empty( $t['items'] ) ) { $inner .= warleek_b_list( array_map( 'esc_html', $t['items'] ) ); }
-		if ( ! empty( $t['url'] ) ) { $inner .= warleek_b_buttons( array( array( 'label' => $t['cta'] ?? 'Mehr erfahren', 'url' => $t['url'], 'ghost' => $i < 3 ) ) ); }
-		$out .= warleek_b_group( $inner, array( 'class' => 'wl-tier wl-tier--' . $i, 'layout' => 'default' ) );
-	}
-	return warleek_b_group( $out, array( 'class' => 'wl-tiers', 'layout' => 'default', 'wide_align' => true ) );
-}
-
-/** Chat-CTA-Band. $a: h2, text, layout(row|grid) */
-function warleek_build_chat_cta( array $a ) {
-	$inner  = warleek_b_paragraph( esc_html( $a['eyebrow'] ?? 'Wardogs Chat' ), 'wl-eyebrow' );
-	$inner .= warleek_b_heading( $a['h2'] ?? 'Rein in den Chat', 2 );
-	if ( ! empty( $a['text'] ) ) { $inner .= warleek_b_paragraph( $a['text'], 'wl-lead' ); }
-	$inner .= warleek_b_block( 'chat-buttons', array( 'layout' => $a['layout'] ?? 'row' ) );
-	return warleek_b_group( $inner, array( 'class' => 'wl-cta', 'layout' => 'constrained' ) );
-}
-
 /** Allgemeiner CTA. $a: h2, text, buttons[] */
 function warleek_build_cta( array $a ) {
 	$inner  = ! empty( $a['eyebrow'] ) ? warleek_b_paragraph( esc_html( $a['eyebrow'] ), 'wl-eyebrow' ) : '';
@@ -233,20 +213,6 @@ function warleek_build_stats( array $stats ) {
 		);
 	}
 	return warleek_b_group( $out, array( 'class' => 'wl-stats', 'layout' => 'default', 'wide_align' => true ) );
-}
-
-/** Team. $members: [{name, role, text, image{id,url,alt}}] */
-function warleek_build_team( array $members ) {
-	$out = '';
-	foreach ( $members as $m ) {
-		$inner = '';
-		if ( ! empty( $m['image']['url'] ) ) { $inner .= warleek_b_image( $m['image'], 'wl-member__img', 'medium' ); }
-		$inner .= warleek_b_heading( esc_html( $m['name'] ), 3 );
-		$inner .= warleek_b_paragraph( esc_html( $m['role'] ), 'wl-member__role' );
-		if ( ! empty( $m['text'] ) ) { $inner .= warleek_b_paragraph( $m['text'] ); }
-		$out .= warleek_b_group( $inner, array( 'class' => 'wl-member', 'layout' => 'default' ) );
-	}
-	return warleek_b_group( $out, array( 'class' => 'wl-team', 'layout' => 'default', 'wide_align' => true ) );
 }
 
 /** Karten-Spalten. $items: [{title, html, image{id,url,alt}, url}] */

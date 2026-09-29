@@ -25,8 +25,12 @@ function warleek_seo_title( $title ) {
 		$t = get_post_meta( get_queried_object_id(), '_warleek_seo_title', true );
 		if ( $t ) { return $t; }
 	}
-	if ( is_post_type_archive( 'patchnote' ) ) { return 'Wardogs Patch Notes – alle Updates & Hotfixes | Warleek'; }
-	if ( is_post_type_archive( 'guide' ) ) { return 'Wardogs Guides auf Deutsch – Einsteiger, FOB, Logistik | Warleek'; }
+	if ( is_post_type_archive( 'patchnote' ) ) { return 'Wardogs Patch Notes auf Deutsch – alle Updates & Hotfixes | Warleek'; }
+	if ( is_post_type_archive( 'guide' ) ) { return 'Wardogs Guides auf Deutsch – Einsteiger, FOB, Logistik, Technik | Warleek'; }
+	if ( is_tax( 'guide-thema' ) ) {
+		$term = get_queried_object();
+		if ( $term && ! is_wp_error( $term ) ) { return sprintf( 'Wardogs %s: Guides und Tipps auf Deutsch | Warleek', $term->name ); }
+	}
 	return $title;
 }
 add_filter( 'pre_get_document_title', 'warleek_seo_title', 20 );
@@ -40,7 +44,11 @@ function warleek_seo_description() {
 		return wp_trim_words( wp_strip_all_tags( $p->post_excerpt ?: $p->post_content ), 28, '…' );
 	}
 	if ( is_post_type_archive( 'patchnote' ) ) { return 'Alle offiziellen WARDOGS Patch Notes, Hotfixes und Changelogs – stündlich von Steam synchronisiert, übersichtlich auf Deutsch verlinkt.'; }
-	if ( is_post_type_archive( 'guide' ) || is_tax( 'guide-thema' ) ) { return 'Deutschsprachige Wardogs Guides der Warleek-Community: Einsteiger, FOB, Logistik, Gameplay und Equipment.'; }
+	if ( is_tax( 'guide-thema' ) ) {
+		$term = get_queried_object();
+		if ( $term && ! is_wp_error( $term ) && $term->description ) { return $term->description; }
+	}
+	if ( is_post_type_archive( 'guide' ) || is_tax( 'guide-thema' ) ) { return 'Deutschsprachige Wardogs Guides: Einsteiger, FOB, Logistik, Gameplay, Equipment und Technik – selbst gespielt, mit Stand-Datum.'; }
 	return get_bloginfo( 'description' );
 }
 
@@ -55,6 +63,33 @@ function warleek_seo_head() {
 	);
 	if ( $logo_url ) { $org['logo'] = $logo_url; }
 	echo '<script type="application/ld+json">' . wp_json_encode( $org, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+
+	// WebSite + Suchfunktion: sagt Suchmaschinen, dass hier nachgeschlagen wird.
+	$site_ld = array(
+		'@context' => 'https://schema.org', '@type' => 'WebSite', 'name' => 'Warleek', 'url' => $home,
+		'inLanguage' => 'de-DE', 'description' => get_bloginfo( 'description' ),
+		'potentialAction' => array(
+			'@type'       => 'SearchAction',
+			'target'      => array( '@type' => 'EntryPoint', 'urlTemplate' => $home . '?s={search_term_string}&post_type=guide' ),
+			'query-input' => 'required name=search_term_string',
+		),
+	);
+	echo '<script type="application/ld+json">' . wp_json_encode( $site_ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+
+	// Guides sind Anleitungen – als Article mit Autorenangabe auszeichnen.
+	if ( is_singular( 'guide' ) ) {
+		$g = get_queried_object();
+		$art = array(
+			'@context' => 'https://schema.org', '@type' => 'TechArticle',
+			'headline' => get_the_title( $g ), 'inLanguage' => 'de-DE',
+			'datePublished' => get_the_date( 'c', $g ), 'dateModified' => get_the_modified_date( 'c', $g ),
+			'author' => array( '@type' => 'Organization', 'name' => 'Warleek', 'url' => $home ),
+			'publisher' => array( '@type' => 'Organization', 'name' => 'Warleek', 'url' => $home ),
+			'mainEntityOfPage' => get_permalink( $g ),
+		);
+		if ( has_post_thumbnail( $g ) ) { $art['image'] = get_the_post_thumbnail_url( $g, 'large' ); }
+		echo '<script type="application/ld+json">' . wp_json_encode( $art, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+	}
 
 	$desc  = warleek_seo_description();
 	$title = wp_get_document_title();
@@ -148,7 +183,7 @@ function warleek_seo_head() {
 
 /** Keyword-Liste (Site-weit + Seiten-Thema). */
 function warleek_seo_keywords() {
-	$base = array( 'Wardogs', 'Wardogs Community', 'Wardogs Clan', 'Wardogs Team', 'Wardogs Discord', 'Deutschland', 'Österreich', 'Schweiz', 'DACH', 'deutschsprachig' );
+	$base = array( 'Wardogs', 'Wardogs Guide', 'Wardogs Tipps', 'Wardogs Anleitung', 'Wardogs Deutsch', 'Deutschland', 'Österreich', 'Schweiz', 'DACH', 'deutschsprachig' );
 	if ( is_singular( 'guide' ) ) {
 		$base[] = 'Wardogs Guide';
 		$terms  = get_the_terms( get_queried_object(), 'guide-thema' );

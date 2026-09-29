@@ -144,17 +144,6 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 .wl-card--num { padding-top: 2.25rem; }
 .wl-card__num { position: absolute; top: 1rem; right: 1.25rem; font-family: var(--wp--preset--font-family--heading); font-size: 3rem; font-weight: 800; line-height: 1; color: rgba(155, 225, 93, 0.16); }
 
-/* ------------------------------------------------------------ Drei Stufen */
-.wl-tiers { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
-.wl-tier { display: flex; flex-direction: column; gap: 0.75rem; padding: 1.75rem; background: var(--wp--preset--color--surface); border: var(--wl-border); border-radius: var(--wl-radius-lg); position: relative; overflow: hidden; }
-.wl-tier::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--wp--preset--color--olive); }
-.wl-tier--2::before { background: var(--wp--preset--color--sand); }
-.wl-tier--3::before { background: var(--wp--preset--color--leek); box-shadow: 0 0 16px var(--wp--preset--color--leek); }
-.wl-tier h3 { margin: 0; font-size: 1.75rem; }
-.wl-tier p { margin: 0; color: var(--wp--preset--color--text); }
-.wl-tier ul { margin: 0; padding-left: 1.1rem; color: var(--wp--preset--color--steel); }
-.wl-tier .wp-block-buttons { margin-top: auto; padding-top: 0.75rem; }
-
 /* ------------------------------------------------------------- Chat-Buttons */
 .wl-chat { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 .wl-chat--grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
@@ -201,15 +190,6 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 .wl-faq summary::after { content: "+"; position: absolute; right: 0.25rem; top: 50%; transform: translateY(-50%); font-family: var(--wp--preset--font-family--mono); color: var(--wp--preset--color--leek); font-size: 1.4rem; transition: transform 0.2s ease; }
 .wl-faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
 .wl-faq details > :not(summary) { padding-bottom: 1rem; color: var(--wp--preset--color--text); }
-
-/* ------------------------------------------------------------------ Team */
-.wl-team { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
-.wl-member { text-align: center; padding: 1.5rem 1rem; background: var(--wp--preset--color--surface); border: var(--wl-border); border-radius: var(--wl-radius-lg); }
-.wl-member__img { width: 120px; height: 120px; margin: 0 auto 1rem; border-radius: 50%; overflow: hidden; border: 2px solid var(--wp--preset--color--olive); background: var(--wp--preset--color--surface-2); }
-.wl-member__img img { width: 100%; height: 100%; object-fit: cover; }
-.wl-member h3 { margin: 0; font-size: 1.4rem; }
-.wl-member__role { margin: 0.25rem 0 0.5rem; font-family: var(--wp--preset--font-family--mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--wp--preset--color--sand); }
-.wl-member p { margin: 0; color: var(--wp--preset--color--steel); font-size: 0.95rem; }
 
 /* ------------------------------------------------------------------ CTA */
 .wl-cta { position: relative; overflow: hidden; padding: var(--wp--preset--spacing--60) var(--wp--preset--spacing--50); border-radius: var(--wl-radius-lg); background: var(--wp--preset--color--surface); border: var(--wl-border); text-align: center; }
@@ -296,7 +276,7 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 .screen-reader-text { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); clip-path: inset(50%); border: 0; white-space: nowrap; }
 @media (prefers-contrast: more) {
 	:root { --wl-border: 1px solid rgba(230, 234, 228, 0.5); }
-	.wl-card p, .wl-muted, .wl-member p, .wl-stat__label, .wl-patchlist p { color: var(--wp--preset--color--text); }
+	.wl-card p, .wl-muted, .wl-stat__label, .wl-patchlist p { color: var(--wp--preset--color--text); }
 }
 @media (forced-colors: active) { .wl-hero::after, .wl-smoke, .wl-flare-bar { display: none; } .wl-chat__btn, .wp-element-button { border: 2px solid ButtonText; } }
 
@@ -333,3 +313,76 @@ p img {
 /* Der erste Eintrag ist ein langer Übersichtstitel – im Aufklappmenü nicht umbrechen lassen. */
 .site-nav .wp-block-navigation__submenu-container { min-width: 280px; }
 .site-nav .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container .wp-block-navigation-item__content { white-space: nowrap; }
+
+/* =====================================================================
+   Guide-Seite: Themen-Karten, Filterleiste, Partner, Lesezeit
+   ===================================================================== */
+
+/* Themen-Karten */
+.wl-topics .wl-topic { justify-content: space-between; }
+.wl-topics .wl-topic h3 a { color: inherit; text-decoration: none; }
+.wl-topics .wl-topic h3 a::after { content: ""; position: absolute; inset: 0; }
+
+/* Lesezeit und Meta-Zeile auf Karten */
+.wl-card__meta { display: flex; align-items: center; gap: 0.5rem; margin: 0; }
+.wl-minutes { font-family: var(--wp--preset--font-family--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wp--preset--color--steel); }
+.wl-article__meta .wl-minutes, .wl-article__meta p { margin: 0; }
+
+/* Filterleiste über der Guide-Liste */
+.wl-filterbar { display: flex; flex-direction: column; gap: 1rem; margin: 0 0 var(--wp--preset--spacing--40); }
+.wl-filterbar__search { display: flex; gap: 0.5rem; max-width: 520px; }
+.wl-filterbar__search input[type="search"] {
+	flex: 1; padding: 0.6rem 0.9rem; border-radius: var(--wl-radius);
+	background: var(--wp--preset--color--surface); border: var(--wl-border); color: var(--wp--preset--color--text);
+	font-family: var(--wp--preset--font-family--body); font-size: 1rem;
+}
+.wl-filterbar__search input[type="search"]::placeholder { color: var(--wp--preset--color--steel); }
+.wl-filterbar__search button {
+	padding: 0.6rem 1.1rem; border: 2px solid var(--wp--preset--color--leek); border-radius: var(--wl-radius);
+	background: var(--wp--preset--color--leek); color: var(--wp--preset--color--base); cursor: pointer;
+	font-family: var(--wp--preset--font-family--heading); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+}
+.wl-filterbar__search button:hover { background: var(--wp--preset--color--leek-light); }
+.wl-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.wl-chip {
+	display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.8rem;
+	border: var(--wl-border); border-radius: 999px; text-decoration: none;
+	font-family: var(--wp--preset--font-family--heading); font-size: 0.95rem; font-weight: 700;
+	letter-spacing: 0.06em; text-transform: uppercase; color: var(--wp--preset--color--text);
+	background: var(--wp--preset--color--surface); transition: border-color 0.2s ease, color 0.2s ease;
+}
+.wl-chip span { font-family: var(--wp--preset--font-family--mono); font-size: 0.7rem; font-weight: 400; color: var(--wp--preset--color--steel); }
+.wl-chip:hover { border-color: var(--wp--preset--color--leek); color: var(--wp--preset--color--leek); }
+.wl-chip.is-active { background: var(--wp--preset--color--leek); border-color: var(--wp--preset--color--leek); color: var(--wp--preset--color--base); }
+.wl-chip.is-active span { color: rgba(13, 17, 15, 0.7); }
+
+/* Partner-Karten */
+.wl-partners .wl-partner { align-items: flex-start; }
+.wl-partner__img { width: 84px; height: 84px; border-radius: var(--wl-radius); overflow: hidden; border: var(--wl-border); background: var(--wp--preset--color--surface-2); margin-bottom: 0.25rem; }
+.wl-partner__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.wl-partner.is-featured { border-color: rgba(155, 225, 93, 0.45); }
+.wl-partner__link { display: inline-flex; align-items: center; gap: 0.45rem; text-decoration: none; }
+.wl-partner__link svg { width: 1.1em; height: 1.1em; fill: currentColor; }
+
+/* Checklisten aus Markdown */
+.wl-prose li .wl-check {
+	display: inline-block; width: 0.85em; height: 0.85em; margin-right: 0.5rem; vertical-align: -0.05em;
+	border: 2px solid var(--wp--preset--color--olive); border-radius: 3px;
+}
+.wl-prose li .wl-check.is-done { background: var(--wp--preset--color--leek); border-color: var(--wp--preset--color--leek); }
+
+/* Code-Blöcke aus Guides */
+.wl-prose .wp-block-code, .wp-block-code {
+	background: var(--wp--preset--color--surface); border: var(--wl-border); border-left: 3px solid var(--wp--preset--color--olive);
+	border-radius: var(--wl-radius); padding: 1rem 1.2rem; overflow-x: auto;
+}
+.wl-prose .wp-block-code code { font-family: var(--wp--preset--font-family--mono); font-size: 0.9rem; color: var(--wp--preset--color--leek-light); }
+
+/* Discord-Kasten unter dem CTA */
+.wl-cta__chat { margin-top: -1.5rem; display: flex; justify-content: center; }
+.wl-cta__chat .wl-chat { justify-content: center; }
+
+@media (max-width: 600px) {
+	.wl-filterbar__search { max-width: none; }
+	.wl-chip { font-size: 0.85rem; padding: 0.3rem 0.65rem; }
+}

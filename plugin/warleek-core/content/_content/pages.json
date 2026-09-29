@@ -1,67 +1,77 @@
 [
  {
   "slug": "startseite",
-  "title": "Wardogs Community Deutschland – Warleek",
+  "title": "Wardogs Guides & Tipps auf Deutsch",
   "parent": null,
   "template": "page-hub",
   "front": true,
   "hero": {
-   "image": "hero-home",
-   "video": "hero",
+   "image": "hero-home-guides",
    "home": true,
-   "eyebrow": "Wardogs Community · Deutschland · Österreich · Schweiz",
-   "h1": "Deine Wardogs <em>Community</em> im deutschsprachigen Raum",
-   "lead": "Community, Feierabend-Team und Clan für WARDOGS – 100 Spieler, drei Teams, eine Zone. Bei Warleek spielst du zusammen statt nebeneinander: auf Deutsch, mit Plan und mit Leuten, die auch morgen wieder da sind.",
+   "eyebrow": "Wardogs Guides · Tipps · Patch Notes · Deutsch",
+   "h1": "Wardogs verstehen, statt <em>raten</em>",
+   "lead": "Deutsche Guides zu FOB, Logistik, Gameplay und Technik – geschrieben von Leuten, die die Fehler schon gemacht haben. Dazu die offiziellen Patch Notes, übersetzt und auf einen Blick.",
    "buttons": [
     {
-     "label": "Discord beitreten",
-     "url": "/wardogs-discord/"
+     "label": "Zu den Guides",
+     "url": "/guides/"
     },
     {
-     "label": "Community kennenlernen",
-     "url": "/community/",
+     "label": "Das Spiel erklärt",
+     "url": "/wardogs/",
      "ghost": true
     }
    ],
    "tags": [
-    "Warleek // DACH // seit 2026",
-    "Wardogs Clan · Team · Community"
+    "Warleek // Guides // DACH"
    ]
   },
   "seo": {
-   "title": "Wardogs Community Deutschland, Österreich & Schweiz | Warleek",
-   "description": "Warleek ist die deutschsprachige Wardogs Community mit Feierabend-Team und Clan. Discord, WhatsApp, Telegram, Guides und aktuelle Patch Notes – für Spieler aus DACH."
+   "title": "Wardogs Guides & Tipps auf Deutsch | Warleek",
+   "description": "Deutsche Wardogs Guides: FOB bauen, Logistik fahren, Cash verdienen, HOTAS einrichten. Plus alle Patch Notes auf Deutsch – für Spieler aus Deutschland, Österreich und der Schweiz."
   },
   "sections": [
    {
-    "type": "stats",
-    "items": [
+    "type": "section",
+    "eyebrow": "Wo willst du anfangen?",
+    "h2": "Sechs Themen, ein Spiel",
+    "text": "Jedes Thema hat eine ausführliche Erklärseite und die passenden Guides dazu. Wenn du ganz neu bist, fang bei den Einsteigern an.",
+    "inner": [
      {
-      "num": "100",
-      "label": "Spieler pro Match"
-     },
-     {
-      "num": "3",
-      "label": "Teams, eine Zone"
-     },
-     {
-      "num": "3",
-      "label": "Stufen: Community · Team · Clan"
-     },
-     {
-      "num": "DACH",
-      "label": "Deutsch, Österreich, Schweiz"
+      "type": "topics"
      }
     ]
    },
    {
     "type": "section",
-    "eyebrow": "Drei Stufen, ein Haufen",
-    "h2": "Community, Team oder Clan – du entscheidest, wie tief du einsteigst",
-    "text": "Manche wollen nur ab und zu eine Runde mit deutschsprachigen Mitspielern. Andere suchen feste Abende. Und ein paar wollen den vollen Clan-Modus mit Tag und Taktik. Bei Warleek gibt es alle drei – ohne Zwang, aufzusteigen.",
+    "surface": true,
+    "eyebrow": "Neu dazugekommen",
+    "h2": "Die aktuellsten Guides",
     "inner": [
      {
-      "type": "tiers"
+      "type": "guides",
+      "count": 6,
+      "newest": true
+     },
+     {
+      "type": "prose",
+      "html": "<p><a class=\"wl-more\" href=\"/guides/\">Alle Guides ansehen →</a></p>"
+     }
+    ]
+   },
+   {
+    "type": "section",
+    "eyebrow": "Automatisch von Steam, auf Deutsch",
+    "h2": "Die letzten Wardogs Patch Notes",
+    "text": "Updates ändern Preise, Werte und manchmal ganze Mechaniken. Wir ziehen die offiziellen Ankündigungen stündlich, übersetzen sie und stellen das Wichtigste voran.",
+    "inner": [
+     {
+      "type": "patchnotes",
+      "count": 3
+     },
+     {
+      "type": "prose",
+      "html": "<p><a class=\"wl-more\" href=\"/patch-notes/\">Alle Patch Notes →</a></p>"
      }
     ]
    },
@@ -69,78 +79,50 @@
     "type": "section",
     "surface": true,
     "eyebrow": "Warum Warleek",
-    "h2": "Wardogs ist ein Teamspiel. Wir nehmen das ernst – und uns nicht.",
+    "h2": "Geschrieben, nicht generiert",
     "inner": [
      {
       "type": "prose",
-      "html": "\n<p>WARDOGS belohnt genau das, was in Zufalls-Lobbys am seltensten passiert: Absprache. Jede Teamplay-Aktion bringt Cash, jede FOB braucht Nachschub, jede Zone braucht Leute, die sie halten. Wer allein losläuft, verliert Geld und Nerven. Wer im Squad spielt, gewinnt beides.</p>\n<p>Warleek ist die deutschsprachige Anlaufstelle für WARDOGS – für Spieler aus <strong>Deutschland</strong>, <strong>Österreich</strong> und der <strong>Schweiz</strong>. Egal ob du aus Hamburg, Wien oder Zürich kommst: Wir spielen auf Deutsch, zu Zeiten, die mit einem Feierabend in Mitteleuropa zusammenpassen, und ohne dass du dich erst in englischen Discords durchfragen musst.</p>\n<p>Warleek ist kein Ersatz für den offiziellen Discord des Entwicklers und kein „Pro-Clan“ mit Anwesenheitspflicht. Wir sind ein Haufen Leute, die Wardogs mögen und keine Lust auf Chaos haben. Das ist alles – und das reicht.</p>\n"
+      "html": "\n<p>Wardogs ist im Early Access, und die Hälfte dessen, was man online über das Spiel findet, ist automatisiert erzeugt: Menüpfade, die es nicht gibt, Werte, die nie gestimmt haben, Ratschläge ohne eine einzige gespielte Runde dahinter.</p>\n<p>Unsere Guides entstehen andersherum. Jeder Ablauf hier ist im Spiel durchgespielt, jede Zahl trägt ein Stand-Datum, und wo wir uns auf fremde Quellen stützen, steht die Quelle dabei. Wenn ein Patch etwas umwirft, ändern wir den Text – statt ihn stehen zu lassen.</p>\n<p>Wir schreiben auf Deutsch, für Spieler aus <strong>Deutschland</strong>, <strong>Österreich</strong> und der <strong>Schweiz</strong>. Nicht, weil englische Guides schlecht wären, sondern weil man Funkdisziplin, FOB-Absprachen und Tastenbelegungen schneller versteht, wenn man nicht nebenbei übersetzt.</p>\n"
      }
     ]
    },
    {
     "type": "section",
-    "eyebrow": "Automatisch von Steam",
-    "h2": "Die letzten Wardogs Patch Notes",
-    "text": "Hotfixes, Balance-Änderungen, neue Features – wir ziehen die offiziellen Patch Notes direkt von Steam, damit du sie auf Deutsch verlinkt und übersichtlich an einem Ort findest.",
-    "inner": [
-     {
-      "type": "patchnotes",
-      "count": 3
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Guides & Tipps",
-    "h2": "Wardogs Guides auf Deutsch",
-    "text": "Von der ersten Runde bis zum Logistik-Run, der sich wirklich lohnt. Kurz, praktisch, ohne Geschwafel.",
-    "inner": [
-     {
-      "type": "guides",
-      "count": 3
-     },
-     {
-      "type": "prose",
-      "html": "<p><a class=\"wl-more\" href=\"/guides/\">Alle Guides →</a></p>"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "chat",
-      "h2": "Rein in den Wardogs Chat",
-      "text": "Discord ist unsere Basis. WhatsApp und Telegram nutzen wir für den schnellen Ping, wenn abends ein Squad aufmacht."
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
     "inner": [
      {
       "type": "faq",
       "heading": "Kurz gefragt",
       "items": [
        {
-        "q": "Muss ich mich bewerben, um mitzuspielen?",
-        "a": "Nein. Die Community ist offen – Discord beitreten, kurz vorstellen, losspielen. Nur der Clan hat eine kurze Bewerbung, und selbst die ist eher ein Kennenlernen als eine Prüfung."
+        "q": "Für wen sind die Guides gedacht?",
+        "a": "Für alle, die Wardogs spielen und nicht drei Abende mit Ausprobieren verbringen wollen. Die Einsteiger-Guides setzen nichts voraus, die Themenseiten gehen deutlich tiefer."
        },
        {
-        "q": "Ich bin aus Österreich / der Schweiz – passt das?",
-        "a": "Klar. Warleek ist ausdrücklich für den ganzen deutschsprachigen Raum. Zeitzonen sind identisch, Sprache auch – nur beim Wort für „Palette“ streiten wir uns manchmal."
+        "q": "Wie aktuell sind die Angaben?",
+        "a": "Jede Zahl steht mit Stand-Datum im Text. Wardogs ist im Early Access, Preise und Werte ändern sich – die Patch Notes hier auf der Seite sind der schnellste Weg zu sehen, was sich geändert hat."
        },
        {
-        "q": "Wie gut muss ich sein?",
-        "a": "Egal. Wardogs ist kein Aim-Duell, sondern ein Teamspiel. Wer Nachschub fährt oder eine FOB baut, ist genauso wichtig wie der Squad-Lead an der Zone."
+        "q": "Kann ich einen Guide vorschlagen oder korrigieren?",
+        "a": "Gern. Schreib uns im Discord oder per Mail, der Kontakt steht auf der Seite „About us“. Korrekturen bauen wir schnell ein, Themenwünsche landen auf der Liste."
        },
        {
-        "q": "Was ist der Unterschied zwischen Team und Clan?",
-        "a": "Das Team ist unsere Feierabend-Gruppe mit festen Abenden, ohne Tag und ohne Pflichten. Der Clan ist der feste Kern mit Tag, Struktur und etwas mehr Anspruch an Regelmäßigkeit."
+        "q": "Kostet die Seite etwas?",
+        "a": "Nein. Keine Anmeldung, keine Bezahlschranke, keine Werbung, kein Tracking."
        }
       ]
+     }
+    ]
+   },
+   {
+    "type": "section",
+    "surface": true,
+    "inner": [
+     {
+      "type": "discord",
+      "eyebrow": "Fragen?",
+      "h2": "Was im Guide fehlt, klären wir im Discord",
+      "text": "Für Rückfragen zu einem Guide, für Korrekturen – und um Mitspieler zu finden."
      }
     ]
    }
@@ -148,110 +130,25 @@
  },
  {
   "slug": "community",
-  "title": "Wardogs Community, Team & Clan",
+  "title": "Partner & Community",
   "parent": null,
   "template": "page-hub",
   "hero": {
-   "image": "hero-community",
+   "image": "hero-partner",
    "page": true,
-   "eyebrow": "Übersicht",
-   "h1": "Wardogs Community, <em>Team</em> und Clan – die drei Stufen bei Warleek",
-   "lead": "Offen für alle, fest für Freunde, verbindlich für den Kern. Hier siehst du auf einen Blick, was die drei Stufen unterscheidet und wo du am besten anfängst."
-  },
-  "seo": {
-   "title": "Wardogs Community, Team & Clan im Überblick | Warleek DACH",
-   "description": "Community, Feierabend-Team oder Clan? Die drei Stufen bei Warleek erklärt – für deutschsprachige Wardogs-Spieler aus Deutschland, Österreich und der Schweiz."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<p>Wardogs lebt von Leuten, die miteinander reden. Deshalb ist Warleek nicht einfach „ein Clan“, sondern eine Community mit drei Stufen, die aufeinander aufbauen. Du kannst auf jeder Stufe bleiben, so lange du willst – niemand wird nach oben geschoben.</p>\n<p>Warleek ist die deutschsprachige Anlaufstelle für WARDOGS – für Spieler aus <strong>Deutschland</strong>, <strong>Österreich</strong> und der <strong>Schweiz</strong>. Egal ob du aus Hamburg, Wien oder Zürich kommst: Wir spielen auf Deutsch, zu Zeiten, die mit einem Feierabend in Mitteleuropa zusammenpassen, und ohne dass du dich erst in englischen Discords durchfragen musst.</p>"
-     },
-     {
-      "type": "tiers"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Vergleich",
-    "h2": "Was unterscheidet Community, Team und Clan?",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<table><thead><tr><th></th><th>Community</th><th>Team</th><th>Clan</th></tr></thead><tbody>\n<tr><td>Für wen</td><td>alle deutschsprachigen Wardogs-Spieler</td><td>Leute, die regelmäßig gemeinsam spielen wollen</td><td>den festen Kern mit Anspruch</td></tr>\n<tr><td>Einstieg</td><td>Discord beitreten, fertig</td><td>ein paar Abende mitspielen</td><td>kurze Bewerbung + Probezeit</td></tr>\n<tr><td>Verbindlichkeit</td><td>keine</td><td>„sag Bescheid, wenn du kommst“</td><td>feste Abende, Absagen bitte vorher</td></tr>\n<tr><td>Clan-Tag</td><td>nein</td><td>nein</td><td>ja</td></tr>\n<tr><td>Inhalt</td><td>Mitspieler finden, Guides, Patch Notes</td><td>Squad-Rollen, feste Spielabende, Voice</td><td>Taktik, Training, Squad-Führung, Events</td></tr>\n<tr><td>Ton</td><td>locker</td><td>locker mit Plan</td><td>ernst im Match, locker davor und danach</td></tr>\n</tbody></table>\n<h2>Wo fange ich an?</h2>\n<p>Immer in der Community. Du kommst in den Discord, stellst dich kurz vor und spielst mit, wer gerade online ist. Wenn du merkst, dass du mit bestimmten Leuten gut zusammenspielst, ergibt sich das Team von allein. Und wenn du irgendwann sagst „ich will mehr“, reden wir über den Clan.</p>\n<p>Wichtig: Die Stufen sind keine Rangliste. Ein Community-Mitglied, das jeden zweiten Abend Nachschub fährt, ist für uns genauso Warleek wie jemand mit Tag im Namen.</p>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "columns",
-      "items": [
-       {
-        "title": "Wardogs Community",
-        "image": "hero-community",
-        "html": "<p>Offen für alle. Discord, WhatsApp, Telegram – Mitspieler finden, Fragen stellen, Guides lesen.</p>",
-        "url": "/community/wardogs-community/",
-        "cta": "Zur Community"
-       },
-       {
-        "title": "Wardogs Team",
-        "image": "hero-team",
-        "html": "<p>Unsere Feierabend-Gruppe: feste Abende, feste Gesichter, Squad statt Zufalls-Lobby.</p>",
-        "url": "/community/wardogs-team/",
-        "cta": "Zum Team"
-       },
-       {
-        "title": "Wardogs Clan",
-        "image": "hero-clan",
-        "html": "<p>Der Kern mit Tag, Struktur und Taktik – für alle, die Wardogs richtig ausreizen wollen.</p>",
-        "url": "/community/wardogs-clan/",
-        "cta": "Zum Clan"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "chat",
-      "h2": "Erster Schritt: in den Chat",
-      "text": "Alle drei Stufen starten am selben Ort."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "wardogs-community",
-  "title": "Wardogs Community – deutschsprachig, offen, ohne Zwang",
-  "parent": "community",
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-community",
-   "page": true,
-   "eyebrow": "Stufe 1 · offen für alle",
-   "h1": "Die Wardogs <em>Community</em> für Deutschland, Österreich und die Schweiz",
-   "lead": "Du willst Wardogs auf Deutsch spielen, ohne dich zu verpflichten? Dann bist du hier richtig. Die Warleek-Community ist offen, kostenlos und ohne Bewerbung.",
+   "eyebrow": "Partner",
+   "h1": "Communities, mit denen wir uns <em>verstehen</em>",
+   "lead": "Warleek schreibt Guides – gespielt wird in Gruppen. Hier stehen die deutschsprachigen Communities, Clans und Kanäle, die wir guten Gewissens weiterempfehlen.",
    "buttons": [
     {
-     "label": "Jetzt beitreten",
-     "url": "/wardogs-chat/"
+     "label": "Discord beitreten",
+     "url": "#discord"
     }
    ]
   },
   "seo": {
-   "title": "Wardogs Community DACH – deutschsprachig & offen | Warleek",
-   "description": "Die offene Wardogs Community für Deutschland, Österreich und die Schweiz. Mitspieler finden, Fragen stellen, Guides und Patch Notes – ohne Bewerbung, ohne Zwang."
+   "title": "Wardogs Community & Partner – deutschsprachig | Warleek",
+   "description": "Deutschsprachige Wardogs-Communities, Clans und Kanäle auf einen Blick – Partner von Warleek. Plus unser Discord für Fragen zu den Guides."
   },
   "sections": [
    {
@@ -259,7 +156,28 @@
     "inner": [
      {
       "type": "prose",
-      "html": "\n<h2>Was die Community ist – und was nicht</h2>\n<p>Die Warleek-Community ist die offene Stufe von Warleek. Jeder, der WARDOGS spielt und Deutsch spricht, kann dabei sein. Es gibt keine Bewerbung, keine Mindestspielzeit, keinen Tag und keine Pflichttermine. Du kommst in den Discord, sagst kurz Hallo und spielst mit, wer gerade da ist.</p>\n<p>Warleek ist die deutschsprachige Anlaufstelle für WARDOGS – für Spieler aus <strong>Deutschland</strong>, <strong>Österreich</strong> und der <strong>Schweiz</strong>. Egal ob du aus Hamburg, Wien oder Zürich kommst: Wir spielen auf Deutsch, zu Zeiten, die mit einem Feierabend in Mitteleuropa zusammenpassen, und ohne dass du dich erst in englischen Discords durchfragen musst.</p>\n<p>Was die Community <em>nicht</em> ist: ein Clan mit Rängen, ein Sammelbecken für Recruiting-Spam oder der offizielle Support des Entwicklers. Für Bug-Reports gibt es den offiziellen Discord von BULKHEAD; wir helfen gern beim Einordnen, aber wir sind Fans, kein Kundendienst.</p>\n<h2>Was du in der Community bekommst</h2>\n<ul>\n<li><strong>Mitspieler auf Deutsch</strong> – abends findest du fast immer jemanden, der ein Squad aufmacht. Ein „Wer hat Bock?“ im Chat reicht.</li>\n<li><strong>Antworten ohne Google-Odyssee</strong> – FOB-Fragen, Logistik-Fragen, „warum ist mein Cash weg?“ – alles schon mal gefragt, alles beantwortet.</li>\n<li><strong>Guides und Patch Notes an einem Ort</strong> – unsere <a href=\"/guides/\">Guides</a> sind auf Deutsch, die <a href=\"/patch-notes/\">Patch Notes</a> kommen automatisch von Steam.</li>\n<li><strong>Drei Kanäle</strong> – <a href=\"/wardogs-discord/\">Discord</a> für Voice und alles Wichtige, WhatsApp und Telegram für den schnellen Ping unterwegs.</li>\n<li><strong>Der Weg ins Team</strong> – wenn du regelmäßig mit denselben Leuten spielst, bist du eigentlich schon im <a href=\"/community/wardogs-team/\">Team</a>. Ganz ohne Formular.</li>\n</ul>\n<h2>Unsere Regeln (kurz, weil sie kurz sein müssen)</h2>\n<ol>\n<li><strong>Respekt.</strong> Kein Rassismus, keine Beleidigungen, kein Toxic-Gerede. Wer im Match schreit, fliegt aus dem Voice – nicht aus dem Spiel, aber aus unserem Kanal.</li>\n<li><strong>Kein Teamkill, kein Trolling.</strong> Wardogs hat drei Teams und Friendly Fire. Wer absichtlich Nachschub-LKW blockiert oder FOBs abreißt, ist bei uns falsch.</li>\n<li><strong>Deutsch als Standard.</strong> Englisch ist okay, wenn Gäste dabei sind. Im Voice reden wir Deutsch – auch Schweizerdeutsch und Österreichisch zählen, versprochen.</li>\n<li><strong>Kein Recruiting-Spam.</strong> Wer nur seinen eigenen Clan bewerben will, macht das bitte woanders.</li>\n<li><strong>Kein Cheating, keine Exploits.</strong> Selbstverständlich, trotzdem steht es hier.</li>\n</ol>\n<h2>Wann wir spielen</h2>\n<p>Die Community hat keine festen Zeiten – aber es gibt Muster. Unter der Woche ist ab etwa 19 Uhr Betrieb, am Wochenende auch nachmittags. Wer plant, schreibt in den Discord-Kanal <em>#squad-suche</em> mit Uhrzeit. Wer spontan ist, hört einfach in den Voice-Kanal rein.</p>\n<h2>Wie du reinkommst</h2>\n<p>Klick auf einen der Buttons unten. Im Discord stellst du dich in <em>#vorstellung</em> kurz vor: Name, woher, wie lange du Wardogs spielst, was du gerne machst (Infanterie, Logistik, Fahrzeuge, Bauen). Das dauert eine Minute und hilft uns, dich beim nächsten Squad direkt richtig einzusetzen.</p>\n\n<h2>Ein typischer Abend in der Community</h2>\n<p>Gegen 19 Uhr trudeln die Ersten in der Lobby ein. Jemand schreibt „Squad ab 20 Uhr, wer ist dabei?“ in #squad-suche, drei Leute reagieren mit Daumen hoch. Um 20 Uhr sitzen fünf im Voice, einer davon ist neu und wird kurz gefragt, was er gern macht. „Keine Ahnung, ich hab zwei Runden gespielt.“ – „Perfekt, dann fährst du mit Max Nachschub, der erklärt dir alles.“ Zwei Matches später hat der Neue mehr Cash als vorher, kennt drei Namen und weiß, wo die FOB steht. So läuft das bei uns, und so soll es bleiben.</p>\n<h2>Was wir von dir erwarten – und was nicht</h2>\n<p>Wir erwarten, dass du nett bist und dich an die fünf Regeln hältst. Wir erwarten <em>nicht</em>, dass du gut bist, jeden Abend da bist, ein Mikro hast oder das Spiel schon verstanden hast. Die Community ist der Ort, an dem man Wardogs lernt – nicht der Ort, an dem man es schon können muss.</p>\n<h2>Community, Team, Clan: wo du stehst</h2>\n<p>Die Community ist Stufe eins von drei. Wenn du irgendwann feststellst, dass du immer mit denselben Leuten spielst und dich auf Dienstag freust, bist du im <a href=\"/community/wardogs-team/\">Team</a> angekommen – ganz ohne Antrag. Und wenn du mehr willst, gibt es den <a href=\"/community/wardogs-clan/\">Clan</a>. Aber viele bleiben einfach Community, spielen mit, wann sie wollen, und sind damit vollkommen richtig.</p>\n<div class=\"wl-note\"><p><strong>Tipp für Neulinge</strong> Lies vorher den Guide <a href=\"/guides/deine-erste-runde-wardogs/\">Deine erste Runde Wardogs</a>. Danach weißt du, warum wir dich bitten, in den ersten Matches erst mal Nachschub zu fahren statt allein zur Zone zu rennen.</p></div>\n"
+      "html": "\n<h2>Warum wir Partner empfehlen statt selbst zu rekrutieren</h2>\n<p>Warleek ist eine Guide-Seite. Wir schreiben auf, wie FOBs funktionieren und warum der Logistik-Run sich lohnt – aber ein Squad zusammenzuhalten, Spielabende zu organisieren und Leute einzuarbeiten, das machen andere besser. Deshalb führen wir keinen eigenen Clan mehr, sondern verweisen auf Gruppen, die genau das tun.</p>\n<p>Jeder Partner hier ist deutschsprachig, offen für neue Leute und von uns persönlich angespielt. Wer auf der Liste steht, wurde nicht dafür bezahlt.</p>\n"
+     }
+    ]
+   },
+   {
+    "type": "section",
+    "surface": true,
+    "eyebrow": "Unsere Partner",
+    "h2": "Wo du Mitspieler findest",
+    "inner": [
+     {
+      "type": "partner",
+      "count": 12
+     }
+    ]
+   },
+   {
+    "type": "section",
+    "inner": [
+     {
+      "type": "prose",
+      "html": "\n<h2 id=\"partner-werden\">Partner werden</h2>\n<p>Du führst eine deutschsprachige Wardogs-Community und möchtest hier stehen? Schreib uns – im Discord oder per Mail. Wir schauen vorbei, spielen einen Abend mit und nehmen dich auf, wenn es passt. Drei Dinge erwarten wir:</p>\n<ul>\n<li><strong>Deutschsprachig und offen.</strong> Neue Leute sollen ohne Bewerbungsverfahren reinschauen können.</li>\n<li><strong>Aktiv.</strong> Ein Discord, in dem seit drei Monaten niemand geschrieben hat, hilft niemandem.</li>\n<li><strong>Anständiger Umgang.</strong> Kein Toxic-Gerede, keine Cheats, kein Ärger in fremden Lobbys.</li>\n</ul>\n<p>Im Gegenzug verlinken wir euch hier, und ihr dürft unsere Guides in eurem Discord teilen, so viel ihr wollt.</p>\n"
      }
     ]
    },
@@ -268,314 +186,10 @@
     "surface": true,
     "inner": [
      {
-      "type": "chat",
-      "layout": "grid",
-      "h2": "Community beitreten",
-      "text": "Discord ist der Hauptkanal. WhatsApp und Telegram sind optional."
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "faq",
-      "heading": "Häufige Fragen zur Community",
-      "items": [
-       {
-        "q": "Kostet die Community etwas?",
-        "a": "Nein. Warleek ist ein Fan-Projekt ohne Beiträge, ohne Abo, ohne Shop."
-       },
-       {
-        "q": "Ich habe Wardogs noch nicht gekauft – darf ich trotzdem rein?",
-        "a": "Ja. Viele kommen erst rein, um zu fragen, ob sich das Spiel lohnt. Ehrliche Antwort: Wenn du Teamspiel magst, ja."
-       },
-       {
-        "q": "Gibt es ein Mindestalter?",
-        "a": "Wardogs hat eine Altersfreigabe, an die wir uns halten. Im Voice erwarten wir außerdem einen Umgangston, der für alle passt."
-       },
-       {
-        "q": "Kann ich auch nur lesen und nicht reden?",
-        "a": "Natürlich. Voice ist beim Spielen hilfreich, aber niemand muss reden, um in der Community zu sein."
-       }
-      ]
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "wardogs-team",
-  "title": "Wardogs Team – die Feierabend-Gruppe",
-  "parent": "community",
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-team",
-   "page": true,
-   "eyebrow": "Stufe 2 · Feierabend",
-   "h1": "Das Wardogs <em>Team</em>: feste Abende, feste Gesichter, kein Leistungsdruck",
-   "lead": "Nach der Arbeit zwei, drei Stunden Wardogs mit Leuten, die du kennst und die Bescheid sagen, wenn sie kommen. Das ist das Warleek-Team – unsere Feierabend-Gruppe.",
-   "buttons": [
-    {
-     "label": "Mitspielen",
-     "url": "/wardogs-chat/"
-    }
-   ]
-  },
-  "seo": {
-   "title": "Wardogs Team Feierabend-Gruppe – deutschsprachig | Warleek",
-   "description": "Das Warleek-Team ist die Feierabend-Gruppe für Wardogs: feste Spielabende, Squad-Rollen, deutschsprachig aus Deutschland, Österreich und der Schweiz. Ohne Clan-Pflichten."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Was das Team ist</h2>\n<p>Das Team ist die mittlere Stufe bei Warleek – die Feierabend-Gruppe. Wir haben Jobs, Familien, Studium, und trotzdem Lust, Wardogs nicht nur mit Zufallsleuten zu spielen. Also treffen wir uns an festen Abenden, spielen ein paar Runden als Squad und hören auf, wenn der Wecker ruft.</p>\n<p>Es gibt keinen Clan-Tag, keine Bewerbung und keinen Rang. Was es gibt: ein „Ich bin heute dabei“ im Chat, damit die anderen wissen, mit wem sie rechnen können.</p>\n<p>Warleek ist die deutschsprachige Anlaufstelle für WARDOGS – für Spieler aus <strong>Deutschland</strong>, <strong>Österreich</strong> und der <strong>Schweiz</strong>. Egal ob du aus Hamburg, Wien oder Zürich kommst: Wir spielen auf Deutsch, zu Zeiten, die mit einem Feierabend in Mitteleuropa zusammenpassen, und ohne dass du dich erst in englischen Discords durchfragen musst.</p>\n<h2>Wie ein Team-Abend abläuft</h2>\n<ol>\n<li><strong>19:30 Uhr – Sammeln im Voice.</strong> Wer da ist, ist da. Ab vier Leuten machen wir ein Squad auf, ab acht zwei.</li>\n<li><strong>Kurze Absprache.</strong> Wer führt das Squad, wer fährt Logistik, wer baut die FOB, wer hält die Zone? Das dauert zwei Minuten und spart dreißig.</li>\n<li><strong>Spielen.</strong> Zwei bis drei Matches, je nach Laune. Zwischen den Matches wird gequatscht, nicht analysiert.</li>\n<li><strong>Feierabend.</strong> Wer gehen muss, geht. Kein „nur noch eine Runde“-Druck.</li>\n</ol>\n<h2>Squad-Rollen, die wir besetzen</h2>\n<p>Wardogs funktioniert am besten, wenn nicht alle dasselbe machen. Deshalb verteilen wir am Anfang eines Abends grob Rollen – wer was macht, wechselt regelmäßig:</p>\n<ul>\n<li><strong>Squad Lead</strong> – entscheidet, wohin es geht, hält Kontakt zu den anderen Squads, markiert Ziele.</li>\n<li><strong>Logistik</strong> – fährt Paletten vom Hauptlager zur FOB. Klingt unspektakulär, bringt Cash und hält die Basis am Leben. Details im <a href=\"/wardogs/logistik/\">Logistik-Guide</a>.</li>\n<li><strong>Builder</strong> – setzt die FOB, baut Deckung, Spawn-Fahrzeug, Emplacements. Details im <a href=\"/wardogs/fob/\">FOB-Guide</a>.</li>\n<li><strong>Infanterie</strong> – nimmt und hält die Zone, sichert Nachschubwege, deckt den Builder.</li>\n<li><strong>Fahrzeuge</strong> – wenn Budget da ist: Transporter, Heli, gepanzert. Nur mit Absprache, sonst verbrennt man in zwei Minuten das Cash von zehn Runden.</li>\n</ul>\n<h2>Für wen das Team passt</h2>\n<p>Für dich, wenn du regelmäßig, aber nicht verpflichtend spielen willst. Wenn dir egal ist, ob am Ende ein Sieg oder eine Niederlage steht, solange die Runde Spaß gemacht hat. Und wenn du nach dem Match lieber „gut gespielt“ sagst als „warum hast du nicht…“.</p>\n<p>Weniger passt das Team, wenn du Ranglisten, Turniere und Trainings suchst. Dafür gibt es den <a href=\"/community/wardogs-clan/\">Clan</a>.</p>\n<h2>Wie du ins Team kommst</h2>\n<p>Indem du kommst. Ernsthaft: Wer ein paar Team-Abende mitgespielt hat und den anderen nicht auf die Nerven geht, ist im Team. Es gibt kein Formular. Den Kalender mit den festen Abenden findest du im <a href=\"/wardogs-discord/\">Discord</a> unter <em>#team-abende</em>.</p>\n\n<h2>Warum eine Feierabend-Gruppe und kein Clan?</h2>\n<p>Weil die meisten von uns keinen zweiten Job wollen. Ein Clan mit Trainingsplan, Anwesenheitsliste und Turnierkalender ist für manche genau richtig – deshalb gibt es ihn bei uns auch. Aber die Mehrheit will nach der Arbeit einfach gut spielen, mit Leuten, die man kennt, ohne dass jemand nachfragt, warum man letzte Woche gefehlt hat. Das Team ist die Antwort darauf: die Verlässlichkeit eines Clans beim Spielen, die Freiheit einer Community beim Rest.</p>\n<h2>Was das Team im Spiel ausmacht</h2>\n<p>Ein eingespieltes Team merkt man nach einer Minute im Voice. Der Fahrer meldet seine Ankunft, ohne dass man ihn fragen muss. Der Builder hat die HESCO-Wand schon gesetzt, bevor der erste Mörser einschlägt. Der Squad Lead sagt „Rückzug“ und alle gehen – Diskussion später. Das ist kein Talent, das ist Gewohnheit. Und die entsteht nur, wenn man regelmäßig zusammen spielt.</p>\n<h2>Wie wir mit Niederlagen umgehen</h2>\n<p>Mit einem Bier und dem Satz „nächste Runde“. Bei drei Teams verliert man statistisch zwei von drei Matches, egal wie gut man ist. Wer das nicht aushält, hat mit Wardogs ein Problem, nicht mit dem Team. Wir schauen nach dem Match kurz, was wir anders machen würden, und dann ist gut.</p>\n<h2>Gäste und Neue</h2>\n<p>An Team-Abenden sind Neue aus der Community immer willkommen. Wir setzen sie mit einem erfahrenen Spieler zusammen – meist auf Logistik – und schauen, ob es passt. Fast immer passt es.</p>\n<div class=\"wl-note\"><p><strong>Feste Abende</strong> Aktuell spielen wir dienstags und donnerstags ab 19:30 Uhr sowie sonntags ab 20 Uhr. Änderungen stehen immer im Discord – diese Seite kann mal hinterherhinken.</p></div>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "chat",
-      "h2": "Beim nächsten Team-Abend dabei sein",
-      "text": "Sag im Discord Bescheid, dann rechnen wir mit dir."
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "faq",
-      "heading": "Fragen zum Team",
-      "items": [
-       {
-        "q": "Muss ich an allen Abenden da sein?",
-        "a": "Nein. Komm, wenn du kannst. Wir freuen uns nur über ein kurzes „bin dabei“ oder „heute nicht“ im Chat."
-       },
-       {
-        "q": "Ich bin Anfänger – bremse ich das Team aus?",
-        "a": "Nein. Logistik fahren und FOB versorgen kann man ab Minute eins, und es ist eine der wichtigsten Rollen im Spiel."
-       },
-       {
-        "q": "Was ist, wenn ich lieber allein die Zone stürme?",
-        "a": "Dann ist Wardogs vielleicht nicht dein Spiel – und das Team sicher nicht. Wir spielen als Squad."
-       },
-       {
-        "q": "Gibt es das Team auch für andere Spiele?",
-        "a": "Manchmal spielen wir auch etwas anderes, aber Warleek ist eine Wardogs-Community. Andere Spiele sind Bonus."
-       }
-      ]
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "wardogs-clan",
-  "title": "Wardogs Clan – Warleek",
-  "parent": "community",
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-clan",
-   "page": true,
-   "eyebrow": "Stufe 3 · Clan",
-   "h1": "Der Wardogs <em>Clan</em> für Deutschland, Österreich und die Schweiz",
-   "lead": "Tag im Namen, Plan im Kopf. Der Warleek-Clan ist der feste Kern für alle, die Wardogs mit Struktur, Taktik und Anspruch spielen wollen – und trotzdem Feierabend haben.",
-   "buttons": [
-    {
-     "label": "Bewerben",
-     "url": "/wardogs-discord/"
-    },
-    {
-     "label": "Erst mal ins Team",
-     "url": "/community/wardogs-team/",
-     "ghost": true
-    }
-   ]
-  },
-  "seo": {
-   "title": "Wardogs Clan Deutschland, Österreich & Schweiz | Warleek",
-   "description": "Der Warleek Wardogs Clan: deutschsprachig, mit Clan-Tag, fester Struktur, Taktik und Bewerbung. Für Spieler aus Deutschland, Österreich und der Schweiz, die mehr wollen als Zufalls-Squads."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Was den Clan ausmacht</h2>\n<p>Der Clan ist die dritte Stufe bei Warleek. Hier sind die Leute, die nicht nur zusammen spielen, sondern zusammen <em>besser werden</em> wollen: abgestimmte Squads, klare Kommunikation, Taktiken für Zone, FOB und Logistik, die wir gemeinsam ausprobieren und verbessern.</p>\n<p>Clan heißt bei uns nicht Drill. Es heißt: Du bist verlässlich, du kommunizierst, du trägst den Tag <strong>[warleek_clan_tag]</strong> mit Stolz und ohne Arroganz. Im Match sind wir ernst, davor und danach nicht.</p>\n<p>Warleek ist die deutschsprachige Anlaufstelle für WARDOGS – für Spieler aus <strong>Deutschland</strong>, <strong>Österreich</strong> und der <strong>Schweiz</strong>. Egal ob du aus Hamburg, Wien oder Zürich kommst: Wir spielen auf Deutsch, zu Zeiten, die mit einem Feierabend in Mitteleuropa zusammenpassen, und ohne dass du dich erst in englischen Discords durchfragen musst.</p>\n<h2>Struktur</h2>\n<p>Wir halten die Struktur bewusst flach – Wardogs hat genug Hierarchie im Spiel selbst.</p>\n<ul>\n<li><strong>Clan-Leitung</strong> – zwei bis drei Leute, die den Laden organisieren: Discord, Events, Bewerbungen, Ansprechpartner bei Konflikten.</li>\n<li><strong>Squad Leads</strong> – führen im Match. Wer Lead sein will, sagt es; wer nicht, muss nicht.</li>\n<li><strong>Member</strong> – alle anderen. Vollwertig, mit Stimme bei allen Entscheidungen, die den Clan betreffen.</li>\n<li><strong>Trial</strong> – Neue in der Probezeit (zwei bis vier Wochen). Spielen normal mit, nur der Tag kommt erst nach der Probezeit.</li>\n</ul>\n<h2>Was wir von dir erwarten</h2>\n<ol>\n<li><strong>Regelmäßigkeit.</strong> Mindestens ein Clan-Abend pro Woche. Absagen sind okay, unangekündigt verschwinden nicht.</li>\n<li><strong>Voice.</strong> Im Match reden wir. Ein funktionierendes Headset und die Bereitschaft, es zu benutzen, sind Pflicht.</li>\n<li><strong>Teamspiel.</strong> Du folgst dem Squad Lead, auch wenn du es anders gemacht hättest. Diskutiert wird nach dem Match.</li>\n<li><strong>Alle Rollen.</strong> Jeder fährt mal Logistik, jeder baut mal, jeder hält mal die Zone. Wer nur Sniper spielen will, ist im Team besser aufgehoben.</li>\n<li><strong>Anstand.</strong> Der Tag steht für uns alle. Wer damit in fremden Lobbys negativ auffällt, verliert ihn.</li>\n</ol>\n<h2>Was du vom Clan bekommst</h2>\n<ul>\n<li>Feste Clan-Abende mit vollen Squads – kein Suchen nach Mitspielern.</li>\n<li>Taktik-Runden: Wir probieren Aufstellungen für Zone, FOB-Plätze und Nachschubrouten und halten fest, was funktioniert.</li>\n<li>Interne Trainings für Squad-Führung, Funkdisziplin, Fahrzeuge und Heli-Logistik.</li>\n<li>Clan-Events: Community-Abende, gemeinsame Streams, gelegentlich Matches gegen andere deutschsprachige Clans.</li>\n<li>Mitsprache: Regeln, Abende und Ausrichtung entscheiden wir gemeinsam.</li>\n</ul>\n<h2>Bewerbung</h2>\n<p>Die Bewerbung ist kurz und findet im Discord statt. Schreib in <em>#clan-bewerbung</em>:</p>\n<ul>\n<li>deinen Namen im Spiel und dein Alter,</li>\n<li>woher du kommst (Deutschland, Österreich, Schweiz – oder woanders mit Deutsch als Spielsprache),</li>\n<li>seit wann du Wardogs spielst und welche Rollen dir liegen,</li>\n<li>an welchen Abenden du in der Regel kannst,</li>\n<li>und in zwei Sätzen, warum du in einen Clan willst.</li>\n</ul>\n<p>Danach spielst du ein paar Abende als Trial mit. Wenn es passt, bekommst du den Tag. Wenn nicht, bleibst du selbstverständlich in Community und Team – ohne schiefe Blicke.</p>\n<h2>Verhaltenskodex</h2>\n<p>Kein Cheating, keine Exploits, kein Teamkill, kein Toxic-Gerede – weder bei uns noch in fremden Lobbys. Wir spielen fair, auch wenn wir verlieren. Verstöße besprechen wir intern; bei Cheating gibt es keine Diskussion, nur den Rauswurf.</p>\n\n<h2>Wie ein Clan-Abend abläuft</h2>\n<p>Clan-Abende beginnen mit einem kurzen Briefing im Voice: Wer ist da, wer führt welches Squad, was probieren wir heute aus. Manchmal ist das Ziel „Zone von Anfang an halten“, manchmal „zwei FOBs parallel versorgen“, manchmal „nur Heli-Logistik“. Danach wird gespielt, in der Regel zwei bis drei Matches. Am Ende ein kurzes Debriefing – fünf Minuten, was lief, was nicht – und fertig. Das ganze Programm passt in einen normalen Feierabend.</p>\n<h2>Taktik, die wir entwickeln</h2>\n<p>Wardogs ist neu, und niemand hat das Spiel gelöst. Genau das reizt uns. Wir halten in unserem internen Bereich fest, welche FOB-Positionen auf welcher Map funktionieren, welche Nachschubrouten sicher sind, wann sich ein Heli lohnt und wann nicht, wie man mit den zwei anderen Teams umgeht, wenn man führt. Das ist keine Geheimwissenschaft – vieles fließt in unsere <a href=\"/guides/\">Guides</a> – aber das Ausprobieren macht als Clan mehr Spaß.</p>\n<h2>Was der Clan nicht ist</h2>\n<p>Kein E-Sport-Team. Kein Ort für Leute, die andere im Voice anschreien. Kein Verein mit Beitrag. Kein Clan, der andere Clans abwirbt oder in fremden Lobbys den Ton angibt. Wer den Tag trägt, repräsentiert alle – deshalb nehmen wir das Verhalten außerhalb unserer Runden genauso ernst wie innerhalb.</p>\n<h2>DACH-Clan mit Absicht</h2>\n<p>Wir sind ausdrücklich ein deutschsprachiger Clan für Deutschland, Österreich und die Schweiz – nicht, weil wir andere ausschließen wollen, sondern weil Kommunikation im Match in der Muttersprache einfach schneller ist. Wer auf Deutsch spielt, ist willkommen, egal wo er wohnt.</p>\n<div class=\"wl-note wl-note--alert\"><p><strong>Hinweis</strong> Der Clan ist Teil von Warleek und ein unabhängiges Fan-Projekt. Wir sind nicht mit BULKHEAD oder Team17 verbunden.</p></div>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "chat",
-      "h2": "Bewerbung im Discord",
-      "text": "Kanal #clan-bewerbung – wir melden uns innerhalb weniger Tage."
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "faq",
-      "heading": "Fragen zum Clan",
-      "items": [
-       {
-        "q": "Wie viele Stunden pro Woche muss ich spielen?",
-        "a": "Es gibt keine Stundenzahl. Ein Clan-Abend pro Woche ist die Erwartung, mehr ist willkommen."
-       },
-       {
-        "q": "Ich war schon in anderen Clans – ist das ein Problem?",
-        "a": "Nein, solange du nicht gleichzeitig mit zwei Tags unterwegs bist."
-       },
-       {
-        "q": "Gibt es Ränge oder Beförderungen?",
-        "a": "Nur Trial und Member sowie die Leitung. Wir wollen spielen, nicht verwalten."
-       },
-       {
-        "q": "Spielt der Clan auch Turniere?",
-        "a": "Gelegentlich Matches gegen andere Clans, wenn es sich ergibt. Ein festes Turnier-Programm gibt es nicht – noch nicht."
-       }
-      ]
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "wardogs-chat",
-  "title": "Wardogs Chat – Discord, WhatsApp, Telegram",
-  "parent": null,
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-chat",
-   "page": true,
-   "eyebrow": "Kanäle",
-   "h1": "Der Wardogs <em>Chat</em>: Discord, WhatsApp und Telegram",
-   "lead": "Drei Kanäle, ein Ziel: schnell ein Squad finden. Discord ist die Basis, WhatsApp und Telegram sind der kurze Draht fürs Handy."
-  },
-  "seo": {
-   "title": "Wardogs Chat: Discord, WhatsApp & Telegram Gruppe (Deutsch) | Warleek",
-   "description": "Deutschsprachiger Wardogs Chat: Discord-Server, WhatsApp-Gruppe und Telegram-Gruppe der Warleek-Community. Mitspieler aus Deutschland, Österreich und der Schweiz finden."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "chat",
-      "layout": "grid",
-      "eyebrow": "Beitreten",
-      "h2": "Wähle deinen Kanal",
-      "text": "Du kannst in allen drei sein – die meisten nutzen Discord zum Spielen und einen der beiden anderen für unterwegs."
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Welcher Kanal wofür?</h2>\n<table><thead><tr><th>Kanal</th><th>Wofür</th><th>Wann</th></tr></thead><tbody>\n<tr><td><strong>Discord</strong></td><td>Voice beim Spielen, Squad-Suche, Team-Abende, Clan-Bewerbung, Guides-Diskussion, Patch-Notes-Feed</td><td>immer – das ist unsere Basis</td></tr>\n<tr><td><strong>WhatsApp</strong></td><td>„Wer ist heute Abend dabei?“, kurze Absprachen, Erinnerungen an Team-Abende</td><td>unterwegs, wenn Discord zu viel ist</td></tr>\n<tr><td><strong>Telegram</strong></td><td>dasselbe wie WhatsApp für alle, die kein WhatsApp wollen; Patch-Notes-Benachrichtigungen</td><td>unterwegs, für Ankündigungen</td></tr>\n</tbody></table>\n<h2>Ein paar Regeln für alle Kanäle</h2>\n<ul>\n<li><strong>Respekt</strong> – gilt in Text und Voice. Kein Rassismus, keine Beleidigungen, keine Hetze.</li>\n<li><strong>Keine Werbung</strong> – weder für andere Clans noch für Shops, Coaching oder Cheats.</li>\n<li><strong>Kein Spam</strong> – ein „Wer hat Bock?“ reicht, fünf davon nerven.</li>\n<li><strong>Datenschutz</strong> – keine Screenshots privater Gespräche nach außen, keine Telefonnummern aus der WhatsApp-Gruppe weitergeben.</li>\n<li><strong>Deutsch</strong> – Standardsprache in allen Kanälen. Gäste dürfen Englisch schreiben.</li>\n</ul>\n<h2>Warum nicht nur Discord?</h2>\n<p>Weil nicht jeder am Handy Discord offen hat. Für „ich bin in zwanzig Minuten online, wer ist dabei?“ sind WhatsApp und Telegram schneller. Alles Wichtige – Regeln, Termine, Bewerbungen – steht trotzdem im <a href=\"/wardogs-discord/\">Discord</a>.</p>\n<div class=\"wl-note\"><p><strong>Hinweis</strong> WhatsApp und Telegram sind optionale Zusatzkanäle. Wenn ein Link hier noch als „bald“ markiert ist, ist die Gruppe gerade im Aufbau.</p></div>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "faq",
-      "heading": "Fragen zum Chat",
-      "items": [
-       {
-        "q": "Muss ich in allen drei Kanälen sein?",
-        "a": "Nein. Discord reicht völlig. WhatsApp und Telegram sind Komfort."
-       },
-       {
-        "q": "Wer sieht meine Telefonnummer in WhatsApp?",
-        "a": "Die anderen Mitglieder der Gruppe – so funktioniert WhatsApp. Wenn dir das nicht passt, nimm Telegram oder bleib bei Discord."
-       },
-       {
-        "q": "Bekomme ich Patch Notes als Benachrichtigung?",
-        "a": "Auf der Website findest du sie immer unter Patch Notes. Im Discord und Telegram posten wir neue Updates zusätzlich."
-       }
-      ]
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "wardogs-discord",
-  "title": "Wardogs Discord – deutschsprachiger Server",
-  "parent": null,
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-discord",
-   "page": true,
-   "eyebrow": "Hauptkanal",
-   "h1": "Der deutschsprachige Wardogs <em>Discord</em> von Warleek",
-   "lead": "Voice zum Spielen, Squad-Suche, Team-Abende, Guides und Patch Notes – alles an einem Ort. Kein Bewerbungsformular, einfach reinkommen."
-  },
-  "seo": {
-   "title": "Wardogs Discord Deutsch – Server der Warleek Community",
-   "description": "Der deutschsprachige Wardogs Discord: Squad-Suche, Voice, Team-Abende, Clan-Bewerbung, Guides und Patch Notes. Für Spieler aus Deutschland, Österreich und der Schweiz."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "chat",
-      "layout": "header",
-      "eyebrow": "Invite",
-      "h2": "Discord beitreten",
-      "text": "Der Link führt direkt auf den Server. Nach dem Beitritt liest du kurz die Regeln und stellst dich in #vorstellung vor."
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>So ist der Server aufgebaut</h2>\n<p>Wir halten die Kanalstruktur bewusst klein. Ein Discord mit vierzig Kanälen, in denen nichts passiert, hilft niemandem.</p>\n<h3>Info</h3>\n<ul>\n<li><strong>#regeln</strong> – kurz, verbindlich, einmal lesen.</li>\n<li><strong>#vorstellung</strong> – Name, woher, Lieblingsrolle. Eine Zeile reicht.</li>\n<li><strong>#ankündigungen</strong> – Team-Abende, Events, Änderungen.</li>\n<li><strong>#patch-notes</strong> – automatischer Feed der offiziellen Wardogs-Updates (dieselbe Quelle wie unsere <a href=\"/patch-notes/\">Patch-Notes-Seite</a>).</li>\n</ul>\n<h3>Spielen</h3>\n<ul>\n<li><strong>#squad-suche</strong> – „Wer ist dabei?“ mit Uhrzeit. Der wichtigste Kanal.</li>\n<li><strong>#team-abende</strong> – Kalender und Zu-/Absagen fürs <a href=\"/community/wardogs-team/\">Team</a>.</li>\n<li><strong>Voice: Squad 1–4</strong> – ein Kanal pro Squad. Wer spielt, sitzt drin.</li>\n<li><strong>Voice: Lobby</strong> – zum Quatschen und Warten.</li>\n</ul>\n<h3>Wissen</h3>\n<ul>\n<li><strong>#fragen</strong> – alles zu FOB, Logistik, Loadouts, Bugs. Keine Frage ist zu blöd.</li>\n<li><strong>#guides</strong> – Diskussion und Vorschläge zu unseren <a href=\"/guides/\">Guides</a>.</li>\n<li><strong>#clips</strong> – eure besten (und schlimmsten) Momente.</li>\n</ul>\n<h3>Clan</h3>\n<ul>\n<li><strong>#clan-bewerbung</strong> – für alle, die in den <a href=\"/community/wardogs-clan/\">Clan</a> wollen.</li>\n<li><strong>Clan-intern</strong> – Taktik, Trainings, Events. Sichtbar für Trials und Member.</li>\n</ul>\n<h2>Rollen</h2>\n<table><thead><tr><th>Rolle</th><th>Wer</th><th>Was</th></tr></thead><tbody>\n<tr><td>Rekrut</td><td>alle neuen Mitglieder</td><td>lesen, schreiben, Voice – alles, was man zum Mitspielen braucht</td></tr>\n<tr><td>Community</td><td>nach der Vorstellung</td><td>wie Rekrut, plus Squad-Suche pingen</td></tr>\n<tr><td>Team</td><td>wer regelmäßig an Team-Abenden dabei ist</td><td>Zugriff auf #team-abende und Team-Voice</td></tr>\n<tr><td>Trial / Member</td><td>Clan-Anwärter und Clan-Mitglieder</td><td>Clan-Bereich, Tag im Namen (Member)</td></tr>\n<tr><td>Lead / Leitung</td><td>Squad Leads und Organisation</td><td>Moderation, Events, Ansprechpartner</td></tr>\n</tbody></table>\n<h2>Regeln im Discord</h2>\n<ol>\n<li>Respekt in Text und Voice. Kein Rassismus, kein Sexismus, keine Beleidigungen.</li>\n<li>Push-to-Talk oder gutes Noise-Gate. Niemand will deinen Lüfter hören.</li>\n<li>Keine Werbung, kein Spam, keine Cheats, keine Links zu Exploits.</li>\n<li>Streit im Voice? Kurz durchatmen, danach in Ruhe klären – notfalls mit der Leitung.</li>\n<li>Was im Clan-Bereich besprochen wird, bleibt dort.</li>\n</ol>\n<div class=\"wl-note\"><p><strong>Kein offizieller Server</strong> Warleek ist ein Fan-Projekt. Den offiziellen WARDOGS-Discord des Entwicklers findest du über die Steam-Seite des Spiels – dort gehören Bug-Reports und Support-Anfragen hin.</p></div>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "faq",
-      "heading": "Fragen zum Discord",
-      "items": [
-       {
-        "q": "Brauche ich ein Mikro?",
-        "a": "Zum Zuhören nicht. Zum Mitspielen im Squad ist Voice sehr hilfreich – Wardogs ist Kommunikation."
-       },
-       {
-        "q": "Kann ich den Invite-Link weitergeben?",
-        "a": "Ja, gern an Leute, die Deutsch sprechen und Wardogs spielen. Bitte nicht in fremden Discords als Werbung posten."
-       },
-       {
-        "q": "Warum sehe ich den Clan-Bereich nicht?",
-        "a": "Der ist für Trials und Member. Alles Wichtige für Community und Team ist öffentlich."
-       }
-      ]
+      "type": "discord",
+      "eyebrow": "Discord",
+      "h2": "Der Warleek-Discord",
+      "text": "Für Rückfragen zu den Guides, Korrekturen und Themenwünsche – und um Leute für den Abend zu finden."
      }
     ]
    }
@@ -583,19 +197,19 @@
  },
  {
   "slug": "wardogs",
-  "title": "Wardogs – das Spiel erklärt",
+  "title": "Wardogs erklärt: alle Themen im Überblick",
   "parent": null,
   "template": "page-hub",
   "hero": {
    "image": "hero-hub",
    "page": true,
-   "eyebrow": "Spiel-Hub",
-   "h1": "Was ist <em>WARDOGS</em>? Das Spiel auf Deutsch erklärt",
-   "lead": "100 Spieler, drei Teams, eine Zone, Cash als Währung für alles. Hier bekommst du den Überblick – und die Links zu unseren Themen-Seiten für FOB, Logistik, Gameplay und Equipment."
+   "eyebrow": "Das Spiel erklärt",
+   "h1": "Wardogs <em>verstehen</em>: Zone, Cash, FOB, Logistik",
+   "lead": "100 Spieler, drei Teams, eine Zone und Geld als Währung für alles. Hier steht, wie das zusammenhängt – und wo du für jedes Thema in die Tiefe gehst."
   },
   "seo": {
-   "title": "Wardogs erklärt: FOB, Logistik, Gameplay & Equipment (Deutsch) | Warleek",
-   "description": "WARDOGS auf Deutsch erklärt: 100 Spieler, drei Teams, Kontrollzone, Cash-Economy, FOB und Logistik. Themen-Seiten und Guides der Warleek-Community für DACH."
+   "title": "Wardogs erklärt: Zone, Cash, FOB & Logistik (Deutsch) | Warleek",
+   "description": "Wie WARDOGS funktioniert, auf Deutsch erklärt: 100 Spieler in drei Teams, Kontrollzone, Cash-Economy, FOB und Nachschub. Mit ausführlichen Themenseiten und Guides."
   },
   "sections": [
    {
@@ -606,37 +220,7 @@
       "html": "\n<h2>Wardogs in einem Absatz</h2>\n<p>WARDOGS ist ein taktischer Multiplayer-Shooter von BULKHEAD (Publisher: Team17), seit dem 10. September 2026 im Early Access auf Steam. In jedem Match kämpfen <strong>100 Spieler in drei Teams</strong> um eine <strong>Kontrollzone</strong>, die zufällig auf einer großen Map gesetzt wird. Das erste Team mit 100 Punkten gewinnt. Das Setting: verlassene Industrie-Berglandschaften in Osteuropa, zerstörbar und bebaubar. Und über allem steht <strong>Cash</strong> – jede sinnvolle Teamaktion bringt Geld, und mit Geld kaufst du Ausrüstung, Fahrzeuge und Bauteile.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Die vier Säulen</h2>\n<p>Wer Wardogs verstehen will, muss vier Dinge verstehen. Zu jedem haben wir eine eigene ausführliche Seite:</p>\n"
      },
      {
-      "type": "columns",
-      "items": [
-       {
-        "title": "FOB – die vorgeschobene Basis",
-        "image": "hero-fob",
-        "html": "<p>Deine Basis nahe der Zone: bauen, versorgen, verteidigen. Ohne FOB läuft dein Team ewig vom Hauptlager zur Front.</p>",
-        "url": "/wardogs/fob/",
-        "cta": "FOB-Seite"
-       },
-       {
-        "title": "Logistik – Nachschub ist Leben",
-        "image": "hero-logistik",
-        "html": "<p>Paletten kaufen, fahren oder fliegen, an der FOB abgeben. Bringt Cash und hält alles am Laufen.</p>",
-        "url": "/wardogs/logistik/",
-        "cta": "Logistik-Seite"
-       },
-       {
-        "title": "Gameplay – Zone, Teams, Economy",
-        "image": "hero-gameplay",
-        "html": "<p>Wie die Zone funktioniert, warum drei Teams alles ändern und wie du mit Cash umgehst.</p>",
-        "url": "/wardogs/gameplay/",
-        "cta": "Gameplay-Seite"
-       },
-       {
-        "title": "Equipment – was du kaufst und wann",
-        "image": "hero-equipment",
-        "html": "<p>Loadouts, Hämmer, Fahrzeuge: was sich früh lohnt, was Geldverschwendung ist.</p>",
-        "url": "/wardogs/equipment/",
-        "cta": "Equipment-Seite"
-       }
-      ]
+      "type": "topics"
      }
     ]
    },
@@ -646,7 +230,7 @@
     "inner": [
      {
       "type": "prose",
-      "html": "\n<h2>Warum drei Teams alles ändern</h2>\n<p>Zwei Teams sind Tauziehen. Drei Teams sind Politik. Wenn du die Zone hältst, greifen dich zwei Seiten an – und die haben oft keine Lust, sich gegenseitig zu bekämpfen, solange du oben stehst. Das heißt: Wer führt, wird zum Ziel. Wer zurückliegt, hat Zeit, eine FOB aufzubauen und im richtigen Moment zuzuschlagen. Das macht Wardogs deutlich weniger vorhersehbar als klassische 2-Fraktionen-Shooter.</p>\n<h2>Cash: die eine Währung</h2>\n<p>Pro Leben startest du mit $10.000 (Stand September 2026). Davon kaufst du dein Loadout, Werkzeug, Bauteile, Fahrzeuge. Cash verdienst du mit allem, was dem Team hilft: Zone halten, Nachschub liefern, bauen, heilen, Ziele markieren. Cash bleibt über Matches hinweg erhalten – wer sparsam und teamdienlich spielt, hat langfristig mehr Optionen. Wer jede Runde einen Heli verbrennt, nicht.</p>\n<h2>Was Wardogs von Squad, Hell Let Loose und Battlefield unterscheidet</h2>\n<ul>\n<li><strong>Drei Teams</strong> statt zwei – siehe oben.</li>\n<li><strong>Cash statt Klassen-Freischaltung</strong> – du kannst früh alles kaufen, wenn du es dir leisten kannst. Ob das klug ist, steht auf einem anderen Blatt.</li>\n<li><strong>Eine Zone</strong> statt Flaggenketten – der Fokus liegt auf einem Ort, die Map drumherum ist Nachschub- und Flankenraum.</li>\n<li><strong>Bauen als Kernmechanik</strong> – FOB, Wälle, Emplacements, Tankstellen, sogar ein Drill Rig für Treibstoff.</li>\n<li><strong>Proximity-Voice</strong> – wer in der Nähe ist, hört dich. Das sorgt für Momente, die kein Skript schreiben könnte.</li>\n</ul>\n<h2>Erste Schritte</h2>\n<p>Lies unseren Guide <a href=\"/guides/deine-erste-runde-wardogs/\">Deine erste Runde Wardogs</a>, komm in den <a href=\"/wardogs-discord/\">Discord</a> und fahr in den ersten Matches Nachschub. Du lernst die Map, verdienst Cash und bist für dein Team sofort nützlich. Alles Weitere ergibt sich.</p>\n"
+      "html": "\n<h2>Warum drei Teams alles ändern</h2>\n<p>Zwei Teams sind Tauziehen. Drei Teams sind Politik. Wenn du die Zone hältst, greifen dich zwei Seiten an – und die haben oft keine Lust, sich gegenseitig zu bekämpfen, solange du oben stehst. Das heißt: Wer führt, wird zum Ziel. Wer zurückliegt, hat Zeit, eine FOB aufzubauen und im richtigen Moment zuzuschlagen. Das macht Wardogs deutlich weniger vorhersehbar als klassische 2-Fraktionen-Shooter.</p>\n<h2>Cash: die eine Währung</h2>\n<p>Pro Leben startest du mit $10.000 (Stand September 2026). Davon kaufst du dein Loadout, Werkzeug, Bauteile, Fahrzeuge. Cash verdienst du mit allem, was dem Team hilft: Zone halten, Nachschub liefern, bauen, heilen, Ziele markieren. Cash bleibt über Matches hinweg erhalten – wer sparsam und teamdienlich spielt, hat langfristig mehr Optionen. Wer jede Runde einen Heli verbrennt, nicht.</p>\n<h2>Was Wardogs von Squad, Hell Let Loose und Battlefield unterscheidet</h2>\n<ul>\n<li><strong>Drei Teams</strong> statt zwei – siehe oben.</li>\n<li><strong>Cash statt Klassen-Freischaltung</strong> – du kannst früh alles kaufen, wenn du es dir leisten kannst. Ob das klug ist, steht auf einem anderen Blatt.</li>\n<li><strong>Eine Zone</strong> statt Flaggenketten – der Fokus liegt auf einem Ort, die Map drumherum ist Nachschub- und Flankenraum.</li>\n<li><strong>Bauen als Kernmechanik</strong> – FOB, Wälle, Emplacements, Tankstellen, sogar ein Drill Rig für Treibstoff.</li>\n<li><strong>Proximity-Voice</strong> – wer in der Nähe ist, hört dich. Das sorgt für Momente, die kein Skript schreiben könnte.</li>\n</ul>\n<h2>Erste Schritte</h2>\n<p>Lies unseren Guide <a href=\"/guides/deine-erste-runde-wardogs/\">Deine erste Runde Wardogs</a>, komm in den <a href=\"/community/\">Discord</a> und fahr in den ersten Matches Nachschub. Du lernst die Map, verdienst Cash und bist für dein Team sofort nützlich. Alles Weitere ergibt sich.</p>\n"
      },
      {
       "type": "guides",
@@ -656,11 +240,65 @@
    },
    {
     "type": "section",
+    "surface": true,
     "inner": [
      {
-      "type": "chat",
-      "h2": "Fragen zum Spiel? Frag im Chat.",
-      "text": "Im Discord gibt es #fragen – dort sitzen Leute, die das alles schon einmal falsch gemacht haben."
+      "type": "discord",
+      "eyebrow": "Fragen?",
+      "h2": "Etwas unklar geblieben?",
+      "text": "Frag im Discord nach – und wenn die Antwort fehlt, wird daraus ein Guide."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "einsteiger",
+  "title": "Wardogs für Einsteiger: die ersten Stunden",
+  "parent": "wardogs",
+  "template": "page-hub",
+  "hero": {
+   "image": "hero-einsteiger",
+   "page": true,
+   "eyebrow": "Wardogs · Themen",
+   "h1": "Wardogs für <em>Einsteiger</em>",
+   "lead": "Was du in den ersten Runden tun solltest, was dich Geld kostet und warum Nachschubfahren der beste Einstieg ist."
+  },
+  "seo": {
+   "title": "Wardogs für Einsteiger: Anleitung für die ersten Runden | Warleek",
+   "description": "Wardogs Einsteiger-Guide auf Deutsch: erstes Loadout, Startkapital sinnvoll einsetzen, Nachschub fahren, Squad finden – und die fünf Fehler, die jeden Neuling Geld kosten."
+  },
+  "sections": [
+   {
+    "type": "section",
+    "inner": [
+     {
+      "type": "prose",
+      "html": "\n<h2>Die kurze Fassung</h2>\n<p>Wardogs verzeiht keine Alleingänge und belohnt fast alles, was dem Team hilft. Wenn du nur drei Sätze aus dieser Seite mitnimmst:</p>\n<ol>\n<li><strong>Squad zuerst, Ausrüstung danach.</strong> Wer alleine losläuft, stirbt teuer und bringt niemandem etwas.</li>\n<li><strong>Billig sterben.</strong> In den ersten Runden reichen Gewehr, Munition und Verbandszeug. Alles andere ist Geld, das du später brauchst.</li>\n<li><strong>Nachschub fahren.</strong> Du lernst die Karte, verdienst zuverlässig Geld und bist vom ersten Match an nützlich.</li>\n</ol>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Deine ersten 30 Minuten</h2>\n<p>Du startest mit <strong>$10.000 pro Leben</strong>. Das klingt nach viel und ist nach zwei unüberlegten Käufen weg. Der Ablauf, der sich bewährt hat:</p>\n<ul>\n<li><strong>Minute 0–2:</strong> Squad beitreten, im Voice Hallo sagen, fragen, was gebraucht wird.</li>\n<li><strong>Minute 2–5:</strong> Standardgewehr, Munition, Verbandszeug. Kein Fahrzeug, keine FOB, kein Zielfernrohr.</li>\n<li><strong>Minute 5–30:</strong> Eine Palette kaufen (rund $400), auf einen Ural laden, zur FOB fahren, abladen <em>und übertragen</em>. Das bringt rund $2.500 – und du kennst danach die halbe Karte.</li>\n</ul>\n<p>Den kompletten Ablauf mit allen Handgriffen findest du im Guide <a href=\"/guides/deine-erste-runde-wardogs/\">Deine erste Runde Wardogs</a>.</p>\n\n<h2>Die Begriffe, die dir dauernd begegnen</h2>\n<table><thead><tr><th>Begriff</th><th>Was es ist</th><th>Warum es dich betrifft</th></tr></thead><tbody>\n<tr><td><strong>Zone</strong></td><td>der umkämpfte Bereich, rund 2×2 km</td><td>Punkte gibt es nur dort – aber nicht nur dort gewinnt man</td></tr>\n<tr><td><strong>FOB</strong></td><td>vorgeschobene Basis, vom Team selbst gesetzt</td><td>ohne sie läuft dein Team ewig vom Hauptlager</td></tr>\n<tr><td><strong>Palette</strong></td><td>Nachschubeinheit: Build, Ammo, Fuel, Mechanical</td><td>deine wichtigste Einnahmequelle als Neuling</td></tr>\n<tr><td><strong>Spawn-Fahrzeug</strong></td><td>separat platzierter Wiedereinstiegspunkt</td><td>die FOB allein ist <em>kein</em> Spawn – der häufigste Irrtum</td></tr>\n<tr><td><strong>Hot Zone</strong></td><td>Bereich mit doppelter Wertung</td><td>doppeltes Kontrollgewicht und doppeltes Cash</td></tr>\n</tbody></table>\n\n<h2>Fünf Fehler, die jeden Neuling Geld kosten</h2>\n<ol>\n<li><strong>Allein zur Zone rennen.</strong> Drei Gegnerteams, keine Deckung, kein Squad – das Loadout ist weg.</li>\n<li><strong>Eine FOB kaufen.</strong> Rund $4.887 für eine Bauzone, die ohne Absprache am falschen Ort steht.</li>\n<li><strong>Ein Fahrzeug kaufen, das man nicht fahren kann.</strong> Der Heli am Berghang ist der teuerste Lernmoment im Spiel.</li>\n<li><strong>Den Voice ignorieren.</strong> Wardogs ist Kommunikation. Zuhören reicht am Anfang völlig.</li>\n<li><strong>Die anderen beiden Teams als ein Team sehen.</strong> Sie sind es nicht – und genau daraus entstehen die besten Momente.</li>\n</ol>\n\n<h2>Wenn die erste Runde vorbei ist</h2>\n<p>Dann weißt du, wie Nachschub funktioniert, hast mehr Cash als am Anfang und kennst ein paar Namen. Von hier aus lohnen sich zwei Richtungen: die <a href=\"/wardogs/fob/\">FOB-Seite</a>, wenn du bauen willst, oder die <a href=\"/wardogs/gameplay/\">Gameplay-Seite</a>, wenn du verstehen willst, warum drei Teams alles verändern.</p>\n"
+     }
+    ]
+   },
+   {
+    "type": "section",
+    "surface": true,
+    "eyebrow": "Guides",
+    "h2": "Einsteiger-Guides",
+    "inner": [
+     {
+      "type": "guides",
+      "count": 6,
+      "thema": "einsteiger"
+     }
+    ]
+   },
+   {
+    "type": "section",
+    "inner": [
+     {
+      "type": "discord",
+      "eyebrow": "Fragen?",
+      "h2": "Am Anfang fragt man viel",
+      "text": "Genau dafür ist der Discord da. Keine Frage ist zu einfach."
      }
     ]
    }
@@ -679,8 +317,8 @@
    "lead": "Die Forward Operating Base ist das Rückgrat deines Teams. Hier erfährst du, was sie kostet, was sie braucht, was du darin bauen kannst – und welche Fehler dich das Match kosten."
   },
   "seo": {
-   "title": "Wardogs FOB Guide auf Deutsch: Bauen, Versorgen, Verteidigen | Warleek",
-   "description": "Alles zur Wardogs FOB: Deployment, Baukosten, die vier Versorgungsarten, Hammer-Stufen, Spawn-Fahrzeug, Platzierung und typische Fehler. Deutschsprachiger Guide der Warleek-Community."
+   "title": "Wardogs FOB bauen: Anleitung, Kosten & Versorgung (Deutsch) | Warleek",
+   "description": "Wardogs FOB Schritt für Schritt: Deploy-Item und Kosten, die vier Versorgungsarten, Hammer-Stufen, Spawn-Fahrzeug, Baureihenfolge und die Fehler, die dich die Basis kosten."
   },
   "sections": [
    {
@@ -707,11 +345,13 @@
    },
    {
     "type": "section",
+    "surface": true,
     "inner": [
      {
-      "type": "chat",
-      "h2": "Bauen ist Teamarbeit",
-      "text": "Im Discord findest du Builder, Fahrer und Leute, die die Zone halten, während du hämmerst."
+      "type": "discord",
+      "eyebrow": "Fragen?",
+      "h2": "Etwas unklar geblieben?",
+      "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
      }
     ]
    }
@@ -730,8 +370,8 @@
    "lead": "Logistik ist in Wardogs keine Nebenrolle. Ohne Paletten keine FOB, ohne FOB keine Zone. Und nebenbei ist sie eine der besten Cash-Quellen im Spiel."
   },
   "seo": {
-   "title": "Wardogs Logistik Guide: Paletten, LKW, Heli & Cash | Warleek",
-   "description": "Wardogs Logistik erklärt: die vier Versorgungsarten, Paletten kaufen, mit Ural oder Heli zur FOB fahren, abladen, Cash verdienen. Routen, Tipps und Fehler – auf Deutsch von Warleek."
+   "title": "Wardogs Logistik: Paletten, Routen & Cash – Anleitung | Warleek",
+   "description": "Wardogs Logistik erklärt: welche Palette wann, Ural oder Heli, sichere Routen, richtig abladen und übertragen. Rund 2.100 Dollar netto pro Lieferung – so holst du sie."
   },
   "sections": [
    {
@@ -758,11 +398,13 @@
    },
    {
     "type": "section",
+    "surface": true,
     "inner": [
      {
-      "type": "chat",
-      "h2": "Fahrer gesucht – immer",
-      "text": "Wer Nachschub fährt, ist bei uns nie arbeitslos. Komm in den Discord."
+      "type": "discord",
+      "eyebrow": "Fragen?",
+      "h2": "Etwas unklar geblieben?",
+      "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
      }
     ]
    }
@@ -781,8 +423,8 @@
    "lead": "Wie ein Match abläuft, warum drei Teams das Spiel unberechenbar machen, wie du mit Cash umgehst und was ein Squad wirklich braucht."
   },
   "seo": {
-   "title": "Wardogs Gameplay erklärt: Kontrollzone, 3 Teams, Cash | Warleek",
-   "description": "Wardogs Gameplay auf Deutsch: Kontrollzone und Punkte, die Dynamik von drei Teams, Cash-Economy und Startkapital, Squad-Rollen und Kommunikation. Von der Warleek-Community."
+   "title": "Wardogs Gameplay: Zone, drei Teams & Cash verstehen | Warleek",
+   "description": "Wie ein Wardogs-Match abläuft: Kontrollzone und Punkte, die Dynamik von drei Teams, Cash-Economy, Squad-Rollen und Funkdisziplin – auf Deutsch erklärt."
   },
   "sections": [
    {
@@ -809,11 +451,13 @@
    },
    {
     "type": "section",
+    "surface": true,
     "inner": [
      {
-      "type": "chat",
-      "h2": "Zusammen spielt sich's besser",
-      "text": "Squad-Suche, Team-Abende, Clan: alles beginnt im Discord."
+      "type": "discord",
+      "eyebrow": "Fragen?",
+      "h2": "Etwas unklar geblieben?",
+      "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
      }
     ]
    }
@@ -832,8 +476,8 @@
    "lead": "Loadouts, Hämmer, Bauteile, Fahrzeuge: In Wardogs kannst du früh fast alles kaufen. Die Kunst ist, es nicht zu tun. Hier ist unsere Einordnung."
   },
   "seo": {
-   "title": "Wardogs Equipment & Loadout Guide auf Deutsch | Warleek",
-   "description": "Wardogs Equipment erklärt: Loadouts nach Rolle, Hammer-Stufen, Bauteile, Fahrzeuge (Ural, Kodiak, Humvee, Heli) und die Frage, was sich wann lohnt. Deutschsprachiger Guide der Warleek-Community."
+   "title": "Wardogs Loadout & Equipment: was sich wann lohnt | Warleek",
+   "description": "Wardogs Equipment auf Deutsch: Loadouts nach Rolle, die drei Hammer-Stufen, Bauteile, Fahrzeuge von Ural bis Heli – und fünf Kaufregeln, die Geld sparen."
   },
   "sections": [
    {
@@ -860,31 +504,33 @@
    },
    {
     "type": "section",
+    "surface": true,
     "inner": [
      {
-      "type": "chat",
-      "h2": "Loadout-Fragen? #fragen im Discord.",
-      "text": "Dort gibt es ehrliche Antworten – auch wenn die lautet: „Kauf das nicht.“"
+      "type": "discord",
+      "eyebrow": "Fragen?",
+      "h2": "Etwas unklar geblieben?",
+      "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
      }
     ]
    }
   ]
  },
  {
-  "slug": "about-us",
-  "title": "About us – wer hinter Warleek steckt",
-  "parent": null,
+  "slug": "technik",
+  "title": "Wardogs Technik: Steuerung, Hardware, Einstellungen",
+  "parent": "wardogs",
   "template": "page-hub",
   "hero": {
-   "image": "hero-about",
+   "image": "hero-technik",
    "page": true,
-   "eyebrow": "About us",
-   "h1": "Wer hinter <em>Warleek</em> steckt",
-   "lead": "Ein paar Leute aus Deutschland, Österreich und der Schweiz, die WARDOGS mögen, Deutsch reden und keine Lust auf Chaos-Lobbys haben. Das ist die ganze Geschichte – fast."
+   "eyebrow": "Wardogs · Themen",
+   "h1": "Steuerung, Hardware und <em>Einstellungen</em>",
+   "lead": "Tastenbelegung, Joystick und HOTAS, Grafik- und Audio-Einstellungen: alles, was außerhalb des Matches über dein Spielgefühl entscheidet."
   },
   "seo": {
-   "title": "About us – Warleek, die Wardogs Community aus DACH",
-   "description": "Wer hinter Warleek steckt: die Geschichte, die Werte und die Leute der deutschsprachigen Wardogs-Community. Fan-Projekt, unabhängig vom Entwickler."
+   "title": "Wardogs Steuerung & Einstellungen: HOTAS, Binds, Technik | Warleek",
+   "description": "Wardogs Technik auf Deutsch: Joystick und HOTAS einrichten, Tastenbelegung, Proximity-Voice, Grafikeinstellungen und was bei Fehlern hilft. Getestete Anleitungen statt generierter Menüpfade."
   },
   "sections": [
    {
@@ -892,36 +538,20 @@
     "inner": [
      {
       "type": "prose",
-      "html": "\n<h2>Die Geschichte</h2>\n<p>Warleek ist im September 2026 entstanden, in der ersten Woche nach dem Early-Access-Start von WARDOGS. Ein paar von uns hatten das Spiel schon in der Beta gespielt und jeden Abend dasselbe erlebt: Zufalls-Squads, in denen niemand Nachschub fährt, drei Leute gleichzeitig eine FOB kaufen und der Voice-Chat entweder leer ist oder aus Musik besteht.</p>\n<p>Also haben wir einen Discord aufgemacht, Freunde eingeladen und angefangen, mit Plan zu spielen. Es hat funktioniert. Dann kamen Leute dazu, die wir nicht kannten – aus Wien, aus Bern, aus dem Ruhrgebiet. Und irgendwann war klar: Das ist keine Freundesgruppe mehr, das ist eine Community. Also braucht sie einen Namen und eine Seite.</p>\n<h2>Der Name</h2>\n<p><strong>War</strong>dogs + <strong>Leek</strong> (Lauch). Warum Lauch? Weil irgendjemand in der ersten Woche im Voice gesagt hat, unser Squad sehe beim Anrücken aus wie ein Bund Lauch – lang, dünn, grün und in einer Reihe. Der Name ist geblieben, das Logo kam später. Der Dogtag steht für das Spiel, der Lauch für uns: bodenständig, ein bisschen albern, überraschend widerstandsfähig.</p>\n<h2>Wofür wir stehen</h2>\n<ul>\n<li><strong>Deutsch als Spielsprache.</strong> Für den ganzen DACH-Raum – Deutschland, Österreich, Schweiz und alle, die auf Deutsch spielen wollen.</li>\n<li><strong>Teamspiel.</strong> Wardogs belohnt Zusammenarbeit. Wir auch.</li>\n<li><strong>Feierabend-tauglich.</strong> Wir haben Jobs und Familien. Zwei Stunden am Abend sind ein guter Abend.</li>\n<li><strong>Kein Toxic.</strong> Wer andere fertigmacht, fliegt. Ohne Diskussion.</li>\n<li><strong>Unabhängig.</strong> Warleek ist ein Fan-Projekt ohne Sponsoren, ohne Shop und ohne Verbindung zum Entwickler oder Publisher.</li>\n</ul>\n<h2>Was wir mit dieser Seite wollen</h2>\n<p>Drei Dinge: neue Mitspieler finden, unser Wissen über das Spiel auf Deutsch weitergeben, und die offiziellen Patch Notes an einem Ort sammeln, damit niemand mehr in Steam-Ankündigungen scrollen muss. Die <a href=\"/guides/\">Guides</a> schreiben wir selbst, aus eigener Erfahrung, mit Quellenangabe, wo wir Zahlen von anderen übernehmen.</p>\n<h2>Kontakt</h2>\n<p>Am schnellsten über den <a href=\"/wardogs-discord/\">Discord</a>. Für alles, was nicht in einen Chat gehört – Presse, Kooperationen, rechtliche Fragen – findest du eine E-Mail-Adresse im <a href=\"/impressum/\">Impressum</a>.</p>\n"
+      "html": "\n<h2>Worum es hier geht</h2>\n<p>Wardogs ist ein Spiel mit Fahrzeugen, Helikoptern und Proximity-Voice – drei Dinge, bei denen Hardware und Einstellungen unmittelbar spürbar sind. Auf dieser Seite sammeln wir alles, was vor dem Match passiert: Steuerung einrichten, Eingabegeräte zum Laufen bringen, Einstellungen, die wirklich etwas ändern.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<div class=\"wl-note\"><p><strong>Vorsicht bei fremden Anleitungen</strong> Ein großer Teil der Wardogs-Technikseiten in den Suchergebnissen ist automatisiert erzeugt und beschreibt Menüpfade, die es im Spiel nicht gibt. Wenn dir irgendwo ein Menüpunkt versprochen wird, den du nicht findest – er existiert vermutlich wirklich nicht.</p></div>\n\n<h2>Steuerung: was das Spiel kann und was nicht</h2>\n<ul>\n<li><strong>Maus und Tastatur</strong> funktionieren für alles, inklusive Helikopter. Collective liegt auf Shift und Strg, Pitch und Roll auf der Maus – für Transportflüge reicht das.</li>\n<li><strong>Ein Joystick</strong> wird als DirectInput-Gerät erkannt und lässt sich in den Flug-Binds zuweisen.</li>\n<li><strong>Zwei Joysticks gleichzeitig</strong> funktionieren nicht ohne Umweg – das Spiel liest nur ein Gerät aus. Wie man es trotzdem hinbekommt, steht im HOTAS-Guide.</li>\n<li><strong>Gamepad</strong> geht, bringt aber Pad-Deadzones mit. Für einen Flightstick ist das die falsche Richtung.</li>\n<li><strong>Rebinds</strong> gehen im aktuellen Build gelegentlich zwischen Sitzungen verloren. Mach dir einen Screenshot deines Layouts.</li>\n</ul>\n\n<h2>Was sich zu prüfen lohnt</h2>\n<table><thead><tr><th>Einstellung</th><th>Warum</th></tr></thead><tbody>\n<tr><td><strong>Push-to-Talk</strong></td><td>Proximity-Voice überträgt alles, was dein Mikrofon hört – auch an Gegner in der Nähe.</td></tr>\n<tr><td><strong>Mikrofon-Pegel</strong></td><td>Übersteuerte Funksprüche versteht niemand; im Squad ist Verständlichkeit wichtiger als Lautstärke.</td></tr>\n<tr><td><strong>Sichtweite</strong></td><td>Der Einstellwert mit dem größten Einfluss auf die Bildrate in den Industriegebieten.</td></tr>\n<tr><td><strong>Fahrzeug-Maussteuerung</strong></td><td>Für Helikopter ohne Joystick deutlich präziser als reine Tastatursteuerung.</td></tr>\n<tr><td><strong>Eingabedämpfung</strong></td><td>Greift seit dem Season-1-Update für alle Eingabegeräte – wer vorher geflogen ist, muss sich neu einfühlen.</td></tr>\n</tbody></table>\n\n<h2>Wenn etwas nicht geht</h2>\n<p>Die häufigsten Ursachen, bevor du tiefer suchst: Das Spiel lief beim Ändern der Konfiguration noch (auch der Anti-Cheat-Prozess zählt), die Steam-Cloud spielt eine alte Konfiguration zurück, oder ein Eingabegerät belegt eine Achse doppelt. Alle drei erkennt man daran, dass Änderungen nach dem Neustart verschwunden sind.</p>\n"
      }
     ]
    },
    {
     "type": "section",
     "surface": true,
-    "eyebrow": "Team",
-    "h2": "Die Leute hinter Warleek",
-    "text": "Hier stellen sich die Gründer und die Leitung vor. Bilder und Texte sind Platzhalter, bis jeder seinen eigenen Text geschrieben hat.",
+    "eyebrow": "Guides",
+    "h2": "Technik-Guides",
     "inner": [
      {
-      "type": "team",
-      "members": [
-       {
-        "name": "Patrick",
-        "role": "Gründer · Website · Squad Lead",
-        "text": "Hat den Discord aufgemacht, die Website gebaut und fährt trotzdem noch Nachschub. Mag FOBs an Orten, an denen niemand sie erwartet."
-       },
-       {
-        "name": "[Name]",
-        "role": "Mitgründer · Logistik",
-        "text": "[Platzhalter – zwei Sätze über dich: seit wann du Wardogs spielst und was du im Squad machst.]"
-       },
-       {
-        "name": "[Name]",
-        "role": "Clan-Leitung · Taktik",
-        "text": "[Platzhalter – zwei Sätze über dich.]"
-       }
-      ]
+      "type": "guides",
+      "count": 6,
+      "thema": "technik"
      }
     ]
    },
@@ -929,9 +559,50 @@
     "type": "section",
     "inner": [
      {
-      "type": "chat",
-      "h2": "Lern uns kennen",
-      "text": "Am besten im Voice, an einem Team-Abend."
+      "type": "discord",
+      "eyebrow": "Fragen?",
+      "h2": "Hardware-Probleme sind selten einzigartig",
+      "text": "Im Discord sitzen Leute mit denselben Sticks, Pedalen und Treiberproblemen."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "about-us",
+  "title": "About us – wer die Guides schreibt",
+  "parent": null,
+  "template": "page-hub",
+  "hero": {
+   "image": "hero-about",
+   "page": true,
+   "eyebrow": "About us",
+   "h1": "Wer hier <em>schreibt</em> – und warum",
+   "lead": "Warleek ist ein Fan-Projekt von Spielern aus dem deutschsprachigen Raum. Keine Redaktion, kein Verlag, keine KI-Textfabrik: Leute, die Wardogs spielen und aufschreiben, was sie dabei gelernt haben."
+  },
+  "seo": {
+   "title": "About us – wer hinter den Wardogs Guides steckt | Warleek",
+   "description": "Warleek ist ein unabhängiges Fan-Projekt: deutschsprachige Wardogs-Guides, selbst gespielt und selbst geschrieben. Wie wir arbeiten, woher die Zahlen kommen und wie du uns erreichst."
+  },
+  "sections": [
+   {
+    "type": "section",
+    "inner": [
+     {
+      "type": "prose",
+      "html": "\n<h2>Wie das hier angefangen hat</h2>\n<p>Im September 2026, in der ersten Woche nach dem Early-Access-Start, haben ein paar von uns dasselbe erlebt: Zufalls-Squads, in denen niemand Nachschub fährt, drei Leute kaufen gleichzeitig eine FOB, und wer eine Frage googelt, landet auf Seiten, die Menüpunkte beschreiben, die es im Spiel gar nicht gibt.</p>\n<p>Also haben wir angefangen, Dinge aufzuschreiben – erst für uns, dann für andere. Daraus wurde Warleek.</p>\n\n<h2>Wie wir arbeiten</h2>\n<ul>\n<li><strong>Selbst gespielt.</strong> Jeder Ablauf in einem Guide ist im Spiel durchgegangen. Wenn wir etwas nicht selbst geprüft haben, steht es so im Text.</li>\n<li><strong>Zahlen mit Datum.</strong> Preise, Baukosten und Belohnungen ändern sich im Early Access. Deshalb trägt jede Zahl ein Stand-Datum – und die Patch Notes auf dieser Seite zeigen, was sich seitdem bewegt hat.</li>\n<li><strong>Quellen dabei.</strong> Wo wir uns auf offizielle Ankündigungen, das Wiki oder Presseberichte stützen, steht die Quelle im Text oder in unseren Notizen.</li>\n<li><strong>Korrekturen sind willkommen.</strong> Wenn etwas nicht stimmt, sag Bescheid. Wir ändern es und schreiben dazu, was sich geändert hat.</li>\n<li><strong>Keine Werbung, kein Tracking.</strong> Die Seite setzt keine Cookies zu Analysezwecken, lädt keine Schriften von fremden Servern und verkauft nichts.</li>\n</ul>\n\n<h2>Was Warleek nicht ist</h2>\n<p>Kein offizielles Angebot des Entwicklers. Wir gehören nicht zu BULKHEAD oder Team17 und sprechen nicht für sie. Bug-Reports und Support-Anfragen gehören in den offiziellen Discord des Studios, nicht zu uns.</p>\n<p>Und kein Clan mehr: Wir haben eine Weile selbst eine Community geführt. Guides schreiben und eine Gruppe zusammenhalten sind zwei verschiedene Vollzeitbeschäftigungen – wir haben uns für die Guides entschieden. Wo du Mitspieler findest, steht auf der <a href=\"/community/\">Partner-Seite</a>.</p>\n\n<h2>Kontakt</h2>\n<p>Am schnellsten über den Discord. Für Presse, Kooperationen und rechtliche Fragen steht eine E-Mail-Adresse im <a href=\"/impressum/\">Impressum</a>.</p>\n"
+     }
+    ]
+   },
+   {
+    "type": "section",
+    "surface": true,
+    "inner": [
+     {
+      "type": "discord",
+      "eyebrow": "Kontakt",
+      "h2": "Schreib uns",
+      "text": "Korrekturen, Themenwünsche, Partneranfragen – alles willkommen."
      }
     ]
    }

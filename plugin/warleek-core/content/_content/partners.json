@@ -1,0 +1,24 @@
+[
+ {
+  "slug": "warleek-discord",
+  "title": "Warleek Discord",
+  "order": 1,
+  "platform": "discord",
+  "tag": "Guides & Hilfe",
+  "url": "",
+  "featured": true,
+  "image": "partner-placeholder",
+  "text": "Unser eigener Server: Rückfragen zu Guides, Korrekturen, Themenwünsche – und der schnellste Weg, Leute für den Abend zu finden."
+ },
+ {
+  "slug": "partner-platzhalter",
+  "title": "[Partner-Name]",
+  "order": 2,
+  "platform": "discord",
+  "tag": "Wardogs Community",
+  "url": "",
+  "featured": false,
+  "image": "partner-placeholder",
+  "text": "[Platzhalter – zwei Sätze über die Community: wer sie ist, wann gespielt wird und für wen sie passt. Im Backend unter „Partner“ bearbeiten.]"
+ }
+]

@@ -26,3 +26,24 @@ function warleek_unpin_legacy_widths( $parsed ) {
 	return $parsed;
 }
 add_filter( 'render_block_data', 'warleek_unpin_legacy_widths' );
+
+/**
+ * 301-Weiterleitungen für Seiten, die es nicht mehr gibt.
+ *
+ * Die Map füllt `warleek_step_retire()`. Greift nur im 404-Fall, damit echte
+ * Inhalte niemals umgeleitet werden.
+ */
+function warleek_serve_redirects() {
+	if ( is_admin() || wp_doing_ajax() || is_robots() ) { return; }
+	$map = (array) get_option( 'warleek_redirects', array() );
+	if ( ! $map ) { return; }
+	$path = trailingslashit( strtok( (string) ( $_SERVER['REQUEST_URI'] ?? '' ), '?' ) );
+	// Unterverzeichnis-Installationen: Basispfad abziehen.
+	$base = trailingslashit( wp_parse_url( home_url( '/' ), PHP_URL_PATH ) ?: '/' );
+	if ( '/' !== $base && str_starts_with( $path, $base ) ) { $path = '/' . substr( $path, strlen( $base ) ); }
+	$target = $map[ $path ] ?? '';
+	if ( ! $target || trailingslashit( $target ) === $path ) { return; }
+	wp_safe_redirect( home_url( $target ), 301 );
+	exit;
+}
+add_action( 'template_redirect', 'warleek_serve_redirects', 1 );

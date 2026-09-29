@@ -7,7 +7,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '1.1.1' ); }
+if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.0.0' ); }
 define( 'WARLEEK_DIR', get_template_directory() );
 define( 'WARLEEK_URI', get_template_directory_uri() );
 
@@ -45,11 +45,12 @@ add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 function warleek_source_greeting() {
 	echo "\n<!--\n"
 		. "     ___                    W A R L E E K  //  DACH  //  seit 2026\n"
-		. "    /   \\   <- Dogtag        Wardogs Community · Team · Clan\n"
-		. "    | ~ |   <- Lauch         Du liest Quellcode. Respekt. Die FOB braucht trotzdem Build-Supplies.\n"
-		. "    \\___/                    Wer hier reinschaut, passt zu uns: /wardogs-discord/\n"
+		. "    /   \\   <- Dogtag        Wardogs Guides · Tipps · Patch Notes\n"
+		. "    | ~ |   <- Lauch         Du liest Quellcode. Respekt. Steht auch alles in den Guides.\n"
+		. "    \\___/                    Wer hier reinschaut, passt zu uns: /community/\n"
 		. "\n"
 		. "    Kein Tracking, keine Cookies, keine externen Requests. Fonts, Bilder, Video: alles von hier.\n"
+		. "    Guides: selbst gespielt. Patch Notes: von Steam, übersetzt. Zahlen: mit Stand-Datum.\n"
 		. "    Patch Notes kommen stündlich von Steam (BBCode -> HTML, 22 Tests, alle grün – bis Valve wieder ein Tag erfindet).\n"
 		. "    Bugs? #fragen im Discord. Cheats? Nicht hier. Teamkills? Nur mit dem Ural, und nur aus Versehen.\n"
 		. "-->\n";

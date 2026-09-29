@@ -90,8 +90,8 @@
 		try {
 			var css = 'color:#9be15d;background:#0d110f;font:bold 14px/1.6 "Barlow Condensed",Impact,sans-serif;padding:8px 14px;letter-spacing:.08em';
 			console.log('%c// WARLEEK // DACH // Du liest den Quellcode statt Nachschub zu fahren?', css);
-			console.log('%cDie FOB braucht Build-Supplies, nicht deine Neugier. Aber okay: wir suchen Leute, die sowas hier gut finden → /wardogs-discord/', 'color:#c7b58f;font:13px/1.5 Barlow,sans-serif');
-			console.log('%c   ___\n  /   \\   Dogtag ✓\n  | 🥬 |   Lauch  ✓\n  \\___/   Cash   ✗  (fahr Paletten)', 'color:#8a938c;font:12px/1.3 monospace');
+			console.log('%cDie FOB braucht Build-Supplies, nicht deine Neugier. Aber okay: wer Quellcode liest, schreibt vielleicht auch Guides → /community/', 'color:#c7b58f;font:13px/1.5 Barlow,sans-serif');
+			console.log('%c   ___\n  /   \\   Dogtag ✓\n  | 🥬 |   Lauch  ✓\n  \\___/   Guides ✓  (lies sie)', 'color:#8a938c;font:12px/1.3 monospace');
 		} catch (e) {}
 	});
 })();

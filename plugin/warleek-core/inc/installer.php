@@ -89,10 +89,15 @@ function warleek_img( array $media, $key, $size = 'full' ) {
 }
 
 /* ------------------------------------------------------------ Upsert */
-function warleek_upsert_post( array $data, $type, $parent = 0 ) {
+function warleek_upsert_post( array $data, $type, $parent = 0, $force = false ) {
 	$existing = get_posts( array( 'post_type' => $type, 'name' => $data['post_name'], 'post_parent' => $parent, 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) );
 	$data = array_merge( $data, array( 'post_type' => $type, 'post_status' => 'publish', 'post_parent' => $parent ) );
 	if ( $existing ) {
+		// Was jemand bewusst in den Papierkorb gelegt hat, holt der Installer nicht zurück.
+		if ( 'trash' === get_post_status( $existing[0] ) ) {
+			warleek_log( 'übersprungen (im Papierkorb): ' . $data['post_name'] );
+			return 0;
+		}
 		$data['ID'] = (int) $existing[0];
 		wp_update_post( wp_slash( $data ) );
 		warleek_log( "update: {$data['post_name']}" );
@@ -128,16 +133,21 @@ function warleek_render_section( array $s, array $media, array $site ) {
 			return warleek_build_section( $inner, array( 'eyebrow' => $s['eyebrow'] ?? '', 'h2' => $s['h2'] ?? '', 'text' => $s['text'] ?? '', 'surface' => ! empty( $s['surface'] ) ) );
 		case 'prose':      return warleek_html_to_blocks( $s['html'] );
 		case 'stats':      return warleek_build_stats( $s['items'] );
-		case 'tiers':      return warleek_build_tiers( $site['tiers'] );
-		case 'chat':       return warleek_build_chat_cta( array( 'eyebrow' => $s['eyebrow'] ?? 'Wardogs Chat', 'h2' => $s['h2'] ?? 'Rein in den Chat', 'text' => $s['text'] ?? '', 'layout' => $s['layout'] ?? 'row' ) );
+		case 'topics':     return warleek_b_group( warleek_b_block( 'topics' ), array( 'layout' => 'default', 'wide_align' => true ) );
+		case 'partner':    return warleek_b_group( warleek_b_block( 'partner-grid', array( 'count' => (int) ( $s['count'] ?? 12 ) ) ), array( 'layout' => 'default', 'wide_align' => true ) );
+		case 'guidefilter':return warleek_b_group( warleek_b_block( 'guide-filter' ), array( 'layout' => 'default', 'wide_align' => true ) );
+		case 'discord':    return warleek_build_cta( array(
+			'eyebrow' => $s['eyebrow'] ?? 'Discord',
+			'h2'      => $s['h2'] ?? 'Fragen zu einem Guide?',
+			'text'    => $s['text'] ?? '',
+		) ) . warleek_b_group( warleek_b_block( 'chat-buttons', array( 'layout' => $s['layout'] ?? 'row' ) ), array( 'layout' => 'default', 'class' => 'wl-cta__chat' ) );
 		case 'patchnotes': return warleek_b_group( warleek_b_block( 'patchnotes-latest', array( 'count' => (int) ( $s['count'] ?? 3 ) ) ), array( 'layout' => 'default', 'wide_align' => true ) );
-		case 'guides':     return warleek_b_group( warleek_b_block( 'guides-grid', array( 'count' => (int) ( $s['count'] ?? 6 ), 'thema' => $s['thema'] ?? '' ) ), array( 'layout' => 'default', 'wide_align' => true ) );
+		case 'guides':
+			$ga = array( 'count' => (int) ( $s['count'] ?? 6 ), 'thema' => $s['thema'] ?? '' );
+			if ( ! empty( $s['newest'] ) ) { $ga['newest'] = true; }
+			return warleek_b_group( warleek_b_block( 'guides-grid', $ga ), array( 'layout' => 'default', 'wide_align' => true ) );
 		case 'faq':        return warleek_build_faq( $s['items'], $s['heading'] ?? 'Häufige Fragen' );
 		case 'cta':        return warleek_build_cta( $s );
-		case 'team':
-			$members = array();
-			foreach ( $s['members'] as $m ) { $m['image'] = ! empty( $m['image'] ) ? warleek_img( $media, $m['image'], 'medium' ) : array(); $members[] = $m; }
-			return warleek_build_team( $members );
 		case 'columns':
 			$items = array();
 			foreach ( $s['items'] as $it ) { $it['image'] = ! empty( $it['image'] ) ? warleek_img( $media, $it['image'], 'medium_large' ) : array(); $items[] = $it; }
@@ -147,7 +157,7 @@ function warleek_render_section( array $s, array $media, array $site ) {
 }
 
 /* ------------------------------------------------------------ Seiten */
-function warleek_seed_pages( array $pages, array $media, array $site ) {
+function warleek_seed_pages( array $pages, array $media, array $site, $force = false ) {
 	$ids = array();
 	// Eltern zuerst
 	usort( $pages, function ( $a, $b ) { return ( $a['parent'] ? 1 : 0 ) <=> ( $b['parent'] ? 1 : 0 ); } );
@@ -168,7 +178,7 @@ function warleek_seed_pages( array $pages, array $media, array $site ) {
 			$content .= warleek_build_hero( $hero );
 		}
 		$content .= warleek_render_sections( $p['sections'], $media, $site );
-		$id = warleek_upsert_post( array( 'post_title' => $p['title'], 'post_name' => $p['slug'], 'post_content' => $content ), 'page', $parent );
+		$id = warleek_upsert_post( array( 'post_title' => $p['title'], 'post_name' => $p['slug'], 'post_content' => $content ), 'page', $parent, $force );
 		$ids[ $p['slug'] ] = $id;
 		update_post_meta( $id, '_wp_page_template', ( $p['template'] ?? 'page' ) === 'page-hub' ? 'page-hub' : 'default' );
 		if ( ! empty( $p['hero']['image'] ) && ! empty( $media[ $p['hero']['image'] ] ) ) { set_post_thumbnail( $id, $media[ $p['hero']['image'] ] ); }
@@ -182,7 +192,7 @@ function warleek_seed_pages( array $pages, array $media, array $site ) {
 }
 
 /* ------------------------------------------------------------ Guides */
-function warleek_seed_guides( array $guides, array $media, array $site ) {
+function warleek_seed_guides( array $guides, array $media, array $site, $force = false ) {
 	foreach ( $site['themen'] as $slug => $t ) {
 		$term = term_exists( $slug, 'guide-thema' );
 		if ( ! $term ) { $term = wp_insert_term( $t['name'], 'guide-thema', array( 'slug' => $slug, 'description' => $t['desc'] ) ); }
@@ -190,7 +200,7 @@ function warleek_seed_guides( array $guides, array $media, array $site ) {
 	}
 	foreach ( $guides as $g ) {
 		$content = warleek_html_to_blocks( $g['html'] );
-		$id = warleek_upsert_post( array( 'post_title' => $g['title'], 'post_name' => $g['slug'], 'post_content' => $content, 'post_excerpt' => $g['excerpt'], 'menu_order' => (int) ( $g['order'] ?? 0 ) ), 'guide' );
+		$id = warleek_upsert_post( array( 'post_title' => $g['title'], 'post_name' => $g['slug'], 'post_content' => $content, 'post_excerpt' => $g['excerpt'], 'menu_order' => (int) ( $g['order'] ?? 0 ) ), 'guide', 0, $force );
 		wp_set_object_terms( $id, $g['thema'], 'guide-thema' );
 		if ( ! empty( $g['image'] ) && ! empty( $media[ $g['image'] ] ) ) { set_post_thumbnail( $id, $media[ $g['image'] ] ); }
 		warleek_set_seo( $id, $g['seo'] ?? array() );
@@ -242,13 +252,23 @@ function warleek_install_steps() {
 		),
 		'pages' => array(
 			'label'       => 'Seiten anlegen',
-			'description' => 'Startseite, Community/Team/Clan, Chat, Discord, Spiel-Hub mit FOB/Logistik/Gameplay/Equipment, About us, Impressum, Datenschutz.',
+			'description' => 'Startseite, Partner-Seite, Spiel-Hub mit sechs Themenseiten, About us, Impressum, Datenschutz.',
 			'callback'    => 'warleek_step_pages',
 		),
 		'guides' => array(
 			'label'       => 'Guides anlegen',
-			'description' => 'Sechs Einsteiger-Guides samt Themen-Taxonomie.',
+			'description' => 'Die mitgelieferten Guides samt Themen-Taxonomie.',
 			'callback'    => 'warleek_step_guides',
+		),
+		'retire' => array(
+			'label'       => 'Alte Seiten zurückziehen',
+			'description' => 'Verschiebt Seiten, die es nicht mehr gibt, in den Papierkorb und legt eine 301-Weiterleitung auf das neue Ziel an.',
+			'callback'    => 'warleek_step_retire',
+		),
+		'partners' => array(
+			'label'       => 'Partner anlegen',
+			'description' => 'Legt die mitgelieferten Partner-Einträge an (später im Backend unter „Partner" pflegbar).',
+			'callback'    => 'warleek_step_partners',
 		),
 		'nav' => array(
 			'label'       => 'Navigation & Startseite',
@@ -310,7 +330,7 @@ function warleek_step_pages( $force = false ) {
 	$pages = warleek_content_json( 'pages' );
 	$site  = warleek_content_json( 'site' );
 	if ( ! $pages ) { return array( 'ok' => false, 'msg' => 'Keine Seiteninhalte gefunden (content/_content/pages.json fehlt).' ); }
-	$ids = warleek_seed_pages( $pages, $media, $site );
+	$ids = warleek_seed_pages( $pages, $media, $site, $force );
 	update_option( 'warleek_page_ids', $ids, false );
 	return array( 'ok' => true, 'msg' => sprintf( '%d Seiten angelegt bzw. aktualisiert.', count( $ids ) ) );
 }
@@ -321,8 +341,67 @@ function warleek_step_guides( $force = false ) {
 	$guides = warleek_content_json( 'guides' );
 	$site   = warleek_content_json( 'site' );
 	if ( ! $guides ) { return array( 'ok' => false, 'msg' => 'Keine Guides gefunden (content/_content/guides.json fehlt).' ); }
-	warleek_seed_guides( $guides, $media, $site );
+	warleek_seed_guides( $guides, $media, $site, $force );
 	return array( 'ok' => true, 'msg' => sprintf( '%d Guides angelegt bzw. aktualisiert.', count( $guides ) ) );
+}
+
+/**
+ * Seiten, die es in dieser Version nicht mehr gibt, sauber stilllegen:
+ * Papierkorb statt Löschen (nichts geht verloren) plus 301 auf das neue Ziel,
+ * damit keine verwaisten, aber crawlbaren Seiten zurückbleiben.
+ */
+function warleek_step_retire( $force = false ) {
+	$retired = warleek_content_json( 'retired' );
+	if ( ! $retired ) { return array( 'ok' => true, 'msg' => 'Nichts zurückzuziehen.' ); }
+	$map     = (array) get_option( 'warleek_redirects', array() );
+	$trashed = 0;
+	foreach ( $retired as $r ) {
+		$slug   = sanitize_title( $r['slug'] ?? '' );
+		if ( ! $slug ) { continue; }
+		$target = $r['redirect'] ?? '/';
+		$parent = 0;
+		if ( ! empty( $r['parent'] ) ) {
+			$pp = get_posts( array( 'post_type' => 'page', 'name' => sanitize_title( $r['parent'] ), 'post_status' => 'any', 'posts_per_page' => 1 ) );
+			if ( $pp ) { $parent = (int) $pp[0]->ID; }
+		}
+		$found = get_posts( array( 'post_type' => 'page', 'name' => $slug, 'post_parent' => $parent, 'post_status' => 'any', 'posts_per_page' => 1 ) );
+		if ( $found ) {
+			$post = $found[0];
+			$map[ trailingslashit( wp_make_link_relative( get_permalink( $post ) ) ) ] = $target;
+			if ( 'trash' !== $post->post_status ) { wp_trash_post( $post->ID ); $trashed++; warleek_log( 'zurückgezogen: ' . $slug ); }
+		}
+		// Weiterleitung auch dann hinterlegen, wenn die Seite hier nie existiert hat –
+		// externe Links und der Google-Index kennen die alte Adresse trotzdem.
+		$map[ '/' . $slug . '/' ] = $target;
+		if ( ! empty( $r['parent'] ) ) { $map[ '/' . sanitize_title( $r['parent'] ) . '/' . $slug . '/' ] = $target; }
+	}
+	update_option( 'warleek_redirects', $map, false );
+	return array( 'ok' => true, 'msg' => sprintf( '%d Seiten in den Papierkorb, %d Weiterleitungen hinterlegt.', $trashed, count( $map ) ) );
+}
+
+/** Mitgelieferte Partner anlegen (idempotent über den Slug). */
+function warleek_step_partners( $force = false ) {
+	$partners = warleek_content_json( 'partners' );
+	if ( ! $partners ) { return array( 'ok' => true, 'msg' => 'Keine Partner mitgeliefert.' ); }
+	$media = (array) get_option( 'warleek_media_map', array() );
+	$n     = 0;
+	foreach ( $partners as $i => $p ) {
+		$id = warleek_upsert_post( array(
+			'post_title'   => $p['title'],
+			'post_name'    => $p['slug'],
+			'post_content' => $p['text'] ?? '',
+			'menu_order'   => (int) ( $p['order'] ?? ( $i + 1 ) ),
+		), 'partner' );
+		if ( ! $id ) { continue; }
+		update_post_meta( $id, 'partner_url', esc_url_raw( $p['url'] ?? '' ) );
+		update_post_meta( $id, 'partner_platform', sanitize_text_field( $p['platform'] ?? 'discord' ) );
+		update_post_meta( $id, 'partner_tag', sanitize_text_field( $p['tag'] ?? '' ) );
+		update_post_meta( $id, 'partner_featured', ! empty( $p['featured'] ) );
+		$key = $p['image'] ?? 'partner-placeholder';
+		if ( ! empty( $media[ $key ] ) ) { set_post_thumbnail( $id, $media[ $key ] ); }
+		$n++;
+	}
+	return array( 'ok' => true, 'msg' => sprintf( '%d Partner angelegt bzw. aktualisiert.', $n ) );
 }
 
 function warleek_step_nav( $force = false ) {
@@ -413,8 +492,10 @@ function warleek_install_status() {
 		array( 'label' => 'Theme „Warleek“ aktiv', 'ok' => 'warleek' === get_template(), 'detail' => 'warleek' === get_template() ? 'aktiv' : 'anderes Theme aktiv' ),
 		array( 'label' => 'Rank Math SEO', 'ok' => $rank, 'detail' => $rank ? 'aktiv' : 'nicht installiert' ),
 		array( 'label' => 'Bilder & Video', 'ok' => $media >= 20, 'detail' => $media . ' Medien importiert' ),
-		array( 'label' => 'Seiten', 'ok' => (int) $pages->publish >= 15, 'detail' => (int) $pages->publish . ' veröffentlicht' ),
+		array( 'label' => 'Seiten', 'ok' => (int) $pages->publish >= 12, 'detail' => (int) $pages->publish . ' veröffentlicht' ),
 		array( 'label' => 'Guides', 'ok' => (int) $guides->publish >= 6, 'detail' => (int) $guides->publish . ' veröffentlicht' ),
+		array( 'label' => 'Partner', 'ok' => (int) wp_count_posts( 'partner' )->publish > 0, 'detail' => (int) wp_count_posts( 'partner' )->publish . ' angelegt' ),
+		array( 'label' => 'Weiterleitungen', 'ok' => count( (array) get_option( 'warleek_redirects', array() ) ) > 0, 'detail' => count( (array) get_option( 'warleek_redirects', array() ) ) . ' alte URLs' ),
 		array( 'label' => 'Patch Notes', 'ok' => (int) $notes->publish > 0, 'detail' => (int) $notes->publish . ' importiert' . ( $sync ? ', zuletzt ' . wp_date( 'd.m.Y H:i', $sync ) : '' ) ),
 		array( 'label' => 'Startseite & Logo', 'ok' => $front && $logo, 'detail' => $front ? ( $logo ? 'gesetzt' : 'Logo fehlt' ) : 'Startseite fehlt' ),
 		array( 'label' => 'Permalinks', 'ok' => '/%postname%/' === get_option( 'permalink_structure' ), 'detail' => get_option( 'permalink_structure' ) ?: 'Standard (Zahlen)' ),

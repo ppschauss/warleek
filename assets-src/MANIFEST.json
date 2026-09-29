@@ -138,5 +138,40 @@
   "alt": "Warleek Favicon",
   "use": "favicon",
   "size": 57442
+ },
+ "hero-home-guides.webp": {
+  "alt": "Soldat beugt sich bei Dämmerung über eine Karte mit taktischen Markierungen, Lampe und Funkgerät daneben",
+  "use": "hero-home-guides",
+  "size": 69958
+ },
+ "hero-einsteiger.webp": {
+  "alt": "Neuling mit Rucksack und Karte am Spawn-Tor, Blick auf das Industrietal bei Sonnenaufgang",
+  "use": "hero-einsteiger",
+  "size": 68978
+ },
+ "hero-partner.webp": {
+  "alt": "Zwei Squads begrüßen sich per Handschlag am Tor einer FOB",
+  "use": "hero-partner",
+  "size": 77920
+ },
+ "og-default-guides.jpg": {
+  "alt": "Warleek – Wardogs Guides und Tipps auf Deutsch",
+  "use": "og-default-guides",
+  "size": 82512
+ },
+ "hero-technik.webp": {
+  "alt": "Flightstick und Schubregler vor einem Monitor mit Helikopter-Cockpit",
+  "use": "hero-technik",
+  "size": 42552
+ },
+ "guide-hotas.webp": {
+  "alt": "Transporthubschrauber schwebt über einem Industriehof, ein Soldat weist ihn ein",
+  "use": "guide-hotas",
+  "size": 49368
+ },
+ "partner-placeholder.webp": {
+  "alt": "Platzhalter-Wappen für Partner ohne eigenes Logo",
+  "use": "partner-placeholder",
+  "size": 13402
  }
 }

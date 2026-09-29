@@ -6,7 +6,7 @@
  */
 if ( ! function_exists( 'warleek_build_columns' ) ) { return; }
 echo warleek_build_columns( array(
-	array( 'title' => 'FOB', 'html' => '<p>Vorgeschobene Basis bauen, versorgen, halten.</p>', 'url' => '/wardogs/fob/', 'cta' => 'FOB-Guide' ),
-	array( 'title' => 'Logistik', 'html' => '<p>Paletten fahren, Geld verdienen, Team am Leben halten.</p>', 'url' => '/wardogs/logistik/', 'cta' => 'Logistik-Guide' ),
-	array( 'title' => 'Gameplay', 'html' => '<p>Zone, drei Teams, Economy – so tickt Wardogs.</p>', 'url' => '/wardogs/gameplay/', 'cta' => 'Gameplay-Guide' ),
+	array( 'title' => 'FOB', 'html' => '<p>Vorgeschobene Basis bauen, versorgen und halten.</p>', 'url' => '/wardogs/fob/', 'cta' => 'Zum FOB-Thema' ),
+	array( 'title' => 'Logistik', 'html' => '<p>Paletten fahren, Routen wählen, Cash verdienen.</p>', 'url' => '/wardogs/logistik/', 'cta' => 'Zur Logistik' ),
+	array( 'title' => 'Technik', 'html' => '<p>Steuerung, HOTAS und Einstellungen, die etwas ändern.</p>', 'url' => '/wardogs/technik/', 'cta' => 'Zur Technik' ),
 ) );

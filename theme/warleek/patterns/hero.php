@@ -3,14 +3,14 @@
  * Title: Hero (Startseite)
  * Slug: warleek/hero
  * Categories: warleek
- * Description: Großer Hero mit Bild/Video, Eyebrow, H1, Lead, Buttons und Dogtag-Zeile.
+ * Description: Großer Hero mit Bild, Eyebrow, H1, Lead, Buttons und Dogtag-Zeile.
  */
 if ( ! function_exists( 'warleek_build_hero' ) ) { return; }
 echo warleek_build_hero( array(
 	'home'    => true,
-	'eyebrow' => 'Wardogs Community · Deutschland · Österreich · Schweiz',
-	'h1'      => 'Deine Wardogs <em>Community</em> im deutschsprachigen Raum',
-	'lead'    => 'Community, Feierabend-Team und Clan für WARDOGS – 100 Spieler, drei Teams, eine Zone. Wir spielen zusammen, nicht nebeneinander.',
-	'buttons' => array( array( 'label' => 'Discord beitreten', 'url' => '/wardogs-discord/' ), array( 'label' => 'Community kennenlernen', 'url' => '/community/', 'ghost' => true ) ),
-	'tags'    => array( 'Warleek // DACH // seit 2026' ),
+	'eyebrow' => 'Wardogs Guides · Tipps · Patch Notes · Deutsch',
+	'h1'      => 'Wardogs verstehen, statt <em>raten</em>',
+	'lead'    => 'Deutsche Guides zu FOB, Logistik, Gameplay und Technik – geschrieben von Leuten, die die Fehler schon gemacht haben.',
+	'buttons' => array( array( 'label' => 'Zu den Guides', 'url' => '/guides/' ), array( 'label' => 'Das Spiel erklärt', 'url' => '/wardogs/', 'ghost' => true ) ),
+	'tags'    => array( 'Warleek // Guides // DACH' ),
 ) );

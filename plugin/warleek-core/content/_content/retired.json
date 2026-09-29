@@ -1,0 +1,32 @@
+[
+ {
+  "slug": "wardogs-community",
+  "parent": "community",
+  "redirect": "/guides/",
+  "note": "Community-Stufe entfällt; Besucher wollen meist Guides."
+ },
+ {
+  "slug": "wardogs-team",
+  "parent": "community",
+  "redirect": "/community/",
+  "note": "Feierabend-Gruppe entfällt; Partner-Seite ist das neue Ziel."
+ },
+ {
+  "slug": "wardogs-clan",
+  "parent": "community",
+  "redirect": "/community/",
+  "note": "Clan-Seite entfällt; Partner-Seite ist das neue Ziel."
+ },
+ {
+  "slug": "wardogs-chat",
+  "parent": null,
+  "redirect": "/community/",
+  "note": "Chat-Übersicht entfällt; Discord steht auf der Partner-Seite und im Header."
+ },
+ {
+  "slug": "wardogs-discord",
+  "parent": null,
+  "redirect": "/community/",
+  "note": "Eigene Discord-Seite entfällt; Discord-Aufruf steht auf der Partner-Seite."
+ }
+]

@@ -1,64 +1,42 @@
 {
  "title": "Warleek",
- "tagline": "Wardogs Community, Team & Clan für Deutschland, Österreich und die Schweiz",
+ "tagline": "Wardogs Guides, Tipps und Patch Notes auf Deutsch – für Deutschland, Österreich und die Schweiz",
  "themen": {
   "einsteiger": {
    "name": "Einsteiger",
-   "desc": "Die ersten Runden, die ersten Fehler, die ersten Erfolge."
+   "desc": "Die ersten Runden: was du zuerst kaufst, wohin du läufst und welche Fehler Geld kosten.",
+   "hub": "/wardogs/einsteiger/",
+   "image": "hero-einsteiger"
   },
   "fob": {
    "name": "FOB",
-   "desc": "Vorgeschobene Basis: bauen, versorgen, halten."
+   "desc": "Vorgeschobene Basis bauen, versorgen und halten – vom Deploy-Item bis zum Drill Rig.",
+   "hub": "/wardogs/fob/",
+   "image": "hero-fob"
   },
   "logistik": {
    "name": "Logistik",
-   "desc": "Paletten fahren, Cash verdienen, Team am Leben halten."
+   "desc": "Paletten fahren, Routen wählen, Cash verdienen und das Team am Leben halten.",
+   "hub": "/wardogs/logistik/",
+   "image": "hero-logistik"
   },
   "gameplay": {
    "name": "Gameplay",
-   "desc": "Zone, drei Teams, Economy, Kommunikation."
+   "desc": "Zone, drei Teams, Economy und Kommunikation – wie Wardogs wirklich funktioniert.",
+   "hub": "/wardogs/gameplay/",
+   "image": "hero-gameplay"
   },
   "equipment": {
    "name": "Equipment",
-   "desc": "Loadouts, Werkzeug, Fahrzeuge – was sich wann lohnt."
-  }
- },
- "tiers": [
-  {
-   "eyebrow": "Stufe 1 · offen",
-   "title": "Community",
-   "text": "Für alle, die Wardogs auf Deutsch spielen wollen. Kein Tag, keine Pflicht, keine Bewerbung.",
-   "items": [
-    "Discord, WhatsApp, Telegram",
-    "Mitspieler finden",
-    "Guides & Patch Notes"
-   ],
-   "url": "/community/wardogs-community/",
-   "cta": "Zur Community"
+   "desc": "Loadouts, Werkzeug und Fahrzeuge: was sich wann lohnt und was Geldverschwendung ist.",
+   "hub": "/wardogs/equipment/",
+   "image": "hero-equipment"
   },
-  {
-   "eyebrow": "Stufe 2 · Feierabend",
-   "title": "Team",
-   "text": "Feste Spielabende mit Leuten, die du kennst. Squad statt Zufalls-Lobby – ohne Leistungsdruck.",
-   "items": [
-    "Feste Abende",
-    "Squad-Rollen",
-    "Kein Formular"
-   ],
-   "url": "/community/wardogs-team/",
-   "cta": "Zum Team"
-  },
-  {
-   "eyebrow": "Stufe 3 · Clan",
-   "title": "Clan",
-   "text": "Der feste Kern mit Tag, Struktur und Anspruch – für alle, die Wardogs richtig ausreizen wollen.",
-   "items": [
-    "Clan-Tag",
-    "Taktik & Training",
-    "Kurze Bewerbung"
-   ],
-   "url": "/community/wardogs-clan/",
-   "cta": "Zum Clan"
+  "technik": {
+   "name": "Technik",
+   "desc": "Steuerung, Hardware und Einstellungen: HOTAS, Tastenbelegung, Performance.",
+   "hub": "/wardogs/technik/",
+   "image": "hero-technik"
   }
- ]
+ }
 }

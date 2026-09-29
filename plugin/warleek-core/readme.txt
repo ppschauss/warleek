@@ -4,11 +4,11 @@ Tags: community, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 1.1.0
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Funktionskern und Installer der Warleek-Website: Guides, Patch Notes von Steam, Chat-Optionen, eigene Blöcke – plus Klick-Installer für alle Inhalte.
+Funktionskern und Installer der Warleek-Guide-Seite: Guides mit Themenfilter, Patch Notes von Steam, Partner-Verwaltung, eigene Blöcke – plus Klick-Installer für alle Inhalte.
 
 == Description ==
 
@@ -43,6 +43,16 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.0.0 =
+* Umbau zur Guide- und Tipps-Seite: Community-, Team- und Clan-Seiten entfallen, `/community/` wird zur Partner-Seite.
+* Neuer Inhaltstyp **Partner** mit Karten-Block, Plattform-Chip und Sortierung.
+* Guide-Bibliothek mit Themen-Chips, Suche, einheitlicher Sortierung, Seitenumbruch und Lesezeit; verwandte Guides zeigen dasselbe Thema ohne den gerade gelesenen.
+* Neues Thema **Technik** samt Themenseite; neue Themenseite **Einsteiger**.
+* Entfernte Seiten wandern in den Papierkorb und bekommen eine 301-Weiterleitung statt verwaist online zu bleiben.
+* Der Installer überschreibt von Hand bearbeitete Texte nicht mehr; `--force` wirkt jetzt wirklich.
+* Markdown-Modul (`inc/markdown.php`) als Grundlage für den Guide-Import.
+* SEO auf Guide-Suchintention umgestellt, WebSite- und TechArticle-Schema ergänzt.
 
 = 1.1.0 =
 * Inhalte kleben nicht mehr auf einer festen Breite: Der Seed schreibt keine Pixelbreiten mehr ins Blockmarkup, und vorhandene Seiten werden beim Rendern davon befreit. Die Breite kommt jetzt aus dem Theme (theme.json/CSS) und lässt sich jederzeit ändern.

@@ -1,34 +1,46 @@
 {
  "main": [
   {
-   "label": "Community",
-   "url": "/community/",
+   "label": "Guides",
+   "url": "/guides/",
    "children": [
     {
-     "label": "Übersicht: Community · Team · Clan",
-     "url": "/community/"
+     "label": "Alle Guides",
+     "url": "/guides/"
     },
     {
-     "label": "Wardogs Community",
-     "url": "/community/wardogs-community/"
+     "label": "Einsteiger",
+     "url": "/thema/einsteiger/"
     },
     {
-     "label": "Wardogs Team",
-     "url": "/community/wardogs-team/"
+     "label": "FOB",
+     "url": "/thema/fob/"
     },
     {
-     "label": "Wardogs Clan",
-     "url": "/community/wardogs-clan/"
+     "label": "Logistik",
+     "url": "/thema/logistik/"
+    },
+    {
+     "label": "Gameplay",
+     "url": "/thema/gameplay/"
+    },
+    {
+     "label": "Equipment",
+     "url": "/thema/equipment/"
     }
    ]
   },
   {
-   "label": "Wardogs",
+   "label": "Themen",
    "url": "/wardogs/",
    "children": [
     {
      "label": "Das Spiel erklärt",
      "url": "/wardogs/"
+    },
+    {
+     "label": "Einsteiger",
+     "url": "/wardogs/einsteiger/"
     },
     {
      "label": "FOB",
@@ -49,16 +61,12 @@
    ]
   },
   {
-   "label": "Guides",
-   "url": "/guides/"
-  },
-  {
    "label": "Patch Notes",
    "url": "/patch-notes/"
   },
   {
-   "label": "Chat",
-   "url": "/wardogs-chat/"
+   "label": "Partner",
+   "url": "/community/"
   },
   {
    "label": "About us",
@@ -67,24 +75,20 @@
  ],
  "footer": [
   {
-   "label": "Community",
-   "url": "/community/"
-  },
-  {
-   "label": "Wardogs Clan",
-   "url": "/community/wardogs-clan/"
-  },
-  {
-   "label": "Wardogs Discord",
-   "url": "/wardogs-discord/"
-  },
-  {
-   "label": "Guides",
+   "label": "Alle Guides",
    "url": "/guides/"
+  },
+  {
+   "label": "Das Spiel erklärt",
+   "url": "/wardogs/"
   },
   {
    "label": "Patch Notes",
    "url": "/patch-notes/"
+  },
+  {
+   "label": "Partner & Community",
+   "url": "/community/"
   },
   {
    "label": "About us",
