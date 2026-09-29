@@ -146,3 +146,16 @@ Ablauf auf einer frischen Instanz (`bin/test-instance.sh fresh|install`, Theme u
 **Ein Stolperstein, den erst die echte Probe gezeigt hat:** WordPress lehnt Downloads von privaten Netzadressen ab (`wp_http_validate_url`) – der erste Versuch scheiterte mit „Es wurde keine gültige URL angegeben". Das betrifft nur die lokale Attrappe (Docker-Netz 172.x); für die Probe wurde der Host per `http_request_host_is_external` freigegeben. Bei github.com greift die Sperre nicht.
 
 **Noch nicht geprüft:** der echte Abruf von `https://github.com/ppschauss/warleek/releases/latest/download/warleek-update.json` – dafür muss das Repo samt Release existieren.
+
+### Update-Kanal gegen das echte GitHub-Release geprüft (29.09.2026)
+Repo `ppschauss/warleek` (öffentlich) und Release `v2.0.0` mit drei Anhängen sind angelegt. Danach der Weg, den ein Server später geht – ohne Attrappe, ohne mu-Plugin, ohne Bind-Mounts:
+
+- `https://github.com/ppschauss/warleek/releases/latest/download/warleek-update.json` liefert 200 (über die Weiterleitung auf `release-assets.githubusercontent.com`, der WordPress folgt).
+- Frische Instanz, 2.0.0 aus den Zips installiert, Inhalte geseedet, eine Seite von Hand ergänzt. Dann die installierte Version **im Container** künstlich auf 1.9.0 gesenkt.
+- `warleek_update_manifest()` holt das Manifest von GitHub (Plugin 2.0.0 / Theme 2.0.0); Dashboard bietet beide Pakete an: `1.9.0 → 2.0.0`.
+- Beide Updates eingespielt, Pakete kamen von `releases/download/v2.0.0/…`: „Updated", Ordnernamen bleiben `warleek/` und `warleek-core/`, Plugin aktiv, Theme aktiviert.
+- Inhalte unberührt (13 Seiten, 7 Guides, 2 Partner, 3 Patch Notes, 8 Weiterleitungen), Handänderung erhalten, alle geprüften Seiten 200.
+- Danach wird kein weiteres Update mehr gemeldet.
+- Details-Dialog (`plugins_api`) liefert Name, Version, Paket und Changelog.
+
+Damit ist der Update-Kanal vollständig geprüft. Künftige Veröffentlichung: Version an den fünf Stellen erhöhen, Changelog in `readme.txt` ergänzen, `bin/release.sh --publish`.
