@@ -95,3 +95,26 @@ Auf Wunsch übernommen: Inhaltsbreite 80vw (Desktop) bzw. 95vw (Mobil), Bilder i
 - theme.json: contentSize 80vw, wideSize 92vw (CSS überschreibt sie auf Mobil mit 95vw).
 
 **Geprüft:** Startseite, FOB, Guide, Clan, Patch Note – keine `max-width:760px`-Regel mehr im Dokument; Text läuft über die volle Inhaltsbreite; mobiles Menü unverändert (15/15 Links); Tests grün. Zusätzlich gegengetestet auf der Testinstanz mit altem Theme 0.1.0 (Filter greift, keine Fatals) und mit Theme 1.1.1.
+
+## Umbau zur Guide-Seite – Version 2.0.0 (29.09.2026)
+
+**Ausgangspunkt:** Die Seite war als Community-Seite gebaut (drei Mitglieds-Stufen, Chat-Aufruf auf 13 von 15 Seiten, SEO auf „Wardogs Community/Clan/Team/Discord"). Ziel: Guides und Themen ins Zentrum, Partner-Seite statt Mitgliedschaft.
+
+### Was geprüft wurde
+- **URL-Matrix:** 13 Seiten liefern 200 (inkl. der neuen `/wardogs/einsteiger/` und `/wardogs/technik/`), die fünf entfernten Community-URLs liefern **301** auf ihr neues Ziel, `/nix/` liefert 404.
+- **Entfernte Seiten** liegen im Papierkorb statt verwaist online; die Weiterleitungen stehen in der Option `warleek_redirects` (8 Einträge).
+- **Installer** zweimal hintereinander: nur `update:`, Medien- und Seitenzahl unverändert.
+- **Editor-Schutz:** Ein von Hand geänderter Seitentext bleibt beim erneuten Lauf erhalten; erst `--force` spielt den mitgelieferten Text zurück.
+- **Tests:** BBCode (22), Markdown (26), Steam-Sync, Übersetzung (12 Fälle, HTTP abgefangen), Updater (11 Fälle, HTTP abgefangen) – alle grün.
+- **Funktionsaudit:** 125 `warleek_*`-Funktionen definiert, 0 Aufrufe ins Leere.
+- **Mobiles Menü:** per Klick geprüft auf `/`, `/guides/`, `/community/` – Overlay 390×844, 17/17 Links sichtbar.
+- **Lighthouse mobil (Startseite):** Performance 97, Accessibility 100, SEO 100, LCP 2,4 s, CLS 0,006, DOM 336 Knoten.
+
+### Fehler, die erst die Prüfung gezeigt hat
+1. **Verwandte Guides zeigten fremde Themen.** Der Themenfilter wurde aufgebaut, bevor `thema_current` den Wert setzen konnte. Behoben; zusätzlich fällt die Liste auf die neuesten Guides zurück, wenn ein Thema nur einen Guide hat.
+2. **Rückfall griff zu früh.** Die Schwelle stand auf „weniger als zwei" – ein Guide mit genau einem Geschwister bekam dadurch fremde Themen. Jetzt nur noch bei leerer Liste.
+3. **Variablenschatten im Importer.** Die Schleife über die Themen-Synonyme benutzte `$slug` und überschrieb damit den Guide-Slug; jeder Import hätte den Slug „einsteiger" bekommen.
+4. **Guide-Bild wirkte leer.** Das HOTAS-Bild war 16:9; der 3:2-Zuschnitt der Karte zeigte nur den dunklen Boden. Bild passend zugeschnitten.
+
+### Neu in 2.0.0
+Partner-Inhaltstyp · Themen-Chips, Suche, Lesezeit, verwandte Guides · Themen Einsteiger und Technik · Markdown-Import (Backend und CLI) · deutsche Patch Notes über die Claude-API mit Kurzfassung und englischem Original · Update-Kanal über GitHub-Releases · Zurückziehen mit 301 statt verwaister Seiten.

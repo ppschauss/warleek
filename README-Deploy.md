@@ -56,6 +56,14 @@ wp option patch update warleek_options telegram_url 'https://t.me/DEINE-GRUPPE'
 Weitere Befehle: `wp warleek install --force` (Texte überschreiben), `wp warleek install --skip-plugins`,
 `wp warleek sync-patchnotes [--force]`.
 
+## Updates ab jetzt
+
+Ab Version 2.0.0 melden sich Theme und Plugin selbst: Sobald eine neue Veröffentlichung
+auf GitHub liegt, steht unter *Dashboard → Aktualisierungen* „Aktualisierung verfügbar",
+ein Klick installiert sie. Kein ZIP-Upload mehr nötig. Inhalte bleiben dabei unberührt.
+
+Manuell prüfen: *Warleek → Installation → Jetzt nach Updates suchen*.
+
 ## Nach dem Deploy – Pflicht
 
 - **SSL** im KAS aktivieren (Let's Encrypt), danach
@@ -63,6 +71,7 @@ Weitere Befehle: `wp warleek install --force` (Texte überschreiben), `wp warlee
 - **Impressum & Datenschutz** ausfüllen (Seiten → Impressum / Datenschutz, Platzhalter in eckigen Klammern).
 - **About us:** Team-Karten mit echten Namen, Texten und Bildern füllen.
 - **Rank Math:** Setup-Assistent durchlaufen (Sitemap, Search Console). Bis dahin liefert Warleek Core die Meta-Daten selbst – es gibt also nie eine Lücke.
+- **Patch Notes auf Deutsch:** Unter *Warleek → Einstellungen* einen Anthropic-API-Schlüssel eintragen (oder sicherer: `define( 'WARLEEK_ANTHROPIC_KEY', 'sk-ant-…' );` in die `wp-config.php`). Ohne Schlüssel bleiben die Patch Notes englisch, alles andere funktioniert normal. Der Deckel „Übersetzungen je Lauf" (Standard 5) begrenzt die Kosten; der stündliche Cron holt den Rest nach.
 - **Patch-Notes-Cron:** WP-Cron läuft bei Seitenaufrufen (stündlich). Zuverlässiger: im KAS einen Cronjob anlegen, der stündlich
   `https://warleek.de/wp-cron.php?doing_wp_cron` aufruft, und in `wp-config.php` `define('DISABLE_WP_CRON', true);` setzen.
 - **Logo tauschen** (falls andere Variante gewünscht): Design → Website-Editor → Header → Logo → Ersetzen.
@@ -72,9 +81,11 @@ Weitere Befehle: `wp warleek install --force` (Texte überschreiben), `wp warlee
 
 - **Seiten:** Seiten → bearbeiten. Hero = Bild-Block + Video-Block, Texte sind normale Absätze, Überschriften, Listen und Tabellen.
 - **Guides:** Guides → Neu. Beitragsbild, Auszug (erscheint auf den Karten), Thema zuweisen.
+- **Guides in Menge:** *Warleek → Guides importieren* – Markdown-Datei oder ZIP hochladen, „Nur prüfen" zeigt vorher, was angelegt würde. Auf der Kommandozeile: `wp warleek import-guides <pfad> --dry-run`.
+- **Partner:** eigener Menüpunkt *Partner*. Titel, Kurztext, Logo als Beitragsbild, Link und Plattform in der Seitenleiste, Reihenfolge über „Seitenattribute".
 - **Patch Notes:** kommen automatisch. Manuell: *Warleek → Installation → Patch Notes von Steam holen* oder `wp warleek sync-patchnotes`.
 - **Navigation:** Design → Website-Editor → Navigation („Hauptmenü", „Footer").
-- **Chat-Links, Clan-Tag, Social:** Warleek → Einstellungen.
+- **Discord-Link, Social, Übersetzung:** Warleek → Einstellungen.
 - **Muster:** Im Editor unter *Muster → Warleek* (Hero, Drei Stufen, Chat-CTA, FAQ, Zahlen, Team, Karten).
 
 ## Updates
