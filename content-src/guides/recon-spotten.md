@@ -26,6 +26,8 @@ Das heißt:
 
 Für rund $75. Wer Recon 10 oder 19 erreichen will, kommt über das Fernglas schneller und billiger dorthin als über jedes Gewehr.
 
+![Beobachten statt schießen: Vom Dach aus markiert das Fernglas Gegner für das ganze Team, ohne die eigene Position zu verraten.](bild-fernglas)
+
 > [!hinweis] Ablauf für den Einstieg: Beim Händler auf den Spezialisten-Slot, dann Recon, Fernglas kaufen. Mit dem Heli-Taxi auf ein Dach, hinlegen, Fernglas ziehen und den Blick auf Gegner halten. Mehr ist es nicht.
 
 ## Die Gewehre

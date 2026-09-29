@@ -67,8 +67,10 @@ function warleek_b_image( array $img, $class = '', $size = 'large' ) {
 	$a = array( 'id' => (int) ( $img['id'] ?? 0 ), 'sizeSlug' => $size, 'linkDestination' => 'none' );
 	if ( $class ) { $a['className'] = $class; }
 	if ( empty( $a['id'] ) ) { unset( $a['id'] ); }
-	$cls = trim( 'wp-block-image size-' . $size . ' ' . $class );
-	return '<!-- wp:image' . warleek_battr( $a ) . ' --><figure class="' . esc_attr( $cls ) . '"><img src="' . esc_url( $img['url'] ) . '" alt="' . esc_attr( $img['alt'] ?? '' ) . '"' . ( ! empty( $a['id'] ) ? ' class="wp-image-' . $a['id'] . '"' : '' ) . '/></figure><!-- /wp:image -->' . "\n";
+	$cls     = trim( 'wp-block-image size-' . $size . ' ' . $class );
+	$caption = trim( (string) ( $img['caption'] ?? '' ) );
+	$fig     = $caption ? '<figcaption class="wp-element-caption">' . wp_kses_post( $caption ) . '</figcaption>' : '';
+	return '<!-- wp:image' . warleek_battr( $a ) . ' --><figure class="' . esc_attr( $cls ) . '"><img src="' . esc_url( $img['url'] ) . '" alt="' . esc_attr( $img['alt'] ?? '' ) . '"' . ( ! empty( $a['id'] ) ? ' class="wp-image-' . $a['id'] . '"' : '' ) . '/>' . $fig . '</figure><!-- /wp:image -->' . "\n";
 }
 function warleek_b_columns( array $columns, $class = '', $wide = true ) {
 	$a = array();
@@ -94,6 +96,44 @@ function warleek_b_block( $name, array $attrs = array() ) {
  * Wandelt einfaches redaktionelles HTML (h2/h3/h4, p, ul/ol, table, blockquote, div.wl-note,
  * figure/img) in Core-Blöcke um. Inline-Markup (a, strong, em, code, br) bleibt erhalten.
  */
+/**
+ * Bild-Schlüssel im HTML durch echte Mediathek-Adressen ersetzen.
+ *
+ * Bilder im Fließtext eines Guides stehen in der Markdown-Quelle als
+ * `![Alt-Text](guide-fob-layout)` – also als **Asset-Schlüssel** ohne Pfad und
+ * ohne Endung. Erst hier, wo die Mediathek bekannt ist, wird daraus eine URL.
+ * Ein unbekannter Schlüssel fliegt samt `figure` heraus: lieber eine Lücke als
+ * ein kaputtes Bild im Text.
+ *
+ * Adressen mit Schrägstrich, Protokoll oder Dateiendung bleiben unangetastet –
+ * wer im Markdown bewusst eine fertige URL schreibt, bekommt sie auch.
+ *
+ * @param string $html HTML aus dem Markdown-Konverter.
+ * @param array  $map  Asset-Schlüssel => Anhang-ID.
+ * @return string
+ */
+function warleek_resolve_asset_src( $html, array $map ) {
+	if ( ! str_contains( $html, '<img' ) ) { return $html; }
+
+	return (string) preg_replace_callback(
+		'#<figure>\s*<img src="([^"]+)" alt="([^"]*)">\s*((?:<figcaption>.*?</figcaption>)?)\s*</figure>#s',
+		function ( $m ) use ( $map ) {
+			$key = $m[1];
+			// Fertige Adresse? Dann nichts anfassen.
+			if ( preg_match( '#[/:.]#', $key ) ) { return $m[0]; }
+			if ( empty( $map[ $key ] ) ) {
+				if ( function_exists( 'warleek_log' ) ) { warleek_log( "Bild fehlt in der Mediathek: $key" ); }
+				return '';
+			}
+			$id  = (int) $map[ $key ];
+			$url = function_exists( 'wp_get_attachment_url' ) ? wp_get_attachment_url( $id ) : '';
+			if ( ! $url ) { return ''; }
+			return '<figure><img src="' . esc_url( $url ) . '" alt="' . esc_attr( $m[2] ) . '" data-id="' . $id . '">' . $m[3] . '</figure>';
+		},
+		$html
+	);
+}
+
 function warleek_html_to_blocks( $html ) {
 	if ( '' === trim( $html ) ) { return ''; }
 	$doc = new DOMDocument();
@@ -143,7 +183,15 @@ function warleek_node_to_block( DOMNode $node, DOMDocument $doc ) {
 			return warleek_b_group( $inner, array( 'class' => $class ) );
 		case 'figure':
 			$img = $node->getElementsByTagName( 'img' )->item( 0 );
-			if ( $img ) { return warleek_b_image( array( 'url' => $img->getAttribute( 'src' ), 'alt' => $img->getAttribute( 'alt' ), 'id' => (int) $img->getAttribute( 'data-id' ) ), $class ); }
+			if ( $img ) {
+				$cap  = $node->getElementsByTagName( 'figcaption' )->item( 0 );
+				return warleek_b_image( array(
+					'url'     => $img->getAttribute( 'src' ),
+					'alt'     => $img->getAttribute( 'alt' ),
+					'id'      => (int) $img->getAttribute( 'data-id' ),
+					'caption' => $cap ? warleek_inner_html( $cap, $doc ) : '',
+				), $class );
+			}
 			return '';
 		case 'pre':
 			// Code-Block: Inhalt bleibt unangetastet, damit Pfade und Registry-Schlüssel stimmen.

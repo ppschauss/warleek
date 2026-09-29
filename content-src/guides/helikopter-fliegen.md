@@ -63,6 +63,8 @@ Damit hast du die Steuerung, die du aus jedem anderen Flugspiel kennst: Maus fü
 
 **Im Gelände:** Such dir eine Fläche, die flach genug ist, und geh langsam hinunter. Ein Hang mit fünf Grad reicht, um beim Aufsetzen zu kippen.
 
+![Aufsetzen im Gelände: Geschwindigkeit vor dem Landepunkt abbauen, dann gleichmäßig sinken.](bild-heli-landung)
+
 ## Üben, ohne zu bezahlen
 
 Auf dem **Schießstand** kannst du Helikopter kostenlos und ohne Beschuss ausprobieren. Dreißig Minuten dort sind mehr wert als zehn verlorene Helikopter im Match – und billiger.

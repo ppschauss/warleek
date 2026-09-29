@@ -39,6 +39,8 @@ Faustregel: Eine neue FOB braucht Paletten Build. Eine laufende FOB braucht Kist
 
 **Der erste Run einer Runde: Ural.** Eine neue FOB will Build-Supplies in Menge, und das ist genau, was ein Ural transportiert. Rund $5.000 klingen viel, aber das Fahrzeug bleibt erhalten, solange es niemand zerschießt – und eine Palette bringt bei der Abgabe rund $2.500 gegenüber rund $400 Einkauf.
 
+![Paletten werden auf den Ural verzurrt – eine Ladung, die eine frische FOB überhaupt erst baufähig macht.](bild-ural-laden)
+
 **Nachfüllen zwischendurch: Kodiak.** Schnell, billig, wendig. Wenn an der FOB nur Ammo und Fuel fehlen, ist die große Ladefläche überflüssig.
 
 **Route unter Beschuss: Ural Defender.** Der Aufpreis von rund $1.000 ist billiger als eine verlorene Ladung.

@@ -26,6 +26,8 @@ Helikopter sind in Wardogs der schnellste Weg, Leute in die Zone zu bringen. Ent
 
 Der Vanguard CIWS feuert 20×102-mm-Munition mit rund 60 Schaden pro Treffer bei etwa 224 m/s Mündungsgeschwindigkeit. Das klingt unspektakulär – bis man sieht, wie viele Treffer pro Sekunde herauskommen. Ein Helikopter, der in seinem Bogen stehen bleibt, ist erledigt.
 
+![Die Kanone des Vanguard CIWS auf ihrer Betonplatte – gefährlich für alles, was in ihrem Bogen stehen bleibt.](bild-ciws)
+
 Beide sind **gebaute** Anlagen, keine Fundstücke: Sie entstehen an einer FOB mit dem großen Hammer (Support 8). Siehe [Support und Hammer](/guides/wardogs-support-bauen/).
 
 ## Wann sie sich lohnen – und wann nicht

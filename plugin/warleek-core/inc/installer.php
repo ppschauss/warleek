@@ -223,7 +223,8 @@ function warleek_seed_guides( array $guides, array $media, array $site, $force =
 		elseif ( is_array( $term ) ) { wp_update_term( (int) $term['term_id'], 'guide-thema', array( 'name' => $t['name'], 'description' => $t['desc'] ) ); }
 	}
 	foreach ( $guides as $g ) {
-		$content = warleek_html_to_blocks( $g['html'] );
+		// Bilder im Fließtext stehen als Asset-Schlüssel – hier werden URLs daraus.
+		$content = warleek_html_to_blocks( warleek_resolve_asset_src( $g['html'], $media ) );
 		$id = warleek_upsert_post( array( 'post_title' => $g['title'], 'post_name' => $g['slug'], 'post_content' => $content, 'post_excerpt' => $g['excerpt'], 'menu_order' => (int) ( $g['order'] ?? 0 ) ), 'guide', 0, $force );
 		wp_set_object_terms( $id, $g['thema'], 'guide-thema' );
 		if ( ! empty( $g['image'] ) && ! empty( $media[ $g['image'] ] ) ) { set_post_thumbnail( $id, $media[ $g['image'] ] ); }

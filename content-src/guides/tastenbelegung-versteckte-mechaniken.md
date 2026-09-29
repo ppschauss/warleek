@@ -18,6 +18,8 @@ Wardogs erklärt das Nötigste. Der Rest steht in keinem Tutorial und macht trot
 
 **Lehnen von Q/E wegnehmen.** In der Voreinstellung liegt Lehnen auf denselben Tasten, die du zum Ausweichen brauchst – du kannst also nicht gleichzeitig lehnen und seitwärts laufen. Wer Lehnen auf andere Tasten legt (oder auf die Maustasten seitlich), kann um Ecken schauen, während er sich bewegt. Das ist der wirksamste einzelne Handgriff in diesem Guide.
 
+![Um die Ecke schauen, ohne aus der Deckung zu treten – das geht nur, wenn Lehnen und Seitwärtslaufen nicht auf denselben Tasten liegen.](bild-lehnen)
+
 **Karte von M auf G.** Die Karte brauchst du zwanzigmal pro Runde. M ist weit weg von WASD, G nicht. Die Minikarten-Zoomstufe liegt separat auf N.
 
 **Granaten und Ausrüstung auf die Zahlenreihe.** Alles, was du unter Beschuss brauchst, sollte ohne Radialmenü erreichbar sein.

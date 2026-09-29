@@ -26,6 +26,8 @@ Wohin du triffst, entscheidet mehr als womit. Als Größenordnung für einen Kam
 
 Dreimal so lange von vorn. In elf Sekunden kann ein Panzer dich nicht erwischen; in dreiunddreißig schon dreimal. Das ist der ganze Guide in einer Tabelle – der Rest ist, wie du nach hinten kommst.
 
+![Das Motordeck am Heck: Gitter, Auspuff und Stauboxen – die Stelle, an der ein Panzer am schnellsten fällt.](bild-panzer-heck)
+
 ## Die Werkzeuge
 
 | Waffe | Freischaltung | Wofür |

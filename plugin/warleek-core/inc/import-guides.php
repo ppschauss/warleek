@@ -165,6 +165,46 @@ function warleek_import_media( $file, $key, $alt = '' ) {
 }
 
 /**
+ * Bilder aus dem Fließtext eines Guides in die Mediathek holen.
+ *
+ * Im Markdown stehen sie als `![Alt](schluessel)`. Gesucht wird eine passende
+ * Datei neben der Markdown-Datei bzw. im ZIP – auch in einem Unterordner `images/`.
+ * Ist der Schlüssel bereits in der Mediathek bekannt, reicht das ebenfalls.
+ *
+ * @param string $html HTML des Guides.
+ * @param string $dir  Verzeichnis der Quelldatei.
+ * @param array  $map  Asset-Schlüssel => Anhang-ID (wird ergänzt).
+ * @param bool   $dry  Trockenlauf: nichts hochladen.
+ * @return array Warnungen.
+ */
+function warleek_import_inline_images( $html, $dir, array &$map, $dry = false ) {
+	$warn = array();
+	if ( ! preg_match_all( '#<img src="([^"/:.]+)" alt="([^"]*)">#', $html, $hits, PREG_SET_ORDER ) ) {
+		return $warn;
+	}
+	foreach ( $hits as $hit ) {
+		$key = $hit[1];
+		if ( isset( $map[ $key ] ) ) { continue; }
+
+		$datei = '';
+		foreach ( array( '', 'images/', 'img/' ) as $unter ) {
+			foreach ( array( 'webp', 'png', 'jpg', 'jpeg' ) as $endung ) {
+				$kandidat = $dir . '/' . $unter . $key . '.' . $endung;
+				if ( file_exists( $kandidat ) ) { $datei = $kandidat; break 2; }
+			}
+		}
+		if ( ! $datei ) {
+			$warn[] = sprintf( 'Bild „%s" fehlt – die Stelle bleibt im Text leer.', $key );
+			continue;
+		}
+		if ( $dry ) { continue; }
+		$id = warleek_import_media( $datei, $key, $hit[2] );
+		if ( $id ) { $map[ $key ] = $id; } else { $warn[] = sprintf( 'Bild „%s" ließ sich nicht importieren.', $key ); }
+	}
+	return $warn;
+}
+
+/**
  * Importiert Guides aus einem Pfad: eine .md-Datei, ein Ordner oder ein ZIP.
  *
  * @param string $path
@@ -216,6 +256,9 @@ function warleek_import_guides( $path, array $opts = array() ) {
 
 		$existing = get_posts( array( 'post_type' => 'guide', 'name' => $guide['slug'], 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) );
 		$action   = $existing ? 'aktualisiert' : 'neu';
+
+		// Bilder aus dem Fließtext zuerst – sie müssen vor dem Schreiben in der Mediathek sein.
+		$warn = array_merge( $warn, warleek_import_inline_images( $guide['html'], $dir, $map, $dry ) );
 
 		// Bild aus dem Import mitnehmen, sonst das Themenbild des Hubs.
 		$img_key = '';

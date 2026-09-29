@@ -51,6 +51,8 @@ Die Ausnahme, in der schwer sinnvoll ist: Du verteidigst eine feste Stellung, ko
 
 Nimm dein Loadout und geh damit einmal quer über einen Hof. Wenn du beim taktischen Sprint kein anderes Tempo spürst als beim normalen Laufen, bist du zu schwer.
 
+![Jede Tasche, jedes Ersatzmagazin, jede Platte zählt auf dasselbe Konto: dein Tempo.](bild-weste)
+
 Und dann streich in dieser Reihenfolge:
 
 1. Das dritte und vierte Ersatzmagazin.

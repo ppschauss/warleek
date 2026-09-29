@@ -48,6 +48,8 @@ chk( 'fence-lang', warleek_md_to_html( "```bash\nls -la\n```", false ), '<pre><c
 chk( 'fence-keeps-md', warleek_md_to_html( "```\n# kein Heading\n- keine Liste\n```", false ), "<pre><code># kein Heading\n- keine Liste</code></pre>" );
 chk( 'para-join', warleek_md_to_html( "Zeile eins\nZeile zwei\n\nNeuer Absatz", false ), "<p>Zeile eins Zeile zwei</p>\n<p>Neuer Absatz</p>" );
 chk( 'img', warleek_md_to_html( '![Alt Text](bild.webp)', false ), '<figure><img src="bild.webp" alt="Alt Text"></figure>' );
+chk( 'img-caption', warleek_md_to_html( '![Alt](schluessel "Eine **Unterschrift**")', false ), '<figure><img src="schluessel" alt="Alt"><figcaption>Eine <strong>Unterschrift</strong></figcaption></figure>' );
+chk( 'img-leere-caption', warleek_md_to_html( '![Alt](schluessel "")', false ), '<figure><img src="schluessel" alt="Alt"></figure>' );
 
 echo $fail ? "$fail FAILED\n" : "OK\n";
 exit( $fail ? 1 : 0 );

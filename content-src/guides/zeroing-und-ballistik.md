@@ -60,6 +60,8 @@ Die Entscheidung ist ehrlicher, als sie wirkt: Eine große Optik auf einem Sturm
 - **Einzelschüsse auf Distanz.** Der zweite Schuss einer Salve geht ohnehin woanders hin.
 - **Einschläge lesen.** Staub und Funken zeigen dir, wohin die letzte Kugel ging. Korrigier nach dem, was du siehst, nicht nach dem, was du glaubst.
 
+![Zweibein auf der Mauerkante, Schaft in der Schulter: die stabilste Haltung, die das Spiel kennt.](bild-zweibein)
+
 ## Munition und Repacken
 
 Eine Kleinigkeit mit großer Wirkung: Beim Nachladen wirfst du mit **Strg** das teilweise verbrauchte Magazin ab – die Animation ist schneller. Der Preis ist die Restmunition, die auf dem Boden liegen bleibt.

@@ -45,6 +45,8 @@ Merke dir drei Höhen:
 
 Der Fehler bei Flugabwehr ist fast immer derselbe: Sie steht frei auf einer Kuppe, damit sie „gut sieht" – und wird als Erstes von einem Werfer aus 200 Metern zerlegt. Flugabwehr braucht Himmel, nicht Panorama.
 
+![Der Mörser steht tief in der Basis hinter Sandsäcken – er braucht keinen Sichtkontakt, nur Munition und eine Markierung.](bild-moerser)
+
 ## Der Mörser ist eine Teamwaffe
 
 Ein Mörser trifft nichts, was du nicht siehst. Er trifft sehr zuverlässig, was ein **Recon mit Fernglas** markiert hat. Wenn eine FOB einen Mörser hat, sollte jemand im Squad wissen, dass er nur „Markierung gesetzt" sagen muss.

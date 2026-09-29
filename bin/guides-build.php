@@ -59,7 +59,25 @@ foreach ( $files as $file ) {
 		if ( '' === $guide[ $pflicht ] ) { fwrite( STDERR, "! $slug: $pflicht fehlt\n" ); $warn++; }
 	}
 
-	// Bild ins Medien-Manifest eintragen, wenn die Datei vorhanden ist.
+	// Bilder aus dem Fließtext: `![Alt](schluessel)` – Datei muss in content-src/guides/img/ liegen.
+	if ( preg_match_all( '#<img src="([^"/:.]+)" alt="([^"]*)">#', $guide['html'], $inline, PREG_SET_ORDER ) ) {
+		foreach ( $inline as $hit ) {
+			$key   = $hit[1];
+			$alt   = $hit[2];
+			$datei = '';
+			foreach ( array( 'webp', 'png', 'jpg', 'jpeg' ) as $endung ) {
+				if ( file_exists( "$src/img/$key.$endung" ) ) { $datei = "$key.$endung"; break; }
+			}
+			if ( ! $datei ) {
+				fwrite( STDERR, "! $slug: Textbild fehlt (content-src/guides/img/$key.webp)\n" ); $warn++; continue;
+			}
+			if ( '' === trim( $alt ) ) { fwrite( STDERR, "! $slug: Textbild $key ohne Alt-Text\n" ); $warn++; }
+			if ( ! $dry ) { copy( "$src/img/$datei", "$imgdir/$datei" ); }
+			$mani[ $datei ] = array( 'alt' => $alt, 'use' => $key, 'size' => filesize( "$src/img/$datei" ) );
+		}
+	}
+
+	// Titelbild ins Medien-Manifest eintragen, wenn die Datei vorhanden ist.
 	if ( $guide['image'] ) {
 		$datei = $guide['image'] . '.webp';
 		$pfad  = $imgdir . '/' . $datei;

@@ -53,6 +53,8 @@ Gebaut wird aus **Build-Supplies**, die im FOB-Lager liegen müssen (oder in dei
 
 Die Spanne ist der Punkt. Sandsäcke sind Kleingeld, ein Vanguard CIWS ist eine Teamentscheidung – 901 Build-Supplies müssen erst jemand herfahren. Wer ohne Absprache das teuerste Ding in die Bauzone setzt, verbrennt die Arbeit von drei Logistikrunden.
 
+![Eine halb gefüllte HESCO-Wand: Die Deckung entsteht abschnittsweise, das Material muss jemand heranfahren.](bild-hesco)
+
 > [!hinweis] Die ersten vier Bauwerke in der Tabelle brauchen **keine FOB**. Stacheldraht und Sandsäcke kannst du überall setzen – auch mitten in der Kontrollzone, um eine Sichtlinie zu schließen oder eine Treppe zu sperren.
 
 ## Die vier Versorgungsarten

@@ -72,6 +72,8 @@ GGX 17 (rund $200), Judge (rund $250), M1911 (rund $300), GGX 18 (rund $800), De
 
 Die Waffe ist nur ein Teil. Munition, Optik, Magazine und Weste kommen dazu – und die Optik ist der Posten, der ein Loadout unerwartet teuer macht. Ein günstiges Prismenvisier reicht für fast alles; das große Zielfernrohr lohnt erst, wenn du auf Distanz auch triffst.
 
+![Am Händler liegt mehr als die Waffe: Magazine, Optiken und Munition machen ein Loadout erst teuer – und schwer.](bild-haendler)
+
 Und ein Effekt, den Neulinge übersehen: Zubehör hat **Gewicht**. Ein Schalldämpfer oder ein Werfer kann dich in die nächste Gewichtsklasse schieben – mit spürbaren Folgen fürs Tempo. Siehe [Gewichtsklassen](/guides/wardogs-gewichtsklassen/).
 
 ## Der Trick mit dem Einkauf

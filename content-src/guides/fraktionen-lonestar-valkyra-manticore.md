@@ -24,6 +24,8 @@ In jedem Match von Wardogs kämpfen drei Fraktionen gleichzeitig um dieselbe Kon
 
 Das ist Fassade, keine Mechanik. **Es gibt keine angekündigten fraktionsspezifischen Waffen, Fahrzeuge oder Fähigkeiten.** Alle drei kaufen aus demselben Katalog, bauen dieselben FOBs, fliegen dieselben Helikopter. Wer dir erzählt, Manticore hätte bessere Panzer, hat sich das ausgedacht.
 
+![Blau, Rot, Grün – gleiche Ausrüstung, gleicher Katalog, drei Anstriche.](bild-drei-farben)
+
 ## Und trotzdem gewinnen sie unterschiedlich oft
 
 Die Statistik ist eindeutig genug, dass BULKHEAD sie selbst angesprochen hat: **Grün gewinnt am häufigsten, Rot liegt nah dran, Blau fällt deutlich ab.** Das Muster hält sich laut Entwicklern seit der Pre-Alpha.

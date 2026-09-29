@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.1.0
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.2.0 =
+* Bilder im Fließtext: Guides können Bilder mitten im Text tragen, referenziert über einen Asset-Schlüssel (`![Alt](bild-hot-zone)`), optional mit Bildunterschrift (`![Alt](schluessel "Unterschrift")`).
+* 20 neue Bilder im Text verteilt – jeder neue Guide hat jetzt mindestens eines.
+* Der Guide-Import holt Bilder aus dem Fließtext mit: Datei neben der Markdown-Datei oder in `images/` im ZIP.
+* Unbekannte Bild-Schlüssel werden entfernt statt als kaputtes Bild ausgeliefert.
 
 = 2.1.0 =
 * 20 neue Guides: Fraktionen, Anfängerfehler, Fortschritts-Tracks, Spawnen, Kontrollzone, Medic, Recon, Panzerabwehr, Bauen, FOB-Verteidigung, Flugabwehr, Logistik-Fuhrpark, Waffenkauf, Zeroing, Gewichtsklassen, Helikopter, Einstellungen, Ruckler, Tastenbelegung – und ein Satire-Guide für Team Blau.

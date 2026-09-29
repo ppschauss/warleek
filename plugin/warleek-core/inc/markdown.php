@@ -169,10 +169,12 @@ function warleek_md_to_html( $md, $strip_first_h1 = true ) {
 			continue;
 		}
 
-		// Bild als eigener Absatz
-		if ( preg_match( '/^!\[([^\]]*)\]\(([^)\s]+)\)$/', $t, $m ) ) {
+		// Bild als eigener Absatz, optional mit Bildunterschrift:
+		// `![Alt-Text](schluessel)` oder `![Alt-Text](schluessel "Bildunterschrift")`
+		if ( preg_match( '/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$/', $t, $m ) ) {
 			$flush();
-			$out[] = '<figure><img src="' . htmlspecialchars( $m[2], ENT_QUOTES, 'UTF-8' ) . '" alt="' . htmlspecialchars( $m[1], ENT_QUOTES, 'UTF-8' ) . '"></figure>';
+			$cap   = isset( $m[3] ) && '' !== trim( $m[3] ) ? '<figcaption>' . warleek_md_inline( $m[3] ) . '</figcaption>' : '';
+			$out[] = '<figure><img src="' . htmlspecialchars( $m[2], ENT_QUOTES, 'UTF-8' ) . '" alt="' . htmlspecialchars( $m[1], ENT_QUOTES, 'UTF-8' ) . '">' . $cap . '</figure>';
 			continue;
 		}
 

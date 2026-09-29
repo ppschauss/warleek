@@ -36,6 +36,8 @@ Das ist die eigentliche Fertigkeit. Die Faustregel:
 
 > [!hinweis] Nah genug, um in Sekunden bei einem Gefallenen zu sein. Weit genug, dass du nicht der Erste bist, den der Gegner sieht. In der Praxis: **eine Deckung hinter der vordersten Reihe deines Squads** – mit einem Fluchtweg, den du vorher kennst.
 
+![Der Sanitäter wartet eine Deckung hinter den Schützen – nah genug, um zu helfen, weit genug, um nicht als Erster gesehen zu werden.](bild-medic-position)
+
 Wenn dein Squad einen Hof stürmt, gehst du nicht mit hinein. Du gehst an den Türrahmen, aus dem sie gekommen sind, und wartest, dass jemand fällt.
 
 ## Die zwei Fehler, die jeden Medic töten

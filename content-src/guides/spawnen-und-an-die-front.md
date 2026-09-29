@@ -31,6 +31,8 @@ So funktioniert er:
 3. Teamkollegen wählen ihn auf dem Deployment-Board aus, drücken **Spawn** und warten rund zehn Sekunden.
 4. Sie erscheinen **im Fahrzeug**, nicht daneben – also geschützt.
 
+![Der APC steht in einer Senke hinter dem Höhenzug – nah genug an der Front, weit genug aus dem direkten Feuer.](bild-apc-heck)
+
 Der Haken: Auf demselben APC lässt sich nur im Abstand von mehreren Minuten spawnen (zuletzt etwa alle neun). Er ist kein Dauerspawn, sondern ein Sprungbrett, das gelegentlich neu lädt.
 
 > [!hinweis] Wer den APC nach vorn fährt, bekommt Cash und Erfahrung für **jeden**, der darauf spawnt. Das ist eine der ruhigsten Einnahmequellen im Spiel – und sie zählt auf den Driver-Track.

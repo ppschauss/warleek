@@ -36,6 +36,8 @@ Information sind: Sichtweite, Modelldetails, Texturschärfe auf Distanz. Stimmun
 
 Von dort aus **eine** Einstellung nach oben oder unten schieben und messen. Wer fünf gleichzeitig ändert, weiß hinterher nichts.
 
+![Sichtweite und Modelldetails entscheiden, ob du eine Bewegung am Hang noch erkennst – dort wird zuletzt gespart.](bild-monitor)
+
 ## Zum Hochskalieren
 
 Auf RTX-Karten ist **DLSS auf Qualität** der erste und wirksamste Schritt. Er bringt Leistung, ohne die Fernschärfe zu opfern, die in Wardogs zählt. Reicht das nicht, geh auf *Ausgewogen* – erst dann, nicht sofort.

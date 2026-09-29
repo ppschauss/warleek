@@ -30,6 +30,8 @@ Das ist kein Nachteil, das ist eine Designentscheidung. Deine Gegner sehen dich 
 
 Fortgeschrittene Lonestar-Spieler nutzen das aktiv: Man stellt sich auf eine Wiese, breitet die Arme aus und bindet damit zwei gegnerische Squads. Das nennt man **Flächenbindung**. In der Statistik heißt es „gestorben".
 
+![Deckung ist relativ.](bild-lonestar-baum)
+
 ## Kapitel 3: Das Sandwich
 
 Bei drei Fraktionen wird immer jemand von zwei Seiten beschossen. Wer das ist, entscheidet die Kartenlage, die Zonenposition und das Schicksal.

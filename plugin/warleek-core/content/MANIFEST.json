@@ -273,5 +273,105 @@
         "alt": "Nahaufnahme einer behandschuhten Hand, die den Hoehenverstellturm eines Zielfernrohrs dreht, Gewehr auf Zweibein",
         "use": "guide-zeroing",
         "size": 57128
+    },
+    "bild-squad-abmarsch.webp": {
+        "alt": "So sieht es aus, wenn es klappt: vier Leute, gleicher Weg, gleicher Zeitpunkt, Abstand zueinander.",
+        "use": "bild-squad-abmarsch",
+        "size": 115984
+    },
+    "bild-monitor.webp": {
+        "alt": "Sichtweite und Modelldetails entscheiden, ob du eine Bewegung am Hang noch erkennst – dort wird zuletzt gespart.",
+        "use": "bild-monitor",
+        "size": 13042
+    },
+    "bild-ciws.webp": {
+        "alt": "Die Kanone des Vanguard CIWS auf ihrer Betonplatte – gefährlich für alles, was in ihrem Bogen stehen bleibt.",
+        "use": "bild-ciws",
+        "size": 48318
+    },
+    "bild-moerser.webp": {
+        "alt": "Der Mörser steht tief in der Basis hinter Sandsäcken – er braucht keinen Sichtkontakt, nur Munition und eine Markierung.",
+        "use": "bild-moerser",
+        "size": 60630
+    },
+    "bild-drei-farben.webp": {
+        "alt": "Blau, Rot, Grün – gleiche Ausrüstung, gleicher Katalog, drei Anstriche.",
+        "use": "bild-drei-farben",
+        "size": 80848
+    },
+    "bild-weste.webp": {
+        "alt": "Jede Tasche, jedes Ersatzmagazin, jede Platte zählt auf dasselbe Konto: dein Tempo.",
+        "use": "bild-weste",
+        "size": 54006
+    },
+    "bild-heli-landung.webp": {
+        "alt": "Aufsetzen im Gelände: Geschwindigkeit vor dem Landepunkt abbauen, dann gleichmäßig sinken.",
+        "use": "bild-heli-landung",
+        "size": 126648
+    },
+    "bild-hot-zone.webp": {
+        "alt": "In der Hot Zone drängen sich beide Seiten auf wenigen Metern – drumherum bleibt das Tal leer.",
+        "use": "bild-hot-zone",
+        "size": 107818
+    },
+    "bild-turm.webp": {
+        "alt": "Ein Funkturm auf einer Kuppe, gesichert von einem kleinen Trupp – vier davon ergeben den Code.",
+        "use": "bild-turm",
+        "size": 69024
+    },
+    "bild-ural-laden.webp": {
+        "alt": "Paletten werden auf den Ural verzurrt – eine Ladung, die eine frische FOB überhaupt erst baufähig macht.",
+        "use": "bild-ural-laden",
+        "size": 89746
+    },
+    "bild-lonestar-baum.webp": {
+        "alt": "Deckung ist relativ.",
+        "use": "bild-lonestar-baum",
+        "size": 72696
+    },
+    "bild-medic-position.webp": {
+        "alt": "Der Sanitäter wartet eine Deckung hinter den Schützen – nah genug, um zu helfen, weit genug, um nicht als Erster gesehen zu werden.",
+        "use": "bild-medic-position",
+        "size": 73930
+    },
+    "bild-panzer-heck.webp": {
+        "alt": "Das Motordeck am Heck: Gitter, Auspuff und Stauboxen – die Stelle, an der ein Panzer am schnellsten fällt.",
+        "use": "bild-panzer-heck",
+        "size": 28280
+    },
+    "bild-fernglas.webp": {
+        "alt": "Beobachten statt schießen: Vom Dach aus markiert das Fernglas Gegner für das ganze Team, ohne die eigene Position zu verraten.",
+        "use": "bild-fernglas",
+        "size": 64808
+    },
+    "bild-ssd.webp": {
+        "alt": "Der einzige Hardware-Rat in diesem Guide, der fast immer hilft: das Spiel auf eine NVMe-SSD legen.",
+        "use": "bild-ssd",
+        "size": 45644
+    },
+    "bild-apc-heck.webp": {
+        "alt": "Der APC steht in einer Senke hinter dem Höhenzug – nah genug an der Front, weit genug aus dem direkten Feuer.",
+        "use": "bild-apc-heck",
+        "size": 71688
+    },
+    "bild-hesco.webp": {
+        "alt": "Eine halb gefüllte HESCO-Wand: Die Deckung entsteht abschnittsweise, das Material muss jemand heranfahren.",
+        "use": "bild-hesco",
+        "size": 135648
+    },
+    "bild-lehnen.webp": {
+        "alt": "Um die Ecke schauen, ohne aus der Deckung zu treten – das geht nur, wenn Lehnen und Seitwärtslaufen nicht auf denselben Tasten liegen.",
+        "use": "bild-lehnen",
+        "size": 95116
+    },
+    "bild-haendler.webp": {
+        "alt": "Am Händler liegt mehr als die Waffe: Magazine, Optiken und Munition machen ein Loadout erst teuer – und schwer.",
+        "use": "bild-haendler",
+        "size": 54936
+    },
+    "bild-zweibein.webp": {
+        "alt": "Zweibein auf der Mauerkante, Schaft in der Schulter: die stabilste Haltung, die das Spiel kennt.",
+        "use": "bild-zweibein",
+        "size": 66448
     }
 }

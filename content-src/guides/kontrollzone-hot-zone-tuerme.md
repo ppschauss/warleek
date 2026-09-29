@@ -33,6 +33,8 @@ Innerhalb der Kontrollzone wandert eine kleinere, gelb markierte **Hot Zone**. D
 
 Das ist der Hebel, mit dem ein Team, das zahlenmäßig hinten liegt, die Wertung drehen kann. Zehn Leute in der Hot Zone wiegen zwanzig irgendwo sonst in der Kontrollzone auf.
 
+![In der Hot Zone drängen sich beide Seiten auf wenigen Metern – drumherum bleibt das Tal leer.](bild-hot-zone)
+
 Entsprechend ist die Hot Zone der gefährlichste Fleck auf der Karte. Wer sie halten will, braucht Deckung, Sanitäter und Nachschub – nicht Mut.
 
 > [!achtung] Die Hot Zone zieht auch das gegnerische Feuer doppelt an. Ohne einen Medic in der Nähe und einen Spawnpunkt im Rücken ist sie ein Fleischwolf, kein Bonus.
@@ -42,6 +44,8 @@ Entsprechend ist die Hot Zone der gefährlichste Fleck auf der Karte. Wer sie ha
 Der Teil, den die meisten Spieler nie benutzen: In der Zone stehen **vier Türme**. Erobert dein Team einen, bekommt ihr **eine Ziffer**. Habt ihr alle vier, habt ihr den vollständigen, pro Match zufälligen **vierstelligen Code**.
 
 Diesen Code gibt jemand am Terminal ein – und danach darf euer Team die **Hot Zone auf einen Turm ziehen, den ihr kontrolliert**.
+
+![Ein Funkturm auf einer Kuppe, gesichert von einem kleinen Trupp – vier davon ergeben den Code.](bild-turm)
 
 Das ist der größte einzelne Vorteil im Spiel: Ihr verschiebt den doppelt zählenden Fleck dorthin, wo ihr ohnehin schon steht, eure Deckung habt und eure FOB in der Nähe ist. Gleichzeitig zwingt ihr beide Gegner, zu euch zu kommen.
 

@@ -33,6 +33,8 @@ Wardogs lädt viel nach. Auf einer klassischen Festplatte zeigt sich das als Hä
 
 **Was hilft:** Installation auf eine **NVMe-SSD**. Das ist die einzige Hardwareempfehlung in diesem Guide, die fast immer etwas bringt.
 
+![Der einzige Hardware-Rat in diesem Guide, der fast immer hilft: das Spiel auf eine NVMe-SSD legen.](bild-ssd)
+
 ### 3. Der Grafikspeicher ist voll
 
 Zu hohe Texturstufe für die Karte bedeutet: ständiges Umlagern zwischen VRAM und Arbeitsspeicher. Das Ergebnis sind kurze Einfrierer, keine niedrige Bildrate.

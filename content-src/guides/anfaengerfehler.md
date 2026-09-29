@@ -26,6 +26,8 @@ Die Kontrollzone ist der Ort mit der höchsten Gegnerdichte im Match. Allein dor
 
 **Stattdessen:** Warte 20 Sekunden auf dein Squad. Zwei Leute, die zusammen ankommen, überleben länger als vier, die nacheinander eintrudeln.
 
+![So sieht es aus, wenn es klappt: vier Leute, gleicher Weg, gleicher Zeitpunkt, Abstand zueinander.](bild-squad-abmarsch)
+
 ## 3. Kills für den Sieg halten
 
 Auf der Anzeigetafel steht keine Kill-Zahl. Punkte gibt es dafür, dass **mehr eigene Leute in der Zone stehen als von jeder anderen Fraktion**, wenn der Zähler tickt. Ein Kill ist nur deshalb wertvoll, weil er einen Körper aus der Zone entfernt.
