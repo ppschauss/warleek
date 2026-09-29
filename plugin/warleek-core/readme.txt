@@ -21,7 +21,8 @@ Warleek Core enthält alles Funktionale der Website warleek.de:
 * **SEO-Metas**: Dublin Core, Open Graph, Twitter Cards, Organization-Schema – tritt automatisch zurück, sobald Rank Math eingerichtet ist
 * **Deutsche Patch Notes**: Übersetzung und Kurzfassung über die Claude-API (serverseitig; es werden nur die öffentlichen Ankündigungstexte übertragen, keine Besucherdaten)
 * **Datenschutz**: keine Emoji-Skripte, kein oEmbed, kein XML-RPC, keine Kommentare, keine externen Requests im Browser
-* **Installer**: legt Seiten, Guides, Menüs, Startseite, Logo und Favicon an und installiert Rank Math – wiederholbar, ohne Doppelte anzulegen
+* **Guide-Import**: Markdown-Dateien oder ZIPs per Backend-Formular oder WP-CLI einspielen – mit Trockenlauf, Bildern aus dem Archiv und Themenerkennung aus den Stichwörtern
+* **Installer**: legt Seiten, Guides, Partner, Menüs, Startseite, Logo und Favicon an, zieht alte Seiten zurück und installiert Rank Math – wiederholbar, ohne Doppelte anzulegen
 
 == Installation ==
 
@@ -30,7 +31,7 @@ Warleek Core enthält alles Funktionale der Website warleek.de:
 3. Menü **Warleek → Installation** öffnen und auf *Komplett installieren* klicken.
 4. Unter **Warleek → Einstellungen** die Chat-Links eintragen.
 
-Per WP-CLI: `wp warleek install`, `wp warleek status`, `wp warleek sync-patchnotes`.
+Per WP-CLI: `wp warleek install`, `wp warleek status`, `wp warleek sync-patchnotes`, `wp warleek translate-patchnotes`, `wp warleek import-guides <pfad>`.
 
 == Frequently Asked Questions ==
 
@@ -46,6 +47,7 @@ Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und 
 == Changelog ==
 
 = 2.0.0 =
+* Guide-Import aus Markdown (Backend-Tab und WP-CLI) samt ZIP, Bildern, Trockenlauf und Themenerkennung.
 * Patch Notes werden ins Deutsche übersetzt (Claude-API) und bekommen eine Kurzfassung „Das Wichtigste in Kürze"; das englische Original bleibt zum Aufklappen erhalten.
 * Umbau zur Guide- und Tipps-Seite: Community-, Team- und Clan-Seiten entfallen, `/community/` wird zur Partner-Seite.
 * Neuer Inhaltstyp **Partner** mit Karten-Block, Plattform-Chip und Sortierung.

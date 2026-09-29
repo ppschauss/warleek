@@ -547,6 +547,7 @@ function warleek_admin_menu() {
 	$icon = 'data:image/svg+xml;base64,' . base64_encode( '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="black" d="M10 1c-.6 0-1 .4-1 1v1.2c-1.7.4-3 2-3 3.8v8c0 2.2 1.8 4 4 4s4-1.8 4-4V7c0-1.9-1.3-3.4-3-3.8V2c0-.6-.4-1-1-1zm0 4.5c.8 0 1.5.7 1.5 1.5v3.2c-.5-.3-1-.4-1.5-.4s-1 .1-1.5.4V7c0-.8.7-1.5 1.5-1.5z"/></svg>' );
 	add_menu_page( 'Warleek', 'Warleek', 'manage_options', 'warleek', 'warleek_render_admin_page', $icon, 58 );
 	add_submenu_page( 'warleek', 'Installation', 'Installation', 'manage_options', 'warleek', 'warleek_render_admin_page' );
+	add_submenu_page( 'warleek', 'Guides importieren', 'Guides importieren', 'manage_options', 'warleek-import', 'warleek_render_admin_page' );
 	add_submenu_page( 'warleek', 'Einstellungen', 'Einstellungen', 'manage_options', 'warleek-settings', 'warleek_render_admin_page' );
 }
 add_action( 'admin_menu', 'warleek_admin_menu' );
@@ -589,19 +590,30 @@ function warleek_render_admin_page() {
 	if ( ! current_user_can( 'manage_options' ) ) { return; }
 	$page     = isset( $_GET['page'] ) ? sanitize_key( $_GET['page'] ) : 'warleek';
 	$settings = 'warleek-settings' === $page;
+	$import   = 'warleek-import' === $page;
 	?>
 	<div class="wrap wl-wrap">
 		<div class="wl-hero-box">
-			<h1>Warleek<?php echo $settings ? ' – Einstellungen' : ''; ?></h1>
-			<p><?php echo $settings
-				? 'Chat-Kanäle, Clan-Tag und Social-Profile. Diese Links erscheinen in den Buttons auf der Website und in den Meta-Daten.'
-				: 'Ein Klick installiert Inhalte, Bilder, Menüs und das SEO-Plugin. Alles ist wiederholbar – ein zweiter Durchlauf aktualisiert, statt Doppelte anzulegen.'; ?></p>
+			<h1>Warleek<?php echo $settings ? ' – Einstellungen' : ( $import ? ' – Guides importieren' : '' ); ?></h1>
+			<p><?php
+			if ( $settings ) {
+				echo 'Discord-Link, Social-Profile und die Übersetzung der Patch Notes. Diese Angaben erscheinen auf der Website und in den Meta-Daten.';
+			} elseif ( $import ) {
+				echo 'Guides als Markdown-Datei oder als ZIP hochladen. Mit „Nur prüfen" siehst du vorher, was angelegt oder aktualisiert würde.';
+			} else {
+				echo 'Ein Klick installiert Inhalte, Bilder, Menüs und das SEO-Plugin. Alles ist wiederholbar – ein zweiter Durchlauf aktualisiert, statt Doppelte anzulegen.';
+			} ?></p>
 		</div>
 		<h2 class="nav-tab-wrapper" style="margin-bottom:18px">
-			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek' ) ); ?>" class="nav-tab <?php echo $settings ? '' : 'nav-tab-active'; ?>">Installation</a>
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek' ) ); ?>" class="nav-tab <?php echo ( $settings || $import ) ? '' : 'nav-tab-active'; ?>">Installation</a>
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek-import' ) ); ?>" class="nav-tab <?php echo $import ? 'nav-tab-active' : ''; ?>">Guides importieren</a>
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek-settings' ) ); ?>" class="nav-tab <?php echo $settings ? 'nav-tab-active' : ''; ?>">Einstellungen</a>
 		</h2>
-		<?php if ( $settings ) { warleek_render_settings_tab(); } else { warleek_render_install_tab(); } ?>
+		<?php
+		if ( $settings )     { warleek_render_settings_tab(); }
+		elseif ( $import )   { warleek_render_import_tab(); }
+		else                 { warleek_render_install_tab(); }
+		?>
 	</div>
 	<?php
 }
@@ -708,6 +720,121 @@ function warleek_render_install_tab() {
 		});
 	})();
 	</script>
+	<?php
+}
+
+/* ------------------------------------------------------ Guide-Import */
+/**
+ * Hochgeladene Datei verarbeiten.
+ *
+ * Markdown-Dateien gehen bewusst nicht durch `wp_handle_upload()` – WordPress lehnt
+ * unbekannte MIME-Typen ab. Stattdessen prüfen wir Endung, Größe und Herkunft selbst
+ * und lesen die Datei direkt aus dem Upload-Zwischenspeicher.
+ */
+function warleek_handle_import_upload() {
+	if ( empty( $_POST['warleek_import'] ) || ! current_user_can( 'manage_options' ) ) { return null; }
+	check_admin_referer( 'warleek_import' );
+	if ( empty( $_FILES['datei']['tmp_name'] ) || ! is_uploaded_file( $_FILES['datei']['tmp_name'] ) ) {
+		return array( 'error' => 'Keine Datei empfangen.' );
+	}
+	$name = sanitize_file_name( (string) $_FILES['datei']['name'] );
+	$ext  = strtolower( pathinfo( $name, PATHINFO_EXTENSION ) );
+	if ( ! in_array( $ext, array( 'md', 'markdown', 'zip' ), true ) ) {
+		return array( 'error' => 'Nur .md oder .zip sind erlaubt.' );
+	}
+	if ( (int) $_FILES['datei']['size'] > WARLEEK_IMPORT_MAX_BYTES ) {
+		return array( 'error' => 'Datei ist zu groß (Grenze 20 MB).' );
+	}
+	$tmpdir = trailingslashit( get_temp_dir() ) . 'warleek-upload-' . wp_generate_password( 8, false );
+	wp_mkdir_p( $tmpdir );
+	$target = $tmpdir . '/' . $name;
+	if ( ! move_uploaded_file( $_FILES['datei']['tmp_name'], $target ) ) {
+		return array( 'error' => 'Datei konnte nicht übernommen werden.' );
+	}
+	$res = warleek_import_guides( $target, array(
+		'dry_run' => ! empty( $_POST['dry_run'] ),
+		'force'   => ! empty( $_POST['force'] ),
+		'thema'   => sanitize_title( (string) ( $_POST['thema'] ?? 'einsteiger' ) ),
+		'status'  => ! empty( $_POST['als_entwurf'] ) ? 'draft' : '',
+	) );
+	warleek_import_cleanup( $res['tmp'] );
+	@unlink( $target );
+	@rmdir( $tmpdir );
+	$res['dry'] = ! empty( $_POST['dry_run'] );
+	return $res;
+}
+
+function warleek_render_import_tab() {
+	$result = warleek_handle_import_upload();
+	$themen = warleek_content_json( 'site' )['themen'] ?? array();
+	?>
+	<?php if ( $result && ! empty( $result['error'] ) ) : ?>
+		<div class="notice notice-error"><p><?php echo esc_html( $result['error'] ); ?></p></div>
+	<?php elseif ( $result ) : ?>
+		<div class="notice notice-<?php echo $result['failed'] ? 'warning' : 'success'; ?>">
+			<p><?php echo esc_html( $result['dry']
+				? sprintf( 'Trockenlauf: %d Guides bereit, %d Probleme. Es wurde nichts gespeichert.', $result['ok'], $result['failed'] )
+				: sprintf( '%d Guides importiert, %d Probleme.', $result['ok'], $result['failed'] ) ); ?></p>
+		</div>
+		<table class="widefat striped" style="margin-bottom:22px">
+			<thead><tr><th>Datei</th><th>Slug</th><th>Thema</th><th>Aktion</th><th>Wörter</th><th>Hinweise</th></tr></thead>
+			<tbody>
+			<?php foreach ( $result['rows'] as $r ) : ?>
+				<tr>
+					<td><code><?php echo esc_html( $r['file'] ); ?></code></td>
+					<?php if ( ! empty( $r['error'] ) ) : ?>
+						<td colspan="4"><strong style="color:#d63638">Fehler</strong></td>
+						<td><?php echo esc_html( $r['error'] ); ?></td>
+					<?php else : ?>
+						<td><code><?php echo esc_html( $r['slug'] ); ?></code></td>
+						<td><?php echo esc_html( $r['thema'] ); ?></td>
+						<td><?php echo esc_html( $r['action'] ); ?></td>
+						<td><?php echo (int) $r['words']; ?></td>
+						<td><?php echo esc_html( $r['warnings'] ? implode( ' · ', $r['warnings'] ) : '–' ); ?></td>
+					<?php endif; ?>
+				</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+	<?php endif; ?>
+
+	<form method="post" enctype="multipart/form-data" class="wl-next" style="max-width:640px">
+		<?php wp_nonce_field( 'warleek_import' ); ?>
+		<input type="hidden" name="warleek_import" value="1">
+		<p><label><strong>Datei</strong><br>
+			<input type="file" name="datei" accept=".md,.markdown,.zip" required></label><br>
+			<span class="description">Eine Markdown-Datei oder ein ZIP mit mehreren Guides (Bilder dürfen mit drin liegen).</span></p>
+		<p><label><strong>Thema, falls der Kopfblock keines nennt</strong><br>
+			<select name="thema">
+				<?php foreach ( $themen as $slug => $t ) : ?>
+					<option value="<?php echo esc_attr( $slug ); ?>"><?php echo esc_html( $t['name'] ); ?></option>
+				<?php endforeach; ?>
+			</select></label></p>
+		<p><label><input type="checkbox" name="dry_run" value="1" checked> Nur prüfen (nichts speichern)</label></p>
+		<p><label><input type="checkbox" name="als_entwurf" value="1"> Als Entwurf anlegen</label></p>
+		<p><label><input type="checkbox" name="force" value="1"> Auch von Hand bearbeitete Guides überschreiben</label></p>
+		<?php submit_button( 'Importieren' ); ?>
+	</form>
+
+	<div class="wl-next">
+		<strong>Aufbau einer Guide-Datei</strong>
+		<pre style="background:#f6f7f7;padding:12px;overflow:auto">---
+title: FOB verteidigen ohne Munition zu verschwenden
+slug: fob-verteidigen          (optional, sonst aus dem Dateinamen)
+thema: fob                     (optional, sonst aus den Stichwörtern)
+tags: [wardogs, fob, bunker]   (optional)
+excerpt: Ein Satz für die Karte.
+image: fob-verteidigen.webp    (optional, Datei im ZIP)
+order: 7                       (optional, steuert die Reihenfolge)
+seo_title: …
+seo_description: …
+---
+
+## Erste Überschrift
+Text, **fett**, `Code`, [Links](/guides/), Listen, Tabellen und ```-Blöcke.</pre>
+		<p class="description">Unterstützt werden Überschriften, Absätze, Listen (auch Checklisten), Tabellen, Zitate, Code-Blöcke, Bilder und Hinweiskästen über <code>&gt; [!hinweis]</code>. Gleiche Datei erneut hochladen aktualisiert den Guide, statt einen zweiten anzulegen.</p>
+		<p class="description">Auf der Kommandozeile: <code>wp warleek import-guides &lt;pfad&gt; [--dry-run] [--thema=technik] [--status=draft]</code></p>
+	</div>
 	<?php
 }
 

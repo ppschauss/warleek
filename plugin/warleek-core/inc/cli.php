@@ -118,6 +118,64 @@ class Warleek_Core_CLI {
 	}
 
 	/**
+	 * Importiert Guides aus Markdown-Dateien.
+	 *
+	 * ## OPTIONS
+	 *
+	 * <pfad>
+	 * : Eine .md-Datei, ein Ordner oder ein ZIP.
+	 *
+	 * [--dry-run]
+	 * : Nur zeigen, was passieren würde.
+	 *
+	 * [--force]
+	 * : Auch von Hand bearbeitete Guides überschreiben.
+	 *
+	 * [--thema=<slug>]
+	 * : Thema, wenn der Kopfblock keines nennt (Standard: einsteiger).
+	 *
+	 * [--status=<status>]
+	 * : `draft`, um die Guides als Entwurf anzulegen.
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     wp warleek import-guides guides/ --dry-run
+	 *     wp warleek import-guides neuer-guide.md --thema=technik
+	 *
+	 * @subcommand import-guides
+	 */
+	public function import_guides( $args, $assoc ) {
+		$path = $args[0] ?? '';
+		if ( ! $path || ( ! file_exists( $path ) && ! is_dir( $path ) ) ) { WP_CLI::error( 'Pfad nicht gefunden: ' . $path ); }
+
+		$res = warleek_import_guides( $path, array(
+			'dry_run' => ! empty( $assoc['dry-run'] ),
+			'force'   => ! empty( $assoc['force'] ),
+			'thema'   => $assoc['thema'] ?? 'einsteiger',
+			'status'  => $assoc['status'] ?? '',
+		) );
+
+		$rows = array();
+		foreach ( $res['rows'] as $r ) {
+			if ( ! empty( $r['error'] ) ) {
+				$rows[] = array( 'Datei' => $r['file'], 'Slug' => '—', 'Thema' => '—', 'Aktion' => 'FEHLER', 'Wörter' => '—', 'Hinweise' => $r['error'] );
+				continue;
+			}
+			$rows[] = array(
+				'Datei' => $r['file'], 'Slug' => $r['slug'], 'Thema' => $r['thema'],
+				'Aktion' => $r['action'], 'Wörter' => $r['words'],
+				'Hinweise' => $r['warnings'] ? implode( ' · ', $r['warnings'] ) : '',
+			);
+		}
+		if ( $rows ) { WP_CLI\Utils\format_items( 'table', $rows, array( 'Datei', 'Slug', 'Thema', 'Aktion', 'Wörter', 'Hinweise' ) ); }
+		warleek_import_cleanup( $res['tmp'] );
+
+		if ( ! empty( $assoc['dry-run'] ) ) { WP_CLI::success( sprintf( 'Trockenlauf: %d Guides bereit, %d Probleme.', $res['ok'], $res['failed'] ) ); return; }
+		if ( $res['failed'] ) { WP_CLI::warning( sprintf( '%d Dateien konnten nicht gelesen werden.', $res['failed'] ) ); }
+		WP_CLI::success( sprintf( '%d Guides importiert.', $res['ok'] ) );
+	}
+
+	/**
 	 * Zeigt den Installationsstatus.
 	 */
 	public function status( $args, $assoc ) {
