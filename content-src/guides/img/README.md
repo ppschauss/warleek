@@ -55,3 +55,24 @@ vorkommen. Wer eine Datei hier ablegt und nirgends verlinkt, ändert nichts.
 ```bash
 cwebp -q 82 -resize 1024 0 quelle.png -o bild-name.webp
 ```
+
+## Schaubilder
+
+Die Dateien `dia-*.svg` sind die **Quellen** der Schaubilder; ausgeliefert wird das
+daneben liegende `.webp`. Ändern heißt: SVG bearbeiten, neu rendern, neu bauen.
+
+```bash
+docker cp dia-kurve.svg wh-web-check:/tmp/dia/dia-kurve.svg
+docker exec wh-web-check chromium --headless=new --no-sandbox --disable-dev-shm-usage \
+  --hide-scrollbars --screenshot=/tmp/dia/dia-kurve.png --window-size=1024,688 file:///tmp/dia/dia-kurve.svg
+docker cp wh-web-check:/tmp/dia/dia-kurve.png . && cwebp -q 90 dia-kurve.png -o dia-kurve.webp
+```
+
+Farben aus `theme.json`: Hintergrund `#161c18`, Text `#eef5e6`, Raster `#1f2822`,
+Beschriftung `#8a938c`, Akzent `#9be15d` (Lauchgrün), Warnung `#e0843a`, neutral `#c7b58f`.
+
+## Was hier nicht hingehört
+
+**Keine Bildschirmfotos aus fremden Videos oder von fremden Webseiten.** Auch nicht
+aus YouTube-Guides, die wir verlinken – das wäre eine Veröffentlichung fremder Inhalte.
+Eigene Aufnahmen aus dem Spiel sind in Ordnung, eigene Schaubilder sowieso.
