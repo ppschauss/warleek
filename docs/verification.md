@@ -159,3 +159,26 @@ Repo `ppschauss/warleek` (öffentlich) und Release `v2.0.0` mit drei Anhängen s
 - Details-Dialog (`plugins_api`) liefert Name, Version, Paket und Changelog.
 
 Damit ist der Update-Kanal vollständig geprüft. Künftige Veröffentlichung: Version an den fünf Stellen erhöhen, Changelog in `readme.txt` ergänzen, `bin/release.sh --publish`.
+
+## Guide-Offensive – Version 2.1.0 (29.09.2026)
+
+**Was dazugekommen ist:** 20 neue Guides (insgesamt 27), 20 neue Bilder, eine Markdown-Strecke für die Guide-Pflege und ein Satire-Guide über Team Blau.
+
+### Recherche
+Quellen sind überwiegend Guide-Seiten Dritter, kein offizielles Wiki – deshalb stehen alle Zahlen mit „rund" und Stand-Datum im Text, und die Fundstellen sind in `docs/research/wardogs-facts.md` mit Quelle vermerkt. Wo sich Quellen widersprechen (Beispiel: Verlust der getragenen Ausrüstung beim Tod – „alles weg" gegen „90 % Erstattung"), ist das dort notiert und im Guide vorsichtig formuliert.
+
+### Neue Werkzeuge
+- `content-src/guides/*.md` als Quelle der Wahrheit, `php bin/guides-build.php` baut daraus `content/_content/guides.json` und trägt die Bilder ins `MANIFEST.json` ein. Trockenlauf mit `--dry-run`, warnt bei fehlendem Titel, Auszug, Bild oder Alt-Text.
+- Markdown kennt jetzt `> [!stand] …` für die Datumszeile (`p.wl-stand`), abgesichert im Markdown-Test.
+
+### Geprüft
+- `php bin/guides-build.php --dry-run`: 20 neu, 0 Warnungen, 27 Guides gesamt.
+- `./manage.sh seed`: 27 Guides angelegt, 20 Medien neu, **alle 27 Guides haben ein Beitragsbild**.
+- Alle 21 internen Links aus den neuen Guides liefern 200 – kein toter Querverweis.
+- Stichprobe Rendering (`/guides/wardogs-waffen-kaufen/`): Stand-Zeile, drei Tabellen, Hinweiskasten, neun H2, Lesezeit „3 Min." – alles da.
+- Satire-Guide trägt den Achtung-Kasten mit dem Satire-Hinweis ganz oben und verlinkt die ernst gemeinte Fraktionsseite.
+- Themen-Chips auf `/guides/`: Gameplay 7 · Einsteiger 5 · Equipment 5 · FOB 4 · Technik 4 · Logistik 2 = 27, Seitenumbruch über drei Seiten.
+- Mobil (390 px) geprüft: Lesezeit, Themen-Chip, Bild, Stand-Zeile und Tabellen brechen sauber um.
+- Alle fünf Testdateien grün.
+
+**Ein Phantom, das keines war:** Auf dem Screenshot der Guide-Bibliothek blieben die unteren Karten bildlos. Nachgemessen mit einem echten Browser (Puppeteer, `naturalWidth` je Bild): **alle 14 Bilder geladen**. Das Headless-Chromium hatte innerhalb seines virtuellen Zeitbudgets nur die oberen dekodiert – kein Fehler auf der Seite. Screenshots taugen hier nicht als Beweis.

@@ -11,6 +11,9 @@ Wardogs-**Guide-Seite** **Warleek** (warleek.de): Block-Theme `theme/warleek` (n
 ## Regeln
 - **Alles editierbar:** kein Content in Templates/Patterns hart verdrahtet; Bilder in der Mediathek; Logo = Website-Logo; Links/Clan-Tag = Optionsseite (`warleek_opt()`).
 - Inhalte kommen aus `plugin/warleek-core/content/_content/*.json` → Installer (idempotent). Textänderungen dort **und** per `./manage.sh seed --force` einspielen, oder direkt im Backend (dann JSON nicht mehr Quelle der Wahrheit).
+- **Guides schreibt man als Markdown** in `content-src/guides/*.md` (Kopfblock: title, slug, thema, order, image, image_alt, excerpt, seo_title, seo_description). `php bin/guides-build.php` übersetzt sie mit `inc/markdown.php` nach `content/_content/guides.json` und trägt die Bilder in `content/MANIFEST.json` ein; gleicher Slug ersetzt, alles andere bleibt. Danach `./manage.sh seed`. Der Backend-Import („Guides importieren") bleibt für Einzelstücke, die nicht mitausgeliefert werden sollen.
+- Reihenfolge der Guides in Zehnerblöcken je Thema: einsteiger 1–9, gameplay 10–19, fob 20–29, logistik 30–39, equipment 40–49, technik 50–59, Sonstiges ab 60.
+- Spielzahlen gehören in `docs/research/wardogs-facts.md`, bevor sie in einen Guide wandern – mit Quelle und Vermerk, wenn Quellen sich widersprechen.
 - Übersetzungs- und Updater-Tests fangen HTTP über `pre_http_request` ab – sie kosten nichts und dürfen nie echte Anfragen stellen.
 - Im Installer niemals `echo` verwenden – Ausgabe zerstört die JSON-Antwort. Stattdessen `warleek_log()`; jeder Schritt läuft ohnehin in einem Output-Buffer.
 - Frisch aktivierte Fremd-Plugins leiten im `admin_init` um; während AJAX-Schritten ist `wp_redirect` deshalb abgeschaltet.

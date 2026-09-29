@@ -1,10 +1,10 @@
 === Warleek Core ===
 Contributors: warleek
-Tags: community, gaming, steam, patch notes
+Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,13 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.1.0 =
+* 20 neue Guides: Fraktionen, Anfängerfehler, Fortschritts-Tracks, Spawnen, Kontrollzone, Medic, Recon, Panzerabwehr, Bauen, FOB-Verteidigung, Flugabwehr, Logistik-Fuhrpark, Waffenkauf, Zeroing, Gewichtsklassen, Helikopter, Einstellungen, Ruckler, Tastenbelegung – und ein Satire-Guide für Team Blau.
+* Guides werden jetzt aus Markdown gebaut: `content-src/guides/*.md` plus `bin/guides-build.php` schreiben Inhalts-JSON und Medien-Manifest.
+* Markdown kennt `> [!stand] …` für die Datumszeile über jedem Guide.
+* 20 neue Guide-Bilder, Reihenfolge der Guides thematisch in Zehnerblöcken.
+* Faktenbasis in `docs/research/wardogs-facts.md` erweitert (Fraktionen, Kontrollzone, Waffen- und Fahrzeugpreise, Spawn, Ballistik, Gewicht).
 
 = 2.0.0 =
 * Updates über GitHub-Releases: Theme und Plugin melden neue Versionen im WordPress-Dashboard und lassen sich dort mit einem Klick aktualisieren.

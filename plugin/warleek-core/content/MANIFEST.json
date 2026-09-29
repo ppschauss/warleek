@@ -1,177 +1,277 @@
 {
- "hero-home.webp": {
-  "alt": "Wardogs-Szene: Konvoi aus Logistik-LKW fährt bei Dämmerung durch ein verlassenes Industrietal in den Bergen",
-  "use": "hero-home",
-  "size": 75838
- },
- "hero-community.webp": {
-  "alt": "Wardogs Community: Spieler sitzen abends gemeinsam an einer Feuertonne im Lager",
-  "use": "hero-community",
-  "size": 59248
- },
- "hero-team.webp": {
-  "alt": "Wardogs Team: Soldaten besprechen am Feierabend eine Karte an der Ladefläche eines LKW",
-  "use": "hero-team",
-  "size": 56172
- },
- "hero-clan.webp": {
-  "alt": "Wardogs Clan: Squad rückt geschlossen durch Morgennebel zwischen Industrieruinen vor",
-  "use": "hero-clan",
-  "size": 77622
- },
- "hero-chat.webp": {
-  "alt": "Wardogs Chat: Funkgerät und Smartphone mit Chat am Plate Carrier",
-  "use": "hero-chat",
-  "size": 42804
- },
- "hero-discord.webp": {
-  "alt": "Wardogs Discord: Kommandozelt mit Laptop, Headset und Funkgeräten bei Nacht",
-  "use": "hero-discord",
-  "size": 49382
- },
- "hero-hub.webp": {
-  "alt": "Wardogs Gameplay: drei Kolonnen laufen auf eine umkämpfte Zone in einem Industrietal zu",
-  "use": "hero-hub",
-  "size": 123948
- },
- "hero-fob.webp": {
-  "alt": "Wardogs FOB: vorgeschobene Basis im Bau mit HESCO-Wällen, Sandsäcken und Versorgungspaletten",
-  "use": "hero-fob",
-  "size": 96772
- },
- "hero-logistik.webp": {
-  "alt": "Wardogs Logistik: Blick aus dem Versorgungs-LKW, Helikopter mit Palette am Haken",
-  "use": "hero-logistik",
-  "size": 57168
- },
- "hero-gameplay.webp": {
-  "alt": "Wardogs Gameplay: Feuergefecht hinter einem Autowrack in einer Industriestraße",
-  "use": "hero-gameplay",
-  "size": 97144
- },
- "hero-equipment.webp": {
-  "alt": "Wardogs Equipment: Plate Carrier, Gewehr, Helm, Funkgerät und Medkit auf einem Tisch",
-  "use": "hero-equipment",
-  "size": 97008
- },
- "hero-about.webp": {
-  "alt": "Warleek: Dogtags am Holzpfosten neben einem Lauch in einer Blechdose",
-  "use": "hero-about",
-  "size": 81354
- },
- "hero-guides.webp": {
-  "alt": "Wardogs Guides: Notizbuch mit taktischen Skizzen auf einer Versorgungskiste",
-  "use": "hero-guides",
-  "size": 51278
- },
- "og-default.jpg": {
-  "alt": "Warleek – Wardogs Community, Team & Clan für Deutschland, Österreich und die Schweiz",
-  "use": "og-default",
-  "size": 93157
- },
- "guide-erste-runde.webp": {
-  "alt": "Neuling steht am Spawn-Tor und blickt ins Tal, ein Veteran legt ihm die Hand auf die Schulter",
-  "use": "guide-erste-runde",
-  "size": 45280
- },
- "guide-fob-bau.webp": {
-  "alt": "Zwei Soldaten bauen Sandsackwall und Wachturm in einer halbfertigen FOB",
-  "use": "guide-fob-bau",
-  "size": 94242
- },
- "guide-logistik-run.webp": {
-  "alt": "Soldat zurrt eine Versorgungspalette auf einem LKW fest",
-  "use": "guide-logistik-run",
-  "size": 53792
- },
- "guide-geld.webp": {
-  "alt": "Hände zählen Geldscheine auf einer Munitionskiste",
-  "use": "guide-geld",
-  "size": 50814
- },
- "guide-squad-funk.webp": {
-  "alt": "Squad Leader kniet und spricht ins Funk-Headset, das Squad hört zu",
-  "use": "guide-squad-funk",
-  "size": 59752
- },
- "guide-fahrzeuge.webp": {
-  "alt": "Helikopter hebt mit Palette am Haken vom Industrie-Helipad ab",
-  "use": "guide-fahrzeuge",
-  "size": 61848
- },
- "video/hero.mp4": {
-  "alt": "Wardogs Hero-Loop: Rauch zieht über ein Industrietal, Konvoi in der Dämmerung",
-  "use": "video-hero-mp4",
-  "size": 364808
- },
- "video/hero.webm": {
-  "alt": "Wardogs Hero-Loop (WebM)",
-  "use": "video-hero-webm",
-  "size": 197303
- },
- "video/hero-poster.webp": {
-  "alt": "Wardogs-Szene: Konvoi in der Dämmerung im Industrietal (Poster)",
-  "use": "video-hero-poster",
-  "size": 53952
- },
- "logo/warleek-icon.svg": {
-  "alt": "Warleek Logo – Dogtag mit Lauch",
-  "use": "logo-icon",
-  "size": 10481
- },
- "logo/warleek-icon.png": {
-  "alt": "Warleek Logo – Dogtag mit Lauch (PNG)",
-  "use": "logo-icon-png",
-  "size": 46796
- },
- "logo/warleek-crest.png": {
-  "alt": "Warleek Wappen – gekreuzte Dogtags mit Lauch",
-  "use": "logo-crest",
-  "size": 86775
- },
- "logo/warleek-lockup.png": {
-  "alt": "Warleek Logo mit Schriftzug",
-  "use": "logo-lockup",
-  "size": 34241
- },
- "logo/favicon-512.png": {
-  "alt": "Warleek Favicon",
-  "use": "favicon",
-  "size": 57442
- },
- "hero-home-guides.webp": {
-  "alt": "Soldat beugt sich bei Dämmerung über eine Karte mit taktischen Markierungen, Lampe und Funkgerät daneben",
-  "use": "hero-home-guides",
-  "size": 69958
- },
- "hero-einsteiger.webp": {
-  "alt": "Neuling mit Rucksack und Karte am Spawn-Tor, Blick auf das Industrietal bei Sonnenaufgang",
-  "use": "hero-einsteiger",
-  "size": 68978
- },
- "hero-partner.webp": {
-  "alt": "Zwei Squads begrüßen sich per Handschlag am Tor einer FOB",
-  "use": "hero-partner",
-  "size": 77920
- },
- "og-default-guides.jpg": {
-  "alt": "Warleek – Wardogs Guides und Tipps auf Deutsch",
-  "use": "og-default-guides",
-  "size": 82512
- },
- "hero-technik.webp": {
-  "alt": "Flightstick und Schubregler vor einem Monitor mit Helikopter-Cockpit",
-  "use": "hero-technik",
-  "size": 42552
- },
- "guide-hotas.webp": {
-  "alt": "Transporthubschrauber schwebt über einem Industriehof, ein Soldat weist ihn ein",
-  "use": "guide-hotas",
-  "size": 49368
- },
- "partner-placeholder.webp": {
-  "alt": "Platzhalter-Wappen für Partner ohne eigenes Logo",
-  "use": "partner-placeholder",
-  "size": 13402
- }
+    "hero-home.webp": {
+        "alt": "Wardogs-Szene: Konvoi aus Logistik-LKW fährt bei Dämmerung durch ein verlassenes Industrietal in den Bergen",
+        "use": "hero-home",
+        "size": 75838
+    },
+    "hero-community.webp": {
+        "alt": "Wardogs Community: Spieler sitzen abends gemeinsam an einer Feuertonne im Lager",
+        "use": "hero-community",
+        "size": 59248
+    },
+    "hero-team.webp": {
+        "alt": "Wardogs Team: Soldaten besprechen am Feierabend eine Karte an der Ladefläche eines LKW",
+        "use": "hero-team",
+        "size": 56172
+    },
+    "hero-clan.webp": {
+        "alt": "Wardogs Clan: Squad rückt geschlossen durch Morgennebel zwischen Industrieruinen vor",
+        "use": "hero-clan",
+        "size": 77622
+    },
+    "hero-chat.webp": {
+        "alt": "Wardogs Chat: Funkgerät und Smartphone mit Chat am Plate Carrier",
+        "use": "hero-chat",
+        "size": 42804
+    },
+    "hero-discord.webp": {
+        "alt": "Wardogs Discord: Kommandozelt mit Laptop, Headset und Funkgeräten bei Nacht",
+        "use": "hero-discord",
+        "size": 49382
+    },
+    "hero-hub.webp": {
+        "alt": "Wardogs Gameplay: drei Kolonnen laufen auf eine umkämpfte Zone in einem Industrietal zu",
+        "use": "hero-hub",
+        "size": 123948
+    },
+    "hero-fob.webp": {
+        "alt": "Wardogs FOB: vorgeschobene Basis im Bau mit HESCO-Wällen, Sandsäcken und Versorgungspaletten",
+        "use": "hero-fob",
+        "size": 96772
+    },
+    "hero-logistik.webp": {
+        "alt": "Wardogs Logistik: Blick aus dem Versorgungs-LKW, Helikopter mit Palette am Haken",
+        "use": "hero-logistik",
+        "size": 57168
+    },
+    "hero-gameplay.webp": {
+        "alt": "Wardogs Gameplay: Feuergefecht hinter einem Autowrack in einer Industriestraße",
+        "use": "hero-gameplay",
+        "size": 97144
+    },
+    "hero-equipment.webp": {
+        "alt": "Wardogs Equipment: Plate Carrier, Gewehr, Helm, Funkgerät und Medkit auf einem Tisch",
+        "use": "hero-equipment",
+        "size": 97008
+    },
+    "hero-about.webp": {
+        "alt": "Warleek: Dogtags am Holzpfosten neben einem Lauch in einer Blechdose",
+        "use": "hero-about",
+        "size": 81354
+    },
+    "hero-guides.webp": {
+        "alt": "Wardogs Guides: Notizbuch mit taktischen Skizzen auf einer Versorgungskiste",
+        "use": "hero-guides",
+        "size": 51278
+    },
+    "og-default.jpg": {
+        "alt": "Warleek – Wardogs Community, Team & Clan für Deutschland, Österreich und die Schweiz",
+        "use": "og-default",
+        "size": 93157
+    },
+    "guide-erste-runde.webp": {
+        "alt": "Neuling steht am Spawn-Tor und blickt ins Tal, ein Veteran legt ihm die Hand auf die Schulter",
+        "use": "guide-erste-runde",
+        "size": 45280
+    },
+    "guide-fob-bau.webp": {
+        "alt": "Zwei Soldaten bauen Sandsackwall und Wachturm in einer halbfertigen FOB",
+        "use": "guide-fob-bau",
+        "size": 94242
+    },
+    "guide-logistik-run.webp": {
+        "alt": "Soldat zurrt eine Versorgungspalette auf einem LKW fest",
+        "use": "guide-logistik-run",
+        "size": 53792
+    },
+    "guide-geld.webp": {
+        "alt": "Hände zählen Geldscheine auf einer Munitionskiste",
+        "use": "guide-geld",
+        "size": 50814
+    },
+    "guide-squad-funk.webp": {
+        "alt": "Squad Leader kniet und spricht ins Funk-Headset, das Squad hört zu",
+        "use": "guide-squad-funk",
+        "size": 59752
+    },
+    "guide-fahrzeuge.webp": {
+        "alt": "Helikopter hebt mit Palette am Haken vom Industrie-Helipad ab",
+        "use": "guide-fahrzeuge",
+        "size": 61848
+    },
+    "video/hero.mp4": {
+        "alt": "Wardogs Hero-Loop: Rauch zieht über ein Industrietal, Konvoi in der Dämmerung",
+        "use": "video-hero-mp4",
+        "size": 364808
+    },
+    "video/hero.webm": {
+        "alt": "Wardogs Hero-Loop (WebM)",
+        "use": "video-hero-webm",
+        "size": 197303
+    },
+    "video/hero-poster.webp": {
+        "alt": "Wardogs-Szene: Konvoi in der Dämmerung im Industrietal (Poster)",
+        "use": "video-hero-poster",
+        "size": 53952
+    },
+    "logo/warleek-icon.svg": {
+        "alt": "Warleek Logo – Dogtag mit Lauch",
+        "use": "logo-icon",
+        "size": 10481
+    },
+    "logo/warleek-icon.png": {
+        "alt": "Warleek Logo – Dogtag mit Lauch (PNG)",
+        "use": "logo-icon-png",
+        "size": 46796
+    },
+    "logo/warleek-crest.png": {
+        "alt": "Warleek Wappen – gekreuzte Dogtags mit Lauch",
+        "use": "logo-crest",
+        "size": 86775
+    },
+    "logo/warleek-lockup.png": {
+        "alt": "Warleek Logo mit Schriftzug",
+        "use": "logo-lockup",
+        "size": 34241
+    },
+    "logo/favicon-512.png": {
+        "alt": "Warleek Favicon",
+        "use": "favicon",
+        "size": 57442
+    },
+    "hero-home-guides.webp": {
+        "alt": "Soldat beugt sich bei Dämmerung über eine Karte mit taktischen Markierungen, Lampe und Funkgerät daneben",
+        "use": "hero-home-guides",
+        "size": 69958
+    },
+    "hero-einsteiger.webp": {
+        "alt": "Neuling mit Rucksack und Karte am Spawn-Tor, Blick auf das Industrietal bei Sonnenaufgang",
+        "use": "hero-einsteiger",
+        "size": 68978
+    },
+    "hero-partner.webp": {
+        "alt": "Zwei Squads begrüßen sich per Handschlag am Tor einer FOB",
+        "use": "hero-partner",
+        "size": 77920
+    },
+    "og-default-guides.jpg": {
+        "alt": "Warleek – Wardogs Guides und Tipps auf Deutsch",
+        "use": "og-default-guides",
+        "size": 82512
+    },
+    "hero-technik.webp": {
+        "alt": "Flightstick und Schubregler vor einem Monitor mit Helikopter-Cockpit",
+        "use": "hero-technik",
+        "size": 42552
+    },
+    "guide-hotas.webp": {
+        "alt": "Transporthubschrauber schwebt über einem Industriehof, ein Soldat weist ihn ein",
+        "use": "guide-hotas",
+        "size": 49368
+    },
+    "partner-placeholder.webp": {
+        "alt": "Platzhalter-Wappen für Partner ohne eigenes Logo",
+        "use": "partner-placeholder",
+        "size": 13402
+    },
+    "guide-anfaengerfehler.webp": {
+        "alt": "Einzelner Soldat steht ungedeckt mitten auf einem Kiesplatz, waehrend Einschlaege Staub aufwirbeln",
+        "use": "guide-anfaengerfehler",
+        "size": 115212
+    },
+    "guide-einstellungen.webp": {
+        "alt": "Dunkler Schreibtisch mit gruen beleuchteter Tastatur, Headset, Maus und leuchtendem Monitor",
+        "use": "guide-einstellungen",
+        "size": 26356
+    },
+    "guide-flugabwehr.webp": {
+        "alt": "Flugabwehrstellung mit angewinkelten Startrohren auf einer Betonplatte, ein Helikopter dreht in der Ferne ab",
+        "use": "guide-flugabwehr",
+        "size": 46734
+    },
+    "guide-fob-verteidigen.webp": {
+        "alt": "Befestigte FOB in der Abenddaemmerung mit Sandsackwaellen, Moerserstellung, Wachturm und Verteidigern",
+        "use": "guide-fob-verteidigen",
+        "size": 54082
+    },
+    "guide-fraktionen.webp": {
+        "alt": "Drei Squads in blauer, roter und gruener Ausruestung stehen sich auf drei Bergruecken ueber einem nebligen Industrietal gegenueber",
+        "use": "guide-fraktionen",
+        "size": 54798
+    },
+    "guide-gewicht.webp": {
+        "alt": "Zwei Ausruestungssaetze nebeneinander auf Beton: links leichte Weste mit zwei Taschen, rechts schwere Weste mit Werfer und Zusatzmunition",
+        "use": "guide-gewicht",
+        "size": 108592
+    },
+    "guide-helikopter.webp": {
+        "alt": "Blick aus dem offenen Cockpit eines leichten Helikopters, der tief ueber ein Bergtal fliegt",
+        "use": "guide-helikopter",
+        "size": 92996
+    },
+    "guide-kontrollzone.webp": {
+        "alt": "Blick von oben ueber ein Industrietal in der Daemmerung mit vier Funktuermen auf einzelnen Huegeln",
+        "use": "guide-kontrollzone",
+        "size": 57124
+    },
+    "guide-logistik-fahrzeuge.webp": {
+        "alt": "Schwerer Nachschub-LKW mit verzurrten Paletten auf einer Bergstrasse neben Pickup und leichtem Transporthelikopter",
+        "use": "guide-logistik-fahrzeuge",
+        "size": 119430
+    },
+    "guide-lonestar.webp": {
+        "alt": "Soldat in leuchtend blauer Ausruestung steht mit ausgebreiteten Armen mitten auf einer gruenen Wiese, getarnte Gegner kaum sichtbar am Waldrand",
+        "use": "guide-lonestar",
+        "size": 183762
+    },
+    "guide-medic.webp": {
+        "alt": "Sanitaeter kniet hinter einer Betonmauer bei einem verwundeten Kameraden, ein zweiter Soldat sichert die Ecke",
+        "use": "guide-medic",
+        "size": 97924
+    },
+    "guide-panzer.webp": {
+        "alt": "Soldat mit Panzerabwehrwaffe zielt aus Truemmern heraus auf das rauchende Heck eines Kampfpanzers",
+        "use": "guide-panzer",
+        "size": 63846
+    },
+    "guide-progression.webp": {
+        "alt": "Auf einer Holzkiste liegen Sturmgewehr, Sanitaetstasche, Fernglas, Bauhammer, Fahrzeugschluessel und Pilotenheadset in sechs Gruppen",
+        "use": "guide-progression",
+        "size": 109054
+    },
+    "guide-recon.webp": {
+        "alt": "Scharfschuetze im Ghillie-Anzug liegt im Morgengrauen auf einem Felsgrat und beobachtet mit dem Fernglas",
+        "use": "guide-recon",
+        "size": 70232
+    },
+    "guide-ruckler.webp": {
+        "alt": "Nahaufnahme im offenen PC-Gehaeuse: Grafikkarte, Luefter und Kuehlkoerper im schwachen gruenen Licht",
+        "use": "guide-ruckler",
+        "size": 89834
+    },
+    "guide-spawnen.webp": {
+        "alt": "Gepanzerter Mannschaftstransporter steht mit offener Heckrampe hinter einem Huegel, Soldaten steigen aus",
+        "use": "guide-spawnen",
+        "size": 63002
+    },
+    "guide-support-bauen.webp": {
+        "alt": "Soldat baut mit schwerem Hammer eine HESCO-Mauer in einer Forward Operating Base, Nachschubpaletten daneben",
+        "use": "guide-support-bauen",
+        "size": 65998
+    },
+    "guide-tastenbelegung.webp": {
+        "alt": "Nahaufnahme einer mechanischen Tastatur, bei der nur einzelne Tasten olivgruen hinterleuchtet sind",
+        "use": "guide-tastenbelegung",
+        "size": 17976
+    },
+    "guide-waffen.webp": {
+        "alt": "Geoeffnete Waffenkiste im Versorgungszelt mit aufgereihten Gewehren, Magazinen und Optiken auf einem Klapptisch",
+        "use": "guide-waffen",
+        "size": 60256
+    },
+    "guide-zeroing.webp": {
+        "alt": "Nahaufnahme einer behandschuhten Hand, die den Hoehenverstellturm eines Zielfernrohrs dreht, Gewehr auf Zweibein",
+        "use": "guide-zeroing",
+        "size": 57128
+    }
 }

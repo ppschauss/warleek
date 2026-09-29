@@ -156,7 +156,10 @@ function warleek_md_to_html( $md, $strip_first_h1 = true ) {
 			}
 			$i--;
 			$text = trim( implode( ' ', array_filter( $buf ) ) );
-			if ( preg_match( '/^\[!(hinweis|note|tipp|tip|achtung|warning)\]\s*(.*)$/i', $text, $nm ) ) {
+			if ( preg_match( '/^\[!stand\]\s*(.*)$/i', $text, $sm ) ) {
+				// `> [!stand] September 2026` → die Datumszeile, die jeder Guide oben trägt.
+				$out[] = '<p class="wl-stand">Stand: ' . warleek_md_inline( $sm[1] ) . '</p>';
+			} elseif ( preg_match( '/^\[!(hinweis|note|tipp|tip|achtung|warning)\]\s*(.*)$/i', $text, $nm ) ) {
 				$label = in_array( strtolower( $nm[1] ), array( 'achtung', 'warning' ), true ) ? 'Achtung' : 'Hinweis';
 				$cls   = 'Achtung' === $label ? 'wl-note wl-note--alert' : 'wl-note';
 				$out[] = '<div class="' . $cls . '"><p><strong>' . $label . '</strong> ' . warleek_md_inline( $nm[2] ) . '</p></div>';

@@ -42,6 +42,7 @@ chk( 'hr', warleek_md_to_html( "Text\n\n---\n\nMehr", false ), "<p>Text</p>\n<hr
 chk( 'quote', warleek_md_to_html( '> Zitat', false ), '<blockquote><p>Zitat</p></blockquote>' );
 chk( 'note', warleek_md_to_html( '> [!hinweis] Pass auf.', false ), '<div class="wl-note"><p><strong>Hinweis</strong> Pass auf.</p></div>' );
 chk( 'warn', warleek_md_to_html( '> [!achtung] Gefahr.', false ), '<div class="wl-note wl-note--alert"><p><strong>Achtung</strong> Gefahr.</p></div>' );
+chk( 'stand', warleek_md_to_html( '> [!stand] September 2026 · Early Access.', false ), '<p class="wl-stand">Stand: September 2026 · Early Access.</p>' );
 chk( 'fence', warleek_md_to_html( "```\nHKEY_LOCAL\\Machine <x>\n```", false ), '<pre><code>HKEY_LOCAL\Machine &lt;x&gt;</code></pre>' );
 chk( 'fence-lang', warleek_md_to_html( "```bash\nls -la\n```", false ), '<pre><code>ls -la</code></pre>' );
 chk( 'fence-keeps-md', warleek_md_to_html( "```\n# kein Heading\n- keine Liste\n```", false ), "<pre><code># kein Heading\n- keine Liste</code></pre>" );
