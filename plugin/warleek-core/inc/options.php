@@ -31,9 +31,14 @@ function warleek_option_fields() {
 		'translate_budget'   => array( 'Übersetzungen je Lauf',   'int',      '5',   'Deckel pro Sync-Lauf. Der stündliche Cron holt den Rest nach.' ),
 		'consent_enabled'    => array( 'Einwilligungs-Banner',    'bool',     '1',   'Zeigt den Hinweis unten am Bildschirm. Ohne eingebettete externe Medien ist er rechtlich nicht nötig – dann kannst du ihn ausschalten.' ),
 		'consent_title'      => array( 'Banner: Überschrift',     'text',     'Externe Videos erlauben?', 'Kurze Zeile über dem Text.' ),
-		'consent_text'       => array( 'Banner: Text',            'textarea', 'Warleek setzt keine Werbe- oder Analyse-Cookies und lädt nichts von fremden Servern. Nur für eingebettete Videos brauchen wir deine Einwilligung – erst dann wird eine Verbindung zu YouTube aufgebaut.', 'Was im Banner steht. Bleib bei dem, was die Seite wirklich tut.' ),
+		'consent_text'       => array( 'Banner: Text',            'textarea', 'Warleek setzt keine Werbe- oder Analyse-Cookies und lädt nichts von fremden Servern. Nur für eingebettete Videos brauchen wir deine Einwilligung – erst dann wird eine Verbindung zu YouTube oder Vimeo aufgebaut.', 'Was im Banner steht. Bleib bei dem, was die Seite wirklich tut.' ),
 		'consent_accept'     => array( 'Banner: Zustimmen',       'text',     'Externe Videos erlauben', 'Beschriftung der Zustimmen-Schaltfläche.' ),
 		'consent_decline'    => array( 'Banner: Ablehnen',        'text',     'Nur notwendige',          'Beschriftung der Ablehnen-Schaltfläche. Muss gleichwertig aussehen – das ist Vorschrift.' ),
+		'consent_media'      => array( 'Kategorie: externe Medien', 'bool',   '1',   'Einwilligung für eingebettete Videos von YouTube und Vimeo abfragen.' ),
+		'consent_stats'      => array( 'Kategorie: Statistik',      'bool',   '0',   'Einwilligung für Reichweitenmessung abfragen. Erst einschalten, wenn unten auch ein Skript hinterlegt ist.' ),
+		'consent_stats_label'=> array( 'Statistik: Beschriftung',   'text',   'Anonyme Reichweitenmessung', 'Steht als Auswahl im Banner.' ),
+		'analytics_code'     => array( 'Statistik: Einbindungscode', 'code',  '',    'Vollständiger &lt;script&gt;-Block deines Analyse-Werkzeugs. Wird erst nach der Einwilligung ausgeführt – vorher steht er als toter Text im Quelltext. Leer lassen, solange nichts gemessen wird. <strong>Wichtig:</strong> Sobald hier etwas steht, gehört das Werkzeug samt Anbieter auch in die Datenschutzerklärung.' ),
+		'external_nofollow'  => array( 'Externe Links entwerten',   'bool',   '1',   'Setzt bei allen externen Links in Guides und Patch Notes rel="nofollow noopener noreferrer" – gedacht für Quellenangaben.' ),
 	);
 }
 
@@ -66,6 +71,11 @@ function warleek_sanitize_options( $input ) {
 			case 'email': $out[ $key ] = $val ? sanitize_email( $val ) : ''; break;
 			case 'bool':  $out[ $key ] = $val ? '1' : '0'; break;
 			case 'textarea': $out[ $key ] = sanitize_textarea_field( $val ); break;
+			case 'code':
+				// Einbindungscode darf Skript-Markup enthalten – aber nur von Leuten,
+				// die ohnehin unfiltered_html dürfen. Sonst bleibt reiner Text übrig.
+				$out[ $key ] = current_user_can( 'unfiltered_html' ) ? trim( (string) $val ) : wp_strip_all_tags( $val );
+				break;
 			case 'password':
 				// Leeres Feld bedeutet „unverändert" – sonst würde jedes Speichern den Schlüssel löschen.
 				$old = (array) get_option( 'warleek_options', array() );
@@ -110,6 +120,13 @@ function warleek_render_option_field( $args ) {
 			esc_attr( $key ),
 			esc_attr( $val ? '•••••••• (gespeichert – leer lassen, um ihn zu behalten)' : 'sk-ant-…' ),
 			esc_html( $def[3] )
+		);
+		return;
+	}
+	if ( 'code' === $def[1] ) {
+		printf(
+			'<textarea id="warleek_%1$s" name="warleek_options[%1$s]" rows="6" class="large-text code" spellcheck="false" placeholder="&lt;script&gt;…&lt;/script&gt;">%2$s</textarea><p class="description">%3$s</p>',
+			esc_attr( $key ), esc_textarea( $val ), wp_kses_post( $def[3] )
 		);
 		return;
 	}

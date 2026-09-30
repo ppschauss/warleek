@@ -24,6 +24,8 @@ Wer aus einem Flugsimulator kommt, stellt den Stick irgendwohin und lässt ihn d
 
 Allein diese Umstellung im Kopf verändert das Fliegen mehr als jede Einstellung.
 
+![Das Gamepad-Menü von Wardogs mit den Werten für Roll, Pitch und Yaw: Empfindlichkeit 1.05, Deadzone 0.00, nur beim Gieren 0.05.](vid-gamepad-werte "So sehen die Werte im Spiel aus: Empfindlichkeit 1,05 auf allen drei Achsen, Deadzone nur beim Gieren. Screenshot aus dem Video von Tote Torres (0:48).")
+
 ## Warum der Empfindlichkeitsregler eine Falle ist
 
 Es gibt Regler für Pitch, Roll, Yaw und Kollektiv. Dreht man Roll auf zum Beispiel 0.1, passiert nicht nur das Erhoffte:
@@ -44,6 +46,8 @@ Wardogs hat **keine** eigene Kurveneinstellung. Die meisten Joysticks bringen da
 3. Am Anschlag erreichst du **denselben Maximalwert wie vorher**.
 
 Damit hast du die Feinarbeit, ohne das obere Ende zu verschenken. Im Spiel bleibt die Empfindlichkeit bei 1.0 oder darüber.
+
+![Der Kurveneditor der VKB-Software mit einer nach oben gebogenen Kennlinie.](vid-vkb-kurve "Dieselbe Kurve im Kurveneditor des Stick-Treibers: flach um die Mitte, steil zum Anschlag. Screenshot aus dem Video von Sim Controls (7:20).")
 
 ## Deadzone: nur, wenn dein Stick sie braucht
 
@@ -104,6 +108,8 @@ Alles, was du **im Flug und im Gefecht** brauchst, muss erreichbar sein, ohne di
 
 Der Rest darf hingehen, wo Platz ist.
 
+![Joystick und Schubhebel mit beschrifteten Tasten: Kameradrehung, Fracht abwerfen, Täuschkörper, Karte, Funk, Waffen.](vid-hotas-belegung "Eine Belegung, die das erfüllt – Stick links, Schubhebel rechts. Screenshot aus dem Video von Sim Controls (0:50).")
+
 ## Danke an
 
 Dieser Guide fasst zwei englischsprachige Videos zusammen und ergänzt sie um das, was dazwischen steht:
@@ -111,6 +117,6 @@ Dieser Guide fasst zwei englischsprachige Videos zusammen und ergänzt sie um da
 - **Sim Controls** – [WARDOGS HOTAS Setup Guide | Better Controls & Sensitivity](https://www.youtube.com/watch?v=wtRRZ8nPfFM) (VKB Gladiator + TWCS, Deadzone, Kalibrierung, Kurven)
 - **Tote Torres** – [How I Set Up My HOTAS for War Dogs Helicopters](https://www.youtube.com/watch?v=IHcD8c_iqD0) (Logitech G940, Empfindlichkeit hoch, ohne Kurven)
 
-[warleek_video id="wtRRZ8nPfFM" title="WARDOGS HOTAS Setup Guide: Better Controls & Sensitivity" kanal="Sim Controls" bild="guide-hotas-settings"]
+> [!hinweis] Die Bildschirmfotos in diesem Guide stammen aus den beiden verlinkten Videos und sind jeweils mit Kanal und Zeitangabe gekennzeichnet. Alle Rechte daran liegen bei den Urhebern; sie stehen hier als Beleg zu dem, was im Text erklärt wird.
 
 Wie du damit tatsächlich fliegst, steht im Guide [Mit dem HOTAS fliegen](/guides/wardogs-hotas-fliegen/). Für die reine Tastenbelegung am Dual-Stick: [Wardogs mit HOTAS – T.16000M einrichten](/guides/wardogs-hotas-dual-stick/).

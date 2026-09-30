@@ -46,17 +46,27 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 .site-nav .wp-block-navigation__responsive-container-open svg, .site-nav .wp-block-navigation__responsive-container-close svg { width: 28px; height: 28px; }
 .site-nav .wl-chat--header .wl-chat__btn { padding: 0.5rem 1rem; font-size: 0.9rem; }
 
-/* Mobiles Overlay-Menü (WP-Core-Markup .is-menu-open) */
+/* Mobiles Overlay-Menü (WP-Core-Markup .is-menu-open)
+   Achtung: Der Core setzt über `.wp-block-navigation:not(.has-text-color) … .is-menu-open`
+   ein hartes `color:#000` – diese Regel ist spezifischer als eine eigene ohne Block-Klasse.
+   Deshalb hier dieselbe Spezifität plus !important **und** eine Farbe direkt auf den
+   Einträgen; sonst steht Schwarz auf Schwarz. */
 .site-nav .wp-block-navigation__responsive-container.is-menu-open {
 	position: fixed; inset: 0; z-index: 100000;
-	background: var(--wp--preset--color--base) !important; color: var(--wp--preset--color--text);
+	background: var(--wp--preset--color--base) !important; color: var(--wp--preset--color--text) !important;
 	padding: 5.5rem clamp(1.25rem, 6vw, 2.5rem) 2.5rem; overflow-y: auto;
 	background-image: radial-gradient(900px 500px at 90% -10%, rgba(74, 90, 68, 0.35), transparent 60%) !important;
 }
+.site-nav .wp-block-navigation:not(.has-text-color) .wp-block-navigation__responsive-container.is-menu-open { color: var(--wp--preset--color--text) !important; }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content { align-items: flex-start; gap: 0; }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container { display: flex; flex-direction: column; align-items: stretch; gap: 0; width: 100%; }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item { width: 100%; border-bottom: var(--wl-border); }
-.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content { display: block; padding: 0.9rem 0; font-size: 1.5rem; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content { display: block; padding: 0.9rem 0; font-size: 1.5rem; color: var(--wp--preset--color--leek-light) !important; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:hover,
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:focus { color: var(--wp--preset--color--leek) !important; }
+/* Aufklappbare Einträge ohne eigenen Link (nur <button>/<span>) müssen dieselbe Farbe tragen. */
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle,
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item > span { color: var(--wp--preset--color--leek-light) !important; }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle { display: none; }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container {
 	display: flex !important; flex-direction: column; position: static; width: 100%; min-width: 0;
@@ -64,8 +74,9 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 	padding: 0 0 0.5rem 1rem; height: auto !important; overflow: visible !important;
 }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item { border: 0; }
-.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content { font-size: 1.05rem; padding: 0.45rem 0; color: var(--wp--preset--color--steel); font-family: var(--wp--preset--font-family--body); text-transform: none; letter-spacing: 0; font-weight: 500; }
-.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover { color: var(--wp--preset--color--leek); }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content { font-size: 1.05rem; padding: 0.45rem 0; color: var(--wp--preset--color--text) !important; font-family: var(--wp--preset--font-family--body); text-transform: none; letter-spacing: 0; font-weight: 500; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover,
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content:focus { color: var(--wp--preset--color--leek) !important; }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-icon { display: none; }
 .site-nav .wp-block-navigation__responsive-container-close { position: fixed; top: 1.1rem; right: 1.25rem; z-index: 100001; padding: 0.5rem; background: var(--wp--preset--color--surface); border: var(--wl-border); border-radius: var(--wl-radius); }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open::before {
@@ -410,6 +421,10 @@ p img {
 .wl-btn--ghost { background: transparent; color: var(--wp--preset--color--leek-light); border-color: rgba(154, 168, 150, 0.5); }
 .wl-btn--ghost:hover { background: var(--wp--preset--color--surface-2); border-color: var(--wp--preset--color--leek); color: var(--wp--preset--color--leek); }
 
+/* Solange das mobile Menü offen ist, muss der Hinweis weg. Ein höherer z-index
+   hilft hier nicht: Der sticky Header macht einen eigenen Stapelkontext auf,
+   das Overlay liegt darin – seine 100000 gelten also nur innerhalb des Headers. */
+html.has-modal-open .wl-consent { display: none; }
 .wl-consent {
 	position: fixed; inset: auto 0 0 0; z-index: 90;
 	background: var(--wp--preset--color--surface); border-top: 2px solid var(--wp--preset--color--leek);
@@ -444,3 +459,6 @@ p img {
 .wl-video__ask p { margin: 0 0 0.7rem; }
 .wl-video__ask p:last-child { margin-bottom: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
 .wl-video__hint { font-size: 0.85rem; color: var(--wp--preset--color--steel); }
+.wl-consent__choices { list-style: none; margin: 0.7rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; }
+.wl-consent__choices label { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.92rem; color: var(--wp--preset--color--text); cursor: pointer; }
+.wl-consent__choices input { accent-color: var(--wp--preset--color--leek); width: 1.05rem; height: 1.05rem; }

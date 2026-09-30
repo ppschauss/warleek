@@ -408,5 +408,30 @@
         "alt": "Blick aus dem Cockpit eines leichten Helikopters, der in steiler Schräglage ein Industriegelände umkreist",
         "use": "guide-hotas-fliegen",
         "size": 74690
+    },
+    "vid-gamepad-werte.webp": {
+        "alt": "Das Gamepad-Menü von Wardogs mit den Werten für Roll, Pitch und Yaw: Empfindlichkeit 1.05, Deadzone 0.00, nur beim Gieren 0.05.",
+        "use": "vid-gamepad-werte",
+        "size": 22370
+    },
+    "vid-vkb-kurve.webp": {
+        "alt": "Der Kurveneditor der VKB-Software mit einer nach oben gebogenen Kennlinie.",
+        "use": "vid-vkb-kurve",
+        "size": 17836
+    },
+    "vid-hotas-belegung.webp": {
+        "alt": "Joystick und Schubhebel mit beschrifteten Tasten: Kameradrehung, Fracht abwerfen, Täuschkörper, Karte, Funk, Waffen.",
+        "use": "vid-hotas-belegung",
+        "size": 19064
+    },
+    "vid-flugassistenten.webp": {
+        "alt": "Das Steuerungsmenü von Wardogs mit eingeschaltetem Freelook und abgeschalteten Flugassistenten.",
+        "use": "vid-flugassistenten",
+        "size": 24202
+    },
+    "vid-sichtfeld.webp": {
+        "alt": "Das Sichtfeld-Menü mit einer Vorschau, die 60 und 90 Grad im Cockpit vergleicht.",
+        "use": "vid-sichtfeld",
+        "size": 30500
     }
 }

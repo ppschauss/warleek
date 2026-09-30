@@ -219,3 +219,47 @@ Lighthouse mobil nach dem Einbau: Performance 97, Accessibility 100, SEO 100, CL
 
 ### Tests
 Sieben Testdateien grün, davon neu `seo-test.php` (Versionsnummern, Kürzung an der Wortgrenze, Datum in Titel und Beschreibung, Länderbezug, kein englischer Text ohne Übersetzung, Spiel-Schema).
+
+## Mobiles Menü, Einwilligungs-Kategorien und Video-Screenshots – Version 2.5.0 (30.09.2026)
+
+### Der Fehler, der auf der Live-Seite aufgefallen ist
+Die obersten Menüpunkte im mobilen Overlay waren **schwarz auf schwarz**. Gemessen: `rgb(0,0,0)` auf `rgb(13,17,15)` – Kontrast **1,10:1**. Ursache ist eine Core-Regel, die auf das offene Overlay ein hartes `color:#000` legt:
+
+```
+.wp-block-navigation:not(.has-text-color) .wp-block-navigation__responsive-container.is-menu-open
+```
+
+Diese Regel hat drei Klassen, die eigene hatte zwei – der Core gewinnt. Der Hintergrund stimmte nur deshalb, weil er mit `!important` gesetzt war, die Schriftfarbe nicht.
+
+Behoben mit gleicher Spezifität plus `!important` **und** einer Farbe direkt auf den Einträgen. Nachgemessen: **12,06:1** für aufklappbare Punkte, **17,06:1** für die übrigen, **15,63:1** für Untermenüs – alle über 4,5:1.
+
+**Und ein zweiter Fehler, den erst der Screenshot zeigte:** Das Einwilligungsbanner lag über dem offenen Menü, obwohl das Menü z-index 100000 hat und das Banner 90. Grund: Der sticky Header (`z-index: 50`) macht einen eigenen Stapelkontext auf – die 100000 gelten nur *innerhalb* des Headers. Mein vorheriger Test verglich blanke z-index-Werte und hat das deshalb nicht gefunden. Gelöst über `html.has-modal-open .wl-consent { display: none; }`.
+
+### Einwilligung mit Kategorien
+Zwei Kategorien: **externe Medien** (YouTube, Vimeo) und **Statistik**. Bei mehr als einer Kategorie zeigt das Banner Einzelauswahl plus „Auswahl speichern"; bei einer bleibt es bei zwei Schaltflächen.
+
+Der Einbindungscode einer Reichweitenmessung steht als `type="text/plain"` im Quelltext und wird erst nach der Einwilligung ausgeführt. Mit echtem Klick geprüft:
+
+| Zeitpunkt | Skript gelaufen |
+| --- | --- |
+| Seitenaufruf, keine Entscheidung | **nein** |
+| nach „Alles erlauben" | ja, gespeichert als `{"v":2,"media":true,"statistik":true}` |
+
+### Externe Links
+Alle externen Links in Guides und Patch Notes bekommen `rel="nofollow noopener noreferrer"`; interne und relative Links bleiben unangetastet, vorhandene `rel`-Werte werden ergänzt statt ersetzt. Abschaltbar in den Einstellungen. Eigener Test mit acht Fällen.
+
+Zur Klarstellung: **`noindex` gibt es für Links nicht** – das ist eine Anweisung für eine ganze Seite (Robots-Meta). Das Gegenstück auf Linkebene ist `nofollow`, und das ist gesetzt.
+
+### Video-Screenshots statt Einbettung
+Die Einbettungen sind wieder raus. Stattdessen fünf Bildschirmfotos aus den beiden Videos, jeweils mit Kanal und Zeitangabe in der Bildunterschrift und einem Bildnachweis im Guide:
+
+- Gamepad-Menü mit Empfindlichkeit 1,05 und Deadzone nur beim Gieren (Tote Torres, 0:48)
+- Kurveneditor der Stick-Software (Sim Controls, 7:20)
+- beschriftete HOTAS-Belegung (Sim Controls, 0:50)
+- Steuerungsmenü mit Freelook an und Flugassistenten aus (Tote Torres, 3:20)
+- Sichtfeld-Menü mit Vorschau 60 gegen 90 Grad (Tote Torres, 4:35)
+
+Die Aufnahmen bestätigen die Zahlen, die vorher nur aus den Untertiteln stammten. Höhere Auflösung als 640 px war nicht zu bekommen: YouTube liefert für diese Videos über die zugängliche Schnittstelle nur noch 360p.
+
+### Tests
+Acht Testdateien grün, davon neu `nofollow-test.php`.

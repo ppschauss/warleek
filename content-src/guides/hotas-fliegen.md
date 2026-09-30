@@ -22,6 +22,8 @@ Der Grund ist einfach: Das Flugmodell fühlt sich ohnehin **schwer und träge** 
 
 Und keine Sorge vor dem Schweben: Genau **weil** das Modell träge ist, bleibt der Helikopter auch ohne Auto-Hover ziemlich bereitwillig an Ort und Stelle.
 
+![Das Steuerungsmenü von Wardogs mit eingeschaltetem Freelook und abgeschalteten Flugassistenten.](vid-flugassistenten "Freelook an, Flight Assists aus – die beiden Schalter, auf die es ankommt. Screenshot aus dem Video von Tote Torres (3:20).")
+
 ## Sichtfeld hochdrehen
 
 Ein unterschätzter Punkt. Mit engem Sichtfeld im Cockpit entsteht Tunnelblick: Du klebst am Ziel und übersiehst, was von der Seite kommt – und wirst dafür bestraft.
@@ -30,6 +32,8 @@ Ein unterschätzter Punkt. Mit engem Sichtfeld im Cockpit entsteht Tunnelblick: 
 - **Außenansicht:** so weit wie möglich. Dort willst du Raketen und Schützen sehen, nicht hübsch aussehen.
 
 Wer Head-Tracking hat, schaltet zusätzlich **Free Look** ein und fliegt dauerhaft aus dem Cockpit. Nötig ist das nicht, angenehm schon.
+
+![Das Sichtfeld-Menü mit einer Vorschau, die 60 und 90 Grad im Cockpit vergleicht.](vid-sichtfeld "Das Spiel zeigt den Unterschied selbst: enges Sichtfeld heißt Tunnelblick. Screenshot aus dem Video von Tote Torres (4:35).")
 
 ## Die wichtigste Angewohnheit: mit dem Gieren steuern
 
@@ -99,6 +103,6 @@ Flugabwehr steht meist erhöht. Du kommst tief und schnell an, ziehst über der 
 - **Tote Torres** – [How I Set Up My HOTAS for War Dogs Helicopters](https://www.youtube.com/watch?v=IHcD8c_iqD0): Sichtfeld, Assistenten, Gier-Führung, Combat Orbit und die schnelle Landung stammen aus diesem Video.
 - **Sim Controls** – [WARDOGS HOTAS Setup Guide](https://www.youtube.com/watch?v=wtRRZ8nPfFM): die Einstellungsseite dazu.
 
-[warleek_video id="IHcD8c_iqD0" title="How I Set Up My HOTAS for War Dogs Helicopters" kanal="Tote Torres" bild="guide-hotas-fliegen"]
+> [!hinweis] Die Bildschirmfotos in diesem Guide stammen aus den beiden verlinkten Videos und sind jeweils mit Kanal und Zeitangabe gekennzeichnet. Alle Rechte daran liegen bei den Urhebern; sie stehen hier als Beleg zu dem, was im Text erklärt wird.
 
 Wer mit Maus und Tastatur fliegt, findet das Passende unter [Helikopter fliegen mit Maus und Tastatur](/guides/wardogs-helikopter-fliegen/).

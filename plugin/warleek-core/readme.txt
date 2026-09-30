@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.4.0
+Stable tag: 2.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,16 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.5.0 =
+* **Mobiles Menü lesbar.** Die obersten Menüpunkte standen schwarz auf schwarz, weil eine Core-Regel `color:#000` auf das offene Overlay setzt und spezifischer war als die eigene. Kontrast jetzt 12:1 bis 17:1 statt 1,1:1.
+* Das Einwilligungsbanner verschwindet, solange das mobile Menü offen ist – ein höherer z-index half nicht, weil der sticky Header einen eigenen Stapelkontext aufmacht.
+* Einwilligung kennt jetzt zwei Kategorien: externe Medien und Statistik, bei mehreren Kategorien mit Einzelauswahl im Banner.
+* Neues Feld für den Einbindungscode einer Reichweitenmessung. Der Code liegt bis zur Einwilligung wirkungslos im Quelltext und wird erst danach ausgeführt.
+* `[warleek_video]` unterstützt Vimeo (`plattform="vimeo"`, numerische IDs werden erkannt) mit „Do Not Track“.
+* Externe Links in Guides und Patch Notes bekommen `rel="nofollow noopener noreferrer"` – abschaltbar in den Einstellungen.
+* Die beiden HOTAS-Guides zeigen statt eingebetteter Videos jetzt Bildschirmfotos daraus, jeweils mit Kanal und Zeitangabe.
+* Datenschutzerklärung um Reichweitenmessung und Vimeo erweitert.
 
 = 2.4.0 =
 * SEO auf DACH umgestellt: Titel und Beschreibungen aller Guides und Seiten neu geschrieben nach dem Muster Wardogs + Thema + Sprache/Land, Titel und Beschreibung bewusst unterschiedlich formuliert und auf Suchergebnis-Länge geprüft.
