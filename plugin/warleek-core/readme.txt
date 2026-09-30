@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.5.0
+Stable tag: 2.5.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.5.1 =
+* Die Schaltfläche „Jetzt nach Updates suchen" fehlte in der Oberfläche – der Handler war da, nur verlinkt hat ihn niemand. Sie steht jetzt samt Versionszeile über allen drei Registerkarten.
+* „Erneut prüfen" auf Dashboard → Aktualisierungen leert jetzt auch unseren Manifest-Zwischenspeicher. Vorher klickte man dort und bekam bis zu sechs Stunden lang die alte Antwort.
 
 = 2.5.0 =
 * **Mobiles Menü lesbar.** Die obersten Menüpunkte standen schwarz auf schwarz, weil eine Core-Regel `color:#000` auf das offene Overlay setzt und spezifischer war als die eigene. Kontrast jetzt 12:1 bis 17:1 statt 1,1:1.

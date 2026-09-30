@@ -36,6 +36,12 @@ function warleek_update_manifest_url() {
  * @return array|false
  */
 function warleek_update_manifest( $force = false ) {
+	// „Erneut prüfen" auf Dashboard → Aktualisierungen leert die Zwischenspeicher von
+	// WordPress, nicht unseren. Ohne diese Zeile klickt man dort und bekommt trotzdem
+	// die alte Antwort, bis die sechs Stunden um sind.
+	if ( ! $force && is_admin() && ! empty( $_GET['force-check'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- nur ein Lesevorgang, WordPress prüft den Link selbst
+		$force = true;
+	}
 	if ( ! $force ) {
 		$cached = get_site_transient( WARLEEK_UPDATE_CACHE );
 		if ( false !== $cached ) { return is_array( $cached ) ? $cached : false; }
@@ -196,3 +202,32 @@ function warleek_update_admin_notice() {
 	printf( '<div class="notice notice-info is-dismissible"><p>%s</p></div>', esc_html( $msg ) );
 }
 add_action( 'admin_notices', 'warleek_update_admin_notice' );
+
+/**
+ * Versionszeile mit der Schaltfläche „Jetzt nach Updates suchen".
+ *
+ * Ohne diese Schaltfläche bleibt einem nur Warten: WordPress fragt von sich aus
+ * etwa zweimal am Tag nach, und unser Manifest liegt sechs Stunden im
+ * Zwischenspeicher. Der Knopf leert beides und holt die Antwort sofort.
+ */
+function warleek_render_update_box() {
+	$m       = get_site_transient( WARLEEK_UPDATE_CACHE );
+	$neuste  = is_array( $m ) ? ( $m['plugin']['version'] ?? '' ) : '';
+	$aktuell = ! $neuste || version_compare( $neuste, WARLEEK_CORE_VERSION, '<=' );
+	$link    = wp_nonce_url( admin_url( 'admin.php?page=warleek&warleek_update_check=1' ), 'warleek_update_check' );
+	?>
+	<div class="notice notice-<?php echo $aktuell ? 'info' : 'warning'; ?>" style="margin:0 0 18px">
+		<p style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+			<span>
+				Installiert: <strong>Plugin <?php echo esc_html( WARLEEK_CORE_VERSION ); ?></strong>,
+				<strong>Theme <?php echo esc_html( wp_get_theme( 'warleek' )->get( 'Version' ) ?: '–' ); ?></strong>
+				<?php if ( $neuste ) : ?>
+					· zuletzt veröffentlicht: <strong><?php echo esc_html( $neuste ); ?></strong>
+					<?php echo $aktuell ? '' : ' – <a href="' . esc_url( admin_url( 'update-core.php' ) ) . '">jetzt aktualisieren</a>'; ?>
+				<?php endif; ?>
+			</span>
+			<a class="button" href="<?php echo esc_url( $link ); ?>">Jetzt nach Updates suchen</a>
+		</p>
+	</div>
+	<?php
+}

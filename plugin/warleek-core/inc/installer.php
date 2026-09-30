@@ -634,6 +634,7 @@ function warleek_render_admin_page() {
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek-import' ) ); ?>" class="nav-tab <?php echo $import ? 'nav-tab-active' : ''; ?>">Guides importieren</a>
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek-settings' ) ); ?>" class="nav-tab <?php echo $settings ? 'nav-tab-active' : ''; ?>">Einstellungen</a>
 		</h2>
+		<?php warleek_render_update_box(); ?>
 		<?php
 		if ( $settings )     { warleek_render_settings_tab(); }
 		elseif ( $import )   { warleek_render_import_tab(); }

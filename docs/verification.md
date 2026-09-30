@@ -263,3 +263,14 @@ Die Aufnahmen bestätigen die Zahlen, die vorher nur aus den Untertiteln stammte
 
 ### Tests
 Acht Testdateien grün, davon neu `nofollow-test.php`.
+
+## Update-Meldung kam nicht an – Version 2.5.1 (30.09.2026)
+
+Auf der Live-Seite (2.4.0) tauchte keine Update-Meldung auf, obwohl 2.5.0 veröffentlicht war. Zwei Ursachen, beide behoben:
+
+1. **Die Schaltfläche „Jetzt nach Updates suchen" gab es gar nicht.** Der Handler war seit 2.0.0 vorhanden und funktionsfähig, aber nichts in der Oberfläche verlinkte ihn – ein toter Pfad, der beim Bauen des Update-Kanals nie aufgefallen ist, weil die Dev-Instanz ohnehin immer die neueste Version hatte. Jetzt steht über allen drei Registerkarten eine Zeile mit installierter Version, zuletzt veröffentlichter Version und der Schaltfläche.
+2. **„Erneut prüfen" auf Dashboard → Aktualisierungen half nicht.** Es leert die Zwischenspeicher von WordPress, nicht unseren – der hält das Manifest sechs Stunden. Jetzt gilt `force-check` auch für uns.
+
+**Geprüft** (Puppeteer, echte Anmeldung im Backend): Zwischenspeicher künstlich auf ein 2.4.0-Manifest gesetzt, Schaltfläche gefunden und geklickt, Rückmeldung „Neueste Veröffentlichung: Plugin 2.5.0, Theme 2.5.0", Zwischenspeicher danach auf 2.5.0.
+
+**Zum Zeitverhalten ohne Knopf:** WordPress fragt von sich aus etwa zweimal täglich nach, unser Manifest liegt sechs Stunden im Zwischenspeicher. Ohne Zutun kann eine neue Veröffentlichung also einen halben bis ganzen Tag brauchen, bis sie im Dashboard steht. Das ist normal – und ab 2.5.1 mit einem Klick abkürzbar.
