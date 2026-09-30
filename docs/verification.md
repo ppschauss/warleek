@@ -274,3 +274,36 @@ Auf der Live-Seite (2.4.0) tauchte keine Update-Meldung auf, obwohl 2.5.0 veröf
 **Geprüft** (Puppeteer, echte Anmeldung im Backend): Zwischenspeicher künstlich auf ein 2.4.0-Manifest gesetzt, Schaltfläche gefunden und geklickt, Rückmeldung „Neueste Veröffentlichung: Plugin 2.5.0, Theme 2.5.0", Zwischenspeicher danach auf 2.5.0.
 
 **Zum Zeitverhalten ohne Knopf:** WordPress fragt von sich aus etwa zweimal täglich nach, unser Manifest liegt sechs Stunden im Zwischenspeicher. Ohne Zutun kann eine neue Veröffentlichung also einen halben bis ganzen Tag brauchen, bis sie im Dashboard steht. Das ist normal – und ab 2.5.1 mit einem Klick abkürzbar.
+
+## Mobile Navigation neu gebaut – Version 2.6.0 (30.09.2026)
+
+### Was falsch war
+Ein Blick ins Menü und in `nav.json` zeigte drei Dinge auf einmal:
+
+1. **Fünf Themen standen doppelt.** Einsteiger, FOB, Logistik, Gameplay und Equipment gab es einmal als `/thema/…` (Guide-Filter) und einmal als `/wardogs/…` (Themenseite) – im mobilen Overlay direkt untereinander.
+2. **Technik fehlte komplett.** Weder als Filter noch als Themenseite verlinkt, obwohl es mit sechs Guides das zweitgrößte Thema ist. Über die Navigation war es nicht erreichbar.
+3. Die `/thema/…`-Seiten sind absichtlich **noindex** – wir verlinkten also prominent genau die Seiten, die wir Suchmaschinen vorenthalten.
+
+### Was jetzt steht
+Guides · Das Spiel (mit Überblick und allen sechs Themen) · Patch Notes · Partner · About us. Die Themenauswahl für die Bibliothek passiert über die Filter-Chips auf `/guides/`, die es ohnehin gibt.
+
+### Drei Anläufe, bis das Akkordeon saß
+- **Erster Versuch:** die vorhandene Core-Logik nutzen. Der Umschalter war da, wurde aber von meinem eigenen `display:none` versteckt. Nach dem Entfernen zeigte die Messung: `aria-expanded` bleibt im Overlay dauerhaft `true`, der Core hält dort alle Untermenüs offen und reagiert nicht auf den Knopf.
+- **Zweiter Versuch:** eigene Klasse `wl-open`, gesetzt per Skript. Funktionierte sofort – 5 Zeilen zugeklappt, 12 aufgeklappt, beim zweiten Tipp wieder 5.
+- **Dritter Punkt:** Beschriftung und Pfeil standen zentriert untereinander, weil der Core die Einträge im Overlay als zentrierte Flex-Container anlegt. Statt weiter gegen fremde Flex-Regeln anzuschreiben, ist die Beschriftung jetzt ein normaler Block und der Umschalter sitzt absolut am rechten Rand. Gemessen: Beschriftung bei x=23 über die volle Breite, Umschalter bei x=319.
+
+### Geprüft
+| Prüfung | Ergebnis |
+| --- | --- |
+| zugeklappt | 5 sichtbare Links, Inhaltshöhe 844 px = genau ein Bildschirm |
+| Tipp auf den Umschalter | 12 Links |
+| erneuter Tipp | wieder 5 |
+| Suchfeld im Overlay | vorhanden und sichtbar, auf Desktop ausgeblendet |
+| aktuelle Seite | markiert, mit `aria-current` |
+| auf `/wardogs/technik/` | Zweig öffnet sich von selbst, „Technik" markiert |
+| Kontrast | alle Einträge über 4,5:1 |
+| JS-Fehler | keine |
+
+Lighthouse mobil unverändert: Performance 97, Accessibility 100, SEO 100. Acht Testdateien grün.
+
+**Lehre aus diesem Durchgang:** Ein Screenshot und eine Messung sagen Verschiedenes. Die Zahlen meldeten „Umschalter bei x=319, alles richtig", während das Bild noch die alte Anordnung zeigte – weil `head -4` in der Prüfkette den Node-Prozess vor dem Screenshot abgeschossen hatte. Beides ansehen, nicht eines statt des anderen.

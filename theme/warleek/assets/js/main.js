@@ -86,6 +86,34 @@
 			d.querySelectorAll('.wl-stat__num').forEach(function (n) { cio.observe(n); });
 		}
 
+		// Untermenüs im mobilen Overlay auf- und zuklappen.
+		// WordPress lässt im Overlay grundsätzlich alle Untermenüs offen und reagiert
+		// dort nicht auf den Umschalter – deshalb eine eigene Klasse `wl-open` statt
+		// des aria-Zustands aus dem Core. Ohne dieses Skript bleibt alles offen,
+		// das Menü ist dann lang, aber vollständig bedienbar.
+		d.addEventListener('click', function (ev) {
+			var knopf = ev.target.closest('.is-menu-open .wp-block-navigation-submenu__toggle');
+			if (!knopf) { return; }
+			ev.preventDefault();
+			ev.stopPropagation();
+			var eintrag = knopf.closest('.wp-block-navigation-item');
+			if (!eintrag) { return; }
+			var offen = eintrag.classList.toggle('wl-open');
+			knopf.setAttribute('aria-expanded', offen ? 'true' : 'false');
+		}, true);
+
+		// Beim Öffnen des Menüs den Zweig aufklappen, in dem man gerade steht.
+		d.addEventListener('click', function (ev) {
+			if (!ev.target.closest('.wp-block-navigation__responsive-container-open')) { return; }
+			setTimeout(function () {
+				d.querySelectorAll('.is-menu-open .current-menu-ancestor').forEach(function (li) {
+					li.classList.add('wl-open');
+					var k = li.querySelector('.wp-block-navigation-submenu__toggle');
+					if (k) { k.setAttribute('aria-expanded', 'true'); }
+				});
+			}, 60);
+		});
+
 		// Gruß an alle, die hier reinschauen.
 		try {
 			var css = 'color:#9be15d;background:#0d110f;font:bold 14px/1.6 "Barlow Condensed",Impact,sans-serif;padding:8px 14px;letter-spacing:.08em';

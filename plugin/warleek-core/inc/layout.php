@@ -47,3 +47,51 @@ function warleek_serve_redirects() {
 	exit;
 }
 add_action( 'template_redirect', 'warleek_serve_redirects', 1 );
+
+/**
+ * Aktuellen Menüpunkt markieren.
+ *
+ * Der Navigations-Block vergibt `current-menu-item` nur für Einträge, die auf
+ * einen Beitrag oder eine Seite zeigen. Unsere Menüpunkte sind eigene Links
+ * („kind": „custom"), also markiert WordPress nichts – im Menü war nie zu sehen,
+ * wo man gerade ist. Das holen wir hier nach: Adresse vergleichen, Klasse setzen,
+ * `aria-current` mitgeben, damit auch Screenreader es wissen.
+ *
+ * @param string $html  Gerendertes Block-Markup.
+ * @param array  $block Block-Daten.
+ * @return string
+ */
+function warleek_nav_mark_current( $html, $block ) {
+	if ( is_admin() || '' === trim( $html ) ) { return $html; }
+	$url = $block['attrs']['url'] ?? '';
+	if ( '' === $url ) { return $html; }
+
+	$jetzt = trailingslashit( wp_parse_url( add_query_arg( array() ), PHP_URL_PATH ) ?: '/' );
+	$ziel  = trailingslashit( wp_parse_url( $url, PHP_URL_PATH ) ?: '/' );
+	// Die Startseite darf nicht bei jedem Aufruf mitleuchten.
+	if ( '/' === $ziel ) { return $html; }
+
+	if ( $jetzt === $ziel ) {
+		$klasse = 'current-menu-item';
+		$aria   = ' aria-current="page"';
+	} elseif ( 'core/navigation-submenu' === ( $block['blockName'] ?? '' ) && str_starts_with( $jetzt, $ziel ) ) {
+		// „Übergeordnet" gilt nur für aufklappbare Punkte. Sonst würde bei
+		// /wardogs/technik/ auch der Untermenü-Eintrag „Überblick" (/wardogs/)
+		// mitleuchten – zwei Markierungen, von denen eine falsch ist.
+		$klasse = 'current-menu-ancestor';
+		$aria   = '';
+	} else {
+		return $html;
+	}
+
+	// Klasse an das äußere <li>, aria-current an den Link darin.
+	// Der Filter kann für verschachtelte Blöcke mehrfach laufen – nicht doppelt setzen.
+	if ( str_contains( $html, $klasse ) ) { return $html; }
+	$html = preg_replace( '/class="(wp-block-navigation-item[^"]*)"/', 'class="$1 ' . $klasse . '"', $html, 1 );
+	if ( ! str_contains( $html, 'aria-current' ) ) {
+		$html = preg_replace( '/<a\s/', '<a' . $aria . ' ', $html, 1 );
+	}
+	return $html;
+}
+add_filter( 'render_block_core/navigation-link', 'warleek_nav_mark_current', 10, 2 );
+add_filter( 'render_block_core/navigation-submenu', 'warleek_nav_mark_current', 10, 2 );

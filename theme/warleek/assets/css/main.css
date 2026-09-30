@@ -67,12 +67,33 @@ strong { color: var(--wp--preset--color--leek-light); font-weight: 600; }
 /* Aufklappbare Einträge ohne eigenen Link (nur <button>/<span>) müssen dieselbe Farbe tragen. */
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle,
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item > span { color: var(--wp--preset--color--leek-light) !important; }
-.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle { display: none; }
+/* Untermenü im Overlay: WordPress bringt den Umschalter samt Logik selbst mit
+   (Interactivity API). Früher war er hier versteckt und das Untermenü per
+   !important dauerhaft offen – daraus wurden 17 Zeilen am Stück. Jetzt klappt es
+   auf Tipp auf. Ohne JavaScript bleibt alles offen (die Klasse `wl-js` fehlt dann),
+   damit niemand vor einem unerreichbaren Menü steht. */
+/* Beschriftung und Umschalter in einer Zeile: Der Core legt die Einträge im
+   Overlay als zentrierte Flex-Container an. Statt dagegen anzuschreiben, bleibt
+   die Beschriftung ein normaler Block über die volle Breite und der Umschalter
+   sitzt absolut am rechten Rand der ersten Zeile. Das hält auch, wenn der Core
+   seine Flex-Regeln ändert. */
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item { display: block !important; text-align: left !important; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child { position: relative; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child > .wp-block-navigation-item__content { padding-right: 3.5rem; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child > .wp-block-navigation-submenu__toggle { position: absolute; top: 0.4rem; right: 0; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle {
+	display: inline-flex !important; align-items: center; justify-content: center; width: 3rem; height: 3rem; padding: 0;
+	background: none; border: 0; cursor: pointer; color: var(--wp--preset--color--leek);
+}
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle svg { width: 1.5rem; height: 1.5rem; transition: transform 0.2s ease; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container {
-	display: flex !important; flex-direction: column; position: static; width: 100%; min-width: 0;
+	flex-direction: column; position: static; width: 100%; min-width: 0;
 	background: transparent !important; border: 0; box-shadow: none; opacity: 1 !important; visibility: visible !important; transform: none !important;
 	padding: 0 0 0.5rem 1rem; height: auto !important; overflow: visible !important;
 }
+html.wl-js .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child > .wp-block-navigation__submenu-container { display: none !important; }
+html.wl-js .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.wl-open > .wp-block-navigation__submenu-container { display: flex !important; }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item { border: 0; }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content { font-size: 1.05rem; padding: 0.45rem 0; color: var(--wp--preset--color--text) !important; font-family: var(--wp--preset--font-family--body); text-transform: none; letter-spacing: 0; font-weight: 500; }
 .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover,
@@ -462,3 +483,24 @@ html.has-modal-open .wl-consent { display: none; }
 .wl-consent__choices { list-style: none; margin: 0.7rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; }
 .wl-consent__choices label { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.92rem; color: var(--wp--preset--color--text); cursor: pointer; }
 .wl-consent__choices input { accent-color: var(--wp--preset--color--leek); width: 1.05rem; height: 1.05rem; }
+
+/* Suchfeld im Menü: nur im mobilen Overlay, im Kopfbereich wäre es Ballast. */
+.site-nav .wl-nav-search { display: none; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wl-nav-search { display: block; width: 100%; order: -1; margin-bottom: 1.25rem; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wl-nav-search .wp-block-search__inside-wrapper { border: var(--wl-border); border-radius: var(--wl-radius); background: var(--wp--preset--color--surface); padding: 0.2rem; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wl-nav-search input[type="search"] { background: transparent; border: 0; color: var(--wp--preset--color--text); font-size: 1rem; padding: 0.55rem 0.7rem; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wl-nav-search input::placeholder { color: var(--wp--preset--color--steel); }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .wl-nav-search button { background: var(--wp--preset--color--leek); color: var(--wp--preset--color--base); border: 0; border-radius: calc(var(--wl-radius) - 2px); font-family: var(--wp--preset--font-family--heading); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.85rem; padding: 0.55rem 1rem; }
+
+/* Aktuelle Seite hervorheben – auch im Overlay, wo die Farbe sonst überschrieben wird. */
+.site-nav .wp-block-navigation .current-menu-item > .wp-block-navigation-item__content,
+.site-nav .wp-block-navigation .current-menu-ancestor > .wp-block-navigation-item__content,
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .current-menu-item > .wp-block-navigation-item__content,
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .current-menu-ancestor > .wp-block-navigation-item__content {
+	color: var(--wp--preset--color--leek) !important;
+}
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .current-menu-item > .wp-block-navigation-item__content { position: relative; }
+.site-nav .wp-block-navigation__responsive-container.is-menu-open .current-menu-item > .wp-block-navigation-item__content::before {
+	content: ""; position: absolute; left: -0.85rem; top: 50%; transform: translateY(-50%);
+	width: 4px; height: 1.1em; border-radius: 2px; background: var(--wp--preset--color--leek);
+}

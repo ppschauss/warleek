@@ -1,98 +1,83 @@
 {
- "main": [
-  {
-   "label": "Guides",
-   "url": "/guides/",
-   "children": [
-    {
-     "label": "Alle Guides",
-     "url": "/guides/"
-    },
-    {
-     "label": "Einsteiger",
-     "url": "/thema/einsteiger/"
-    },
-    {
-     "label": "FOB",
-     "url": "/thema/fob/"
-    },
-    {
-     "label": "Logistik",
-     "url": "/thema/logistik/"
-    },
-    {
-     "label": "Gameplay",
-     "url": "/thema/gameplay/"
-    },
-    {
-     "label": "Equipment",
-     "url": "/thema/equipment/"
-    }
-   ]
-  },
-  {
-   "label": "Themen",
-   "url": "/wardogs/",
-   "children": [
-    {
-     "label": "Das Spiel erklärt",
-     "url": "/wardogs/"
-    },
-    {
-     "label": "Einsteiger",
-     "url": "/wardogs/einsteiger/"
-    },
-    {
-     "label": "FOB",
-     "url": "/wardogs/fob/"
-    },
-    {
-     "label": "Logistik",
-     "url": "/wardogs/logistik/"
-    },
-    {
-     "label": "Gameplay",
-     "url": "/wardogs/gameplay/"
-    },
-    {
-     "label": "Equipment",
-     "url": "/wardogs/equipment/"
-    }
-   ]
-  },
-  {
-   "label": "Patch Notes",
-   "url": "/patch-notes/"
-  },
-  {
-   "label": "Partner",
-   "url": "/community/"
-  },
-  {
-   "label": "About us",
-   "url": "/about-us/"
-  }
- ],
- "footer": [
-  {
-   "label": "Alle Guides",
-   "url": "/guides/"
-  },
-  {
-   "label": "Das Spiel erklärt",
-   "url": "/wardogs/"
-  },
-  {
-   "label": "Patch Notes",
-   "url": "/patch-notes/"
-  },
-  {
-   "label": "Partner & Community",
-   "url": "/community/"
-  },
-  {
-   "label": "About us",
-   "url": "/about-us/"
-  }
- ]
+    "main": [
+        {
+            "label": "Guides",
+            "url": "/guides/"
+        },
+        {
+            "label": "Das Spiel",
+            "url": "/wardogs/",
+            "children": [
+                {
+                    "label": "Überblick",
+                    "url": "/wardogs/"
+                },
+                {
+                    "label": "Einsteiger",
+                    "url": "/wardogs/einsteiger/"
+                },
+                {
+                    "label": "FOB",
+                    "url": "/wardogs/fob/"
+                },
+                {
+                    "label": "Logistik",
+                    "url": "/wardogs/logistik/"
+                },
+                {
+                    "label": "Gameplay",
+                    "url": "/wardogs/gameplay/"
+                },
+                {
+                    "label": "Equipment",
+                    "url": "/wardogs/equipment/"
+                },
+                {
+                    "label": "Technik",
+                    "url": "/wardogs/technik/"
+                }
+            ]
+        },
+        {
+            "label": "Patch Notes",
+            "url": "/patch-notes/"
+        },
+        {
+            "label": "Partner",
+            "url": "/community/"
+        },
+        {
+            "label": "About us",
+            "url": "/about-us/"
+        },
+        {
+            "type": "suche"
+        }
+    ],
+    "footer": [
+        {
+            "label": "Alle Guides",
+            "url": "/guides/"
+        },
+        {
+            "label": "Das Spiel erklärt",
+            "url": "/wardogs/"
+        },
+        {
+            "label": "Technik & Steuerung",
+            "url": "/wardogs/technik/"
+        },
+        {
+            "label": "Patch Notes",
+            "url": "/patch-notes/"
+        },
+        {
+            "label": "Partner & Community",
+            "url": "/community/"
+        },
+        {
+            "label": "About us",
+            "url": "/about-us/"
+        }
+    ]
 }

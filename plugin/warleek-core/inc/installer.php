@@ -236,6 +236,12 @@ function warleek_seed_guides( array $guides, array $media, array $site, $force =
 function warleek_nav_links( array $items ) {
 	$out = '';
 	foreach ( $items as $it ) {
+		// Sondereintrag: Suchfeld im Menü. Im Kopfbereich blendet das Theme es aus,
+		// im mobilen Overlay steht es oben – bei 29 Guides oft schneller als jedes Menü.
+		if ( 'suche' === ( $it['type'] ?? '' ) ) {
+			$out .= '<!-- wp:search {"label":"Suchen","showLabel":false,"placeholder":"Guides durchsuchen …","buttonText":"Suchen","query":{"post_type":"guide"},"className":"wl-nav-search"} /-->';
+			continue;
+		}
 		$a = array( 'label' => $it['label'], 'url' => $it['url'], 'kind' => 'custom' );
 		if ( ! empty( $it['children'] ) ) {
 			$out .= '<!-- wp:navigation-submenu ' . wp_json_encode( $a, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . ' -->' . warleek_nav_links( $it['children'] ) . '<!-- /wp:navigation-submenu -->';

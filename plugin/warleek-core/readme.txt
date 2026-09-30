@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.5.1
+Stable tag: 2.6.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,13 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.6.0 =
+* **Navigation entdoppelt.** Fünf Themen standen zweimal im Menü – einmal als Guide-Filter, einmal als Themenseite. Jetzt führt „Das Spiel" die Themen, „Guides" ist ein einfacher Link auf die Bibliothek mit ihren Filter-Chips.
+* **Technik war überhaupt nicht verlinkt** – das zweitgrößte Thema mit sechs Guides war über das Menü nicht erreichbar. Jetzt drin, im Menü wie im Footer.
+* Mobiles Menü: Untermenü klappt auf Tipp auf statt dauerhaft offen zu stehen – aus 17 Zeilen werden 5. Ohne JavaScript bleibt alles offen und bedienbar.
+* Suchfeld oben im mobilen Menü, auf Guides eingeschränkt.
+* Die aktuelle Seite wird im Menü hervorgehoben, mit `aria-current` für Screenreader.
 
 = 2.5.1 =
 * Die Schaltfläche „Jetzt nach Updates suchen" fehlte in der Oberfläche – der Handler war da, nur verlinkt hat ihn niemand. Sie steht jetzt samt Versionszeile über allen drei Registerkarten.
