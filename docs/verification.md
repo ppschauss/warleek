@@ -182,3 +182,40 @@ Quellen sind überwiegend Guide-Seiten Dritter, kein offizielles Wiki – deshal
 - Alle fünf Testdateien grün.
 
 **Ein Phantom, das keines war:** Auf dem Screenshot der Guide-Bibliothek blieben die unteren Karten bildlos. Nachgemessen mit einem echten Browser (Puppeteer, `naturalWidth` je Bild): **alle 14 Bilder geladen**. Das Headless-Chromium hatte innerhalb seines virtuellen Zeitbudgets nur die oberen dekodiert – kein Fehler auf der Seite. Screenshots taugen hier nicht als Beweis.
+
+## SEO auf DACH, Rechtstexte und Einwilligung – Version 2.4.0 (30.09.2026)
+
+### SEO
+- **Titel und Beschreibungen neu** für 29 Guides und 12 Seiten. Muster: Titel nennt Wardogs + Thema + Sprache/Land und bleibt unter 62 Zeichen inklusive „ | Warleek"; die Beschreibung bleibt unter 158 Zeichen und ist **anders formuliert** – der Titel knapp, die Beschreibung mit ausgeschriebener Region und Nebenbegriffen. Ein Prüfskript bricht ab, wenn eine Länge reißt oder beide gleich anfangen; zwei Beschreibungen wurden deshalb gekürzt, bevor irgendetwas geschrieben wurde.
+- **Patch Notes** tragen Datum und Version: Einzelseite „Wardogs Update 0.1.2 – Patch Notes Deutsch (30.09.2026)", Übersicht „Wardogs Patch Notes Deutsch (30.09.2026)" mit dem Datum der jüngsten Note (stündlich zwischengespeichert, wird beim Speichern einer Note geleert).
+- **DACH-Signale**, die Suchmaschinen wirklich auswerten: hreflang für de-DE, de-AT, de-CH, de und x-default auf dieselbe Adresse, dazu `og:locale:alternate` und drei `geo.region`-Angaben.
+- **Strukturierte Daten**: Patch Note als `Article` mit Bezug auf das Spiel (`VideoGame`, Entwickler BULKHEAD, Publisher Team17, Steam als `sameAs`) und Quelle bei Steam; Übersicht als `CollectionPage` mit `ItemList` der zehn jüngsten Notes; Brotkrumen (`BreadcrumbList`) auf Guides, Seiten, Archiven und Themenseiten.
+- **Gemessen** (Zeichenzahl): Startseite 44/151, Guide-Archiv 53/140, `/thema/fob/` 47/130, Patch-Notes-Übersicht 50/157, Patch Note 65/151. Alles im Rahmen.
+
+**Eine Entscheidung gegen die Bequemlichkeit:** In die Beschreibung einer Patch Note darf **kein englischer Originaltext** geraten. Der erste Entwurf zitierte den Anfang der Steam-Meldung – in einer Beschreibung, die „auf Deutsch" verspricht, stand dann „WARDOGS will be entering a maintenance window". Jetzt wird nur die deutsche Kurzfassung der Übersetzung zitiert; fehlt sie, steht dort ein fertiger deutscher Satz.
+
+### Impressum und Datenschutz
+Echte Betreiberdaten eingesetzt (Name, Anschrift, Telefon, E-Mail), Redaktionshinweise entfernt. Impressum um Haftung für Inhalte und den VSBG-Satz ergänzt; die EU-Streitschlichtungsplattform wird **nicht** mehr verlinkt, weil sie seit 2025 eingestellt ist. Datenschutz um Einwilligung, eingebettete Videos, Aufbewahrungsfrist der Logfiles und die zuständige Aufsichtsbehörde erweitert.
+
+### Einwilligung für externe Medien
+Die Seite setzt keine Cookies und lädt nichts von fremden Servern – ein klassisches Cookie-Banner wäre dafür sachlich falsch. Gebaut ist deshalb eine echte Sperre für eingebettete Videos: `[warleek_video]` zeigt bis zur Zustimmung nur eine Vorschau vom eigenen Server.
+
+Mit echten Klicks geprüft (Puppeteer, 390 px):
+
+| Prüfung | Ergebnis |
+| --- | --- |
+| Banner beim ersten Besuch | sichtbar, volle Breite, am unteren Rand, zwei gleichwertige Schaltflächen |
+| „Nur notwendige" | Banner weg, `{"v":1,"media":false}` im localStorage |
+| Neu laden | Banner bleibt weg |
+| „Externe Videos erlauben" | `{"v":1,"media":true}` |
+| Tastatur | beide Schaltflächen erreichbar |
+| **Fremde Hosts beim Seitenaufruf** | **keine** |
+| Guide mit Video **vor** Zustimmung | 0 iframes, **0 fremde Hosts** |
+| nach Klick auf „Video laden" | 1 iframe auf youtube-nocookie.com, erst jetzt Google-Hosts |
+
+Mobiles Menü gegengeprüft: Overlay 390×844, z-index 100000 über dem Banner (90) – das Menü verdeckt den Hinweis, nicht umgekehrt. Keine JS-Fehler.
+
+Lighthouse mobil nach dem Einbau: Performance 97, Accessibility 100, SEO 100, CLS 0,006, TBT 10 ms. Best Practices 79 nur wegen HTTP auf der Dev-Instanz – auf der echten Domain mit TLS entfällt das.
+
+### Tests
+Sieben Testdateien grün, davon neu `seo-test.php` (Versionsnummern, Kürzung an der Wortgrenze, Datum in Titel und Beschreibung, Länderbezug, kein englischer Text ohne Übersetzung, Spiel-Schema).

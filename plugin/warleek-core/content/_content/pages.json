@@ -1,645 +1,645 @@
 [
- {
-  "slug": "startseite",
-  "title": "Wardogs Guides & Tipps auf Deutsch",
-  "parent": null,
-  "template": "page-hub",
-  "front": true,
-  "hero": {
-   "image": "hero-home-guides",
-   "home": true,
-   "eyebrow": "Wardogs Guides · Tipps · Patch Notes · Deutsch",
-   "h1": "Wardogs verstehen, statt <em>raten</em>",
-   "lead": "Deutsche Guides zu FOB, Logistik, Gameplay und Technik – geschrieben von Leuten, die die Fehler schon gemacht haben. Dazu die offiziellen Patch Notes, übersetzt und auf einen Blick.",
-   "buttons": [
     {
-     "label": "Zu den Guides",
-     "url": "/guides/"
+        "slug": "startseite",
+        "title": "Wardogs Guides & Tipps auf Deutsch",
+        "parent": null,
+        "template": "page-hub",
+        "front": true,
+        "hero": {
+            "image": "hero-home-guides",
+            "home": true,
+            "eyebrow": "Wardogs Guides · Tipps · Patch Notes · Deutsch",
+            "h1": "Wardogs verstehen, statt <em>raten</em>",
+            "lead": "Deutsche Guides zu FOB, Logistik, Gameplay und Technik – geschrieben von Leuten, die die Fehler schon gemacht haben. Dazu die offiziellen Patch Notes, übersetzt und auf einen Blick.",
+            "buttons": [
+                {
+                    "label": "Zu den Guides",
+                    "url": "/guides/"
+                },
+                {
+                    "label": "Das Spiel erklärt",
+                    "url": "/wardogs/",
+                    "ghost": true
+                }
+            ],
+            "tags": [
+                "Warleek // Guides // DACH"
+            ]
+        },
+        "seo": {
+            "title": "Wardogs Guides & Tipps auf Deutsch | Warleek",
+            "description": "Deutschsprachige Wardogs-Guides zu FOB, Logistik, Gameplay, Equipment und Technik, dazu Patch Notes übersetzt – für Deutschland, Österreich, Schweiz."
+        },
+        "sections": [
+            {
+                "type": "section",
+                "eyebrow": "Wo willst du anfangen?",
+                "h2": "Sechs Themen, ein Spiel",
+                "text": "Jedes Thema hat eine ausführliche Erklärseite und die passenden Guides dazu. Wenn du ganz neu bist, fang bei den Einsteigern an.",
+                "inner": [
+                    {
+                        "type": "topics"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "eyebrow": "Neu dazugekommen",
+                "h2": "Die aktuellsten Guides",
+                "inner": [
+                    {
+                        "type": "guides",
+                        "count": 6,
+                        "newest": true
+                    },
+                    {
+                        "type": "prose",
+                        "html": "<p><a class=\"wl-more\" href=\"/guides/\">Alle Guides ansehen →</a></p>"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "eyebrow": "Automatisch von Steam, auf Deutsch",
+                "h2": "Die letzten Wardogs Patch Notes",
+                "text": "Updates ändern Preise, Werte und manchmal ganze Mechaniken. Wir ziehen die offiziellen Ankündigungen stündlich, übersetzen sie und stellen das Wichtigste voran.",
+                "inner": [
+                    {
+                        "type": "patchnotes",
+                        "count": 3
+                    },
+                    {
+                        "type": "prose",
+                        "html": "<p><a class=\"wl-more\" href=\"/patch-notes/\">Alle Patch Notes →</a></p>"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "eyebrow": "Warum Warleek",
+                "h2": "Geschrieben, nicht generiert",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<p>Wardogs ist im Early Access, und die Hälfte dessen, was man online über das Spiel findet, ist automatisiert erzeugt: Menüpfade, die es nicht gibt, Werte, die nie gestimmt haben, Ratschläge ohne eine einzige gespielte Runde dahinter.</p>\n<p>Unsere Guides entstehen andersherum. Jeder Ablauf hier ist im Spiel durchgespielt, jede Zahl trägt ein Stand-Datum, und wo wir uns auf fremde Quellen stützen, steht die Quelle dabei. Wenn ein Patch etwas umwirft, ändern wir den Text – statt ihn stehen zu lassen.</p>\n<p>Wir schreiben auf Deutsch, für Spieler aus <strong>Deutschland</strong>, <strong>Österreich</strong> und der <strong>Schweiz</strong>. Nicht, weil englische Guides schlecht wären, sondern weil man Funkdisziplin, FOB-Absprachen und Tastenbelegungen schneller versteht, wenn man nicht nebenbei übersetzt.</p>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "faq",
+                        "heading": "Kurz gefragt",
+                        "items": [
+                            {
+                                "q": "Für wen sind die Guides gedacht?",
+                                "a": "Für alle, die Wardogs spielen und nicht drei Abende mit Ausprobieren verbringen wollen. Die Einsteiger-Guides setzen nichts voraus, die Themenseiten gehen deutlich tiefer."
+                            },
+                            {
+                                "q": "Wie aktuell sind die Angaben?",
+                                "a": "Jede Zahl steht mit Stand-Datum im Text. Wardogs ist im Early Access, Preise und Werte ändern sich – die Patch Notes hier auf der Seite sind der schnellste Weg zu sehen, was sich geändert hat."
+                            },
+                            {
+                                "q": "Kann ich einen Guide vorschlagen oder korrigieren?",
+                                "a": "Gern. Schreib uns im Discord oder per Mail, der Kontakt steht auf der Seite „About us“. Korrekturen bauen wir schnell ein, Themenwünsche landen auf der Liste."
+                            },
+                            {
+                                "q": "Kostet die Seite etwas?",
+                                "a": "Nein. Keine Anmeldung, keine Bezahlschranke, keine Werbung, kein Tracking."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "discord",
+                        "eyebrow": "Fragen?",
+                        "h2": "Was im Guide fehlt, klären wir im Discord",
+                        "text": "Für Rückfragen zu einem Guide, für Korrekturen – und um Mitspieler zu finden."
+                    }
+                ]
+            }
+        ]
     },
     {
-     "label": "Das Spiel erklärt",
-     "url": "/wardogs/",
-     "ghost": true
-    }
-   ],
-   "tags": [
-    "Warleek // Guides // DACH"
-   ]
-  },
-  "seo": {
-   "title": "Wardogs Guides & Tipps auf Deutsch | Warleek",
-   "description": "Deutsche Wardogs Guides: FOB bauen, Logistik fahren, Cash verdienen, HOTAS einrichten. Plus alle Patch Notes auf Deutsch – für Spieler aus Deutschland, Österreich und der Schweiz."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "eyebrow": "Wo willst du anfangen?",
-    "h2": "Sechs Themen, ein Spiel",
-    "text": "Jedes Thema hat eine ausführliche Erklärseite und die passenden Guides dazu. Wenn du ganz neu bist, fang bei den Einsteigern an.",
-    "inner": [
-     {
-      "type": "topics"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Neu dazugekommen",
-    "h2": "Die aktuellsten Guides",
-    "inner": [
-     {
-      "type": "guides",
-      "count": 6,
-      "newest": true
-     },
-     {
-      "type": "prose",
-      "html": "<p><a class=\"wl-more\" href=\"/guides/\">Alle Guides ansehen →</a></p>"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "eyebrow": "Automatisch von Steam, auf Deutsch",
-    "h2": "Die letzten Wardogs Patch Notes",
-    "text": "Updates ändern Preise, Werte und manchmal ganze Mechaniken. Wir ziehen die offiziellen Ankündigungen stündlich, übersetzen sie und stellen das Wichtigste voran.",
-    "inner": [
-     {
-      "type": "patchnotes",
-      "count": 3
-     },
-     {
-      "type": "prose",
-      "html": "<p><a class=\"wl-more\" href=\"/patch-notes/\">Alle Patch Notes →</a></p>"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Warum Warleek",
-    "h2": "Geschrieben, nicht generiert",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<p>Wardogs ist im Early Access, und die Hälfte dessen, was man online über das Spiel findet, ist automatisiert erzeugt: Menüpfade, die es nicht gibt, Werte, die nie gestimmt haben, Ratschläge ohne eine einzige gespielte Runde dahinter.</p>\n<p>Unsere Guides entstehen andersherum. Jeder Ablauf hier ist im Spiel durchgespielt, jede Zahl trägt ein Stand-Datum, und wo wir uns auf fremde Quellen stützen, steht die Quelle dabei. Wenn ein Patch etwas umwirft, ändern wir den Text – statt ihn stehen zu lassen.</p>\n<p>Wir schreiben auf Deutsch, für Spieler aus <strong>Deutschland</strong>, <strong>Österreich</strong> und der <strong>Schweiz</strong>. Nicht, weil englische Guides schlecht wären, sondern weil man Funkdisziplin, FOB-Absprachen und Tastenbelegungen schneller versteht, wenn man nicht nebenbei übersetzt.</p>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "faq",
-      "heading": "Kurz gefragt",
-      "items": [
-       {
-        "q": "Für wen sind die Guides gedacht?",
-        "a": "Für alle, die Wardogs spielen und nicht drei Abende mit Ausprobieren verbringen wollen. Die Einsteiger-Guides setzen nichts voraus, die Themenseiten gehen deutlich tiefer."
-       },
-       {
-        "q": "Wie aktuell sind die Angaben?",
-        "a": "Jede Zahl steht mit Stand-Datum im Text. Wardogs ist im Early Access, Preise und Werte ändern sich – die Patch Notes hier auf der Seite sind der schnellste Weg zu sehen, was sich geändert hat."
-       },
-       {
-        "q": "Kann ich einen Guide vorschlagen oder korrigieren?",
-        "a": "Gern. Schreib uns im Discord oder per Mail, der Kontakt steht auf der Seite „About us“. Korrekturen bauen wir schnell ein, Themenwünsche landen auf der Liste."
-       },
-       {
-        "q": "Kostet die Seite etwas?",
-        "a": "Nein. Keine Anmeldung, keine Bezahlschranke, keine Werbung, kein Tracking."
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "discord",
-      "eyebrow": "Fragen?",
-      "h2": "Was im Guide fehlt, klären wir im Discord",
-      "text": "Für Rückfragen zu einem Guide, für Korrekturen – und um Mitspieler zu finden."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "community",
-  "title": "Partner & Community",
-  "parent": null,
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-partner",
-   "page": true,
-   "eyebrow": "Partner",
-   "h1": "Communities, mit denen wir uns <em>verstehen</em>",
-   "lead": "Warleek schreibt Guides – gespielt wird in Gruppen. Hier stehen die deutschsprachigen Communities, Clans und Kanäle, die wir guten Gewissens weiterempfehlen.",
-   "buttons": [
+        "slug": "community",
+        "title": "Partner & Community",
+        "parent": null,
+        "template": "page-hub",
+        "hero": {
+            "image": "hero-partner",
+            "page": true,
+            "eyebrow": "Partner",
+            "h1": "Communities, mit denen wir uns <em>verstehen</em>",
+            "lead": "Warleek schreibt Guides – gespielt wird in Gruppen. Hier stehen die deutschsprachigen Communities, Clans und Kanäle, die wir guten Gewissens weiterempfehlen.",
+            "buttons": [
+                {
+                    "label": "Discord beitreten",
+                    "url": "#discord"
+                }
+            ]
+        },
+        "seo": {
+            "title": "Wardogs Partner & Communitys (Deutsch) | Warleek",
+            "description": "Befreundete deutschsprachige Wardogs-Communitys, Clans und Discord-Server aus Deutschland, Österreich und der Schweiz – plus Weg zur Partnerschaft."
+        },
+        "sections": [
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Warum wir Partner empfehlen statt selbst zu rekrutieren</h2>\n<p>Warleek ist eine Guide-Seite. Wir schreiben auf, wie FOBs funktionieren und warum der Logistik-Run sich lohnt – aber ein Squad zusammenzuhalten, Spielabende zu organisieren und Leute einzuarbeiten, das machen andere besser. Deshalb führen wir keinen eigenen Clan mehr, sondern verweisen auf Gruppen, die genau das tun.</p>\n<p>Jeder Partner hier ist deutschsprachig, offen für neue Leute und von uns persönlich angespielt. Wer auf der Liste steht, wurde nicht dafür bezahlt.</p>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "eyebrow": "Unsere Partner",
+                "h2": "Wo du Mitspieler findest",
+                "inner": [
+                    {
+                        "type": "partner",
+                        "count": 12
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2 id=\"partner-werden\">Partner werden</h2>\n<p>Du führst eine deutschsprachige Wardogs-Community und möchtest hier stehen? Schreib uns – im Discord oder per Mail. Wir schauen vorbei, spielen einen Abend mit und nehmen dich auf, wenn es passt. Drei Dinge erwarten wir:</p>\n<ul>\n<li><strong>Deutschsprachig und offen.</strong> Neue Leute sollen ohne Bewerbungsverfahren reinschauen können.</li>\n<li><strong>Aktiv.</strong> Ein Discord, in dem seit drei Monaten niemand geschrieben hat, hilft niemandem.</li>\n<li><strong>Anständiger Umgang.</strong> Kein Toxic-Gerede, keine Cheats, kein Ärger in fremden Lobbys.</li>\n</ul>\n<p>Im Gegenzug verlinken wir euch hier, und ihr dürft unsere Guides in eurem Discord teilen, so viel ihr wollt.</p>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "discord",
+                        "eyebrow": "Discord",
+                        "h2": "Der Warleek-Discord",
+                        "text": "Für Rückfragen zu den Guides, Korrekturen und Themenwünsche – und um Leute für den Abend zu finden."
+                    }
+                ]
+            }
+        ]
+    },
     {
-     "label": "Discord beitreten",
-     "url": "#discord"
+        "slug": "wardogs",
+        "title": "Wardogs erklärt: alle Themen im Überblick",
+        "parent": null,
+        "template": "page-hub",
+        "hero": {
+            "image": "hero-hub",
+            "page": true,
+            "eyebrow": "Das Spiel erklärt",
+            "h1": "Wardogs <em>verstehen</em>: Zone, Cash, FOB, Logistik",
+            "lead": "100 Spieler, drei Teams, eine Zone und Geld als Währung für alles. Hier steht, wie das zusammenhängt – und wo du für jedes Thema in die Tiefe gehst."
+        },
+        "seo": {
+            "title": "Wardogs erklärt – das Spiel auf Deutsch | Warleek",
+            "description": "Kontrollzone, drei Fraktionen, Cash, FOB und Logistik: Wardogs verständlich auf Deutsch erklärt, für Einsteiger aus Deutschland, Österreich und der Schweiz."
+        },
+        "sections": [
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Wardogs in einem Absatz</h2>\n<p>WARDOGS ist ein taktischer Multiplayer-Shooter von BULKHEAD (Publisher: Team17), seit dem 10. September 2026 im Early Access auf Steam. In jedem Match kämpfen <strong>100 Spieler in drei Teams</strong> um eine <strong>Kontrollzone</strong>, die zufällig auf einer großen Map gesetzt wird. Das erste Team mit 100 Punkten gewinnt. Das Setting: verlassene Industrie-Berglandschaften in Osteuropa, zerstörbar und bebaubar. Und über allem steht <strong>Cash</strong> – jede sinnvolle Teamaktion bringt Geld, und mit Geld kaufst du Ausrüstung, Fahrzeuge und Bauteile.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Die vier Säulen</h2>\n<p>Wer Wardogs verstehen will, muss vier Dinge verstehen. Zu jedem haben wir eine eigene ausführliche Seite:</p>\n"
+                    },
+                    {
+                        "type": "topics"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Warum drei Teams alles ändern</h2>\n<p>Zwei Teams sind Tauziehen. Drei Teams sind Politik. Wenn du die Zone hältst, greifen dich zwei Seiten an – und die haben oft keine Lust, sich gegenseitig zu bekämpfen, solange du oben stehst. Das heißt: Wer führt, wird zum Ziel. Wer zurückliegt, hat Zeit, eine FOB aufzubauen und im richtigen Moment zuzuschlagen. Das macht Wardogs deutlich weniger vorhersehbar als klassische 2-Fraktionen-Shooter.</p>\n<h2>Cash: die eine Währung</h2>\n<p>Pro Leben startest du mit $10.000 (Stand September 2026). Davon kaufst du dein Loadout, Werkzeug, Bauteile, Fahrzeuge. Cash verdienst du mit allem, was dem Team hilft: Zone halten, Nachschub liefern, bauen, heilen, Ziele markieren. Cash bleibt über Matches hinweg erhalten – wer sparsam und teamdienlich spielt, hat langfristig mehr Optionen. Wer jede Runde einen Heli verbrennt, nicht.</p>\n<h2>Was Wardogs von Squad, Hell Let Loose und Battlefield unterscheidet</h2>\n<ul>\n<li><strong>Drei Teams</strong> statt zwei – siehe oben.</li>\n<li><strong>Cash statt Klassen-Freischaltung</strong> – du kannst früh alles kaufen, wenn du es dir leisten kannst. Ob das klug ist, steht auf einem anderen Blatt.</li>\n<li><strong>Eine Zone</strong> statt Flaggenketten – der Fokus liegt auf einem Ort, die Map drumherum ist Nachschub- und Flankenraum.</li>\n<li><strong>Bauen als Kernmechanik</strong> – FOB, Wälle, Emplacements, Tankstellen, sogar ein Drill Rig für Treibstoff.</li>\n<li><strong>Proximity-Voice</strong> – wer in der Nähe ist, hört dich. Das sorgt für Momente, die kein Skript schreiben könnte.</li>\n</ul>\n<h2>Erste Schritte</h2>\n<p>Lies unseren Guide <a href=\"/guides/deine-erste-runde-wardogs/\">Deine erste Runde Wardogs</a>, komm in den <a href=\"/community/\">Discord</a> und fahr in den ersten Matches Nachschub. Du lernst die Map, verdienst Cash und bist für dein Team sofort nützlich. Alles Weitere ergibt sich.</p>\n"
+                    },
+                    {
+                        "type": "guides",
+                        "count": 6
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "discord",
+                        "eyebrow": "Fragen?",
+                        "h2": "Etwas unklar geblieben?",
+                        "text": "Frag im Discord nach – und wenn die Antwort fehlt, wird daraus ein Guide."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "einsteiger",
+        "title": "Wardogs für Einsteiger: die ersten Stunden",
+        "parent": "wardogs",
+        "template": "page-hub",
+        "hero": {
+            "image": "hero-einsteiger",
+            "page": true,
+            "eyebrow": "Wardogs · Themen",
+            "h1": "Wardogs für <em>Einsteiger</em>",
+            "lead": "Was du in den ersten Runden tun solltest, was dich Geld kostet und warum Nachschubfahren der beste Einstieg ist."
+        },
+        "seo": {
+            "title": "Wardogs für Einsteiger – Guide auf Deutsch | Warleek",
+            "description": "Der Einstieg in Wardogs auf Deutsch: erste Runden, Rollen, Geld und die Fehler, die man sich sparen kann. Für Spieler in Deutschland, Österreich, Schweiz."
+        },
+        "sections": [
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Die kurze Fassung</h2>\n<p>Wardogs verzeiht keine Alleingänge und belohnt fast alles, was dem Team hilft. Wenn du nur drei Sätze aus dieser Seite mitnimmst:</p>\n<ol>\n<li><strong>Squad zuerst, Ausrüstung danach.</strong> Wer alleine losläuft, stirbt teuer und bringt niemandem etwas.</li>\n<li><strong>Billig sterben.</strong> In den ersten Runden reichen Gewehr, Munition und Verbandszeug. Alles andere ist Geld, das du später brauchst.</li>\n<li><strong>Nachschub fahren.</strong> Du lernst die Karte, verdienst zuverlässig Geld und bist vom ersten Match an nützlich.</li>\n</ol>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Deine ersten 30 Minuten</h2>\n<p>Du startest mit <strong>$10.000 pro Leben</strong>. Das klingt nach viel und ist nach zwei unüberlegten Käufen weg. Der Ablauf, der sich bewährt hat:</p>\n<ul>\n<li><strong>Minute 0–2:</strong> Squad beitreten, im Voice Hallo sagen, fragen, was gebraucht wird.</li>\n<li><strong>Minute 2–5:</strong> Standardgewehr, Munition, Verbandszeug. Kein Fahrzeug, keine FOB, kein Zielfernrohr.</li>\n<li><strong>Minute 5–30:</strong> Eine Palette kaufen (rund $400), auf einen Ural laden, zur FOB fahren, abladen <em>und übertragen</em>. Das bringt rund $2.500 – und du kennst danach die halbe Karte.</li>\n</ul>\n<p>Den kompletten Ablauf mit allen Handgriffen findest du im Guide <a href=\"/guides/deine-erste-runde-wardogs/\">Deine erste Runde Wardogs</a>.</p>\n\n<h2>Die Begriffe, die dir dauernd begegnen</h2>\n<table><thead><tr><th>Begriff</th><th>Was es ist</th><th>Warum es dich betrifft</th></tr></thead><tbody>\n<tr><td><strong>Zone</strong></td><td>der umkämpfte Bereich, rund 2×2 km</td><td>Punkte gibt es nur dort – aber nicht nur dort gewinnt man</td></tr>\n<tr><td><strong>FOB</strong></td><td>vorgeschobene Basis, vom Team selbst gesetzt</td><td>ohne sie läuft dein Team ewig vom Hauptlager</td></tr>\n<tr><td><strong>Palette</strong></td><td>Nachschubeinheit: Build, Ammo, Fuel, Mechanical</td><td>deine wichtigste Einnahmequelle als Neuling</td></tr>\n<tr><td><strong>Spawn-Fahrzeug</strong></td><td>separat platzierter Wiedereinstiegspunkt</td><td>die FOB allein ist <em>kein</em> Spawn – der häufigste Irrtum</td></tr>\n<tr><td><strong>Hot Zone</strong></td><td>Bereich mit doppelter Wertung</td><td>doppeltes Kontrollgewicht und doppeltes Cash</td></tr>\n</tbody></table>\n\n<h2>Fünf Fehler, die jeden Neuling Geld kosten</h2>\n<ol>\n<li><strong>Allein zur Zone rennen.</strong> Drei Gegnerteams, keine Deckung, kein Squad – das Loadout ist weg.</li>\n<li><strong>Eine FOB kaufen.</strong> Rund $4.887 für eine Bauzone, die ohne Absprache am falschen Ort steht.</li>\n<li><strong>Ein Fahrzeug kaufen, das man nicht fahren kann.</strong> Der Heli am Berghang ist der teuerste Lernmoment im Spiel.</li>\n<li><strong>Den Voice ignorieren.</strong> Wardogs ist Kommunikation. Zuhören reicht am Anfang völlig.</li>\n<li><strong>Die anderen beiden Teams als ein Team sehen.</strong> Sie sind es nicht – und genau daraus entstehen die besten Momente.</li>\n</ol>\n\n<h2>Wenn die erste Runde vorbei ist</h2>\n<p>Dann weißt du, wie Nachschub funktioniert, hast mehr Cash als am Anfang und kennst ein paar Namen. Von hier aus lohnen sich zwei Richtungen: die <a href=\"/wardogs/fob/\">FOB-Seite</a>, wenn du bauen willst, oder die <a href=\"/wardogs/gameplay/\">Gameplay-Seite</a>, wenn du verstehen willst, warum drei Teams alles verändern.</p>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "eyebrow": "Guides",
+                "h2": "Einsteiger-Guides",
+                "inner": [
+                    {
+                        "type": "guides",
+                        "count": 6,
+                        "thema": "einsteiger"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "discord",
+                        "eyebrow": "Fragen?",
+                        "h2": "Am Anfang fragt man viel",
+                        "text": "Genau dafür ist der Discord da. Keine Frage ist zu einfach."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "fob",
+        "title": "Wardogs FOB – Forward Operating Base erklärt",
+        "parent": "wardogs",
+        "template": "page-hub",
+        "hero": {
+            "image": "hero-fob",
+            "page": true,
+            "eyebrow": "Wardogs · Themen",
+            "h1": "Die Wardogs <em>FOB</em>: bauen, versorgen, halten",
+            "lead": "Die Forward Operating Base ist das Rückgrat deines Teams. Hier erfährst du, was sie kostet, was sie braucht, was du darin bauen kannst – und welche Fehler dich das Match kosten."
+        },
+        "seo": {
+            "title": "Wardogs FOB bauen – Anleitung auf Deutsch | Warleek",
+            "description": "Bauzone, Hammer-Stufen, Kosten und Versorgung einer FOB in Wardogs, auf Deutsch zusammengefasst – für Spieler aus der DACH-Region."
+        },
+        "sections": [
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Was eine FOB ist – und was nicht</h2>\n<p>Die FOB (Forward Operating Base) ist eine vorgeschobene Basis, die dein Team selbst setzt. Sie öffnet eine quadratische Bauzone auf der Karte, in der ihr Deckung, Emplacements, Tank- und Reparaturstationen und mehr errichten könnt. Sie ist der Ort, an dem Nachschub ankommt und von dem aus die Zone angegriffen oder gehalten wird.</p>\n<p>Was sie <strong>nicht</strong> ist: ein automatischer Spawnpunkt. Zum Spawnen braucht dein Team ein separat platziertes Spawn-Fahrzeug. Das ist der häufigste Anfängerirrtum – und der teuerste.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Eine FOB setzen</h2>\n<ol>\n<li><strong>Deploy-Item kaufen.</strong> Das FOB-Deploy-Item belegt 2×3 Felder im Inventar und kostet rund $4.887 (Stand September 2026). Das ist knapp die Hälfte deines Startkapitals – also nicht allein und nicht ohne Absprache.</li>\n<li><strong>Platz wählen.</strong> Begehbares Gelände mit Platz für LKW und – wenn möglich – einen Heli. Nicht auf offener Fläche, nicht direkt an der Zone (ihr wollt nicht, dass jede Granate eure Versorgung trifft), aber nah genug, dass der Weg zur Zone kurz ist.</li>\n<li><strong>Platzieren.</strong> Über das Inventar in einen Quickslot legen, Platzierung halten, fertig. Auf der Map erscheint die Bauzone.</li>\n<li><strong>Spawn-Fahrzeug setzen.</strong> Versteckt, aus Richtung der Gegner nicht einsehbar, aber für Nachrücker schnell erreichbar.</li>\n<li><strong>Nachschub anfordern.</strong> Ohne Build-Supplies könnt ihr nichts bauen. Sofort im Squad-Chat sagen, was fehlt.</li>\n</ol>\n<h2>Die vier Versorgungsarten</h2>\n<table><thead><tr><th>Versorgung</th><th>Wofür</th><th>Wann wichtig</th></tr></thead><tbody>\n<tr><td><strong>Build</strong></td><td>alle Bauwerke: Wälle, HESCO, Bunker, Türme</td><td>zuerst, immer</td></tr>\n<tr><td><strong>Ammo</strong></td><td>Emplacements wie Mörser und Geschütze</td><td>sobald Emplacements stehen</td></tr>\n<tr><td><strong>Fuel</strong></td><td>Fahrzeuge, Tankstation, Drill Rig</td><td>wenn Fahrzeuge an der FOB hängen</td></tr>\n<tr><td><strong>Mechanical</strong></td><td>Reparaturen, bestimmte Systeme, Munitionskauf</td><td>wenn Fahrzeuge Schaden nehmen</td></tr>\n</tbody></table>\n<p>Die FOB versorgt sich nicht selbst. Jede Palette muss jemand vom Hauptlager holen – wie das geht, steht auf der <a href=\"/wardogs/logistik/\">Logistik-Seite</a>.</p>\n<h2>Hämmer: drei Stufen</h2>\n<ul>\n<li><strong>Small Hammer</strong> – nur einfache Bauteile, langsam. Gut für den Anfang und für Sandsäcke.</li>\n<li><strong>Medium Hammer</strong> – zusätzlich Türen und HESCO-Teile. Der Standard für Builder.</li>\n<li><strong>Large Hammer</strong> – baut alles und am schnellsten. Für den, der die FOB wirklich betreut.</li>\n</ul>\n<h2>Was du bauen kannst (Kosten in Build-Supplies)</h2>\n<p>Ohne FOB, direkt im Feld: Recon Tent (5), Stacheldraht (5), Sandsäcke (10), Hedgehog (14).</p>\n<p>Mit FOB in der Bauzone (Auswahl, Stand September 2026): HESCO-Block (10–14), Bremer Wall (10), Tür (14), HESCO-Wand (46), Tor (52), Bunker (61), Recon Tower (61), Mörser (91), Stingray (91), Tankstation (121), Reparaturstation (121), Talon (601), Vanguard CIWS (901), Drill Rig (1.351).</p>\n<p>Die Reihenfolge, die sich bewährt hat: erst Deckung für das Spawn-Fahrzeug und die Abladezone, dann ein Bunker oder Turm mit Sicht auf die Anfahrt, dann Emplacements. Große Anlagen wie das Drill Rig lohnen sich nur, wenn ihr die FOB lange halten wollt und mehrere Fahrer habt.</p>\n<h2>Verteidigen und angreifen</h2>\n<p>Eine FOB fällt selten durch einen Frontalangriff. Sie fällt, wenn ihre Versorgung abgeschnitten wird. Wer verteidigt, sichert deshalb die Nachschubroute mindestens so gut wie die Basis selbst. Wer angreift, sucht zuerst das Spawn-Fahrzeug und die LKW-Route, dann die Emplacements – und erst zum Schluss die FOB selbst.</p>\n<h2>Die fünf typischen Fehler</h2>\n<ol>\n<li><strong>FOB ohne Nachschub.</strong> $4.887 für eine Bauzone, in der niemand etwas bauen kann.</li>\n<li><strong>Kein Spawn-Fahrzeug.</strong> Alle laufen weiter vom Hauptlager.</li>\n<li><strong>Spawn-Fahrzeug sichtbar.</strong> Gegner finden es, Gegner zerstören es, Gegner campen die Stelle.</li>\n<li><strong>Kein Platz zum Wenden.</strong> Eine stark befestigte FOB, an die kein LKW herankommt, verhungert.</li>\n<li><strong>Falsche Palette.</strong> Fuel liefern, wenn Build fehlt. Vorher fragen, was gebraucht wird.</li>\n</ol>\n\n<h2>Wo eine FOB hingehört – und wo nicht</h2>\n<p>Die richtige Position ist wichtiger als jedes Bauteil. Ein guter FOB-Platz erfüllt vier Bedingungen: Er ist von der Zone aus in ein bis zwei Minuten erreichbar, liegt außerhalb der direkten Sichtlinie der Zone, hat mindestens eine Anfahrt, die nicht an einer gegnerischen Position vorbeiführt, und bietet natürliche Deckung – ein Gebäude, ein Hang, ein Waldstück. Schlecht sind offene Wiesen, Kuppen und alles, was von der Zone aus mit Mörsern erreichbar ist.</p>\n<p>Bei drei Teams gilt außerdem: Überleg, aus welcher Richtung die anderen beiden kommen. Eine FOB, die genau zwischen zwei gegnerischen Anmarschrouten liegt, ist keine Basis, sondern ein Schießstand.</p>\n<h2>Mehrere FOBs?</h2>\n<p>Ein Team kann mehr als eine FOB betreiben – aber jede braucht Fahrer. Zwei FOBs mit je einem Fahrer sind meist schlechter versorgt als eine mit zwei Fahrern. Sinnvoll ist eine zweite FOB, wenn die erste weit von der Zone liegt oder wenn ihr eine Rückzugsposition wollt, falls die erste fällt. Bevor jemand die zweite setzt: Absprache im Team-Chat, nicht nur im Squad.</p>\n<h2>Die FOB verlieren – und weitermachen</h2>\n<p>Jede FOB fällt irgendwann. Wenn es passiert, ist die Reihenfolge: Spawn-Fahrzeug retten oder neu setzen, Fahrer abziehen, neuen Platz wählen, neu bauen. Die Struktur ist weg, das Wissen nicht. Ein Team, das nach dem Verlust der FOB in fünf Minuten wieder eine stehen hat, ist stärker als eines, das die alte um jeden Preis verteidigt.</p>\n<h2>FOB-Etikette</h2>\n<ul>\n<li>Nichts abreißen, was du nicht selbst gebaut hast – außer der Builder bittet darum.</li>\n<li>Paletten dort abladen, wo der Builder sie will, nicht wo es gerade passt.</li>\n<li>Nicht mit Fahrzeugen durch die Basis fahren.</li>\n<li>Wenn du gehst, sag es. Eine unbewachte FOB ist eine verlorene FOB.</li>\n</ul>\n<div class=\"wl-note\"><p><strong>Weiterlesen</strong> Schritt für Schritt mit Squad-Absprache: <a href=\"/guides/fob-bauen-schritt-fuer-schritt/\">FOB-Bau Schritt für Schritt</a>.</p></div>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "eyebrow": "Guides",
+                "h2": "Passende Guides",
+                "inner": [
+                    {
+                        "type": "guides",
+                        "count": 3,
+                        "thema": "fob"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "discord",
+                        "eyebrow": "Fragen?",
+                        "h2": "Etwas unklar geblieben?",
+                        "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "logistik",
+        "title": "Wardogs Logistik – Nachschub, Paletten, Cash",
+        "parent": "wardogs",
+        "template": "page-hub",
+        "hero": {
+            "image": "hero-logistik",
+            "page": true,
+            "eyebrow": "Wardogs · Themen",
+            "h1": "Wardogs <em>Logistik</em>: Nachschub fahren, Cash verdienen",
+            "lead": "Logistik ist in Wardogs keine Nebenrolle. Ohne Paletten keine FOB, ohne FOB keine Zone. Und nebenbei ist sie eine der besten Cash-Quellen im Spiel."
+        },
+        "seo": {
+            "title": "Wardogs Logistik – Guide auf Deutsch | Warleek",
+            "description": "Paletten, Kisten, Fahrzeuge und Routen: Nachschub in Wardogs auf Deutsch erklärt, inklusive Verdienst pro Lieferung. Für Spieler in DACH."
+        },
+        "sections": [
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Warum Logistik das Spiel entscheidet</h2>\n<p>In Wardogs gewinnt nicht das Team mit den besten Schützen, sondern das Team, dessen FOB am längsten versorgt ist. Jede Wand, jeder Mörser, jedes betankte Fahrzeug an der Front hat vorher jemand auf einer Palette angeliefert. Wer das übernimmt, ist für sein Team so wertvoll wie der Squad Lead – und verdient dabei richtig Geld.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Die Rechnung</h2>\n<p>Eine Palette kostet rund <strong>$400</strong> im Kauf und bringt bei der Abgabe an einer FOB <strong>$2.500</strong> – netto etwa $2.100 pro Lieferung (Stand September 2026, Presseangaben zum Early-Access-Start). Drei Fahrten, und du hast dein Startkapital mehr als verdoppelt. Kaum eine andere Rolle bezahlt so zuverlässig.</p>\n<h2>Was du lieferst: die vier Versorgungsarten</h2>\n<ul>\n<li><strong>Build</strong> – Baumaterial. Bei neuen FOBs immer zuerst.</li>\n<li><strong>Ammo</strong> – für Mörser, Geschütze und Emplacements.</li>\n<li><strong>Fuel</strong> – für Fahrzeuge, Tankstation und Drill Rig.</li>\n<li><strong>Mechanical</strong> – für Reparaturen und bestimmte Systeme.</li>\n</ul>\n<p>Es gibt zwei Formate: <strong>Kisten</strong> (flexibel, weniger Menge pro Typ) und <strong>Paletten</strong> (viel von einem Typ). Wenn an der FOB ein Typ kritisch fehlt, nimm die Palette. Wenn du nicht weißt, was fehlt, frag – oder nimm Kisten gemischt.</p>\n<h2>Womit du fährst</h2>\n<table><thead><tr><th>Fahrzeug</th><th>Eignung</th><th>Hinweis</th></tr></thead><tbody>\n<tr><td><strong>Ural</strong></td><td>volle Paletten, das Arbeitstier</td><td>langsam, groß, braucht Platz zum Wenden</td></tr>\n<tr><td><strong>Kodiak / Humvee</strong></td><td>kleinere Container</td><td>schneller, weniger Ladung; Waffenvarianten laden nicht mehr</td></tr>\n<tr><td><strong>Helikopter (z. B. MH-6)</strong></td><td>Palette am Haken, erreicht FOBs ohne Straße</td><td>schnell, aber anfällig für Flugabwehr; direkter Anflug, sofort abladen</td></tr>\n<tr><td><strong>Bobcat, Buggy</strong></td><td>keine Frachter</td><td>für Aufklärung, nicht für Nachschub</td></tr>\n</tbody></table>\n<h2>Der Ablauf eines Logistik-Runs</h2>\n<ol>\n<li><strong>Bedarf prüfen.</strong> Was fehlt an der FOB? Squad fragen oder Lagerbestand ansehen.</li>\n<li><strong>Kaufen.</strong> Richtigen Typ, richtiges Format. Logistik-Screen (Beta-Taste B – kann sich ändern).</li>\n<li><strong>Laden.</strong> Palette auf ein passendes Fahrzeug.</li>\n<li><strong>Route wählen.</strong> Die sichere Route, nicht die kurze. Schlamm, Steigungen, beschädigte Brücken einplanen. Wenn du zweimal auf derselben Strecke abgeschossen wurdest, nimm eine andere.</li>\n<li><strong>Ankunft ansagen.</strong> „Ural kommt von Süden, in 30 Sekunden“ – damit niemand auf dich schießt und jemand die Abladezone sichert.</li>\n<li><strong>Abladen und übergeben.</strong> Fracht in der Nähe der FOB abwerfen (Beta: G) und ins Lager übertragen (Beta: F). Der zweite Schritt wird oft vergessen – ohne ihn liegt die Palette nur herum.</li>\n<li><strong>Zurück und wiederholen.</strong> Leer zurückfahren ist okay. Noch besser: unterwegs Verwundete mitnehmen.</li>\n</ol>\n<h2>Prioritäten</h2>\n<ul>\n<li>Neue FOB → <strong>Build</strong>.</li>\n<li>Mörser oder Geschütze aktiv → <strong>Ammo</strong>.</li>\n<li>Viele Fahrzeuge an der FOB → <strong>Fuel</strong> und <strong>Mechanical</strong>.</li>\n</ul>\n<h2>Tipps aus vielen Fahrten</h2>\n<ul>\n<li>Fahr nie allein, wenn es sich vermeiden lässt. Ein Beifahrer sieht Gegner, die du nicht siehst, und kann das Abladen übernehmen.</li>\n<li>Lichter aus in der Dämmerung. Der Konvoi mit Scheinwerfern ist das erste, was ein Sniper sieht.</li>\n<li>Halte nicht direkt an der FOB. Lade dort ab, wo du noch wenden kannst.</li>\n<li>Wenn die Route unter Beschuss ist, sag es dem Squad Lead. Eine gesicherte Route ist Aufgabe des ganzen Teams.</li>\n<li>Rechne mit Verlusten. Ein abgeschossener Ural ist ärgerlich, aber $400 Palette gegen $2.500 Belohnung verzeiht viel.</li>\n</ul>\n\n<h2>Logistik im Squad: Rollen und Rhythmus</h2>\n<p>Ein Squad mit einem festen Fahrer ist gut. Ein Squad mit zwei Fahrern, die sich abwechseln, ist besser: Während einer fährt, sichert der andere die Abladezone oder hilft beim Bauen. Der Rhythmus, der sich bewährt hat: eine Palette pro fünf bis acht Minuten pro Fahrer, je nach Entfernung. Wenn die FOB mehr braucht, braucht ihr mehr Fahrer – nicht einen schnelleren.</p>\n<h2>Wenn die Route unter Beschuss ist</h2>\n<p>Erste Regel: Weiterfahren. Ein Ural im Stand ist ein Ziel; ein Ural in Bewegung ist ein schwieriges Ziel. Zweite Regel: Melden – „Kontakt am Bahnübergang, Route Süd unsicher.“ Dritte Regel: Beim nächsten Run eine andere Route nehmen und den Squad Lead bitten, die Stelle zu sichern. Wer dreimal an derselben Stelle stirbt, hat ein Planungsproblem, kein Pechproblem.</p>\n<h2>Luftlogistik: wann sie sich lohnt</h2>\n<p>Ein Heli mit Palette am Haken ist die schnellste Lieferung im Spiel – und die riskanteste. Er lohnt sich, wenn die FOB über Straße schlecht erreichbar ist, wenn der Pilot fliegen kann und wenn ihr wisst, wo gegnerische Flugabwehr steht. Er lohnt sich nicht in der ersten Runde, nicht ohne Übung und nicht, wenn ein Ural den Job in drei Minuten mehr genauso erledigt.</p>\n<h2>Logistik als Cash-Strategie</h2>\n<p>Wer einen Abend lang konsequent Nachschub fährt, geht mit deutlich mehr Cash raus, als er reingekommen ist – und hat dabei mehr für das Team getan als die meisten an der Zone. Das ist keine Nebenrolle, das ist die Rolle, die Matches entscheidet. Bei Warleek gibt es deshalb keinen Spott für Fahrer. Es gibt Dankeschöns.</p>\n<div class=\"wl-note\"><p><strong>Weiterlesen</strong> Mit Beispielroute und Absprache: <a href=\"/guides/logistik-run-der-sich-lohnt/\">Der Logistik-Run, der sich lohnt</a>.</p></div>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "eyebrow": "Guides",
+                "h2": "Passende Guides",
+                "inner": [
+                    {
+                        "type": "guides",
+                        "count": 3,
+                        "thema": "logistik"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "discord",
+                        "eyebrow": "Fragen?",
+                        "h2": "Etwas unklar geblieben?",
+                        "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "gameplay",
+        "title": "Wardogs Gameplay – Zone, drei Teams, Economy",
+        "parent": "wardogs",
+        "template": "page-hub",
+        "hero": {
+            "image": "hero-gameplay",
+            "page": true,
+            "eyebrow": "Wardogs · Themen",
+            "h1": "Wardogs <em>Gameplay</em>: die Zone, drei Teams und die Cash-Economy",
+            "lead": "Wie ein Match abläuft, warum drei Teams das Spiel unberechenbar machen, wie du mit Cash umgehst und was ein Squad wirklich braucht."
+        },
+        "seo": {
+            "title": "Wardogs Gameplay erklärt (Deutsch) | Warleek",
+            "description": "Kontrollzone, Hot Zone, Squad-Spiel und Cash-Wirtschaft: Wie eine Runde Wardogs funktioniert. Auf Deutsch für Deutschland, Österreich und die Schweiz."
+        },
+        "sections": [
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Der Ablauf eines Matches</h2>\n<p>100 Spieler, drei Teams, eine Map. Irgendwo darauf liegt die <strong>Kontrollzone</strong> – ein etwa 2×2 km großer Bereich, der zufällig gesetzt wird. Wer die Zone kontrolliert, sammelt Punkte. Das erste Team mit 100 Punkten gewinnt. Klingt simpel, ist es aber nicht, denn die Zone ist groß, die Wege sind lang, und zwei andere Teams wollen dasselbe.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<p>Ein typisches Match teilt sich in drei Phasen:</p>\n<ol>\n<li><strong>Aufbau.</strong> Teams setzen FOBs in Zonennähe, Fahrer bringen die ersten Paletten, Builder ziehen Wälle hoch. Wer hier zu lange trödelt, kommt zu spät.</li>\n<li><strong>Kampf um die Zone.</strong> Squads rücken vor, Emplacements feuern, die Führung wechselt. Hier entscheiden Nachschub und Kommunikation.</li>\n<li><strong>Endspiel.</strong> Ein Team nähert sich 100 Punkten, die anderen beiden werfen alles auf den Führenden. Wer jetzt noch Cash und eine intakte FOB hat, hat die besten Karten.</li>\n</ol>\n<h2>Drei Teams: die Dynamik</h2>\n<p>Mit drei Teams gibt es keine Front, sondern ein Dreieck. Das hat Folgen:</p>\n<ul>\n<li><strong>Der Führende ist das Ziel.</strong> Sobald ein Team deutlich vorne liegt, konzentrieren sich die anderen beiden auf ihn – nicht abgesprochen, aber zuverlässig.</li>\n<li><strong>Zurückliegen ist keine Niederlage.</strong> Wer hinten liegt, wird in Ruhe gelassen und kann in Ruhe aufbauen.</li>\n<li><strong>Flanken sind überall.</strong> Es gibt keine sichere Seite. Nachschubrouten müssen gesichert werden.</li>\n<li><strong>Timing schlägt Stärke.</strong> Der beste Moment für den Vorstoß ist, wenn sich die beiden anderen Teams gerade gegenseitig aufreiben.</li>\n</ul>\n<h2>Cash: verdienen und ausgeben</h2>\n<p>Pro Leben startest du mit <strong>$10.000</strong>. Cash bleibt über Matches erhalten. Du verdienst es mit allem, was dem Team hilft – Zone halten, Nachschub liefern, bauen, heilen, aufklären. In der Hot Zone gibt es doppeltes Kontrollgewicht und doppeltes Cash.</p>\n<p>Ausgeben kannst du es für Loadouts, Werkzeuge, Bauteile und Fahrzeuge. Die wichtigste Regel: <strong>Kauf nichts, was du in den nächsten fünf Minuten nicht brauchst.</strong> Ein Heli für $X, der nach zwei Minuten am Berg hängt, ist das teuerste Erlebnis im Spiel. Mehr dazu auf der <a href=\"/wardogs/equipment/\">Equipment-Seite</a> und im Guide <a href=\"/guides/geld-verdienen-und-ausgeben/\">Geld verdienen &amp; sinnvoll ausgeben</a>.</p>\n<h2>Squad-Rollen</h2>\n<p>Ein Squad funktioniert, wenn nicht alle dasselbe tun. Die Rollen sind nicht fest im Spiel verankert, sondern Absprache:</p>\n<table><thead><tr><th>Rolle</th><th>Aufgabe</th><th>Für wen</th></tr></thead><tbody>\n<tr><td>Squad Lead</td><td>Ziel setzen, Kontakt zu anderen Squads, Marker setzen</td><td>wer gern Entscheidungen trifft und ruhig bleibt</td></tr>\n<tr><td>Logistik</td><td>Paletten fahren, FOB versorgen</td><td>Einsteiger und alle, die Cash wollen</td></tr>\n<tr><td>Builder</td><td>FOB setzen, Deckung bauen, Emplacements</td><td>wer gern plant</td></tr>\n<tr><td>Infanterie</td><td>Zone nehmen und halten, Routen sichern</td><td>alle</td></tr>\n<tr><td>Fahrzeuge</td><td>Transport, Heli, gepanzert</td><td>nur nach Absprache und mit Übung</td></tr>\n</tbody></table>\n<h2>Kommunikation</h2>\n<p>Wardogs hat Proximity-Voice: Wer in der Nähe ist, hört dich – auch Gegner. Im Squad nutzt du zusätzlich den Squad-Voice (bei uns: Discord). Drei Regeln, die alles einfacher machen:</p>\n<ol>\n<li><strong>Kurz.</strong> „Kontakt Osten, zwei, hinter dem Zaun.“ Nicht: „Ähm, ich glaub, da ist einer…“</li>\n<li><strong>Richtung zuerst.</strong> Himmelsrichtung oder Uhrzeit, dann Entfernung, dann was.</li>\n<li><strong>Bestätigen.</strong> „Verstanden“ kostet eine Sekunde und spart Missverständnisse.</li>\n</ol>\n<p>Mehr im Guide <a href=\"/guides/squad-kommunikation-und-funk/\">Squad-Kommunikation &amp; Funk</a>.</p>\n<h2>Was Neulinge oft falsch machen</h2>\n<ul>\n<li>Allein zur Zone rennen, sterben, $10.000 weg.</li>\n<li>Im ersten Match ein Fahrzeug kaufen, ohne es fahren zu können.</li>\n<li>FOB setzen, ohne dass jemand Nachschub fährt.</li>\n<li>Voice ignorieren – oder den Voice mit Musik fluten.</li>\n<li>Die anderen beiden Teams als ein Team betrachten. Sie sind es nicht, und das kannst du nutzen.</li>\n</ul>\n\n<h2>Die Zone verstehen</h2>\n<p>Die Zone ist groß – rund 2×2 km. Das heißt: Es gibt nicht <em>den</em> Punkt, den man hält, sondern einen Bereich mit mehreren Schlüsselstellen. Gebäude mit Sicht, Kreuzungen, Übergänge. Ein Squad kann die Zone nicht allein halten; ein Team mit drei koordinierten Squads schon. Der Squad Lead schaut deshalb nicht nur auf sein Squad, sondern darauf, wo die anderen Squads des eigenen Teams stehen – und wo die Lücke ist.</p>\n<h2>Die Hot Zone</h2>\n<p>Innerhalb der Zone gibt es Bereiche mit doppeltem Kontrollgewicht und doppeltem Cash. Sie sind der natürliche Brennpunkt jedes Matches. Wer sie hält, führt schnell – und wird deshalb auch schnell zum Ziel der anderen beiden Teams. Die Kunst ist, sie zu halten, ohne alles dafür aufzugeben: Ein Squad in der Hot Zone, eines an den Zugängen, eines bei der FOB.</p>\n<h2>Der dritte Weg: nicht kämpfen</h2>\n<p>Drei Teams eröffnen eine Option, die Zwei-Team-Shooter nicht haben: abwarten. Wenn sich die beiden anderen Teams in der Zone aufreiben, ist das der beste Moment, um in Ruhe FOB und Nachschub aufzubauen und dann mit voller Kraft reinzugehen. Das ist kein Feigling-Spiel, das ist Timing. Proximity-Voice hilft dabei sogar: Manchmal kann man mit einem fremden Squad vor Ort kurz absprechen, wer sich zuerst um das dritte Team kümmert.</p>\n<h2>Was ein gutes Match ausmacht</h2>\n<p>Nicht der Sieg. Bei drei Teams verliert man öfter, als man gewinnt. Ein gutes Match ist eines, in dem die FOB durchgehend versorgt war, das Squad geredet hat, niemand sinnlos Cash verbrannt hat und am Ende alle mehr wussten als am Anfang. Siege kommen dann von allein.</p>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "eyebrow": "Guides",
+                "h2": "Passende Guides",
+                "inner": [
+                    {
+                        "type": "guides",
+                        "count": 3,
+                        "thema": "gameplay"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "discord",
+                        "eyebrow": "Fragen?",
+                        "h2": "Etwas unklar geblieben?",
+                        "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "equipment",
+        "title": "Wardogs Equipment – Loadouts, Werkzeug, Fahrzeuge",
+        "parent": "wardogs",
+        "template": "page-hub",
+        "hero": {
+            "image": "hero-equipment",
+            "page": true,
+            "eyebrow": "Wardogs · Themen",
+            "h1": "Wardogs <em>Equipment</em>: was du kaufst – und wann",
+            "lead": "Loadouts, Hämmer, Bauteile, Fahrzeuge: In Wardogs kannst du früh fast alles kaufen. Die Kunst ist, es nicht zu tun. Hier ist unsere Einordnung."
+        },
+        "seo": {
+            "title": "Wardogs Equipment & Loadout auf Deutsch | Warleek",
+            "description": "Waffen, Optiken, Gewicht und Fahrzeuge: Was sich in Wardogs wann lohnt, auf Deutsch aufbereitet – für Spieler aus Deutschland, Österreich und der Schweiz."
+        },
+        "sections": [
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Das Prinzip: Cash ist dein Loadout</h2>\n<p>Wardogs kennt keine Klassen, die du freischalten musst. Du hast Cash, und du kaufst, was du brauchst – Waffe, Ausrüstung, Werkzeug, Fahrzeug. Das ist die Freiheit und die Falle zugleich: Wer sein Startkapital in der ersten Minute in ein Fahrzeug steckt und es verliert, spielt den Rest des Lebens mit leeren Taschen.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Loadouts nach Rolle</h2>\n<h3>Infanterie</h3>\n<p>Ein solides Sturmgewehr, genug Magazine, Verbandsmaterial, ein bis zwei Granaten. Kein Schnickschnack. Wer die Zone hält, braucht Munition und Heilung, keine drei Visiere.</p>\n<h3>Logistik</h3>\n<p>Das günstigste Loadout, das dich am Leben hält, plus das Fahrzeug. Du bist selten im Feuergefecht – wenn doch, ist Wegfahren die bessere Waffe. Spar das Geld für Paletten.</p>\n<h3>Builder</h3>\n<p>Hammer (Medium als Standard, Large wenn du die FOB dauerhaft betreust), ein leichtes Loadout und Platz im Inventar für Bauteile. Der Builder verdient sein Geld nicht im Kampf, sondern mit jeder Wand, die einen Squad-Mate rettet.</p>\n<h3>Squad Lead</h3>\n<p>Wie Infanterie, plus alles, was Übersicht gibt: Fernglas, Markierung, Funk. Der Lead sollte nicht der sein, der als Erster fällt.</p>\n<h3>Sniper / Aufklärung</h3>\n<p>Ghillie und Zielfernrohr sind da – aber ein Sniper, der nicht meldet, ist für das Team wertlos. Wer diese Rolle spielt, spielt sie fürs Squad, nicht für die K/D.</p>\n<h2>Werkzeug: die drei Hämmer</h2>\n<table><thead><tr><th>Hammer</th><th>Baut</th><th>Tempo</th><th>Für wen</th></tr></thead><tbody>\n<tr><td>Small</td><td>Basics (Sandsäcke, Draht, Zelt)</td><td>langsam</td><td>jeder, der mal aushilft</td></tr>\n<tr><td>Medium</td><td>+ Türen, HESCO-Teile</td><td>mittel</td><td>Standard-Builder</td></tr>\n<tr><td>Large</td><td>alles</td><td>schnell</td><td>der FOB-Betreuer</td></tr>\n</tbody></table>\n<h2>Bauteile: was zuerst</h2>\n<p>Die Kosten in Build-Supplies findest du auf der <a href=\"/wardogs/fob/\">FOB-Seite</a>. Als Reihenfolge hat sich bewährt: Deckung für Spawn-Fahrzeug und Abladezone → Bunker oder Turm mit Blick auf die Anfahrt → Emplacements (Mörser, Stingray) → Tank- und Reparaturstation, wenn Fahrzeuge da sind → große Anlagen (Talon, CIWS, Drill Rig) nur bei langfristigem Halten.</p>\n<h2>Fahrzeuge</h2>\n<table><thead><tr><th>Fahrzeug</th><th>Rolle</th><th>Kaufen, wenn …</th></tr></thead><tbody>\n<tr><td><strong>Ural</strong></td><td>Paletten-LKW</td><td>… du Logistik fährst. Immer eine gute Investition.</td></tr>\n<tr><td><strong>Kodiak, Humvee</strong></td><td>Transport, kleinere Container</td><td>… ihr ein Squad schnell bewegen wollt.</td></tr>\n<tr><td><strong>Bobcat, Buggy</strong></td><td>Aufklärung, schnell</td><td>… jemand wirklich aufklärt und meldet.</td></tr>\n<tr><td><strong>Helikopter</strong></td><td>Luftlogistik, Transport</td><td>… du fliegen kannst und Flugabwehr geklärt ist.</td></tr>\n<tr><td><strong>Panzer, Artillerie</strong></td><td>schwere Unterstützung</td><td>… ihr Fuel, Mechanical und eine Crew habt. Sonst nicht.</td></tr>\n</tbody></table>\n<p>Bewaffnete Varianten transportieren nicht mehr als unbewaffnete. Wer Nachschub fährt, nimmt die Version ohne Geschütz – billiger und unauffälliger.</p>\n<h2>Kaufregeln, die Geld sparen</h2>\n<ol>\n<li><strong>Erst Rolle, dann Kauf.</strong> Was mache ich die nächsten zehn Minuten? Nur dafür kaufen.</li>\n<li><strong>Kein Fahrzeug ohne Plan.</strong> Wohin, mit wem, wer sichert? Wenn eine Antwort fehlt: nicht kaufen.</li>\n<li><strong>Nicht vollausrüsten.</strong> Ein Tod mit $8.000 Ausrüstung tut mehr weh als drei Tode mit $2.000.</li>\n<li><strong>Reserve behalten.</strong> Immer genug für eine Palette oder ein Spawn-Fahrzeug übrig lassen.</li>\n<li><strong>Squad fragen.</strong> Vielleicht hat schon jemand einen Ural. Zwei leere Ural sind einer zu viel.</li>\n</ol>\n\n<h2>Das Inventar</h2>\n<p>Alles, was du kaufst, braucht Platz. Das FOB-Deploy-Item belegt zum Beispiel 2×3 Felder, Bauteile und Munition brauchen ebenfalls Raum. Wer als Builder unterwegs ist, hält Platz für Bauteile frei und verzichtet auf die dritte Granate. Wer Logistik fährt, braucht im Inventar fast nichts – die Palette liegt auf dem LKW.</p>\n<h2>Nachtsicht, Fernglas, Werkzeug</h2>\n<p>Ein Fernglas ist für Squad Leads und Aufklärer Pflicht – es kostet wenig und macht Meldungen präzise. Nachtsicht lohnt sich in dunklen Phasen, aber nur, wenn das Squad sie hat; ein Squad mit einem NVG-Träger und vier Blinden ist kein Squad. Reparaturwerkzeug gehört zu jedem, der ein Fahrzeug fährt.</p>\n<h2>Was Neulinge kaufen sollten</h2>\n<p>In der ersten Runde: Standardgewehr, Munition, Verbandszeug. Ab der zweiten Runde, wenn Cash da ist: ein Medium Hammer, um beim Bauen helfen zu können. Ab der dritten: ein Ural für Logistik, wenn noch keiner im Squad einen hat. Alles andere kann warten, bis du weißt, wofür du es brauchst.</p>\n<h2>Was Veteranen kaufen</h2>\n<p>Erfahrene Spieler kaufen erstaunlich wenig. Sie wissen, dass Cash über Matches erhalten bleibt, dass ein billiger Tod besser ist als ein teurer, und dass das beste Equipment nichts nützt, wenn die FOB leer ist. Ihr Geld geht in Paletten, Spawn-Fahrzeuge und in das eine Fahrzeug, das dem Squad gerade wirklich fehlt.</p>\n<div class=\"wl-note wl-note--alert\"><p><strong>Preise ändern sich</strong> Wardogs ist im Early Access. Waffen-, Fahrzeug- und Bauteilpreise werden gepatcht. Wir nennen deshalb bewusst nur Werte, die belegt sind, und markieren den Stand. Aktuelle Änderungen findest du in den <a href=\"/patch-notes/\">Patch Notes</a>.</p></div>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "eyebrow": "Guides",
+                "h2": "Passende Guides",
+                "inner": [
+                    {
+                        "type": "guides",
+                        "count": 3,
+                        "thema": "equipment"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "discord",
+                        "eyebrow": "Fragen?",
+                        "h2": "Etwas unklar geblieben?",
+                        "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "technik",
+        "title": "Wardogs Technik: Steuerung, Hardware, Einstellungen",
+        "parent": "wardogs",
+        "template": "page-hub",
+        "hero": {
+            "image": "hero-technik",
+            "page": true,
+            "eyebrow": "Wardogs · Themen",
+            "h1": "Steuerung, Hardware und <em>Einstellungen</em>",
+            "lead": "Tastenbelegung, Joystick und HOTAS, Grafik- und Audio-Einstellungen: alles, was außerhalb des Matches über dein Spielgefühl entscheidet."
+        },
+        "seo": {
+            "title": "Wardogs Technik: Steuerung & Einstellungen | Warleek",
+            "description": "HOTAS, Tastenbelegung, Grafikeinstellungen und Ruckler: die technische Seite von Wardogs auf Deutsch – für Spieler in Deutschland, Österreich, Schweiz."
+        },
+        "sections": [
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Worum es hier geht</h2>\n<p>Wardogs ist ein Spiel mit Fahrzeugen, Helikoptern und Proximity-Voice – drei Dinge, bei denen Hardware und Einstellungen unmittelbar spürbar sind. Auf dieser Seite sammeln wir alles, was vor dem Match passiert: Steuerung einrichten, Eingabegeräte zum Laufen bringen, Einstellungen, die wirklich etwas ändern.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<div class=\"wl-note\"><p><strong>Vorsicht bei fremden Anleitungen</strong> Ein großer Teil der Wardogs-Technikseiten in den Suchergebnissen ist automatisiert erzeugt und beschreibt Menüpfade, die es im Spiel nicht gibt. Wenn dir irgendwo ein Menüpunkt versprochen wird, den du nicht findest – er existiert vermutlich wirklich nicht.</p></div>\n\n<h2>Steuerung: was das Spiel kann und was nicht</h2>\n<ul>\n<li><strong>Maus und Tastatur</strong> funktionieren für alles, inklusive Helikopter. Collective liegt auf Shift und Strg, Pitch und Roll auf der Maus – für Transportflüge reicht das.</li>\n<li><strong>Ein Joystick</strong> wird als DirectInput-Gerät erkannt und lässt sich in den Flug-Binds zuweisen.</li>\n<li><strong>Zwei Joysticks gleichzeitig</strong> funktionieren nicht ohne Umweg – das Spiel liest nur ein Gerät aus. Wie man es trotzdem hinbekommt, steht im HOTAS-Guide.</li>\n<li><strong>Gamepad</strong> geht, bringt aber Pad-Deadzones mit. Für einen Flightstick ist das die falsche Richtung.</li>\n<li><strong>Rebinds</strong> gehen im aktuellen Build gelegentlich zwischen Sitzungen verloren. Mach dir einen Screenshot deines Layouts.</li>\n</ul>\n\n<h2>Was sich zu prüfen lohnt</h2>\n<table><thead><tr><th>Einstellung</th><th>Warum</th></tr></thead><tbody>\n<tr><td><strong>Push-to-Talk</strong></td><td>Proximity-Voice überträgt alles, was dein Mikrofon hört – auch an Gegner in der Nähe.</td></tr>\n<tr><td><strong>Mikrofon-Pegel</strong></td><td>Übersteuerte Funksprüche versteht niemand; im Squad ist Verständlichkeit wichtiger als Lautstärke.</td></tr>\n<tr><td><strong>Sichtweite</strong></td><td>Der Einstellwert mit dem größten Einfluss auf die Bildrate in den Industriegebieten.</td></tr>\n<tr><td><strong>Fahrzeug-Maussteuerung</strong></td><td>Für Helikopter ohne Joystick deutlich präziser als reine Tastatursteuerung.</td></tr>\n<tr><td><strong>Eingabedämpfung</strong></td><td>Greift seit dem Season-1-Update für alle Eingabegeräte – wer vorher geflogen ist, muss sich neu einfühlen.</td></tr>\n</tbody></table>\n\n<h2>Wenn etwas nicht geht</h2>\n<p>Die häufigsten Ursachen, bevor du tiefer suchst: Das Spiel lief beim Ändern der Konfiguration noch (auch der Anti-Cheat-Prozess zählt), die Steam-Cloud spielt eine alte Konfiguration zurück, oder ein Eingabegerät belegt eine Achse doppelt. Alle drei erkennt man daran, dass Änderungen nach dem Neustart verschwunden sind.</p>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "eyebrow": "Guides",
+                "h2": "Technik-Guides",
+                "inner": [
+                    {
+                        "type": "guides",
+                        "count": 6,
+                        "thema": "technik"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "discord",
+                        "eyebrow": "Fragen?",
+                        "h2": "Hardware-Probleme sind selten einzigartig",
+                        "text": "Im Discord sitzen Leute mit denselben Sticks, Pedalen und Treiberproblemen."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "about-us",
+        "title": "About us – wer die Guides schreibt",
+        "parent": null,
+        "template": "page-hub",
+        "hero": {
+            "image": "hero-about",
+            "page": true,
+            "eyebrow": "About us",
+            "h1": "Wer hier <em>schreibt</em> – und warum",
+            "lead": "Warleek ist ein Fan-Projekt von Spielern aus dem deutschsprachigen Raum. Keine Redaktion, kein Verlag, keine KI-Textfabrik: Leute, die Wardogs spielen und aufschreiben, was sie dabei gelernt haben."
+        },
+        "seo": {
+            "title": "Über Warleek – deutsche Wardogs-Guides | Warleek",
+            "description": "Wer die deutschsprachigen Wardogs-Guides auf Warleek schreibt, wie recherchiert wird und woher die Zahlen stammen. Für Leser aus der DACH-Region."
+        },
+        "sections": [
+            {
+                "type": "section",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Wie das hier angefangen hat</h2>\n<p>Im September 2026, in der ersten Woche nach dem Early-Access-Start, haben ein paar von uns dasselbe erlebt: Zufalls-Squads, in denen niemand Nachschub fährt, drei Leute kaufen gleichzeitig eine FOB, und wer eine Frage googelt, landet auf Seiten, die Menüpunkte beschreiben, die es im Spiel gar nicht gibt.</p>\n<p>Also haben wir angefangen, Dinge aufzuschreiben – erst für uns, dann für andere. Daraus wurde Warleek.</p>\n\n<h2>Wie wir arbeiten</h2>\n<ul>\n<li><strong>Selbst gespielt.</strong> Jeder Ablauf in einem Guide ist im Spiel durchgegangen. Wenn wir etwas nicht selbst geprüft haben, steht es so im Text.</li>\n<li><strong>Zahlen mit Datum.</strong> Preise, Baukosten und Belohnungen ändern sich im Early Access. Deshalb trägt jede Zahl ein Stand-Datum – und die Patch Notes auf dieser Seite zeigen, was sich seitdem bewegt hat.</li>\n<li><strong>Quellen dabei.</strong> Wo wir uns auf offizielle Ankündigungen, das Wiki oder Presseberichte stützen, steht die Quelle im Text oder in unseren Notizen.</li>\n<li><strong>Korrekturen sind willkommen.</strong> Wenn etwas nicht stimmt, sag Bescheid. Wir ändern es und schreiben dazu, was sich geändert hat.</li>\n<li><strong>Keine Werbung, kein Tracking.</strong> Die Seite setzt keine Cookies zu Analysezwecken, lädt keine Schriften von fremden Servern und verkauft nichts.</li>\n</ul>\n\n<h2>Was Warleek nicht ist</h2>\n<p>Kein offizielles Angebot des Entwicklers. Wir gehören nicht zu BULKHEAD oder Team17 und sprechen nicht für sie. Bug-Reports und Support-Anfragen gehören in den offiziellen Discord des Studios, nicht zu uns.</p>\n<p>Und kein Clan mehr: Wir haben eine Weile selbst eine Community geführt. Guides schreiben und eine Gruppe zusammenhalten sind zwei verschiedene Vollzeitbeschäftigungen – wir haben uns für die Guides entschieden. Wo du Mitspieler findest, steht auf der <a href=\"/community/\">Partner-Seite</a>.</p>\n\n<h2>Kontakt</h2>\n<p>Am schnellsten über den Discord. Für Presse, Kooperationen und rechtliche Fragen steht eine E-Mail-Adresse im <a href=\"/impressum/\">Impressum</a>.</p>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "discord",
+                        "eyebrow": "Kontakt",
+                        "h2": "Schreib uns",
+                        "text": "Korrekturen, Themenwünsche, Partneranfragen – alles willkommen."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "impressum",
+        "title": "Impressum",
+        "parent": null,
+        "template": "page",
+        "noindex": true,
+        "seo": {
+            "title": "Impressum – Warleek | Warleek",
+            "description": "Anbieterkennzeichnung nach § 5 DDG für warleek.de: Betreiber, Anschrift und Kontaktmöglichkeiten der deutschsprachigen Wardogs-Guide-Seite."
+        },
+        "sections": [
+            {
+                "type": "prose",
+                "html": "\n<h2>Angaben gemäß § 5 DDG</h2>\n<p>Patrick Pascal Schauß<br>Heldenbergerstraße 14<br>61184 Karben<br>Deutschland</p>\n<h2>Kontakt</h2>\n<p>Telefon: <a href=\"tel:+491626905143\">+49 162 6905143</a><br>E-Mail: <a href=\"mailto:info@patrickschauss.de\">info@patrickschauss.de</a></p>\n<h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>\n<p>Patrick Pascal Schauß, Anschrift wie oben.</p>\n<h2>Hinweis zum Fan-Projekt</h2>\n<p>Warleek ist ein unabhängiges, nicht-kommerzielles Fan-Projekt. Es besteht keine Verbindung zu BULKHEAD, Team17 oder anderen Rechteinhabern von WARDOGS. WARDOGS und alle zugehörigen Marken, Namen und Bilder sind Eigentum der jeweiligen Rechteinhaber. Patch Notes werden mit Quellenangabe von der öffentlichen Steam-News-Schnittstelle übernommen und maschinell ins Deutsche übersetzt.</p>\n<h2>Haftung für Inhalte</h2>\n<p>Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich; bei Bekanntwerden entsprechender Rechtsverletzungen entfernen wir diese Inhalte umgehend.</p>\n<h2>Haftung für Links</h2>\n<p>Unser Angebot enthält Links zu externen Websites Dritter, unter anderem zu Discord, Steam und YouTube. Auf deren Inhalte haben wir keinen Einfluss und übernehmen dafür keine Gewähr. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Werden uns Rechtsverletzungen bekannt, entfernen wir solche Links umgehend.</p>\n<h2>Urheberrecht</h2>\n<p>Die von uns erstellten Texte, Grafiken, Schaubilder und das Logo unterliegen dem deutschen Urheberrecht. Die Bilder auf dieser Seite wurden mit KI-Werkzeugen erstellt und zeigen keine realen Personen. Eine Nutzung außerhalb dieser Seite bedarf unserer Zustimmung. Zitierte Patch Notes und verlinkte Videos bleiben Eigentum der jeweiligen Urheber und sind als solche gekennzeichnet.</p>\n<h2>Verbraucherstreitbeilegung</h2>\n<p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).</p>\n"
+            }
+        ]
+    },
+    {
+        "slug": "datenschutz",
+        "title": "Datenschutzerklärung",
+        "parent": null,
+        "template": "page",
+        "noindex": true,
+        "seo": {
+            "title": "Datenschutzerklärung – Warleek | Warleek",
+            "description": "Wie warleek.de mit Daten umgeht: keine Werbenetzwerke, keine Analyse-Dienste, selbst gehostete Schriften. Datenschutzerklärung nach DSGVO."
+        },
+        "sections": [
+            {
+                "type": "prose",
+                "html": "\n<p>Diese Erklärung beschreibt, welche Daten beim Besuch von warleek.de anfallen und was damit geschieht. Die kurze Fassung vorweg: Die Seite setzt <strong>keine Werbe- oder Analyse-Cookies</strong>, bindet <strong>keine Tracking-Dienste</strong> ein und lädt Schriften, Bilder und Videos vom eigenen Server. Nur ein eingebettetes YouTube-Video stellt eine Verbindung zu Dritten her – und das erst, wenn du es ausdrücklich erlaubst.</p>\n<h2>1. Verantwortlicher</h2>\n<p>Patrick Pascal Schauß<br>Heldenbergerstraße 14<br>61184 Karben<br>Deutschland<br>Telefon: <a href=\"tel:+491626905143\">+49 162 6905143</a><br>E-Mail: <a href=\"mailto:info@patrickschauss.de\">info@patrickschauss.de</a></p>\n<h2>2. Hosting und Server-Logfiles</h2>\n<p>Die Website wird bei ALL-INKL.COM – Neue Medien Münnich, Inh. René Münnich, Hauptstraße 68, 02742 Friedersdorf, Deutschland gehostet. Beim Aufruf einer Seite verarbeitet der Hoster automatisch Server-Logfiles: IP-Adresse, Datum und Uhrzeit, aufgerufene Adresse, übertragene Datenmenge, Browsertyp, Betriebssystem und die zuvor besuchte Seite. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO – unser berechtigtes Interesse an einem sicheren, stabilen Betrieb. Die Logfiles werden nach spätestens sieben Tagen gelöscht. Mit dem Hoster besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.</p>\n<h2>3. Keine Cookies, kein Tracking, keine fremden Schriften</h2>\n<p>Diese Website setzt <strong>keine</strong> Cookies zu Analyse-, Werbe- oder Profilbildungszwecken. Es sind keine Analyse-Werkzeuge, keine Werbenetzwerke, keine Social-Media-Plugins, keine externen Schriftarten, keine Emoji-Dienste und keine Kartendienste eingebunden. Alle Schriften, Bilder und Videos liegen auf unserem eigenen Server. Technisch notwendige Cookies setzt WordPress nur, wenn du dich im Verwaltungsbereich anmeldest – für Besucherinnen und Besucher entstehen keine.</p>\n<h2>4. Einwilligung für externe Videos</h2>\n<p>Einzelne Guides enthalten eingebettete Videos von YouTube (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Damit dabei nicht ungefragt Daten an Google fließen, ist die Einbettung gesperrt: Zu sehen ist zunächst nur eine Vorschau von unserem Server. Erst wenn du auf „Video laden\" klickst oder im Hinweisbanner zustimmst, wird der Player nachgeladen. Dabei werden deine IP-Adresse, Geräte- und Browserinformationen an Google übertragen; eine Übermittlung in die USA ist möglich. Rechtsgrundlage ist deine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG. Wir verwenden die Variante youtube-nocookie.com, die erst beim Abspielen Cookies setzt. Näheres in der <a href=\"https://policies.google.com/privacy\" rel=\"noopener\" target=\"_blank\">Datenschutzerklärung von Google</a>.</p>\n<p><strong>Deine Entscheidung speichern wir nicht auf dem Server.</strong> Sie liegt ausschließlich im lokalen Speicher deines Browsers (localStorage) unter dem Schlüssel <code>warleek_consent</code> und wird bei keinem Seitenaufruf mitgeschickt. Du kannst sie jederzeit ändern: <a href=\"#\" data-wl-consent-reopen>Einwilligung erneut anzeigen</a>. Ein Löschen der Websitedaten in deinem Browser entfernt sie ebenfalls.</p>\n<h2>5. Patch Notes von Steam</h2>\n<p>Die Seite „Patch Notes\" übernimmt die öffentlichen WARDOGS-Ankündigungen über die Steam-News-Schnittstelle. Der Abruf erfolgt ausschließlich serverseitig durch unseren Server; enthaltene Bilder werden bei uns gespeichert und von dort ausgeliefert. Beim Besuch dieser Seiten entsteht <strong>keine</strong> Verbindung zu Servern von Valve.</p>\n<h2>6. Maschinelle Übersetzung der Patch Notes</h2>\n<p>Für die deutsche Fassung senden wir den englischen Ankündigungstext serverseitig an die Programmierschnittstelle von Anthropic PBC, 548 Market St, San Francisco, CA 94104, USA. Übertragen wird ausschließlich der öffentliche Text des Spieleentwicklers – <strong>keine Daten von Besucherinnen und Besuchern</strong>, keine IP-Adressen, keine Nutzungsdaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (Interesse an deutschsprachigen Spielinformationen). Weitere Informationen: <a href=\"https://www.anthropic.com/legal/privacy\" rel=\"noopener\" target=\"_blank\">Datenschutzerklärung von Anthropic</a>. Jede übersetzte Patch Note ist als maschinell übersetzt gekennzeichnet und enthält das englische Original zum Aufklappen.</p>\n<h2>7. Links zu Discord, Steam und anderen Diensten</h2>\n<p>Unsere Seiten enthalten Links zu externen Diensten. Erst mit dem Klick auf einen solchen Link verlässt du unsere Seite; ab dann gelten die Bestimmungen des jeweiligen Anbieters. Inhalte dieser Dienste binden wir nicht unaufgefordert ein.</p>\n<h2>8. Kontakt per E-Mail oder Telefon</h2>\n<p>Wenn du uns schreibst oder anrufst, verarbeiten wir deine Angaben zur Bearbeitung der Anfrage (Art. 6 Abs. 1 lit. b bzw. f DSGVO). Die Daten werden gelöscht, sobald die Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>\n<h2>9. Deine Rechte</h2>\n<p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen. Außerdem steht dir ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu; zuständig ist für uns der Hessische Beauftragte für Datenschutz und Informationsfreiheit.</p>\n<h2>10. Änderungen dieser Erklärung</h2>\n<p>Wir passen diese Erklärung an, wenn sich die Website oder die Rechtslage ändert. Stand: 30. September 2026.</p>\n"
+            }
+        ]
     }
-   ]
-  },
-  "seo": {
-   "title": "Wardogs Community & Partner – deutschsprachig | Warleek",
-   "description": "Deutschsprachige Wardogs-Communities, Clans und Kanäle auf einen Blick – Partner von Warleek. Plus unser Discord für Fragen zu den Guides."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Warum wir Partner empfehlen statt selbst zu rekrutieren</h2>\n<p>Warleek ist eine Guide-Seite. Wir schreiben auf, wie FOBs funktionieren und warum der Logistik-Run sich lohnt – aber ein Squad zusammenzuhalten, Spielabende zu organisieren und Leute einzuarbeiten, das machen andere besser. Deshalb führen wir keinen eigenen Clan mehr, sondern verweisen auf Gruppen, die genau das tun.</p>\n<p>Jeder Partner hier ist deutschsprachig, offen für neue Leute und von uns persönlich angespielt. Wer auf der Liste steht, wurde nicht dafür bezahlt.</p>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Unsere Partner",
-    "h2": "Wo du Mitspieler findest",
-    "inner": [
-     {
-      "type": "partner",
-      "count": 12
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2 id=\"partner-werden\">Partner werden</h2>\n<p>Du führst eine deutschsprachige Wardogs-Community und möchtest hier stehen? Schreib uns – im Discord oder per Mail. Wir schauen vorbei, spielen einen Abend mit und nehmen dich auf, wenn es passt. Drei Dinge erwarten wir:</p>\n<ul>\n<li><strong>Deutschsprachig und offen.</strong> Neue Leute sollen ohne Bewerbungsverfahren reinschauen können.</li>\n<li><strong>Aktiv.</strong> Ein Discord, in dem seit drei Monaten niemand geschrieben hat, hilft niemandem.</li>\n<li><strong>Anständiger Umgang.</strong> Kein Toxic-Gerede, keine Cheats, kein Ärger in fremden Lobbys.</li>\n</ul>\n<p>Im Gegenzug verlinken wir euch hier, und ihr dürft unsere Guides in eurem Discord teilen, so viel ihr wollt.</p>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "discord",
-      "eyebrow": "Discord",
-      "h2": "Der Warleek-Discord",
-      "text": "Für Rückfragen zu den Guides, Korrekturen und Themenwünsche – und um Leute für den Abend zu finden."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "wardogs",
-  "title": "Wardogs erklärt: alle Themen im Überblick",
-  "parent": null,
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-hub",
-   "page": true,
-   "eyebrow": "Das Spiel erklärt",
-   "h1": "Wardogs <em>verstehen</em>: Zone, Cash, FOB, Logistik",
-   "lead": "100 Spieler, drei Teams, eine Zone und Geld als Währung für alles. Hier steht, wie das zusammenhängt – und wo du für jedes Thema in die Tiefe gehst."
-  },
-  "seo": {
-   "title": "Wardogs erklärt: Zone, Cash, FOB & Logistik (Deutsch) | Warleek",
-   "description": "Wie WARDOGS funktioniert, auf Deutsch erklärt: 100 Spieler in drei Teams, Kontrollzone, Cash-Economy, FOB und Nachschub. Mit ausführlichen Themenseiten und Guides."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Wardogs in einem Absatz</h2>\n<p>WARDOGS ist ein taktischer Multiplayer-Shooter von BULKHEAD (Publisher: Team17), seit dem 10. September 2026 im Early Access auf Steam. In jedem Match kämpfen <strong>100 Spieler in drei Teams</strong> um eine <strong>Kontrollzone</strong>, die zufällig auf einer großen Map gesetzt wird. Das erste Team mit 100 Punkten gewinnt. Das Setting: verlassene Industrie-Berglandschaften in Osteuropa, zerstörbar und bebaubar. Und über allem steht <strong>Cash</strong> – jede sinnvolle Teamaktion bringt Geld, und mit Geld kaufst du Ausrüstung, Fahrzeuge und Bauteile.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Die vier Säulen</h2>\n<p>Wer Wardogs verstehen will, muss vier Dinge verstehen. Zu jedem haben wir eine eigene ausführliche Seite:</p>\n"
-     },
-     {
-      "type": "topics"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Warum drei Teams alles ändern</h2>\n<p>Zwei Teams sind Tauziehen. Drei Teams sind Politik. Wenn du die Zone hältst, greifen dich zwei Seiten an – und die haben oft keine Lust, sich gegenseitig zu bekämpfen, solange du oben stehst. Das heißt: Wer führt, wird zum Ziel. Wer zurückliegt, hat Zeit, eine FOB aufzubauen und im richtigen Moment zuzuschlagen. Das macht Wardogs deutlich weniger vorhersehbar als klassische 2-Fraktionen-Shooter.</p>\n<h2>Cash: die eine Währung</h2>\n<p>Pro Leben startest du mit $10.000 (Stand September 2026). Davon kaufst du dein Loadout, Werkzeug, Bauteile, Fahrzeuge. Cash verdienst du mit allem, was dem Team hilft: Zone halten, Nachschub liefern, bauen, heilen, Ziele markieren. Cash bleibt über Matches hinweg erhalten – wer sparsam und teamdienlich spielt, hat langfristig mehr Optionen. Wer jede Runde einen Heli verbrennt, nicht.</p>\n<h2>Was Wardogs von Squad, Hell Let Loose und Battlefield unterscheidet</h2>\n<ul>\n<li><strong>Drei Teams</strong> statt zwei – siehe oben.</li>\n<li><strong>Cash statt Klassen-Freischaltung</strong> – du kannst früh alles kaufen, wenn du es dir leisten kannst. Ob das klug ist, steht auf einem anderen Blatt.</li>\n<li><strong>Eine Zone</strong> statt Flaggenketten – der Fokus liegt auf einem Ort, die Map drumherum ist Nachschub- und Flankenraum.</li>\n<li><strong>Bauen als Kernmechanik</strong> – FOB, Wälle, Emplacements, Tankstellen, sogar ein Drill Rig für Treibstoff.</li>\n<li><strong>Proximity-Voice</strong> – wer in der Nähe ist, hört dich. Das sorgt für Momente, die kein Skript schreiben könnte.</li>\n</ul>\n<h2>Erste Schritte</h2>\n<p>Lies unseren Guide <a href=\"/guides/deine-erste-runde-wardogs/\">Deine erste Runde Wardogs</a>, komm in den <a href=\"/community/\">Discord</a> und fahr in den ersten Matches Nachschub. Du lernst die Map, verdienst Cash und bist für dein Team sofort nützlich. Alles Weitere ergibt sich.</p>\n"
-     },
-     {
-      "type": "guides",
-      "count": 6
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "discord",
-      "eyebrow": "Fragen?",
-      "h2": "Etwas unklar geblieben?",
-      "text": "Frag im Discord nach – und wenn die Antwort fehlt, wird daraus ein Guide."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "einsteiger",
-  "title": "Wardogs für Einsteiger: die ersten Stunden",
-  "parent": "wardogs",
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-einsteiger",
-   "page": true,
-   "eyebrow": "Wardogs · Themen",
-   "h1": "Wardogs für <em>Einsteiger</em>",
-   "lead": "Was du in den ersten Runden tun solltest, was dich Geld kostet und warum Nachschubfahren der beste Einstieg ist."
-  },
-  "seo": {
-   "title": "Wardogs für Einsteiger: Anleitung für die ersten Runden | Warleek",
-   "description": "Wardogs Einsteiger-Guide auf Deutsch: erstes Loadout, Startkapital sinnvoll einsetzen, Nachschub fahren, Squad finden – und die fünf Fehler, die jeden Neuling Geld kosten."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Die kurze Fassung</h2>\n<p>Wardogs verzeiht keine Alleingänge und belohnt fast alles, was dem Team hilft. Wenn du nur drei Sätze aus dieser Seite mitnimmst:</p>\n<ol>\n<li><strong>Squad zuerst, Ausrüstung danach.</strong> Wer alleine losläuft, stirbt teuer und bringt niemandem etwas.</li>\n<li><strong>Billig sterben.</strong> In den ersten Runden reichen Gewehr, Munition und Verbandszeug. Alles andere ist Geld, das du später brauchst.</li>\n<li><strong>Nachschub fahren.</strong> Du lernst die Karte, verdienst zuverlässig Geld und bist vom ersten Match an nützlich.</li>\n</ol>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Deine ersten 30 Minuten</h2>\n<p>Du startest mit <strong>$10.000 pro Leben</strong>. Das klingt nach viel und ist nach zwei unüberlegten Käufen weg. Der Ablauf, der sich bewährt hat:</p>\n<ul>\n<li><strong>Minute 0–2:</strong> Squad beitreten, im Voice Hallo sagen, fragen, was gebraucht wird.</li>\n<li><strong>Minute 2–5:</strong> Standardgewehr, Munition, Verbandszeug. Kein Fahrzeug, keine FOB, kein Zielfernrohr.</li>\n<li><strong>Minute 5–30:</strong> Eine Palette kaufen (rund $400), auf einen Ural laden, zur FOB fahren, abladen <em>und übertragen</em>. Das bringt rund $2.500 – und du kennst danach die halbe Karte.</li>\n</ul>\n<p>Den kompletten Ablauf mit allen Handgriffen findest du im Guide <a href=\"/guides/deine-erste-runde-wardogs/\">Deine erste Runde Wardogs</a>.</p>\n\n<h2>Die Begriffe, die dir dauernd begegnen</h2>\n<table><thead><tr><th>Begriff</th><th>Was es ist</th><th>Warum es dich betrifft</th></tr></thead><tbody>\n<tr><td><strong>Zone</strong></td><td>der umkämpfte Bereich, rund 2×2 km</td><td>Punkte gibt es nur dort – aber nicht nur dort gewinnt man</td></tr>\n<tr><td><strong>FOB</strong></td><td>vorgeschobene Basis, vom Team selbst gesetzt</td><td>ohne sie läuft dein Team ewig vom Hauptlager</td></tr>\n<tr><td><strong>Palette</strong></td><td>Nachschubeinheit: Build, Ammo, Fuel, Mechanical</td><td>deine wichtigste Einnahmequelle als Neuling</td></tr>\n<tr><td><strong>Spawn-Fahrzeug</strong></td><td>separat platzierter Wiedereinstiegspunkt</td><td>die FOB allein ist <em>kein</em> Spawn – der häufigste Irrtum</td></tr>\n<tr><td><strong>Hot Zone</strong></td><td>Bereich mit doppelter Wertung</td><td>doppeltes Kontrollgewicht und doppeltes Cash</td></tr>\n</tbody></table>\n\n<h2>Fünf Fehler, die jeden Neuling Geld kosten</h2>\n<ol>\n<li><strong>Allein zur Zone rennen.</strong> Drei Gegnerteams, keine Deckung, kein Squad – das Loadout ist weg.</li>\n<li><strong>Eine FOB kaufen.</strong> Rund $4.887 für eine Bauzone, die ohne Absprache am falschen Ort steht.</li>\n<li><strong>Ein Fahrzeug kaufen, das man nicht fahren kann.</strong> Der Heli am Berghang ist der teuerste Lernmoment im Spiel.</li>\n<li><strong>Den Voice ignorieren.</strong> Wardogs ist Kommunikation. Zuhören reicht am Anfang völlig.</li>\n<li><strong>Die anderen beiden Teams als ein Team sehen.</strong> Sie sind es nicht – und genau daraus entstehen die besten Momente.</li>\n</ol>\n\n<h2>Wenn die erste Runde vorbei ist</h2>\n<p>Dann weißt du, wie Nachschub funktioniert, hast mehr Cash als am Anfang und kennst ein paar Namen. Von hier aus lohnen sich zwei Richtungen: die <a href=\"/wardogs/fob/\">FOB-Seite</a>, wenn du bauen willst, oder die <a href=\"/wardogs/gameplay/\">Gameplay-Seite</a>, wenn du verstehen willst, warum drei Teams alles verändern.</p>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Guides",
-    "h2": "Einsteiger-Guides",
-    "inner": [
-     {
-      "type": "guides",
-      "count": 6,
-      "thema": "einsteiger"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "discord",
-      "eyebrow": "Fragen?",
-      "h2": "Am Anfang fragt man viel",
-      "text": "Genau dafür ist der Discord da. Keine Frage ist zu einfach."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "fob",
-  "title": "Wardogs FOB – Forward Operating Base erklärt",
-  "parent": "wardogs",
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-fob",
-   "page": true,
-   "eyebrow": "Wardogs · Themen",
-   "h1": "Die Wardogs <em>FOB</em>: bauen, versorgen, halten",
-   "lead": "Die Forward Operating Base ist das Rückgrat deines Teams. Hier erfährst du, was sie kostet, was sie braucht, was du darin bauen kannst – und welche Fehler dich das Match kosten."
-  },
-  "seo": {
-   "title": "Wardogs FOB bauen: Anleitung, Kosten & Versorgung (Deutsch) | Warleek",
-   "description": "Wardogs FOB Schritt für Schritt: Deploy-Item und Kosten, die vier Versorgungsarten, Hammer-Stufen, Spawn-Fahrzeug, Baureihenfolge und die Fehler, die dich die Basis kosten."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Was eine FOB ist – und was nicht</h2>\n<p>Die FOB (Forward Operating Base) ist eine vorgeschobene Basis, die dein Team selbst setzt. Sie öffnet eine quadratische Bauzone auf der Karte, in der ihr Deckung, Emplacements, Tank- und Reparaturstationen und mehr errichten könnt. Sie ist der Ort, an dem Nachschub ankommt und von dem aus die Zone angegriffen oder gehalten wird.</p>\n<p>Was sie <strong>nicht</strong> ist: ein automatischer Spawnpunkt. Zum Spawnen braucht dein Team ein separat platziertes Spawn-Fahrzeug. Das ist der häufigste Anfängerirrtum – und der teuerste.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Eine FOB setzen</h2>\n<ol>\n<li><strong>Deploy-Item kaufen.</strong> Das FOB-Deploy-Item belegt 2×3 Felder im Inventar und kostet rund $4.887 (Stand September 2026). Das ist knapp die Hälfte deines Startkapitals – also nicht allein und nicht ohne Absprache.</li>\n<li><strong>Platz wählen.</strong> Begehbares Gelände mit Platz für LKW und – wenn möglich – einen Heli. Nicht auf offener Fläche, nicht direkt an der Zone (ihr wollt nicht, dass jede Granate eure Versorgung trifft), aber nah genug, dass der Weg zur Zone kurz ist.</li>\n<li><strong>Platzieren.</strong> Über das Inventar in einen Quickslot legen, Platzierung halten, fertig. Auf der Map erscheint die Bauzone.</li>\n<li><strong>Spawn-Fahrzeug setzen.</strong> Versteckt, aus Richtung der Gegner nicht einsehbar, aber für Nachrücker schnell erreichbar.</li>\n<li><strong>Nachschub anfordern.</strong> Ohne Build-Supplies könnt ihr nichts bauen. Sofort im Squad-Chat sagen, was fehlt.</li>\n</ol>\n<h2>Die vier Versorgungsarten</h2>\n<table><thead><tr><th>Versorgung</th><th>Wofür</th><th>Wann wichtig</th></tr></thead><tbody>\n<tr><td><strong>Build</strong></td><td>alle Bauwerke: Wälle, HESCO, Bunker, Türme</td><td>zuerst, immer</td></tr>\n<tr><td><strong>Ammo</strong></td><td>Emplacements wie Mörser und Geschütze</td><td>sobald Emplacements stehen</td></tr>\n<tr><td><strong>Fuel</strong></td><td>Fahrzeuge, Tankstation, Drill Rig</td><td>wenn Fahrzeuge an der FOB hängen</td></tr>\n<tr><td><strong>Mechanical</strong></td><td>Reparaturen, bestimmte Systeme, Munitionskauf</td><td>wenn Fahrzeuge Schaden nehmen</td></tr>\n</tbody></table>\n<p>Die FOB versorgt sich nicht selbst. Jede Palette muss jemand vom Hauptlager holen – wie das geht, steht auf der <a href=\"/wardogs/logistik/\">Logistik-Seite</a>.</p>\n<h2>Hämmer: drei Stufen</h2>\n<ul>\n<li><strong>Small Hammer</strong> – nur einfache Bauteile, langsam. Gut für den Anfang und für Sandsäcke.</li>\n<li><strong>Medium Hammer</strong> – zusätzlich Türen und HESCO-Teile. Der Standard für Builder.</li>\n<li><strong>Large Hammer</strong> – baut alles und am schnellsten. Für den, der die FOB wirklich betreut.</li>\n</ul>\n<h2>Was du bauen kannst (Kosten in Build-Supplies)</h2>\n<p>Ohne FOB, direkt im Feld: Recon Tent (5), Stacheldraht (5), Sandsäcke (10), Hedgehog (14).</p>\n<p>Mit FOB in der Bauzone (Auswahl, Stand September 2026): HESCO-Block (10–14), Bremer Wall (10), Tür (14), HESCO-Wand (46), Tor (52), Bunker (61), Recon Tower (61), Mörser (91), Stingray (91), Tankstation (121), Reparaturstation (121), Talon (601), Vanguard CIWS (901), Drill Rig (1.351).</p>\n<p>Die Reihenfolge, die sich bewährt hat: erst Deckung für das Spawn-Fahrzeug und die Abladezone, dann ein Bunker oder Turm mit Sicht auf die Anfahrt, dann Emplacements. Große Anlagen wie das Drill Rig lohnen sich nur, wenn ihr die FOB lange halten wollt und mehrere Fahrer habt.</p>\n<h2>Verteidigen und angreifen</h2>\n<p>Eine FOB fällt selten durch einen Frontalangriff. Sie fällt, wenn ihre Versorgung abgeschnitten wird. Wer verteidigt, sichert deshalb die Nachschubroute mindestens so gut wie die Basis selbst. Wer angreift, sucht zuerst das Spawn-Fahrzeug und die LKW-Route, dann die Emplacements – und erst zum Schluss die FOB selbst.</p>\n<h2>Die fünf typischen Fehler</h2>\n<ol>\n<li><strong>FOB ohne Nachschub.</strong> $4.887 für eine Bauzone, in der niemand etwas bauen kann.</li>\n<li><strong>Kein Spawn-Fahrzeug.</strong> Alle laufen weiter vom Hauptlager.</li>\n<li><strong>Spawn-Fahrzeug sichtbar.</strong> Gegner finden es, Gegner zerstören es, Gegner campen die Stelle.</li>\n<li><strong>Kein Platz zum Wenden.</strong> Eine stark befestigte FOB, an die kein LKW herankommt, verhungert.</li>\n<li><strong>Falsche Palette.</strong> Fuel liefern, wenn Build fehlt. Vorher fragen, was gebraucht wird.</li>\n</ol>\n\n<h2>Wo eine FOB hingehört – und wo nicht</h2>\n<p>Die richtige Position ist wichtiger als jedes Bauteil. Ein guter FOB-Platz erfüllt vier Bedingungen: Er ist von der Zone aus in ein bis zwei Minuten erreichbar, liegt außerhalb der direkten Sichtlinie der Zone, hat mindestens eine Anfahrt, die nicht an einer gegnerischen Position vorbeiführt, und bietet natürliche Deckung – ein Gebäude, ein Hang, ein Waldstück. Schlecht sind offene Wiesen, Kuppen und alles, was von der Zone aus mit Mörsern erreichbar ist.</p>\n<p>Bei drei Teams gilt außerdem: Überleg, aus welcher Richtung die anderen beiden kommen. Eine FOB, die genau zwischen zwei gegnerischen Anmarschrouten liegt, ist keine Basis, sondern ein Schießstand.</p>\n<h2>Mehrere FOBs?</h2>\n<p>Ein Team kann mehr als eine FOB betreiben – aber jede braucht Fahrer. Zwei FOBs mit je einem Fahrer sind meist schlechter versorgt als eine mit zwei Fahrern. Sinnvoll ist eine zweite FOB, wenn die erste weit von der Zone liegt oder wenn ihr eine Rückzugsposition wollt, falls die erste fällt. Bevor jemand die zweite setzt: Absprache im Team-Chat, nicht nur im Squad.</p>\n<h2>Die FOB verlieren – und weitermachen</h2>\n<p>Jede FOB fällt irgendwann. Wenn es passiert, ist die Reihenfolge: Spawn-Fahrzeug retten oder neu setzen, Fahrer abziehen, neuen Platz wählen, neu bauen. Die Struktur ist weg, das Wissen nicht. Ein Team, das nach dem Verlust der FOB in fünf Minuten wieder eine stehen hat, ist stärker als eines, das die alte um jeden Preis verteidigt.</p>\n<h2>FOB-Etikette</h2>\n<ul>\n<li>Nichts abreißen, was du nicht selbst gebaut hast – außer der Builder bittet darum.</li>\n<li>Paletten dort abladen, wo der Builder sie will, nicht wo es gerade passt.</li>\n<li>Nicht mit Fahrzeugen durch die Basis fahren.</li>\n<li>Wenn du gehst, sag es. Eine unbewachte FOB ist eine verlorene FOB.</li>\n</ul>\n<div class=\"wl-note\"><p><strong>Weiterlesen</strong> Schritt für Schritt mit Squad-Absprache: <a href=\"/guides/fob-bauen-schritt-fuer-schritt/\">FOB-Bau Schritt für Schritt</a>.</p></div>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Guides",
-    "h2": "Passende Guides",
-    "inner": [
-     {
-      "type": "guides",
-      "count": 3,
-      "thema": "fob"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "discord",
-      "eyebrow": "Fragen?",
-      "h2": "Etwas unklar geblieben?",
-      "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "logistik",
-  "title": "Wardogs Logistik – Nachschub, Paletten, Cash",
-  "parent": "wardogs",
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-logistik",
-   "page": true,
-   "eyebrow": "Wardogs · Themen",
-   "h1": "Wardogs <em>Logistik</em>: Nachschub fahren, Cash verdienen",
-   "lead": "Logistik ist in Wardogs keine Nebenrolle. Ohne Paletten keine FOB, ohne FOB keine Zone. Und nebenbei ist sie eine der besten Cash-Quellen im Spiel."
-  },
-  "seo": {
-   "title": "Wardogs Logistik: Paletten, Routen & Cash – Anleitung | Warleek",
-   "description": "Wardogs Logistik erklärt: welche Palette wann, Ural oder Heli, sichere Routen, richtig abladen und übertragen. Rund 2.100 Dollar netto pro Lieferung – so holst du sie."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Warum Logistik das Spiel entscheidet</h2>\n<p>In Wardogs gewinnt nicht das Team mit den besten Schützen, sondern das Team, dessen FOB am längsten versorgt ist. Jede Wand, jeder Mörser, jedes betankte Fahrzeug an der Front hat vorher jemand auf einer Palette angeliefert. Wer das übernimmt, ist für sein Team so wertvoll wie der Squad Lead – und verdient dabei richtig Geld.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Die Rechnung</h2>\n<p>Eine Palette kostet rund <strong>$400</strong> im Kauf und bringt bei der Abgabe an einer FOB <strong>$2.500</strong> – netto etwa $2.100 pro Lieferung (Stand September 2026, Presseangaben zum Early-Access-Start). Drei Fahrten, und du hast dein Startkapital mehr als verdoppelt. Kaum eine andere Rolle bezahlt so zuverlässig.</p>\n<h2>Was du lieferst: die vier Versorgungsarten</h2>\n<ul>\n<li><strong>Build</strong> – Baumaterial. Bei neuen FOBs immer zuerst.</li>\n<li><strong>Ammo</strong> – für Mörser, Geschütze und Emplacements.</li>\n<li><strong>Fuel</strong> – für Fahrzeuge, Tankstation und Drill Rig.</li>\n<li><strong>Mechanical</strong> – für Reparaturen und bestimmte Systeme.</li>\n</ul>\n<p>Es gibt zwei Formate: <strong>Kisten</strong> (flexibel, weniger Menge pro Typ) und <strong>Paletten</strong> (viel von einem Typ). Wenn an der FOB ein Typ kritisch fehlt, nimm die Palette. Wenn du nicht weißt, was fehlt, frag – oder nimm Kisten gemischt.</p>\n<h2>Womit du fährst</h2>\n<table><thead><tr><th>Fahrzeug</th><th>Eignung</th><th>Hinweis</th></tr></thead><tbody>\n<tr><td><strong>Ural</strong></td><td>volle Paletten, das Arbeitstier</td><td>langsam, groß, braucht Platz zum Wenden</td></tr>\n<tr><td><strong>Kodiak / Humvee</strong></td><td>kleinere Container</td><td>schneller, weniger Ladung; Waffenvarianten laden nicht mehr</td></tr>\n<tr><td><strong>Helikopter (z. B. MH-6)</strong></td><td>Palette am Haken, erreicht FOBs ohne Straße</td><td>schnell, aber anfällig für Flugabwehr; direkter Anflug, sofort abladen</td></tr>\n<tr><td><strong>Bobcat, Buggy</strong></td><td>keine Frachter</td><td>für Aufklärung, nicht für Nachschub</td></tr>\n</tbody></table>\n<h2>Der Ablauf eines Logistik-Runs</h2>\n<ol>\n<li><strong>Bedarf prüfen.</strong> Was fehlt an der FOB? Squad fragen oder Lagerbestand ansehen.</li>\n<li><strong>Kaufen.</strong> Richtigen Typ, richtiges Format. Logistik-Screen (Beta-Taste B – kann sich ändern).</li>\n<li><strong>Laden.</strong> Palette auf ein passendes Fahrzeug.</li>\n<li><strong>Route wählen.</strong> Die sichere Route, nicht die kurze. Schlamm, Steigungen, beschädigte Brücken einplanen. Wenn du zweimal auf derselben Strecke abgeschossen wurdest, nimm eine andere.</li>\n<li><strong>Ankunft ansagen.</strong> „Ural kommt von Süden, in 30 Sekunden“ – damit niemand auf dich schießt und jemand die Abladezone sichert.</li>\n<li><strong>Abladen und übergeben.</strong> Fracht in der Nähe der FOB abwerfen (Beta: G) und ins Lager übertragen (Beta: F). Der zweite Schritt wird oft vergessen – ohne ihn liegt die Palette nur herum.</li>\n<li><strong>Zurück und wiederholen.</strong> Leer zurückfahren ist okay. Noch besser: unterwegs Verwundete mitnehmen.</li>\n</ol>\n<h2>Prioritäten</h2>\n<ul>\n<li>Neue FOB → <strong>Build</strong>.</li>\n<li>Mörser oder Geschütze aktiv → <strong>Ammo</strong>.</li>\n<li>Viele Fahrzeuge an der FOB → <strong>Fuel</strong> und <strong>Mechanical</strong>.</li>\n</ul>\n<h2>Tipps aus vielen Fahrten</h2>\n<ul>\n<li>Fahr nie allein, wenn es sich vermeiden lässt. Ein Beifahrer sieht Gegner, die du nicht siehst, und kann das Abladen übernehmen.</li>\n<li>Lichter aus in der Dämmerung. Der Konvoi mit Scheinwerfern ist das erste, was ein Sniper sieht.</li>\n<li>Halte nicht direkt an der FOB. Lade dort ab, wo du noch wenden kannst.</li>\n<li>Wenn die Route unter Beschuss ist, sag es dem Squad Lead. Eine gesicherte Route ist Aufgabe des ganzen Teams.</li>\n<li>Rechne mit Verlusten. Ein abgeschossener Ural ist ärgerlich, aber $400 Palette gegen $2.500 Belohnung verzeiht viel.</li>\n</ul>\n\n<h2>Logistik im Squad: Rollen und Rhythmus</h2>\n<p>Ein Squad mit einem festen Fahrer ist gut. Ein Squad mit zwei Fahrern, die sich abwechseln, ist besser: Während einer fährt, sichert der andere die Abladezone oder hilft beim Bauen. Der Rhythmus, der sich bewährt hat: eine Palette pro fünf bis acht Minuten pro Fahrer, je nach Entfernung. Wenn die FOB mehr braucht, braucht ihr mehr Fahrer – nicht einen schnelleren.</p>\n<h2>Wenn die Route unter Beschuss ist</h2>\n<p>Erste Regel: Weiterfahren. Ein Ural im Stand ist ein Ziel; ein Ural in Bewegung ist ein schwieriges Ziel. Zweite Regel: Melden – „Kontakt am Bahnübergang, Route Süd unsicher.“ Dritte Regel: Beim nächsten Run eine andere Route nehmen und den Squad Lead bitten, die Stelle zu sichern. Wer dreimal an derselben Stelle stirbt, hat ein Planungsproblem, kein Pechproblem.</p>\n<h2>Luftlogistik: wann sie sich lohnt</h2>\n<p>Ein Heli mit Palette am Haken ist die schnellste Lieferung im Spiel – und die riskanteste. Er lohnt sich, wenn die FOB über Straße schlecht erreichbar ist, wenn der Pilot fliegen kann und wenn ihr wisst, wo gegnerische Flugabwehr steht. Er lohnt sich nicht in der ersten Runde, nicht ohne Übung und nicht, wenn ein Ural den Job in drei Minuten mehr genauso erledigt.</p>\n<h2>Logistik als Cash-Strategie</h2>\n<p>Wer einen Abend lang konsequent Nachschub fährt, geht mit deutlich mehr Cash raus, als er reingekommen ist – und hat dabei mehr für das Team getan als die meisten an der Zone. Das ist keine Nebenrolle, das ist die Rolle, die Matches entscheidet. Bei Warleek gibt es deshalb keinen Spott für Fahrer. Es gibt Dankeschöns.</p>\n<div class=\"wl-note\"><p><strong>Weiterlesen</strong> Mit Beispielroute und Absprache: <a href=\"/guides/logistik-run-der-sich-lohnt/\">Der Logistik-Run, der sich lohnt</a>.</p></div>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Guides",
-    "h2": "Passende Guides",
-    "inner": [
-     {
-      "type": "guides",
-      "count": 3,
-      "thema": "logistik"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "discord",
-      "eyebrow": "Fragen?",
-      "h2": "Etwas unklar geblieben?",
-      "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "gameplay",
-  "title": "Wardogs Gameplay – Zone, drei Teams, Economy",
-  "parent": "wardogs",
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-gameplay",
-   "page": true,
-   "eyebrow": "Wardogs · Themen",
-   "h1": "Wardogs <em>Gameplay</em>: die Zone, drei Teams und die Cash-Economy",
-   "lead": "Wie ein Match abläuft, warum drei Teams das Spiel unberechenbar machen, wie du mit Cash umgehst und was ein Squad wirklich braucht."
-  },
-  "seo": {
-   "title": "Wardogs Gameplay: Zone, drei Teams & Cash verstehen | Warleek",
-   "description": "Wie ein Wardogs-Match abläuft: Kontrollzone und Punkte, die Dynamik von drei Teams, Cash-Economy, Squad-Rollen und Funkdisziplin – auf Deutsch erklärt."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Der Ablauf eines Matches</h2>\n<p>100 Spieler, drei Teams, eine Map. Irgendwo darauf liegt die <strong>Kontrollzone</strong> – ein etwa 2×2 km großer Bereich, der zufällig gesetzt wird. Wer die Zone kontrolliert, sammelt Punkte. Das erste Team mit 100 Punkten gewinnt. Klingt simpel, ist es aber nicht, denn die Zone ist groß, die Wege sind lang, und zwei andere Teams wollen dasselbe.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<p>Ein typisches Match teilt sich in drei Phasen:</p>\n<ol>\n<li><strong>Aufbau.</strong> Teams setzen FOBs in Zonennähe, Fahrer bringen die ersten Paletten, Builder ziehen Wälle hoch. Wer hier zu lange trödelt, kommt zu spät.</li>\n<li><strong>Kampf um die Zone.</strong> Squads rücken vor, Emplacements feuern, die Führung wechselt. Hier entscheiden Nachschub und Kommunikation.</li>\n<li><strong>Endspiel.</strong> Ein Team nähert sich 100 Punkten, die anderen beiden werfen alles auf den Führenden. Wer jetzt noch Cash und eine intakte FOB hat, hat die besten Karten.</li>\n</ol>\n<h2>Drei Teams: die Dynamik</h2>\n<p>Mit drei Teams gibt es keine Front, sondern ein Dreieck. Das hat Folgen:</p>\n<ul>\n<li><strong>Der Führende ist das Ziel.</strong> Sobald ein Team deutlich vorne liegt, konzentrieren sich die anderen beiden auf ihn – nicht abgesprochen, aber zuverlässig.</li>\n<li><strong>Zurückliegen ist keine Niederlage.</strong> Wer hinten liegt, wird in Ruhe gelassen und kann in Ruhe aufbauen.</li>\n<li><strong>Flanken sind überall.</strong> Es gibt keine sichere Seite. Nachschubrouten müssen gesichert werden.</li>\n<li><strong>Timing schlägt Stärke.</strong> Der beste Moment für den Vorstoß ist, wenn sich die beiden anderen Teams gerade gegenseitig aufreiben.</li>\n</ul>\n<h2>Cash: verdienen und ausgeben</h2>\n<p>Pro Leben startest du mit <strong>$10.000</strong>. Cash bleibt über Matches erhalten. Du verdienst es mit allem, was dem Team hilft – Zone halten, Nachschub liefern, bauen, heilen, aufklären. In der Hot Zone gibt es doppeltes Kontrollgewicht und doppeltes Cash.</p>\n<p>Ausgeben kannst du es für Loadouts, Werkzeuge, Bauteile und Fahrzeuge. Die wichtigste Regel: <strong>Kauf nichts, was du in den nächsten fünf Minuten nicht brauchst.</strong> Ein Heli für $X, der nach zwei Minuten am Berg hängt, ist das teuerste Erlebnis im Spiel. Mehr dazu auf der <a href=\"/wardogs/equipment/\">Equipment-Seite</a> und im Guide <a href=\"/guides/geld-verdienen-und-ausgeben/\">Geld verdienen &amp; sinnvoll ausgeben</a>.</p>\n<h2>Squad-Rollen</h2>\n<p>Ein Squad funktioniert, wenn nicht alle dasselbe tun. Die Rollen sind nicht fest im Spiel verankert, sondern Absprache:</p>\n<table><thead><tr><th>Rolle</th><th>Aufgabe</th><th>Für wen</th></tr></thead><tbody>\n<tr><td>Squad Lead</td><td>Ziel setzen, Kontakt zu anderen Squads, Marker setzen</td><td>wer gern Entscheidungen trifft und ruhig bleibt</td></tr>\n<tr><td>Logistik</td><td>Paletten fahren, FOB versorgen</td><td>Einsteiger und alle, die Cash wollen</td></tr>\n<tr><td>Builder</td><td>FOB setzen, Deckung bauen, Emplacements</td><td>wer gern plant</td></tr>\n<tr><td>Infanterie</td><td>Zone nehmen und halten, Routen sichern</td><td>alle</td></tr>\n<tr><td>Fahrzeuge</td><td>Transport, Heli, gepanzert</td><td>nur nach Absprache und mit Übung</td></tr>\n</tbody></table>\n<h2>Kommunikation</h2>\n<p>Wardogs hat Proximity-Voice: Wer in der Nähe ist, hört dich – auch Gegner. Im Squad nutzt du zusätzlich den Squad-Voice (bei uns: Discord). Drei Regeln, die alles einfacher machen:</p>\n<ol>\n<li><strong>Kurz.</strong> „Kontakt Osten, zwei, hinter dem Zaun.“ Nicht: „Ähm, ich glaub, da ist einer…“</li>\n<li><strong>Richtung zuerst.</strong> Himmelsrichtung oder Uhrzeit, dann Entfernung, dann was.</li>\n<li><strong>Bestätigen.</strong> „Verstanden“ kostet eine Sekunde und spart Missverständnisse.</li>\n</ol>\n<p>Mehr im Guide <a href=\"/guides/squad-kommunikation-und-funk/\">Squad-Kommunikation &amp; Funk</a>.</p>\n<h2>Was Neulinge oft falsch machen</h2>\n<ul>\n<li>Allein zur Zone rennen, sterben, $10.000 weg.</li>\n<li>Im ersten Match ein Fahrzeug kaufen, ohne es fahren zu können.</li>\n<li>FOB setzen, ohne dass jemand Nachschub fährt.</li>\n<li>Voice ignorieren – oder den Voice mit Musik fluten.</li>\n<li>Die anderen beiden Teams als ein Team betrachten. Sie sind es nicht, und das kannst du nutzen.</li>\n</ul>\n\n<h2>Die Zone verstehen</h2>\n<p>Die Zone ist groß – rund 2×2 km. Das heißt: Es gibt nicht <em>den</em> Punkt, den man hält, sondern einen Bereich mit mehreren Schlüsselstellen. Gebäude mit Sicht, Kreuzungen, Übergänge. Ein Squad kann die Zone nicht allein halten; ein Team mit drei koordinierten Squads schon. Der Squad Lead schaut deshalb nicht nur auf sein Squad, sondern darauf, wo die anderen Squads des eigenen Teams stehen – und wo die Lücke ist.</p>\n<h2>Die Hot Zone</h2>\n<p>Innerhalb der Zone gibt es Bereiche mit doppeltem Kontrollgewicht und doppeltem Cash. Sie sind der natürliche Brennpunkt jedes Matches. Wer sie hält, führt schnell – und wird deshalb auch schnell zum Ziel der anderen beiden Teams. Die Kunst ist, sie zu halten, ohne alles dafür aufzugeben: Ein Squad in der Hot Zone, eines an den Zugängen, eines bei der FOB.</p>\n<h2>Der dritte Weg: nicht kämpfen</h2>\n<p>Drei Teams eröffnen eine Option, die Zwei-Team-Shooter nicht haben: abwarten. Wenn sich die beiden anderen Teams in der Zone aufreiben, ist das der beste Moment, um in Ruhe FOB und Nachschub aufzubauen und dann mit voller Kraft reinzugehen. Das ist kein Feigling-Spiel, das ist Timing. Proximity-Voice hilft dabei sogar: Manchmal kann man mit einem fremden Squad vor Ort kurz absprechen, wer sich zuerst um das dritte Team kümmert.</p>\n<h2>Was ein gutes Match ausmacht</h2>\n<p>Nicht der Sieg. Bei drei Teams verliert man öfter, als man gewinnt. Ein gutes Match ist eines, in dem die FOB durchgehend versorgt war, das Squad geredet hat, niemand sinnlos Cash verbrannt hat und am Ende alle mehr wussten als am Anfang. Siege kommen dann von allein.</p>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Guides",
-    "h2": "Passende Guides",
-    "inner": [
-     {
-      "type": "guides",
-      "count": 3,
-      "thema": "gameplay"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "discord",
-      "eyebrow": "Fragen?",
-      "h2": "Etwas unklar geblieben?",
-      "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "equipment",
-  "title": "Wardogs Equipment – Loadouts, Werkzeug, Fahrzeuge",
-  "parent": "wardogs",
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-equipment",
-   "page": true,
-   "eyebrow": "Wardogs · Themen",
-   "h1": "Wardogs <em>Equipment</em>: was du kaufst – und wann",
-   "lead": "Loadouts, Hämmer, Bauteile, Fahrzeuge: In Wardogs kannst du früh fast alles kaufen. Die Kunst ist, es nicht zu tun. Hier ist unsere Einordnung."
-  },
-  "seo": {
-   "title": "Wardogs Loadout & Equipment: was sich wann lohnt | Warleek",
-   "description": "Wardogs Equipment auf Deutsch: Loadouts nach Rolle, die drei Hammer-Stufen, Bauteile, Fahrzeuge von Ural bis Heli – und fünf Kaufregeln, die Geld sparen."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Das Prinzip: Cash ist dein Loadout</h2>\n<p>Wardogs kennt keine Klassen, die du freischalten musst. Du hast Cash, und du kaufst, was du brauchst – Waffe, Ausrüstung, Werkzeug, Fahrzeug. Das ist die Freiheit und die Falle zugleich: Wer sein Startkapital in der ersten Minute in ein Fahrzeug steckt und es verliert, spielt den Rest des Lebens mit leeren Taschen.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<h2>Loadouts nach Rolle</h2>\n<h3>Infanterie</h3>\n<p>Ein solides Sturmgewehr, genug Magazine, Verbandsmaterial, ein bis zwei Granaten. Kein Schnickschnack. Wer die Zone hält, braucht Munition und Heilung, keine drei Visiere.</p>\n<h3>Logistik</h3>\n<p>Das günstigste Loadout, das dich am Leben hält, plus das Fahrzeug. Du bist selten im Feuergefecht – wenn doch, ist Wegfahren die bessere Waffe. Spar das Geld für Paletten.</p>\n<h3>Builder</h3>\n<p>Hammer (Medium als Standard, Large wenn du die FOB dauerhaft betreust), ein leichtes Loadout und Platz im Inventar für Bauteile. Der Builder verdient sein Geld nicht im Kampf, sondern mit jeder Wand, die einen Squad-Mate rettet.</p>\n<h3>Squad Lead</h3>\n<p>Wie Infanterie, plus alles, was Übersicht gibt: Fernglas, Markierung, Funk. Der Lead sollte nicht der sein, der als Erster fällt.</p>\n<h3>Sniper / Aufklärung</h3>\n<p>Ghillie und Zielfernrohr sind da – aber ein Sniper, der nicht meldet, ist für das Team wertlos. Wer diese Rolle spielt, spielt sie fürs Squad, nicht für die K/D.</p>\n<h2>Werkzeug: die drei Hämmer</h2>\n<table><thead><tr><th>Hammer</th><th>Baut</th><th>Tempo</th><th>Für wen</th></tr></thead><tbody>\n<tr><td>Small</td><td>Basics (Sandsäcke, Draht, Zelt)</td><td>langsam</td><td>jeder, der mal aushilft</td></tr>\n<tr><td>Medium</td><td>+ Türen, HESCO-Teile</td><td>mittel</td><td>Standard-Builder</td></tr>\n<tr><td>Large</td><td>alles</td><td>schnell</td><td>der FOB-Betreuer</td></tr>\n</tbody></table>\n<h2>Bauteile: was zuerst</h2>\n<p>Die Kosten in Build-Supplies findest du auf der <a href=\"/wardogs/fob/\">FOB-Seite</a>. Als Reihenfolge hat sich bewährt: Deckung für Spawn-Fahrzeug und Abladezone → Bunker oder Turm mit Blick auf die Anfahrt → Emplacements (Mörser, Stingray) → Tank- und Reparaturstation, wenn Fahrzeuge da sind → große Anlagen (Talon, CIWS, Drill Rig) nur bei langfristigem Halten.</p>\n<h2>Fahrzeuge</h2>\n<table><thead><tr><th>Fahrzeug</th><th>Rolle</th><th>Kaufen, wenn …</th></tr></thead><tbody>\n<tr><td><strong>Ural</strong></td><td>Paletten-LKW</td><td>… du Logistik fährst. Immer eine gute Investition.</td></tr>\n<tr><td><strong>Kodiak, Humvee</strong></td><td>Transport, kleinere Container</td><td>… ihr ein Squad schnell bewegen wollt.</td></tr>\n<tr><td><strong>Bobcat, Buggy</strong></td><td>Aufklärung, schnell</td><td>… jemand wirklich aufklärt und meldet.</td></tr>\n<tr><td><strong>Helikopter</strong></td><td>Luftlogistik, Transport</td><td>… du fliegen kannst und Flugabwehr geklärt ist.</td></tr>\n<tr><td><strong>Panzer, Artillerie</strong></td><td>schwere Unterstützung</td><td>… ihr Fuel, Mechanical und eine Crew habt. Sonst nicht.</td></tr>\n</tbody></table>\n<p>Bewaffnete Varianten transportieren nicht mehr als unbewaffnete. Wer Nachschub fährt, nimmt die Version ohne Geschütz – billiger und unauffälliger.</p>\n<h2>Kaufregeln, die Geld sparen</h2>\n<ol>\n<li><strong>Erst Rolle, dann Kauf.</strong> Was mache ich die nächsten zehn Minuten? Nur dafür kaufen.</li>\n<li><strong>Kein Fahrzeug ohne Plan.</strong> Wohin, mit wem, wer sichert? Wenn eine Antwort fehlt: nicht kaufen.</li>\n<li><strong>Nicht vollausrüsten.</strong> Ein Tod mit $8.000 Ausrüstung tut mehr weh als drei Tode mit $2.000.</li>\n<li><strong>Reserve behalten.</strong> Immer genug für eine Palette oder ein Spawn-Fahrzeug übrig lassen.</li>\n<li><strong>Squad fragen.</strong> Vielleicht hat schon jemand einen Ural. Zwei leere Ural sind einer zu viel.</li>\n</ol>\n\n<h2>Das Inventar</h2>\n<p>Alles, was du kaufst, braucht Platz. Das FOB-Deploy-Item belegt zum Beispiel 2×3 Felder, Bauteile und Munition brauchen ebenfalls Raum. Wer als Builder unterwegs ist, hält Platz für Bauteile frei und verzichtet auf die dritte Granate. Wer Logistik fährt, braucht im Inventar fast nichts – die Palette liegt auf dem LKW.</p>\n<h2>Nachtsicht, Fernglas, Werkzeug</h2>\n<p>Ein Fernglas ist für Squad Leads und Aufklärer Pflicht – es kostet wenig und macht Meldungen präzise. Nachtsicht lohnt sich in dunklen Phasen, aber nur, wenn das Squad sie hat; ein Squad mit einem NVG-Träger und vier Blinden ist kein Squad. Reparaturwerkzeug gehört zu jedem, der ein Fahrzeug fährt.</p>\n<h2>Was Neulinge kaufen sollten</h2>\n<p>In der ersten Runde: Standardgewehr, Munition, Verbandszeug. Ab der zweiten Runde, wenn Cash da ist: ein Medium Hammer, um beim Bauen helfen zu können. Ab der dritten: ein Ural für Logistik, wenn noch keiner im Squad einen hat. Alles andere kann warten, bis du weißt, wofür du es brauchst.</p>\n<h2>Was Veteranen kaufen</h2>\n<p>Erfahrene Spieler kaufen erstaunlich wenig. Sie wissen, dass Cash über Matches erhalten bleibt, dass ein billiger Tod besser ist als ein teurer, und dass das beste Equipment nichts nützt, wenn die FOB leer ist. Ihr Geld geht in Paletten, Spawn-Fahrzeuge und in das eine Fahrzeug, das dem Squad gerade wirklich fehlt.</p>\n<div class=\"wl-note wl-note--alert\"><p><strong>Preise ändern sich</strong> Wardogs ist im Early Access. Waffen-, Fahrzeug- und Bauteilpreise werden gepatcht. Wir nennen deshalb bewusst nur Werte, die belegt sind, und markieren den Stand. Aktuelle Änderungen findest du in den <a href=\"/patch-notes/\">Patch Notes</a>.</p></div>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Guides",
-    "h2": "Passende Guides",
-    "inner": [
-     {
-      "type": "guides",
-      "count": 3,
-      "thema": "equipment"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "discord",
-      "eyebrow": "Fragen?",
-      "h2": "Etwas unklar geblieben?",
-      "text": "Frag im Discord – Rückfragen zu Guides beantworten wir dort am schnellsten."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "technik",
-  "title": "Wardogs Technik: Steuerung, Hardware, Einstellungen",
-  "parent": "wardogs",
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-technik",
-   "page": true,
-   "eyebrow": "Wardogs · Themen",
-   "h1": "Steuerung, Hardware und <em>Einstellungen</em>",
-   "lead": "Tastenbelegung, Joystick und HOTAS, Grafik- und Audio-Einstellungen: alles, was außerhalb des Matches über dein Spielgefühl entscheidet."
-  },
-  "seo": {
-   "title": "Wardogs Steuerung & Einstellungen: HOTAS, Binds, Technik | Warleek",
-   "description": "Wardogs Technik auf Deutsch: Joystick und HOTAS einrichten, Tastenbelegung, Proximity-Voice, Grafikeinstellungen und was bei Fehlern hilft. Getestete Anleitungen statt generierter Menüpfade."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Worum es hier geht</h2>\n<p>Wardogs ist ein Spiel mit Fahrzeugen, Helikoptern und Proximity-Voice – drei Dinge, bei denen Hardware und Einstellungen unmittelbar spürbar sind. Auf dieser Seite sammeln wir alles, was vor dem Match passiert: Steuerung einrichten, Eingabegeräte zum Laufen bringen, Einstellungen, die wirklich etwas ändern.</p>\n<p class=\"wl-stand\">Stand: September 2026 · Early Access – Zahlen können sich mit Patches ändern.</p>\n<div class=\"wl-note\"><p><strong>Vorsicht bei fremden Anleitungen</strong> Ein großer Teil der Wardogs-Technikseiten in den Suchergebnissen ist automatisiert erzeugt und beschreibt Menüpfade, die es im Spiel nicht gibt. Wenn dir irgendwo ein Menüpunkt versprochen wird, den du nicht findest – er existiert vermutlich wirklich nicht.</p></div>\n\n<h2>Steuerung: was das Spiel kann und was nicht</h2>\n<ul>\n<li><strong>Maus und Tastatur</strong> funktionieren für alles, inklusive Helikopter. Collective liegt auf Shift und Strg, Pitch und Roll auf der Maus – für Transportflüge reicht das.</li>\n<li><strong>Ein Joystick</strong> wird als DirectInput-Gerät erkannt und lässt sich in den Flug-Binds zuweisen.</li>\n<li><strong>Zwei Joysticks gleichzeitig</strong> funktionieren nicht ohne Umweg – das Spiel liest nur ein Gerät aus. Wie man es trotzdem hinbekommt, steht im HOTAS-Guide.</li>\n<li><strong>Gamepad</strong> geht, bringt aber Pad-Deadzones mit. Für einen Flightstick ist das die falsche Richtung.</li>\n<li><strong>Rebinds</strong> gehen im aktuellen Build gelegentlich zwischen Sitzungen verloren. Mach dir einen Screenshot deines Layouts.</li>\n</ul>\n\n<h2>Was sich zu prüfen lohnt</h2>\n<table><thead><tr><th>Einstellung</th><th>Warum</th></tr></thead><tbody>\n<tr><td><strong>Push-to-Talk</strong></td><td>Proximity-Voice überträgt alles, was dein Mikrofon hört – auch an Gegner in der Nähe.</td></tr>\n<tr><td><strong>Mikrofon-Pegel</strong></td><td>Übersteuerte Funksprüche versteht niemand; im Squad ist Verständlichkeit wichtiger als Lautstärke.</td></tr>\n<tr><td><strong>Sichtweite</strong></td><td>Der Einstellwert mit dem größten Einfluss auf die Bildrate in den Industriegebieten.</td></tr>\n<tr><td><strong>Fahrzeug-Maussteuerung</strong></td><td>Für Helikopter ohne Joystick deutlich präziser als reine Tastatursteuerung.</td></tr>\n<tr><td><strong>Eingabedämpfung</strong></td><td>Greift seit dem Season-1-Update für alle Eingabegeräte – wer vorher geflogen ist, muss sich neu einfühlen.</td></tr>\n</tbody></table>\n\n<h2>Wenn etwas nicht geht</h2>\n<p>Die häufigsten Ursachen, bevor du tiefer suchst: Das Spiel lief beim Ändern der Konfiguration noch (auch der Anti-Cheat-Prozess zählt), die Steam-Cloud spielt eine alte Konfiguration zurück, oder ein Eingabegerät belegt eine Achse doppelt. Alle drei erkennt man daran, dass Änderungen nach dem Neustart verschwunden sind.</p>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "eyebrow": "Guides",
-    "h2": "Technik-Guides",
-    "inner": [
-     {
-      "type": "guides",
-      "count": 6,
-      "thema": "technik"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "discord",
-      "eyebrow": "Fragen?",
-      "h2": "Hardware-Probleme sind selten einzigartig",
-      "text": "Im Discord sitzen Leute mit denselben Sticks, Pedalen und Treiberproblemen."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "about-us",
-  "title": "About us – wer die Guides schreibt",
-  "parent": null,
-  "template": "page-hub",
-  "hero": {
-   "image": "hero-about",
-   "page": true,
-   "eyebrow": "About us",
-   "h1": "Wer hier <em>schreibt</em> – und warum",
-   "lead": "Warleek ist ein Fan-Projekt von Spielern aus dem deutschsprachigen Raum. Keine Redaktion, kein Verlag, keine KI-Textfabrik: Leute, die Wardogs spielen und aufschreiben, was sie dabei gelernt haben."
-  },
-  "seo": {
-   "title": "About us – wer hinter den Wardogs Guides steckt | Warleek",
-   "description": "Warleek ist ein unabhängiges Fan-Projekt: deutschsprachige Wardogs-Guides, selbst gespielt und selbst geschrieben. Wie wir arbeiten, woher die Zahlen kommen und wie du uns erreichst."
-  },
-  "sections": [
-   {
-    "type": "section",
-    "inner": [
-     {
-      "type": "prose",
-      "html": "\n<h2>Wie das hier angefangen hat</h2>\n<p>Im September 2026, in der ersten Woche nach dem Early-Access-Start, haben ein paar von uns dasselbe erlebt: Zufalls-Squads, in denen niemand Nachschub fährt, drei Leute kaufen gleichzeitig eine FOB, und wer eine Frage googelt, landet auf Seiten, die Menüpunkte beschreiben, die es im Spiel gar nicht gibt.</p>\n<p>Also haben wir angefangen, Dinge aufzuschreiben – erst für uns, dann für andere. Daraus wurde Warleek.</p>\n\n<h2>Wie wir arbeiten</h2>\n<ul>\n<li><strong>Selbst gespielt.</strong> Jeder Ablauf in einem Guide ist im Spiel durchgegangen. Wenn wir etwas nicht selbst geprüft haben, steht es so im Text.</li>\n<li><strong>Zahlen mit Datum.</strong> Preise, Baukosten und Belohnungen ändern sich im Early Access. Deshalb trägt jede Zahl ein Stand-Datum – und die Patch Notes auf dieser Seite zeigen, was sich seitdem bewegt hat.</li>\n<li><strong>Quellen dabei.</strong> Wo wir uns auf offizielle Ankündigungen, das Wiki oder Presseberichte stützen, steht die Quelle im Text oder in unseren Notizen.</li>\n<li><strong>Korrekturen sind willkommen.</strong> Wenn etwas nicht stimmt, sag Bescheid. Wir ändern es und schreiben dazu, was sich geändert hat.</li>\n<li><strong>Keine Werbung, kein Tracking.</strong> Die Seite setzt keine Cookies zu Analysezwecken, lädt keine Schriften von fremden Servern und verkauft nichts.</li>\n</ul>\n\n<h2>Was Warleek nicht ist</h2>\n<p>Kein offizielles Angebot des Entwicklers. Wir gehören nicht zu BULKHEAD oder Team17 und sprechen nicht für sie. Bug-Reports und Support-Anfragen gehören in den offiziellen Discord des Studios, nicht zu uns.</p>\n<p>Und kein Clan mehr: Wir haben eine Weile selbst eine Community geführt. Guides schreiben und eine Gruppe zusammenhalten sind zwei verschiedene Vollzeitbeschäftigungen – wir haben uns für die Guides entschieden. Wo du Mitspieler findest, steht auf der <a href=\"/community/\">Partner-Seite</a>.</p>\n\n<h2>Kontakt</h2>\n<p>Am schnellsten über den Discord. Für Presse, Kooperationen und rechtliche Fragen steht eine E-Mail-Adresse im <a href=\"/impressum/\">Impressum</a>.</p>\n"
-     }
-    ]
-   },
-   {
-    "type": "section",
-    "surface": true,
-    "inner": [
-     {
-      "type": "discord",
-      "eyebrow": "Kontakt",
-      "h2": "Schreib uns",
-      "text": "Korrekturen, Themenwünsche, Partneranfragen – alles willkommen."
-     }
-    ]
-   }
-  ]
- },
- {
-  "slug": "impressum",
-  "title": "Impressum",
-  "parent": null,
-  "template": "page",
-  "noindex": true,
-  "seo": {
-   "title": "Impressum | Warleek",
-   "description": "Impressum der Website warleek.de."
-  },
-  "sections": [
-   {
-    "type": "prose",
-    "html": "\n<div class=\"wl-note wl-note--alert\"><p><strong>Redaktionshinweis</strong> Alle Angaben in eckigen Klammern vor dem Go-live mit echten Daten ersetzen. Das Impressum ist nach § 5 DDG (Deutschland) bzw. § 25 MedienG / § 5 ECG (Österreich) Pflicht.</p></div>\n<h2>Angaben gemäß § 5 DDG</h2>\n<p>[Vorname Nachname]<br>[Straße Hausnummer]<br>[PLZ Ort]<br>[Land]</p>\n<h2>Kontakt</h2>\n<p>E-Mail: [kontakt@warleek.de]</p>\n<h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>\n<p>[Vorname Nachname, Anschrift wie oben]</p>\n<h2>Hinweis zum Fan-Projekt</h2>\n<p>Warleek ist ein unabhängiges, nicht-kommerzielles Fan-Projekt. Es besteht keine Verbindung zu BULKHEAD, Team17 oder anderen Rechteinhabern von WARDOGS. WARDOGS und alle zugehörigen Marken, Namen und Bilder sind Eigentum der jeweiligen Rechteinhaber. Patch Notes werden mit Quellenangabe von der öffentlichen Steam-News-Schnittstelle übernommen.</p>\n<h2>Haftung für Links</h2>\n<p>Unsere Seite enthält Links zu externen Websites Dritter (u. a. Discord, WhatsApp, Telegram, Steam), auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte übernehmen wir keine Gewähr; verantwortlich ist stets der jeweilige Anbieter.</p>\n<h2>Urheberrecht</h2>\n<p>Die von uns erstellten Texte, Grafiken und das Logo unterliegen dem Urheberrecht. Bilder auf dieser Seite wurden mit KI-Werkzeugen erstellt und zeigen keine realen Personen. Eine Nutzung außerhalb dieser Seite bedarf unserer Zustimmung.</p>\n"
-   }
-  ]
- },
- {
-  "slug": "datenschutz",
-  "title": "Datenschutzerklärung",
-  "parent": null,
-  "template": "page",
-  "noindex": true,
-  "seo": {
-   "title": "Datenschutz | Warleek",
-   "description": "Datenschutzerklärung der Website warleek.de."
-  },
-  "sections": [
-   {
-    "type": "prose",
-    "html": "\n<div class=\"wl-note wl-note--alert\"><p><strong>Redaktionshinweis</strong> Angaben in eckigen Klammern ersetzen und die Erklärung vor dem Go-live prüfen (ggf. mit einem Generator abgleichen). Diese Seite ist ein Gerüst, keine Rechtsberatung.</p></div>\n<h2>1. Verantwortlicher</h2>\n<p>[Vorname Nachname], [Anschrift], E-Mail: [kontakt@warleek.de]</p>\n<h2>2. Hosting</h2>\n<p>Diese Website wird bei [Hoster, z. B. ALL-INKL.COM – Neue Medien Münnich, Hauptstraße 68, 02742 Friedersdorf] gehostet. Beim Aufruf der Seite verarbeitet der Hoster automatisch Server-Logfiles (IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browser, Betriebssystem, Referrer). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und stabilen Betrieb). Die Logfiles werden nach [X Tagen] gelöscht. Mit dem Hoster besteht ein Vertrag zur Auftragsverarbeitung.</p>\n<h2>3. Keine Cookies, kein Tracking</h2>\n<p>Diese Website setzt keine Cookies zu Analyse- oder Werbezwecken ein und bindet keine Tracking-Dienste, Social-Media-Plugins, externen Schriftarten, Emoji-Dienste oder Karten ein. Alle Schriften, Bilder und Videos werden von unserem eigenen Server geladen. Technisch notwendige Cookies werden nur gesetzt, wenn du dich im Verwaltungsbereich anmeldest.</p>\n<h2>4. Patch Notes von Steam und deren Übersetzung</h2>\n<p>Die Seite „Patch Notes“ übernimmt Texte der öffentlichen WARDOGS-Ankündigungen von Steam über die Steam-News-Schnittstelle. Der Abruf erfolgt ausschließlich serverseitig; darin enthaltene Bilder werden auf unserem Server gespeichert und von dort ausgeliefert. Beim Besuch dieser Seiten wird keine Verbindung zu Servern von Valve aufgebaut.</p>\n<p>Für die deutsche Fassung schicken wir den englischen Text serverseitig an die Programmierschnittstelle von <strong>Anthropic</strong> (Claude), 548 Market St, San Francisco, CA 94104, USA. Übertragen wird ausschließlich der öffentliche Ankündigungstext des Spieleentwicklers – <strong>keine Daten von Besucherinnen und Besuchern</strong>, keine IP-Adressen, keine Nutzungsdaten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (Interesse an deutschsprachigen Spielinformationen). Weitere Informationen: <a href=\"https://www.anthropic.com/legal/privacy\" rel=\"noopener\" target=\"_blank\">Datenschutzerklärung von Anthropic</a>. Jede übersetzte Patch Note ist als maschinell übersetzt gekennzeichnet und enthält das englische Original zum Aufklappen.</p>\n<h2>5. Links zu Discord, WhatsApp, Telegram, Steam</h2>\n<p>Unsere Seite enthält Links zu externen Diensten. Erst mit dem Klick auf einen Link verlassen Sie unsere Seite; ab dann gelten die Datenschutzbestimmungen des jeweiligen Anbieters. Wir binden keine Inhalte dieser Dienste direkt ein.</p>\n<h2>6. Kontakt per E-Mail</h2>\n<p>Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung der Anfrage (Art. 6 Abs. 1 lit. b bzw. f DSGVO). Die Daten werden gelöscht, sobald die Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>\n<h2>7. Ihre Rechte</h2>\n<p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren.</p>\n<h2>8. Änderungen</h2>\n<p>Wir passen diese Erklärung an, wenn sich die Website oder die Rechtslage ändert. Stand: [Datum].</p>\n"
-   }
-  ]
- }
 ]

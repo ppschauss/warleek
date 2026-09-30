@@ -6,8 +6,8 @@ order: 2
 image: guide-fraktionen
 image_alt: Drei Squads in blauer, roter und gruener Ausruestung stehen sich auf drei Bergruecken ueber einem nebligen Industrietal gegenueber
 excerpt: Blau, Rot oder Grün? Was die drei Fraktionen unterscheidet, was die Statistik sagt – und welche du als Neuling nehmen solltest.
-seo_title: Wardogs Fraktionen: Lonestar, Valkyra, Manticore (Deutsch) | Warleek
-seo_description: Wardogs Fraktionen auf Deutsch erklärt: Lonestar (blau), Valkyra (rot) und Manticore (grün) im Vergleich – Unterschiede, Siegquoten und welche Fraktion sich für Einsteiger lohnt.
+seo_title: Wardogs Fraktionen auf Deutsch erklärt | Warleek
+seo_description: Lonestar, Valkyra und Manticore im Vergleich: Farben, Siegquoten und welche Fraktion sich für Neulinge lohnt. Deutscher Guide für die DACH-Region.
 ---
 
 In jedem Match von Wardogs kämpfen drei Fraktionen gleichzeitig um dieselbe Kontrollzone. Bis zu 100 Spieler, aufgeteilt auf drei Seiten – also rund 33 pro Fraktion. Welche du nimmst, entscheidest du beim Beitritt, und die Entscheidung hat mehr Folgen, als die Auswahlmaske vermuten lässt.

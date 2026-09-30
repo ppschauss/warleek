@@ -6,8 +6,8 @@ order: 5
 image: guide-spawnen
 image_alt: Gepanzerter Mannschaftstransporter steht mit offener Heckrampe hinter einem Huegel, Soldaten steigen aus
 excerpt: Warum die FOB kein Spawnpunkt ist, wie der M113 APC funktioniert und wie du aufhörst, drei Minuten pro Leben zu laufen.
-seo_title: Wardogs Spawn & Deployment Board erklärt (Deutsch) | Warleek
-seo_description: Wardogs Spawnpunkte auf Deutsch: Deployment-Board, Spawn-APC M113, warum FOBs keine Respawns geben und wie dein Team schneller an die Front kommt.
+seo_title: Wardogs Spawn & APC erklärt (Deutsch) | Warleek
+seo_description: Warum die FOB kein Spawnpunkt ist und wie M113 APC und Deployment-Board funktionieren. Wardogs-Anleitung auf Deutsch für Spieler in DACH.
 ---
 
 Die häufigste stille Zeitverschwendung in Wardogs ist der Fußmarsch. Du stirbst, spawnst im Hauptlager, und zwei Minuten später bist du wieder dort, wo du gestorben bist – falls der Kampf noch da ist. Das lässt sich fast vollständig abstellen.

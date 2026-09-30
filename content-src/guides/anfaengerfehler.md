@@ -6,8 +6,8 @@ order: 3
 image: guide-anfaengerfehler
 image_alt: Einzelner Soldat steht ungedeckt mitten auf einem Kiesplatz, waehrend Einschlaege Staub aufwirbeln
 excerpt: Teure Loadouts, einsame Sprints zur Zone, der Heli am Berghang. Die Fehler, die fast jeder macht, und die Gegenmaßnahme in einem Satz.
-seo_title: Wardogs Anfängerfehler vermeiden – 10 Tipps (Deutsch) | Warleek
-seo_description: Wardogs für Anfänger auf Deutsch: die zehn häufigsten Fehler von Neulingen – teures Loadout, Alleingänge, falsche Rolle – und wie du sie vermeidest.
+seo_title: Wardogs Anfängerfehler vermeiden – Guide Deutsch | Warleek
+seo_description: Zehn typische Fehler von Wardogs-Neulingen und die Gegenmaßnahme: teures Loadout, Alleingänge, falsche Rolle. Auf Deutsch für Spieler in DACH.
 ---
 
 Die meisten schlechten Runden in Wardogs entstehen nicht durch schlechtes Zielen. Sie entstehen durch zehn Entscheidungen, die vor dem ersten Schuss fallen. Hier sind sie, jeweils mit der Gegenmaßnahme.

@@ -6,8 +6,8 @@ order: 55
 image: guide-hotas-fliegen
 image_alt: Blick aus dem Cockpit eines leichten Helikopters, der in steiler Schräglage ein Industriegelände umkreist
 excerpt: Flugassistenten aus, Sichtfeld hoch, und dann die drei Bewegungen, die zählen: tief fliegen, Combat Orbit, schnelle Landung. Für alle, die am Stick sitzen statt an der Maus.
-seo_title: Wardogs Helikopter mit HOTAS fliegen – Technik & Manöver | Warleek
-seo_description: Wardogs HOTAS-Fliegen auf Deutsch: Flugassistenten abschalten, Sichtfeld einstellen, mit Gieren steuern, Combat Orbit fliegen, tief bleiben und schnell landen – plus Umgang mit Flugabwehr.
+seo_title: Wardogs mit HOTAS fliegen – Guide auf Deutsch | Warleek
+seo_description: Assistenten aus, Gieren führt, Combat Orbit und die schnelle Landung: Helikopter am Stick. Deutscher Wardogs-Guide für Spieler in DACH.
 ---
 
 Die Einstellungen sind das eine, das Fliegen das andere. Dieser Guide ist der zweite Teil: Wenn Empfindlichkeit, Deadzone und Kurven stehen – [Erklärung dazu hier](/guides/wardogs-hotas-empfindlichkeit/) –, geht es darum, wie man den Helikopter tatsächlich bewegt.
@@ -98,5 +98,7 @@ Flugabwehr steht meist erhöht. Du kommst tief und schnell an, ziehst über der 
 
 - **Tote Torres** – [How I Set Up My HOTAS for War Dogs Helicopters](https://www.youtube.com/watch?v=IHcD8c_iqD0): Sichtfeld, Assistenten, Gier-Führung, Combat Orbit und die schnelle Landung stammen aus diesem Video.
 - **Sim Controls** – [WARDOGS HOTAS Setup Guide](https://www.youtube.com/watch?v=wtRRZ8nPfFM): die Einstellungsseite dazu.
+
+[warleek_video id="IHcD8c_iqD0" title="How I Set Up My HOTAS for War Dogs Helicopters" kanal="Tote Torres" bild="guide-hotas-fliegen"]
 
 Wer mit Maus und Tastatur fliegt, findet das Passende unter [Helikopter fliegen mit Maus und Tastatur](/guides/wardogs-helikopter-fliegen/).

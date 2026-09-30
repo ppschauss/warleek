@@ -6,8 +6,8 @@ order: 14
 image: guide-recon
 image_alt: Scharfschuetze im Ghillie-Anzug liegt im Morgengrauen auf einem Felsgrat und beobachtet mit dem Fernglas
 excerpt: Das Fernglas für rund $75 ist die profitabelste Anschaffung im Spiel. Wie Spotten funktioniert, was der Ghillie taugt und welches Gewehr sich wann lohnt.
-seo_title: Wardogs Recon Guide: Spotten, Ghillie, Sniper (Deutsch) | Warleek
-seo_description: Wardogs Recon auf Deutsch: Spotten mit Fernglas, Ghillie-Anzug, Scharfschützengewehre wie Mosin, SVD und SV-98 – Freischaltungen, Preise und Taktik.
+seo_title: Wardogs Recon & Sniper – Guide auf Deutsch | Warleek
+seo_description: Spotten mit dem Fernglas, Ghillie, Mosin, SVD und SV-98: Recon in Wardogs auf Deutsch erklärt – für Deutschland, Österreich und die Schweiz.
 ---
 
 Der Recon-Track ist die Sniper-Linie: Scharfschützen- und Marksman-Gewehre, Optiken, Zweibeine, Claymores, der Compound-Bogen und der Ghillie-Anzug. Und er hat eine Eigenart, die ihn von jedem anderen Track unterscheidet: **Die beste Einnahmequelle ist nicht die Waffe.**

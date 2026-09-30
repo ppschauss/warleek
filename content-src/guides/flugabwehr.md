@@ -6,8 +6,8 @@ order: 23
 image: guide-flugabwehr
 image_alt: Flugabwehrstellung mit angewinkelten Startrohren auf einer Betonplatte, ein Helikopter dreht in der Ferne ab
 excerpt: Die beiden teuersten Bauwerke im Spiel, ihr Nutzen und ihre Schwäche. Dazu: wie du als Pilot an ihnen vorbeikommst und wie du sie vom Boden aus abräumst.
-seo_title: Wardogs Flugabwehr: Talon & Vanguard CIWS (Deutsch) | Warleek
-seo_description: Wardogs Flugabwehr auf Deutsch: Talon 9K-SAM und Vanguard CIWS bauen, richtig platzieren, als Pilot umfliegen und vom Boden aus mit RPG, Mörser oder C4 zerstören.
+seo_title: Wardogs Flugabwehr Deutsch: Talon & CIWS | Warleek
+seo_description: Talon 9K-SAM und Vanguard CIWS bauen, platzieren, umfliegen und zerstören. Flugabwehr-Guide für Wardogs auf Deutsch, für die DACH-Region.
 ---
 
 Helikopter sind in Wardogs der schnellste Weg, Leute in die Zone zu bringen. Entsprechend ist Flugabwehr die Antwort darauf – und gleichzeitig der teuerste Posten auf jeder Baustelle.

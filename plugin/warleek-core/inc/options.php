@@ -29,6 +29,11 @@ function warleek_option_fields() {
 		'translate_model'    => array( 'Modell',                  'text',     'claude-opus-5', 'claude-opus-5 (Standard), claude-sonnet-5 oder claude-haiku-4-5 als günstigere Alternativen.' ),
 		'translate_max_chars'=> array( 'Längengrenze (Zeichen)',  'int',      '20000', 'Längere Patch Notes bleiben englisch, statt eine teure Anfrage zu riskieren.' ),
 		'translate_budget'   => array( 'Übersetzungen je Lauf',   'int',      '5',   'Deckel pro Sync-Lauf. Der stündliche Cron holt den Rest nach.' ),
+		'consent_enabled'    => array( 'Einwilligungs-Banner',    'bool',     '1',   'Zeigt den Hinweis unten am Bildschirm. Ohne eingebettete externe Medien ist er rechtlich nicht nötig – dann kannst du ihn ausschalten.' ),
+		'consent_title'      => array( 'Banner: Überschrift',     'text',     'Externe Videos erlauben?', 'Kurze Zeile über dem Text.' ),
+		'consent_text'       => array( 'Banner: Text',            'textarea', 'Warleek setzt keine Werbe- oder Analyse-Cookies und lädt nichts von fremden Servern. Nur für eingebettete Videos brauchen wir deine Einwilligung – erst dann wird eine Verbindung zu YouTube aufgebaut.', 'Was im Banner steht. Bleib bei dem, was die Seite wirklich tut.' ),
+		'consent_accept'     => array( 'Banner: Zustimmen',       'text',     'Externe Videos erlauben', 'Beschriftung der Zustimmen-Schaltfläche.' ),
+		'consent_decline'    => array( 'Banner: Ablehnen',        'text',     'Nur notwendige',          'Beschriftung der Ablehnen-Schaltfläche. Muss gleichwertig aussehen – das ist Vorschrift.' ),
 	);
 }
 
@@ -60,6 +65,7 @@ function warleek_sanitize_options( $input ) {
 			case 'int':   $out[ $key ] = $val ? (string) absint( $val ) : ''; break;
 			case 'email': $out[ $key ] = $val ? sanitize_email( $val ) : ''; break;
 			case 'bool':  $out[ $key ] = $val ? '1' : '0'; break;
+			case 'textarea': $out[ $key ] = sanitize_textarea_field( $val ); break;
 			case 'password':
 				// Leeres Feld bedeutet „unverändert" – sonst würde jedes Speichern den Schlüssel löschen.
 				$old = (array) get_option( 'warleek_options', array() );
@@ -104,6 +110,13 @@ function warleek_render_option_field( $args ) {
 			esc_attr( $key ),
 			esc_attr( $val ? '•••••••• (gespeichert – leer lassen, um ihn zu behalten)' : 'sk-ant-…' ),
 			esc_html( $def[3] )
+		);
+		return;
+	}
+	if ( 'textarea' === $def[1] ) {
+		printf(
+			'<textarea id="warleek_%1$s" name="warleek_options[%1$s]" rows="4" class="large-text" placeholder="%2$s">%3$s</textarea><p class="description">%4$s</p>',
+			esc_attr( $key ), esc_attr( $def[2] ), esc_textarea( $val ), esc_html( $def[3] )
 		);
 		return;
 	}

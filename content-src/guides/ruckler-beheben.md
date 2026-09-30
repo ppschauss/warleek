@@ -6,8 +6,8 @@ order: 51
 image: guide-ruckler
 image_alt: Nahaufnahme im offenen PC-Gehaeuse: Grafikkarte, Luefter und Kuehlkoerper im schwachen gruenen Licht
 excerpt: 120 Bilder pro Sekunde und trotzdem Hänger: Shader, VRAM, Datenträger, Hintergrundprogramme. Die Ursachen in der Reihenfolge, in der du sie prüfst.
-seo_title: Wardogs ruckelt & stottert – Ursachen und Fixes (Deutsch) | Warleek
-seo_description: Wardogs Ruckler auf Deutsch beheben: Shader-Kompilierung, VRAM-Druck, SSD statt HDD, Hintergrundprogramme, Treiber und Energieeinstellungen – Schritt für Schritt geprüft.
+seo_title: Wardogs ruckelt? Ursachen und Fixes auf Deutsch | Warleek
+seo_description: Shader, VRAM, SSD und Hintergrundprogramme: Ruckler beheben, auch wenn die FPS stimmen. Deutsche Anleitung für Spieler in der DACH-Region.
 ---
 
 Es gibt zwei völlig verschiedene Probleme, die beide „die Seite läuft schlecht" heißen: **zu wenige Bilder pro Sekunde** und **ungleichmäßige Bilder**. Das zweite ist unangenehmer, weil es auch auftritt, wenn der Zähler oben rechts gut aussieht.

@@ -6,8 +6,8 @@ order: 54
 image: guide-hotas-settings
 image_alt: Joystick und Schubhebel eines HOTAS-Aufbaus auf einem dunklen Schreibtisch im Monitorlicht
 excerpt: Der Regler unter 1.0 nimmt dir nicht nur das Zappeln, sondern auch die maximale Drehrate. Warum das so ist, was stattdessen hilft – und wo sich zwei erfahrene Piloten offen widersprechen.
-seo_title: Wardogs HOTAS Empfindlichkeit & Kurven einstellen | Warleek
-seo_description: Wardogs HOTAS auf Deutsch: Warum niedrige Empfindlichkeit die Drehrate kostet, wann eine Deadzone nötig ist, wie man das Kollektiv kalibriert und wofür eine Response-Kurve im Treiber gut ist.
+seo_title: Wardogs HOTAS Empfindlichkeit & Kurven (Deutsch) | Warleek
+seo_description: Warum der Regler unter 1.0 Drehrate kostet, wann eine Deadzone nötig ist und wie eine Kurve hilft. Wardogs auf Deutsch für die DACH-Region.
 ---
 
 Wenn der Helikopter am Stick zappelt, ist der erste Griff immer derselbe: Empfindlichkeit runter. In Wardogs ist das die falsche Richtung – und der Grund dafür ist der interessanteste Teil dieses Guides.
@@ -110,5 +110,7 @@ Dieser Guide fasst zwei englischsprachige Videos zusammen und ergänzt sie um da
 
 - **Sim Controls** – [WARDOGS HOTAS Setup Guide | Better Controls & Sensitivity](https://www.youtube.com/watch?v=wtRRZ8nPfFM) (VKB Gladiator + TWCS, Deadzone, Kalibrierung, Kurven)
 - **Tote Torres** – [How I Set Up My HOTAS for War Dogs Helicopters](https://www.youtube.com/watch?v=IHcD8c_iqD0) (Logitech G940, Empfindlichkeit hoch, ohne Kurven)
+
+[warleek_video id="wtRRZ8nPfFM" title="WARDOGS HOTAS Setup Guide: Better Controls & Sensitivity" kanal="Sim Controls" bild="guide-hotas-settings"]
 
 Wie du damit tatsächlich fliegst, steht im Guide [Mit dem HOTAS fliegen](/guides/wardogs-hotas-fliegen/). Für die reine Tastenbelegung am Dual-Stick: [Wardogs mit HOTAS – T.16000M einrichten](/guides/wardogs-hotas-dual-stick/).

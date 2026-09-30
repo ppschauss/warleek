@@ -6,8 +6,8 @@ order: 13
 image: guide-medic
 image_alt: Sanitaeter kniet hinter einer Betonmauer bei einem verwundeten Kameraden, ein zweiter Soldat sichert die Ecke
 excerpt: Verbandszeug, Field Resuscitator, Defibrillator – was wann freigeschaltet wird, wo du stehen musst und warum der Medic die unterschätzteste Rolle im Spiel ist.
-seo_title: Wardogs Medic Guide: Wiederbeleben & Ausrüstung (Deutsch) | Warleek
-seo_description: Wardogs Medic auf Deutsch: Verbandszeug, Field Resuscitator und Defibrillator, richtige Positionierung, Cash pro Revive und die typischen Medic-Fehler.
+seo_title: Wardogs Medic Guide Deutsch: Wiederbeleben | Warleek
+seo_description: Field Resuscitator, Defibrillator, Positionierung und Cash pro Revive. Der Medic-Guide für Wardogs auf Deutsch, für Spieler in DACH.
 ---
 
 In einem Spiel, in dem Punkte für **anwesende Körper** vergeben werden, ist der Mann, der Körper wieder aufstellt, keine Nebenrolle. Trotzdem spielen ihn zu wenige – und die meisten spielen ihn falsch herum.

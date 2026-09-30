@@ -169,6 +169,13 @@ function warleek_md_to_html( $md, $strip_first_h1 = true ) {
 			continue;
 		}
 
+		// Eine Zeile, die nur aus einem Warleek-Shortcode besteht, bleibt Shortcode.
+		if ( preg_match( '/^\[warleek_[a-z_]+[^\]]*\]$/', $t ) ) {
+			$flush();
+			$out[] = '<p class="wl-shortcode">' . htmlspecialchars( $t, ENT_QUOTES, 'UTF-8' ) . '</p>';
+			continue;
+		}
+
 		// Bild als eigener Absatz, optional mit Bildunterschrift:
 		// `![Alt-Text](schluessel)` oder `![Alt-Text](schluessel "Bildunterschrift")`
 		if ( preg_match( '/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$/', $t, $m ) ) {

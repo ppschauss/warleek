@@ -394,3 +394,53 @@ p img {
 .wl-original { margin-top: var(--wp--preset--spacing--40); border-top: var(--wl-border); }
 .wl-original summary { font-size: 1.05rem; }
 .wl-original details > :not(summary) { color: var(--wp--preset--color--steel); font-size: 0.95rem; }
+
+/* --------------------------------------------------- Einwilligung & Video */
+.wl-btn {
+	display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+	padding: 0.7rem 1.2rem; border-radius: var(--wl-radius); cursor: pointer;
+	font-family: var(--wp--preset--font-family--heading); font-weight: 700; font-size: 0.95rem;
+	letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+	color: var(--wp--preset--color--base); background: var(--wp--preset--color--leek);
+	border: 2px solid var(--wp--preset--color--leek);
+	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.wl-btn:hover { background: var(--wp--preset--color--leek-light); }
+/* Ablehnen muss genauso gut erreichbar und lesbar sein wie Zustimmen – nur anders gefärbt. */
+.wl-btn--ghost { background: transparent; color: var(--wp--preset--color--leek-light); border-color: rgba(154, 168, 150, 0.5); }
+.wl-btn--ghost:hover { background: var(--wp--preset--color--surface-2); border-color: var(--wp--preset--color--leek); color: var(--wp--preset--color--leek); }
+
+.wl-consent {
+	position: fixed; inset: auto 0 0 0; z-index: 90;
+	background: var(--wp--preset--color--surface); border-top: 2px solid var(--wp--preset--color--leek);
+	box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.45);
+}
+.wl-consent__inner {
+	max-width: 1240px; margin: 0 auto; padding: 1rem 1.2rem;
+	display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; justify-content: space-between;
+}
+.wl-consent__body { flex: 1 1 320px; }
+.wl-consent__title { margin: 0 0 0.25rem; font-family: var(--wp--preset--font-family--heading); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--wp--preset--color--leek-light); }
+.wl-consent__text { margin: 0; font-size: 0.92rem; line-height: 1.5; color: var(--wp--preset--color--steel); }
+.wl-consent__text a { color: var(--wp--preset--color--leek); }
+.wl-consent__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.wl-consent__actions .wl-btn { flex: 1 1 auto; }
+@media (max-width: 600px) {
+	.wl-consent__inner { padding: 0.9rem 1rem; }
+	.wl-consent__actions { width: 100%; }
+}
+
+.wl-video { margin: var(--wp--preset--spacing--40) 0; }
+.wl-video__frame {
+	position: relative; aspect-ratio: 16 / 9; border-radius: var(--wl-radius); overflow: hidden;
+	background: var(--wp--preset--color--surface-2) center / cover no-repeat;
+	border: var(--wl-border); display: flex; align-items: center; justify-content: center;
+}
+.wl-video__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.wl-video__ask {
+	max-width: 44ch; margin: 1rem; padding: 1.2rem; text-align: center;
+	background: rgba(13, 17, 15, 0.86); border-radius: var(--wl-radius);
+}
+.wl-video__ask p { margin: 0 0 0.7rem; }
+.wl-video__ask p:last-child { margin-bottom: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+.wl-video__hint { font-size: 0.85rem; color: var(--wp--preset--color--steel); }

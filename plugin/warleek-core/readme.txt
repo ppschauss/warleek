@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.3.0
+Stable tag: 2.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,15 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.4.0 =
+* SEO auf DACH umgestellt: Titel und Beschreibungen aller Guides und Seiten neu geschrieben nach dem Muster Wardogs + Thema + Sprache/Land, Titel und Beschreibung bewusst unterschiedlich formuliert und auf Suchergebnis-Länge geprüft.
+* Echte DACH-Signale: hreflang für de-DE, de-AT, de-CH, de und x-default, dazu og:locale:alternate und geo.region für alle drei Länder.
+* Patch Notes tragen jetzt Datum und Version in Titel und Beschreibung; die Übersichtsseite nennt das Datum der jüngsten Patch Note.
+* Strukturierte Daten für Patch Notes (Article mit Bezug auf das Spiel), für die Übersicht (CollectionPage mit ItemList) und Brotkrumen auf allen Inhaltsseiten.
+* Impressum und Datenschutzerklärung mit den echten Betreiberdaten gefüllt, Datenschutz um Einwilligung, externe Videos und Aufbewahrungsfristen erweitert.
+* Neu: Einwilligung für externe Medien (`inc/consent.php`) samt Shortcode `[warleek_video]`. Vor der Zustimmung entsteht keine Verbindung zu YouTube – zu sehen ist nur eine Vorschau vom eigenen Server. Die Entscheidung liegt im localStorage, nicht in einem Cookie.
+* Markdown erkennt Warleek-Shortcodes als eigene Blöcke.
 
 = 2.3.0 =
 * Zwei neue HOTAS-Guides, ausgewertet aus zwei englischsprachigen Video-Guides: Empfindlichkeit, Deadzone und Kurven – sowie Flugtechnik mit Combat Orbit und schneller Landung.

@@ -4,7 +4,7 @@ Wardogs-**Guide-Seite** **Warleek** (warleek.de): Block-Theme `theme/warleek` (n
 
 ## Befehle
 - `./manage.sh up|down|install|wp <args>|seed|sync [--force]|zip|shot <pfad> [breite] [datei] [hoehe]|urls`
-- Tests: `docker run --rm -v $PWD/plugin/warleek-core:/c php:8.3-cli php /c/tests/{bbcode,markdown}-test.php`, `./manage.sh wp eval-file wp-content/plugins/warleek-core/tests/{steam-sync,translate,updater}-test.php`, `./manage.sh wp warleek status`
+- Tests: `docker run --rm -v $PWD/plugin/warleek-core:/c php:8.3-cli php /c/tests/{bbcode,markdown}-test.php`, `./manage.sh wp eval-file wp-content/plugins/warleek-core/tests/{steam-sync,translate,updater,inline-images,seo}-test.php`, `./manage.sh wp warleek status`
 - Veröffentlichen: `bin/release.sh` (Trockenlauf) bzw. `--publish`; prüft fünf Versionsstellen (Plugin-Header, WARLEEK_CORE_VERSION, readme Stable tag, style.css, WARLEEK_VERSION)
 - Nach Änderungen an `patterns/`: Pattern-Cache ist versionsgebunden → `./manage.sh seed` (löscht ihn) oder `wp eval 'wp_get_theme()->delete_pattern_cache();'`
 
@@ -14,6 +14,11 @@ Wardogs-**Guide-Seite** **Warleek** (warleek.de): Block-Theme `theme/warleek` (n
 - **Guides schreibt man als Markdown** in `content-src/guides/*.md` (Kopfblock: title, slug, thema, order, image, image_alt, excerpt, seo_title, seo_description). `php bin/guides-build.php` übersetzt sie mit `inc/markdown.php` nach `content/_content/guides.json` und trägt die Bilder in `content/MANIFEST.json` ein; gleicher Slug ersetzt, alles andere bleibt. Danach `./manage.sh seed`. Der Backend-Import („Guides importieren") bleibt für Einzelstücke, die nicht mitausgeliefert werden sollen.
 - **Bilder im Fließtext** stehen als Asset-Schlüssel: `![Alt](bild-hot-zone)` bzw. mit Unterschrift `![Alt](schluessel "Unterschrift")`. Datei dazu nach `content-src/guides/img/<schluessel>.webp` (Details in dessen README). Aus dem Schlüssel wird erst beim Einspielen eine URL – `warleek_resolve_asset_src()` in `inc/builders.php`; unbekannte Schlüssel fliegen samt Bild raus, statt kaputt anzuzeigen. Beim Backend-Import sucht `warleek_import_inline_images()` die Datei neben der Markdown-Datei bzw. in `images/` im ZIP.
 - Reihenfolge der Guides in Zehnerblöcken je Thema: einsteiger 1–9, gameplay 10–19, fob 20–29, logistik 30–39, equipment 40–49, technik 50–59, Sonstiges ab 60.
+- **SEO-Muster:** Titel = Wardogs + Thema + Sprache/Land, <= 62 Zeichen inkl. „ | Warleek"; Beschreibung <= 158 Zeichen und **anders formuliert** als der Titel (Titel knapp, Beschreibung mit ausgeschriebener Region und Nebenbegriffen). Für Guides und Seiten stehen beide im Kopfblock bzw. in `pages.json`; Archive, Taxonomie und Patch Notes erzeugt `inc/seo.php` dynamisch. Patch Notes tragen das Datum in Titel **und** Beschreibung; die Übersichtsseite das Datum der jüngsten Note.
+- DACH-Signale kommen aus hreflang (de-DE/de-AT/de-CH/de/x-default auf dieselbe URL), `og:locale:alternate` und drei `geo.region`-Angaben – nicht aus dem Keywords-Feld.
+- In Patch-Note-Beschreibungen darf **kein englischer Originaltext** zitiert werden; ohne deutsche Kurzfassung steht dort ein fertiger deutscher Satz.
+- **Einwilligung:** `inc/consent.php` ist kein Deko-Banner. Die Seite setzt keine Cookies und lädt nichts von Dritten; das Banner gilt allein für eingebettete Videos (`[warleek_video id="…"]`), die bis zur Zustimmung nur eine eigene Vorschau zeigen. Entscheidung liegt im localStorage, nicht in einem Cookie. Texte und Schalter stehen in den Optionen.
+- Impressum und Datenschutz enthalten echte Betreiberdaten (Patrick Pascal Schauß, Karben) – Änderungen in `pages.json`, nicht im Template.
 - Spielzahlen gehören in `docs/research/wardogs-facts.md`, bevor sie in einen Guide wandern – mit Quelle und Vermerk, wenn Quellen sich widersprechen.
 - Übersetzungs- und Updater-Tests fangen HTTP über `pre_http_request` ab – sie kosten nichts und dürfen nie echte Anfragen stellen.
 - Im Installer niemals `echo` verwenden – Ausgabe zerstört die JSON-Antwort. Stattdessen `warleek_log()`; jeder Schritt läuft ohnehin in einem Output-Buffer.

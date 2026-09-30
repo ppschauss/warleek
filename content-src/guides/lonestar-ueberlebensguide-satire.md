@@ -6,8 +6,8 @@ order: 60
 image: guide-lonestar
 image_alt: Soldat in leuchtend blauer Ausruestung steht mit ausgebreiteten Armen mitten auf einer gruenen Wiese, getarnte Gegner kaum sichtbar am Waldrand
 excerpt: Satire. Ein Ehrenguide für Team Blau: die Fraktion mit der kürzesten Warteschlange, der besten Sicht auf den eigenen Untergang und den hellsten Hosen im Wald.
-seo_title: Wardogs Team Blau (Lonestar) – Satire-Guide | Warleek
-seo_description: Satire-Guide für Lonestar, das blaue Team in Wardogs: warum die Warteschlange immer offen ist, was helle Hosen im Unterholz bewirken und wie man mit Würde verliert.
+seo_title: Wardogs Team Blau (Lonestar) – Satire auf Deutsch | Warleek
+seo_description: Satire: Warum die blaue Fraktion immer offen ist, was helle Hosen im Unterholz bewirken und wie man mit Haltung verliert. Auf Deutsch für DACH.
 ---
 
 > [!achtung] Dieser Guide ist **Satire**. Er enthält keine belastbaren Taktiken, dafür Zuneigung. Die ernst gemeinte Fassung steht unter [Die drei Fraktionen im Vergleich](/guides/wardogs-fraktionen/).

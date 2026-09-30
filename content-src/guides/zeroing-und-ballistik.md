@@ -6,8 +6,8 @@ order: 41
 image: guide-zeroing
 image_alt: Nahaufnahme einer behandschuhten Hand, die den Hoehenverstellturm eines Zielfernrohrs dreht, Gewehr auf Zweibein
 excerpt: Wardogs rechnet echten Kugelfall und echte Flugzeit. Wie du das Zielfernrohr einstellst, was Mündungsgeschwindigkeit bedeutet und wann du vorhalten musst.
-seo_title: Wardogs Zeroing & Bullet Drop erklärt (Deutsch) | Warleek
-seo_description: Wardogs Ballistik auf Deutsch: Zeroing mit Bild-auf und Bild-ab einstellen, Kugelfall und Mündungsgeschwindigkeit verstehen, Entfernungsmesser nutzen und auf Distanz treffen.
+seo_title: Wardogs Zeroing & Ballistik erklärt (Deutsch) | Warleek
+seo_description: Kugelfall, Flugzeit und Zeroing in 100-Meter-Schritten: auf Distanz treffen. Deutsche Anleitung für Deutschland, Österreich und die Schweiz.
 ---
 
 Wenn deine Schüsse auf Entfernung zu tief einschlagen, liegt das nicht an deiner Maus. Wardogs rechnet echte Ballistik: Kugeln fallen, und sie brauchen Zeit bis zum Ziel.

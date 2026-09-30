@@ -6,8 +6,8 @@ order: 52
 image: guide-tastenbelegung
 image_alt: Nahaufnahme einer mechanischen Tastatur, bei der nur einzelne Tasten olivgruen hinterleuchtet sind
 excerpt: Lehnen beim Laufen, Magazin abwerfen, Munition im Schnellkauf, Rauch aus dem APC – ein Dutzend Handgriffe, die im Tutorial fehlen.
-seo_title: Wardogs Tastenbelegung & versteckte Mechaniken | Warleek
-seo_description: Wardogs Keybinds auf Deutsch: Lehnen sinnvoll belegen, Magazin mit Strg abwerfen, Munition schnell kaufen, Zeroing-Tasten, Karte umlegen und weitere ungeschriebene Kniffe.
+seo_title: Wardogs Tastenbelegung & Kniffe (Deutsch) | Warleek
+seo_description: Lehnen, Magazin abwerfen, Schnellkauf, Zeroing-Tasten und Rauch aus dem APC: versteckte Mechaniken auf Deutsch erklärt, für DACH-Spieler.
 ---
 
 Wardogs erklärt das Nötigste. Der Rest steht in keinem Tutorial und macht trotzdem den Unterschied zwischen umständlich und flüssig. Hier ist die Sammlung.

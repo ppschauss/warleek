@@ -7,7 +7,7 @@ image: guide-fob-verteidigen
 image_alt: Befestigte FOB in der Abenddaemmerung mit Sandsackwaellen, Moerserstellung, Wachturm und Verteidigern
 excerpt: Eine FOB fällt selten durch einen Sturmangriff. Sie fällt, weil der Nachschub ausbleibt oder jemand aus 400 Metern hineinsehen kann.
 seo_title: Wardogs FOB verteidigen – Anleitung (Deutsch) | Warleek
-seo_description: Wardogs FOB verteidigen auf Deutsch: Sichtlinien schließen, Mörser und Stingray sinnvoll setzen, Nachschub sichern und typische Fehler beim Basenbau vermeiden.
+seo_description: Sichtlinien schließen, Mörser und Stingray setzen, Nachschub sichern: FOB-Verteidigung in Wardogs auf Deutsch – für Spieler in DACH.
 ---
 
 Der Bau einer FOB ist in zehn Minuten erledigt. Sie am Leben zu halten, ist Arbeit für die ganze Runde. Wenn eine FOB fällt, liegt es fast nie am fehlenden Geschütz – sondern an einer der drei Ursachen unten.

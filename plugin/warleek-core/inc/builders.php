@@ -165,6 +165,11 @@ function warleek_node_to_block( DOMNode $node, DOMDocument $doc ) {
 		case 'h2': case 'h3': case 'h4':
 			return warleek_b_heading( warleek_inner_html( $node, $doc ), (int) substr( $tag, 1 ), $class );
 		case 'p':
+			// Ein Absatz, der nur einen Shortcode enthält, wird ein Shortcode-Block –
+			// sonst stünde am Ende eine <figure> in einem <p> und das Markup wäre kaputt.
+			if ( 'wl-shortcode' === $class ) {
+				return '<!-- wp:shortcode -->' . $node->textContent . '<!-- /wp:shortcode -->' . "\n";
+			}
 			return warleek_b_paragraph( warleek_inner_html( $node, $doc ), $class );
 		case 'ul': case 'ol':
 			$items = array();
