@@ -23,6 +23,10 @@ Wardogs-**Guide-Seite** **Warleek** (warleek.de): Block-Theme `theme/warleek` (n
 - Übersetzungs- und Updater-Tests fangen HTTP über `pre_http_request` ab – sie kosten nichts und dürfen nie echte Anfragen stellen.
 - Im Installer niemals `echo` verwenden – Ausgabe zerstört die JSON-Antwort. Stattdessen `warleek_log()`; jeder Schritt läuft ohnehin in einem Output-Buffer.
 - Frisch aktivierte Fremd-Plugins leiten im `admin_init` um; während AJAX-Schritten ist `wp_redirect` deshalb abgeschaltet.
+- **Farbwelten & Hell/Dunkel:** `theme/warleek/assets/css/themes.css` überschreibt die Preset-Variablen aus theme.json auf `html[data-wl-theme]` bzw. `html[data-wl-mode]`. Feste Farbwerte gehören **nicht** in main.css – Transparenzen entstehen aus den RGB-Tripeln (`rgb(var(--wl-accent-rgb) / 0.4)`), sonst wandern sie beim Umschalten nicht mit. Schrift auf Akzentflächen immer `rgb(var(--wl-on-accent-rgb))`, nie `--base`: Im Hell-Modus ist der Akzent dunkel, im Dunkel-Modus hell.
+- Held-Bereiche (`.wl-hero`) und der Sperrkasten über Videos behalten **immer** die dunklen Werte samt Akzent – darunter liegen dunkle Fotos.
+- Nach jeder Farbänderung `docker exec wh-web-check node /tmp/pp/themecheck.js <basis>` laufen lassen: misst alle 6 Farbwelten × hell/dunkel über mehrere Seiten gegen WCAG AA. Beim Messen müssen CSS-Übergänge aus sein, sonst misst man Zwischenwerte.
+- Neue Schriftschnitte, die im ersten Bild sichtbar sind, in `warleek_font_preload()` eintragen – sonst springt das Layout (CLS).
 - Asset-URLs root-relativ, Fonts self-hosted (DSGVO), keine externen Requests außer Steam-CDN in Patch Notes.
 - Spielzahlen immer mit „Stand: <Monat Jahr>" (Early Access). Faktenbasis: `docs/research/wardogs-facts.md`.
 - Shell-Hinweis: `cd` persistiert nicht zuverlässig zwischen Befehlen → absolute Pfade / `git -C`.

@@ -307,3 +307,37 @@ Guides · Das Spiel (mit Überblick und allen sechs Themen) · Patch Notes · Pa
 Lighthouse mobil unverändert: Performance 97, Accessibility 100, SEO 100. Acht Testdateien grün.
 
 **Lehre aus diesem Durchgang:** Ein Screenshot und eine Messung sagen Verschiedenes. Die Zahlen meldeten „Umschalter bei x=319, alles richtig", während das Bild noch die alte Anordnung zeigte – weil `head -4` in der Prüfkette den Node-Prozess vor dem Screenshot abgeschossen hatte. Beides ansehen, nicht eines statt des anderen.
+
+## Hell/Dunkel und sechs Farbwelten – Version 2.7.0 (30.09.2026)
+
+### Aufbau
+Alles läuft über die Preset-Variablen aus `theme.json`, überschrieben auf `html[data-wl-theme]` und `html[data-wl-mode]`. Damit Transparenzen mitwandern, wurden **36 feste Farbwerte** in `main.css` und `motion.css` durch RGB-Tripel ersetzt (`rgb(var(--wl-accent-rgb) / 0.4)`). Die Wahl liegt im localStorage und wird von einem Skript im Kopfbereich gesetzt – vor dem ersten Bild, sonst blitzt die Standardfarbe auf.
+
+Farbwelten: Warleek (Lauchgrün), Monochrom, Valkyra (Rot), Lonestar (Blau), Manticore (Grün), Pastell (Rosa/Violett). Modi: System, Hell, Dunkel.
+
+### Gemessen statt angesehen
+`bin/themecheck.js` schaltet alle 6 Farbwelten × 2 Modi durch, über sechs Seiten, und misst für jeden Textknoten Farbe gegen tatsächlichen Hintergrund:
+
+| Durchgang | Ergebnis |
+| --- | --- |
+| erster Lauf | **24 Stellen** unter der Grenze |
+| nach Held-Korrektur | 31 (andere Fehler sichtbar geworden) |
+| nach Akzent-Token | 11 |
+| nach gepinntem Held-Akzent | 5 |
+| Endstand | **alle 12 Kombinationen bestehen WCAG AA**, schwächster Wert 5,15:1 |
+
+Vier echte Fehler hat erst diese Messung gezeigt:
+
+1. **Dogtag-Pille im Held-Bereich.** Text hell, Hintergrund im Hell-Modus weiß – 1,01:1. Ursache: Der Held-Bereich hatte nur Text und Grundfarbe gepinnt, nicht die Flächen darin.
+2. **Schrift auf Akzentflächen.** Knöpfe nutzten `--base`. Im Hell-Modus ist der Akzent dunkel und `--base` hell, im Dunkel-Modus umgekehrt – bei Rot und Blau reichte es in keiner Richtung. Jetzt gibt es `--wl-on-accent-rgb`, das je Modus kippt.
+3. **Akzent im Held-Bereich.** Im Hell-Modus wurde er dunkel und stand damit dunkel auf dunklem Foto (2,55:1). Jeder Farbwelt hängt jetzt ein `--wl-hero-accent-rgb` an, das der Modus nicht anfasst.
+4. **Kernblock-Knöpfe im Held-Bereich.** `--base` war dort nicht gepinnt, der Knopf bekam helle Schrift auf hellem Akzent (1,68:1 bei Pastell).
+
+**Und ein Fehler im Messgerät:** Fünf Meldungen blieben übrig, die sich nicht nachvollziehen ließen – die Knöpfe hatten nachweislich die richtige Farbe. Ursache: Das Skript maß 150 ms nach dem Umschalten, mitten in der CSS-Überblendung, und las Zwischenwerte. Seitdem schaltet es Übergänge vor dem Messen ab.
+
+### Weiteres
+- Umschalter per echtem Mausklick **und** per Tastatur geprüft: Attribut gesetzt, im localStorage gemerkt, übersteht das Neuladen, „System" entfernt das Attribut wieder.
+- Eingabefelder auf das übliche 1×1-Muster statt 0×0 – manche Vorlesehilfen überspringen 0×0.
+- **CLS von 0,104 auf 0** auf der Guide-Übersicht. Die Verschiebung kam nicht vom Umschalter, sondern von zwei Schriftschnitten, die nicht vorgeladen wurden (Kartenüberschriften und Monoschrift). Lighthouse nennt die Ursache im Audit `layout-shifts` direkt.
+- Lighthouse mobil: Startseite Performance 98, Barrierefreiheit 100, SEO 100, CLS 0, LCP 2,3 s. Guide-Übersicht 94 / 100 / CLS 0.
+- Acht Testdateien grün.

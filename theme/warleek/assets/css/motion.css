@@ -23,7 +23,7 @@
 .wl-video-toggle {
 	position: absolute; right: 1rem; bottom: 1rem; z-index: 3;
 	display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.75rem;
-	background: rgba(13, 17, 15, 0.7); color: var(--wp--preset--color--leek-light); border: var(--wl-border); border-radius: 999px;
+	background: rgb(var(--wl-base-rgb) / 0.7); color: var(--wp--preset--color--leek-light); border: var(--wl-border); border-radius: 999px;
 	font-family: var(--wp--preset--font-family--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
 }
 .wl-video-toggle:hover, .wl-video-toggle:focus-visible { border-color: var(--wp--preset--color--leek); color: var(--wp--preset--color--leek); }
@@ -32,7 +32,7 @@
 /* Flare-Balken – leichtgewichtig (nur background-position), auf allen Geräten */
 .wl-flare-bar {
 	position: fixed; top: 0; left: 0; height: 3px; width: 100%; z-index: 9999; pointer-events: none;
-	background: linear-gradient(90deg, transparent 0%, #9be15d 50%, #eef5e6 60%, transparent 100%);
+	background: linear-gradient(90deg, transparent 0%, var(--wp--preset--color--leek) 50%, var(--wp--preset--color--leek-light) 60%, transparent 100%);
 	background-size: 50% 100%; background-repeat: no-repeat;
 	animation: wl-flare-sweep 0.9s cubic-bezier(0.2, 0.8, 0.3, 1) both; opacity: 0;
 }
@@ -54,17 +54,17 @@
 	/* Smoke-Drift im Hero (eine Lage, PNG, nur transform) */
 	.wl-smoke {
 		position: absolute; inset: -15% -10%; z-index: 0; pointer-events: none;
-		background: rgb(190, 205, 180); opacity: 0.28; /* PNG mit Alpha-Kanal → mask-mode alpha (Default) */
+		background: rgb(var(--wl-rauch-rgb)); opacity: 0.28; /* PNG mit Alpha-Kanal → mask-mode alpha (Default) */
 		mask-image: url("../img/smoke-tex.png"); -webkit-mask-image: url("../img/smoke-tex.png"); mask-repeat: repeat; -webkit-mask-repeat: repeat; mask-size: 640px 640px; -webkit-mask-size: 640px 640px;
 		animation: wl-drift 70s linear infinite alternate; will-change: transform; contain: strict;
 	}
 	@keyframes wl-drift { from { transform: translate3d(-3%, 2%, 0); } to { transform: translate3d(3%, -2%, 0); } }
 	/* Header-Blur */
-	.site-header::before { backdrop-filter: blur(12px) saturate(140%); -webkit-backdrop-filter: blur(12px) saturate(140%); background: rgba(13, 17, 15, 0.8); }
+	.site-header::before { backdrop-filter: blur(12px) saturate(140%); -webkit-backdrop-filter: blur(12px) saturate(140%); background: rgb(var(--wl-base-rgb) / 0.8); }
 	/* Logo-Glow */
 	.site-brand .wp-block-site-logo::before {
 		content: ""; position: absolute; inset: -30%; z-index: -1; border-radius: 50%;
-		background: radial-gradient(closest-side, rgba(155, 225, 93, 0.45), transparent 75%);
+		background: radial-gradient(closest-side, rgb(var(--wl-accent-rgb) / 0.45), transparent 75%);
 		animation: wl-pulse 4s ease-in-out infinite;
 	}
 	@keyframes wl-pulse { 0%, 100% { opacity: 0.5; transform: scale(0.9); } 50% { opacity: 1; transform: scale(1.1); } }

@@ -1,0 +1,328 @@
+/* =====================================================================
+   Warleek — Farbwelten und Hell/Dunkel.
+
+   Alles läuft über die Preset-Variablen aus theme.json. Wer sie hier
+   überschreibt, färbt die ganze Seite um, ohne eine einzige Regel in
+   main.css anzufassen. Transparenzen entstehen aus den RGB-Tripeln
+   (`--wl-*-rgb`), damit sie mitwandern.
+
+   Zwei Achsen:
+     html[data-wl-theme]  warleek | monochrom | valkyra | lonestar | manticore | pastell
+     html[data-wl-mode]   dark | light        (ohne Angabe: Systemeinstellung)
+
+   Der Hell-Modus lässt Held-Bereiche bewusst dunkel: Darunter liegen
+   dunkle Fotos, auf denen dunkle Schrift nicht lesbar wäre.
+   ===================================================================== */
+
+/* ------------------------------------------------------- Dunkel (Standard) */
+:root,
+html[data-wl-mode="dark"] {
+	/* Schrift auf farbigen Flächen (Knöpfe). Nicht `base` nehmen: Bei Rot und
+	   Blau reicht deren Helligkeit nicht für 4.5:1 auf dem Akzent. */
+	--wl-on-accent-rgb: 8 12 10;
+	--wl-hero-accent-rgb: 155 225 93;
+	--wl-hero-heading: #eef5e6;
+	--wl-base-rgb:    13 17 15;
+	--wl-surface-rgb: 22 28 24;
+	--wl-text-rgb:    230 234 228;
+	--wl-accent-rgb:  155 225 93;
+	--wl-steel-rgb:   154 168 150;
+	--wl-sand-rgb:    199 181 143;
+	--wl-olive-rgb:   74 90 68;
+	--wl-alert-rgb:   224 132 58;
+	--wl-schatten-rgb: 0 0 0;
+	--wl-rauch-rgb:   190 205 180;
+	--wl-glanz-rgb:   255 255 255;
+	--wl-schatten-a:  0.35;
+	color-scheme: dark;
+}
+
+/* ------------------------------------------------------------------ Hell */
+html[data-wl-mode="light"] {
+	--wl-on-accent-rgb: 255 255 255;
+	--wl-base-rgb:    244 246 242;
+	--wl-surface-rgb: 255 255 255;
+	--wl-text-rgb:    18 26 21;
+	--wl-steel-rgb:   91 101 96;
+	--wl-schatten-rgb: 24 34 28;
+	--wl-rauch-rgb:   120 135 115;
+	--wl-glanz-rgb:   255 255 255;
+	--wl-schatten-a:  0.12;
+	color-scheme: light;
+
+	--wp--preset--color--base:      rgb(var(--wl-base-rgb));
+	--wp--preset--color--surface:   rgb(var(--wl-surface-rgb));
+	--wp--preset--color--surface-2: #e7ebe5;
+	--wp--preset--color--text:      rgb(var(--wl-text-rgb));
+	--wp--preset--color--steel:     rgb(var(--wl-steel-rgb));
+	--wl-border: 1px solid rgb(var(--wl-schatten-rgb) / 0.16);
+}
+/* Ohne ausdrückliche Wahl folgt die Seite dem Betriebssystem. */
+@media (prefers-color-scheme: light) {
+	html:not([data-wl-mode]) {
+		--wl-on-accent-rgb: 255 255 255;
+		--wl-base-rgb:    244 246 242;
+		--wl-surface-rgb: 255 255 255;
+		--wl-text-rgb:    18 26 21;
+		--wl-steel-rgb:   91 101 96;
+		--wl-schatten-rgb: 24 34 28;
+		--wl-rauch-rgb:   120 135 115;
+		--wl-schatten-a:  0.12;
+		color-scheme: light;
+
+		--wp--preset--color--base:      rgb(var(--wl-base-rgb));
+		--wp--preset--color--surface:   rgb(var(--wl-surface-rgb));
+		--wp--preset--color--surface-2: #e7ebe5;
+		--wp--preset--color--text:      rgb(var(--wl-text-rgb));
+		--wp--preset--color--steel:     rgb(var(--wl-steel-rgb));
+		--wl-border: 1px solid rgb(var(--wl-schatten-rgb) / 0.16);
+	}
+}
+
+/* ============================================================== Farbwelten
+   Je Welt: Akzent (leek), Überschriftenfarbe (leek-light), Zweitfarbe (sand),
+   Deko (olive) und die getönten Untergründe. Im Hell-Modus wird der Akzent
+   abgedunkelt, damit er als Schrift auf Weiß noch lesbar ist. */
+
+/* -- Warleek (Standard, Lauchgrün) -- */
+html[data-wl-theme="warleek"] {
+	--wl-hero-accent-rgb: 155 225 93;
+	--wl-hero-heading: #eef5e6; --wl-accent-rgb: 155 225 93; --wl-sand-rgb: 199 181 143; --wl-olive-rgb: 74 90 68; }
+html[data-wl-theme="warleek"][data-wl-mode="light"],
+html[data-wl-theme="warleek"] { }
+html[data-wl-mode="light"][data-wl-theme="warleek"],
+html[data-wl-mode="light"]:not([data-wl-theme]) {
+	--wl-accent-rgb: 61 117 20;
+	--wp--preset--color--leek:       rgb(var(--wl-accent-rgb));
+	--wp--preset--color--leek-light: #16250c;
+	--wp--preset--color--sand:       #6d5c33;
+	--wp--preset--color--olive:      #7d8f77;
+}
+@media (prefers-color-scheme: light) {
+	html:not([data-wl-mode]):not([data-wl-theme]),
+	html:not([data-wl-mode])[data-wl-theme="warleek"] {
+		--wl-accent-rgb: 61 117 20;
+		--wp--preset--color--leek:       rgb(var(--wl-accent-rgb));
+		--wp--preset--color--leek-light: #16250c;
+		--wp--preset--color--sand:       #6d5c33;
+		--wp--preset--color--olive:      #7d8f77;
+	}
+}
+
+/* -- Monochrom -- */
+html[data-wl-theme="monochrom"] {
+	--wl-hero-accent-rgb: 207 212 216;
+	--wl-hero-heading: #f2f4f6;
+	--wl-accent-rgb: 207 212 216;
+	--wl-sand-rgb:   182 188 194;
+	--wl-olive-rgb:  58 63 68;
+	--wl-base-rgb:    14 15 16;
+	--wl-surface-rgb: 22 24 26;
+	--wl-steel-rgb:  148 154 159;
+	--wp--preset--color--base:       rgb(var(--wl-base-rgb));
+	--wp--preset--color--surface:    rgb(var(--wl-surface-rgb));
+	--wp--preset--color--surface-2:  #202326;
+	--wp--preset--color--leek:       rgb(var(--wl-accent-rgb));
+	--wp--preset--color--leek-light: #f2f4f6;
+	--wp--preset--color--steel:      rgb(var(--wl-steel-rgb));
+	--wp--preset--color--sand:       rgb(var(--wl-sand-rgb));
+	--wp--preset--color--olive:      rgb(var(--wl-olive-rgb));
+}
+html[data-wl-theme="monochrom"][data-wl-mode="light"] {
+	--wl-accent-rgb: 45 52 58;
+	--wl-base-rgb:    245 246 247;
+	--wl-surface-rgb: 255 255 255;
+	--wl-steel-rgb:  90 97 103;
+	--wp--preset--color--surface-2:  #e9ebed;
+	--wp--preset--color--leek-light: #14181c;
+	--wp--preset--color--sand:       #5a6167;
+	--wp--preset--color--olive:      #8b9299;
+}
+
+/* -- Valkyra (Rot) -- */
+html[data-wl-theme="valkyra"] {
+	--wl-hero-accent-rgb: 239 95 82;
+	--wl-hero-heading: #ffe9e6;
+	--wl-accent-rgb: 239 95 82;
+	--wl-sand-rgb:   210 173 162;
+	--wl-olive-rgb:  90 58 54;
+	--wl-base-rgb:    18 12 12;
+	--wl-surface-rgb: 28 20 20;
+	--wl-steel-rgb:  168 147 146;
+	--wp--preset--color--base:       rgb(var(--wl-base-rgb));
+	--wp--preset--color--surface:    rgb(var(--wl-surface-rgb));
+	--wp--preset--color--surface-2:  #281c1c;
+	--wp--preset--color--leek:       rgb(var(--wl-accent-rgb));
+	--wp--preset--color--leek-light: #ffe9e6;
+	--wp--preset--color--steel:      rgb(var(--wl-steel-rgb));
+	--wp--preset--color--sand:       rgb(var(--wl-sand-rgb));
+	--wp--preset--color--olive:      rgb(var(--wl-olive-rgb));
+}
+html[data-wl-theme="valkyra"][data-wl-mode="light"] {
+	--wl-accent-rgb: 175 38 28;
+	--wl-base-rgb:    248 244 243;
+	--wl-surface-rgb: 255 255 255;
+	--wl-steel-rgb:  102 88 86;
+	--wp--preset--color--surface-2:  #efe6e4;
+	--wp--preset--color--leek-light: #3a0f0a;
+	--wp--preset--color--sand:       #7a4c40;
+	--wp--preset--color--olive:      #a58e89;
+}
+
+/* -- Lonestar (Blau) -- */
+html[data-wl-theme="lonestar"] {
+	--wl-hero-accent-rgb: 85 170 255;
+	--wl-hero-heading: #e8f2ff;
+	--wl-accent-rgb: 85 170 255;
+	--wl-sand-rgb:   169 192 214;
+	--wl-olive-rgb:  51 70 92;
+	--wl-base-rgb:    10 14 20;
+	--wl-surface-rgb: 18 24 33;
+	--wl-steel-rgb:  141 154 168;
+	--wp--preset--color--base:       rgb(var(--wl-base-rgb));
+	--wp--preset--color--surface:    rgb(var(--wl-surface-rgb));
+	--wp--preset--color--surface-2:  #1a2230;
+	--wp--preset--color--leek:       rgb(var(--wl-accent-rgb));
+	--wp--preset--color--leek-light: #e8f2ff;
+	--wp--preset--color--steel:      rgb(var(--wl-steel-rgb));
+	--wp--preset--color--sand:       rgb(var(--wl-sand-rgb));
+	--wp--preset--color--olive:      rgb(var(--wl-olive-rgb));
+}
+html[data-wl-theme="lonestar"][data-wl-mode="light"] {
+	--wl-accent-rgb: 21 91 168;
+	--wl-base-rgb:    242 246 250;
+	--wl-surface-rgb: 255 255 255;
+	--wl-steel-rgb:  86 98 110;
+	--wp--preset--color--surface-2:  #e3eaf2;
+	--wp--preset--color--leek-light: #0c2136;
+	--wp--preset--color--sand:       #3f5f7d;
+	--wp--preset--color--olive:      #8a9bad;
+}
+
+/* -- Manticore (Grün) -- */
+html[data-wl-theme="manticore"] {
+	--wl-hero-accent-rgb: 47 211 154;
+	--wl-hero-heading: #dcf7ec;
+	--wl-accent-rgb: 47 211 154;
+	--wl-sand-rgb:   174 201 186;
+	--wl-olive-rgb:  47 82 68;
+	--wl-base-rgb:    8 18 14;
+	--wl-surface-rgb: 16 28 23;
+	--wl-steel-rgb:  134 154 146;
+	--wp--preset--color--base:       rgb(var(--wl-base-rgb));
+	--wp--preset--color--surface:    rgb(var(--wl-surface-rgb));
+	--wp--preset--color--surface-2:  #182720;
+	--wp--preset--color--leek:       rgb(var(--wl-accent-rgb));
+	--wp--preset--color--leek-light: #dcf7ec;
+	--wp--preset--color--steel:      rgb(var(--wl-steel-rgb));
+	--wp--preset--color--sand:       rgb(var(--wl-sand-rgb));
+	--wp--preset--color--olive:      rgb(var(--wl-olive-rgb));
+}
+html[data-wl-theme="manticore"][data-wl-mode="light"] {
+	--wl-accent-rgb: 13 116 82;
+	--wl-base-rgb:    241 247 243;
+	--wl-surface-rgb: 255 255 255;
+	--wl-steel-rgb:  83 99 92;
+	--wp--preset--color--surface-2:  #e2ece6;
+	--wp--preset--color--leek-light: #08281c;
+	--wp--preset--color--sand:       #3d6354;
+	--wp--preset--color--olive:      #85a094;
+}
+
+/* -- Pastell (Pink & Lila) -- */
+html[data-wl-theme="pastell"] {
+	--wl-hero-accent-rgb: 247 168 216;
+	--wl-hero-heading: #fceaf6;
+	--wl-accent-rgb: 247 168 216;
+	--wl-sand-rgb:   189 164 245;
+	--wl-olive-rgb:  69 56 96;
+	--wl-base-rgb:    20 15 28;
+	--wl-surface-rgb: 30 23 41;
+	--wl-steel-rgb:  163 151 176;
+	--wp--preset--color--base:       rgb(var(--wl-base-rgb));
+	--wp--preset--color--surface:    rgb(var(--wl-surface-rgb));
+	--wp--preset--color--surface-2:  #292036;
+	--wp--preset--color--leek:       rgb(var(--wl-accent-rgb));
+	--wp--preset--color--leek-light: #fceaf6;
+	--wp--preset--color--steel:      rgb(var(--wl-steel-rgb));
+	--wp--preset--color--sand:       rgb(var(--wl-sand-rgb));
+	--wp--preset--color--olive:      rgb(var(--wl-olive-rgb));
+}
+html[data-wl-theme="pastell"][data-wl-mode="light"] {
+	--wl-accent-rgb: 155 47 122;
+	--wl-sand-rgb:   104 62 168;
+	--wl-base-rgb:    250 244 250;
+	--wl-surface-rgb: 255 255 255;
+	--wl-steel-rgb:  103 92 112;
+	--wp--preset--color--surface-2:  #f0e6f2;
+	--wp--preset--color--leek-light: #2e0f28;
+	--wp--preset--color--sand:       rgb(var(--wl-sand-rgb));
+	--wp--preset--color--olive:      #a795b4;
+}
+
+/* =============================================== Held-Bereiche bleiben dunkel
+   Unter dem Verlauf liegen dunkle Fotos und Videos. Dunkle Schrift wäre dort
+   unlesbar – deshalb behalten Held-Bereiche unabhängig vom Modus die dunklen
+   Werte. Das gilt auch für den Kasten über einem gesperrten Video. */
+.wl-hero,
+.wl-video__ask {
+	--wl-base-rgb:    13 17 15;
+	--wl-surface-rgb: 22 28 24;
+	--wl-text-rgb:    230 234 228;
+	--wl-steel-rgb:   154 168 150;
+	/* Auch Flächen darin bleiben dunkel – sonst bekäme eine Pille im Held-Bereich
+	   im Hell-Modus einen weißen Grund und behielte die helle Schrift. */
+	--wp--preset--color--base:      rgb(var(--wl-base-rgb));
+	--wp--preset--color--text:      rgb(var(--wl-text-rgb));
+	--wp--preset--color--surface:   rgb(var(--wl-surface-rgb));
+	--wp--preset--color--surface-2: #1f2822;
+	--wp--preset--color--steel:     rgb(var(--wl-steel-rgb));
+	--wp--preset--color--sand:      #c7b58f;
+	/* Auch der Akzent: Im Hell-Modus wäre er dunkel und damit auf dem Foto unlesbar. */
+	--wl-accent-rgb:                var(--wl-hero-accent-rgb);
+	--wl-on-accent-rgb:             8 12 10;
+	--wp--preset--color--leek:      rgb(var(--wl-accent-rgb));
+	--wp--preset--color--leek-light: var(--wl-hero-heading);
+	--wl-border: 1px solid rgb(var(--wl-steel-rgb) / 0.18);
+	color: rgb(var(--wl-text-rgb));
+}
+html[data-wl-mode="light"] .wl-hero h1,
+html[data-wl-mode="light"] .wl-hero h2,
+html[data-wl-mode="light"] .wl-video__ask strong,
+html:not([data-wl-mode]) .wl-hero h1,
+html:not([data-wl-mode]) .wl-hero h2 { color: #eef5e6; }
+html[data-wl-mode="light"] .wl-hero .wl-lead,
+html[data-wl-mode="light"] .wl-hero p,
+html[data-wl-mode="light"] .wl-video__ask p { color: #e6eae4; }
+html[data-wl-mode="light"] .wl-hero .wl-eyebrow { color: rgb(var(--wl-accent-rgb)); }
+
+/* ------------------------------------------------- Umschalter im Fußbereich */
+/* Ohne JavaScript nützt der Umschalter nichts – dann bleibt er weg. Die Klasse
+   `wl-js` setzt das Kopfskript, also noch vor dem ersten Bild: kein Layoutsprung. */
+html:not(.wl-js) .wl-appearance { display: none; }
+.wl-appearance { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: flex-start; }
+.wl-appearance fieldset { border: 0; margin: 0; padding: 0; }
+.wl-appearance legend {
+	font-family: var(--wp--preset--font-family--heading); font-weight: 700; font-size: 0.8rem;
+	letter-spacing: 0.12em; text-transform: uppercase; color: var(--wp--preset--color--steel); margin-bottom: 0.5rem; padding: 0;
+}
+.wl-appearance__row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.wl-appearance__opt {
+	display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer;
+	padding: 0.4rem 0.7rem; border: var(--wl-border); border-radius: var(--wl-radius);
+	background: var(--wp--preset--color--surface-2); color: var(--wp--preset--color--text);
+	font-size: 0.85rem; line-height: 1.2;
+}
+/* Standard-Muster für „sichtbar nur für Hilfsmittel": 1×1 statt 0×0, sonst
+   überspringen manche Vorlesehilfen das Feld. Bedient wird über die Beschriftung. */
+.wl-appearance__opt input { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.wl-appearance__opt:hover { border-color: var(--wp--preset--color--leek); }
+.wl-appearance__opt:has(input:focus-visible) { outline: 2px solid var(--wp--preset--color--leek); outline-offset: 2px; }
+.wl-appearance__opt:has(input:checked) { border-color: var(--wp--preset--color--leek); color: var(--wp--preset--color--leek-light); box-shadow: inset 0 0 0 1px var(--wp--preset--color--leek); }
+.wl-appearance__dot { width: 0.85rem; height: 0.85rem; border-radius: 50%; flex: none; border: 1px solid rgb(var(--wl-text-rgb) / 0.25); }
+.wl-appearance__dot--warleek   { background: #9be15d; }
+.wl-appearance__dot--monochrom { background: #cfd4d8; }
+.wl-appearance__dot--valkyra   { background: #ef5f52; }
+.wl-appearance__dot--lonestar  { background: #55aaff; }
+.wl-appearance__dot--manticore { background: #2fd39a; }
+.wl-appearance__dot--pastell   { background: linear-gradient(135deg, #f7a8d8 50%, #bda4f5 50%); }

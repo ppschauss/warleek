@@ -7,7 +7,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.6.0' ); }
+if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.7.0' ); }
 define( 'WARLEEK_DIR', get_template_directory() );
 define( 'WARLEEK_URI', get_template_directory_uri() );
 
@@ -18,7 +18,7 @@ function warleek_setup() {
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'html5', array( 'search-form', 'gallery', 'caption', 'style', 'script' ) );
-	add_editor_style( 'assets/css/main.css' );
+	add_editor_style( array( 'assets/css/main.css', 'assets/css/themes.css' ) );
 	register_block_pattern_category( 'warleek', array( 'label' => 'Warleek' ) );
 }
 add_action( 'after_setup_theme', 'warleek_setup' );
@@ -59,7 +59,7 @@ add_action( 'wp_head', 'warleek_source_greeting', 0 );
 
 /* ----------------------------------------------------------------- Assets */
 function warleek_assets() {
-	foreach ( array( 'main' => 'css/main.css', 'motion' => 'css/motion.css' ) as $handle => $rel ) {
+	foreach ( array( 'main' => 'css/main.css', 'themes' => 'css/themes.css', 'motion' => 'css/motion.css' ) as $handle => $rel ) {
 		$path = WARLEEK_DIR . '/assets/' . $rel;
 		if ( ! file_exists( $path ) ) { continue; }
 		wp_enqueue_style( 'warleek-' . $handle, WARLEEK_URI . '/assets/' . $rel, array(), filemtime( $path ) );
@@ -73,7 +73,10 @@ add_action( 'wp_enqueue_scripts', 'warleek_assets' );
 
 /** Preload der Above-the-fold-Schriften (H1 + Fließtext). */
 function warleek_font_preload() {
-	foreach ( array( 'barlow-condensed-latin-800.woff2', 'barlow-latin-400.woff2' ) as $font ) {
+	// Alle vier Schnitte, die schon im ersten Bild sichtbar sind. Fehlten hier die
+	// Kartenüberschriften (condensed 700) und die Monoschrift, sprang das Layout
+	// beim Nachladen – auf der Guide-Übersicht waren das 0,10 CLS.
+	foreach ( array( 'barlow-condensed-latin-800.woff2', 'barlow-condensed-latin-700.woff2', 'barlow-latin-400.woff2', 'jetbrains-mono-latin-400.woff2' ) as $font ) {
 		if ( ! file_exists( WARLEEK_DIR . '/assets/fonts/' . $font ) ) { continue; }
 		echo '<link rel="preload" as="font" type="font/woff2" href="' . esc_url( WARLEEK_URI . '/assets/fonts/' . $font ) . '" crossorigin>' . "\n";
 	}

@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.6.0
+Stable tag: 2.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,14 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.7.0 =
+* **Hell/Dunkel-Modus** mit drei Einstellungen: System, Hell, Dunkel. Ohne Wahl folgt die Seite dem Betriebssystem.
+* **Sechs Farbwelten** zur Auswahl: Warleek (Lauchgrün), Monochrom, Valkyra (Rot), Lonestar (Blau), Manticore (Grün) und Pastell (Rosa/Violett) – die drei Fraktionsfarben nach den Teams benannt.
+* Umschalter im Fußbereich, als Block „Darstellung umschalten" oder Shortcode `[warleek_appearance]` überall platzierbar. Die Wahl liegt im localStorage und wird im Kopfbereich gesetzt, also ohne Aufblitzen der Standardfarbe.
+* Alle zwölf Kombinationen aus Farbwelt und Modus sind auf Kontrast gemessen und bestehen WCAG AA; der schwächste Wert liegt bei 5,15:1.
+* Held-Bereiche und der Sperrkasten über Videos bleiben im Hell-Modus dunkel – darunter liegen dunkle Fotos.
+* Zwei fehlende Schriftschnitte werden jetzt vorgeladen: Das Layout sprang beim Nachladen, CLS auf der Guide-Übersicht von 0,10 auf 0.
 
 = 2.6.0 =
 * **Navigation entdoppelt.** Fünf Themen standen zweimal im Menü – einmal als Guide-Filter, einmal als Themenseite. Jetzt führt „Das Spiel" die Themen, „Guides" ist ein einfacher Link auf die Bibliothek mit ihren Filter-Chips.
