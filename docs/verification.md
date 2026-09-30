@@ -387,3 +387,24 @@ Stattdessen: eigener Inhaltstyp, gefüllt aus der eigenen Faktenbasis, jeder Ein
 - Acht Testdateien grün.
 
 **Ein Fehler beim Bauen:** Der neue Schritt gab eine Zeichenkette zurück statt `array('ok'=>…,'msg'=>…)`. Der Installer griff darauf mit `$res['msg']` zu – unter PHP 8 ein TypeError, der den ganzen Lauf abbrach. Die anderen Schritte machen es richtig; das Format steht jetzt in CLAUDE.md.
+
+## Beschreibungen und Bilder für die Datenbank – Version 2.10.0 (30.09.2026)
+
+### Beschreibungen
+Alle 73 Einträge haben jetzt einen eigenen Text nach demselben Muster: was es ist, **Freischaltstufe und einmalige Gebühr**, **Preis pro Leben oder Stück**, und darunter „Anwendung:" – wofür man das Ding nimmt und wann es sich lohnt. Durchschnittlich rund 290 Zeichen, kein Eintrag unter 200.
+
+Dafür wurde tiefer recherchiert (wardogshub.gg, wardogshq.gg, metabot.gg, allthings.how, wardogs.zone, keengamer, fandomwire) und die Faktenbasis um rund 40 Zeilen erweitert. Zwei Erkenntnisse, die vorher fehlten:
+
+- **Freischaltgebühr und Kaufpreis sind zwei verschiedene Kosten.** Die FAL kostet einmalig rund 200.000 Dollar zum Freischalten und danach 6.500 pro Leben; der Havoc 500.000 einmalig und 18.000 pro Stück. Alle Pilot-Tore zusammen liegen bei rund 959.750 Dollar. Dafür gibt es jetzt ein eigenes Feld – 34 Einträge tragen beides getrennt.
+- **Konkrete Vergleichswerte**, die einen Text erst nützlich machen: Galil rund 8 % mehr Schaden als die AK-74, dafür weniger Reichweite und mehr Gewicht; SV-98 mit doppelter nutzbarer Reichweite gegenüber der Mosin; Humvee rund 95 % weniger Schaden durch Handfeuerwaffen, bezahlt mit 41 km/h weniger Tempo.
+
+### Bilder
+Die Zuordnung läuft über den Dateinamen: `wardogs-ak-74.webp` für einen Eintrag, `typ-waffe.webp` als Ersatzbild einer ganzen Kategorie. `php bin/items-media.php` übernimmt sie ins Medien-Manifest und meldet jeden Dateinamen, der zu nichts passt – ein Tippfehler fällt sofort auf, statt still nichts zu bewirken. Das Beitragsbild steht in der Einzelvorlage bereit.
+
+**Bislang liegt dort nichts, und das ist Absicht.** Erzeugte Bilder kommen für Gegenstände nicht in Frage: Ein KI-Bild einer „AK-74" zeigt nicht die Waffe aus dem Spiel. Zulässig sind eigene Spielaufnahmen oder offizielles Material – beides kann diese Seite nicht selbst beschaffen.
+
+### Geprüft
+- Beispiel URAL: Beschreibung mit Driver 3, 35.000 Dollar Gebühr (in Season 1 von 50.000 gesenkt), 5.000 pro Stück, 700 Trefferpunkte und der Rechnung, warum sich Nachschub lohnt. Datenblatt zeigt sechs Felder inklusive Freischaltgebühr.
+- Zustand: 73 geplant, 0 veröffentlicht, erster Termin 01.10.2026 09:10 – der Plan hat die Änderung überstanden.
+- Kein Eintrag mit weniger als 200 Zeichen Text.
+- Acht Testdateien grün.

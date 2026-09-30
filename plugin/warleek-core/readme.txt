@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.9.0
+Stable tag: 2.10.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,13 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.10.0 =
+* **Jeder Datenbank-Eintrag hat jetzt eine eigene Beschreibung** – Freischaltstufe, einmalige Freischaltgebühr, Preis pro Leben und wofür man den Gegenstand überhaupt nimmt. 73 Texte, keiner davon ein Platzhalter.
+* Neues Feld **Freischaltgebühr**: Die einmalige Gebühr beim Erreichen einer Track-Stufe ist etwas anderes als der Preis pro Leben – 34 Einträge tragen jetzt beides getrennt.
+* Bilder je Eintrag vorbereitet: Dateien aus `content-src/items/img/` werden über den Dateinamen zugeordnet (`wardogs-ak-74.webp` für einen Eintrag, `typ-waffe.webp` als Ersatzbild der Kategorie), eingespielt mit `php bin/items-media.php`.
+* **Keine erzeugten Bilder für Gegenstände.** Solange kein Originalmaterial vorliegt, bleiben die Einträge bildlos – ein KI-Bild zeigt nicht die Waffe, um die es geht.
+* Faktenbasis deutlich erweitert: Freischaltgebühren aller Waffen und Fahrzeuge, Schadens- und Reichweitenwerte, Fahrzeugpanzerung.
 
 = 2.9.0 =
 * **Datenbank** unter `/datenbank/`: neuer Inhaltstyp für Waffen, Fahrzeuge, Emplacements und Bauwerke, mit Kategorien, Datenblatt je Eintrag und Querverweisen auf die passenden Guides.

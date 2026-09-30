@@ -142,3 +142,28 @@ Quellen: **Sim Controls**, „WARDOGS HOTAS Setup Guide | Better Controls & Sens
 - **Steuertechnik:** Gieren führt die Nase, Rollen nur Mikrokorrekturen. **Combat Orbit**: Nase per Gieren auf dem Ziel halten, Seitwärtstempo per Rollen, Höhe per Kollektiv.
 - **Schnelle Landung:** tief und schnell anfliegen, über dem Landepunkt Nase hoch **und** Kollektiv ganz nach unten – vernichtet die Fahrt in Sekunden. Dasselbe Manöver dient zum Ausschalten erhöht stehender Flugabwehr.
 - **Bekannte Schwächen (Stand EA):** Kamerarotation am HOTAS ruckelt und ist kaum einstellbar; Kartenbedienung umständlich; keine Achsenanzeige für Pitch/Roll/Yaw.
+
+### Vertiefung für die Datenbank (30.09.2026)
+Quellen: wardogshub.gg (Progression, Fahrzeuge), wardogshq.gg, metabot.gg, allthings.how, wardogs.zone, wardogsbuild.com, fandomwire.com, keengamer.com. Durchweg Community-Seiten – nicht im Spiel nachgeprüft.
+
+**Zwei getrennte Kosten.** Jede Waffe und jedes Fahrzeug hat (a) eine einmalige **Freischaltgebühr** beim Erreichen der Track-Stufe und (b) einen **Preis pro Leben** bzw. pro Fahrzeug. Beides wird oft verwechselt.
+
+Freischaltgebühren Waffen: AK-74 Assault 3 ($10.000) · Galil Assault 10 ($35.000) · M4 Assault 20 ($100.000) · FAL Assault 35 ($200.000) · PP-19 Medic 4 ($25.000) · M500 Support 10 ($50.000) · MP5 Medic 15 ($75.000) · Super-45 Medic 35 ($150.000) · SKS Recon 5 ($25.000) · Mosin Recon 10 ($50.000) · SVD Recon 12 ($50.000) · SV-98 Recon 19 ($100.000) · MK22 Recon 25 ($150.000) · BMR-308 Recon 30 ($125.000) · AMR 50 Recon 35 ($200.000) · M249 Support 15 ($100.000) · PKM Support 30 ($150.000) · RPG-7 Support 5 ($30.000) · MAAWS Support 20 ($125.000) · Compound Bow Recon 17 ($75.000) · MGL-40 Support 35 ($200.000) · GGX 17 Wardog 1 ($5.000) · Judge Wardog 18 ($15.000) · M1911 Wardog 40 ($25.000) · GGX 18 Wardog 70 ($50.000) · Deagle Wardog 85 ($75.000).
+
+Freischaltgebühren Fahrzeuge: URAL Driver 3 ($35.000, in Season 1 von $50.000 gesenkt) · Humvee Driver 15 ($25.000) · L2A6 Driver 35 ($500.000) · SPH-2 Career 90 ($500.000, vorher Career 55 / $400.000) · AH-6M Pilot 4 ($50.000) · AH-6R Pilot 20 ($250.000) · Z20 Lakota [Miniguns] Pilot 25 ($75.000) · Havoc Pilot 35 ($500.000). Alle Pilot-Tore zusammen: rund $959.750.
+
+**Waffenwerte (Community-Angaben):**
+- AK-74: ~305 Brust-DPS, ~28,6 Schaden, 3 kg, ~500 m wirksam, größere Gesamtmunition im Magazinvorrat.
+- Galil: ~329 Brust-DPS (rund 8 % mehr), ~30,8 Schaden, 3,95 kg, ~400 m wirksam.
+- FAL: 60 Schaden pro Treffer, vollautomatisch; anfangs nur 10er- und 20er-Magazine, das 30er kommt später.
+- Mosin Nagant: Zwei-Schuss-Kill auf den Rumpf wie MK22 und SV-98, aber deutlich günstiger.
+- SV-98: Kopftreffer tötet mit einem Schuss, Rumpf zwei Schüsse auch durch Panzerung Stufe 2; etwa doppelte nutzbare Reichweite der Mosin.
+- SVD: 55 Schaden, ~480 Schuss/min halbautomatisch, 1,3× Rumpf-Faktor, 10-Schuss-Magazin – verzeihender als jeder Repetierer.
+- MK22: 60 Grundschaden, ~1.000 m wirksam.
+- AMR 50: .50 BMG, 107 Grundschaden, ~2.000 m wirksam – die einzige echte Anti-Materiel-Option.
+
+**Fahrzeugwerte (Community-Angaben):**
+- Kodiak: bestes Einsteigerfahrzeug, keine Freischaltung, 4 Sitze, 154 km/h, 12 Fächer Kofferraum plus kleine Ladefläche, ~400 HP.
+- Kodiak [Pickup]: 6 Sitze, 154 km/h, ab Driver 10.
+- Humvee: ~95 % weniger Schaden durch Handfeuerwaffen, ~500 HP, dafür nur 113 km/h.
+- URAL: 79 km/h, ~700 HP – Logistikfahrzeug, kein Personentransport.

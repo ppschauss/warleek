@@ -7,9 +7,9 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Eines von drei Sturmgewehren, die von Anfang an ohne Freischaltung und ohne Kosten bereitstehen. Die drei Startgewehre sind praktisch gleichwertig: gleiche Klasse, gleiches Kaliber, kaum spürbare Unterschiede.\nAnwendung: die ersten Runden, solange jeder Tod noch Geld kostet, das du nicht hast. Sobald du die T-21 für $600 oder die AK-74 bezahlen kannst, gibt es keinen Grund mehr, dabei zu bleiben.",
         "felder": {
-            "freischaltung": "Startwaffe",
+            "freischaltung": "Startwaffe, keine Gebühr",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         }
@@ -22,9 +22,9 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Bullpup-Startgewehr, wie die beiden anderen Startwaffen ohne Freischaltung und ohne Kaufpreis. Kürzer gebaut, was in Gebäuden angenehm ist, sonst ohne nennenswerten Unterschied zur M17S.\nAnwendung: Einstieg. Nimm sie, probier die anderen beiden aus, und leg dein erstes Geld in Munition und Verbandszeug statt in eine teurere Waffe.",
         "felder": {
-            "freischaltung": "Startwaffe",
+            "freischaltung": "Startwaffe, keine Gebühr",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         }
@@ -37,9 +37,9 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das dritte Startgewehr, ebenfalls Bullpup und ebenfalls kostenlos. Wer zwischen den dreien hin- und herprobiert, merkt vor allem Unterschiede im Anblick, nicht in der Wirkung.\nAnwendung: dieselbe wie bei den anderen Startwaffen – die Zeit überbrücken, bis das Konto eine bessere Waffe pro Leben trägt.",
         "felder": {
-            "freischaltung": "Startwaffe",
+            "freischaltung": "Startwaffe, keine Gebühr",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         }
@@ -52,10 +52,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Die erste Waffe, die Geld kostet, und mit rund $600 pro Leben die günstigste Verbesserung gegenüber den Startgewehren. Eine Freischaltung braucht sie nicht.\nAnwendung: die Brücke zwischen Startwaffe und AK-74. Solange du oft stirbst, ist sie die richtige Wahl – sechshundert Dollar pro Leben verzeiht das Konto, sechstausend nicht.",
         "felder": {
             "preis": "600",
-            "freischaltung": "ab Start kaufbar",
+            "freischaltung": "ohne Stufe kaufbar",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         }
@@ -68,10 +68,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das Arbeitstier der Assault-Linie. Freigeschaltet mit Assault 3 gegen eine einmalige Gebühr von rund $10.000, danach rund $1.600 pro Leben. Community-Werte nennen etwa 305 Brust-DPS, rund 500 m wirksame Reichweite und mit 3 kg ein geringeres Gewicht als die Galil – dafür trägt sie insgesamt mehr Munition.\nAnwendung: die Waffe, mit der die meisten am längsten fahren. Zuverlässig, berechenbar im Rückstoß und billig genug, um sie an einem Abend zehnmal zu verlieren.",
         "felder": {
             "preis": "1600",
             "freischaltung": "Assault 3",
+            "freischaltkosten": "10000",
             "kaliber": "5,45 × 39 mm",
             "rolle": "Sturmgewehr"
         }
@@ -84,10 +85,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Freigeschaltet mit Assault 10 gegen rund $35.000, Kaufpreis rund $2.200 pro Leben. Sie trifft härter als die AK-74 – Community-Werte nennen etwa 329 Brust-DPS und 30,8 Schaden pro Treffer, also rund 8 % mehr – kostet dafür Gewicht (3,95 kg), Magazininhalt und Reichweite (etwa 400 m statt 500 m).\nAnwendung: wenn dir Wirkung pro Treffer wichtiger ist als Nachschubreichweite und du auf mittlere Entfernung kämpfst. Wer berechenbaren Rückstoß und volle Taschen will, bleibt bei der AK-74.",
         "felder": {
             "preis": "2200",
             "freischaltung": "Assault 10",
+            "freischaltkosten": "35000",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         }
@@ -100,10 +102,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Assault 20, einmalig rund $100.000, danach rund $2.800 pro Leben. Ab hier wird die Sturmgewehr-Linie spürbar besser, ohne dass das Konto gleich bluten muss.\nAnwendung: der solide Schritt vor der FAL. Wenn du die $100.000 für die Freischaltung übrig hast und dein durchschnittliches Leben mehr einbringt als $2.800, lohnt sie sich; sonst wartest du.",
         "felder": {
             "preis": "2800",
             "freischaltung": "Assault 20",
+            "freischaltkosten": "100000",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         }
@@ -116,10 +119,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das Ende der Assault-Linie: Assault 35, einmalig rund $200.000, danach rund $6.500 pro Leben. Mit 60 Schaden pro Treffer und Vollautomatik das schnellste Sturmgewehr im Spiel. Anfangs gibt es sie nur mit 10er- und 20er-Magazinen; das 30er kommt erst mit weiterem Fortschritt.\nAnwendung: erst, wenn dein Konto zehn Tode am Stück verträgt. $6.500 pro Leben sind bei einem schlechten Abend schnell $50.000 – rechne vorher nach, was ein durchschnittliches Leben bei dir einbringt.",
         "felder": {
             "preis": "6500",
             "freischaltung": "Assault 35",
+            "freischaltkosten": "200000",
             "kaliber": ".308 Winchester",
             "rolle": "Sturmgewehr"
         }
@@ -132,10 +136,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Schrotflinte für rund $400 pro Leben, ohne Freischaltung. Die billigste Waffe im Katalog, die auf kurze Distanz etwas ausrichtet.\nAnwendung: Gebäude, Bunker, Grabenkämpfe – überall dort, wo man den Gegner ohnehin erst auf zehn Metern sieht. Auf offenem Gelände trägt sie nichts bei.",
         "felder": {
             "preis": "400",
-            "freischaltung": "ab Start kaufbar",
+            "freischaltung": "ohne Stufe kaufbar",
             "kaliber": "12 Gauge",
             "rolle": "Schrotflinte"
         }
@@ -148,10 +152,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Maschinenpistole für rund $900 pro Leben, ebenfalls ohne Freischaltung zu haben. Leicht, schnell im Anschlag, dafür auf Entfernung wirkungslos.\nAnwendung: die günstige Zweitwaffe für alle, die viel in Deckung arbeiten – Sanitäter, Bauleute, Fahrer. Wer ohnehin selten über fünfzig Meter schießt, spart hier viel Geld.",
         "felder": {
             "preis": "900",
-            "freischaltung": "ab Start kaufbar",
+            "freischaltung": "ohne Stufe kaufbar",
             "kaliber": "9 × 19 mm",
             "rolle": "Maschinenpistole"
         }
@@ -164,10 +168,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Erste Maschinenpistole der Medic-Linie: Medic 4, einmalig rund $25.000, danach rund $1.200 pro Leben. Die Medic-Stufen steigen durch Heilen und Wiederbeleben, nicht durch Kills – sie kommt also nebenbei.\nAnwendung: die Standardwaffe für Sanitäter. Kurz genug, um beim Aufstellen eines Gefallenen nicht im Weg zu sein, und billig genug, um sie im Gefecht nicht zu vermissen.",
         "felder": {
             "preis": "1200",
             "freischaltung": "Medic 4",
+            "freischaltkosten": "25000",
             "kaliber": "9 × 19 mm",
             "rolle": "Maschinenpistole"
         }
@@ -180,10 +185,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Schrotflinte der Support-Linie: Support 10, einmalig rund $50.000, danach rund $1.200 pro Leben. Support steigt durch Bauen, Reparieren und schwere Waffen.\nAnwendung: für alle, die eine Stellung halten und Zugänge decken. In einem Bunker oder hinter einer Tür ist sie jeder Präzisionswaffe überlegen.",
         "felder": {
             "preis": "1200",
             "freischaltung": "Support 10",
+            "freischaltkosten": "50000",
             "kaliber": "12 Gauge",
             "rolle": "Schrotflinte"
         }
@@ -196,10 +202,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Medic 15, einmalig rund $75.000, danach rund $1.500 pro Leben. Der ruhigere, kontrollierbarere Schritt nach der PP-19.\nAnwendung: Sanitäter, die häufig in Gebäuden arbeiten und dort auch mal einen Zweikampf gewinnen müssen. Der Aufpreis gegenüber der PP-19 ist gering, der Unterschied im Rückstoß spürbar.",
         "felder": {
             "preis": "1500",
             "freischaltung": "Medic 15",
+            "freischaltkosten": "75000",
             "kaliber": "9 × 19 mm",
             "rolle": "Maschinenpistole"
         }
@@ -212,10 +219,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Ende der Medic-Linie: Medic 35, einmalig rund $150.000, danach rund $2.600 pro Leben. Größeres Kaliber, entsprechend mehr Wirkung pro Treffer.\nAnwendung: für Sanitäter, die weit vorne arbeiten und dort regelmäßig selbst kämpfen. Wer hinter der Deckung bleibt, wo ein Sanitäter hingehört, braucht sie nicht.",
         "felder": {
             "preis": "2600",
             "freischaltung": "Medic 35",
+            "freischaltkosten": "150000",
             "kaliber": ".45 ACP",
             "rolle": "Maschinenpistole"
         }
@@ -228,10 +236,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das Einsteiger-Präzisionsgewehr: rund $1.100 pro Leben, keine Freischaltung nötig.\nAnwendung: um Ballistik zu lernen, ohne Geld zu verbrennen. Kugelfall und Flugzeit sind dieselben wie bei den teuren Gewehren – wer damit nicht trifft, trifft mit einer Mosin auch nicht.",
         "felder": {
             "preis": "1100",
-            "freischaltung": "ab Start kaufbar",
+            "freischaltung": "ohne Stufe kaufbar",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Marksman-Gewehr"
         }
@@ -244,28 +252,13 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Recon 5, einmalig rund $25.000, danach rund $2.400 pro Leben. Halbautomatisch, also schnellere Folgeschüsse als jeder Repetierer.\nAnwendung: der Übergang vom Scout Rifle zum richtigen Präzisionsgewehr. Gut für mittlere Entfernungen, auf denen ein zweiter Schuss wichtiger ist als der perfekte erste.",
         "felder": {
             "preis": "2400",
             "freischaltung": "Recon 5",
+            "freischaltkosten": "25000",
             "kaliber": "7,62 × 39 mm",
             "rolle": "Marksman-Gewehr"
-        }
-    },
-    {
-        "slug": "wardogs-m249-saw",
-        "title": "M249 SAW",
-        "typ": "waffe",
-        "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
-        ],
-        "geprueft": "nein",
-        "text": "",
-        "felder": {
-            "preis": "3200",
-            "freischaltung": "Support 15",
-            "kaliber": "5,56 × 45 mm",
-            "rolle": "Leichtes Maschinengewehr"
         }
     },
     {
@@ -276,10 +269,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Recon 10, einmalig rund $50.000, danach rund $4.500 pro Leben. Nach Community-Werten braucht sie für einen Rumpftreffer-Kill genauso zwei Schüsse wie die deutlich teureren MK22 und SV-98 – für erheblich weniger Geld.\nAnwendung: das beste Preis-Wirkungs-Verhältnis unter den Repetierern. Für geduldige Schützen, die auf eine Sichtlinie warten, statt Ziele zu jagen.",
         "felder": {
             "preis": "4500",
             "freischaltung": "Recon 10",
+            "freischaltkosten": "50000",
             "kaliber": "7,62 × 54 mm",
             "rolle": "Scharfschützengewehr"
         }
@@ -292,28 +286,13 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Recon 12, einmalig rund $50.000, danach rund $4.800 pro Leben. Halbautomatisch mit rund 480 Schuss pro Minute, 55 Schaden, 1,3-fachem Rumpf-Faktor und 10-Schuss-Magazin – verzeihender als jeder Repetierer.\nAnwendung: wenn du auf mittlere Entfernung in einem laufenden Gefecht arbeitest und der zweite Schuss sofort sitzen muss. Für viele der beste Kompromiss aus Reichweite, Nachschussgeschwindigkeit und Fehlertoleranz.",
         "felder": {
             "preis": "4800",
             "freischaltung": "Recon 12",
+            "freischaltkosten": "50000",
             "kaliber": "7,62 × 54 mm",
             "rolle": "Scharfschützengewehr"
-        }
-    },
-    {
-        "slug": "wardogs-pkm",
-        "title": "PKM",
-        "typ": "waffe",
-        "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
-        ],
-        "geprueft": "nein",
-        "text": "",
-        "felder": {
-            "preis": "4500",
-            "freischaltung": "Support 30",
-            "kaliber": "7,62 × 54 mm",
-            "rolle": "Leichtes Maschinengewehr"
         }
     },
     {
@@ -324,10 +303,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Recon 19, einmalig rund $100.000, danach rund $5.200 pro Leben. Nach Community-Werten tötet ein Kopftreffer sofort, ein Rumpftreffer zweimal auch durch Panzerung der Stufe 2 – bei etwa doppelter nutzbarer Reichweite gegenüber der Mosin.\nAnwendung: das Allrounder-Scharfschützengewehr. Die $700 Aufpreis zur Mosin zahlen sich aus, sobald du regelmäßig über 400 m schießt.",
         "felder": {
             "preis": "5200",
             "freischaltung": "Recon 19",
+            "freischaltkosten": "100000",
             "kaliber": "7,62 × 54 mm",
             "rolle": "Scharfschützengewehr"
         }
@@ -340,10 +320,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Recon 25, einmalig rund $150.000, danach rund $6.400 pro Leben. 60 Grundschaden und rund 1.000 m wirksame Reichweite.\nAnwendung: für Positionen, von denen aus man ein ganzes Tal einsieht. Auf kürzeren Distanzen holt die günstigere SV-98 dasselbe Ergebnis.",
         "felder": {
             "preis": "6400",
             "freischaltung": "Recon 25",
+            "freischaltkosten": "150000",
             "kaliber": ".308 Winchester",
             "rolle": "Scharfschützengewehr"
         }
@@ -356,10 +337,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Recon 30, einmalig rund $125.000, danach rund $6.000 pro Leben. Präzisionsgewehr im .308-Kaliber.\nAnwendung: eine Alternative im oberen Recon-Bereich. Ob sie sich gegenüber MK22 und SV-98 lohnt, hängt an Werten, die wir nicht selbst nachgemessen haben – hier lohnt eigenes Ausprobieren besonders.",
         "felder": {
             "preis": "6000",
             "freischaltung": "Recon 30",
+            "freischaltkosten": "125000",
             "kaliber": ".308 Winchester",
             "rolle": "Scharfschützengewehr"
         }
@@ -372,12 +354,47 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das Ende der Recon-Linie: Recon 35, einmalig rund $200.000, danach rund $8.800 pro Leben. Mit .50 BMG, rund 107 Grundschaden und etwa 2.000 m wirksamer Reichweite die einzige echte Anti-Materiel-Waffe.\nAnwendung: gegen Material statt gegen Infanterie – Stellungen, leichte Fahrzeuge, Ausrüstung auf große Entfernung. Als reine Scharfschützenwaffe gegen Personen ist sie für ihren Preis überdimensioniert.",
         "felder": {
             "preis": "8800",
             "freischaltung": "Recon 35",
+            "freischaltkosten": "200000",
             "kaliber": ".50 BMG",
             "rolle": "Anti-Materiel-Gewehr"
+        }
+    },
+    {
+        "slug": "wardogs-m249-saw",
+        "title": "M249 SAW",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "Support 15, einmalig rund $100.000, danach rund $3.200 pro Leben. Gurtgefüttertes leichtes Maschinengewehr.\nAnwendung: eine Sichtlinie zuhalten, während andere vorrücken. Auf einem Zweibein oder einer Mauerkante aufgelegt sinkt der Rückstoß deutlich – freihändig verschwendet man nur Munition.",
+        "felder": {
+            "preis": "3200",
+            "freischaltung": "Support 15",
+            "freischaltkosten": "100000",
+            "kaliber": "5,56 × 45 mm",
+            "rolle": "Leichtes Maschinengewehr"
+        }
+    },
+    {
+        "slug": "wardogs-pkm",
+        "title": "PKM",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "Support 30, einmalig rund $150.000, danach rund $4.500 pro Leben. Größeres Kaliber als die M249, entsprechend mehr Wirkung und mehr Rückstoß.\nAnwendung: feste Stellungen und Zufahrten. Wer damit in Bewegung kämpft, zahlt Gewicht und Rückstoß, ohne den Vorteil zu nutzen.",
+        "felder": {
+            "preis": "4500",
+            "freischaltung": "Support 30",
+            "freischaltkosten": "150000",
+            "kaliber": "7,62 × 54 mm",
+            "rolle": "Leichtes Maschinengewehr"
         }
     },
     {
@@ -388,10 +405,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Die erste Pistole, freigeschaltet über das Konto-Level statt über einen Track. Für rund $200 pro Leben die billigste Zweitwaffe im Spiel.\nAnwendung: für den Moment, in dem das Gewehr leer ist und Nachladen zu lange dauert. Nimm eine mit – sie kostet fast nichts und rettet gelegentlich ein Gefecht.",
         "felder": {
             "preis": "200",
             "freischaltung": "Wardog 1",
+            "freischaltkosten": "5000",
             "kaliber": "9 × 19 mm",
             "rolle": "Pistole"
         }
@@ -404,10 +422,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Revolver mit großem Kaliber, freigeschaltet mit Wardog 18 gegen rund $15.000, danach rund $250 pro Leben.\nAnwendung: auf sehr kurze Distanz wirkungsvoller als die GGX 17, dafür mit wenigen Schuss. Eine Frage des Geschmacks, keine der Notwendigkeit.",
         "felder": {
             "preis": "250",
             "freischaltung": "Wardog 18",
+            "freischaltkosten": "15000",
             "kaliber": ".45 Colt",
             "rolle": "Pistole"
         }
@@ -420,10 +439,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Klassische Selbstladepistole, Wardog 40 gegen rund $25.000, danach rund $300 pro Leben.\nAnwendung: die solide Mitte zwischen GGX 17 und Deagle. Mehr Wirkung pro Treffer als die 9-mm-Pistolen, ohne deren Magazingröße völlig aufzugeben.",
         "felder": {
             "preis": "300",
             "freischaltung": "Wardog 40",
+            "freischaltkosten": "25000",
             "kaliber": ".45 ACP",
             "rolle": "Pistole"
         }
@@ -436,10 +456,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Wardog 70 gegen rund $50.000, danach rund $800 pro Leben. Schnellfeuerpistole mit hoher Kadenz.\nAnwendung: als Notfallwaffe auf kürzeste Distanz. Für den Preis von vier GGX 17 muss man den Unterschied allerdings wollen.",
         "felder": {
             "preis": "800",
             "freischaltung": "Wardog 70",
+            "freischaltkosten": "50000",
             "kaliber": "9 × 19 mm",
             "rolle": "Pistole"
         }
@@ -452,10 +473,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Die teuerste Pistole: Wardog 85 gegen rund $75.000, danach rund $900 pro Leben.\nAnwendung: schwere Wirkung aus der Zweitwaffe. Sinnvoll vor allem für Leute, die viel mit Präzisionsgewehren arbeiten und im Nahbereich etwas brauchen, das sofort wirkt.",
         "felder": {
             "preis": "900",
             "freischaltung": "Wardog 85",
+            "freischaltkosten": "75000",
             "kaliber": ".50 AE",
             "rolle": "Pistole"
         }
@@ -468,10 +490,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Support 5, einmalig rund $30.000, danach rund $2.000 pro Leben. Die günstige Panzerabwehr und für viele Teams die wichtigste frühe Anschaffung überhaupt.\nAnwendung: gegen leichte und mittlere Fahrzeuge, gegen Stellungen und gegen Flugabwehr aus der Distanz. Entscheidend ist nicht die Waffe, sondern die Trefferzone – ins Heck wirkt jeder Werfer ein Vielfaches dessen, was er von vorn schafft.",
         "felder": {
             "preis": "2000",
             "freischaltung": "Support 5",
+            "freischaltkosten": "30000",
             "kaliber": "93 mm Rakete",
             "rolle": "Panzerabwehr"
         }
@@ -484,28 +507,13 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Support 20, einmalig rund $125.000, danach rund $2.600 pro Leben. Die eigentliche Panzerabwehrwaffe im Spiel.\nAnwendung: gegen Kampfpanzer, wenn du flankieren kannst. Nach Community-Messungen fällt ein Panzer bei Treffern ins Motordeck in etwa elf Sekunden, von der Seite in rund zweiundzwanzig und von vorn erst in gut dreiunddreißig.",
         "felder": {
             "preis": "2600",
             "freischaltung": "Support 20",
+            "freischaltkosten": "125000",
             "kaliber": "84 mm",
             "rolle": "Panzerabwehr"
-        }
-    },
-    {
-        "slug": "wardogs-compound-bow",
-        "title": "Compound Bow",
-        "typ": "waffe",
-        "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
-        ],
-        "geprueft": "nein",
-        "text": "",
-        "felder": {
-            "preis": "800",
-            "freischaltung": "Recon 17",
-            "kaliber": "Pfeile",
-            "rolle": "Lautlose Waffe"
         }
     },
     {
@@ -516,12 +524,30 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Support 35, einmalig rund $200.000, danach rund $6.000 pro Leben. Mehrschüssiger Granatwerfer.\nAnwendung: gegen Infanterie in Deckung und gegen Gruppen in engen Stellungen. Teuer genug, dass man ihn gezielt für eine bestimmte Lage kauft, nicht als Standardausrüstung.",
         "felder": {
             "preis": "6000",
             "freischaltung": "Support 35",
+            "freischaltkosten": "200000",
             "kaliber": "40 mm",
             "rolle": "Granatwerfer"
+        }
+    },
+    {
+        "slug": "wardogs-compound-bow",
+        "title": "Compound Bow",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "Recon 17, einmalig rund $75.000, danach rund $800 pro Leben. Lautlos, ohne Mündungsfeuer.\nAnwendung: für Späher, die nicht entdeckt werden wollen. In einem Spiel, in dem ein Schuss die eigene Position verrät, ist Lautlosigkeit ein echter Vorteil – die Flugbahn verlangt allerdings Übung.",
+        "felder": {
+            "preis": "800",
+            "freischaltung": "Recon 17",
+            "freischaltkosten": "75000",
+            "kaliber": "Pfeile",
+            "rolle": "Lautlose Waffe"
         }
     },
     {
@@ -532,10 +558,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Der Lern- und Taxi-Helikopter: rund $6.250 pro Stück, sechs Plätze, rund 350 km/h.\nAnwendung: volle Kabinen an den Rand der Kontrollzone fliegen. Ein Pilot, der nichts anderes tut, bewegt mehr Körper pro Minute als jede andere Rolle – und Körper in der Zone sind die Währung, in der Wardogs zahlt. Zum Üben gibt es ihn auf dem Schießstand kostenlos.",
         "felder": {
             "preis": "6250",
-            "freischaltung": "Pilot",
+            "freischaltung": "Pilot-Linie",
             "sitze": "6",
             "tempo": "350",
             "rolle": "Transporthelikopter"
@@ -549,10 +575,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Pilot 4, einmalig rund $50.000, danach rund $7.000 pro Stück. Zwei Plätze, rund 350 km/h, Miniguns.\nAnwendung: Bodenunterstützung gegen Infanterie. Gegen Panzer richtet er wenig aus, und gegen Flugabwehr ist er so verwundbar wie jeder andere Helikopter – tief bleiben, Gelände nutzen.",
         "felder": {
             "preis": "7000",
-            "freischaltung": "Pilot",
+            "freischaltung": "Pilot 4",
+            "freischaltkosten": "50000",
             "sitze": "2",
             "tempo": "350",
             "rolle": "Kampfhelikopter"
@@ -566,10 +593,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Pilot 20, einmalig rund $250.000, danach rund $12.500 pro Stück. Zwei Plätze, rund 350 km/h, Raketen.\nAnwendung: gegen Fahrzeuge und feste Stellungen. Die Freischaltgebühr ist der eigentliche Brocken – überleg vorher, ob dein Team überhaupt Ziele hat, für die sich das lohnt.",
         "felder": {
             "preis": "12500",
-            "freischaltung": "Pilot",
+            "freischaltung": "Pilot 20",
+            "freischaltkosten": "250000",
             "sitze": "2",
             "tempo": "350",
             "rolle": "Kampfhelikopter"
@@ -583,10 +611,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Der große Transporter: rund $7.400 pro Stück, dreizehn Plätze, rund 445 km/h.\nAnwendung: ein ganzer Zug auf einmal. Wenn dein Team gesammelt an einen Punkt soll, bewegt nichts mehr Leute in kürzerer Zeit. Absetzen hinter dem Höhenzug, nicht mitten in der Zone.",
         "felder": {
             "preis": "7400",
-            "freischaltung": "Pilot",
+            "freischaltung": "Pilot-Linie",
             "sitze": "13",
             "tempo": "445",
             "rolle": "Transporthelikopter"
@@ -600,10 +628,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Pilot 25, einmalig rund $75.000, danach rund $8.000 pro Stück. Wie der normale Lakota, zusätzlich mit Miniguns.\nAnwendung: Transport, der sich beim Absetzen selbst decken kann. Der Aufpreis von rund $600 pro Stück ist gering; die Freischaltung auf Pilot 25 ist der eigentliche Preis.",
         "felder": {
             "preis": "8000",
-            "freischaltung": "Pilot",
+            "freischaltung": "Pilot 25",
+            "freischaltkosten": "75000",
             "sitze": "13",
             "tempo": "445",
             "rolle": "Transporthelikopter mit Bewaffnung"
@@ -617,10 +646,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Der teuerste Helikopter: Pilot 35, einmalig rund $500.000, danach rund $18.000 pro Stück. Zwei Plätze, rund 400 km/h.\nAnwendung: schwerer Kampfhubschrauber gegen Panzer und Stellungen. Bei diesem Preis ist jeder Abschuss durch eine Flugabwehrstellung ein Abend Arbeit – erst fliegen, wenn du weißt, wo der Gegner seine Talons stehen hat.",
         "felder": {
             "preis": "18000",
-            "freischaltung": "Pilot",
+            "freischaltung": "Pilot 35",
+            "freischaltkosten": "500000",
             "sitze": "2",
             "tempo": "400",
             "rolle": "Kampfhelikopter"
@@ -634,9 +664,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund $10.000 pro Stück, zwei Plätze, rund 65 km/h. Fahrbare Flugabwehr.\nAnwendung: der Vorteil gegenüber gebauter Flugabwehr ist die Beweglichkeit – er steht dort, wo gerade geflogen wird. Der Nachteil: Er ist ein Fahrzeug und damit selbst ein Ziel für jeden Werfer.",
         "felder": {
             "preis": "10000",
+            "freischaltung": "Driver-Linie",
             "sitze": "2",
             "tempo": "65",
             "rolle": "Flugabwehrpanzer"
@@ -650,10 +681,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Der späteste Freischaltung im Spiel: Career 90, einmalig rund $500.000, danach rund $8.000 pro Stück. Drei Plätze, rund 65 km/h. In Season 1 von Career 55 auf 90 und von $400.000 auf $500.000 angehoben.\nAnwendung: Artillerie auf Distanz, gegen Stellungen und FOBs. Wirkt nur mit jemandem, der Ziele markiert – ohne Aufklärung schießt man auf Landschaft.",
         "felder": {
             "preis": "8000",
             "freischaltung": "Career 90",
+            "freischaltkosten": "500000",
             "sitze": "3",
             "tempo": "65",
             "rolle": "Artilleriepanzer"
@@ -667,10 +699,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Der Kampfpanzer: Driver 35, einmalig rund $500.000, danach rund $14.000 pro Stück. Drei Plätze, rund 65 km/h.\nAnwendung: Gelände halten und Infanterie binden. Nie allein fahren – ein Panzer ohne Begleitung ist ein Ziel mit Fahrgestell, und sein Motordeck am Heck fällt in rund elf Sekunden.",
         "felder": {
             "preis": "14000",
-            "freischaltung": "Stufe 35",
+            "freischaltung": "Driver 35",
+            "freischaltkosten": "500000",
             "sitze": "3",
             "tempo": "65",
             "rolle": "Kampfpanzer"
@@ -684,9 +717,9 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das Spawn-Fahrzeug. Es steht ab etwa 20 Teampunkten im Hauptlager bereit und kostet nichts.\nAnwendung: nach vorn fahren, in Deckung abstellen, stehen lassen – dann können Teamkollegen darauf spawnen und erscheinen im Fahrzeug statt daneben. Wer ihn fährt, bekommt Cash und Erfahrung für jeden Spawn. Die Radarschüssel auf dem Dach lässt sich abschießen und nimmt ihm die Funktion, ohne ihn zu zerstören.",
         "felder": {
-            "freischaltung": "ab 20 Punkten im Hauptlager",
+            "freischaltung": "ab ca. 20 Teampunkten im Hauptlager",
             "rolle": "Spawn-Fahrzeug"
         }
     },
@@ -698,9 +731,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das billigste Fahrzeug: rund $500 pro Stück, zwei Plätze, rund 75 km/h, keine Freischaltung.\nAnwendung: allein von A nach B kommen. Fracht trägt er nicht – wer damit zum Händler fährt, um Paletten zu holen, fährt umsonst.",
         "felder": {
             "preis": "500",
+            "freischaltung": "ohne Stufe kaufbar",
             "sitze": "2",
             "tempo": "75",
             "rolle": "Leichtes Fahrzeug, keine Fracht"
@@ -714,10 +748,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Driver 8, rund $1.500 pro Stück, drei Plätze, rund 130 km/h.\nAnwendung: schnell und wendig, gut um allein oder zu dritt Strecke zu machen. Wie der Bobcat trägt er keine Fracht und bietet keinen Schutz.",
         "felder": {
             "preis": "1500",
-            "freischaltung": "Stufe 8",
+            "freischaltung": "Driver 8",
             "sitze": "3",
             "tempo": "130",
             "rolle": "Leichtes Fahrzeug, keine Fracht"
@@ -731,9 +765,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das beste Einsteigerfahrzeug: rund $2.500 pro Stück, keine Freischaltung, vier Plätze und mit rund 154 km/h das schnellste Gefährt auf Rädern. Community-Angaben nennen einen Kofferraum mit zwölf Fächern und eine kleine Ladefläche für eine Kiste, bei rund 400 Trefferpunkten.\nAnwendung: der Allrounder für die ersten Stunden. Schnell genug für lange Wege, groß genug für Kisten, billig genug, um ihn zu verlieren.",
         "felder": {
             "preis": "2500",
+            "freischaltung": "ohne Stufe kaufbar",
             "sitze": "4",
             "tempo": "154",
             "rolle": "Transporter für Kisten"
@@ -747,10 +782,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Driver 6, rund $3.750 pro Stück, fünf Plätze, rund 154 km/h, mit aufgesetztem M249.\nAnwendung: Transport, der sich wehren kann. Wichtig: Die Bewaffnung erhöht die Ladekapazität **nicht** – du bezahlst für Feuerkraft und einen Sitzplatz, nicht für Fracht.",
         "felder": {
             "preis": "3750",
-            "freischaltung": "Stufe 6",
+            "freischaltung": "Driver 6",
             "sitze": "5",
             "tempo": "154",
             "rolle": "Transporter mit Bewaffnung"
@@ -764,10 +799,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Driver 10, rund $3.000 pro Stück, sechs Plätze, rund 154 km/h.\nAnwendung: das günstigste Fahrzeug pro Sitzplatz – ein ganzes Squad für $500 je Person, und das mit dem schnellsten Rad-Tempo im Spiel. Kisten nimmt es ebenfalls mit.",
         "felder": {
             "preis": "3000",
-            "freischaltung": "Stufe 10",
+            "freischaltung": "Driver 10",
             "sitze": "6",
             "tempo": "154",
             "rolle": "Transporter für Kisten"
@@ -781,10 +816,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Driver 15, einmalig rund $25.000, danach rund $3.000 pro Stück. Vier Plätze, rund 113 km/h. Community-Angaben nennen rund 500 Trefferpunkte und etwa 95 % weniger Schaden durch Handfeuerwaffen.\nAnwendung: wenn die Route umkämpft ist. Den Schutz bezahlst du mit Tempo – auf sicheren Wegen ist der Kodiak die bessere Wahl.",
         "felder": {
             "preis": "3000",
-            "freischaltung": "Stufe 15",
+            "freischaltung": "Driver 15",
+            "freischaltkosten": "25000",
             "sitze": "4",
             "tempo": "113",
             "rolle": "Transporter für Kisten"
@@ -798,10 +834,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Driver 20, rund $3.750 pro Stück, fünf Plätze, rund 113 km/h, gepanzert und bewaffnet.\nAnwendung: Begleitfahrzeug für Konvois. Wie bei allen Waffenvarianten gilt: mehr Feuerkraft, nicht mehr Ladung.",
         "felder": {
             "preis": "3750",
-            "freischaltung": "Stufe 20",
+            "freischaltung": "Driver 20",
             "sitze": "5",
             "tempo": "113",
             "rolle": "Transporter mit Bewaffnung"
@@ -815,10 +851,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Driver 30, rund $4.500 pro Stück, fünf Plätze, rund 113 km/h, mit Minigun.\nAnwendung: die schwerste Variante des Humvee. Sinnvoll, wenn dein Team dauerhaft dieselbe umkämpfte Strecke fährt und Begleitschutz braucht.",
         "felder": {
             "preis": "4500",
-            "freischaltung": "Stufe 30",
+            "freischaltung": "Driver 30",
             "sitze": "5",
             "tempo": "113",
             "rolle": "Transporter mit Bewaffnung"
@@ -832,10 +868,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das Logistikfahrzeug: Driver 3, einmalig rund $35.000 (in Season 1 von $50.000 gesenkt), danach rund $5.000 pro Stück. Drei Plätze, rund 79 km/h, nach Community-Angaben rund 700 Trefferpunkte – und als einziges Fahrzeug ausgelegt für **volle Paletten**.\nAnwendung: Nachschub fahren. Eine Palette kostet rund $400 und bringt bei der Abgabe rund $2.500 – der Ural verdient sich damit schnell zurück. Für Personentransport ist er zu langsam und zu teuer.",
         "felder": {
             "preis": "5000",
             "freischaltung": "Driver 3",
+            "freischaltkosten": "35000",
             "sitze": "3",
             "tempo": "79",
             "rolle": "Logistik-LKW für volle Paletten"
@@ -849,10 +886,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Driver 18, rund $6.000 pro Stück. Gepanzerte Fassung des Ural, drei Plätze, rund 79 km/h.\nAnwendung: dieselbe Ladung auf gefährlicherer Route. Der Aufpreis von rund $1.000 ist billiger als eine verlorene Ladung samt Fahrzeug.",
         "felder": {
             "preis": "6000",
-            "freischaltung": "Stufe 18",
+            "freischaltung": "Driver 18",
             "sitze": "3",
             "tempo": "79",
             "rolle": "Gepanzerter Logistik-LKW"
@@ -866,10 +903,10 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Driver 25, rund $6.750 pro Stück, gepanzert und bewaffnet, drei Plätze, rund 79 km/h.\nAnwendung: Nachschub durch umkämpftes Gebiet, wenn niemand zum Begleiten da ist. Die Ladekapazität ist dieselbe wie beim normalen Ural.",
         "felder": {
             "preis": "6750",
-            "freischaltung": "Stufe 25",
+            "freischaltung": "Driver 25",
             "sitze": "3",
             "tempo": "79",
             "rolle": "Gepanzerter Logistik-LKW mit Bewaffnung"
@@ -883,7 +920,7 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Gebaut an einer FOB, rund 91 Build-Supplies, großer Hammer (Support 8).\nAnwendung: indirektes Feuer auf Stellungen, Gruppen und gegnerische FOBs. Er braucht keinen Sichtkontakt, sondern jemanden, der Ziele markiert – deshalb gehört er tief in die Basis hinter Deckung und nicht an den Rand. Ohne Ammo-Nachschub steht er still.",
         "felder": {
             "baukosten": "91",
             "freischaltung": "Support 8 (großer Hammer)",
@@ -898,7 +935,7 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Gebaut an einer FOB, rund 91 Build-Supplies, großer Hammer (Support 8).\nAnwendung: Fahrzeugabwehr aus der Stellung heraus. Gehört mit Blick auf die Zufahrt, nicht auf den Himmel – dafür sind Talon und CIWS da.",
         "felder": {
             "baukosten": "91",
             "freischaltung": "Support 8 (großer Hammer)",
@@ -913,7 +950,7 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Gebaut an einer FOB, rund 601 Build-Supplies, großer Hammer (Support 8). Nachladbare wärmesuchende Flugabwehrraketen.\nAnwendung: gegnerische Helikopter auf Entfernung zwingen, auszuweichen oder abzudrehen. Braucht freien Himmel, aber keinen freien Horizont – auf einer Kuppe ist er als Erstes weg. 601 Build-Supplies sind mehrere Logistikrunden: eine Teamentscheidung, kein Nebenbei-Bau.",
         "felder": {
             "baukosten": "601",
             "freischaltung": "Support 8 (großer Hammer)",
@@ -928,11 +965,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das teuerste Bauwerk nach dem Drill Rig: rund 901 Build-Supplies, großer Hammer (Support 8). Manuell bediente Schnellfeuerkanone, nach Community-Angaben 20 × 102 mm mit rund 60 Schaden pro Treffer.\nAnwendung: Anflugschneisen im Nahbereich sperren. Er bestraft Schweben, nicht Vorbeifliegen – und er muss **bedient** werden, sonst steht er nur herum. Erst bauen, wenn der Gegner tatsächlich mit Helikoptern arbeitet.",
         "felder": {
             "baukosten": "901",
             "freischaltung": "Support 8 (großer Hammer)",
-            "rolle": "Manuell bediente Flugabwehrkanone, 20 × 102 mm"
+            "rolle": "Manuell bediente Flugabwehrkanone"
         }
     },
     {
@@ -943,7 +980,7 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Lautsprecheranlage aus dem Support-Bereich.\nAnwendung: nach Community-Angaben zur akustischen Beeinflussung des Gegners gedacht. Zu Kosten und Wirkung liegen uns keine belastbaren Zahlen vor – hier lohnt eigenes Ausprobieren besonders.",
         "felder": {
             "freischaltung": "Support",
             "rolle": "Lautsprecher"
@@ -957,11 +994,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 5 Build-Supplies, kleiner Hammer – und **ohne FOB** baubar.\nAnwendung: vorgeschobener Beobachtungspunkt. Weil er keine Bauzone braucht, lässt er sich auch mitten in der Kontrollzone setzen.",
         "felder": {
             "baukosten": "5",
             "freischaltung": "kleiner Hammer",
-            "rolle": "Ohne FOB baubar"
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -972,11 +1009,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 5 Build-Supplies, kleiner Hammer, **ohne FOB** baubar.\nAnwendung: Wege sperren und Angreifer zwingen, den längeren Weg zu nehmen. Billigste Möglichkeit, eine Flanke zu verzögern.",
         "felder": {
             "baukosten": "5",
             "freischaltung": "kleiner Hammer",
-            "rolle": "Ohne FOB baubar"
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -987,11 +1024,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 10 Build-Supplies, kleiner Hammer, **ohne FOB** baubar.\nAnwendung: Deckung dort schaffen, wo keine ist – auf einem Dach, hinter einer Fensterbank, an einer Kante in der Zone. Deckung ist billiger als jedes Geschütz.",
         "felder": {
             "baukosten": "10",
             "freischaltung": "kleiner Hammer",
-            "rolle": "Ohne FOB baubar"
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1002,11 +1039,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 14 Build-Supplies, kleiner Hammer, **ohne FOB** baubar.\nAnwendung: Panzersperre für Zufahrten. Hält keine Kampfpanzer auf, zwingt aber leichte Fahrzeuge zum Ausweichen.",
         "felder": {
             "baukosten": "14",
             "freischaltung": "kleiner Hammer",
-            "rolle": "Ohne FOB baubar, gegen Fahrzeuge"
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1017,11 +1054,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 10 Build-Supplies, mittlerer Hammer, braucht eine FOB-Bauzone.\nAnwendung: schnelle gerade Deckung innerhalb der Basis. Gut, um eine Sichtlinie zu schließen, aus der jemand hineinsieht.",
         "felder": {
             "baukosten": "10",
             "freischaltung": "mittlerer Hammer",
-            "rolle": "Deckung, braucht FOB"
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1032,11 +1069,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 10 bis 14 Build-Supplies je nach Variante, mittlerer Hammer, braucht eine FOB.\nAnwendung: der Baustein für Wände. Statt gleichmäßig rundherum zu bauen, setzt man ihn gezielt dorthin, wo jemand hineinschauen kann.",
         "felder": {
             "baukosten": "12",
             "freischaltung": "mittlerer Hammer",
-            "rolle": "Deckung, braucht FOB (10–14 je nach Variante)"
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1047,11 +1084,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 14 Build-Supplies, mittlerer Hammer, braucht eine FOB.\nAnwendung: Zugang für die eigenen Leute, ohne die Wand zu unterbrechen. Wird regelmäßig vergessen zu schließen.",
         "felder": {
             "baukosten": "14",
             "freischaltung": "mittlerer Hammer",
-            "rolle": "Zugang, braucht FOB"
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1062,11 +1099,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 46 Build-Supplies, mittlerer Hammer, braucht eine FOB.\nAnwendung: hohe Deckung, die auch den Blick nimmt. Für den Preis eines Vanguard CIWS bekommt man rund zwanzig Wandsegmente – meist die bessere Investition, weil sie gegen alles hilft.",
         "felder": {
             "baukosten": "46",
             "freischaltung": "mittlerer Hammer",
-            "rolle": "Hohe Deckung, braucht FOB"
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1077,11 +1114,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 52 Build-Supplies, großer Hammer (Support 8), braucht eine FOB.\nAnwendung: Durchfahrt für Fahrzeuge. Ein Tor ist billiger als eine Mauer, die man später selbst wieder abreißt.",
         "felder": {
             "baukosten": "52",
-            "freischaltung": "großer Hammer",
-            "rolle": "Fahrzeugdurchfahrt, braucht FOB"
+            "freischaltung": "großer Hammer (Support 8)",
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1092,11 +1129,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 61 Build-Supplies, großer Hammer, braucht eine FOB.\nAnwendung: geschützte Feuerstellung. Nicht die ganze Besatzung in einen Bunker stellen – ein Mörsertreffer nimmt sonst alle auf einmal.",
         "felder": {
             "baukosten": "61",
-            "freischaltung": "großer Hammer",
-            "rolle": "Geschützte Stellung, braucht FOB"
+            "freischaltung": "großer Hammer (Support 8)",
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1107,11 +1144,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 61 Build-Supplies, großer Hammer, braucht eine FOB.\nAnwendung: Übersicht über das Umfeld der Basis. Lohnt nur, wenn tatsächlich jemand oben sitzt und markiert.",
         "felder": {
             "baukosten": "61",
-            "freischaltung": "großer Hammer",
-            "rolle": "Beobachtung, braucht FOB"
+            "freischaltung": "großer Hammer (Support 8)",
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1122,11 +1159,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 121 Build-Supplies, großer Hammer, braucht eine FOB und Fuel im Lager.\nAnwendung: Fahrzeuge betanken, ohne zum Hauptlager zurückzufahren. Sinnvoll, sobald dein Team dauerhaft mit Fahrzeugen arbeitet.",
         "felder": {
             "baukosten": "121",
-            "freischaltung": "großer Hammer",
-            "rolle": "Betankt Fahrzeuge, braucht FOB"
+            "freischaltung": "großer Hammer (Support 8)",
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1137,11 +1174,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Rund 121 Build-Supplies, großer Hammer, braucht eine FOB und Mechanical im Lager.\nAnwendung: beschädigte Fahrzeuge wieder fahrbereit machen. Ein geretteter L2A6 entspricht rund $14.000, die niemand neu bezahlen muss.",
         "felder": {
             "baukosten": "121",
-            "freischaltung": "großer Hammer",
-            "rolle": "Repariert Fahrzeuge, braucht FOB"
+            "freischaltung": "großer Hammer (Support 8)",
+            "rolle": "Bauwerk"
         }
     },
     {
@@ -1152,11 +1189,11 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein",
-        "text": "",
+        "text": "Das teuerste Bauwerk im Spiel: rund 1.351 Build-Supplies, großer Hammer, braucht eine FOB und Fuel.\nAnwendung: fördert Nachschub direkt an der Basis. Die Kosten entsprechen vielen Logistikrunden – das baut man, wenn eine Basis lange stehen soll, nicht als Erstes.",
         "felder": {
             "baukosten": "1351",
-            "freischaltung": "großer Hammer",
-            "rolle": "Fördert Nachschub, braucht FOB"
+            "freischaltung": "großer Hammer (Support 8)",
+            "rolle": "Bauwerk"
         }
     }
 ]

@@ -18,6 +18,7 @@ function warleek_item_felder() {
 	return array(
 		'preis'         => array( 'Preis', 'dollar' ),
 		'freischaltung' => array( 'Freischaltung', 'text' ),
+		'freischaltkosten' => array( 'Freischaltgebühr (einmalig)', 'dollar' ),
 		'kaliber'       => array( 'Kaliber', 'text' ),
 		'sitze'         => array( 'Sitzplätze', 'zahl' ),
 		'tempo'         => array( 'Höchstgeschwindigkeit', 'kmh' ),

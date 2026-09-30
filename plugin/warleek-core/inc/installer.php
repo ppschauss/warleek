@@ -335,16 +335,19 @@ function warleek_item_reihenfolge( array $items ) {
 	return $reihen;
 }
 
-/** Einleitungssatz und Querverweise je Eintrag. */
+/** Beschreibung, Datenblatt und Querverweise je Eintrag. */
 function warleek_item_inhalt( array $e ) {
-	$f     = $e['felder'];
-	$name  = $e['title'];
-	$rolle = $f['rolle'] ?? '';
-	$satz  = $rolle ? sprintf( '<p><strong>%s</strong> – %s in WARDOGS.', esc_html( $name ), esc_html( $rolle ) ) : sprintf( '<p><strong>%s</strong> in WARDOGS.', esc_html( $name ) );
-	if ( ! empty( $f['preis'] ) ) { $satz .= sprintf( ' Kostet %s pro Leben.', esc_html( warleek_item_wert( 'preis', $f['preis'] ) ) ); }
-	if ( ! empty( $f['baukosten'] ) ) { $satz .= sprintf( ' Kostet %s beim Bauen.', esc_html( warleek_item_wert( 'baukosten', $f['baukosten'] ) ) ); }
-	if ( ! empty( $f['freischaltung'] ) && 'Startwaffe' !== $f['freischaltung'] ) { $satz .= sprintf( ' Freigeschaltet mit: %s.', esc_html( $f['freischaltung'] ) ); }
-	$satz .= '</p>';
+	// Die Beschreibung steht in items.json und ist je Eintrag geschrieben –
+	// Freischaltung, Kosten und wofür man das Ding überhaupt nimmt. Fehlt sie,
+	// bleibt wenigstens ein Satz aus den Feldern übrig.
+	$text = trim( (string) ( $e['text'] ?? '' ) );
+	if ( '' !== $text ) {
+		$satz = warleek_md_to_html( $text, false );
+	} else {
+		$f     = $e['felder'];
+		$rolle = $f['rolle'] ?? '';
+		$satz  = $rolle ? sprintf( '<p><strong>%s</strong> – %s in WARDOGS.</p>', esc_html( $e['title'] ), esc_html( $rolle ) ) : sprintf( '<p><strong>%s</strong> in WARDOGS.</p>', esc_html( $e['title'] ) );
+	}
 
 	$guides = array(
 		'waffe'       => array( '/guides/wardogs-waffen-kaufen/' => 'Waffen kaufen: der sinnvolle Pfad', '/guides/wardogs-gewichtsklassen/' => 'Gewichtsklassen', '/guides/wardogs-zeroing/' => 'Zeroing und Ballistik' ),
@@ -373,6 +376,7 @@ function warleek_item_inhalt( array $e ) {
  */
 function warleek_step_items( $force = false ) {
 	$items = warleek_content_json( 'items' );
+	$media = (array) get_option( 'warleek_media_map', array() );
 	if ( ! $items ) { return array( 'ok' => true, 'msg' => 'Keine items.json gefunden – übersprungen.' ); }
 
 	$namen = array( 'waffe' => 'Waffen', 'fahrzeug' => 'Fahrzeuge', 'emplacement' => 'Emplacements', 'bauwerk' => 'Bauwerke' );
@@ -426,6 +430,13 @@ function warleek_step_items( $force = false ) {
 		}
 
 		wp_set_object_terms( $id, $e['typ'], 'item-typ' );
+
+		// Bild: zuerst ein eigenes (`item-<slug>`), sonst das Kategoriebild
+		// (`item-typ-<typ>`). Beides ist optional – ohne Datei bleibt der Eintrag bildlos,
+		// was besser ist als ein erfundenes Bild, das den Gegenstand nicht zeigt.
+		foreach ( array( 'item-' . $e['slug'], 'item-typ-' . $e['typ'] ) as $schluessel ) {
+			if ( ! empty( $media[ $schluessel ] ) ) { set_post_thumbnail( $id, (int) $media[ $schluessel ] ); break; }
+		}
 		foreach ( warleek_item_felder() as $key => $def ) {
 			$wert = (string) ( $e['felder'][ $key ] ?? '' );
 			if ( '' === $wert ) { delete_post_meta( $id, 'item_' . $key ); } else { update_post_meta( $id, 'item_' . $key, $wert ); }
