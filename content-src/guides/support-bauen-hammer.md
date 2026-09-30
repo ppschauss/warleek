@@ -8,6 +8,8 @@ image_alt: Soldat baut mit schwerem Hammer eine HESCO-Mauer in einer Forward Ope
 excerpt: Kleiner, mittlerer, großer Hammer – die drei Stufen entscheiden, was auf deiner Baustelle entsteht. Plus: was ein Bauwerk wirklich kostet.
 seo_title: Wardogs Support & Bauen – Guide auf Deutsch | Warleek
 seo_description: Hammer-Stufen, Baukosten und was sich zuerst lohnt: Support in Wardogs auf Deutsch erklärt, für Deutschland, Österreich und die Schweiz.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+geprueft: nein
 ---
 
 Bauen ist in Wardogs keine Nebenbeschäftigung, sondern die Art, wie ein Team Gelände in Besitz nimmt. Und es hängt an einem Gegenstand, den die meisten zu spät kaufen: dem Hammer.

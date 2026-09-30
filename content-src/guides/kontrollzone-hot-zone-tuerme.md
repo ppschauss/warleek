@@ -8,6 +8,8 @@ image_alt: Blick von oben ueber ein Industrietal in der Daemmerung mit vier Funk
 excerpt: Punkte gibt es für Körper in der Zone, nicht für Kills. Wie der Zähler tickt, was die Hot Zone verdoppelt und wozu der vierstellige Code dient.
 seo_title: Wardogs Kontrollzone & Hot Zone – Guide Deutsch | Warleek
 seo_description: Punkte, Hot Zone, vier Türme und der Code: So gewinnt dein Team Matches. Wardogs auf Deutsch für Deutschland, Österreich und die Schweiz.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026), Offizielle WARDOGS-Ankündigungen und Patch Notes bei Steam]
+geprueft: nein
 ---
 
 Wardogs sieht aus wie ein Shooter und wird gewertet wie ein Brettspiel. Wer das nicht trennt, spielt gut und verliert trotzdem.

@@ -53,6 +53,8 @@ foreach ( $files as $file ) {
 			'description' => (string) ( $meta['seo_description'] ?? ( $meta['excerpt'] ?? '' ) ),
 		),
 		'html'    => "\n" . warleek_md_to_html( $fm['body'] ) . "\n",
+		'quellen' => array_values( array_filter( (array) ( $meta['quellen'] ?? array() ) ) ),
+		'geprueft'=> (string) ( $meta['geprueft'] ?? '' ),
 	);
 
 	foreach ( array( 'title', 'excerpt' ) as $pflicht ) {

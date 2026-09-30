@@ -19,6 +19,7 @@ Wardogs-**Guide-Seite** **Warleek** (warleek.de): Block-Theme `theme/warleek` (n
 - In Patch-Note-Beschreibungen darf **kein englischer Originaltext** zitiert werden; ohne deutsche Kurzfassung steht dort ein fertiger deutscher Satz.
 - **Einwilligung:** `inc/consent.php` ist kein Deko-Banner. Die Seite setzt keine Cookies und lädt nichts von Dritten; das Banner gilt allein für eingebettete Videos (`[warleek_video id="…"]`), die bis zur Zustimmung nur eine eigene Vorschau zeigen. Entscheidung liegt im localStorage, nicht in einem Cookie. Texte und Schalter stehen in den Optionen.
 - Impressum und Datenschutz enthalten echte Betreiberdaten (Patrick Pascal Schauß, Karben) – Änderungen in `pages.json`, nicht im Template.
+- **Jeder Guide trägt seine Herkunft.** Kopfblock-Felder `quellen: [...]` und `geprueft:` (Datum/Beschreibung oder `nein`); `warleek_guide_herkunft()` baut daraus den Kasten am Textende. Ohne Angabe steht dort „nicht nachgeprüft" – die vorsichtigere Aussage. Niemals behaupten, etwas sei im Spiel geprüft, wenn es das nicht ist: Die About-us-Seite hat genau das einmal getan und musste korrigiert werden.
 - Spielzahlen gehören in `docs/research/wardogs-facts.md`, bevor sie in einen Guide wandern – mit Quelle und Vermerk, wenn Quellen sich widersprechen.
 - Übersetzungs- und Updater-Tests fangen HTTP über `pre_http_request` ab – sie kosten nichts und dürfen nie echte Anfragen stellen.
 - Im Installer niemals `echo` verwenden – Ausgabe zerstört die JSON-Antwort. Stattdessen `warleek_log()`; jeder Schritt läuft ohnehin in einem Output-Buffer.

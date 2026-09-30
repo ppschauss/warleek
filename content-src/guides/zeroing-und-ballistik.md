@@ -8,6 +8,8 @@ image_alt: Nahaufnahme einer behandschuhten Hand, die den Hoehenverstellturm ein
 excerpt: Wardogs rechnet echten Kugelfall und echte Flugzeit. Wie du das Zielfernrohr einstellst, was Mündungsgeschwindigkeit bedeutet und wann du vorhalten musst.
 seo_title: Wardogs Zeroing & Ballistik erklärt (Deutsch) | Warleek
 seo_description: Kugelfall, Flugzeit und Zeroing in 100-Meter-Schritten: auf Distanz treffen. Deutsche Anleitung für Deutschland, Österreich und die Schweiz.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+geprueft: nein
 ---
 
 Wenn deine Schüsse auf Entfernung zu tief einschlagen, liegt das nicht an deiner Maus. Wardogs rechnet echte Ballistik: Kugeln fallen, und sie brauchen Zeit bis zum Ziel.

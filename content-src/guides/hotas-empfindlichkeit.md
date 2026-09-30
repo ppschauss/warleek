@@ -8,6 +8,8 @@ image_alt: Joystick und Schubhebel eines HOTAS-Aufbaus auf einem dunklen Schreib
 excerpt: Der Regler unter 1.0 nimmt dir nicht nur das Zappeln, sondern auch die maximale Drehrate. Warum das so ist, was stattdessen hilft – und wo sich zwei erfahrene Piloten offen widersprechen.
 seo_title: Wardogs HOTAS Empfindlichkeit & Kurven (Deutsch) | Warleek
 seo_description: Warum der Regler unter 1.0 Drehrate kostet, wann eine Deadzone nötig ist und wie eine Kurve hilft. Wardogs auf Deutsch für die DACH-Region.
+quellen: [Video-Guide von <a href="https://www.youtube.com/watch?v=wtRRZ8nPfFM" rel="nofollow noopener noreferrer">Sim Controls</a> (VKB Gladiator‚ Screenshots mit Zeitangabe im Text), Video-Guide von <a href="https://www.youtube.com/watch?v=IHcD8c_iqD0" rel="nofollow noopener noreferrer">Tote Torres</a> (Logitech G940‚ Screenshots mit Zeitangabe im Text)]
+geprueft: nein
 ---
 
 Wenn der Helikopter am Stick zappelt, ist der erste Griff immer derselbe: Empfindlichkeit runter. In Wardogs ist das die falsche Richtung – und der Grund dafür ist der interessanteste Teil dieses Guides.

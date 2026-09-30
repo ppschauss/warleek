@@ -8,6 +8,8 @@ image_alt: Zwei Ausruestungssaetze nebeneinander auf Beton: links leichte Weste 
 excerpt: Vier Stufen, die das Spiel nicht erklärt. In der schwersten gibt es keinen taktischen Sprint – und wer dort fällt, lässt sich nicht in Deckung ziehen.
 seo_title: Wardogs Gewichtsklassen – Loadout-Guide Deutsch | Warleek
 seo_description: Warum Weste, Werfer und Zubehör dein Tempo bestimmen und die schwerste Klasse den Sprint kostet. Wardogs auf Deutsch für Spieler in DACH.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+geprueft: nein
 ---
 
 Das Spiel sagt dir, was Dinge kosten. Es sagt dir nicht besonders deutlich, was sie **wiegen**. Dabei ist die Gewichtsklasse eine der Stellschrauben mit der größten Wirkung auf dein Überleben.

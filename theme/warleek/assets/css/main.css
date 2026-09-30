@@ -506,3 +506,16 @@ html.has-modal-open .wl-consent { display: none; }
 }
 
 .site-footer__appearance { margin-top: var(--wp--preset--spacing--40); padding-top: var(--wp--preset--spacing--30); border-top: var(--wl-border); }
+
+/* Herkunftskasten am Ende jedes Guides */
+.wl-herkunft {
+	margin-top: var(--wp--preset--spacing--50); padding: var(--wp--preset--spacing--30);
+	border: var(--wl-border); border-left: 3px solid var(--wp--preset--color--sand);
+	border-radius: var(--wl-radius); background: var(--wp--preset--color--surface);
+	font-size: 0.92rem; color: var(--wp--preset--color--steel);
+}
+.wl-herkunft h2 { font-size: 1rem !important; letter-spacing: 0.1em; margin: 0 0 0.6rem; color: var(--wp--preset--color--sand); }
+.wl-herkunft ul { margin: 0 0 0.8rem; padding-left: 1.1rem; }
+.wl-herkunft li { margin-bottom: 0.3rem; }
+.wl-herkunft p { margin: 0; }
+.wl-herkunft strong { color: var(--wp--preset--color--leek-light); }

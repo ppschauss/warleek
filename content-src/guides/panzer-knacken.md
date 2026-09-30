@@ -8,6 +8,8 @@ image_alt: Soldat mit Panzerabwehrwaffe zielt aus Truemmern heraus auf das rauch
 excerpt: Frontal schießen dauert dreimal so lange wie hinten. Welche Waffe wann, wo die Schwachstellen sitzen und wie du als Infanterist einen Panzer wirklich aufhältst.
 seo_title: Wardogs Panzer zerstören – Anleitung Deutsch | Warleek
 seo_description: Trefferzonen, MAAWS, RPG-7, C4 und AT-Minen: Wie Infanterie in Wardogs Panzer aufhält. Deutsche Anleitung für Spieler in der DACH-Region.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+geprueft: nein
 ---
 
 Ein Panzer in der Kontrollzone kippt ein Gefecht, bis ihn jemand ausschaltet. Die gute Nachricht: Das kann Infanterie. Die schlechte: nicht von vorn.

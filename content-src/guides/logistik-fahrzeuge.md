@@ -8,6 +8,8 @@ image_alt: Schwerer Nachschub-LKW mit verzurrten Paletten auf einer Bergstrasse 
 excerpt: Ural, Kodiak, Humvee oder Helikopter? Was wirklich Paletten trägt, was nur Kisten schafft – und warum die Waffenvariante nichts an der Ladung ändert.
 seo_title: Wardogs Logistik-Fahrzeuge im Vergleich (Deutsch) | Warleek
 seo_description: Ural, Kodiak, Humvee oder Helikopter: Was Paletten trägt, was kostet und wann sich welches lohnt. Deutscher Wardogs-Guide für die DACH-Region.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+geprueft: nein
 ---
 
 Die häufigste vergeudete Runde in der Logistik beginnt damit, dass jemand mit dem falschen Fahrzeug zum Händler fährt. Paletten passen nicht in jedes Auto, und ein Buggy trägt gar nichts.

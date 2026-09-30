@@ -8,6 +8,8 @@ image_alt: Dunkler Schreibtisch mit gruen beleuchteter Tastatur, Headset, Maus u
 excerpt: Nicht alles auf Niedrig. Welche Optionen Leistung kosten, ohne dir etwas zu zeigen – und welche du hochlassen solltest, weil sie Gegner sichtbar machen.
 seo_title: Wardogs beste Einstellungen (Deutsch) – mehr FPS | Warleek
 seo_description: Welche Grafikoptionen FPS kosten, welche Sichtbarkeit bringen, dazu DLSS, FSR und Input-Lag. Wardogs-Einstellungen auf Deutsch für DACH.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+geprueft: nein
 ---
 
 Der verbreitete Rat lautet „alles auf Niedrig". Der ist falsch. In einem Spiel, in dem du Gegner auf 400 Metern erkennen musst, kostet die falsche Sparmaßnahme mehr Runden, als sie Bilder pro Sekunde bringt.

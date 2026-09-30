@@ -341,3 +341,17 @@ Vier echte Fehler hat erst diese Messung gezeigt:
 - **CLS von 0,104 auf 0** auf der Guide-Übersicht. Die Verschiebung kam nicht vom Umschalter, sondern von zwei Schriftschnitten, die nicht vorgeladen wurden (Kartenüberschriften und Monoschrift). Lighthouse nennt die Ursache im Audit `layout-shifts` direkt.
 - Lighthouse mobil: Startseite Performance 98, Barrierefreiheit 100, SEO 100, CLS 0, LCP 2,3 s. Guide-Übersicht 94 / 100 / CLS 0.
 - Acht Testdateien grün.
+
+## Herkunft sichtbar machen – Version 2.8.0 (30.09.2026)
+
+Anlass war das Google-Spam-Update vom 24.09.2026. Beim Abgleich der Seite gegen die beschriebenen Muster fiel ein Widerspruch auf, der nichts mit Suchmaschinen zu tun hat: Auf `/about-us/` stand „**Selbst gespielt.** Jeder Ablauf in einem Guide ist im Spiel durchgegangen" – für die recherchierten Guides stimmte das nicht. Dazu im Hero: „keine KI-Textfabrik".
+
+Beides ist korrigiert, und die Seite sagt jetzt von sich aus, wie sie arbeitet:
+
+- **Herkunftskasten am Ende jedes Guides**, erzeugt aus `quellen` und `geprueft` im Kopfblock. Fehlt die Angabe, steht dort „Im Spiel nachgeprüft: nein" – der Standard ist die vorsichtigere Aussage, nicht die schmeichelhaftere.
+- **29 von 29 Guides** tragen den Kasten (geprüft per Abfrage über alle Beiträge). 27 als recherchiert gekennzeichnet, der HOTAS-Dual-Stick-Guide als selbst geprüft, die beiden anderen HOTAS-Guides mit den namentlich verlinkten Video-Quellen.
+- Quellenlinks im Kasten tragen `rel="nofollow noopener noreferrer"` wie alle externen Links.
+- Kontrast des neuen Kastens in allen zwölf Farbwelt-/Modus-Kombinationen geprüft: besteht überall, schwächster Wert 5,15:1.
+- Acht Testdateien grün.
+
+**Zur Einordnung des Updates selbst:** Es trifft laut Beobachtern vor allem „highly templated, programmatic" Seiten – eine Seite pro Vorwahl, pro Produktvariante. So ist Warleek nicht gebaut. Das Risiko liegt woanders: 22 Guides an zwei Tagen, geschrieben aus fremden Guide-Seiten, von denen einige selbst nach KI-Massenware aussehen. Dagegen hilft keine Formulierung, sondern nur eigene Spielpraxis – deshalb benennt der Kasten offen, wo sie fehlt.

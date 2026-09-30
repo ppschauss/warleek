@@ -8,6 +8,8 @@ image_alt: Geoeffnete Waffenkiste im Versorgungszelt mit aufgereihten Gewehren, 
 excerpt: Preise, Freischaltstufen und die Frage, die wirklich zählt: Verdient dein durchschnittliches Leben mehr, als dein Loadout kostet?
 seo_title: Wardogs Waffen & Preise – Guide auf Deutsch | Warleek
 seo_description: T-21, AK-74, Galil, M4 und FAL: Preise, Freischaltungen und die sinnvolle Kaufreihenfolge. Wardogs-Waffenguide auf Deutsch für DACH-Spieler.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+geprueft: nein
 ---
 
 Waffen sind in Wardogs keine Belohnung, sondern eine laufende Ausgabe. Du zahlst nicht einmal, du zahlst **bei jedem Leben**. Deshalb ist die richtige Waffe fast nie die beste, sondern die, die dein Konto verträgt.

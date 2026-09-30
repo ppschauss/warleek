@@ -8,6 +8,8 @@ image_alt: Blick aus dem offenen Cockpit eines leichten Helikopters, der tief ue
 excerpt: Die Standardeinstellung kämpft gegen dich. Welche Assistenten raus müssen, welche Tasten wohin gehören und warum du auf dem Schießstand anfängst.
 seo_title: Wardogs Helikopter fliegen – Guide auf Deutsch | Warleek
 seo_description: Maus und Tastatur, Flugassistenten aus, MH-6 als Lern-Heli: Helikopter sicher fliegen. Deutsche Anleitung für Spieler in DACH.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026), Video-Guide von <a href="https://www.youtube.com/watch?v=IHcD8c_iqD0" rel="nofollow noopener noreferrer">Tote Torres</a> (Logitech G940‚ Screenshots mit Zeitangabe im Text)]
+geprueft: nein
 ---
 
 Der häufigste Helikopter-Verlust in Wardogs passiert in den ersten dreißig Sekunden nach dem Kauf, am Hang neben dem Hauptlager. Das liegt nicht an mangelndem Talent, sondern an den Voreinstellungen.

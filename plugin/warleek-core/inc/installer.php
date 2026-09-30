@@ -216,6 +216,36 @@ function warleek_seed_pages( array $pages, array $media, array $site, $force = f
 }
 
 /* ------------------------------------------------------------ Guides */
+/**
+ * Herkunftskasten am Ende eines Guides.
+ *
+ * Steht bewusst in jedem Guide und wird aus den Daten erzeugt, nicht von Hand
+ * getippt: Wer eine Zahl liest, soll sehen, woher sie kommt und ob sie im Spiel
+ * nachgeprüft wurde. Ohne Angabe gilt „nicht nachgeprüft" – die vorsichtigere
+ * Aussage, nicht die schmeichelhaftere.
+ *
+ * @param array $g Guide-Datensatz (Schlüssel `quellen`, `geprueft`).
+ * @return string HTML
+ */
+function warleek_guide_herkunft( array $g ) {
+	$quellen  = array_filter( (array) ( $g['quellen'] ?? array() ) );
+	$geprueft = trim( (string) ( $g['geprueft'] ?? '' ) );
+	if ( ! $quellen && ! $geprueft ) { return ''; }
+
+	$zeilen = '';
+	foreach ( $quellen as $q ) { $zeilen .= '<li>' . wp_kses_post( $q ) . '</li>'; }
+
+	if ( '' === $geprueft || 'nein' === strtolower( $geprueft ) ) {
+		$pruef = '<p><strong>Im Spiel nachgeprüft:</strong> nein. Die Angaben stammen aus den genannten Quellen. Wenn dir etwas auffällt, das nicht stimmt, schreib uns – wir korrigieren es und schreiben dazu, was sich geändert hat.</p>';
+	} else {
+		$pruef = '<p><strong>Im Spiel nachgeprüft:</strong> ' . esc_html( $geprueft ) . '.</p>';
+	}
+
+	return "\n" . '<div class="wl-herkunft"><h2>Woher die Angaben stammen</h2>'
+		. ( $zeilen ? '<ul>' . $zeilen . '</ul>' : '' )
+		. $pruef . '</div>' . "\n";
+}
+
 function warleek_seed_guides( array $guides, array $media, array $site, $force = false ) {
 	foreach ( $site['themen'] as $slug => $t ) {
 		$term = term_exists( $slug, 'guide-thema' );
@@ -224,7 +254,7 @@ function warleek_seed_guides( array $guides, array $media, array $site, $force =
 	}
 	foreach ( $guides as $g ) {
 		// Bilder im Fließtext stehen als Asset-Schlüssel – hier werden URLs daraus.
-		$content = warleek_html_to_blocks( warleek_resolve_asset_src( $g['html'], $media ) );
+		$content = warleek_html_to_blocks( warleek_resolve_asset_src( $g['html'] . warleek_guide_herkunft( $g ), $media ) );
 		$id = warleek_upsert_post( array( 'post_title' => $g['title'], 'post_name' => $g['slug'], 'post_content' => $content, 'post_excerpt' => $g['excerpt'], 'menu_order' => (int) ( $g['order'] ?? 0 ) ), 'guide', 0, $force );
 		wp_set_object_terms( $id, $g['thema'], 'guide-thema' );
 		if ( ! empty( $g['image'] ) && ! empty( $media[ $g['image'] ] ) ) { set_post_thumbnail( $id, $media[ $g['image'] ] ); }

@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.7.0
+Stable tag: 2.8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.8.0 =
+* **Herkunftskasten in jedem Guide.** Am Ende steht jetzt, aus welchen Quellen die Angaben stammen und ob sie im Spiel nachgeprüft sind. Erzeugt wird er aus den Daten (`quellen`, `geprueft` im Kopfblock), nicht von Hand getippt – fehlt die Angabe, gilt „nicht nachgeprüft".
+* **About-us richtiggestellt.** Dort stand „Jeder Ablauf in einem Guide ist im Spiel durchgegangen". Das traf auf die recherchierten Guides nicht zu. Der Text beschreibt jetzt, wie die Guides wirklich entstehen.
+* 27 von 29 Guides sind als recherchiert gekennzeichnet, der HOTAS-Dual-Stick-Guide als selbst geprüft.
 
 = 2.7.0 =
 * **Hell/Dunkel-Modus** mit drei Einstellungen: System, Hell, Dunkel. Ohne Wahl folgt die Seite dem Betriebssystem.

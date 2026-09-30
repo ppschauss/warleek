@@ -8,6 +8,8 @@ image_alt: Nahaufnahme einer mechanischen Tastatur, bei der nur einzelne Tasten 
 excerpt: Lehnen beim Laufen, Magazin abwerfen, Munition im Schnellkauf, Rauch aus dem APC – ein Dutzend Handgriffe, die im Tutorial fehlen.
 seo_title: Wardogs Tastenbelegung & Kniffe (Deutsch) | Warleek
 seo_description: Lehnen, Magazin abwerfen, Schnellkauf, Zeroing-Tasten und Rauch aus dem APC: versteckte Mechaniken auf Deutsch erklärt, für DACH-Spieler.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+geprueft: nein
 ---
 
 Wardogs erklärt das Nötigste. Der Rest steht in keinem Tutorial und macht trotzdem den Unterschied zwischen umständlich und flüssig. Hier ist die Sammlung.

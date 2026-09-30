@@ -8,6 +8,8 @@ image_alt: Blick aus dem Cockpit eines leichten Helikopters, der in steiler Schr
 excerpt: Flugassistenten aus, Sichtfeld hoch, und dann die drei Bewegungen, die zählen: tief fliegen, Combat Orbit, schnelle Landung. Für alle, die am Stick sitzen statt an der Maus.
 seo_title: Wardogs mit HOTAS fliegen – Guide auf Deutsch | Warleek
 seo_description: Assistenten aus, Gieren führt, Combat Orbit und die schnelle Landung: Helikopter am Stick. Deutscher Wardogs-Guide für Spieler in DACH.
+quellen: [Video-Guide von <a href="https://www.youtube.com/watch?v=IHcD8c_iqD0" rel="nofollow noopener noreferrer">Tote Torres</a> (Logitech G940‚ Screenshots mit Zeitangabe im Text), Video-Guide von <a href="https://www.youtube.com/watch?v=wtRRZ8nPfFM" rel="nofollow noopener noreferrer">Sim Controls</a> (VKB Gladiator‚ Screenshots mit Zeitangabe im Text)]
+geprueft: nein
 ---
 
 Die Einstellungen sind das eine, das Fliegen das andere. Dieser Guide ist der zweite Teil: Wenn Empfindlichkeit, Deadzone und Kurven stehen – [Erklärung dazu hier](/guides/wardogs-hotas-empfindlichkeit/) –, geht es darum, wie man den Helikopter tatsächlich bewegt.

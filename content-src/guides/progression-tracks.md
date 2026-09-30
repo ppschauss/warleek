@@ -8,6 +8,8 @@ image_alt: Auf einer Holzkiste liegen Sturmgewehr, Sanitaetstasche, Fernglas, Ba
 excerpt: Assault, Medic, Recon, Support, Driver, Pilot – du wählst keine Klasse, du wirst eine. Wie Freischaltungen, Career-Level und Cash zusammenhängen.
 seo_title: Wardogs Progression & Klassen – Guide auf Deutsch | Warleek
 seo_description: Assault, Medic, Recon, Support, Driver und Pilot: wie die sechs Tracks, Career-Level und Cash zusammenhängen. Deutsche Anleitung für die DACH-Region.
+quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+geprueft: nein
 ---
 
 Wardogs hat keinen Klassen-Auswahlbildschirm. Du entscheidest nicht, wer du bist – du wirst es dadurch, was du tust. Wer das nicht weiß, levelt in sechs Richtungen gleichzeitig ein bisschen und schaltet nirgends etwas frei.
