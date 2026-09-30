@@ -1,0 +1,1162 @@
+[
+    {
+        "slug": "wardogs-bushmaster-m17s",
+        "title": "Bushmaster M17S",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "freischaltung": "Startwaffe",
+            "kaliber": "5,56 × 45 mm",
+            "rolle": "Sturmgewehr"
+        }
+    },
+    {
+        "slug": "wardogs-a-91",
+        "title": "A-91",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "freischaltung": "Startwaffe",
+            "kaliber": "5,56 × 45 mm",
+            "rolle": "Sturmgewehr"
+        }
+    },
+    {
+        "slug": "wardogs-kh-2002",
+        "title": "KH-2002",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "freischaltung": "Startwaffe",
+            "kaliber": "5,56 × 45 mm",
+            "rolle": "Sturmgewehr"
+        }
+    },
+    {
+        "slug": "wardogs-t-21",
+        "title": "T-21",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "600",
+            "freischaltung": "ab Start kaufbar",
+            "kaliber": "5,56 × 45 mm",
+            "rolle": "Sturmgewehr"
+        }
+    },
+    {
+        "slug": "wardogs-ak-74",
+        "title": "AK-74",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "1600",
+            "freischaltung": "Assault 3",
+            "kaliber": "5,45 × 39 mm",
+            "rolle": "Sturmgewehr"
+        }
+    },
+    {
+        "slug": "wardogs-galil",
+        "title": "Galil",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "2200",
+            "freischaltung": "Assault 10",
+            "kaliber": "5,56 × 45 mm",
+            "rolle": "Sturmgewehr"
+        }
+    },
+    {
+        "slug": "wardogs-m4",
+        "title": "M4",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "2800",
+            "freischaltung": "Assault 20",
+            "kaliber": "5,56 × 45 mm",
+            "rolle": "Sturmgewehr"
+        }
+    },
+    {
+        "slug": "wardogs-fal",
+        "title": "FAL",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "6500",
+            "freischaltung": "Assault 35",
+            "kaliber": ".308 Winchester",
+            "rolle": "Sturmgewehr"
+        }
+    },
+    {
+        "slug": "wardogs-mp43",
+        "title": "MP43",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "400",
+            "freischaltung": "ab Start kaufbar",
+            "kaliber": "12 Gauge",
+            "rolle": "Schrotflinte"
+        }
+    },
+    {
+        "slug": "wardogs-amp-9",
+        "title": "AMP-9",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "900",
+            "freischaltung": "ab Start kaufbar",
+            "kaliber": "9 × 19 mm",
+            "rolle": "Maschinenpistole"
+        }
+    },
+    {
+        "slug": "wardogs-pp-19-vityaz",
+        "title": "PP-19 Vityaz",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "1200",
+            "freischaltung": "Medic 4",
+            "kaliber": "9 × 19 mm",
+            "rolle": "Maschinenpistole"
+        }
+    },
+    {
+        "slug": "wardogs-m500",
+        "title": "M500",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "1200",
+            "freischaltung": "Support 10",
+            "kaliber": "12 Gauge",
+            "rolle": "Schrotflinte"
+        }
+    },
+    {
+        "slug": "wardogs-mp5",
+        "title": "MP5",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "1500",
+            "freischaltung": "Medic 15",
+            "kaliber": "9 × 19 mm",
+            "rolle": "Maschinenpistole"
+        }
+    },
+    {
+        "slug": "wardogs-super-45",
+        "title": "Super-45",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "2600",
+            "freischaltung": "Medic 35",
+            "kaliber": ".45 ACP",
+            "rolle": "Maschinenpistole"
+        }
+    },
+    {
+        "slug": "wardogs-scout-rifle-td",
+        "title": "Scout Rifle TD",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "1100",
+            "freischaltung": "ab Start kaufbar",
+            "kaliber": "5,56 × 45 mm",
+            "rolle": "Marksman-Gewehr"
+        }
+    },
+    {
+        "slug": "wardogs-sks",
+        "title": "SKS",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "2400",
+            "freischaltung": "Recon 5",
+            "kaliber": "7,62 × 39 mm",
+            "rolle": "Marksman-Gewehr"
+        }
+    },
+    {
+        "slug": "wardogs-m249-saw",
+        "title": "M249 SAW",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "3200",
+            "freischaltung": "Support 15",
+            "kaliber": "5,56 × 45 mm",
+            "rolle": "Leichtes Maschinengewehr"
+        }
+    },
+    {
+        "slug": "wardogs-mosin-nagant",
+        "title": "Mosin Nagant",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "4500",
+            "freischaltung": "Recon 10",
+            "kaliber": "7,62 × 54 mm",
+            "rolle": "Scharfschützengewehr"
+        }
+    },
+    {
+        "slug": "wardogs-svd",
+        "title": "SVD",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "4800",
+            "freischaltung": "Recon 12",
+            "kaliber": "7,62 × 54 mm",
+            "rolle": "Scharfschützengewehr"
+        }
+    },
+    {
+        "slug": "wardogs-pkm",
+        "title": "PKM",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "4500",
+            "freischaltung": "Support 30",
+            "kaliber": "7,62 × 54 mm",
+            "rolle": "Leichtes Maschinengewehr"
+        }
+    },
+    {
+        "slug": "wardogs-sv-98",
+        "title": "SV-98",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "5200",
+            "freischaltung": "Recon 19",
+            "kaliber": "7,62 × 54 mm",
+            "rolle": "Scharfschützengewehr"
+        }
+    },
+    {
+        "slug": "wardogs-mk22",
+        "title": "MK22",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "6400",
+            "freischaltung": "Recon 25",
+            "kaliber": ".308 Winchester",
+            "rolle": "Scharfschützengewehr"
+        }
+    },
+    {
+        "slug": "wardogs-bmr-308",
+        "title": "BMR-308",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "6000",
+            "freischaltung": "Recon 30",
+            "kaliber": ".308 Winchester",
+            "rolle": "Scharfschützengewehr"
+        }
+    },
+    {
+        "slug": "wardogs-amr-50",
+        "title": "AMR 50",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "8800",
+            "freischaltung": "Recon 35",
+            "kaliber": ".50 BMG",
+            "rolle": "Anti-Materiel-Gewehr"
+        }
+    },
+    {
+        "slug": "wardogs-ggx-17",
+        "title": "GGX 17",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "200",
+            "freischaltung": "Wardog 1",
+            "kaliber": "9 × 19 mm",
+            "rolle": "Pistole"
+        }
+    },
+    {
+        "slug": "wardogs-judge",
+        "title": "Judge",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "250",
+            "freischaltung": "Wardog 18",
+            "kaliber": ".45 Colt",
+            "rolle": "Pistole"
+        }
+    },
+    {
+        "slug": "wardogs-m1911",
+        "title": "M1911",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "300",
+            "freischaltung": "Wardog 40",
+            "kaliber": ".45 ACP",
+            "rolle": "Pistole"
+        }
+    },
+    {
+        "slug": "wardogs-ggx-18",
+        "title": "GGX 18",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "800",
+            "freischaltung": "Wardog 70",
+            "kaliber": "9 × 19 mm",
+            "rolle": "Pistole"
+        }
+    },
+    {
+        "slug": "wardogs-deagle",
+        "title": "Deagle",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "900",
+            "freischaltung": "Wardog 85",
+            "kaliber": ".50 AE",
+            "rolle": "Pistole"
+        }
+    },
+    {
+        "slug": "wardogs-rpg-7",
+        "title": "RPG-7",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "2000",
+            "freischaltung": "Support 5",
+            "kaliber": "93 mm Rakete",
+            "rolle": "Panzerabwehr"
+        }
+    },
+    {
+        "slug": "wardogs-maaws",
+        "title": "MAAWS",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "2600",
+            "freischaltung": "Support 20",
+            "kaliber": "84 mm",
+            "rolle": "Panzerabwehr"
+        }
+    },
+    {
+        "slug": "wardogs-compound-bow",
+        "title": "Compound Bow",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "800",
+            "freischaltung": "Recon 17",
+            "kaliber": "Pfeile",
+            "rolle": "Lautlose Waffe"
+        }
+    },
+    {
+        "slug": "wardogs-mgl-40",
+        "title": "MGL-40",
+        "typ": "waffe",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "6000",
+            "freischaltung": "Support 35",
+            "kaliber": "40 mm",
+            "rolle": "Granatwerfer"
+        }
+    },
+    {
+        "slug": "wardogs-mh-6",
+        "title": "MH-6",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "6250",
+            "freischaltung": "Pilot",
+            "sitze": "6",
+            "tempo": "350",
+            "rolle": "Transporthelikopter"
+        }
+    },
+    {
+        "slug": "wardogs-ah-6m-miniguns",
+        "title": "AH-6M [Miniguns]",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "7000",
+            "freischaltung": "Pilot",
+            "sitze": "2",
+            "tempo": "350",
+            "rolle": "Kampfhelikopter"
+        }
+    },
+    {
+        "slug": "wardogs-ah-6r-rockets",
+        "title": "AH-6R [Rockets]",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "12500",
+            "freischaltung": "Pilot",
+            "sitze": "2",
+            "tempo": "350",
+            "rolle": "Kampfhelikopter"
+        }
+    },
+    {
+        "slug": "wardogs-z20-lakota",
+        "title": "Z20 Lakota",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "7400",
+            "freischaltung": "Pilot",
+            "sitze": "13",
+            "tempo": "445",
+            "rolle": "Transporthelikopter"
+        }
+    },
+    {
+        "slug": "wardogs-z20-lakota-miniguns",
+        "title": "Z20 Lakota [Miniguns]",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "8000",
+            "freischaltung": "Pilot",
+            "sitze": "13",
+            "tempo": "445",
+            "rolle": "Transporthelikopter mit Bewaffnung"
+        }
+    },
+    {
+        "slug": "wardogs-havoc",
+        "title": "Havoc",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "18000",
+            "freischaltung": "Pilot",
+            "sitze": "2",
+            "tempo": "400",
+            "rolle": "Kampfhelikopter"
+        }
+    },
+    {
+        "slug": "wardogs-flakpanzer-gepard",
+        "title": "Flakpanzer Gepard",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "10000",
+            "sitze": "2",
+            "tempo": "65",
+            "rolle": "Flugabwehrpanzer"
+        }
+    },
+    {
+        "slug": "wardogs-sph-2",
+        "title": "SPH-2",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "8000",
+            "freischaltung": "Career 90",
+            "sitze": "3",
+            "tempo": "65",
+            "rolle": "Artilleriepanzer"
+        }
+    },
+    {
+        "slug": "wardogs-l2a6",
+        "title": "L2A6",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "14000",
+            "freischaltung": "Stufe 35",
+            "sitze": "3",
+            "tempo": "65",
+            "rolle": "Kampfpanzer"
+        }
+    },
+    {
+        "slug": "wardogs-m113-apc-sv",
+        "title": "M113 APC SV",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "freischaltung": "ab 20 Punkten im Hauptlager",
+            "rolle": "Spawn-Fahrzeug"
+        }
+    },
+    {
+        "slug": "wardogs-bobcat",
+        "title": "Bobcat",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "500",
+            "sitze": "2",
+            "tempo": "75",
+            "rolle": "Leichtes Fahrzeug, keine Fracht"
+        }
+    },
+    {
+        "slug": "wardogs-dune-buggy",
+        "title": "Dune Buggy",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "1500",
+            "freischaltung": "Stufe 8",
+            "sitze": "3",
+            "tempo": "130",
+            "rolle": "Leichtes Fahrzeug, keine Fracht"
+        }
+    },
+    {
+        "slug": "wardogs-kodiak",
+        "title": "Kodiak",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "2500",
+            "sitze": "4",
+            "tempo": "154",
+            "rolle": "Transporter für Kisten"
+        }
+    },
+    {
+        "slug": "wardogs-kodiak-m249",
+        "title": "Kodiak [M249]",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "3750",
+            "freischaltung": "Stufe 6",
+            "sitze": "5",
+            "tempo": "154",
+            "rolle": "Transporter mit Bewaffnung"
+        }
+    },
+    {
+        "slug": "wardogs-kodiak-pickup",
+        "title": "Kodiak [Pickup]",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "3000",
+            "freischaltung": "Stufe 10",
+            "sitze": "6",
+            "tempo": "154",
+            "rolle": "Transporter für Kisten"
+        }
+    },
+    {
+        "slug": "wardogs-humvee",
+        "title": "Humvee",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "3000",
+            "freischaltung": "Stufe 15",
+            "sitze": "4",
+            "tempo": "113",
+            "rolle": "Transporter für Kisten"
+        }
+    },
+    {
+        "slug": "wardogs-humvee-m249",
+        "title": "Humvee [M249]",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "3750",
+            "freischaltung": "Stufe 20",
+            "sitze": "5",
+            "tempo": "113",
+            "rolle": "Transporter mit Bewaffnung"
+        }
+    },
+    {
+        "slug": "wardogs-humvee-minigun",
+        "title": "Humvee [Minigun]",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "4500",
+            "freischaltung": "Stufe 30",
+            "sitze": "5",
+            "tempo": "113",
+            "rolle": "Transporter mit Bewaffnung"
+        }
+    },
+    {
+        "slug": "wardogs-ural",
+        "title": "URAL",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "5000",
+            "freischaltung": "Driver 3",
+            "sitze": "3",
+            "tempo": "79",
+            "rolle": "Logistik-LKW für volle Paletten"
+        }
+    },
+    {
+        "slug": "wardogs-ural-defender",
+        "title": "Ural Defender",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "6000",
+            "freischaltung": "Stufe 18",
+            "sitze": "3",
+            "tempo": "79",
+            "rolle": "Gepanzerter Logistik-LKW"
+        }
+    },
+    {
+        "slug": "wardogs-ural-defender-m249",
+        "title": "Ural Defender [M249]",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "preis": "6750",
+            "freischaltung": "Stufe 25",
+            "sitze": "3",
+            "tempo": "79",
+            "rolle": "Gepanzerter Logistik-LKW mit Bewaffnung"
+        }
+    },
+    {
+        "slug": "wardogs-l81-moerser",
+        "title": "L81 Mörser",
+        "typ": "emplacement",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "91",
+            "freischaltung": "Support 8 (großer Hammer)",
+            "rolle": "Indirektes Feuer, braucht Markierung"
+        }
+    },
+    {
+        "slug": "wardogs-stingray",
+        "title": "Stingray",
+        "typ": "emplacement",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "91",
+            "freischaltung": "Support 8 (großer Hammer)",
+            "rolle": "Gegen Fahrzeuge"
+        }
+    },
+    {
+        "slug": "wardogs-talon-9k-sam",
+        "title": "Talon 9K-SAM",
+        "typ": "emplacement",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "601",
+            "freischaltung": "Support 8 (großer Hammer)",
+            "rolle": "Wärmesuchende Flugabwehr, nachladbar"
+        }
+    },
+    {
+        "slug": "wardogs-vanguard-ciws",
+        "title": "Vanguard CIWS",
+        "typ": "emplacement",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "901",
+            "freischaltung": "Support 8 (großer Hammer)",
+            "rolle": "Manuell bediente Flugabwehrkanone, 20 × 102 mm"
+        }
+    },
+    {
+        "slug": "wardogs-loudspeaker",
+        "title": "Loudspeaker",
+        "typ": "emplacement",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "freischaltung": "Support",
+            "rolle": "Lautsprecher"
+        }
+    },
+    {
+        "slug": "wardogs-recon-zelt",
+        "title": "Recon-Zelt",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "5",
+            "freischaltung": "kleiner Hammer",
+            "rolle": "Ohne FOB baubar"
+        }
+    },
+    {
+        "slug": "wardogs-stacheldraht",
+        "title": "Stacheldraht",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "5",
+            "freischaltung": "kleiner Hammer",
+            "rolle": "Ohne FOB baubar"
+        }
+    },
+    {
+        "slug": "wardogs-sandsaecke",
+        "title": "Sandsäcke",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "10",
+            "freischaltung": "kleiner Hammer",
+            "rolle": "Ohne FOB baubar"
+        }
+    },
+    {
+        "slug": "wardogs-hedgehog",
+        "title": "Hedgehog",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "14",
+            "freischaltung": "kleiner Hammer",
+            "rolle": "Ohne FOB baubar, gegen Fahrzeuge"
+        }
+    },
+    {
+        "slug": "wardogs-bremer-wall",
+        "title": "Bremer Wall",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "10",
+            "freischaltung": "mittlerer Hammer",
+            "rolle": "Deckung, braucht FOB"
+        }
+    },
+    {
+        "slug": "wardogs-hesco-block",
+        "title": "HESCO-Block",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "12",
+            "freischaltung": "mittlerer Hammer",
+            "rolle": "Deckung, braucht FOB (10–14 je nach Variante)"
+        }
+    },
+    {
+        "slug": "wardogs-tuer",
+        "title": "Tür",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "14",
+            "freischaltung": "mittlerer Hammer",
+            "rolle": "Zugang, braucht FOB"
+        }
+    },
+    {
+        "slug": "wardogs-hesco-wand",
+        "title": "HESCO-Wand",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "46",
+            "freischaltung": "mittlerer Hammer",
+            "rolle": "Hohe Deckung, braucht FOB"
+        }
+    },
+    {
+        "slug": "wardogs-tor",
+        "title": "Tor",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "52",
+            "freischaltung": "großer Hammer",
+            "rolle": "Fahrzeugdurchfahrt, braucht FOB"
+        }
+    },
+    {
+        "slug": "wardogs-bunker",
+        "title": "Bunker",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "61",
+            "freischaltung": "großer Hammer",
+            "rolle": "Geschützte Stellung, braucht FOB"
+        }
+    },
+    {
+        "slug": "wardogs-recon-turm",
+        "title": "Recon-Turm",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "61",
+            "freischaltung": "großer Hammer",
+            "rolle": "Beobachtung, braucht FOB"
+        }
+    },
+    {
+        "slug": "wardogs-tankstation",
+        "title": "Tankstation",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "121",
+            "freischaltung": "großer Hammer",
+            "rolle": "Betankt Fahrzeuge, braucht FOB"
+        }
+    },
+    {
+        "slug": "wardogs-reparaturstation",
+        "title": "Reparaturstation",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "121",
+            "freischaltung": "großer Hammer",
+            "rolle": "Repariert Fahrzeuge, braucht FOB"
+        }
+    },
+    {
+        "slug": "wardogs-drill-rig",
+        "title": "Drill Rig",
+        "typ": "bauwerk",
+        "quellen": [
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+        ],
+        "geprueft": "nein",
+        "text": "",
+        "felder": {
+            "baukosten": "1351",
+            "freischaltung": "großer Hammer",
+            "rolle": "Fördert Nachschub, braucht FOB"
+        }
+    }
+]

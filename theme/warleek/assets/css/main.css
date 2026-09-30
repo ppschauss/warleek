@@ -519,3 +519,28 @@ html.has-modal-open .wl-consent { display: none; }
 .wl-herkunft li { margin-bottom: 0.3rem; }
 .wl-herkunft p { margin: 0; }
 .wl-herkunft strong { color: var(--wp--preset--color--leek-light); }
+
+/* ------------------------------------------------------------ Datenbank */
+.wl-datenbank { margin-top: var(--wp--preset--spacing--40); }
+.wl-tabelle__titel { font-size: 1.3rem !important; margin: var(--wp--preset--spacing--40) 0 0.8rem; display: flex; align-items: baseline; gap: 0.6rem; }
+.wl-tabelle__titel span { font-family: var(--wp--preset--font-family--mono); font-size: 0.8rem; color: var(--wp--preset--color--steel); }
+.wl-tabelle { margin: 0 0 var(--wp--preset--spacing--40); overflow-x: auto; border: var(--wl-border); border-radius: var(--wl-radius); }
+.wl-tabelle table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.wl-tabelle thead th { position: sticky; top: 0; background: var(--wp--preset--color--surface-2); font-family: var(--wp--preset--font-family--heading); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.78rem; color: var(--wp--preset--color--sand); text-align: left; padding: 0.6rem 0.8rem; white-space: nowrap; }
+.wl-tabelle td, .wl-tabelle tbody th { padding: 0.55rem 0.8rem; border-top: var(--wl-border); text-align: left; vertical-align: top; }
+.wl-tabelle tbody th { font-weight: 600; white-space: nowrap; }
+.wl-tabelle tbody tr:hover { background: rgb(var(--wl-accent-rgb) / 0.06); }
+.wl-tabelle a { color: var(--wp--preset--color--leek-light); text-decoration: none; }
+.wl-tabelle a:hover { color: var(--wp--preset--color--leek); text-decoration: underline; }
+.wl-ja { color: var(--wp--preset--color--leek); font-weight: 600; }
+.wl-nein { color: var(--wp--preset--color--steel); border-bottom: 1px dotted currentColor; cursor: help; }
+.wl-datenblatt { margin: var(--wp--preset--spacing--30) 0; border: var(--wl-border); border-radius: var(--wl-radius); overflow: hidden; }
+.wl-datenblatt table { width: 100%; border-collapse: collapse; }
+.wl-datenblatt th { text-align: left; width: 42%; padding: 0.6rem 0.9rem; background: var(--wp--preset--color--surface-2); font-family: var(--wp--preset--font-family--heading); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.8rem; color: var(--wp--preset--color--sand); }
+.wl-datenblatt td { padding: 0.6rem 0.9rem; border-top: var(--wl-border); }
+.wl-itemliste { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 0.4rem 1rem; }
+.wl-itemliste li { border-bottom: var(--wl-border); padding: 0.45rem 0; display: flex; justify-content: space-between; gap: 0.6rem; }
+.wl-itemliste a { text-decoration: none; color: var(--wp--preset--color--text); }
+.wl-itemliste a:hover { color: var(--wp--preset--color--leek); }
+.wl-itemliste span { font-family: var(--wp--preset--font-family--mono); font-size: 0.85rem; color: var(--wp--preset--color--steel); }
+.wl-empty { padding: var(--wp--preset--spacing--40); border: var(--wl-border); border-radius: var(--wl-radius); background: var(--wp--preset--color--surface); color: var(--wp--preset--color--steel); text-align: center; }

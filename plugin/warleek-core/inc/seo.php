@@ -108,6 +108,11 @@ function warleek_seo_title( $title ) {
 		return $datum ? sprintf( 'Wardogs Patch Notes Deutsch (%s) | Warleek', $datum ) : 'Wardogs Patch Notes Deutsch | Warleek';
 	}
 	if ( is_post_type_archive( 'guide' ) ) { return 'Wardogs Guides auf Deutsch – Tipps für DACH | Warleek'; }
+	if ( is_post_type_archive( 'item' ) ) { return 'Wardogs Datenbank Deutsch – Waffen & Fahrzeuge | Warleek'; }
+	if ( is_tax( 'item-typ' ) ) {
+		$term = get_queried_object();
+		if ( $term && ! is_wp_error( $term ) ) { return sprintf( 'Wardogs %s – Werte auf Deutsch | Warleek', $term->name ); }
+	}
 	if ( is_tax( 'guide-thema' ) ) {
 		$term = get_queried_object();
 		if ( $term && ! is_wp_error( $term ) ) { return sprintf( 'Wardogs %s – deutsche Guides & Tipps | Warleek', $term->name ); }
@@ -138,6 +143,15 @@ function warleek_seo_description() {
 		if ( $term && ! is_wp_error( $term ) ) {
 			$basis = $term->description ? rtrim( wp_strip_all_tags( $term->description ), '. ' ) . '. ' : '';
 			return warleek_seo_kuerzen( $basis . sprintf( 'Wardogs-Guides zu %s auf Deutsch – für DACH.', $term->name ) );
+		}
+	}
+	if ( is_post_type_archive( 'item' ) ) {
+		return 'Alle Waffen, Fahrzeuge, Emplacements und Bauwerke aus Wardogs mit Preis, Freischaltung und Werten – auf Deutsch, für Deutschland, Österreich und die Schweiz.';
+	}
+	if ( is_tax( 'item-typ' ) ) {
+		$term = get_queried_object();
+		if ( $term && ! is_wp_error( $term ) ) {
+			return warleek_seo_kuerzen( sprintf( 'Alle %s aus Wardogs mit Preis, Freischaltung und Werten auf Deutsch – für Spieler in Deutschland, Österreich und der Schweiz.', $term->name ) );
 		}
 	}
 	if ( is_post_type_archive( 'guide' ) ) {

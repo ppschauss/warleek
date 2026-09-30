@@ -7,7 +7,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.8.0' ); }
+if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.9.0' ); }
 define( 'WARLEEK_DIR', get_template_directory() );
 define( 'WARLEEK_URI', get_template_directory_uri() );
 
@@ -50,7 +50,7 @@ function warleek_source_greeting() {
 		. "    \\___/                    Wer hier reinschaut, passt zu uns: /community/\n"
 		. "\n"
 		. "    Kein Tracking, keine Cookies, keine externen Requests im Browser. Fonts, Bilder, Video: alles von hier.\n"
-		. "    Guides: selbst gespielt. Patch Notes: von Steam geholt und serverseitig übersetzt. Zahlen: mit Stand-Datum.\n"
+		. "    Guides: recherchiert, Herkunft steht unter jedem Text. Patch Notes: von Steam, serverseitig uebersetzt.\n"
 		. "    Patch Notes kommen stündlich von Steam (BBCode -> HTML, 22 Tests, alle grün – bis Valve wieder ein Tag erfindet).\n"
 		. "    Bugs? #fragen im Discord. Cheats? Nicht hier. Teamkills? Nur mit dem Ural, und nur aus Versehen.\n"
 		. "-->\n";

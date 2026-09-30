@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.8.0
+Stable tag: 2.9.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,13 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.9.0 =
+* **Datenbank** unter `/datenbank/`: neuer Inhaltstyp für Waffen, Fahrzeuge, Emplacements und Bauwerke, mit Kategorien, Datenblatt je Eintrag und Querverweisen auf die passenden Guides.
+* **73 Einträge terminiert angelegt** – drei pro Tag, verteilt über gut drei Wochen. Veröffentlicht wird von WordPress selbst; vorhandene Einträge bleiben beim erneuten Lauf unberührt.
+* Jeder Eintrag trägt denselben Herkunftskasten wie die Guides: Quelle genannt, „im Spiel nachgeprüft: nein", bis jemand nachmisst. In der Backend-Übersicht gibt es dafür eine eigene Spalte.
+* Übersicht als gruppierte Tabelle statt Kartenraster – bei Preisen und Freischaltungen will man vergleichen, nicht blättern. Spalten erscheinen nur, wenn die Gruppe sie füllt.
+* Guide-Archiv und Quelltext-Gruß behaupteten weiterhin „selbst gespielt" – berichtigt.
 
 = 2.8.0 =
 * **Herkunftskasten in jedem Guide.** Am Ende steht jetzt, aus welchen Quellen die Angaben stammen und ob sie im Spiel nachgeprüft sind. Erzeugt wird er aus den Daten (`quellen`, `geprueft` im Kopfblock), nicht von Hand getippt – fehlt die Angabe, gilt „nicht nachgeprüft".

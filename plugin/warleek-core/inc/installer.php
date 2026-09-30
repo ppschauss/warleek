@@ -292,6 +292,164 @@ function warleek_seed_nav( array $nav ) {
 }
 
 
+/* ------------------------------------------------------------ Datenbank */
+/**
+ * Termine für die schrittweise Veröffentlichung.
+ *
+ * Drei Einträge pro Tag, zu leicht ungeraden Uhrzeiten – eine Seite, an der
+ * jemand arbeitet, veröffentlicht nicht um Punkt 12 im Dreierpack. Startpunkt
+ * ist der morgige Tag, damit nichts rückwirkend erscheint.
+ *
+ * @param int $anzahl Wie viele Termine gebraucht werden.
+ * @return string[] MySQL-Zeitstempel in lokaler Zeit.
+ */
+function warleek_item_termine( $anzahl ) {
+	$uhrzeiten = array( '09:10:00', '14:25:00', '19:05:00' );
+	$termine   = array();
+	$tag       = 1;
+	while ( count( $termine ) < $anzahl ) {
+		foreach ( $uhrzeiten as $zeit ) {
+			if ( count( $termine ) >= $anzahl ) { break; }
+			$termine[] = gmdate( 'Y-m-d', strtotime( "+$tag day", current_time( 'timestamp' ) ) ) . ' ' . $zeit;
+		}
+		$tag++;
+	}
+	return $termine;
+}
+
+/**
+ * Reihenfolge der Veröffentlichung: Kategorien abwechseln.
+ *
+ * Sonst gäbe es zwei Wochen lang nur Sturmgewehre und danach nur Bauwerke.
+ */
+function warleek_item_reihenfolge( array $items ) {
+	$nach_typ = array();
+	foreach ( $items as $i ) { $nach_typ[ $i['typ'] ][] = $i; }
+	$reihen = array();
+	while ( $nach_typ ) {
+		foreach ( array_keys( $nach_typ ) as $typ ) {
+			$reihen[] = array_shift( $nach_typ[ $typ ] );
+			if ( ! $nach_typ[ $typ ] ) { unset( $nach_typ[ $typ ] ); }
+		}
+	}
+	return $reihen;
+}
+
+/** Einleitungssatz und Querverweise je Eintrag. */
+function warleek_item_inhalt( array $e ) {
+	$f     = $e['felder'];
+	$name  = $e['title'];
+	$rolle = $f['rolle'] ?? '';
+	$satz  = $rolle ? sprintf( '<p><strong>%s</strong> – %s in WARDOGS.', esc_html( $name ), esc_html( $rolle ) ) : sprintf( '<p><strong>%s</strong> in WARDOGS.', esc_html( $name ) );
+	if ( ! empty( $f['preis'] ) ) { $satz .= sprintf( ' Kostet %s pro Leben.', esc_html( warleek_item_wert( 'preis', $f['preis'] ) ) ); }
+	if ( ! empty( $f['baukosten'] ) ) { $satz .= sprintf( ' Kostet %s beim Bauen.', esc_html( warleek_item_wert( 'baukosten', $f['baukosten'] ) ) ); }
+	if ( ! empty( $f['freischaltung'] ) && 'Startwaffe' !== $f['freischaltung'] ) { $satz .= sprintf( ' Freigeschaltet mit: %s.', esc_html( $f['freischaltung'] ) ); }
+	$satz .= '</p>';
+
+	$guides = array(
+		'waffe'       => array( '/guides/wardogs-waffen-kaufen/' => 'Waffen kaufen: der sinnvolle Pfad', '/guides/wardogs-gewichtsklassen/' => 'Gewichtsklassen', '/guides/wardogs-zeroing/' => 'Zeroing und Ballistik' ),
+		'fahrzeug'    => array( '/guides/wardogs-logistik-fahrzeuge/' => 'Welches Fahrzeug für welche Fracht', '/guides/fahrzeuge-ohne-teamkill/' => 'Fahren und fliegen ohne Teamkill', '/guides/wardogs-panzer-knacken/' => 'Panzer knacken' ),
+		'emplacement' => array( '/guides/wardogs-flugabwehr/' => 'Flugabwehr bauen und umgehen', '/guides/wardogs-fob-verteidigen/' => 'FOB verteidigen' ),
+		'bauwerk'     => array( '/guides/wardogs-support-bauen/' => 'Support und Hammer: was womit', '/guides/fob-bauen-schritt-fuer-schritt/' => 'FOB bauen Schritt für Schritt' ),
+	);
+	$links = '';
+	foreach ( $guides[ $e['typ'] ] ?? array() as $url => $label ) {
+		$links .= '<li><a href="' . esc_url( $url ) . '">' . esc_html( $label ) . '</a></li>';
+	}
+
+	return "\n" . $satz . "\n"
+		. '<p class="wl-stand">Stand: September 2026 · Early Access – Werte ändern sich mit Patches.</p>' . "\n"
+		. '[warleek_datenblatt]' . "\n"
+		. ( $links ? '<h2>Dazu passend</h2><ul>' . $links . '</ul>' . "\n" : '' )
+		. '[warleek_item_herkunft]' . "\n";
+}
+
+/**
+ * Datenbank-Einträge anlegen – neue terminiert, vorhandene nur aktualisiert.
+ *
+ * Neue Einträge bekommen `future` und einen Termin; was schon veröffentlicht ist,
+ * bleibt veröffentlicht. So lässt sich der Schritt beliebig oft laufen, ohne den
+ * Plan durcheinanderzubringen.
+ */
+function warleek_step_items( $force = false ) {
+	$items = warleek_content_json( 'items' );
+	if ( ! $items ) { return array( 'ok' => true, 'msg' => 'Keine items.json gefunden – übersprungen.' ); }
+
+	$namen = array( 'waffe' => 'Waffen', 'fahrzeug' => 'Fahrzeuge', 'emplacement' => 'Emplacements', 'bauwerk' => 'Bauwerke' );
+	foreach ( $namen as $slug => $name ) {
+		if ( ! term_exists( $slug, 'item-typ' ) ) { wp_insert_term( $name, 'item-typ', array( 'slug' => $slug ) ); }
+	}
+
+	$reihen  = warleek_item_reihenfolge( $items );
+	$offen   = array();
+	foreach ( $reihen as $e ) {
+		$da = get_posts( array( 'post_type' => 'item', 'name' => $e['slug'], 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) );
+		if ( ! $da ) { $offen[] = $e; }
+	}
+	$termine = warleek_item_termine( count( $offen ) );
+
+	$neu = 0; $akt = 0; $t = 0;
+	foreach ( $reihen as $e ) {
+		$inhalt = warleek_html_to_blocks( warleek_item_inhalt( $e ) );
+		$da     = get_posts( array( 'post_type' => 'item', 'name' => $e['slug'], 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) );
+
+		$daten = array(
+			'post_title'   => $e['title'],
+			'post_name'    => $e['slug'],
+			'post_content' => $inhalt,
+			'post_excerpt' => trim( (string) ( $e['felder']['rolle'] ?? '' ) ),
+		);
+
+		if ( $da ) {
+			$id = (int) $da[0];
+			$daten['ID'] = $id;
+			$hash = (string) get_post_meta( $id, '_warleek_seed_hash', true );
+			if ( ! $force && $hash && md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) !== $hash ) {
+				unset( $daten['post_content'] );
+				warleek_log( 'Inhalt behalten (bearbeitet): ' . $e['slug'] );
+			}
+			wp_update_post( wp_slash( $daten ) );
+			$akt++;
+		} else {
+			$termin = $termine[ $t++ ] ?? current_time( 'mysql' );
+			$daten['post_type']     = 'item';
+			$daten['post_status']   = 'future';
+			$daten['post_date']     = $termin;
+			$daten['post_date_gmt'] = get_gmt_from_date( $termin );
+			$id = wp_insert_post( wp_slash( $daten ) );
+			if ( is_wp_error( $id ) || ! $id ) { continue; }
+			$neu++;
+			warleek_log( sprintf( 'geplant für %s: %s', substr( $termin, 0, 16 ), $e['slug'] ) );
+		}
+		if ( isset( $daten['post_content'] ) ) {
+			update_post_meta( $id, '_warleek_seed_hash', md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) );
+		}
+
+		wp_set_object_terms( $id, $e['typ'], 'item-typ' );
+		foreach ( warleek_item_felder() as $key => $def ) {
+			$wert = (string) ( $e['felder'][ $key ] ?? '' );
+			if ( '' === $wert ) { delete_post_meta( $id, 'item_' . $key ); } else { update_post_meta( $id, 'item_' . $key, $wert ); }
+		}
+		update_post_meta( $id, '_warleek_quellen', implode( ' | ', (array) ( $e['quellen'] ?? array() ) ) );
+		update_post_meta( $id, '_warleek_geprueft', (string) ( $e['geprueft'] ?? 'nein' ) );
+
+		$typname = $namen[ $e['typ'] ] ?? '';
+		warleek_set_seo( $id, array(
+			'title'       => sprintf( 'Wardogs %s – Werte auf Deutsch | Warleek', $e['title'] ),
+			'description' => warleek_seo_kuerzen( sprintf(
+				'%s in Wardogs: %s%sAlle Werte auf Deutsch, für Spieler in Deutschland, Österreich und der Schweiz.',
+				$e['title'],
+				$e['felder']['rolle'] ?? $typname,
+				! empty( $e['felder']['preis'] ) ? ', ' . warleek_item_wert( 'preis', $e['felder']['preis'] ) . '. ' : '. '
+			) ),
+		) );
+	}
+
+	$geplant = count( get_posts( array( 'post_type' => 'item', 'post_status' => 'future', 'posts_per_page' => -1, 'fields' => 'ids' ) ) );
+	$live    = count( get_posts( array( 'post_type' => 'item', 'post_status' => 'publish', 'posts_per_page' => -1, 'fields' => 'ids' ) ) );
+	return array( 'ok' => true, 'msg' => sprintf( '%d neu geplant, %d aktualisiert – %d veröffentlicht, %d in der Warteschlange (3 pro Tag).', $neu, $akt, $live, $geplant ) );
+}
+
 /* ===================================================================== Schritte */
 /**
  * Alle Installationsschritte in Ausführungsreihenfolge.
@@ -325,6 +483,11 @@ function warleek_install_steps() {
 			'label'       => 'Alte Seiten zurückziehen',
 			'description' => 'Verschiebt Seiten, die es nicht mehr gibt, in den Papierkorb und legt eine 301-Weiterleitung auf das neue Ziel an.',
 			'callback'    => 'warleek_step_retire',
+		),
+		'items' => array(
+			'label'       => 'Datenbank anlegen',
+			'description' => 'Legt Waffen, Fahrzeuge, Emplacements und Bauwerke an – terminiert, drei Einträge pro Tag. Vorhandene bleiben unberührt.',
+			'callback'    => 'warleek_step_items',
 		),
 		'partners' => array(
 			'label'       => 'Partner anlegen',

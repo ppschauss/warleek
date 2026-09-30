@@ -355,3 +355,35 @@ Beides ist korrigiert, und die Seite sagt jetzt von sich aus, wie sie arbeitet:
 - Acht Testdateien grün.
 
 **Zur Einordnung des Updates selbst:** Es trifft laut Beobachtern vor allem „highly templated, programmatic" Seiten – eine Seite pro Vorwahl, pro Produktvariante. So ist Warleek nicht gebaut. Das Risiko liegt woanders: 22 Guides an zwei Tagen, geschrieben aus fremden Guide-Seiten, von denen einige selbst nach KI-Massenware aussehen. Dagegen hilft keine Formulierung, sondern nur eigene Spielpraxis – deshalb benennt der Kasten offen, wo sie fehlt.
+
+## Datenbank mit Veröffentlichungsplan – Version 2.9.0 (30.09.2026)
+
+Anlass war der Hinweis auf wardogshub.uk, wo alle Items und Fahrzeuge hinterlegt sind. **Nicht nachgebaut:** Deren Daten stammen laut eigener Angabe aus Spieldateien und eigenen Messungen; die Sammlung ist nach § 87b UrhG als Datenbank geschützt, und eine Kopie wäre zugleich genau das Muster, gegen das die Herkunftsangabe in 2.8.0 gebaut wurde.
+
+Stattdessen: eigener Inhaltstyp, gefüllt aus der eigenen Faktenbasis, jeder Eintrag mit offener Herkunft.
+
+### Aufbau
+- Inhaltstyp `item` unter `/datenbank/`, Kategorien Waffen, Fahrzeuge, Emplacements, Bauwerke.
+- Felder je Eintrag: Preis, Freischaltung, Kaliber, Sitzplätze, Höchstgeschwindigkeit, Baukosten, Rolle, Hinweis – formatiert ausgegeben (`$6.250`, `350 km/h`, `1.351 Build-Supplies`).
+- Übersicht als **gruppierte Tabelle**: Spalten erscheinen nur, wenn die Gruppe sie füllt. Bei Waffen steht Kaliber, bei Bauwerken Baukosten, nicht überall alles.
+- Jeder Eintrag verlinkt die Guides, die ihn einordnen, und trägt den Herkunftskasten.
+
+### Veröffentlichungsplan
+73 Einträge, **drei pro Tag** zu 09:10, 14:25 und 19:05, Kategorien abwechselnd – sonst gäbe es zwei Wochen lang nur Sturmgewehre. Angelegt als `future`, veröffentlicht von WordPress selbst.
+
+| | |
+| --- | --- |
+| Erster Termin | 01.10.2026, 09:10 |
+| Letzter Termin | 25.10.2026, 09:10 |
+| Pro Tag | 3 |
+| Beim zweiten Lauf | 0 neu geplant, 73 aktualisiert – der Plan bleibt stehen |
+
+### Geprüft
+- `/datenbank/` und `/datenbank-kategorie/waffe/` liefern 200; solange nichts veröffentlicht ist, steht dort ein erklärender Hinweis statt einer leeren Seite.
+- Vier Einträge testweise veröffentlicht: Tabelle gruppiert korrekt, Spalten passen zur Gruppe, Einzelseite zeigt Datenblatt, Querverweise und Herkunft. Danach wieder auf ihre Termine zurückgesetzt (73 geplant, 0 veröffentlicht).
+- Metas: Übersicht 56/157 Zeichen, Kategorie 44/129, Einzeleintrag „Wardogs MH-6 – Werte auf Deutsch | Warleek".
+- Menü: „Datenbank" in Haupt- und Fußmenü, im mobilen Overlay als sechster Punkt, aktuelle Seite markiert.
+- Kontrast der neuen Tabelle in allen zwölf Farbwelt-Kombinationen: besteht.
+- Acht Testdateien grün.
+
+**Ein Fehler beim Bauen:** Der neue Schritt gab eine Zeichenkette zurück statt `array('ok'=>…,'msg'=>…)`. Der Installer griff darauf mit `$res['msg']` zu – unter PHP 8 ein TypeError, der den ganzen Lauf abbrach. Die anderen Schritte machen es richtig; das Format steht jetzt in CLAUDE.md.

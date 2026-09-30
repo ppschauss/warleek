@@ -39,6 +39,10 @@
             ]
         },
         {
+            "label": "Datenbank",
+            "url": "/datenbank/"
+        },
+        {
             "label": "Patch Notes",
             "url": "/patch-notes/"
         },
@@ -62,6 +66,10 @@
         {
             "label": "Das Spiel erklärt",
             "url": "/wardogs/"
+        },
+        {
+            "label": "Datenbank",
+            "url": "/datenbank/"
         },
         {
             "label": "Technik & Steuerung",
