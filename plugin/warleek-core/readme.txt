@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.16.0
+Stable tag: 2.17.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.17.0 =
+* 25 neue Datenbank-Einträge: die drei Hämmer, FOB, Claymore, AT-Mine, Munitionskiste, Bunkerboden und -dach, Mörser-Unterstand, acht Fahrzeugbewaffnungen, 9K333 Verba und M12G. Jetzt 98 statt 73.
+* Fehler behoben: Nachgelieferte Einträge bekamen einen eigenen Plan ab morgen und stapelten sich auf die bestehenden Termine (20 an einem Tag statt 5–10). Die Warteschlange wird jetzt immer gemeinsam verteilt.
+* 97 von 98 Einträgen haben ihr eigenes Symbol aus dem Spiel.
 
 = 2.16.0 =
 * 72 von 73 Datenbank-Einträgen haben jetzt ihr eigenes Symbol aus dem Spiel, freigestellt auf einem abgedunkelten Spiel-Hintergrund.

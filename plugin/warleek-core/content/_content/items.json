@@ -1243,5 +1243,369 @@
 			"freischaltung": "großer Hammer (Support 8)",
 			"rolle": "Bauwerk"
 		}
+	},
+	{
+		"slug": "wardogs-9k333-verba",
+		"title": "9K333 Verba",
+		"typ": "waffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Tragbare Flugabwehrrakete für rund $800 pro Leben, Kaliber 72 mm, nach Quellenangabe rund 100 Schuss pro Minute. Mit 17,25 kg und einer Inventarfläche von 7×2 das schwerste Stück, das ein Soldat mitnehmen kann – es belegt den halben Rucksack.\nAnwendung: Hubschrauber vertreiben, ohne eine Stellung bauen zu müssen. Wer Talon und Vanguard nicht an der richtigen Stelle hat, trägt die Abwehr eben selbst dorthin. Gegen Infanterie nutzlos – wer sie einpackt, braucht jemanden, der ihn deckt.",
+		"felder": {
+			"preis": "800",
+			"kaliber": "72 mm",
+			"rolle": "Schulterluftabwehr",
+			"hinweis": "Inventarfläche 7×2, 17,25 kg"
+		}
+	},
+	{
+		"slug": "wardogs-m12g",
+		"title": "M12G",
+		"typ": "waffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Schrotflinte im Kaliber 12 Gauge. Zur Freischaltung und zum Preis liegen uns keine belastbaren Zahlen vor – die Quelle führt den Eintrag ohne Preisangabe.\nAnwendung: wie bei der MP43 kurze Distanz, Gebäude, Gräben. Solange die Zahlen fehlen, ist die MP43 für $400 die Flinte, über die man sicher etwas sagen kann.",
+		"felder": {
+			"kaliber": "12 Gauge",
+			"rolle": "Schrotflinte",
+			"hinweis": "Inventarfläche 1×1; Preis in der Quelle nicht angegeben"
+		}
+	},
+	{
+		"slug": "wardogs-l55a1-kanone",
+		"title": "L55A1 Cannon",
+		"typ": "emplacement",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Glattrohrkanone als Fahrzeugbewaffnung. Sie wird nicht einzeln gekauft, sondern kommt mit dem Fahrzeug, das sie trägt.\nAnwendung: schwere Panzerabwehr auf Entfernung. Welches Fahrzeug im Spiel genau diese Kanone führt, ist in unseren Quellen nicht vermerkt – wir tragen es nach, sobald es belegt ist.",
+		"felder": {
+			"rolle": "Fahrzeugkanone",
+			"hinweis": "Nicht einzeln kaufbar"
+		}
+	},
+	{
+		"slug": "wardogs-l52-kanone",
+		"title": "L52 Cannon",
+		"typ": "emplacement",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Fahrzeugkanone, kürzeres Rohr als die L55A1. Teil der Fahrzeugbewaffnung, nicht einzeln zu kaufen.\nAnwendung: dasselbe Einsatzbild wie bei der L55A1 – gegen gepanzerte Ziele. Zu Reichweite und Schaden liegen uns keine Zahlen vor.",
+		"felder": {
+			"rolle": "Fahrzeugkanone",
+			"hinweis": "Nicht einzeln kaufbar"
+		}
+	},
+	{
+		"slug": "wardogs-2a42-autocannon",
+		"title": "2A42 Autocannon",
+		"typ": "emplacement",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Maschinenkanone als Fahrzeugbewaffnung. Sie feuert schneller als eine Panzerkanone und trifft dafür weniger hart.\nAnwendung: gegen leichte Fahrzeuge und Infanterie in Deckung. Der typische Fall, in dem eine Salve mehr bringt als ein einzelner schwerer Treffer.",
+		"felder": {
+			"rolle": "Maschinenkanone am Fahrzeug",
+			"hinweis": "Nicht einzeln kaufbar"
+		}
+	},
+	{
+		"slug": "wardogs-oerlikon-gdf",
+		"title": "Duel 35mm Oerlikon GDF Cannons",
+		"typ": "emplacement",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Zwillingskanone im Kaliber 35 mm – die Bewaffnung eines Flugabwehrfahrzeugs, nicht einzeln erhältlich.\nAnwendung: Hubschrauber auf Entfernung zum Abdrehen zwingen. Zwei Rohre bedeuten doppelte Feuerdichte; gegen ein ausweichendes Ziel zählt genau das.",
+		"felder": {
+			"kaliber": "35 mm",
+			"rolle": "Doppelte Flugabwehrkanone am Fahrzeug",
+			"hinweis": "Nicht einzeln kaufbar"
+		}
+	},
+	{
+		"slug": "wardogs-mg3a1-koaxial",
+		"title": "MG3A1 Coaxial Gun",
+		"typ": "emplacement",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Koaxiales Maschinengewehr: Es sitzt neben der Hauptwaffe im selben Turm und zielt mit ihr mit. Kein eigener Kaufposten.\nAnwendung: Infanterie abwehren, ohne eine Granate auf einen einzelnen Soldaten zu verschwenden. Für die Besatzung der billigste Weg, eine Flanke sauber zu halten.",
+		"felder": {
+			"rolle": "Koaxiales Maschinengewehr",
+			"hinweis": "Nicht einzeln kaufbar"
+		}
+	},
+	{
+		"slug": "wardogs-m134d-minigun",
+		"title": "M134D Minigun",
+		"typ": "emplacement",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rotationsmaschinengewehr mit sehr hoher Feuerrate, montiert an Fahrzeugen. Die Minigun-Varianten von Hubschraubern und Radfahrzeugen führen genau diese Waffe.\nAnwendung: Feuerunterstützung aus der Bewegung und beim Absetzen. Frisst Munition in einem Tempo, das kurze, gezielte Feuerstöße zur Pflicht macht.",
+		"felder": {
+			"rolle": "Rotationsmaschinengewehr am Fahrzeug",
+			"hinweis": "Nicht einzeln kaufbar"
+		}
+	},
+	{
+		"slug": "wardogs-b13-rocket-pods",
+		"title": "B 13 Rocket Pods",
+		"typ": "emplacement",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Ungelenkte Raketen in Behältern unter dem Hubschrauber. Teil der Bewaffnung der Raketen-Variante, nicht einzeln zu kaufen.\nAnwendung: Flächenwirkung gegen Stellungen und Fahrzeuge im Anflug. Ungelenkt heißt: Du zielst mit dem ganzen Hubschrauber, und ein schlechter Anflugwinkel kostet den ganzen Angriff.",
+		"felder": {
+			"rolle": "Raketenbehälter am Hubschrauber",
+			"hinweis": "Nicht einzeln kaufbar"
+		}
+	},
+	{
+		"slug": "wardogs-m249-mg",
+		"title": "M249 Machine Gun",
+		"typ": "emplacement",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Die M249 als Fahrzeugbewaffnung – dieselbe Waffe, die es auch zum Tragen gibt, hier fest montiert. Alle Fahrzeugvarianten mit dem Zusatz [M249] führen sie.\nAnwendung: Begleitschutz für Logistikfahrten und Deckung beim Absetzen. Gegen gepanzerte Ziele richtet sie nichts aus; dafür ist sie da, wenn Infanterie den Konvoi stoppen will.",
+		"felder": {
+			"kaliber": "5,56 × 45 mm",
+			"rolle": "Maschinengewehr am Fahrzeug",
+			"hinweis": "Nicht einzeln kaufbar"
+		}
+	},
+	{
+		"slug": "wardogs-kleiner-hammer",
+		"title": "Kleiner Hammer",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Das Einstiegswerkzeug zum Bauen: rund $100, 0,32 kg, Inventarfläche 2×1. Damit gehen die Grundlagen – Recon-Zelt, Stacheldraht, Sandsäcke, Hedgehog – und zwar ohne FOB.\nAnwendung: der billigste Gegenstand im Spiel mit spürbarer Wirkung. $100 für Deckung mitten in der Kontrollzone ist ein Geschäft, das kaum jemand ausschlägt.",
+		"felder": {
+			"preis": "100",
+			"rolle": "Bauwerkzeug, Grundstufe",
+			"hinweis": "Inventarfläche 2×1, 0,32 kg, Spezialisten-Platz"
+		}
+	},
+	{
+		"slug": "wardogs-mittlerer-hammer",
+		"title": "Mittlerer Hammer",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Die zweite Stufe für rund $800, 1,23 kg. Damit kommen Türen, HESCO-Blöcke und -Wände dazu – also alles, was eine FOB zu einer richtigen Stellung macht.\nAnwendung: der erste echte Ausbauschritt für alle, die bauen wollen. Acht Mal so teuer wie der kleine, aber das Gebaute ist auch keine Sandsackreihe mehr.",
+		"felder": {
+			"preis": "800",
+			"rolle": "Bauwerkzeug, Mittelstufe",
+			"hinweis": "Inventarfläche 2×3, 1,23 kg, Spezialisten-Platz"
+		}
+	},
+	{
+		"slug": "wardogs-grosser-hammer",
+		"title": "Großer Hammer",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Die Vollstufe: Support 8, rund $2.400, 3,18 kg und mit 4×2 die größte Inventarfläche der drei. Erst damit lassen sich Mörser, Flugabwehr, Tankstation, Reparaturstation und Drill Rig bauen – und das Bauen geht am schnellsten.\nAnwendung: Pflicht für jeden, der die FOB des Teams ausbaut. Ein Team ohne großen Hammer hat keine Flugabwehr, und das merkt es spätestens beim zweiten Hubschrauber.",
+		"felder": {
+			"preis": "2400",
+			"freischaltung": "Support 8",
+			"rolle": "Bauwerkzeug, Vollstufe",
+			"hinweis": "Inventarfläche 4×2, 3,18 kg, Spezialisten-Platz"
+		}
+	},
+	{
+		"slug": "wardogs-schraubenschluessel",
+		"title": "Schraubenschlüssel",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Werkzeug zum Reparieren, Inventarfläche 1×1. Einen Preis führt die Quelle nicht.\nAnwendung: Fahrzeuge im Feld wieder fahrbereit machen, ohne zur Reparaturstation zurückzufahren. Ein geretteter L2A6 entspricht rund $14.000 – der Platz im Rucksack lohnt sich für jeden, der mit schwerem Gerät unterwegs ist.",
+		"felder": {
+			"rolle": "Reparaturwerkzeug",
+			"hinweis": "Inventarfläche 1×1; Preis in der Quelle nicht angegeben"
+		}
+	},
+	{
+		"slug": "wardogs-brechstange",
+		"title": "Halligan Bar",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Brechstange für rund $1.100, 2,8 kg. Das Werkzeug, mit dem sich Verschlossenes öffnen lässt, statt es aufzuschießen.\nAnwendung: leise in Gebäude kommen und eigene Bauwerke wieder abräumen. Wer ein Tor falsch gesetzt hat, ist froh, dass es nicht gesprengt werden muss.",
+		"felder": {
+			"preis": "1100",
+			"rolle": "Brechwerkzeug",
+			"hinweis": "Inventarfläche 3×1, 2,8 kg, Spezialisten-Platz"
+		}
+	},
+	{
+		"slug": "wardogs-munitionskiste",
+		"title": "Munitionskiste",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Abstellbare Munitionskiste, Inventarfläche 2×2. Zum Preis macht die Quelle keine Angabe.\nAnwendung: eine Stellung halten, ohne zum Lager zurückzulaufen. Besonders an Mörsern und Maschinengewehren – beide sind nur so lange nützlich, wie sie Munition haben.",
+		"felder": {
+			"rolle": "Nachschub für das Team",
+			"hinweis": "Inventarfläche 2×2; Preis in der Quelle nicht angegeben"
+		}
+	},
+	{
+		"slug": "wardogs-at-mine",
+		"title": "AT-Mine",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Panzerabwehrmine für rund $650, mit 8,6 kg kein leichtes Gepäck.\nAnwendung: Zufahrten sperren, ohne jemanden hinstellen zu müssen. Eine Mine an der einzigen Brücke erledigt mehr als ein RPG-Schütze, der warten muss – aber nur, wenn sie dort liegt, wo der Gegner tatsächlich fährt.",
+		"felder": {
+			"preis": "650",
+			"rolle": "Panzerabwehrmine",
+			"hinweis": "Inventarfläche 2×1, 8,6 kg"
+		}
+	},
+	{
+		"slug": "wardogs-claymore",
+		"title": "Claymore",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Richtmine gegen Infanterie, rund $900 und nur 1,6 kg schwer.\nAnwendung: den Rücken einer Stellung sichern. In einem Treppenhaus oder an der Rückseite einer FOB ersetzt sie den Mann, der sonst dort stehen müsste – und sie schläft nicht ein.",
+		"felder": {
+			"preis": "900",
+			"rolle": "Richtmine gegen Infanterie",
+			"hinweis": "Inventarfläche 2×1, 1,6 kg"
+		}
+	},
+	{
+		"slug": "wardogs-fob",
+		"title": "Forward Operating Base",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Die vorgeschobene Basis selbst: rund $7.500 im Einkauf, dazu rund 30 Build-Supplies beim Aufstellen. Sie ist die Voraussetzung für fast alles andere – Mauern, Bunker, Mörser, Flugabwehr und Stationen brauchen eine Bauzone.\nAnwendung: Spawnpunkt und Bauzone nach vorn bringen. Die Stelle entscheidet mehr als das Geld: nah genug an der Zone, um Wege zu sparen, weit genug weg, um nicht im ersten Mörserfeuer zu liegen.",
+		"felder": {
+			"preis": "7500",
+			"baukosten": "30",
+			"rolle": "Vorgeschobene Basis",
+			"hinweis": "Kaufpreis rund $7.500, Aufbau rund 30 Build-Supplies"
+		}
+	},
+	{
+		"slug": "wardogs-bauradio",
+		"title": "Bauradio",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund 20 Build-Supplies.\nAnwendung: Funkpunkt an der Basis. Zur genauen Wirkung im Spiel liegen uns keine belastbaren Angaben vor – hier lohnt der Blick in die Patch Notes mehr als unsere Vermutung.",
+		"felder": {
+			"baukosten": "20",
+			"rolle": "Bauwerk"
+		}
+	},
+	{
+		"slug": "wardogs-hblock",
+		"title": "HBlock",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Bauelement aus der Baureihe rund um HESCO. Die Quelle führt es ohne Kostenangabe.\nAnwendung: Deckung und Abschnitte einer Stellung. Solange die Zahlen fehlen, sind HESCO-Block und HESCO-Wand die Bauteile, über die man sicher etwas sagen kann.",
+		"felder": {
+			"rolle": "Bauwerk",
+			"hinweis": "Baukosten in der Quelle nicht angegeben"
+		}
+	},
+	{
+		"slug": "wardogs-hesco-block-gross",
+		"title": "HESCO-Block (groß)",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund 22 Build-Supplies – etwa doppelt so teuer wie der kleine HESCO-Block, dafür deckt er auch mehr ab. Braucht eine FOB und den mittleren Hammer.\nAnwendung: lange Abschnitte einer Stellung schließen. Wer eine Flanke über zehn Meter dichtmachen will, kommt mit großen Blöcken günstiger weg als mit vielen kleinen.",
+		"felder": {
+			"baukosten": "22",
+			"rolle": "Bauwerk"
+		}
+	},
+	{
+		"slug": "wardogs-bunker-boden",
+		"title": "Bunkerboden",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund 10 Build-Supplies. Bauteil, mit dem ein Bunker eine feste Sohle bekommt.\nAnwendung: Bunker gegen Beschuss von unten und gegen Granaten absichern, die hineinrollen. Zehn Supplies sind wenig gemessen daran, dass ein Treffer sonst die ganze Besatzung nimmt.",
+		"felder": {
+			"baukosten": "10",
+			"rolle": "Bunker-Bauteil"
+		}
+	},
+	{
+		"slug": "wardogs-bunker-dach",
+		"title": "Bunkerdach",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund 10 Build-Supplies. Das Gegenstück zum Boden: Es schließt den Bunker nach oben.\nAnwendung: Schutz gegen Mörser und alles, was von oben kommt. Ein offener Bunker ist gegen indirektes Feuer kaum besser als ein Loch – das Dach macht den Unterschied.",
+		"felder": {
+			"baukosten": "10",
+			"rolle": "Bunker-Bauteil"
+		}
+	},
+	{
+		"slug": "wardogs-moerser-unterstand",
+		"title": "Mörser-Unterstand",
+		"typ": "bauwerk",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund 100 Build-Supplies – ein teures Bauwerk, vergleichbar mit dem Mörser selbst.\nAnwendung: die Mörserstellung gegen Gegenfeuer schützen. Lohnt dort, wo der Mörser längere Zeit steht und das Team mit Markierungen versorgt wird; für ein paar Schuss aus dem Hinterhalt sind 100 Supplies zu viel.",
+		"felder": {
+			"baukosten": "100",
+			"rolle": "Geschützte Stellung für indirektes Feuer"
+		}
 	}
 ]

@@ -478,18 +478,19 @@ function warleek_step_items( $force = false ) {
 	// erscheinen sofort und belegen keinen Platz in der Warteschlange.
 	// Der Rest wird terminiert; ändert sich der Plan, wird neu verteilt,
 	// aber niemals etwas zurückgenommen, das schon veröffentlicht ist.
-	$signatur   = warleek_item_plan_signatur();
-	$neu_planen = get_option( 'warleek_items_plan' ) !== $signatur;
+	$signatur = warleek_item_plan_signatur();
 
 	$status = array();
 	$warten = array();
 	foreach ( $reihen as $e ) {
 		$da = get_posts( array( 'post_type' => 'item', 'name' => $e['slug'], 'post_status' => array( 'publish', 'future', 'draft', 'pending', 'private' ), 'posts_per_page' => 1, 'fields' => 'ids' ) );
 		$id = $da ? (int) $da[0] : 0;
-		$status[ $e['slug'] ] = $id ? array( 'id' => $id, 'status' => get_post_status( $id ) ) : null;
+		$status[ $e['slug'] ] = $id ? array( 'id' => $id, 'status' => get_post_status( $id ), 'datum' => get_post_field( 'post_date', $id ) ) : null;
 		if ( ! empty( $e['start'] ) ) { continue; }
-		if ( ! $id ) { $warten[] = $e['slug']; continue; }
-		if ( $neu_planen && 'future' === $status[ $e['slug'] ]['status'] ) { $warten[] = $e['slug']; }
+		// Alles, was noch wartet, wird gemeinsam neu verteilt – auch das bereits
+		// Geplante. Sonst bekämen nachgelieferte Einträge einen eigenen Plan ab
+		// morgen und stapelten sich auf die bestehenden Termine.
+		if ( ! $id || 'future' === $status[ $e['slug'] ]['status'] ) { $warten[] = $e['slug']; }
 	}
 	$termine = $warten ? warleek_item_termine( count( $warten ) ) : array();
 	$plan    = $warten ? array_combine( $warten, array_slice( $termine, 0, count( $warten ) ) ) : array();
@@ -524,10 +525,10 @@ function warleek_step_items( $force = false ) {
 				$sofort++;
 				warleek_log( 'sofort veröffentlicht (ohne Freischaltung): ' . $e['slug'] );
 			} elseif ( isset( $plan[ $e['slug'] ] ) && 'future' === $vorhanden['status'] ) {
+				if ( $plan[ $e['slug'] ] !== $vorhanden['datum'] ) { $umgeplant++; }
 				$daten['post_status']   = 'future';
 				$daten['post_date']     = $plan[ $e['slug'] ];
 				$daten['post_date_gmt'] = get_gmt_from_date( $plan[ $e['slug'] ] );
-				$umgeplant++;
 			}
 			wp_update_post( wp_slash( $daten ) );
 			$akt++;

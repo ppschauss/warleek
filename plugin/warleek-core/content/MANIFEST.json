@@ -936,5 +936,155 @@
         "use": "item-wardogs-uh-1y",
         "size": 9686,
         "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-2a42-autocannon.webp": {
+        "alt": "2A42 Autocannon aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-2a42-autocannon",
+        "size": 12154,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-9k333-verba.webp": {
+        "alt": "9K333 Verba aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-9k333-verba",
+        "size": 8058,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-at-mine.webp": {
+        "alt": "AT-Mine aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-at-mine",
+        "size": 12144,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-b13-rocket-pods.webp": {
+        "alt": "B 13 Rocket Pods aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-b13-rocket-pods",
+        "size": 12916,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-bauradio.webp": {
+        "alt": "Bauradio aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-bauradio",
+        "size": 13242,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-brechstange.webp": {
+        "alt": "Halligan Bar aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-brechstange",
+        "size": 8350,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-bunker-boden.webp": {
+        "alt": "Bunkerboden aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-bunker-boden",
+        "size": 8134,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-bunker-dach.webp": {
+        "alt": "Bunkerdach aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-bunker-dach",
+        "size": 8134,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-claymore.webp": {
+        "alt": "Claymore aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-claymore",
+        "size": 8924,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-fob.webp": {
+        "alt": "Forward Operating Base aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-fob",
+        "size": 8132,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-grosser-hammer.webp": {
+        "alt": "Großer Hammer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-grosser-hammer",
+        "size": 9372,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-hblock.webp": {
+        "alt": "HBlock aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-hblock",
+        "size": 9806,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-hesco-block-gross.webp": {
+        "alt": "HESCO-Block (groß) aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-hesco-block-gross",
+        "size": 8532,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-kleiner-hammer.webp": {
+        "alt": "Kleiner Hammer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-kleiner-hammer",
+        "size": 8094,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-l52-kanone.webp": {
+        "alt": "L52 Cannon aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-l52-kanone",
+        "size": 6354,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-l55a1-kanone.webp": {
+        "alt": "L55A1 Cannon aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-l55a1-kanone",
+        "size": 5986,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m12g.webp": {
+        "alt": "M12G aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m12g",
+        "size": 5832,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m134d-minigun.webp": {
+        "alt": "M134D Minigun aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m134d-minigun",
+        "size": 9394,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m249-mg.webp": {
+        "alt": "M249 Machine Gun aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m249-mg",
+        "size": 8956,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-mg3a1-koaxial.webp": {
+        "alt": "MG3A1 Coaxial Gun aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-mg3a1-koaxial",
+        "size": 6028,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-mittlerer-hammer.webp": {
+        "alt": "Mittlerer Hammer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-mittlerer-hammer",
+        "size": 7528,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-moerser-unterstand.webp": {
+        "alt": "Mörser-Unterstand aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-moerser-unterstand",
+        "size": 13096,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-munitionskiste.webp": {
+        "alt": "Munitionskiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-munitionskiste",
+        "size": 7288,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-oerlikon-gdf.webp": {
+        "alt": "Duel 35mm Oerlikon GDF Cannons aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-oerlikon-gdf",
+        "size": 5986,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-schraubenschluessel.webp": {
+        "alt": "Schraubenschlüssel aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-schraubenschluessel",
+        "size": 7108,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
     }
 }
