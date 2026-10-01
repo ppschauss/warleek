@@ -1,0 +1,18 @@
+{
+  "typ-waffe": {
+    "alt": "WARDOGS-Spielszene: Sturmgewehr mit Rotpunktvisier in der Ego-Perspektive in einer Dorfstraße",
+    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+  },
+  "typ-fahrzeug": {
+    "alt": "WARDOGS-Spielszene: leichter Transporthubschrauber im Tiefflug, Soldaten sitzen auf den Kufen",
+    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+  },
+  "typ-emplacement": {
+    "alt": "WARDOGS Key-Art – Platzhalter für die Kategorie Stellungen, bis ein passendes Bild vorliegt",
+    "credit": "Offizielles Pressematerial (Key-Art) · © BULKHEAD / Team17"
+  },
+  "typ-bauwerk": {
+    "alt": "WARDOGS Key-Art – Platzhalter für die Kategorie Bauwerke, bis ein passendes Bild vorliegt",
+    "credit": "Offizielles Pressematerial (Key-Art) · © BULKHEAD / Team17"
+  }
+}

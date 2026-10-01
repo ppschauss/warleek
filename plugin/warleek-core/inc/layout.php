@@ -95,3 +95,23 @@ function warleek_nav_mark_current( $html, $block ) {
 }
 add_filter( 'render_block_core/navigation-link', 'warleek_nav_mark_current', 10, 2 );
 add_filter( 'render_block_core/navigation-submenu', 'warleek_nav_mark_current', 10, 2 );
+
+/* ------------------------------------------------------------ Bildquelle */
+/**
+ * Quellenangabe des Beitragsbildes. Leer, wenn das Bild keine braucht
+ * (eigenes Material); gesetzt bei fremdem, etwa offiziellem Pressematerial.
+ *
+ * @param int $post_id Beitrag, Standard: der aktuelle.
+ * @return string
+ */
+function warleek_bildquelle( $post_id = 0 ) {
+	$post_id = $post_id ? (int) $post_id : (int) get_the_ID();
+	$thumb   = $post_id ? get_post_thumbnail_id( $post_id ) : 0;
+	if ( ! $thumb ) { return ''; }
+	return trim( (string) get_post_meta( $thumb, '_warleek_credit', true ) );
+}
+
+add_shortcode( 'warleek_bildquelle', function () {
+	$c = warleek_bildquelle();
+	return $c ? '<p class="wl-bildquelle"><strong>Bild:</strong> ' . esc_html( $c ) . '</p>' : '';
+} );

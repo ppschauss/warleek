@@ -11,8 +11,17 @@ gegen die die Herkunftsangabe gebaut wurde.
    oder Ausrüstungsmenü, zugeschnitten auf den Gegenstand. Wer das Spiel besitzt,
    darf davon Bildschirmfotos für redaktionelle Zwecke verwenden; wir nennen die
    Quelle im Eintrag.
-2. **Offizielles Presse- und Store-Material** von Team17/BULKHEAD, soweit deren
-   Presse- oder Fan-Content-Bedingungen es erlauben.
+2. **Offizielles Pressematerial** von Team17/BULKHEAD. Beide Pressekits sind frei
+   herunterladbar und enthalten Key-Art, Logos und 4K-Screenshots:
+
+   - Team17 (Sept. 2026, gebrandete Screenshots):
+     <https://www.team17.com/press-and-creator-hub>
+   - BULKHEAD (Jan. 2026, ungebrandete Screenshots):
+     <https://www.wardogs.com/press-kit>
+
+   Den Kits liegt kein Lizenztext bei. Pressematerial ist für die Berichterstattung
+   gedacht, und genau dafür nutzen wir es – mit Quellenangabe am Eintrag. Wer es
+   schriftlich braucht, fragt `pr@team17.com`.
 
 **Nicht zulässig:** aus fremden Datenbanken extrahierte Symbole oder Renderings.
 Deren Sammlung ist nach § 87b UrhG geschützt, und übernommene Bilddateien sind
@@ -33,6 +42,23 @@ typ-bauwerk.webp       → Bauwerke
 Die Slugs aller Einträge stehen in `plugin/warleek-core/content/_content/items.json`.
 Passt ein Dateiname zu nichts, meldet das Skript es – es wird nichts still übergangen.
 
+## Quellenangabe (`credits.json`)
+
+Fremdes Material wird **nur mit Quelle** gezeigt. `credits.json` setzt sie pro Datei,
+Schlüssel ist der Dateiname ohne Endung:
+
+```json
+{
+  "typ-waffe": {
+    "alt": "Was auf dem Bild zu sehen ist",
+    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+  }
+}
+```
+
+`credit` erscheint unter dem Eintrag im Kasten „Woher die Angaben stammen". Eigene
+Aufnahmen brauchen keinen Eintrag – dann steht dort nichts, und das stimmt dann auch.
+
 ## Format
 
 Breite 1024 px, WebP bevorzugt (`cwebp -q 85 quelle.png -o wardogs-ak-74.webp`).
@@ -46,5 +72,11 @@ php bin/items-media.php             # übernimmt die Dateien
 ./manage.sh seed                    # setzt sie als Beitragsbilder
 ```
 
-Solange hier nichts liegt, bleiben die Einträge bildlos. Das ist beabsichtigt:
-lieber kein Bild als ein falsches.
+## Stand
+
+Die vier Kategoriebilder liegen aus dem offiziellen Pressematerial vor. Für
+*Stellungen* und *Bauwerke* zeigen die Pressekits nichts Passendes – dort steht
+vorerst die Key-Art, im Alt-Text als Platzhalter gekennzeichnet. Bilder einzelner
+Gegenstände gibt es nur im Spiel selbst; sie müssen aus eigenen Aufnahmen kommen.
+
+Was fehlt, bleibt bildlos. Das ist beabsichtigt: lieber kein Bild als ein falsches.

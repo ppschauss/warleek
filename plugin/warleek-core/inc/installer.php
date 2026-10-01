@@ -43,6 +43,19 @@ function warleek_content_json( $name ) {
 
 /* ------------------------------------------------------------ Medien */
 /**
+ * Schreibt die Bildquelle an den Anhang. Fremdes Material – etwa offizielles
+ * Pressematerial – wird auf der Seite nur mit dieser Angabe gezeigt.
+ *
+ * @param int   $id   Anhang-ID.
+ * @param array $info Manifest-Eintrag.
+ */
+function warleek_set_bild_credit( $id, array $info ) {
+	$credit = trim( (string) ( $info['credit'] ?? '' ) );
+	if ( '' === $credit ) { delete_post_meta( $id, '_warleek_credit' ); return; }
+	update_post_meta( $id, '_warleek_credit', sanitize_text_field( $credit ) );
+}
+
+/**
  * Importiert alle Manifest-Dateien in die Mediathek (Dedupe über _warleek_asset_key).
  * @return array use-key => attachment-id
  */
@@ -61,6 +74,7 @@ function warleek_seed_media( $assets_dir = '' ) {
 		if ( $q->posts ) {
 			$id = (int) $q->posts[0];
 			update_post_meta( $id, '_wp_attachment_image_alt', $info['alt'] );
+			warleek_set_bild_credit( $id, $info );
 			$map[ $key ] = $id; continue;
 		}
 		$bits = wp_upload_bits( basename( $rel ), null, file_get_contents( $file ) );
@@ -76,6 +90,7 @@ function warleek_seed_media( $assets_dir = '' ) {
 			update_post_meta( $id, '_wp_attachment_image_alt', $info['alt'] );
 		}
 		update_post_meta( $id, '_warleek_asset_key', $key );
+		warleek_set_bild_credit( $id, $info );
 		$map[ $key ] = (int) $id;
 		warleek_log( "media: $rel → #$id" );
 	}
@@ -224,7 +239,7 @@ function warleek_seed_pages( array $pages, array $media, array $site, $force = f
  * nachgeprüft wurde. Ohne Angabe gilt „nicht nachgeprüft" – die vorsichtigere
  * Aussage, nicht die schmeichelhaftere.
  *
- * @param array $g Guide-Datensatz (Schlüssel `quellen`, `geprueft`).
+ * @param array $g Datensatz (Schlüssel `quellen`, `geprueft`, optional `bild`).
  * @return string HTML
  */
 function warleek_guide_herkunft( array $g ) {
@@ -241,9 +256,12 @@ function warleek_guide_herkunft( array $g ) {
 		$pruef = '<p><strong>Im Spiel nachgeprüft:</strong> ' . esc_html( $geprueft ) . '.</p>';
 	}
 
+	$bild = trim( (string) ( $g['bild'] ?? '' ) );
+	$bild = '' === $bild ? '' : '<p><strong>Bild:</strong> ' . esc_html( $bild ) . '</p>';
+
 	return "\n" . '<div class="wl-herkunft"><h2>Woher die Angaben stammen</h2>'
 		. ( $zeilen ? '<ul>' . $zeilen . '</ul>' : '' )
-		. $pruef . '</div>' . "\n";
+		. $pruef . $bild . '</div>' . "\n";
 }
 
 function warleek_seed_guides( array $guides, array $media, array $site, $force = false ) {

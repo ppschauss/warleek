@@ -544,3 +544,10 @@ html.has-modal-open .wl-consent { display: none; }
 .wl-itemliste a:hover { color: var(--wp--preset--color--leek); }
 .wl-itemliste span { font-family: var(--wp--preset--font-family--mono); font-size: 0.85rem; color: var(--wp--preset--color--steel); }
 .wl-empty { padding: var(--wp--preset--spacing--40); border: var(--wl-border); border-radius: var(--wl-radius); background: var(--wp--preset--color--surface); color: var(--wp--preset--color--steel); text-align: center; }
+
+.wl-bildquelle {
+	margin: 0.6rem 0 0;
+	font-size: 0.8rem;
+	color: var(--wp--preset--color--sand);
+	opacity: 0.85;
+}

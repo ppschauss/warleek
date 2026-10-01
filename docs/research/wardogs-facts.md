@@ -12,6 +12,12 @@ Alle Zahlen sind Early-Access-Werte und können sich mit Patches ändern → im 
 - Entwickler BULKHEAD, Publisher Team17; 14 Sprachen inkl. Deutsch (Interface, Audio, Untertitel); Windows-PC
 - Quelle: https://store.steampowered.com/app/1867240/WARDOGS/
 
+## Offizielles Pressematerial (Pressekits, abgerufen 01.10.2026)
+Zwei frei herunterladbare Kits – Team17 (Sept. 2026) und BULKHEAD (Jan. 2026). Inhalt: Key-Art, Logos, 4K-Screenshots, Trailer, Info- und Fact-Sheet.
+Das One-Page-Explainer bestätigt aus erster Hand, was bisher nur aus dem Steam-Store stammte: „up to 100-player", drei Teams, zufällige 2×2-km-Control-Zone auf 256 km², 100 Punkte zum Sieg, **$10.000 Startkapital**, Loadout-Kauf pro Leben, Cash persistent über Matches, Proximity-Voice.
+Nicht enthalten: Symbole oder Renderings einzelner Waffen und Fahrzeuge – die gibt es nur im Spiel.
+- Quellen: https://www.team17.com/press-and-creator-hub · https://www.wardogs.com/press-kit
+
 ## Zahlen aus Steam-News (Patch Notes, 10.–13.09.2026)
 - „400,000 Peak Concurrent Users", „1.25 Million Copies Sold" (Ankündigungen der Entwickler)
 - Quelle: Steam-Community-Announcements (im Sync importiert)

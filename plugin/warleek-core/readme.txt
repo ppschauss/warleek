@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.10.0
+Stable tag: 2.11.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.11.0 =
+* Datenbank: Kategoriebilder aus dem offiziellen Pressematerial von BULKHEAD/Team17 – alle 73 Einträge haben jetzt ein Beitragsbild.
+* Jedes Bild kann eine Quellenangabe tragen (`credits.json` → `_warleek_credit`); sie erscheint im Kasten „Woher die Angaben stammen".
+* Neu: Shortcode `[warleek_bildquelle]` und Funktion `warleek_bildquelle()` für Bildquellen an beliebigen Beiträgen.
 
 = 2.10.0 =
 * **Jeder Datenbank-Eintrag hat jetzt eine eigene Beschreibung** – Freischaltstufe, einmalige Freischaltgebühr, Preis pro Leben und wofür man den Gegenstand überhaupt nimmt. 73 Texte, keiner davon ein Platzhalter.

@@ -118,7 +118,7 @@ add_shortcode( 'warleek_item_herkunft', function () {
 	$q   = get_post_meta( $id, '_warleek_quellen', true );
 	$g   = get_post_meta( $id, '_warleek_geprueft', true );
 	$arr = $q ? array_map( 'trim', explode( '|', (string) $q ) ) : array();
-	return warleek_guide_herkunft( array( 'quellen' => $arr, 'geprueft' => $g ) );
+	return warleek_guide_herkunft( array( 'quellen' => $arr, 'geprueft' => $g, 'bild' => warleek_bildquelle( $id ) ) );
 } );
 
 /** Sortierung im Archiv: nach Kategorie, dann alphabetisch. */

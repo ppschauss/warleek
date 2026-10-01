@@ -433,5 +433,29 @@
         "alt": "Das Sichtfeld-Menü mit einer Vorschau, die 60 und 90 Grad im Cockpit vergleicht.",
         "use": "vid-sichtfeld",
         "size": 30500
+    },
+    "item-typ-bauwerk.webp": {
+        "alt": "WARDOGS Key-Art – Platzhalter für die Kategorie Bauwerke, bis ein passendes Bild vorliegt",
+        "use": "item-typ-bauwerk",
+        "size": 76714,
+        "credit": "Offizielles Pressematerial (Key-Art) · © BULKHEAD / Team17"
+    },
+    "item-typ-emplacement.webp": {
+        "alt": "WARDOGS Key-Art – Platzhalter für die Kategorie Stellungen, bis ein passendes Bild vorliegt",
+        "use": "item-typ-emplacement",
+        "size": 76714,
+        "credit": "Offizielles Pressematerial (Key-Art) · © BULKHEAD / Team17"
+    },
+    "item-typ-fahrzeug.webp": {
+        "alt": "WARDOGS-Spielszene: leichter Transporthubschrauber im Tiefflug, Soldaten sitzen auf den Kufen",
+        "use": "item-typ-fahrzeug",
+        "size": 78152,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "item-typ-waffe.webp": {
+        "alt": "WARDOGS-Spielszene: Sturmgewehr mit Rotpunktvisier in der Ego-Perspektive in einer Dorfstraße",
+        "use": "item-typ-waffe",
+        "size": 230316,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
     }
 }

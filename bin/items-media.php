@@ -8,6 +8,10 @@
  *   wardogs-ak-74.webp   → Bild für den Eintrag mit diesem Slug
  *   typ-waffe.webp       → Ersatzbild für alle Einträge der Kategorie „waffe"
  *
+ * Eine optionale `credits.json` im selben Ordner setzt pro Datei (Schlüssel = Dateiname
+ * ohne Endung) einen eigenen `alt`-Text und eine `credit`-Zeile – die Bildquelle, die
+ * unter dem Eintrag ausgewiesen wird. Ohne Quelle kein fremdes Bild.
+ *
  * Es werden **nur** Dateien übernommen, die zu einem vorhandenen Eintrag oder
  * einer vorhandenen Kategorie passen – so fällt ein Tippfehler im Namen sofort auf,
  * statt still nichts zu bewirken.
@@ -23,6 +27,8 @@ $items = json_decode( (string) file_get_contents( $root . '/plugin/warleek-core/
 $mpath = $root . '/plugin/warleek-core/content/MANIFEST.json';
 $mani  = json_decode( (string) file_get_contents( $mpath ), true );
 $imgd  = $root . '/plugin/warleek-core/content/img';
+$cred  = file_exists( $src . '/credits.json' ) ? json_decode( (string) file_get_contents( $src . '/credits.json' ), true ) : array();
+if ( ! is_array( $cred ) ) { fwrite( STDERR, "credits.json ist kein gültiges JSON\n" ); exit( 1 ); }
 
 if ( ! is_array( $items ) || ! is_array( $mani ) ) { fwrite( STDERR, "items.json oder MANIFEST.json nicht lesbar\n" ); exit( 1 ); }
 if ( ! is_dir( $src ) ) { echo "Noch keine Bilder in content-src/items/img/ – nichts zu tun.\n"; exit( 0 ); }
@@ -48,10 +54,15 @@ foreach ( glob( $src . '/*.{webp,png,jpg,jpeg}', GLOB_BRACE ) as $datei ) {
 		continue;
 	}
 
-	$ziel = $key . '.' . $ext;
+	$info = isset( $cred[ $name ] ) && is_array( $cred[ $name ] ) ? $cred[ $name ] : array();
+	if ( ! empty( $info['alt'] ) ) { $alt = (string) $info['alt']; }
+
+	$ziel  = $key . '.' . $ext;
 	if ( ! $dry ) { copy( $datei, $imgd . '/' . $ziel ); }
-	$mani[ $ziel ] = array( 'alt' => $alt, 'use' => $key, 'size' => filesize( $datei ) );
-	printf( "%-34s → %s\n", basename( $datei ), $key );
+	$eintrag = array( 'alt' => $alt, 'use' => $key, 'size' => filesize( $datei ) );
+	if ( ! empty( $info['credit'] ) ) { $eintrag['credit'] = (string) $info['credit']; }
+	$mani[ $ziel ] = $eintrag;
+	printf( "%-34s → %-26s %s\n", basename( $datei ), $key, empty( $info['credit'] ) ? '(ohne Quellenangabe)' : $info['credit'] );
 	$ok++;
 }
 
