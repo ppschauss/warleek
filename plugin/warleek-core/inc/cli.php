@@ -1,7 +1,7 @@
 <?php
 /**
  * Warleek — WP-CLI-Befehle.
- *   wp warleek install [--force]        Inhalte, Medien, Menüs, SEO-Plugin, Patch Notes
+ *   wp warleek install [--force] [--steps=media,items]  Inhalte, Medien, Menüs, SEO-Plugin, Patch Notes
  *   wp warleek sync-patchnotes [--force]
  *   wp warleek status
  *
@@ -26,19 +26,36 @@ class Warleek_Core_CLI {
 	 * [--skip-plugins]
 	 * : Rank Math nicht installieren.
 	 *
+	 * [--steps=<liste>]
+	 * : Nur diese Schritte, mit Komma getrennt. Ohne Angabe laufen alle.
+	 *   Verfügbar: plugins, media, pages, guides, retire, items, partners, nav, patchnotes, translate
+	 *
 	 * ## EXAMPLES
 	 *
 	 *     wp warleek install
 	 *     wp warleek install --force
+	 *     wp warleek install --steps=media,items
+	 *     wp warleek install --steps=guides --force
 	 */
 	public function install( $args, $assoc ) {
 		$force = ! empty( $assoc['force'] );
-		foreach ( warleek_install_steps() as $slug => $step ) {
+		$alle  = warleek_install_steps();
+		$nur   = array();
+		if ( ! empty( $assoc['steps'] ) ) {
+			$nur = array_filter( array_map( 'trim', explode( ',', (string) $assoc['steps'] ) ) );
+			$unbekannt = array_diff( $nur, array_keys( $alle ) );
+			if ( $unbekannt ) {
+				WP_CLI::error( 'Unbekannte Schritte: ' . implode( ', ', $unbekannt ) . ' – verfügbar: ' . implode( ', ', array_keys( $alle ) ) );
+			}
+		}
+		foreach ( $alle as $slug => $step ) {
+			if ( $nur && ! in_array( $slug, $nur, true ) ) { continue; }
 			if ( 'plugins' === $slug && ! empty( $assoc['skip-plugins'] ) ) { WP_CLI::log( '– ' . $step['label'] . ': übersprungen' ); continue; }
 			$res = warleek_run_step( $slug, $force );
 			$msg = ( $res['ok'] ? '✓ ' : '✕ ' ) . $step['label'] . ': ' . ( $res['msg'] ?? '' );
 			if ( $res['ok'] ) { WP_CLI::log( $msg ); } else { WP_CLI::warning( $msg ); }
 		}
+		if ( $nur ) { WP_CLI::success( sprintf( '%d Schritt(e) ausgeführt.', count( $nur ) ) ); return; }
 		WP_CLI::success( 'Installation abgeschlossen. Chat-Links setzen: wp option patch update warleek_options discord_url \'https://discord.gg/…\'' );
 	}
 

@@ -7,7 +7,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.11.0' ); }
+if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.12.0' ); }
 define( 'WARLEEK_DIR', get_template_directory() );
 define( 'WARLEEK_URI', get_template_directory_uri() );
 

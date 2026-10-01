@@ -43,6 +43,29 @@ function warleek_content_json( $name ) {
 
 /* ------------------------------------------------------------ Medien */
 /**
+ * Ersetzt die Datei eines vorhandenen Anhangs durch die mitgelieferte Fassung.
+ *
+ * Die Anhang-ID bleibt erhalten – Beitragsbilder und Bild-URLs in Seitentexten
+ * zeigen weiter auf dasselbe Objekt. Ohne Änderung an den Bytes passiert nichts.
+ *
+ * @param int    $id    Anhang.
+ * @param string $datei Quelldatei im Inhaltsordner.
+ * @return bool Ob die Datei ersetzt wurde.
+ */
+function warleek_refresh_media_file( $id, $datei ) {
+	$ziel = get_attached_file( $id );
+	if ( ! $ziel || ! file_exists( $ziel ) || ! file_exists( $datei ) ) { return false; }
+	if ( pathinfo( $ziel, PATHINFO_EXTENSION ) !== pathinfo( $datei, PATHINFO_EXTENSION ) ) { return false; }
+	if ( md5_file( $ziel ) === md5_file( $datei ) ) { return false; }
+	if ( ! copy( $datei, $ziel ) ) { warleek_log( 'konnte nicht ersetzen: ' . basename( $datei ) ); return false; }
+	if ( str_starts_with( (string) get_post_mime_type( $id ), 'image/' ) ) {
+		wp_update_attachment_metadata( $id, wp_generate_attachment_metadata( $id, $ziel ) );
+	}
+	warleek_log( 'Datei ersetzt: ' . basename( $datei ) );
+	return true;
+}
+
+/**
  * Schreibt die Bildquelle an den Anhang. Fremdes Material – etwa offizielles
  * Pressematerial – wird auf der Seite nur mit dieser Angabe gezeigt.
  *
@@ -57,9 +80,13 @@ function warleek_set_bild_credit( $id, array $info ) {
 
 /**
  * Importiert alle Manifest-Dateien in die Mediathek (Dedupe über _warleek_asset_key).
+ *
+ * @param string $assets_dir Inhaltsordner, Standard: der mitgelieferte.
+ * @param bool   $force      Vorhandene Dateien durch die mitgelieferte Fassung ersetzen.
+ * @param int    $ersetzt    Zählt die ersetzten Dateien (Ausgabeparameter).
  * @return array use-key => attachment-id
  */
-function warleek_seed_media( $assets_dir = '' ) {
+function warleek_seed_media( $assets_dir = '', $force = false, &$ersetzt = 0 ) {
 	if ( ! $assets_dir ) { $assets_dir = warleek_content_dir(); }
 	$map = array();
 	if ( ! $assets_dir ) { return $map; }
@@ -75,6 +102,7 @@ function warleek_seed_media( $assets_dir = '' ) {
 			$id = (int) $q->posts[0];
 			update_post_meta( $id, '_wp_attachment_image_alt', $info['alt'] );
 			warleek_set_bild_credit( $id, $info );
+			if ( $force && warleek_refresh_media_file( $id, $file ) ) { $ersetzt++; }
 			$map[ $key ] = $id; continue;
 		}
 		$bits = wp_upload_bits( basename( $rel ), null, file_get_contents( $file ) );
@@ -497,16 +525,19 @@ function warleek_install_steps() {
 			'label'       => 'Bilder & Video in die Mediathek',
 			'description' => 'Importiert Key-Visuals, Guide-Bilder, Logo-Varianten, Favicon und den Hero-Loop.',
 			'callback'    => 'warleek_step_media',
+			'force'       => 'Ersetzt vorhandene Bilddateien durch die mitgelieferte Fassung – gleiche Mediathek-Einträge, neuer Inhalt.',
 		),
 		'pages' => array(
 			'label'       => 'Seiten anlegen',
 			'description' => 'Startseite, Partner-Seite, Spiel-Hub mit sechs Themenseiten, About us, Impressum, Datenschutz.',
 			'callback'    => 'warleek_step_pages',
+			'force'       => 'Setzt alle Seitentexte auf die Auslieferung zurück. Eigene Änderungen gehen verloren.',
 		),
 		'guides' => array(
 			'label'       => 'Guides anlegen',
 			'description' => 'Die mitgelieferten Guides samt Themen-Taxonomie.',
 			'callback'    => 'warleek_step_guides',
+			'force'       => 'Setzt alle Guide-Texte auf die Auslieferung zurück. Eigene Änderungen gehen verloren.',
 		),
 		'retire' => array(
 			'label'       => 'Alte Seiten zurückziehen',
@@ -517,6 +548,7 @@ function warleek_install_steps() {
 			'label'       => 'Datenbank anlegen',
 			'description' => 'Legt Waffen, Fahrzeuge, Emplacements und Bauwerke an – terminiert, drei Einträge pro Tag. Vorhandene bleiben unberührt.',
 			'callback'    => 'warleek_step_items',
+			'force'       => 'Schreibt alle Beschreibungen neu. Veröffentlichungstermine und bereits veröffentlichte Einträge bleiben.',
 		),
 		'partners' => array(
 			'label'       => 'Partner anlegen',
@@ -532,11 +564,13 @@ function warleek_install_steps() {
 			'label'       => 'Patch Notes von Steam holen',
 			'description' => 'Erster Sync der offiziellen WARDOGS-Updates; danach stündlich automatisch.',
 			'callback'    => 'warleek_step_patchnotes',
+			'force'       => 'Holt alle Patch Notes neu von Steam, auch unveränderte.',
 		),
 		'translate' => array(
 			'label'       => 'Patch Notes übersetzen',
 			'description' => 'Holt die deutsche Fassung samt Kurzfassung über die Claude-API. Ohne API-Schlüssel wird der Schritt übersprungen.',
 			'callback'    => 'warleek_step_translate',
+			'force'       => 'Übersetzt alle Patch Notes neu – kostet API-Guthaben.',
 		),
 	);
 }
@@ -575,10 +609,13 @@ function warleek_step_plugins( $force = false ) {
 }
 
 function warleek_step_media( $force = false ) {
-	$before = count( (array) get_option( 'warleek_media_map', array() ) );
-	$map    = warleek_seed_media();
+	$before  = count( (array) get_option( 'warleek_media_map', array() ) );
+	$ersetzt = 0;
+	$map     = warleek_seed_media( '', (bool) $force, $ersetzt );
 	update_option( 'warleek_media_map', $map, false );
-	return array( 'ok' => (bool) $map, 'msg' => sprintf( '%d Medien in der Mediathek (%d neu).', count( $map ), max( 0, count( $map ) - $before ) ), 'data' => array( 'media' => count( $map ) ) );
+	$msg = sprintf( '%d Medien in der Mediathek (%d neu', count( $map ), max( 0, count( $map ) - $before ) );
+	$msg .= $force ? sprintf( ', %d ersetzt).', $ersetzt ) : ').';
+	return array( 'ok' => (bool) $map, 'msg' => $msg, 'data' => array( 'media' => count( $map ) ) );
 }
 
 function warleek_step_pages( $force = false ) {
@@ -831,7 +868,11 @@ function warleek_admin_assets( $hook ) {
 		.wl-steps em{font-style:normal;color:#646970;font-size:12px}
 		.wl-steps .wl-msg{display:block;margin-top:4px;font-size:12px;color:#1d2327}
 		.wl-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 10px}
-		.wl-single{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0}
+		.wl-steps .wl-pick{margin:3px 0 0}
+		.wl-steps .wl-force{display:block;margin-top:4px;font-size:12px;color:#8a6d1b}
+		.wl-steps li.wl-just .wl-msg::after{content:" · gerade ausgeführt";color:#2271b1}
+		.wl-pickbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 10px}
+		.wl-pickbar .wl-count{color:#646970}
 		.wl-next{background:#fff;border:1px solid #dcdcde;border-radius:6px;padding:14px 18px;margin-top:22px}
 		.wl-next ol{margin:8px 0 0 18px}
 	' );
@@ -900,10 +941,15 @@ function warleek_render_install_tab() {
 		<?php foreach ( $steps as $slug => $step ) :
 			$done = ! empty( $log[ $slug ]['ok'] ); ?>
 			<li data-step="<?php echo esc_attr( $slug ); ?>" data-state="<?php echo $done ? 'done' : 'idle'; ?>">
+				<input type="checkbox" class="wl-pick" value="<?php echo esc_attr( $slug ); ?>"
+					aria-label="<?php echo esc_attr( $step['label'] ); ?> auswählen">
 				<span class="wl-ico"><?php echo $done ? '✓' : '·'; ?></span>
 				<span>
 					<strong><?php echo esc_html( $step['label'] ); ?></strong>
 					<em><?php echo esc_html( $step['description'] ); ?></em>
+					<?php if ( ! empty( $step['force'] ) ) : ?>
+						<span class="wl-force">Neu einspielen: <?php echo esc_html( $step['force'] ); ?></span>
+					<?php endif; ?>
 					<span class="wl-msg"><?php echo $done ? esc_html( $log[ $slug ]['msg'] ) : ''; ?></span>
 				</span>
 			</li>
@@ -912,16 +958,21 @@ function warleek_render_install_tab() {
 
 	<div class="wl-actions">
 		<button type="button" class="button button-primary button-hero" id="wl-run-all">Komplett installieren</button>
-		<label><input type="checkbox" id="wl-force"> Inhalte überschreiben (setzt eigene Änderungen an Seitentexten zurück)</label>
+		<label><input type="checkbox" id="wl-force"> dabei Inhalte überschreiben</label>
 	</div>
-	<p class="description">Dauert je nach Server etwa eine Minute. Das Fenster bitte offen lassen.</p>
+	<p class="description">Läuft alle Schritte der Reihe nach. Dauert je nach Server etwa eine Minute – das Fenster bitte offen lassen.</p>
 
-	<div class="wl-single">
-		<span style="align-self:center;color:#646970">Einzeln:</span>
-		<?php foreach ( $steps as $slug => $step ) : ?>
-			<button type="button" class="button wl-run-one" data-step="<?php echo esc_attr( $slug ); ?>"><?php echo esc_html( $step['label'] ); ?></button>
-		<?php endforeach; ?>
+	<h3>Einzelne Schritte</h3>
+	<p class="description">Schritte ankreuzen und ausführen – etwa nur „Bilder“ und „Datenbank“, wenn neue Bilder dazugekommen sind.
+		<strong>Neu einspielen</strong> überschreibt zusätzlich, was im Backend geändert wurde; der gelbe Hinweis am Schritt sagt, was dabei passiert.</p>
+	<div class="wl-pickbar">
+		<label><input type="checkbox" id="wl-pick-all"> alle</label>
+		<button type="button" class="button button-primary" id="wl-run-sel" disabled>Auswahl ausführen</button>
+		<button type="button" class="button" id="wl-run-sel-force" disabled>Auswahl neu einspielen …</button>
+		<span class="wl-count" id="wl-count">nichts ausgewählt</span>
 	</div>
+	<p id="wl-fertig" hidden><strong>Durchlauf beendet.</strong>
+		<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek' ) ); ?>">Seite neu laden</a>, um Status und Zählwerte zu aktualisieren.</p>
 
 	<div class="wl-next">
 		<strong>Danach noch von Hand:</strong>
@@ -936,6 +987,7 @@ function warleek_render_install_tab() {
 	<script>
 	(function () {
 		var steps = <?php echo wp_json_encode( array_keys( $steps ) ); ?>;
+		var labels = <?php echo wp_json_encode( wp_list_pluck( $steps, 'label' ) ); ?>;
 		var nonce = <?php echo wp_json_encode( wp_create_nonce( 'warleek_install' ) ); ?>;
 		var ajax = <?php echo wp_json_encode( admin_url( 'admin-ajax.php' ) ); ?>;
 		function el(slug) { return document.querySelector('[data-step="' + slug + '"]'); }
@@ -945,13 +997,13 @@ function warleek_render_install_tab() {
 			li.querySelector('.wl-ico').textContent = state === 'done' ? '✓' : (state === 'error' ? '✕' : (state === 'running' ? '⟳' : '·'));
 			if (msg !== undefined) li.querySelector('.wl-msg').textContent = msg;
 		}
-		function run(slug) {
+		function run(slug, force) {
 			setState(slug, 'running', 'läuft …');
 			var body = new FormData();
 			body.append('action', 'warleek_install_step');
 			body.append('step', slug);
 			body.append('nonce', nonce);
-			if (document.getElementById('wl-force').checked) body.append('force', '1');
+			if (force) body.append('force', '1');
 			return fetch(ajax, { method: 'POST', body: body, credentials: 'same-origin' })
 				.then(function (r) { return r.text(); })
 				.then(function (t) {
@@ -960,18 +1012,69 @@ function warleek_render_install_tab() {
 					if (!j) { setState(slug, 'error', 'Unerwartete Antwort vom Server – Schritt einzeln erneut ausführen.'); return false; }
 					var ok = j.success && j.data && j.data.ok;
 					setState(slug, ok ? 'done' : 'error', (j.data && j.data.msg) || 'Unbekannter Fehler');
+					// Nach einem Teillauf stehen alle Schritte auf „erledigt“ (aus dem Protokoll) –
+					// diese Markierung zeigt, welche gerade wirklich gelaufen sind.
+					var li = el(slug); if (li) { li.classList.add('wl-just'); }
 					return ok;
 				})
 				.catch(function (e) { setState(slug, 'error', 'Netzwerkfehler: ' + e.message); return false; });
 		}
+		// Schritte nacheinander, nicht parallel: sie bauen aufeinander auf
+		// (Medien liefern die IDs, die Seiten und Datenbank danach verwenden).
+		function runReihe(list, force, btn) {
+			var busy = Array.prototype.slice.call(document.querySelectorAll('.wl-pickbar button, #wl-run-all'));
+			var text = btn.textContent;
+			busy.forEach(function (b) { b.disabled = true; });
+			btn.textContent = 'Läuft …';
+			return list.reduce(function (chain, slug) {
+				return chain.then(function () { return run(slug, force); });
+			}, Promise.resolve()).then(function () {
+				btn.textContent = text;
+				busy.forEach(function (b) { b.disabled = false; });
+				aktualisiere();
+				fertig.hidden = false;
+			});
+		}
+
 		document.getElementById('wl-run-all').addEventListener('click', function () {
-			var btn = this; btn.disabled = true; btn.textContent = 'Installiere …';
-			steps.reduce(function (chain, slug) { return chain.then(function () { return run(slug); }); }, Promise.resolve())
-				.then(function () { btn.textContent = 'Fertig – Seite neu laden'; btn.disabled = false; btn.onclick = function () { location.reload(); }; });
+			runReihe(steps, document.getElementById('wl-force').checked, this);
 		});
-		document.querySelectorAll('.wl-run-one').forEach(function (b) {
-			b.addEventListener('click', function () { b.disabled = true; run(b.dataset.step).then(function () { b.disabled = false; }); });
+
+		/* ---- Auswahl ---- */
+		var picks = Array.prototype.slice.call(document.querySelectorAll('.wl-pick'));
+		var btnSel = document.getElementById('wl-run-sel');
+		var btnForce = document.getElementById('wl-run-sel-force');
+		var zaehler = document.getElementById('wl-count');
+		var alleBox = document.getElementById('wl-pick-all');
+		var fertig = document.getElementById('wl-fertig');
+
+		function gewaehlt() {
+			// Reihenfolge der Liste, nicht die Klickreihenfolge
+			return steps.filter(function (slug) {
+				return picks.some(function (c) { return c.value === slug && c.checked; });
+			});
+		}
+		function aktualisiere() {
+			var n = gewaehlt().length;
+			btnSel.disabled = !n;
+			btnForce.disabled = !n;
+			zaehler.textContent = n ? (n === 1 ? '1 Schritt ausgewählt' : n + ' Schritte ausgewählt') : 'nichts ausgewählt';
+			alleBox.checked = n === picks.length;
+			alleBox.indeterminate = n > 0 && n < picks.length;
+		}
+		picks.forEach(function (c) { c.addEventListener('change', aktualisiere); });
+		alleBox.addEventListener('change', function () {
+			picks.forEach(function (c) { c.checked = alleBox.checked; });
+			aktualisiere();
 		});
+		btnSel.addEventListener('click', function () { runReihe(gewaehlt(), false, this); });
+		btnForce.addEventListener('click', function () {
+			var liste = gewaehlt();
+			var namen = liste.map(function (s) { return labels[s]; }).join('\n· ');
+			if (!window.confirm('Neu einspielen:\n\n· ' + namen + '\n\nDabei werden eigene Änderungen an diesen Inhalten überschrieben. Fortfahren?')) { return; }
+			runReihe(liste, true, this);
+		});
+		aktualisiere();
 	})();
 	</script>
 	<?php

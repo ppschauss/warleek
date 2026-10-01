@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.11.0
+Stable tag: 2.12.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.12.0 =
+* Installation: Schritte lassen sich einzeln ankreuzen und ausführen – „Auswahl ausführen" oder „Auswahl neu einspielen" (mit Rückfrage). Jeder Schritt sagt, was ein erzwungener Lauf überschreibt.
+* Der Medien-Schritt ersetzt mit „neu einspielen" jetzt wirklich geänderte Dateien – die Anhang-ID bleibt, Beitragsbilder und Bild-URLs in Seitentexten also gültig.
+* WP-CLI: `wp warleek install --steps=media,items [--force]`.
 
 = 2.11.0 =
 * Datenbank: Kategoriebilder aus dem offiziellen Pressematerial von BULKHEAD/Team17 – alle 73 Einträge haben jetzt ein Beitragsbild.
