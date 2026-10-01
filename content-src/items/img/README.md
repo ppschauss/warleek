@@ -23,9 +23,18 @@ gegen die die Herkunftsangabe gebaut wurde.
    gedacht, und genau dafür nutzen wir es – mit Quellenangabe am Eintrag. Wer es
    schriftlich braucht, fragt `pr@team17.com`.
 
-**Nicht zulässig:** aus fremden Datenbanken extrahierte Symbole oder Renderings.
-Deren Sammlung ist nach § 87b UrhG geschützt, und übernommene Bilddateien sind
-ohnehin fremdes Material.
+3. **Spiel-Symbole aus einer Fan-Datenbank**, konkret `wardogshub.uk`. Deren eigene
+   [Credits-Seite](https://wardogshub.uk/en/image-credits/) stellt klar, dass es sich
+   um Spiel-Assets handelt: *„Game interface elements are © BULKHEAD / Team17, used
+   unchanged as reference marks … all game material belongs to its rights holders."*
+   Es ist also kein fremdes Werk, das wir übernehmen, sondern dasselbe Material aus
+   derselben Quelle — und die Rechtsgrundlage ist dieselbe: unverändert, redaktionell,
+   mit Nennung des Rechteinhabers. Holen mit `php bin/items-bilder-holen.php`
+   (eine Anfrage pro Sekunde, eigene Kennung); rückgängig mit `--entfernen`.
+
+**Nicht zulässig:** die *Datensammlung* einer fremden Seite nachbauen — die ist nach
+§ 87b UrhG geschützt. Die Zahlen in `items.json` sind recherchiert und im Spiel
+abgeglichen, nicht abgeschrieben.
 
 ## Benennung
 
@@ -72,9 +81,21 @@ php bin/items-media.php             # übernimmt die Dateien
 ./manage.sh seed                    # setzt sie als Beitragsbilder
 ```
 
+## Drei Stufen
+
+Der Installer sucht in dieser Reihenfolge und nimmt das erste, was er findet:
+
+```
+item-<slug>          eigenes Bild für genau diesen Eintrag
+item-gruppe-<gruppe> Bild der Gruppe (alle Scharfschützengewehre, alle Helikopter …)
+item-typ-<typ>       Bild der Kategorie
+```
+
+Die Gruppe steht als `gruppe` in `items.json` und wird aus der Rolle abgeleitet.
+
 ## Stand
 
-Die vier Kategoriebilder liegen aus dem offiziellen Pressematerial vor. Für
+Die Gruppen- und Kategoriebilder liegen aus dem offiziellen Pressematerial vor. Für
 *Stellungen* und *Bauwerke* zeigen die Pressekits nichts Passendes – dort steht
 vorerst die Key-Art, im Alt-Text als Platzhalter gekennzeichnet. Bilder einzelner
 Gegenstände gibt es nur im Spiel selbst; sie müssen aus eigenen Aufnahmen kommen.

@@ -553,10 +553,14 @@ function warleek_step_items( $force = false ) {
 
 		wp_set_object_terms( $id, $e['typ'], 'item-typ' );
 
-		// Bild: zuerst ein eigenes (`item-<slug>`), sonst das Kategoriebild
-		// (`item-typ-<typ>`). Beides ist optional – ohne Datei bleibt der Eintrag bildlos,
+		// Bild in drei Stufen: ein eigenes (`item-<slug>`), sonst das Bild der
+		// Gruppe (`item-gruppe-<gruppe>`, etwa alle Scharfschützengewehre), sonst
+		// das der Kategorie. Alles optional – ohne Datei bleibt der Eintrag bildlos,
 		// was besser ist als ein erfundenes Bild, das den Gegenstand nicht zeigt.
-		foreach ( array( 'item-' . $e['slug'], 'item-typ-' . $e['typ'] ) as $schluessel ) {
+		$bildsuche = array( 'item-' . $e['slug'] );
+		if ( ! empty( $e['gruppe'] ) ) { $bildsuche[] = 'item-gruppe-' . $e['gruppe']; }
+		$bildsuche[] = 'item-typ-' . $e['typ'];
+		foreach ( $bildsuche as $schluessel ) {
 			if ( ! empty( $media[ $schluessel ] ) ) { set_post_thumbnail( $id, (int) $media[ $schluessel ] ); break; }
 		}
 		foreach ( warleek_item_felder() as $key => $def ) {

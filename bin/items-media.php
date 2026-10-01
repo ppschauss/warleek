@@ -5,8 +5,9 @@
  * Legt Dateien aus `content-src/items/img/` ins Plugin und trägt sie ins
  * Medien-Manifest ein. Die Zuordnung läuft über den Dateinamen:
  *
- *   wardogs-ak-74.webp   → Bild für den Eintrag mit diesem Slug
- *   typ-waffe.webp       → Ersatzbild für alle Einträge der Kategorie „waffe"
+ *   wardogs-ak-74.webp     → Bild für den Eintrag mit diesem Slug
+ *   gruppe-sturmgewehr.webp → Ersatzbild für alle Einträge dieser Gruppe
+ *   typ-waffe.webp         → letzter Rückfall für die Kategorie „waffe"
  *
  * Eine optionale `credits.json` im selben Ordner setzt pro Datei (Schlüssel = Dateiname
  * ohne Endung) einen eigenen `alt`-Text und eine `credit`-Zeile – die Bildquelle, die
@@ -33,9 +34,14 @@ if ( ! is_array( $cred ) ) { fwrite( STDERR, "credits.json ist kein gültiges JS
 if ( ! is_array( $items ) || ! is_array( $mani ) ) { fwrite( STDERR, "items.json oder MANIFEST.json nicht lesbar\n" ); exit( 1 ); }
 if ( ! is_dir( $src ) ) { echo "Noch keine Bilder in content-src/items/img/ – nichts zu tun.\n"; exit( 0 ); }
 
-$slugs = array();
-$typen = array();
-foreach ( $items as $i ) { $slugs[ $i['slug'] ] = $i['title']; $typen[ $i['typ'] ] = true; }
+$slugs   = array();
+$typen   = array();
+$gruppen = array();
+foreach ( $items as $i ) {
+	$slugs[ $i['slug'] ] = $i['title'];
+	$typen[ $i['typ'] ] = true;
+	if ( ! empty( $i['gruppe'] ) ) { $gruppen[ $i['gruppe'] ] = true; }
+}
 
 $ok = 0; $warn = 0;
 foreach ( glob( $src . '/*.{webp,png,jpg,jpeg}', GLOB_BRACE ) as $datei ) {
@@ -45,11 +51,14 @@ foreach ( glob( $src . '/*.{webp,png,jpg,jpeg}', GLOB_BRACE ) as $datei ) {
 	if ( isset( $slugs[ $name ] ) ) {
 		$key = 'item-' . $name;
 		$alt = $slugs[ $name ] . ' aus WARDOGS';
+	} elseif ( str_starts_with( $name, 'gruppe-' ) && isset( $gruppen[ substr( $name, 7 ) ] ) ) {
+		$key = 'item-gruppe-' . substr( $name, 7 );
+		$alt = 'Symbolbild für die Gruppe ' . substr( $name, 7 );
 	} elseif ( str_starts_with( $name, 'typ-' ) && isset( $typen[ substr( $name, 4 ) ] ) ) {
 		$key = 'item-typ-' . substr( $name, 4 );
 		$alt = 'Symbolbild für die Kategorie ' . substr( $name, 4 );
 	} else {
-		fwrite( STDERR, "! $name.$ext passt zu keinem Eintrag und keiner Kategorie – übersprungen\n" );
+		fwrite( STDERR, "! $name.$ext passt zu keinem Eintrag, keiner Gruppe und keiner Kategorie – übersprungen\n" );
 		$warn++;
 		continue;
 	}

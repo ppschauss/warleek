@@ -435,32 +435,74 @@
         "size": 30500
     },
     "item-typ-bauwerk.webp": {
-        "alt": "WARDOGS Key-Art – Platzhalter für die Kategorie Bauwerke, bis ein passendes Bild vorliegt",
+        "alt": "WARDOGS: befestigter Industriekomplex mit Mauern und Containern – Symbolbild für Bauwerke",
         "use": "item-typ-bauwerk",
-        "size": 76714,
-        "credit": "Offizielles Pressematerial (Key-Art) · © BULKHEAD / Team17"
+        "size": 96774,
+        "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
     },
     "item-typ-emplacement.webp": {
-        "alt": "WARDOGS Key-Art – Platzhalter für die Kategorie Stellungen, bis ein passendes Bild vorliegt",
+        "alt": "WARDOGS: montierte Waffe im Anschlag über einer Industrieanlage – Symbolbild für Stellungen",
         "use": "item-typ-emplacement",
-        "size": 76714,
-        "credit": "Offizielles Pressematerial (Key-Art) · © BULKHEAD / Team17"
+        "size": 90274,
+        "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
     },
     "item-typ-fahrzeug.webp": {
-        "alt": "WARDOGS-Spielszene: leichter Transporthubschrauber im Tiefflug, Soldaten sitzen auf den Kufen",
+        "alt": "WARDOGS: gepanzertes Radfahrzeug auf einer Piste vor einer Industrieanlage",
         "use": "item-typ-fahrzeug",
-        "size": 78152,
-        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+        "size": 75164,
+        "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
     },
     "item-typ-waffe.webp": {
-        "alt": "WARDOGS-Spielszene: Sturmgewehr mit Rotpunktvisier in der Ego-Perspektive in einer Dorfstraße",
+        "alt": "WARDOGS: Gefecht im Hausinneren aus der Ego-Perspektive – Symbolbild für Waffen auf kurze Distanz",
         "use": "item-typ-waffe",
-        "size": 230316,
+        "size": 80532,
         "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
     },
     "guide-rangefinder.webp": {
         "alt": "Montage aus zwei Bildern - links ein Beobachter mit Fernglas auf einem Dach, rechts der Blick aus einem Helikoptercockpit mit eingezeichneten Markierungen",
         "use": "guide-rangefinder",
         "size": 66058
+    },
+    "item-gruppe-helikopter.webp": {
+        "alt": "WARDOGS: leichter Transporthubschrauber im Tiefflug, Soldaten sitzen auf den Kufen",
+        "use": "item-gruppe-helikopter",
+        "size": 70638,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "item-gruppe-lkw.webp": {
+        "alt": "WARDOGS: beladener Logistik-LKW an einer Baustelle im Abendlicht",
+        "use": "item-gruppe-lkw",
+        "size": 92948,
+        "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
+    },
+    "item-gruppe-mg.webp": {
+        "alt": "WARDOGS: gurtgefüttertes Maschinengewehr in der Ego-Perspektive, Feuer auf einen Helikopter",
+        "use": "item-gruppe-mg",
+        "size": 41946,
+        "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
+    },
+    "item-gruppe-panzerabwehr.webp": {
+        "alt": "WARDOGS: Soldat feuert eine Panzerabwehrwaffe auf ein gepanzertes Fahrzeug",
+        "use": "item-gruppe-panzerabwehr",
+        "size": 186436,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "item-gruppe-panzer.webp": {
+        "alt": "WARDOGS: Kampfpanzer in einer Ortschaft, davor zwei Soldaten",
+        "use": "item-gruppe-panzer",
+        "size": 191410,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "item-gruppe-scharfschuetze.webp": {
+        "alt": "WARDOGS: zwei Scharfschützen im Ghillie-Anzug in Stellung auf einer Wiese",
+        "use": "item-gruppe-scharfschuetze",
+        "size": 168640,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "item-gruppe-sturmgewehr.webp": {
+        "alt": "WARDOGS: Sturmgewehr mit Rotpunktvisier in der Ego-Perspektive in einer Dorfstraße",
+        "use": "item-gruppe-sturmgewehr",
+        "size": 210672,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
     }
 }

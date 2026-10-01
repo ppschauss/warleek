@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.14.0
+Stable tag: 2.15.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.15.0 =
+* Datenbank-Bilder jetzt dreistufig: eigenes Bild, sonst Gruppenbild (Scharfschützengewehre, Helikopter, Panzer …), sonst Kategoriebild. Statt zwei Motiven auf 73 Einträgen sind es elf.
+* Neue Gruppen- und Kategoriebilder aus den offiziellen Trailern des Pressekits – Maschinengewehr, Logistik-LKW, gepanzertes Fahrzeug, Stellungen, Bauwerke.
+* Alle 73 Einträge sind im Spiel abgeglichen; der Kasten „Woher die Angaben stammen" weist das jetzt aus, statt „nicht nachgeprüft" zu melden.
+* Neu: `bin/items-bilder-holen.php` holt die Einzel-Symbole je Gegenstand.
 
 = 2.14.0 =
 * Datenbank: Die 15 Einträge, die im Spiel ohne Freischaltung verfügbar sind, erscheinen sofort statt in der Warteschlange.

@@ -1,18 +1,46 @@
 {
+  "gruppe-sturmgewehr": {
+    "alt": "WARDOGS: Sturmgewehr mit Rotpunktvisier in der Ego-Perspektive in einer Dorfstraße",
+    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+  },
+  "gruppe-scharfschuetze": {
+    "alt": "WARDOGS: zwei Scharfschützen im Ghillie-Anzug in Stellung auf einer Wiese",
+    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+  },
+  "gruppe-panzerabwehr": {
+    "alt": "WARDOGS: Soldat feuert eine Panzerabwehrwaffe auf ein gepanzertes Fahrzeug",
+    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+  },
+  "gruppe-mg": {
+    "alt": "WARDOGS: gurtgefüttertes Maschinengewehr in der Ego-Perspektive, Feuer auf einen Helikopter",
+    "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
+  },
+  "gruppe-helikopter": {
+    "alt": "WARDOGS: leichter Transporthubschrauber im Tiefflug, Soldaten sitzen auf den Kufen",
+    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+  },
+  "gruppe-panzer": {
+    "alt": "WARDOGS: Kampfpanzer in einer Ortschaft, davor zwei Soldaten",
+    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+  },
+  "gruppe-lkw": {
+    "alt": "WARDOGS: beladener Logistik-LKW an einer Baustelle im Abendlicht",
+    "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
+  },
   "typ-waffe": {
-    "alt": "WARDOGS-Spielszene: Sturmgewehr mit Rotpunktvisier in der Ego-Perspektive in einer Dorfstraße",
+    "alt": "WARDOGS: Gefecht im Hausinneren aus der Ego-Perspektive – Symbolbild für Waffen auf kurze Distanz",
     "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
   },
   "typ-fahrzeug": {
-    "alt": "WARDOGS-Spielszene: leichter Transporthubschrauber im Tiefflug, Soldaten sitzen auf den Kufen",
-    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    "alt": "WARDOGS: gepanzertes Radfahrzeug auf einer Piste vor einer Industrieanlage",
+    "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
   },
   "typ-emplacement": {
-    "alt": "WARDOGS Key-Art – Platzhalter für die Kategorie Stellungen, bis ein passendes Bild vorliegt",
-    "credit": "Offizielles Pressematerial (Key-Art) · © BULKHEAD / Team17"
+    "alt": "WARDOGS: montierte Waffe im Anschlag über einer Industrieanlage – Symbolbild für Stellungen",
+    "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
   },
   "typ-bauwerk": {
-    "alt": "WARDOGS Key-Art – Platzhalter für die Kategorie Bauwerke, bis ein passendes Bild vorliegt",
-    "credit": "Offizielles Pressematerial (Key-Art) · © BULKHEAD / Team17"
+    "alt": "WARDOGS: befestigter Industriekomplex mit Mauern und Containern – Symbolbild für Bauwerke",
+    "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
   }
 }
