@@ -582,6 +582,21 @@ function warleek_step_items( $force = false ) {
 		) );
 	}
 
+	// Umbenannte oder gestrichene Einträge aufräumen: nur solche, die wir selbst
+	// angelegt haben (`_warleek_seed_hash`), die nicht mehr mitgeliefert werden und
+	// noch nicht veröffentlicht sind. Veröffentlichtes und von Hand Angelegtes
+	// bleibt unangetastet.
+	$aktuelle = array();
+	foreach ( $reihen as $e ) { $aktuelle[ $e['slug'] ] = true; }
+	$verwaist = 0;
+	foreach ( get_posts( array( 'post_type' => 'item', 'post_status' => 'future', 'posts_per_page' => -1 ) ) as $p ) {
+		if ( isset( $aktuelle[ $p->post_name ] ) ) { continue; }
+		if ( ! get_post_meta( $p->ID, '_warleek_seed_hash', true ) ) { continue; }
+		wp_trash_post( $p->ID );
+		$verwaist++;
+		warleek_log( 'nicht mehr mitgeliefert, in den Papierkorb: ' . $p->post_name );
+	}
+
 	update_option( 'warleek_items_plan', $signatur, false );
 
 	list( $min, $max ) = warleek_item_pro_tag();
@@ -590,6 +605,7 @@ function warleek_step_items( $force = false ) {
 	$msg     = sprintf( '%d neu, %d aktualisiert', $neu, $akt );
 	if ( $sofort )    { $msg .= sprintf( ', %d sofort veröffentlicht', $sofort ); }
 	if ( $umgeplant ) { $msg .= sprintf( ', %d umgeplant', $umgeplant ); }
+	if ( $verwaist )  { $msg .= sprintf( ', %d verwaiste zurückgezogen', $verwaist ); }
 	$msg .= sprintf( ' – %d veröffentlicht, %d in der Warteschlange (%d–%d pro Tag).', $live, $geplant, $min, $max );
 	return array( 'ok' => true, 'msg' => $msg );
 }

@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.15.0
+Stable tag: 2.16.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.16.0 =
+* 72 von 73 Datenbank-Einträgen haben jetzt ihr eigenes Symbol aus dem Spiel, freigestellt auf einem abgedunkelten Spiel-Hintergrund.
+* Jeder Link auf einen Eintrag trägt `title="Wardogs <Name>"` – in der Tabelle, in den Listen und auf den Kategorie-Chips.
+* Z20 Lakota heißt im Spiel inzwischen UH-1Y; beide Einträge umbenannt.
+* Umbenannte Einträge werden sauber zurückgezogen, statt als Dublette liegen zu bleiben.
 
 = 2.15.0 =
 * Datenbank-Bilder jetzt dreistufig: eigenes Bild, sonst Gruppenbild (Scharfschützengewehre, Helikopter, Panzer …), sonst Kategoriebild. Statt zwei Motiven auf 73 Einträgen sind es elf.

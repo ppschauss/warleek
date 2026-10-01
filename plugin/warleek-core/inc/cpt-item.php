@@ -199,7 +199,7 @@ function warleek_render_item_tabelle( $attrs = array() ) {
 
 		$zeilen = '';
 		foreach ( $posts as $p ) {
-			$zeilen .= '<tr><th scope="row"><a href="' . esc_url( get_permalink( $p ) ) . '">' . esc_html( get_the_title( $p ) ) . '</a></th>';
+			$zeilen .= '<tr><th scope="row"><a href="' . esc_url( get_permalink( $p ) ) . '" title="' . warleek_item_linktitel( $p ) . '">' . esc_html( get_the_title( $p ) ) . '</a></th>';
 			foreach ( array_keys( $spalten ) as $key ) {
 				$zeilen .= '<td>' . esc_html( warleek_item_wert( $key, get_post_meta( $p->ID, 'item_' . $key, true ) ) ?: '–' ) . '</td>';
 			}
@@ -214,14 +214,24 @@ function warleek_render_item_tabelle( $attrs = array() ) {
 	return '<div class="wl-datenbank">' . $out . '</div>';
 }
 
+/**
+ * Titel-Attribut für einen Link auf einen Eintrag.
+ *
+ * Dieselbe Form wie bei der automatischen Verlinkung im Fließtext, damit ein
+ * Link auf „AK-74" überall dasselbe verspricht.
+ */
+function warleek_item_linktitel( $post ) {
+	return esc_attr( 'Wardogs ' . get_the_title( $post ) );
+}
+
 /** Filterleiste über der Tabelle. */
 function warleek_render_item_filter() {
 	$terms = get_terms( array( 'taxonomy' => 'item-typ', 'hide_empty' => true ) );
 	if ( is_wp_error( $terms ) || ! $terms ) { return ''; }
 	$aktuell = is_tax( 'item-typ' ) ? ( get_queried_object()->slug ?? '' ) : '';
-	$out = '<nav class="wl-chips" aria-label="Kategorien der Datenbank"><a class="wl-chip' . ( $aktuell ? '' : ' is-active' ) . '" href="' . esc_url( get_post_type_archive_link( 'item' ) ) . '">Alle</a>';
+	$out = '<nav class="wl-chips" aria-label="Kategorien der Datenbank"><a class="wl-chip' . ( $aktuell ? '' : ' is-active' ) . '" href="' . esc_url( get_post_type_archive_link( 'item' ) ) . '" title="Alle Einträge der Wardogs-Datenbank">Alle</a>';
 	foreach ( $terms as $t ) {
-		$out .= '<a class="wl-chip' . ( $aktuell === $t->slug ? ' is-active' : '' ) . '" href="' . esc_url( get_term_link( $t ) ) . '">' . esc_html( $t->name ) . ' <span>' . (int) $t->count . '</span></a>';
+		$out .= '<a class="wl-chip' . ( $aktuell === $t->slug ? ' is-active' : '' ) . '" href="' . esc_url( get_term_link( $t ) ) . '" title="' . esc_attr( 'Wardogs ' . $t->name ) . '">' . esc_html( $t->name ) . ' <span>' . (int) $t->count . '</span></a>';
 	}
 	return $out . '</nav>';
 }
@@ -241,7 +251,7 @@ function warleek_render_item_liste( $attrs = array() ) {
 	$out = '<ul class="wl-itemliste">';
 	foreach ( $q->posts as $p ) {
 		$preis = warleek_item_wert( 'preis', get_post_meta( $p->ID, 'item_preis', true ) );
-		$out  .= '<li><a href="' . esc_url( get_permalink( $p ) ) . '">' . esc_html( get_the_title( $p ) ) . '</a>'
+		$out  .= '<li><a href="' . esc_url( get_permalink( $p ) ) . '" title="' . warleek_item_linktitel( $p ) . '">' . esc_html( get_the_title( $p ) ) . '</a>'
 			. ( $preis ? ' <span>' . esc_html( $preis ) . '</span>' : '' ) . '</li>';
 	}
 	wp_reset_postdata();

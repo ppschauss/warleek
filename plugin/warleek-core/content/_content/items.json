@@ -636,8 +636,8 @@
 		"gruppe": "helikopter"
 	},
 	{
-		"slug": "wardogs-z20-lakota",
-		"title": "Z20 Lakota",
+		"slug": "wardogs-uh-1y",
+		"title": "UH-1Y",
 		"typ": "fahrzeug",
 		"quellen": [
 			"Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
@@ -654,8 +654,8 @@
 		"gruppe": "helikopter"
 	},
 	{
-		"slug": "wardogs-z20-lakota-miniguns",
-		"title": "Z20 Lakota [Miniguns]",
+		"slug": "wardogs-uh-1y-miniguns",
+		"title": "UH-1Y [Miniguns]",
 		"typ": "fahrzeug",
 		"quellen": [
 			"Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
