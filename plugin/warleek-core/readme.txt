@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.13.0
+Stable tag: 2.14.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.14.0 =
+* Datenbank: Die 15 Einträge, die im Spiel ohne Freischaltung verfügbar sind, erscheinen sofort statt in der Warteschlange.
+* Veröffentlichungsplan auf 5–10 Einträge pro Tag erhöht (vorher 3). Ein geänderter Plan verteilt die Warteschlange neu, ohne Veröffentlichtes zurückzunehmen.
+* Zwei neue Guides: „Was du ohne Freischaltung schon hast" und „Entfernungsmesser im Heli: der Pilot sieht alles Markierte".
+* Verlinkung: Vorgabe für Links je Beitrag von 8 auf 15 erhöht.
 
 = 2.13.0 =
 * Neu: **Warleek → Verlinkung**. Gegenstände aus der Datenbank werden im Fließtext automatisch verlinkt, mit `title="Wardogs <Name>"`. Das Werkzeug zeigt vorher, wo jeder Gegenstand vorkommt, und schaltet einzelne ab.

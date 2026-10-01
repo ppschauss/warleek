@@ -349,18 +349,60 @@ function warleek_seed_nav( array $nav ) {
  * @param int $anzahl Wie viele Termine gebraucht werden.
  * @return string[] MySQL-Zeitstempel in lokaler Zeit.
  */
+function warleek_item_pro_tag() {
+	$r   = (array) apply_filters( 'warleek_item_pro_tag', array( 5, 10 ) );
+	$min = max( 1, (int) ( $r[0] ?? 5 ) );
+	$max = max( $min, (int) ( $r[1] ?? 10 ) );
+	return array( $min, $max );
+}
+
+/**
+ * Veröffentlichungszeiten eines Tages.
+ *
+ * Zehn Fenster über den Tag verteilt; bei weniger Einträgen wird gleichmäßig
+ * ausgedünnt, statt alle am Vormittag zu stapeln.
+ *
+ * @param int $anzahl Einträge an diesem Tag.
+ * @return array Uhrzeiten (H:i:s).
+ */
+function warleek_item_zeiten( $anzahl ) {
+	$pool   = array( '08:40:00', '10:15:00', '11:50:00', '13:20:00', '14:45:00', '16:10:00', '17:35:00', '19:00:00', '20:25:00', '21:50:00' );
+	$anzahl = max( 1, min( count( $pool ), (int) $anzahl ) );
+	$zeiten = array();
+	for ( $k = 0; $k < $anzahl; $k++ ) {
+		$zeiten[] = $pool[ (int) round( $k * ( count( $pool ) - 1 ) / max( 1, $anzahl - 1 ) ) ];
+	}
+	return array_values( array_unique( $zeiten ) );
+}
+
+/**
+ * Termine für die noch offenen Einträge, ab morgen.
+ *
+ * Die Zahl je Tag schwankt im eingestellten Bereich – aber fest gewürfelt aus
+ * der Tagesnummer, damit ein zweiter Lauf denselben Plan ergibt.
+ *
+ * @param int $anzahl Zu planende Einträge.
+ * @return array Zeitstempel (Y-m-d H:i:s).
+ */
 function warleek_item_termine( $anzahl ) {
-	$uhrzeiten = array( '09:10:00', '14:25:00', '19:05:00' );
-	$termine   = array();
-	$tag       = 1;
+	list( $min, $max ) = warleek_item_pro_tag();
+	$termine = array();
+	$tag     = 1;
 	while ( count( $termine ) < $anzahl ) {
-		foreach ( $uhrzeiten as $zeit ) {
+		// Streuung statt Rampe: eine Prüfsumme der Tagesnummer, nicht die Nummer selbst.
+		$pro = $min + ( crc32( 'warleek-plan-' . $tag ) % ( $max - $min + 1 ) );
+		foreach ( warleek_item_zeiten( $pro ) as $zeit ) {
 			if ( count( $termine ) >= $anzahl ) { break; }
 			$termine[] = gmdate( 'Y-m-d', strtotime( "+$tag day", current_time( 'timestamp' ) ) ) . ' ' . $zeit;
 		}
 		$tag++;
 	}
 	return $termine;
+}
+
+/** Kennung des Plans – ändert sie sich, wird die Warteschlange neu verteilt. */
+function warleek_item_plan_signatur() {
+	return md5( (string) wp_json_encode( array( 'v' => 2, 'pro_tag' => warleek_item_pro_tag() ) ) );
 }
 
 /**
@@ -430,15 +472,29 @@ function warleek_step_items( $force = false ) {
 		if ( ! term_exists( $slug, 'item-typ' ) ) { wp_insert_term( $name, 'item-typ', array( 'slug' => $slug ) ); }
 	}
 
-	$reihen  = warleek_item_reihenfolge( $items );
-	$offen   = array();
-	foreach ( $reihen as $e ) {
-		$da = get_posts( array( 'post_type' => 'item', 'name' => $e['slug'], 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) );
-		if ( ! $da ) { $offen[] = $e; }
-	}
-	$termine = warleek_item_termine( count( $offen ) );
+	$reihen = warleek_item_reihenfolge( $items );
 
-	$neu = 0; $akt = 0; $t = 0;
+	// Einträge mit `start` sind ohne Freischaltung im Spiel verfügbar – sie
+	// erscheinen sofort und belegen keinen Platz in der Warteschlange.
+	// Der Rest wird terminiert; ändert sich der Plan, wird neu verteilt,
+	// aber niemals etwas zurückgenommen, das schon veröffentlicht ist.
+	$signatur   = warleek_item_plan_signatur();
+	$neu_planen = get_option( 'warleek_items_plan' ) !== $signatur;
+
+	$status = array();
+	$warten = array();
+	foreach ( $reihen as $e ) {
+		$da = get_posts( array( 'post_type' => 'item', 'name' => $e['slug'], 'post_status' => array( 'publish', 'future', 'draft', 'pending', 'private' ), 'posts_per_page' => 1, 'fields' => 'ids' ) );
+		$id = $da ? (int) $da[0] : 0;
+		$status[ $e['slug'] ] = $id ? array( 'id' => $id, 'status' => get_post_status( $id ) ) : null;
+		if ( ! empty( $e['start'] ) ) { continue; }
+		if ( ! $id ) { $warten[] = $e['slug']; continue; }
+		if ( $neu_planen && 'future' === $status[ $e['slug'] ]['status'] ) { $warten[] = $e['slug']; }
+	}
+	$termine = $warten ? warleek_item_termine( count( $warten ) ) : array();
+	$plan    = $warten ? array_combine( $warten, array_slice( $termine, 0, count( $warten ) ) ) : array();
+
+	$neu = 0; $akt = 0; $sofort = 0; $umgeplant = 0;
 	foreach ( $reihen as $e ) {
 		$inhalt = warleek_html_to_blocks( warleek_item_inhalt( $e ) );
 		$da     = get_posts( array( 'post_type' => 'item', 'name' => $e['slug'], 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) );
@@ -450,26 +506,46 @@ function warleek_step_items( $force = false ) {
 			'post_excerpt' => trim( (string) ( $e['felder']['rolle'] ?? '' ) ),
 		);
 
-		if ( $da ) {
-			$id = (int) $da[0];
+		$vorhanden = $status[ $e['slug'] ] ?? null;
+		$jetzt     = current_time( 'mysql' );
+
+		if ( $vorhanden ) {
+			$id = (int) $vorhanden['id'];
 			$daten['ID'] = $id;
 			$hash = (string) get_post_meta( $id, '_warleek_seed_hash', true );
 			if ( ! $force && $hash && md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) !== $hash ) {
 				unset( $daten['post_content'] );
 				warleek_log( 'Inhalt behalten (bearbeitet): ' . $e['slug'] );
 			}
+			if ( ! empty( $e['start'] ) && 'future' === $vorhanden['status'] ) {
+				$daten['post_status']   = 'publish';
+				$daten['post_date']     = $jetzt;
+				$daten['post_date_gmt'] = get_gmt_from_date( $jetzt );
+				$sofort++;
+				warleek_log( 'sofort veröffentlicht (ohne Freischaltung): ' . $e['slug'] );
+			} elseif ( isset( $plan[ $e['slug'] ] ) && 'future' === $vorhanden['status'] ) {
+				$daten['post_status']   = 'future';
+				$daten['post_date']     = $plan[ $e['slug'] ];
+				$daten['post_date_gmt'] = get_gmt_from_date( $plan[ $e['slug'] ] );
+				$umgeplant++;
+			}
 			wp_update_post( wp_slash( $daten ) );
 			$akt++;
 		} else {
-			$termin = $termine[ $t++ ] ?? current_time( 'mysql' );
+			$termin = ! empty( $e['start'] ) ? $jetzt : ( $plan[ $e['slug'] ] ?? $jetzt );
 			$daten['post_type']     = 'item';
-			$daten['post_status']   = 'future';
+			$daten['post_status']   = empty( $e['start'] ) ? 'future' : 'publish';
 			$daten['post_date']     = $termin;
 			$daten['post_date_gmt'] = get_gmt_from_date( $termin );
 			$id = wp_insert_post( wp_slash( $daten ) );
 			if ( is_wp_error( $id ) || ! $id ) { continue; }
 			$neu++;
-			warleek_log( sprintf( 'geplant für %s: %s', substr( $termin, 0, 16 ), $e['slug'] ) );
+			if ( empty( $e['start'] ) ) {
+				warleek_log( sprintf( 'geplant für %s: %s', substr( $termin, 0, 16 ), $e['slug'] ) );
+			} else {
+				$sofort++;
+				warleek_log( 'sofort veröffentlicht (ohne Freischaltung): ' . $e['slug'] );
+			}
 		}
 		if ( isset( $daten['post_content'] ) ) {
 			update_post_meta( $id, '_warleek_seed_hash', md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) );
@@ -502,9 +578,16 @@ function warleek_step_items( $force = false ) {
 		) );
 	}
 
+	update_option( 'warleek_items_plan', $signatur, false );
+
+	list( $min, $max ) = warleek_item_pro_tag();
 	$geplant = count( get_posts( array( 'post_type' => 'item', 'post_status' => 'future', 'posts_per_page' => -1, 'fields' => 'ids' ) ) );
 	$live    = count( get_posts( array( 'post_type' => 'item', 'post_status' => 'publish', 'posts_per_page' => -1, 'fields' => 'ids' ) ) );
-	return array( 'ok' => true, 'msg' => sprintf( '%d neu geplant, %d aktualisiert – %d veröffentlicht, %d in der Warteschlange (3 pro Tag).', $neu, $akt, $live, $geplant ) );
+	$msg     = sprintf( '%d neu, %d aktualisiert', $neu, $akt );
+	if ( $sofort )    { $msg .= sprintf( ', %d sofort veröffentlicht', $sofort ); }
+	if ( $umgeplant ) { $msg .= sprintf( ', %d umgeplant', $umgeplant ); }
+	$msg .= sprintf( ' – %d veröffentlicht, %d in der Warteschlange (%d–%d pro Tag).', $live, $geplant, $min, $max );
+	return array( 'ok' => true, 'msg' => $msg );
 }
 
 /* ===================================================================== Schritte */
@@ -546,7 +629,7 @@ function warleek_install_steps() {
 		),
 		'items' => array(
 			'label'       => 'Datenbank anlegen',
-			'description' => 'Legt Waffen, Fahrzeuge, Emplacements und Bauwerke an – terminiert, drei Einträge pro Tag. Vorhandene bleiben unberührt.',
+			'description' => 'Legt Waffen, Fahrzeuge, Emplacements und Bauwerke an. Was im Spiel ohne Freischaltung verfügbar ist, erscheint sofort; der Rest terminiert, fünf bis zehn pro Tag.',
 			'callback'    => 'warleek_step_items',
 			'force'       => 'Schreibt alle Beschreibungen neu. Veröffentlichungstermine und bereits veröffentlichte Einträge bleiben.',
 		),

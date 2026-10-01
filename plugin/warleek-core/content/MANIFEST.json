@@ -70,7 +70,7 @@
         "size": 93157
     },
     "guide-erste-runde.webp": {
-        "alt": "Neuling steht am Spawn-Tor und blickt ins Tal, ein Veteran legt ihm die Hand auf die Schulter",
+        "alt": "Frisch ausgeruestete Soldaten am Rand des Hauptlagers, daneben ein leichtes Fahrzeug und gestapelte Nachschubkisten",
         "use": "guide-erste-runde",
         "size": 45280
     },
@@ -457,5 +457,10 @@
         "use": "item-typ-waffe",
         "size": 230316,
         "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "guide-rangefinder.webp": {
+        "alt": "Montage aus zwei Bildern - links ein Beobachter mit Fernglas auf einem Dach, rechts der Blick aus einem Helikoptercockpit mit eingezeichneten Markierungen",
+        "use": "guide-rangefinder",
+        "size": 66058
     }
 }

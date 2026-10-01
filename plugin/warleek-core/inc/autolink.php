@@ -34,7 +34,7 @@ function warleek_autolink_opt() {
 	return array(
 		'enabled' => ! isset( $o['enabled'] ) || (bool) $o['enabled'],
 		'types'   => isset( $o['types'] ) ? (array) $o['types'] : array( 'guide', 'page', 'patchnote' ),
-		'max'     => isset( $o['max'] ) ? max( 1, (int) $o['max'] ) : 8,
+		'max'     => isset( $o['max'] ) ? max( 1, (int) $o['max'] ) : 15,
 		'aus'     => isset( $o['aus'] ) ? array_map( 'intval', array_filter( (array) $o['aus'] ) ) : array(),
 	);
 }
@@ -337,7 +337,7 @@ function warleek_render_autolink_tab() {
 				<th scope="row"><label for="wl-al-max">Links je Beitrag</label></th>
 				<td>
 					<input type="number" id="wl-al-max" name="max" min="1" max="100" value="<?php echo esc_attr( $opt['max'] ); ?>" class="small-text">
-					<p class="description">Deckel gegen Linkteppiche. Ein Guide, der zwanzig Waffen aufzählt, bekommt sonst zwanzig Links.</p>
+					<p class="description">Deckel gegen Linkteppiche. Vorgabe 15 – genug für einen Guide, der die Startausrüstung durchgeht, ohne dass ein Fließtext zum Linkteppich wird.</p>
 				</td>
 			</tr>
 		</table>

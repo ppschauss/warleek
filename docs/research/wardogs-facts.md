@@ -100,6 +100,8 @@ Quelle: wardogs.zone/database/vehicles, metaforge.app
 ### Recon
 - **Fernglas ~$75**: Gegner anvisieren und linke Maustaste halten markiert ihn fürs Team; XP + Cash, zusätzlich Belohnung beim Kill durch andere. Verrät die eigene Position nicht.
 - Ghillie besteht aus Body Suit + Headwear. Monokular (Stufe 2) und Entfernungsmesser (Stufe 8) für Markierungen.
+- **Entfernungsmesser im Helikopter (erste eigene Beobachtung, Oktober 2026):** Wer den Entfernungsmesser *in der Hand* hält, während er als Pilot einsteigt, und danach in die Ego-Perspektive wechselt, sieht aus dem Cockpit alle bereits vom Team gesetzten Markierungen. Nicht vermessen: Reichweite, Dauer, ob das Fernglas dasselbe tut, ob es auch auf anderen Sitzen geht. Steht in keiner Patch Note – kann ein Fehler sein und wegpatcht werden.
+- Quelle: Patrick Schauß (Warleek), im Spiel beobachtet
 - Quellen: theclick.gg, clutchbase.app, allthings.how
 
 ### Panzerabwehr
