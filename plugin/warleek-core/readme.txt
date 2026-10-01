@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.17.0
+Stable tag: 2.18.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.18.0 =
+* Neu: Herkunftsnachweis unter `/herkunft.json` – Quellen, Prüfstand, Bildherkunft und Änderungsdatum je Eintrag, maschinenlesbar als JSON-LD. Wird bei jedem Abruf erzeugt und kann deshalb nicht veralten.
+* Datenbank-Seiten hatten bisher **kein** eigenes Schema. Jetzt `TechArticle` mit allen Datenblatt-Werten als `PropertyValue`, dazu Quellen (`citation`), Prüfer (`reviewedBy`) und Brotkrumen.
+* Die Datenbank als Ganzes ist ein `Dataset` mit Stand, Umfang und Verweis auf den Nachweis.
+* Neue Optionen für die prüfende Person (Name, Autorenseite, Profile) – ohne Namen entfällt die Angabe, statt anonym zu behaupten.
 
 = 2.17.0 =
 * 25 neue Datenbank-Einträge: die drei Hämmer, FOB, Claymore, AT-Mine, Munitionskiste, Bunkerboden und -dach, Mörser-Unterstand, acht Fahrzeugbewaffnungen, 9K333 Verba und M12G. Jetzt 98 statt 73.

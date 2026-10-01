@@ -287,9 +287,13 @@ function warleek_guide_herkunft( array $g ) {
 	$bild = trim( (string) ( $g['bild'] ?? '' ) );
 	$bild = '' === $bild ? '' : '<p><strong>Bild:</strong> ' . esc_html( $bild ) . '</p>';
 
+	// Für alle, die es genau wissen wollen: derselbe Stand maschinenlesbar.
+	$nachweis = '<p class="wl-herkunft__nachweis"><a href="/herkunft.json" rel="nofollow">'
+		. 'Quellen und Prüfstand aller Einträge als Datensatz</a></p>';
+
 	return "\n" . '<div class="wl-herkunft"><h2>Woher die Angaben stammen</h2>'
 		. ( $zeilen ? '<ul>' . $zeilen . '</ul>' : '' )
-		. $pruef . $bild . '</div>' . "\n";
+		. $pruef . $bild . $nachweis . '</div>' . "\n";
 }
 
 function warleek_seed_guides( array $guides, array $media, array $site, $force = false ) {

@@ -218,6 +218,84 @@ function warleek_seo_head() {
 		echo '<script type="application/ld+json">' . wp_json_encode( $art, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
 	}
 
+	// Datenbank-Eintrag: Artikel über einen Gegenstand im Spiel. Die Werte des
+	// Datenblatts gehen als PropertyValue mit – das ist die ehrliche Form, weil
+	// jeder Wert einzeln benannt bleibt statt in einem Fließtext zu verschwinden.
+	if ( is_singular( 'item' ) ) {
+		$it   = get_queried_object();
+		$typ  = get_the_terms( $it, 'item-typ' );
+		$typ  = ( $typ && ! is_wp_error( $typ ) ) ? reset( $typ ) : null;
+
+		$werte = array();
+		foreach ( warleek_item_felder() as $key => $def ) {
+			$roh = (string) get_post_meta( $it->ID, 'item_' . $key, true );
+			if ( '' === $roh ) { continue; }
+			$werte[] = array(
+				'@type' => 'PropertyValue',
+				'name'  => $def[0],
+				'value' => warleek_item_wert( $key, $roh ),
+			);
+		}
+
+		$ding = array(
+			'@type' => 'Thing',
+			'name'  => get_the_title( $it ),
+			'description' => wp_strip_all_tags( get_the_excerpt( $it ) ),
+		);
+		if ( $werte ) { $ding['additionalProperty'] = $werte; }
+		if ( $typ )   { $ding['category'] = $typ->name; }
+
+		$ld = array(
+			'@context'         => 'https://schema.org',
+			'@type'            => 'TechArticle',
+			'headline'         => get_the_title( $it ),
+			'inLanguage'       => 'de-DE',
+			'datePublished'    => get_the_date( 'c', $it ),
+			'dateModified'     => get_the_modified_date( 'c', $it ),
+			'description'      => warleek_seo_description(),
+			'author'           => array( '@type' => 'Organization', 'name' => 'Warleek', 'url' => $home ),
+			'publisher'        => array( '@type' => 'Organization', 'name' => 'Warleek', 'url' => $home ),
+			'mainEntityOfPage' => get_permalink( $it ),
+			'about'            => warleek_seo_game_ld(),
+			'mainEntity'       => $ding,
+			'isPartOf'         => array( '@type' => 'Dataset', '@id' => get_post_type_archive_link( 'item' ) . '#dataset' ),
+		);
+		$ld = array_merge( $ld, warleek_seo_item_herkunft_ld( $it->ID ) );
+		if ( has_post_thumbnail( $it ) ) { $ld['image'] = get_the_post_thumbnail_url( $it, 'large' ); }
+		echo '<script type="application/ld+json">' . wp_json_encode( $ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+	}
+
+	// Die Datenbank als Ganzes ist ein Datensatz – mit Stand, Lizenzlage und
+	// einem maschinenlesbaren Herkunftsnachweis als Download.
+	if ( is_post_type_archive( 'item' ) || is_tax( 'item-typ' ) ) {
+		$anzahl = (int) wp_count_posts( 'item' )->publish;
+		$letzte = get_posts( array( 'post_type' => 'item', 'post_status' => 'publish', 'posts_per_page' => 1, 'orderby' => 'modified', 'order' => 'DESC' ) );
+		$ds = array(
+			'@context'      => 'https://schema.org',
+			'@type'         => 'Dataset',
+			'@id'           => get_post_type_archive_link( 'item' ) . '#dataset',
+			'name'          => 'Wardogs Datenbank (Deutsch)',
+			'description'   => 'Waffen, Fahrzeuge, Stellungen und Bauwerke aus WARDOGS mit Freischaltung, Kosten und Anwendung – auf Deutsch, mit Quellenangabe je Eintrag.',
+			'inLanguage'    => 'de-DE',
+			'url'           => get_post_type_archive_link( 'item' ),
+			'creator'       => array( '@type' => 'Organization', 'name' => 'Warleek', 'url' => $home ),
+			'about'         => warleek_seo_game_ld(),
+			'isAccessibleForFree' => true,
+			'dateModified'  => $letzte ? get_the_modified_date( 'c', $letzte[0] ) : gmdate( 'c' ),
+			'variableMeasured' => array_values( array_map( function ( $d ) { return $d[0]; }, warleek_item_felder() ) ),
+			'distribution'  => array(
+				'@type'           => 'DataDownload',
+				'encodingFormat'  => 'application/ld+json',
+				'contentUrl'      => home_url( '/herkunft.json' ),
+				'name'            => 'Herkunftsnachweis: Quelle und Prüfstand je Eintrag',
+			),
+		);
+		$person = warleek_seo_person_ld();
+		if ( $person ) { $ds['contributor'] = $person; }
+		if ( $anzahl ) { $ds['size'] = $anzahl . ' Einträge'; }
+		echo '<script type="application/ld+json">' . wp_json_encode( $ds, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+	}
+
 	// Patch Notes: Artikel über ein Spiel, mit Datum und Quelle bei Steam.
 	if ( is_singular( 'patchnote' ) ) {
 		$p    = get_queried_object();
@@ -391,6 +469,65 @@ function warleek_seo_game_ld() {
 }
 
 /**
+ * Die Person hinter den Prüfungen.
+ *
+ * `reviewedBy` ist nur dann etwas wert, wenn ein benennbarer Mensch dahintersteht.
+ * Die Angaben kommen aus den Optionen – erfunden wird hier nichts, und ohne Namen
+ * bleibt die Angabe weg, statt anonym zu behaupten.
+ *
+ * @return array|false
+ */
+function warleek_seo_person_ld() {
+	$name = trim( (string) warleek_opt( 'autor_name' ) );
+	if ( '' === $name ) { return false; }
+	$person = array( '@type' => 'Person', 'name' => $name );
+	$seite  = trim( (string) warleek_opt( 'autor_url' ) );
+	if ( $seite ) {
+		$person['url'] = $seite;
+		$person['@id'] = $seite . '#person';
+	}
+	$rolle = trim( (string) warleek_opt( 'autor_rolle' ) );
+	if ( $rolle ) { $person['description'] = $rolle; }
+	$profile = array_filter( array_map( 'trim', preg_split( '/\r\n|\r|\n/', (string) warleek_opt( 'autor_profile' ) ) ) );
+	if ( $profile ) { $person['sameAs'] = array_values( $profile ); }
+	return $person;
+}
+
+/**
+ * Herkunft eines Datenbank-Eintrags als Schema-Bausteine.
+ *
+ * Gibt zurück, was hinterlegt ist: Quellen als `citation`, und – nur wenn
+ * wirklich geprüft wurde – `reviewedBy`. Steht nichts da, wird nichts behauptet;
+ * der Status sagt dann ausdrücklich, dass der Wert aus Quellen stammt.
+ *
+ * @param int $id Beitrag.
+ * @return array
+ */
+function warleek_seo_item_herkunft_ld( $id ) {
+	$out = array();
+
+	$quellen = array_filter( array_map( 'trim', explode( '|', (string) get_post_meta( $id, '_warleek_quellen', true ) ) ) );
+	if ( $quellen ) {
+		$out['citation'] = array_map( function ( $q ) {
+			return filter_var( $q, FILTER_VALIDATE_URL )
+				? array( '@type' => 'CreativeWork', 'url' => $q )
+				: array( '@type' => 'CreativeWork', 'name' => $q );
+		}, array_values( $quellen ) );
+	}
+
+	$g    = trim( (string) get_post_meta( $id, '_warleek_geprueft', true ) );
+	$tief = strtolower( $g );
+	if ( '' !== $g && ! str_starts_with( $tief, 'nein' ) && ! str_starts_with( $tief, 'noch nicht' ) ) {
+		$person = warleek_seo_person_ld();
+		if ( $person ) { $out['reviewedBy'] = $person; }
+		$out['creativeWorkStatus'] = $g;
+	} else {
+		$out['creativeWorkStatus'] = 'Aus Quellen übernommen, im Spiel nicht nachgeprüft';
+	}
+	return $out;
+}
+
+/**
  * Brotkrumen als Schema – zeigt Suchmaschinen den Weg zur Seite.
  *
  * @return array|false
@@ -407,6 +544,20 @@ function warleek_seo_breadcrumbs() {
 			$weg[] = array( 'name' => $t->name, 'url' => get_term_link( $t ) );
 		}
 		$weg[] = array( 'name' => get_the_title(), 'url' => get_permalink() );
+	} elseif ( is_singular( 'item' ) ) {
+		$weg[] = array( 'name' => 'Datenbank', 'url' => get_post_type_archive_link( 'item' ) );
+		$terms = get_the_terms( get_queried_object(), 'item-typ' );
+		if ( $terms && ! is_wp_error( $terms ) ) {
+			$t     = reset( $terms );
+			$weg[] = array( 'name' => $t->name, 'url' => get_term_link( $t ) );
+		}
+		$weg[] = array( 'name' => get_the_title(), 'url' => get_permalink() );
+	} elseif ( is_post_type_archive( 'item' ) ) {
+		$weg[] = array( 'name' => 'Datenbank', 'url' => get_post_type_archive_link( 'item' ) );
+	} elseif ( is_tax( 'item-typ' ) ) {
+		$term  = get_queried_object();
+		$weg[] = array( 'name' => 'Datenbank', 'url' => get_post_type_archive_link( 'item' ) );
+		if ( $term && ! is_wp_error( $term ) ) { $weg[] = array( 'name' => $term->name, 'url' => get_term_link( $term ) ); }
 	} elseif ( is_singular( 'patchnote' ) ) {
 		$weg[] = array( 'name' => 'Patch Notes', 'url' => get_post_type_archive_link( 'patchnote' ) );
 		$weg[] = array( 'name' => get_the_title(), 'url' => get_permalink() );

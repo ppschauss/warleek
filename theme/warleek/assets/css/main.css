@@ -551,3 +551,10 @@ html.has-modal-open .wl-consent { display: none; }
 	color: var(--wp--preset--color--sand);
 	opacity: 0.85;
 }
+
+.wl-herkunft__nachweis {
+	margin-top: 0.7rem !important;
+	padding-top: 0.6rem;
+	border-top: 1px solid rgb(var(--wl-accent-rgb) / 0.18);
+	font-size: 0.82rem;
+}
