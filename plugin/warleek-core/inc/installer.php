@@ -838,6 +838,7 @@ function warleek_admin_menu() {
 	add_menu_page( 'Warleek', 'Warleek', 'manage_options', 'warleek', 'warleek_render_admin_page', $icon, 58 );
 	add_submenu_page( 'warleek', 'Installation', 'Installation', 'manage_options', 'warleek', 'warleek_render_admin_page' );
 	add_submenu_page( 'warleek', 'Guides importieren', 'Guides importieren', 'manage_options', 'warleek-import', 'warleek_render_admin_page' );
+	add_submenu_page( 'warleek', 'Verlinkung', 'Verlinkung', 'manage_options', 'warleek-autolink', 'warleek_render_admin_page' );
 	add_submenu_page( 'warleek', 'Einstellungen', 'Einstellungen', 'manage_options', 'warleek-settings', 'warleek_render_admin_page' );
 }
 add_action( 'admin_menu', 'warleek_admin_menu' );
@@ -885,28 +886,33 @@ function warleek_render_admin_page() {
 	$page     = isset( $_GET['page'] ) ? sanitize_key( $_GET['page'] ) : 'warleek';
 	$settings = 'warleek-settings' === $page;
 	$import   = 'warleek-import' === $page;
+	$autolink = 'warleek-autolink' === $page;
 	?>
 	<div class="wrap wl-wrap">
 		<div class="wl-hero-box">
-			<h1>Warleek<?php echo $settings ? ' – Einstellungen' : ( $import ? ' – Guides importieren' : '' ); ?></h1>
+			<h1>Warleek<?php echo $settings ? ' – Einstellungen' : ( $import ? ' – Guides importieren' : ( $autolink ? ' – Verlinkung' : '' ) ); ?></h1>
 			<p><?php
 			if ( $settings ) {
 				echo 'Discord-Link, Social-Profile und die Übersetzung der Patch Notes. Diese Angaben erscheinen auf der Website und in den Meta-Daten.';
 			} elseif ( $import ) {
 				echo 'Guides als Markdown-Datei oder als ZIP hochladen. Mit „Nur prüfen" siehst du vorher, was angelegt oder aktualisiert würde.';
+			} elseif ( $autolink ) {
+				echo 'Gegenstände aus der Datenbank werden im Fließtext automatisch verlinkt. Hier siehst du, wo sie vorkommen – und schaltest einzelne ab.';
 			} else {
 				echo 'Ein Klick installiert Inhalte, Bilder, Menüs und das SEO-Plugin. Alles ist wiederholbar – ein zweiter Durchlauf aktualisiert, statt Doppelte anzulegen.';
 			} ?></p>
 		</div>
 		<h2 class="nav-tab-wrapper" style="margin-bottom:18px">
-			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek' ) ); ?>" class="nav-tab <?php echo ( $settings || $import ) ? '' : 'nav-tab-active'; ?>">Installation</a>
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek' ) ); ?>" class="nav-tab <?php echo ( $settings || $import || $autolink ) ? '' : 'nav-tab-active'; ?>">Installation</a>
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek-import' ) ); ?>" class="nav-tab <?php echo $import ? 'nav-tab-active' : ''; ?>">Guides importieren</a>
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek-autolink' ) ); ?>" class="nav-tab <?php echo $autolink ? 'nav-tab-active' : ''; ?>">Verlinkung</a>
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=warleek-settings' ) ); ?>" class="nav-tab <?php echo $settings ? 'nav-tab-active' : ''; ?>">Einstellungen</a>
 		</h2>
 		<?php warleek_render_update_box(); ?>
 		<?php
 		if ( $settings )     { warleek_render_settings_tab(); }
 		elseif ( $import )   { warleek_render_import_tab(); }
+		elseif ( $autolink ) { warleek_render_autolink_tab(); }
 		else                 { warleek_render_install_tab(); }
 		?>
 	</div>

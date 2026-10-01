@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.12.0
+Stable tag: 2.13.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.13.0 =
+* Neu: **Warleek → Verlinkung**. Gegenstände aus der Datenbank werden im Fließtext automatisch verlinkt, mit `title="Wardogs <Name>"`. Das Werkzeug zeigt vorher, wo jeder Gegenstand vorkommt, und schaltet einzelne ab.
+* Verlinkt wird beim Anzeigen, nicht im gespeicherten Text: Beiträge bleiben unverändert, es entstehen keine Links auf noch nicht veröffentlichte Einträge, Abschalten stellt den alten Zustand her.
+* Erste Fundstelle je Gegenstand, Deckel je Beitrag, nie in Überschriften, Code, vorhandenen Links oder Attributen – und kein Eintrag verlinkt sich selbst.
 
 = 2.12.0 =
 * Installation: Schritte lassen sich einzeln ankreuzen und ausführen – „Auswahl ausführen" oder „Auswahl neu einspielen" (mit Rückfrage). Jeder Schritt sagt, was ein erzwungener Lauf überschreibt.
