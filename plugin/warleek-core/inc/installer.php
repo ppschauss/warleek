@@ -151,16 +151,32 @@ function warleek_upsert_post( array $data, $type, $parent = 0, $force = false ) 
 
 		// Von Hand bearbeitete Texte nicht überschreiben. Erkennbar daran, dass der
 		// aktuelle Inhalt nicht mehr dem entspricht, was der Seed zuletzt geschrieben hat.
-		$seed_hash = (string) get_post_meta( $id, '_warleek_seed_hash', true );
-		if ( ! $force && $seed_hash && md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) !== $seed_hash ) {
+		if ( ! $force && isset( $data['post_content'] ) && warleek_seed_behalten(
+			$id, '_warleek_seed_hash',
+			md5( (string) get_post_field( 'post_content', $id, 'raw' ) ),
+			md5( (string) $data['post_content'] )
+		) ) {
 			unset( $data['post_content'], $data['post_excerpt'] );
 			warleek_log( 'Inhalt behalten (im Editor geändert): ' . $data['post_name'] );
+		}
+
+		// Titel genauso: Wer eine Seite umbenennt, meint das.
+		if ( ! $force && isset( $data['post_title'] ) && warleek_seed_behalten(
+			$id, '_warleek_seed_titel',
+			md5( (string) get_post_field( 'post_title', $id ) ),
+			md5( (string) $data['post_title'] )
+		) ) {
+			unset( $data['post_title'] );
+			warleek_log( 'Titel behalten (im Backend geändert): ' . $data['post_name'] );
 		}
 
 		wp_update_post( wp_slash( $data ) );
 		if ( isset( $data['post_content'] ) ) {
 			// Den zurückgelesenen Wert hashen – WordPress normalisiert beim Speichern.
 			update_post_meta( $id, '_warleek_seed_hash', md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) );
+		}
+		if ( isset( $data['post_title'] ) ) {
+			update_post_meta( $id, '_warleek_seed_titel', md5( (string) get_post_field( 'post_title', $id ) ) );
 		}
 		warleek_log( "update: {$data['post_name']}" );
 		return $id;
@@ -174,14 +190,66 @@ function warleek_upsert_post( array $data, $type, $parent = 0, $force = false ) 
 	warleek_log( "create: {$data['post_name']} (#$id)" );
 	return (int) $id;
 }
-function warleek_set_seo( $id, array $seo, $noindex = false ) {
-	update_post_meta( $id, '_warleek_seo_title', $seo['title'] ?? '' );
-	update_post_meta( $id, '_warleek_seo_desc', $seo['description'] ?? '' );
+function warleek_set_seo( $id, array $seo, $noindex = false, $force = false ) {
+	$titel = (string) ( $seo['title'] ?? '' );
+	$desc  = (string) ( $seo['description'] ?? '' );
+
+	// Im Backend geänderte Meta-Daten nicht überschreiben – gleiche Regel wie bei
+	// den Texten. Erkannt daran, dass der aktuelle Stand nicht mehr dem
+	// entspricht, was der Seed zuletzt geschrieben hat.
+	$marke = (string) get_post_meta( $id, '_warleek_seed_seo', true );
+	$jetzt = warleek_seo_marke(
+		(string) get_post_meta( $id, '_warleek_seo_title', true ),
+		(string) get_post_meta( $id, '_warleek_seo_desc', true ),
+		(bool) get_post_meta( $id, '_warleek_noindex', true )
+	);
+	if ( ! $force && warleek_seed_behalten( $id, '_warleek_seed_seo', $jetzt, warleek_seo_marke( $titel, $desc, (bool) $noindex ) ) ) {
+		warleek_log( 'SEO behalten (im Backend geändert): ' . get_post_field( 'post_name', $id ) );
+		return;
+	}
+
+	update_post_meta( $id, '_warleek_seo_title', $titel );
+	update_post_meta( $id, '_warleek_seo_desc', $desc );
 	update_post_meta( $id, '_warleek_noindex', $noindex ? 1 : 0 );
 	// RankMath-kompatibel (wird gelesen, sobald das Plugin aktiv ist)
-	update_post_meta( $id, 'rank_math_title', $seo['title'] ?? '' );
-	update_post_meta( $id, 'rank_math_description', $seo['description'] ?? '' );
+	update_post_meta( $id, 'rank_math_title', $titel );
+	update_post_meta( $id, 'rank_math_description', $desc );
 	if ( $noindex ) { update_post_meta( $id, 'rank_math_robots', array( 'noindex' ) ); } else { delete_post_meta( $id, 'rank_math_robots' ); }
+
+	update_post_meta( $id, '_warleek_seed_seo', warleek_seo_marke( $titel, $desc, (bool) $noindex ) );
+}
+
+/**
+ * Soll der Seed diesen Teil in Ruhe lassen?
+ *
+ * Zwei Fälle, und der zweite ist der wichtige:
+ *
+ * 1. Es gibt eine Marke vom letzten Seed-Lauf und der jetzige Stand weicht ab
+ *    → im Backend geändert, behalten.
+ * 2. Es gibt **keine** Marke, weil die Installation älter ist als dieser Schutz.
+ *    Dann lässt sich nicht unterscheiden, ob jemand etwas geändert hat oder ob
+ *    der Wert noch von einem früheren Seed stammt. Weicht er von dem ab, was wir
+ *    schreiben würden, gilt er als bearbeitet – lieber einmal zu vorsichtig als
+ *    eine fremde Änderung stillschweigend wegzuwerfen. Die Marke wird dabei
+ *    nachgetragen, damit die Entscheidung nur einmal anfällt.
+ *
+ * @param int    $id       Beitrag.
+ * @param string $feld     Meta-Schlüssel der Marke.
+ * @param string $jetzt    Fingerabdruck des aktuellen Stands.
+ * @param string $geplant  Fingerabdruck dessen, was der Seed schreiben würde.
+ * @return bool
+ */
+function warleek_seed_behalten( $id, $feld, $jetzt, $geplant ) {
+	$marke = (string) get_post_meta( $id, $feld, true );
+	if ( $marke ) { return $jetzt !== $marke; }
+	if ( $jetzt === $geplant ) { return false; }
+	update_post_meta( $id, $feld, $jetzt );   // Stand übernehmen, Entscheidung festhalten
+	return true;
+}
+
+/** Fingerabdruck der SEO-Felder, um spätere Änderungen zu erkennen. */
+function warleek_seo_marke( $titel, $desc, $noindex ) {
+	return md5( $titel . "\n" . $desc . "\n" . ( $noindex ? '1' : '0' ) );
 }
 
 /* ------------------------------------------------------------ Sections → Blöcke */
@@ -249,7 +317,7 @@ function warleek_seed_pages( array $pages, array $media, array $site, $force = f
 		$ids[ $p['slug'] ] = $id;
 		update_post_meta( $id, '_wp_page_template', ( $p['template'] ?? 'page' ) === 'page-hub' ? 'page-hub' : 'default' );
 		if ( ! empty( $p['hero']['image'] ) && ! empty( $media[ $p['hero']['image'] ] ) ) { set_post_thumbnail( $id, $media[ $p['hero']['image'] ] ); }
-		warleek_set_seo( $id, $p['seo'] ?? array(), ! empty( $p['noindex'] ) );
+		warleek_set_seo( $id, $p['seo'] ?? array(), ! empty( $p['noindex'] ), $force );
 		if ( ! empty( $p['front'] ) ) {
 			update_option( 'show_on_front', 'page' );
 			update_option( 'page_on_front', $id );
@@ -308,7 +376,7 @@ function warleek_seed_guides( array $guides, array $media, array $site, $force =
 		$id = warleek_upsert_post( array( 'post_title' => $g['title'], 'post_name' => $g['slug'], 'post_content' => $content, 'post_excerpt' => $g['excerpt'], 'menu_order' => (int) ( $g['order'] ?? 0 ) ), 'guide', 0, $force );
 		wp_set_object_terms( $id, $g['thema'], 'guide-thema' );
 		if ( ! empty( $g['image'] ) && ! empty( $media[ $g['image'] ] ) ) { set_post_thumbnail( $id, $media[ $g['image'] ] ); }
-		warleek_set_seo( $id, $g['seo'] ?? array() );
+		warleek_set_seo( $id, $g['seo'] ?? array(), false, $force );
 	}
 }
 
@@ -517,10 +585,21 @@ function warleek_step_items( $force = false ) {
 		if ( $vorhanden ) {
 			$id = (int) $vorhanden['id'];
 			$daten['ID'] = $id;
-			$hash = (string) get_post_meta( $id, '_warleek_seed_hash', true );
-			if ( ! $force && $hash && md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) !== $hash ) {
+			if ( ! $force && isset( $daten['post_content'] ) && warleek_seed_behalten(
+				$id, '_warleek_seed_hash',
+				md5( (string) get_post_field( 'post_content', $id, 'raw' ) ),
+				md5( (string) $daten['post_content'] )
+			) ) {
 				unset( $daten['post_content'] );
 				warleek_log( 'Inhalt behalten (bearbeitet): ' . $e['slug'] );
+			}
+			if ( ! $force && isset( $daten['post_title'] ) && warleek_seed_behalten(
+				$id, '_warleek_seed_titel',
+				md5( (string) get_post_field( 'post_title', $id ) ),
+				md5( (string) $daten['post_title'] )
+			) ) {
+				unset( $daten['post_title'] );
+				warleek_log( 'Titel behalten (bearbeitet): ' . $e['slug'] );
 			}
 			if ( ! empty( $e['start'] ) && 'future' === $vorhanden['status'] ) {
 				$daten['post_status']   = 'publish';
@@ -555,6 +634,9 @@ function warleek_step_items( $force = false ) {
 		if ( isset( $daten['post_content'] ) ) {
 			update_post_meta( $id, '_warleek_seed_hash', md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) );
 		}
+		if ( isset( $daten['post_title'] ) ) {
+			update_post_meta( $id, '_warleek_seed_titel', md5( (string) get_post_field( 'post_title', $id ) ) );
+		}
 
 		wp_set_object_terms( $id, $e['typ'], 'item-typ' );
 
@@ -568,9 +650,28 @@ function warleek_step_items( $force = false ) {
 		foreach ( $bildsuche as $schluessel ) {
 			if ( ! empty( $media[ $schluessel ] ) ) { set_post_thumbnail( $id, (int) $media[ $schluessel ] ); break; }
 		}
-		foreach ( warleek_item_felder() as $key => $def ) {
-			$wert = (string) ( $e['felder'][ $key ] ?? '' );
-			if ( '' === $wert ) { delete_post_meta( $id, 'item_' . $key ); } else { update_post_meta( $id, 'item_' . $key, $wert ); }
+		// Datenblatt: im Backend korrigierte Werte behalten. Wer einen Preis von
+		// Hand richtigstellt, soll ihn nicht beim nächsten Update zurückbekommen.
+		$ist = array();
+		foreach ( warleek_item_felder() as $key => $def ) { $ist[ $key ] = (string) get_post_meta( $id, 'item_' . $key, true ); }
+		$geplant = array();
+		foreach ( warleek_item_felder() as $key => $def ) { $geplant[ $key ] = (string) ( $e['felder'][ $key ] ?? '' ); }
+		$halten = ! $force && warleek_seed_behalten(
+			$id, '_warleek_seed_felder',
+			md5( (string) wp_json_encode( $ist ) ),
+			md5( (string) wp_json_encode( $geplant ) )
+		);
+
+		if ( $halten ) {
+			warleek_log( 'Werte behalten (bearbeitet): ' . $e['slug'] );
+		} else {
+			foreach ( warleek_item_felder() as $key => $def ) {
+				$wert = (string) ( $e['felder'][ $key ] ?? '' );
+				if ( '' === $wert ) { delete_post_meta( $id, 'item_' . $key ); } else { update_post_meta( $id, 'item_' . $key, $wert ); }
+			}
+			$neu_ist = array();
+			foreach ( warleek_item_felder() as $key => $def ) { $neu_ist[ $key ] = (string) get_post_meta( $id, 'item_' . $key, true ); }
+			update_post_meta( $id, '_warleek_seed_felder', md5( (string) wp_json_encode( $neu_ist ) ) );
 		}
 		update_post_meta( $id, '_warleek_quellen', implode( ' | ', (array) ( $e['quellen'] ?? array() ) ) );
 		update_post_meta( $id, '_warleek_geprueft', (string) ( $e['geprueft'] ?? 'nein' ) );
@@ -584,7 +685,7 @@ function warleek_step_items( $force = false ) {
 				$e['felder']['rolle'] ?? $typname,
 				! empty( $e['felder']['preis'] ) ? ', ' . warleek_item_wert( 'preis', $e['felder']['preis'] ) . '. ' : '. '
 			) ),
-		) );
+		), false, $force );
 	}
 
 	// Umbenannte oder gestrichene Einträge aufräumen: nur solche, die wir selbst

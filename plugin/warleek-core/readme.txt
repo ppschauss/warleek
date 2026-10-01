@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.18.0
+Stable tag: 2.19.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.19.0 =
+* **Wichtig:** SEO-Titel, SEO-Beschreibungen, Beitragstitel und Datenblatt-Werte wurden bei jedem Einspielen überschrieben – auch ohne „überschreiben". Nur die Texte waren geschützt. Das ist behoben: Was im Backend geändert wurde, bleibt.
+* Gilt auch für Installationen, die älter sind als dieser Schutz: Weicht ein Wert von dem ab, was mitgeliefert wird, gilt er als bearbeitet und bleibt.
+* „Auswahl neu einspielen" überschreibt weiterhin alles – das ist der Zweck.
+* Neuer Test `seed-schutz-test.php` sichert das ab.
 
 = 2.18.0 =
 * Neu: Herkunftsnachweis unter `/herkunft.json` – Quellen, Prüfstand, Bildherkunft und Änderungsdatum je Eintrag, maschinenlesbar als JSON-LD. Wird bei jedem Abruf erzeugt und kann deshalb nicht veralten.
