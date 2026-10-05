@@ -7,7 +7,7 @@ image: guide-erste-runde
 image_alt: Frisch ausgeruestete Soldaten am Rand des Hauptlagers, daneben ein leichtes Fahrzeug und gestapelte Nachschubkisten
 excerpt: Fünfzehn Dinge stehen dir ab der ersten Minute offen – drei davon kostenlos. Welche das sind und was sie taugen.
 seo_title: Wardogs ohne Freischaltung – Startausrüstung Deutsch | Warleek
-seo_description: Alle Waffen, Fahrzeuge und Bauwerke, die in Wardogs ohne Track-Stufe verfügbar sind – mit Preisen. Einsteiger-Guide auf Deutsch für Spieler aus Deutschland, Österreich und der Schweiz.
+seo_description: Alle Waffen, Fahrzeuge und Bauwerke ohne Track-Stufe, mit Preisen und Einsatzzweck. Für Einsteiger in Deutschland, Österreich und der Schweiz.
 quellen: [Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026), Offizielles Pressematerial von BULKHEAD/Team17 (Startkapital)]
 geprueft: nein
 ---

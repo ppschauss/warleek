@@ -7,7 +7,7 @@ image: guide-logistik-run
 image_alt: Beladener Logistik-LKW auf einer Schotterpiste, hinten gestapelte Versorgungspaletten unter Spanngurten
 excerpt: Die beste Investition im Spiel, nachgerechnet: Kaufpreis, Abgabe, Abbauprämie – und warum zwei Paletten pro Fahrt den Unterschied machen.
 seo_title: Wardogs Paletten Gewinn – Logistik lohnt sich | Warleek
-seo_description: Was eine Versorgungspalette kostet und einbringt, welches Fahrzeug sich rechnet und wo der Gewinn verloren geht. Logistik-Guide auf Deutsch für Spieler aus Deutschland, Österreich und der Schweiz.
+seo_description: Was eine Versorgungspalette kostet und einbringt und welches Fahrzeug sich rechnet. Logistik-Guide für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Guides und Datenbanken zu WARDOGS (Stand Oktober 2026)]
 geprueft: nein
 ---

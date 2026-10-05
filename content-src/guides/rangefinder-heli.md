@@ -7,7 +7,7 @@ image: guide-rangefinder
 image_alt: Montage aus zwei Bildern - links ein Beobachter mit Fernglas auf einem Dach, rechts der Blick aus einem Helikoptercockpit mit eingezeichneten Markierungen
 excerpt: Mit dem Entfernungsmesser in der Hand einsteigen, dann in die Ego-Perspektive wechseln – und als Pilot das Lagebild des Teams sehen. Seit dem 2. Oktober deaktiviert, ab Season 2 mit Batterien zurück.
 seo_title: Wardogs Entfernungsmesser im Heli – Trick Deutsch | Warleek
-seo_description: Als Pilot alle Markierungen des Teams sehen: so funktioniert der Entfernungsmesser-Trick im Helikopter. Wardogs-Guide auf Deutsch für Spieler in Deutschland, Österreich und der Schweiz.
+seo_description: Als Pilot alle Markierungen des Teams sehen – und warum das Gerät gerade fehlt. Für Spieler in Deutschland, Österreich und der Schweiz.
 quellen: [Im Spiel beobachtet von Patrick Schauß (Warleek), Oktober 2026, 'Steam-Hotfix vom 02.10.2026: IR-Rangefinder deaktiviert, Rückkehr mit Season 2 gegen Batterien']
 geprueft: im Spiel beobachtet (Oktober 2026); dass das Gerät seit dem 02.10. draußen ist und mit Season 2 gegen Batterien zurückkommt, von Patrick Schauß bestätigt. Reichweite und Dauer nicht systematisch vermessen
 ---

@@ -6,8 +6,8 @@ order: 17
 image: guide-medic
 image_alt: Sanitaeter kniet neben einem Verwundeten, geoeffneter Rucksack mit Verbandsmaterial und Defibrillator daneben
 excerpt: Pistole statt Gewehr, Rauch statt Feuerkraft, Defi mit eingesetzter Batterie – und der Griff, mit dem die große Batterie keinen Rucksackplatz mehr kostet.
-seo_title: Wardogs Medic Loadout Deutsch – Rucksack richtig packen | Warleek
-seo_description: Defibrillator, Batterien, Stims, Rauch und die richtige Zweitwaffe: wie ein Medic seinen Rucksack packt und dabei Platz gewinnt. Auf Deutsch für Spieler in Deutschland, Österreich und der Schweiz.
+seo_title: Wardogs Medic-Loadout – Rucksack packen | Warleek
+seo_description: Defi, Batterien, Stims, Rauch und die richtige Zweitwaffe: wie ein Medic packt und dabei Platz gewinnt. Für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Datenbanken und Guides zu WARDOGS (Stand Oktober 2026), Batterie-Griff und Rauch-Dauer im Spiel beobachtet von Patrick Schauß (Warleek)]
 geprueft: teilweise – Batterie-Ladungen und -Plätze, der Tausch-Griff, Waffenwahl und Rauch-Dauer im Spiel geprüft von Patrick Schauß (Oktober 2026); Freischaltstufen, Preise und Gewichte aus Community-Quellen übernommen
 ---

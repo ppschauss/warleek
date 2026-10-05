@@ -64,6 +64,19 @@ foreach ( $files as $file ) {
 		if ( '' === $guide[ $pflicht ] ) { fwrite( STDERR, "! $slug: $pflicht fehlt\n" ); $warn++; }
 	}
 
+	// SEO-Längen prüfen – die Regel steht in CLAUDE.md, also soll sie auch jemand
+	// durchsetzen. Zu lange Angaben kürzt Google selbst, und dann steht dort nicht
+	// das, was wir ausgesucht haben.
+	foreach ( array( 'seo_title' => 62, 'seo_description' => 158 ) as $feld => $grenze ) {
+		$wert = trim( (string) ( $meta[ $feld ] ?? '' ) );
+		if ( '' === $wert ) { continue; }
+		$laenge = mb_strlen( $wert );
+		if ( $laenge > $grenze ) {
+			fwrite( STDERR, sprintf( "! %s: %s ist %d Zeichen lang (erlaubt %d)\n", $slug, $feld, $laenge, $grenze ) );
+			$warn++;
+		}
+	}
+
 	// Bilder aus dem Fließtext: `![Alt](schluessel)` – Datei muss in content-src/guides/img/ liegen.
 	if ( preg_match_all( '#<img src="([^"/:.]+)" alt="([^"]*)">#', $guide['html'], $inline, PREG_SET_ORDER ) ) {
 		foreach ( $inline as $hit ) {

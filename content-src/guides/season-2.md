@@ -7,7 +7,7 @@ image: guide-kontrollzone
 image_alt: Blick ueber ein umkaempftes Tal bei aufziehendem Wetter, Rauchsaeulen am Horizont und ein Helikopter im Tiefflug
 excerpt: Was zurückgesetzt wird, was bleibt, und was neu dazukommt – Stand vor dem Start. Mit der Trennung zwischen Bestätigtem und Vermutetem.
 seo_title: Wardogs Season 2 Deutsch – Wipe, Regen, Flakpanzer | Warleek
-seo_description: Season 2 startet am 15. Oktober 2026: Progressions-Reset, Regen und Feuer, neuer Flugabwehrpanzer. Was bestätigt ist und was nicht – auf Deutsch für Spieler in Deutschland, Österreich und der Schweiz.
+seo_description: Progressions-Reset, Regen und ein Flakpanzer: was zum 15. Oktober bestätigt ist und was nicht. Für Deutschland, Österreich und die Schweiz.
 quellen: [Season-2-Ankündigung und Community-Zusammenfassungen (Stand 5. Oktober 2026), 'Steam-Hotfix vom 02.10.2026 zum IR-Entfernungsmesser']
 geprueft: nein – Stand vor dem Start, wird nach dem 15.10. überarbeitet
 ---

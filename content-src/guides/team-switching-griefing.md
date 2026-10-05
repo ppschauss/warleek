@@ -7,7 +7,7 @@ image: guide-fob-verteidigen
 image_alt: Beschaedigte HESCO-Mauer an einer Basis in der Daemmerung, dahinter Rauch und ein umgestuerztes Fahrzeug
 excerpt: Manche wechseln mitten im Match die Seite, laufen in die eigene FOB und reißen die Mauern ein. Was dahintersteckt und wie ihr eine Basis dagegen baut.
 seo_title: Wardogs Team-Switching & FOB-Sabotage – Schutz | Warleek
-seo_description: Spieler wechseln mitten im Match die Fraktion und sabotieren Basen von innen. Wie man das erkennt und eine FOB dagegen auslegt. Auf Deutsch für Spieler in Deutschland, Österreich und der Schweiz.
+seo_description: Spieler wechseln mitten im Match die Fraktion und sabotieren Basen von innen. Wie man dagegen baut – für Deutschland, Österreich und die Schweiz.
 quellen: ['Berichterstattung zu Team-Switching in WARDOGS (Kotaku, Oktober 2026)', Öffentliche Community-Diskussionen auf Steam und Reddit (Stand Oktober 2026)]
 geprueft: nein
 ---

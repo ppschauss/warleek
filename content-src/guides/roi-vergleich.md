@@ -7,7 +7,7 @@ image: guide-geld
 image_alt: Geoeffneter Geldkoffer auf einer Kistenpalette im Versorgungszelt, daneben ein Klemmbrett mit Lieferschein
 excerpt: Kill, Zone, Palette, Transport – was jede Tätigkeit pro Minute abwirft. Die Tabelle erklärt, warum Abschüsse die schlechteste Einnahmequelle im Spiel sind.
 seo_title: Wardogs Geld pro Minute – RoI-Vergleich Deutsch | Warleek
-seo_description: Kills, Zonenzeit, Paletten und Transport im direkten Ertragsvergleich. Was sich in Wardogs wirklich lohnt – auf Deutsch für Spieler in Deutschland, Österreich und der Schweiz.
+seo_description: Kills, Zonenzeit, Paletten und Transport im direkten Ertragsvergleich. Was sich lohnt – für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Guides und Datenbanken zu WARDOGS (Stand Oktober 2026)]
 geprueft: nein
 ---

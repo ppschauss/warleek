@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.25.0
+Stable tag: 2.26.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.26.0 =
+* Der Griefing-Beitrag ist auf die eigentlich nützliche Information ausgerichtet: Inventar öffnen sperrt im Downed-Zustand das eigene Kit. Titel, SEO und Aufbau folgen dem.
+* `bin/guides-build.php` prüft jetzt die SEO-Längen (Titel 62, Beschreibung 158) – zehn bestehende Guides lagen darüber und sind gekürzt.
 
 = 2.25.0 =
 * Ausrüstung vollständig: 34 weitere Einträge (Panzerung, Helme, Westen, Paletten, Kisten, Ghillie, Fallschirme, Werkzeug). 172 Einträge gesamt.

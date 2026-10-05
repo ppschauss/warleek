@@ -49,6 +49,7 @@ Nicht enthalten: Symbole oder Renderings einzelner Waffen und Fahrzeuge – die 
 ## Griefing und Strafen (Stand Oktober 2026)
 - **Teamkill-Strafe rund $1.800** (Foren-Angabe). Gemessen an Loadouts im fünfstelligen Bereich eher ein Preis als eine Strafe.
 - **Melden:** Punktetafel mit TAB, Rechtsklick auf den Namen → Stummschalten/Melden, eigener Punkt **Griefing**.
+- **Inventar öffnen (TAB) im Downed-Zustand sperrt das eigene Kit** – Teammates kommen dann nicht an die Ausrüstung. Von Patrick im Spiel beobachtet (Oktober 2026). In den Steam-Foren umstritten: Eine Lesart besagt, die Meldung „gesperrt" beziehe sich nur auf den Liegenden selbst. Unsere Beobachtung stützt die andere Lesart. **Nicht über viele Fälle nachgemessen.**
 - **Aussteigen im Downed-Zustand** lässt den Charakter samt Ausrüstung verschwinden – in der Community als Loot-Denial gegen Team-Looter verbreitet. Von uns **nicht nachgemessen**, Quelle sind Community-Angaben.
 - **Masche aus den Foren:** Gruppen kesseln jemanden mit Fahrzeugen ein und beleben sich gegenseitig wieder, bis der Eingekesselte versehentlich trifft und zahlt – das Strafsystem belohnt dort den Angreifer.
 - Erlebt und berichtet von Patrick Schauß (Oktober 2026): Teamkollegen ziehen Gefallene in Deckung, looten sie und lassen sie liegen; auch der Defibrillator wird aus der Tasche genommen.
