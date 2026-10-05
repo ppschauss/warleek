@@ -9,7 +9,7 @@ excerpt: Pistole statt Gewehr, Rauch statt Feuerkraft, Defi mit eingesetzter Bat
 seo_title: Wardogs Medic Loadout Deutsch – Rucksack richtig packen | Warleek
 seo_description: Defibrillator, Batterien, Stims, Rauch und die richtige Zweitwaffe: wie ein Medic seinen Rucksack packt und dabei Platz gewinnt. Auf Deutsch für Spieler in Deutschland, Österreich und der Schweiz.
 quellen: [Öffentliche Community-Datenbanken und Guides zu WARDOGS (Stand Oktober 2026), Batterie-Griff und Rauch-Dauer im Spiel beobachtet von Patrick Schauß (Warleek)]
-geprueft: teilweise – Batterie-Griff, Waffenwahl und Rauch-Dauer im Spiel beobachtet (Oktober 2026); die Zahlen zu Ausrüstung und Freischaltstufen aus Community-Quellen übernommen
+geprueft: teilweise – Batterie-Ladungen und -Plätze, der Tausch-Griff, Waffenwahl und Rauch-Dauer im Spiel geprüft von Patrick Schauß (Oktober 2026); Freischaltstufen, Preise und Gewichte aus Community-Quellen übernommen
 ---
 
 Das Problem eines Medics ist selten das Können. Es ist der Platz. Du willst Defi, Batterie, Verbände, Healpacks und Stims mitnehmen – und der Rucksack ist voll, bevor die Munition drin ist.
@@ -61,24 +61,31 @@ Der **Defibrillator** ist der Einschnitt. Er stellt sofort auf, statt mit dem Re
 
 Denn er läuft nicht von allein: **Er braucht eine Batterie.**
 
-## Zwei Batterien, derselbe Preis
+## Zwei Batterien, zwei Rechnungen
 
-| | Gewicht | Aufdruck |
+| | Ladungen | Platz, wenn sie im Rucksack liegt | Gewicht |
+|---|---|---|---|
+| Batterie (Standard) | **4** | 1 Feld | 0,63 kg |
+| **Große Batterie** | **10** | 2 Felder | 2 kg |
+
+Beide kosten nach Community-Angaben rund **$150**. Die große hat also **zweieinhalbmal so viele Ladungen** — und das ist nur die halbe Geschichte.
+
+## Der Griff: direkt tauschen, nicht dazupacken
+
+Der Defibrillator kommt mit der Standardbatterie **drin**. Eine eingesetzte Batterie belegt keinen Rucksackplatz. Wer die große dazukauft und einfach einsteckt, trägt sie als Fracht — zwei Felder.
+
+Tauschst du stattdessen sofort, dreht sich die Rechnung um:
+
+| | Felder belegt | Ladungen dabei |
 |---|---|---|
-| Batterie | 0,63 kg | 20V–5AH |
-| **Große Batterie** | 2 kg | 20V–15AH |
+| Große dazupacken | **2** (die große liegt im Rucksack) | 4 im Defi + 10 als Reserve |
+| **Große einsetzen, kleine raus** | **1** (nur die kleine liegt noch drin) | 10 im Defi + 4 als Reserve |
 
-Beide kosten nach Community-Angaben rund **$150**. Die große hat laut Aufdruck die dreifache Kapazität bei gut dreifachem Gewicht — eine Rechnung, die aufgeht, solange du nicht an deiner Gewichtsklasse kratzt.
+> [!hinweis] Kauf die große Batterie und **tausch sie direkt beim Händler** gegen die eingesetzte. Du gewinnst **ein Feld** und hast trotzdem beide Ladungen dabei — nur andersherum verteilt.
 
-## Der Griff: sofort einsetzen
+Ein Feld klingt nach wenig und ist bei einem Medic die Differenz zwischen zwei Healpacks und einem, oder zwischen „noch Munition dabei" und „zurück zum Lager".
 
-> [!hinweis] Kauf die große Batterie und **setz sie direkt nach dem Kauf in den Defi ein** – noch beim Händler. Eine eingesetzte Batterie belegt keinen Rucksackplatz mehr. Du hast den Slot wieder frei, und die Ladung ist trotzdem dabei.
-
-Das klingt nach einer Kleinigkeit und ist keine. Ein Platz im Rucksack ist bei einem Medic die Differenz zwischen zwei Healpacks und einem, oder zwischen „noch Munition dabei" und „zurück zum Lager".
-
-Wer die Batterie lose mitnimmt, trägt sie zweimal: einmal als Gewicht und einmal als Fläche. Eingesetzt zählt nur noch das Gewicht.
-
-Dasselbe gilt für jede Ersatzbatterie, die du **zusätzlich** einpackst — die braucht dann wirklich ihren Platz. Überleg dir vorher, ob eine große eingesetzte nicht reicht.
+Wer die kleine gar nicht mitnimmt, spart das letzte Feld noch dazu — dann sind es 10 Ladungen und null Reserve. Bei zehn Wiederbelebungen pro Leben ist das eine Rechnung, die meistens aufgeht.
 
 ## Der Rucksack selbst
 
@@ -107,6 +114,6 @@ Zwei Kilogramm für die große Batterie sind der Posten, den du dabei zuerst nac
 
 ## Was wir nicht wissen
 
-Wie viele Wiederbelebungen eine Ladung trägt, steht in keiner Quelle, die wir gefunden haben — weder für die kleine noch für die große Batterie. Die dreifache Kapazität steht auf dem Aufdruck, nicht in einem gemessenen Wert.
+Ob eine Ladung genau einer Wiederbelebung entspricht oder ob auch anderes daran zieht, haben wir nicht systematisch geprüft. Die Ladungszahlen selbst — 4 und 10 — stammen aus dem Spiel.
 
-Wenn du es zählst, schreib uns. Das ist genau die Zahl, die ein Medic vor dem Einkauf wissen will.
+Ebenfalls offen: ob sich mit Season 2 am Preis oder an den Ladungen etwas ändert. Wenn dir etwas auffällt, schreib uns.

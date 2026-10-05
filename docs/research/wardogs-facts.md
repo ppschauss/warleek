@@ -39,8 +39,8 @@ Nicht enthalten: Symbole oder Renderings einzelner Waffen und Fahrzeuge – die 
 
 ## Medic-Ausrüstung
 - Freischaltleiter: Verband (Start) · Field Resuscitator (Medic 2) · Individual First Aid Kit (Medic 9) · **Defibrillator (Medic 11, ~$25.000 Freischaltung, ~$1.600/Leben)** · Stim Pen (Medic 14) · Medical Bag (Medic 24).
-- Batterien für den Defi: Standard $150 / 0,63 kg / 20V-5AH · **High Capacity $150 / 2 kg / 20V-15AH**. Wie viele Wiederbelebungen eine Ladung trägt: **nicht belegt**.
-- **Eingesetzte Batterie belegt keinen Rucksackplatz** – direkt nach dem Kauf einsetzen spart ein Fach. Von Patrick im Spiel beobachtet (Oktober 2026).
+- Batterien für den Defi: Standard **4 Ladungen**, belegt **1 Feld** im Rucksack, $150 / 0,63 kg · **Große Batterie 10 Ladungen, 2 Felder**, $150 / 2 kg. Ladungen und Feldgrößen von Patrick im Spiel geprüft (Oktober 2026); Preis und Gewicht aus Community-Quellen.
+- **Eine eingesetzte Batterie belegt keinen Rucksackplatz.** Der Defi kommt mit der Standardbatterie drin. Große dazupacken = 2 Felder belegt; große einsetzen und kleine herausnehmen = **1 Feld**, also ein Feld gewonnen bei mehr Ladungen im Gerät.
 - GGX 18: vollautomatisch, 9×19 mm, ~1.200 Schuss/min, 22 Schaden, ~50 m wirksam, **0,63 kg, 2×2 Inventarfläche**, Wardog 70, ~$50.000 Freischaltung, $800/Leben.
 - Field Backpack hat mehr Fächer als der Scout Backpack.
 - **Eine Rauchgranate hält lang genug für Wiederbeleben und anschließendes Heilen** – eine pro Aktion reicht, zwei sind Verschwendung. Von Patrick im Spiel beobachtet (Oktober 2026).

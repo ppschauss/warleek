@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.22.0
+Stable tag: 2.23.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.23.0 =
+* Zwei neue Kategorien: **Ausrüstung** und **Wurfwaffen**. Erster Schwung mit 40 Einträgen – Verbände, Stims, Defibrillator, Ferngläser, Entfernungsmesser, Rucksäcke, Rauch- und Signalgranaten, C4.
+* Medic-Guide: Batterie-Abschnitt korrigiert. Standard 4 Ladungen (1 Feld), große 10 Ladungen (2 Felder) – direkt tauschen gewinnt ein Feld.
+* 138 Datenbank-Einträge, Veröffentlichung bis zum 18. Oktober verteilt.
 
 = 2.22.0 =
 * „Weiter in der Datenbank" zeigt jetzt Karten mit Bild, Titel und Preis statt einer Textliste – eine Waffe erkennt man an der Silhouette schneller als am Namen.

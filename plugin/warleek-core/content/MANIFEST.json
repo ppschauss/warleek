@@ -1086,5 +1086,203 @@
         "use": "item-wardogs-schraubenschluessel",
         "size": 7108,
         "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-typ-ausruestung.webp": {
+        "alt": "WARDOGS-Spielszene: Soldat in Deckung in einer Industriehalle – Symbolbild für Ausrüstung",
+        "use": "item-typ-ausruestung",
+        "size": 85748,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "item-typ-wurfwaffe.webp": {
+        "alt": "WARDOGS-Spielszene: Explosion reißt eine Gebäudefassade auf – Symbolbild für Wurfwaffen",
+        "use": "item-typ-wurfwaffe",
+        "size": 191248,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "item-wardogs-adrenalin.webp": {
+        "alt": "Adrenalinspritze aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-adrenalin",
+        "size": 8280,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-assault-backpack.webp": {
+        "alt": "Assault-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-assault-backpack",
+        "size": 7580,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-c4.webp": {
+        "alt": "C4-Ladung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-c4",
+        "size": 8796,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-defibrillator-ausr.webp": {
+        "alt": "Defibrillator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-defibrillator-ausr",
+        "size": 9258,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-emergency-resuscitator.webp": {
+        "alt": "Emergency Resuscitator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-emergency-resuscitator",
+        "size": 8204,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-enox.webp": {
+        "alt": "Enox aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-enox",
+        "size": 8204,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-entfernungsmesser.webp": {
+        "alt": "Entfernungsmesser aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-entfernungsmesser",
+        "size": 8290,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-erste-hilfe-set.webp": {
+        "alt": "Individuelles Erste-Hilfe-Set aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-erste-hilfe-set",
+        "size": 8412,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-fernglas.webp": {
+        "alt": "Fernglas aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-fernglas",
+        "size": 9612,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-fernzuender.webp": {
+        "alt": "Fernzünder aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-fernzuender",
+        "size": 7622,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-field-backpack.webp": {
+        "alt": "Field-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-field-backpack",
+        "size": 7746,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-field-resuscitator.webp": {
+        "alt": "Field Resuscitator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-field-resuscitator",
+        "size": 8204,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-gold-splittergranate.webp": {
+        "alt": "Goldene Splittergranate aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-gold-splittergranate",
+        "size": 10510,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-ied.webp": {
+        "alt": "Unkonventionelle Sprengvorrichtung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-ied",
+        "size": 10494,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-ir-entfernungsmesser.webp": {
+        "alt": "Infrarot-Entfernungsmesser aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-ir-entfernungsmesser",
+        "size": 11076,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m18-rauch-schwarz.webp": {
+        "alt": "M18 Rauchgranate: Schwarz aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m18-rauch-schwarz",
+        "size": 10040,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m18-rauch-weiss.webp": {
+        "alt": "M18 Rauchgranate: Weiß aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m18-rauch-weiss",
+        "size": 9170,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m18-signal-alarm.webp": {
+        "alt": "M18 Signalgranate: Alarm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m18-signal-alarm",
+        "size": 10254,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m18-signal-fahrzeug.webp": {
+        "alt": "M18 Signalgranate: Fahrzeug beschädigt aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m18-signal-fahrzeug",
+        "size": 10224,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m18-signal-feind.webp": {
+        "alt": "M18 Signalgranate: Feind aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m18-signal-feind",
+        "size": 10152,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m18-signal-freund.webp": {
+        "alt": "M18 Signalgranate: Freund aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m18-signal-freund",
+        "size": 10230,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m18-signal-landezone.webp": {
+        "alt": "M18 Signalgranate: Landezone aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m18-signal-landezone",
+        "size": 10152,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m18-signal-nachschub.webp": {
+        "alt": "M18 Signalgranate: Nachschub aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m18-signal-nachschub",
+        "size": 10138,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m67-splittergranate.webp": {
+        "alt": "M67 Splittergranate aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-m67-splittergranate",
+        "size": 10682,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-medium-backpack-sling.webp": {
+        "alt": "Mittlerer Rucksack + Schlinge aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-medium-backpack-sling",
+        "size": 11016,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-medizintasche.webp": {
+        "alt": "Medizintasche aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-medizintasche",
+        "size": 9436,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-monokular.webp": {
+        "alt": "Monokular aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-monokular",
+        "size": 7668,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-operator-backpack.webp": {
+        "alt": "Operator-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-operator-backpack",
+        "size": 8854,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-ruck-backpack.webp": {
+        "alt": "Ruck-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-ruck-backpack",
+        "size": 7914,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-scout-backpack.webp": {
+        "alt": "Scout-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-scout-backpack",
+        "size": 7642,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-verband.webp": {
+        "alt": "Verband aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-verband",
+        "size": 8028,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
     }
 }

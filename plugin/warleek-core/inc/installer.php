@@ -539,7 +539,14 @@ function warleek_step_items( $force = false ) {
 	$media = (array) get_option( 'warleek_media_map', array() );
 	if ( ! $items ) { return array( 'ok' => true, 'msg' => 'Keine items.json gefunden – übersprungen.' ); }
 
-	$namen = array( 'waffe' => 'Waffen', 'fahrzeug' => 'Fahrzeuge', 'emplacement' => 'Emplacements', 'bauwerk' => 'Bauwerke' );
+	$namen = array(
+		'waffe'       => 'Waffen',
+		'fahrzeug'    => 'Fahrzeuge',
+		'emplacement' => 'Emplacements',
+		'bauwerk'     => 'Bauwerke',
+		'ausruestung' => 'Ausrüstung',
+		'wurfwaffe'   => 'Wurfwaffen',
+	);
 	foreach ( $namen as $slug => $name ) {
 		if ( ! term_exists( $slug, 'item-typ' ) ) { wp_insert_term( $name, 'item-typ', array( 'slug' => $slug ) ); }
 	}

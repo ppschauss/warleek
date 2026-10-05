@@ -1609,5 +1609,615 @@
 			"baukosten": "100",
 			"rolle": "Geschützte Stellung für indirektes Feuer"
 		}
+	},
+	{
+		"slug": "wardogs-m18-rauch-weiss",
+		"title": "M18 Rauchgranate: Weiß",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Weiße Rauchgranate für rund $100 – das billigste Werkzeug im Spiel, gemessen an dem, was es rettet.\nAnwendung: Sichtlinien brechen. Zwischen Schützen und Ziel werfen, nicht auf das Ziel. Eine Granate deckt einen kompletten Rettungsvorgang ab: aufstellen und anschließend heilen.",
+		"felder": {
+			"preis": "100",
+			"rolle": "Sichtschutz"
+		},
+		"gruppe": "rauch"
+	},
+	{
+		"slug": "wardogs-m18-rauch-schwarz",
+		"title": "M18 Rauchgranate: Schwarz",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Schwarzer Rauch für rund $100. Deckt wie der weiße, fällt in hellem Gelände stärker auf und in dunkler Umgebung weniger.\nAnwendung: dieselbe wie beim weißen Rauch – die Farbe ist eine Frage des Untergrunds, nicht der Wirkung.",
+		"felder": {
+			"preis": "100",
+			"rolle": "Sichtschutz"
+		},
+		"gruppe": "rauch"
+	},
+	{
+		"slug": "wardogs-m18-signal-feind",
+		"title": "M18 Signalgranate: Feind",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Signalrauch für rund $50, der dem Team „hier sind Gegner“ sagt.\nAnwendung: Eine geworfene Markierung sieht jeder, auch ohne Funk. Günstiger und schneller als eine Beschreibung über Sprache, besonders wenn mehrere Squads auf derselben Seite kämpfen.",
+		"felder": {
+			"preis": "50",
+			"rolle": "Markierung fürs Team"
+		},
+		"gruppe": "signal"
+	},
+	{
+		"slug": "wardogs-m18-signal-freund",
+		"title": "M18 Signalgranate: Freund",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Signalrauch für rund $50 zur Kennzeichnung eigener Stellungen.\nAnwendung: gegen Beschuss aus den eigenen Reihen. Wer eine Position hält, die von hinten wie eine gegnerische aussieht, wirft diese Granate, bevor es jemand anders klärt.",
+		"felder": {
+			"preis": "50",
+			"rolle": "Markierung fürs Team"
+		},
+		"gruppe": "signal"
+	},
+	{
+		"slug": "wardogs-m18-signal-landezone",
+		"title": "M18 Signalgranate: Landezone",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Signalrauch für rund $50, der eine Landezone kennzeichnet.\nAnwendung: Dem Piloten sagen, wo er aufsetzen soll, ohne ihn durch Beschreibungen zu lotsen. Wirf früh genug – ein Helikopter braucht den Anflug, nicht den Endpunkt.",
+		"felder": {
+			"preis": "50",
+			"rolle": "Markierung fürs Team"
+		},
+		"gruppe": "signal"
+	},
+	{
+		"slug": "wardogs-m18-signal-nachschub",
+		"title": "M18 Signalgranate: Nachschub",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Signalrauch für rund $50 mit der Bedeutung „hier wird Nachschub gebraucht“.\nAnwendung: Der Logistiker sieht die Markierung aus der Entfernung und muss nicht nachfragen. Besonders nützlich, wenn eine FOB gerade ausgebaut wird und niemand Zeit zum Tippen hat.",
+		"felder": {
+			"preis": "50",
+			"rolle": "Markierung fürs Team"
+		},
+		"gruppe": "signal"
+	},
+	{
+		"slug": "wardogs-m18-signal-fahrzeug",
+		"title": "M18 Signalgranate: Fahrzeug beschädigt",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Signalrauch für rund $50 für ein beschädigtes Fahrzeug.\nAnwendung: Ruft jemanden mit Schraubenschlüssel oder zur Reparaturstation. Ein geretteter Panzer entspricht einem fünfstelligen Betrag – die $50 sind die beste Versicherung im Katalog.",
+		"felder": {
+			"preis": "50",
+			"rolle": "Markierung fürs Team"
+		},
+		"gruppe": "signal"
+	},
+	{
+		"slug": "wardogs-m18-signal-alarm",
+		"title": "M18 Signalgranate: Alarm",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Allgemeiner Alarmrauch für rund $50.\nAnwendung: wenn etwas passiert, wofür es keine eigene Signalfarbe gibt. Taugt als Sammelpunkt oder als „kommt hierher, sofort“.",
+		"felder": {
+			"preis": "50",
+			"rolle": "Markierung fürs Team"
+		},
+		"gruppe": "signal"
+	},
+	{
+		"slug": "wardogs-m67-splittergranate",
+		"title": "M67 Splittergranate",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Die Standard-Handgranate für rund $200.\nAnwendung: Gegner aus Deckung und aus Räumen holen. In Gebäuden und Gräben wirksamer als jede Waffe, weil sie um Ecken wirkt – genau dort, wo deine Kugeln es nicht tun.",
+		"felder": {
+			"preis": "200",
+			"rolle": "Splitterwirkung"
+		},
+		"gruppe": "sprengstoff"
+	},
+	{
+		"slug": "wardogs-he-granate",
+		"title": "HE-Granate",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Sprenggranate mit Druckwirkung statt Splitterbild. Die Quelle führt sie ohne Preisangabe.\nAnwendung: gegen Material und leichte Befestigungen. Wo die M67 gegen Personen wirkt, zielt diese auf das, was dahinter steht.",
+		"felder": {
+			"rolle": "Sprengwirkung",
+			"hinweis": "Preis in der Quelle nicht angegeben"
+		},
+		"gruppe": "sprengstoff"
+	},
+	{
+		"slug": "wardogs-blendgranate",
+		"title": "Blendgranate",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Blendgranate ohne Splitterwirkung. Preis ist in der Quelle nicht angegeben.\nAnwendung: einen Raum betreten, ohne ihn vorher zu sprengen. Der Vorteil gegenüber der Splittergranate ist, dass Geiseln der eigenen Sorte – also Teamkollegen – sie überleben.",
+		"felder": {
+			"rolle": "Blendwirkung",
+			"hinweis": "Preis in der Quelle nicht angegeben"
+		},
+		"gruppe": "sprengstoff"
+	},
+	{
+		"slug": "wardogs-c4",
+		"title": "C4-Ladung",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Platzierbarer Sprengstoff für rund $250, gezündet über den Fernzünder.\nAnwendung: Fahrzeuge aus dem Hinterhalt, Mauern öffnen, eigene Bauwerke sprengen. Anders als eine Granate wartet C4, bis du bereit bist – das ist der ganze Unterschied.",
+		"felder": {
+			"preis": "250",
+			"rolle": "Platzierter Sprengstoff"
+		},
+		"gruppe": "sprengstoff"
+	},
+	{
+		"slug": "wardogs-fernzuender",
+		"title": "Fernzünder",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Der Zünder für rund $550. Ohne ihn liegt das C4 nur herum.\nAnwendung: Pflichtkauf, sobald du C4 mitnimmst. Rechne ihn beim Loadout mit ein – wer nur den Sprengstoff kauft, hat $250 für Dekoration ausgegeben.",
+		"felder": {
+			"preis": "550",
+			"rolle": "Zündet C4 und Sprengfallen"
+		},
+		"gruppe": "sprengstoff"
+	},
+	{
+		"slug": "wardogs-ied",
+		"title": "Unkonventionelle Sprengvorrichtung",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Sprengfalle für rund $300.\nAnwendung: Zufahrten und Engstellen sichern, ohne jemanden hinzustellen. Wie die AT-Mine ein Posten, der nicht schläft – nur eben gegen alles, was vorbeikommt.",
+		"felder": {
+			"preis": "300",
+			"rolle": "Sprengfalle"
+		},
+		"gruppe": "sprengstoff"
+	},
+	{
+		"slug": "wardogs-gold-splittergranate",
+		"title": "Goldene Splittergranate",
+		"typ": "wurfwaffe",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Sonderausführung der Splittergranate. Zu Preis, Freischaltung und Unterschieden gegenüber der M67 liegen uns keine belastbaren Angaben vor.\nAnwendung: vermutlich dieselbe wie bei der M67. Solange die Zahlen fehlen, ist die normale Granate die, über die man etwas sagen kann.",
+		"felder": {
+			"rolle": "Splitterwirkung (Sonderausführung)",
+			"hinweis": "Preis und Freischaltung in der Quelle nicht angegeben"
+		},
+		"gruppe": "sprengstoff"
+	},
+	{
+		"slug": "wardogs-verband",
+		"title": "Verband",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Das Verbandszeug für rund $200, von Anfang an verfügbar.\nAnwendung: Blutungen stoppen und kleine Schäden flicken. Billig genug, um fünf davon einzupacken – und genau das solltest du tun, denn sie gehen schnell weg.",
+		"felder": {
+			"preis": "200",
+			"freischaltung": "von Anfang an",
+			"rolle": "Blutung stoppen"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-adrenalin",
+		"title": "Adrenalinspritze",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Stim für rund $250.\nAnwendung: das Einzige, was unter Beschuss schnell genug wirkt. Wenn im Rucksack der Platz knapp wird, streichst du anderes – nie die Stims.",
+		"felder": {
+			"preis": "250",
+			"rolle": "Sofortwirkung"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-erste-hilfe-set",
+		"title": "Individuelles Erste-Hilfe-Set",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Erste-Hilfe-Set ab Medic 9, rund $800 pro Stück.\nAnwendung: für den Fall, dass jemand wirklich runter ist. Zwei davon im Rucksack sind die übliche Mitnahme – mehr kostet Platz, den du für Rauch brauchst.",
+		"felder": {
+			"preis": "800",
+			"freischaltung": "Medic 9",
+			"rolle": "Heilung"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-medizintasche",
+		"title": "Medizintasche",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Die große Tasche ab Medic 24 für rund $2.000.\nAnwendung: ein Squad versorgen, statt einen Mann. Lohnt dort, wo ihr eine Stellung über längere Zeit haltet und der Weg zum Lager zu weit ist.",
+		"felder": {
+			"preis": "2000",
+			"freischaltung": "Medic 24",
+			"rolle": "Heilung für mehrere"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-defibrillator-ausr",
+		"title": "Defibrillator",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Ab Medic 11, rund $1.600 pro Leben. Stellt sofort auf, statt lange zu reanimieren – und ist der Grund, warum der Medic-Rucksack plötzlich eng wird.\nAnwendung: Die eingesetzte Batterie belegt keinen Rucksackplatz. Tausch die große direkt beim Händler gegen die eingesetzte Standardbatterie: Du gewinnst ein Feld und hast 10 statt 4 Ladungen im Gerät.",
+		"felder": {
+			"preis": "1600",
+			"freischaltung": "Medic 11",
+			"rolle": "Sofortige Wiederbelebung",
+			"hinweis": "Braucht eine Batterie: Standard 4 Ladungen (1 Feld), große 10 Ladungen (2 Felder)"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-field-resuscitator",
+		"title": "Field Resuscitator",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Das erste richtige Wiederbelebungsgerät, ab Medic 2 für rund $500.\nAnwendung: die Brücke bis zum Defibrillator. Langsamer als dieser, aber ein Zehntel des Preises und ohne Batterie – für Medics unterhalb von Stufe 11 das Mittel der Wahl.",
+		"felder": {
+			"preis": "500",
+			"freischaltung": "Medic 2",
+			"rolle": "Wiederbelebung"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-emergency-resuscitator",
+		"title": "Emergency Resuscitator",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Kostet nichts und ist von Anfang an da.\nAnwendung: Damit kann jeder jemanden aufstellen, nicht nur der Medic. Wenn im Squad niemand Medic spielt, ist das der Unterschied zwischen einem Mann weniger und einem Mann wieder dabei.",
+		"felder": {
+			"preis": "0",
+			"freischaltung": "von Anfang an",
+			"rolle": "Wiederbelebung, kostenlos"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-schmerzmittel",
+		"title": "Schmerzmittel",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Medikament gegen die Folgen von Treffern. Preis ist in der Quelle nicht angegeben.\nAnwendung: nach Community-Angaben gegen die Einschränkungen, die eine Verletzung mit sich bringt. Zu Dauer und genauer Wirkung liegen uns keine belastbaren Zahlen vor.",
+		"felder": {
+			"rolle": "Gegen Wirkung von Verletzungen",
+			"hinweis": "Preis in der Quelle nicht angegeben"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-enox",
+		"title": "Enox",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Medikament für rund $450.\nAnwendung: Zur genauen Wirkung liegen uns keine belastbaren Angaben vor. Wer es im Spiel vergleicht, kann uns schreiben – wir tragen es nach.",
+		"felder": {
+			"preis": "450",
+			"rolle": "Medikament"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-amphetamin",
+		"title": "Amphetamin",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Stimulanz ohne Preisangabe in der Quelle.\nAnwendung: nach Community-Angaben ein Mittel, das kurzfristig Leistung bringt und danach einen Preis hat. Belastbare Zahlen fehlen uns.",
+		"felder": {
+			"rolle": "Stimulanz",
+			"hinweis": "Preis in der Quelle nicht angegeben"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-energydrink",
+		"title": "Energydrink",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Das harmloseste Mittel im Medizinregal, ohne Preisangabe in der Quelle.\nAnwendung: kleine Auffrischung ohne die Nachteile der stärkeren Mittel. Genaue Werte sind uns nicht bekannt.",
+		"felder": {
+			"rolle": "Stimulanz",
+			"hinweis": "Preis in der Quelle nicht angegeben"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-field-medical-kit",
+		"title": "Field Medical Kit",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Medizinset ohne Preisangabe in der Quelle.\nAnwendung: Heilung im Feld. Wie es sich gegen das Individuelle Erste-Hilfe-Set schlägt, haben wir nicht belegt – bis dahin ist dieses die Variante mit den klareren Zahlen.",
+		"felder": {
+			"rolle": "Heilung",
+			"hinweis": "Preis in der Quelle nicht angegeben"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-manual-resuscitator",
+		"title": "Manual Resuscitator",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Handbetriebenes Wiederbelebungsgerät, ohne Preisangabe in der Quelle.\nAnwendung: Wiederbeleben ohne Batterie und ohne Freischaltung. Langsamer als alles mit Strom, dafür immer verfügbar.",
+		"felder": {
+			"rolle": "Wiederbelebung",
+			"hinweis": "Preis in der Quelle nicht angegeben"
+		},
+		"gruppe": "medizin"
+	},
+	{
+		"slug": "wardogs-fernglas",
+		"title": "Fernglas",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund $75 – die billigste Anschaffung im Spiel mit dem besten Verhältnis von Einsatz zu Ertrag.\nAnwendung: Gegner anvisieren, Maustaste halten, Markierung steht fürs ganze Team. Bringt sofort Geld, dazu einen Assist, wenn jemand den Markierten erledigt – und verrät deine Position nicht, weil es kein Mündungsfeuer gibt.",
+		"felder": {
+			"preis": "75",
+			"rolle": "Markieren fürs Team"
+		},
+		"gruppe": "optik"
+	},
+	{
+		"slug": "wardogs-monokular",
+		"title": "Monokular",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Ab Recon 2, rund $150.\nAnwendung: wie das Fernglas, kompakter. Für Recon-Spieler die Stufe zwischen Fernglas und Entfernungsmesser.",
+		"felder": {
+			"preis": "150",
+			"freischaltung": "Recon 2",
+			"rolle": "Markieren fürs Team"
+		},
+		"gruppe": "optik"
+	},
+	{
+		"slug": "wardogs-entfernungsmesser",
+		"title": "Entfernungsmesser",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Ab Recon 8, rund $400. Liefert zur Markierung die Entfernung mit.\nAnwendung: Pflicht für alles, was indirekt feuert. Ein Mörser trifft nicht, was er sieht, sondern was ihm jemand mit Entfernung meldet.",
+		"felder": {
+			"preis": "400",
+			"freischaltung": "Recon 8",
+			"rolle": "Markieren mit Entfernung"
+		},
+		"gruppe": "optik"
+	},
+	{
+		"slug": "wardogs-ir-entfernungsmesser",
+		"title": "Infrarot-Entfernungsmesser",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund $1.200. **Seit dem Hotfix vom 2. Oktober 2026 nicht mehr im Händler** – nach Angabe der Entwickler zu stark. Mit Season 2 am 15. Oktober kommt er zurück, dann aber mit Batterien.\nAnwendung: Wärmebild statt Sichtlinie. Solange er fehlt, tut der normale Entfernungsmesser den Dienst für ein Drittel des Preises.",
+		"felder": {
+			"preis": "1200",
+			"rolle": "Wärmebild mit Entfernung",
+			"hinweis": "Seit 02.10.2026 nicht im Händler; Rückkehr mit Season 2 gegen Batterien"
+		},
+		"gruppe": "optik"
+	},
+	{
+		"slug": "wardogs-ir-brille",
+		"title": "IR-Brille",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Wärmebildbrille ohne Preisangabe in der Quelle. Sie stand zusammen mit dem Infrarot-Entfernungsmesser im Mittelpunkt des Hotfixes vom 2. Oktober.\nAnwendung: sehen, was sich hinter Rauch und in der Dämmerung bewegt. Rechne damit, dass sich die Bedingungen mit Season 2 ändern.",
+		"felder": {
+			"rolle": "Wärmebild",
+			"hinweis": "Preis in der Quelle nicht angegeben; vom Balance-Hotfix im Oktober betroffen"
+		},
+		"gruppe": "optik"
+	},
+	{
+		"slug": "wardogs-spotted-scope",
+		"title": "Spektiv",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Beobachtungsfernrohr ohne Preisangabe in der Quelle.\nAnwendung: längere Beobachtung aus einer festen Stellung. Zu Vergrößerung und Markierungsfunktion liegen uns keine Angaben vor.",
+		"felder": {
+			"rolle": "Beobachtung",
+			"hinweis": "Preis in der Quelle nicht angegeben"
+		},
+		"gruppe": "optik"
+	},
+	{
+		"slug": "wardogs-scout-backpack",
+		"title": "Scout-Rucksack",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Der kleine Rucksack für rund $350.\nAnwendung: für alle, die wenig tragen und schnell sein wollen. Als Medic der falsche – dort fehlt dir genau das, wovon du zu wenig hast.",
+		"felder": {
+			"preis": "350",
+			"rolle": "Kleiner Rucksack"
+		},
+		"gruppe": "rucksack"
+	},
+	{
+		"slug": "wardogs-field-backpack",
+		"title": "Field-Rucksack",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund $650 und mehr Fächer als der Scout.\nAnwendung: die Standardwahl für Medic und Support. Der Aufpreis von rund $300 kauft dir Platz, der in jeder Runde zählt – anders als eine teurere Waffe.",
+		"felder": {
+			"preis": "650",
+			"rolle": "Mittlerer Rucksack"
+		},
+		"gruppe": "rucksack"
+	},
+	{
+		"slug": "wardogs-assault-backpack",
+		"title": "Assault-Rucksack",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund $1.200.\nAnwendung: für Loadouts, die viel Munition mitnehmen. Prüf vorher deine Gewichtsklasse – ein voller Rucksack, der dich eine Klasse höher hebt, kostet dich den taktischen Sprint.",
+		"felder": {
+			"preis": "1200",
+			"rolle": "Rucksack mit Munitionsfokus"
+		},
+		"gruppe": "rucksack"
+	},
+	{
+		"slug": "wardogs-operator-backpack",
+		"title": "Operator-Rucksack",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund $800, zwischen Field und Assault.\nAnwendung: wenn der Field zu klein und der Assault zu schwer ist. Zu den genauen Fächerzahlen liegen uns keine Angaben vor.",
+		"felder": {
+			"preis": "800",
+			"rolle": "Rucksack"
+		},
+		"gruppe": "rucksack"
+	},
+	{
+		"slug": "wardogs-ruck-backpack",
+		"title": "Ruck-Rucksack",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund $2.400 – der große unter den regulären Rucksäcken.\nAnwendung: für Bauer und Logistiker, die Material schleppen. Das Gewicht holt sich die Gewichtsklasse zurück, also plan den Rest des Loadouts entsprechend leicht.",
+		"felder": {
+			"preis": "2400",
+			"rolle": "Großer Rucksack"
+		},
+		"gruppe": "rucksack"
+	},
+	{
+		"slug": "wardogs-medium-backpack-sling",
+		"title": "Mittlerer Rucksack + Schlinge",
+		"typ": "ausruestung",
+		"quellen": [
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
+		],
+		"geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
+		"text": "Rund $1.400, mit Halterung für eine zusätzliche Waffe.\nAnwendung: wenn du zwei Langwaffen tragen willst. Für Medics, die ohnehin nur eine Pistole mitnehmen, ist das verschenktes Geld.",
+		"felder": {
+			"preis": "1400",
+			"rolle": "Rucksack mit Waffenhalterung"
+		},
+		"gruppe": "rucksack"
 	}
 ]

@@ -430,5 +430,137 @@
   "wardogs-schraubenschluessel": {
     "alt": "Schraubenschlüssel aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
     "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "typ-ausruestung": {
+    "alt": "WARDOGS-Spielszene: Soldat in Deckung in einer Industriehalle – Symbolbild für Ausrüstung",
+    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+  },
+  "typ-wurfwaffe": {
+    "alt": "WARDOGS-Spielszene: Explosion reißt eine Gebäudefassade auf – Symbolbild für Wurfwaffen",
+    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+  },
+  "wardogs-adrenalin": {
+    "alt": "Adrenalinspritze aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-assault-backpack": {
+    "alt": "Assault-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-c4": {
+    "alt": "C4-Ladung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-defibrillator-ausr": {
+    "alt": "Defibrillator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-emergency-resuscitator": {
+    "alt": "Emergency Resuscitator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-enox": {
+    "alt": "Enox aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-entfernungsmesser": {
+    "alt": "Entfernungsmesser aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-erste-hilfe-set": {
+    "alt": "Individuelles Erste-Hilfe-Set aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-fernglas": {
+    "alt": "Fernglas aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-fernzuender": {
+    "alt": "Fernzünder aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-field-backpack": {
+    "alt": "Field-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-field-resuscitator": {
+    "alt": "Field Resuscitator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-gold-splittergranate": {
+    "alt": "Goldene Splittergranate aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-ied": {
+    "alt": "Unkonventionelle Sprengvorrichtung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-ir-entfernungsmesser": {
+    "alt": "Infrarot-Entfernungsmesser aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-m18-rauch-schwarz": {
+    "alt": "M18 Rauchgranate: Schwarz aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-m18-rauch-weiss": {
+    "alt": "M18 Rauchgranate: Weiß aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-m18-signal-alarm": {
+    "alt": "M18 Signalgranate: Alarm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-m18-signal-fahrzeug": {
+    "alt": "M18 Signalgranate: Fahrzeug beschädigt aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-m18-signal-feind": {
+    "alt": "M18 Signalgranate: Feind aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-m18-signal-freund": {
+    "alt": "M18 Signalgranate: Freund aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-m18-signal-landezone": {
+    "alt": "M18 Signalgranate: Landezone aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-m18-signal-nachschub": {
+    "alt": "M18 Signalgranate: Nachschub aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-m67-splittergranate": {
+    "alt": "M67 Splittergranate aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-medium-backpack-sling": {
+    "alt": "Mittlerer Rucksack + Schlinge aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-medizintasche": {
+    "alt": "Medizintasche aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-monokular": {
+    "alt": "Monokular aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-operator-backpack": {
+    "alt": "Operator-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-ruck-backpack": {
+    "alt": "Ruck-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-scout-backpack": {
+    "alt": "Scout-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
+  },
+  "wardogs-verband": {
+    "alt": "Verband aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+    "credit": "Spiel-Asset · © BULKHEAD / Team17"
   }
 }
