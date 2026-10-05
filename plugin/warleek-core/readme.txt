@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.24.0
+Stable tag: 2.24.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.24.1 =
+* Behoben: Nach einem Update standen neue Datenbank-Einträge ohne Bild da, wenn der Medien-Schritt nicht mitlief. „Datenbank anlegen" holt fehlende Bilder jetzt selbst nach und meldet, wie viele Einträge ohne blieben.
+* Karten ohne Bild zeigen keine leere Fläche mehr.
 
 = 2.24.0 =
 * Neu: **Änderungsverlauf** an jedem Datenbank-Eintrag. Ändert ein Patch einen Wert, steht künftig unter dem Eintrag, was vorher galt, seit wann nicht mehr und welche Patch Note zeitlich am nächsten lag.

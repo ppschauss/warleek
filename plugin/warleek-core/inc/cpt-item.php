@@ -348,7 +348,7 @@ function warleek_render_item_liste( $attrs = array() ) {
 
 		$out .= '<li class="wl-itemkarte">'
 			. '<a class="wl-itemkarte__link" href="' . esc_url( get_permalink( $p ) ) . '" title="' . warleek_item_linktitel( $p ) . '">'
-			. ( $bild ? '<span class="wl-itemkarte__bild">' . $bild . '</span>' : '<span class="wl-itemkarte__bild is-leer" aria-hidden="true"></span>' )
+			. ( $bild ? '<span class="wl-itemkarte__bild">' . $bild . '</span>' : '' )
 			. '<span class="wl-itemkarte__text">'
 			. '<span class="wl-itemkarte__titel">' . esc_html( get_the_title( $p ) ) . '</span>'
 			. ( '' !== $wert ? '<span class="wl-itemkarte__wert">' . esc_html( $wert ) . '</span>' : '' )

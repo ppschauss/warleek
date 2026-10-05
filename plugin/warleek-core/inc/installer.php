@@ -593,6 +593,24 @@ function warleek_step_items( $force = false ) {
 	$media = (array) get_option( 'warleek_media_map', array() );
 	if ( ! $items ) { return array( 'ok' => true, 'msg' => 'Keine items.json gefunden – übersprungen.' ); }
 
+	// Fehlen Bilder, die dieser Schritt gleich zuweisen will, holt er sie selbst.
+	// Sonst stehen nach einem Update neue Einträge ohne Bild da, bloß weil jemand
+	// den Medien-Schritt nicht angekreuzt hat – und das sieht nach Fehler aus.
+	$gebraucht = array();
+	foreach ( $items as $e ) {
+		$gebraucht[] = 'item-' . $e['slug'];
+		if ( ! empty( $e['gruppe'] ) ) { $gebraucht[] = 'item-gruppe-' . $e['gruppe']; }
+		$gebraucht[] = 'item-typ-' . $e['typ'];
+	}
+	$manifest = json_decode( (string) @file_get_contents( rtrim( (string) warleek_content_dir(), '/' ) . '/MANIFEST.json' ), true );
+	$bekannt  = is_array( $manifest ) ? array_column( $manifest, 'use' ) : array();
+	$fehlend  = array_diff( array_intersect( $gebraucht, $bekannt ), array_keys( $media ) );
+	if ( $fehlend ) {
+		warleek_log( sprintf( '%d Bilder fehlen in der Mediathek – werden nachgeholt.', count( $fehlend ) ) );
+		$media = warleek_seed_media();
+		update_option( 'warleek_media_map', $media, false );
+	}
+
 	$namen = array(
 		'waffe'       => 'Waffen',
 		'fahrzeug'    => 'Fahrzeuge',
@@ -628,7 +646,7 @@ function warleek_step_items( $force = false ) {
 	$termine = $warten ? warleek_item_termine( count( $warten ) ) : array();
 	$plan    = $warten ? array_combine( $warten, array_slice( $termine, 0, count( $warten ) ) ) : array();
 
-	$neu = 0; $akt = 0; $sofort = 0; $umgeplant = 0;
+	$neu = 0; $akt = 0; $sofort = 0; $umgeplant = 0; $ohne_bild = 0;
 	foreach ( $reihen as $e ) {
 		$inhalt = warleek_html_to_blocks( warleek_item_inhalt( $e ) );
 		$da     = get_posts( array( 'post_type' => 'item', 'name' => $e['slug'], 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) );
@@ -708,9 +726,11 @@ function warleek_step_items( $force = false ) {
 		$bildsuche = array( 'item-' . $e['slug'] );
 		if ( ! empty( $e['gruppe'] ) ) { $bildsuche[] = 'item-gruppe-' . $e['gruppe']; }
 		$bildsuche[] = 'item-typ-' . $e['typ'];
+		$gesetzt = false;
 		foreach ( $bildsuche as $schluessel ) {
-			if ( ! empty( $media[ $schluessel ] ) ) { set_post_thumbnail( $id, (int) $media[ $schluessel ] ); break; }
+			if ( ! empty( $media[ $schluessel ] ) ) { set_post_thumbnail( $id, (int) $media[ $schluessel ] ); $gesetzt = true; break; }
 		}
+		if ( ! $gesetzt ) { $ohne_bild++; }
 		// Datenblatt: im Backend korrigierte Werte behalten. Wer einen Preis von
 		// Hand richtigstellt, soll ihn nicht beim nächsten Update zurückbekommen.
 		$ist = array();
@@ -776,6 +796,7 @@ function warleek_step_items( $force = false ) {
 	if ( $sofort )    { $msg .= sprintf( ', %d sofort veröffentlicht', $sofort ); }
 	if ( $umgeplant ) { $msg .= sprintf( ', %d umgeplant', $umgeplant ); }
 	if ( $verwaist )  { $msg .= sprintf( ', %d verwaiste zurückgezogen', $verwaist ); }
+	if ( $ohne_bild ) { $msg .= sprintf( ', %d ohne Bild', $ohne_bild ); }
 	$msg .= sprintf( ' – %d veröffentlicht, %d in der Warteschlange (%d–%d pro Tag).', $live, $geplant, $min, $max );
 	return array( 'ok' => true, 'msg' => $msg );
 }
