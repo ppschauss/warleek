@@ -1234,14 +1234,16 @@
 		"title": "Drill Rig",
 		"typ": "bauwerk",
 		"quellen": [
-			"Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+			"allthings.how (Hot-Zone-Mechanik des Drill Rig)",
+			"Datenbank von wardogshub.uk (Stand Oktober 2026)"
 		],
 		"geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-		"text": "Das teuerste Bauwerk im Spiel: rund 1.351 Build-Supplies, großer Hammer, braucht eine FOB und Fuel.\nAnwendung: fördert Nachschub direkt an der Basis. Die Kosten entsprechen vielen Logistikrunden – das baut man, wenn eine Basis lange stehen soll, nicht als Erstes.",
+		"text": "Das teuerste Bauwerk im Spiel: rund 1.351 Build-Supplies, großer Hammer, braucht eine FOB und Fuel. Er fördert **keinen Nachschub** – er zieht die **Hot Zone zu deiner FOB** und hält sie dort, solange er läuft. Nach Community-Angaben braucht ein Durchlauf mindestens rund 1.200 Fuel-Supplies (etwa eine Palette), bis rund 6.000 für die längste Laufzeit.\nAnwendung: aus einer gut gebauten Basis Kartenkontrolle machen, statt der Hot Zone hinterherzufahren. In der Hot Zone zählt jeder Spieler doppelt und verdient doppelt – deshalb lohnt der Aufwand überhaupt. Nichts für den Anfang einer Runde.",
 		"felder": {
 			"baukosten": "1351",
 			"freischaltung": "großer Hammer (Support 8)",
-			"rolle": "Bauwerk"
+			"rolle": "Zieht die Hot Zone zur FOB",
+			"hinweis": "Braucht Fuel: ab ca. 1.200 für einen Durchlauf, bis ca. 6.000"
 		}
 	},
 	{

@@ -22,6 +22,28 @@ Nicht enthalten: Symbole oder Renderings einzelner Waffen und Fahrzeuge – die 
 - „400,000 Peak Concurrent Users", „1.25 Million Copies Sold" (Ankündigungen der Entwickler)
 - Quelle: Steam-Community-Announcements (im Sync importiert)
 
+## Drill Rig (korrigiert 05.10.2026)
+- Zieht die **Hot Zone** zur eigenen FOB und hält sie dort, solange er läuft – er produziert **keinen** Nachschub. Unsere erste Fassung behauptete das Gegenteil und war falsch.
+- Baukosten rund 1.351 Build-Supplies (teuerstes Bauwerk), braucht Fuel: Minimum rund 1.200 für einen Durchlauf (etwa eine Palette), bis rund 6.000 für die längste Laufzeit.
+- In der Hot Zone zählt jeder Spieler doppelt und verdient doppelt – daher der Wert.
+- Quelle: allthings.how (Hot-Zone-/Drill-Rig-Guides)
+
+## Hotfix 02.10.2026 (Steam)
+- **IR-Rangefinder aus dem Händler genommen** – laut Entwicklern zu stark. Rückkehr mit **Season 2 am 15.10.2026**, dann **mit Batterien** (Verbrauchsgut statt Einmalkauf).
+- **CWIS zerlegt den Havoc in ~6 s statt ~12 s.**
+- Quelle: https://store.steampowered.com/news/app/1867240/view/670629928317748295
+
+## Season 2 (15.10.2026)
+- Progressions-Reset/Wipe; erstmals **Regen** und **Feuer** als Umgebungseffekte; neuer **Flugabwehrpanzer** (Gepard-artig) gegen die Helikopter-Dominanz.
+- Quelle: Season-2-Ankündigung, Community-Zusammenfassungen (Stand 05.10.2026)
+
+## Medic-Ausrüstung
+- Freischaltleiter: Verband (Start) · Field Resuscitator (Medic 2) · Individual First Aid Kit (Medic 9) · **Defibrillator (Medic 11, ~$25.000 Freischaltung, ~$1.600/Leben)** · Stim Pen (Medic 14) · Medical Bag (Medic 24).
+- Batterien für den Defi: Standard $150 / 0,63 kg / 20V-5AH · **High Capacity $150 / 2 kg / 20V-15AH**. Wie viele Wiederbelebungen eine Ladung trägt: **nicht belegt**.
+- **Eingesetzte Batterie belegt keinen Rucksackplatz** – direkt nach dem Kauf einsetzen spart ein Fach. Von Patrick im Spiel beobachtet (Oktober 2026).
+- GGX 18: vollautomatisch, 9×19 mm, ~1.200 Schuss/min, 22 Schaden, ~50 m wirksam, **0,63 kg, 2×2 Inventarfläche**, Wardog 70, ~$50.000 Freischaltung, $800/Leben.
+- Field Backpack hat mehr Fächer als der Scout Backpack.
+
 ## FOB
 - FOB-Deploy-Item kaufen (2×3 Inventarfläche), Platzierung via Inventar/Quickslot auf begehbarem Gelände mit Platz für LKW/Heli
 - Nach Deploy erscheint eine quadratische Bauzone auf der Map

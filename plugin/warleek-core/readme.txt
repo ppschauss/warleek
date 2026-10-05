@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.19.0
+Stable tag: 2.20.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.20.0 =
+* Neuer Guide „Der Medic-Rucksack": Pistole statt Gewehr, Rauch als Werkzeug, und der Griff, mit dem die eingesetzte Batterie einen Rucksackplatz freigibt.
+* Korrigiert: Der Guide zum Entfernungsmesser im Heli beschrieb eine Mechanik, die seit dem Hotfix vom 02.10. nicht mehr im Spiel ist. Jetzt mit Hinweis und einem Abschnitt zu Season 2.
+* Korrigiert: Der Drill Rig fördert keinen Nachschub – er zieht die Hot Zone zur FOB.
 
 = 2.19.0 =
 * **Wichtig:** SEO-Titel, SEO-Beschreibungen, Beitragstitel und Datenblatt-Werte wurden bei jedem Einspielen überschrieben – auch ohne „überschreiben". Nur die Texte waren geschützt. Das ist behoben: Was im Backend geändert wurde, bleibt.

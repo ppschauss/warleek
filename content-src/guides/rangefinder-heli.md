@@ -5,16 +5,18 @@ thema: gameplay
 order: 16
 image: guide-rangefinder
 image_alt: Montage aus zwei Bildern - links ein Beobachter mit Fernglas auf einem Dach, rechts der Blick aus einem Helikoptercockpit mit eingezeichneten Markierungen
-excerpt: Mit dem Entfernungsmesser in der Hand einsteigen, dann in die Ego-Perspektive wechseln – und als Pilot das komplette Lagebild des Teams sehen.
+excerpt: Mit dem Entfernungsmesser in der Hand einsteigen, dann in die Ego-Perspektive wechseln – und als Pilot das Lagebild des Teams sehen. Seit dem 2. Oktober deaktiviert, ab Season 2 mit Batterien zurück.
 seo_title: Wardogs Entfernungsmesser im Heli – Trick Deutsch | Warleek
 seo_description: Als Pilot alle Markierungen des Teams sehen: so funktioniert der Entfernungsmesser-Trick im Helikopter. Wardogs-Guide auf Deutsch für Spieler in Deutschland, Österreich und der Schweiz.
-quellen: [Im Spiel beobachtet von Patrick Schauß (Warleek), Oktober 2026]
-geprueft: im Spiel beobachtet (Oktober 2026), Reichweite und Dauer nicht systematisch vermessen
+quellen: [Im Spiel beobachtet von Patrick Schauß (Warleek), Oktober 2026, 'Steam-Hotfix vom 02.10.2026: IR-Rangefinder deaktiviert, Rückkehr mit Season 2 gegen Batterien']
+geprueft: im Spiel beobachtet (Oktober 2026); dass das Gerät seit dem 02.10. draußen ist und mit Season 2 gegen Batterien zurückkommt, von Patrick Schauß bestätigt. Reichweite und Dauer nicht systematisch vermessen
 ---
 
-Es gibt einen Griff, der aus einem Transporthubschrauber einen fliegenden Aufklärer macht — und er kostet nichts außer der richtigen Reihenfolge beim Einsteigen.
+Es gibt einen Griff, der aus einem Transporthubschrauber einen fliegenden Aufklärer macht — und er kostet nichts außer der richtigen Reihenfolge beim Einsteigen. Kostete, genauer gesagt: Seit dem 2. Oktober ist das Gerät nicht mehr zu haben. Ab dem 15. Oktober schon wieder, dann gegen Batterien.
 
-> [!stand] Oktober 2026 · Early Access – solche Kniffe können mit jedem Patch verschwinden.
+> [!hinweis] **Stand 5. Oktober 2026: Der IR-Entfernungsmesser ist nicht im Spiel.** Er wurde mit dem Hotfix vom 2. Oktober aus dem Händler genommen – nach Angabe der Entwickler war er zu stark. Mit **Season 2 am 15. Oktober** kommt er zurück, dann aber **mit Batterien**: als Verbrauchsgut statt als Einmalkauf. Was unten steht, gilt bis dahin nicht und muss danach neu geprüft werden.
+
+> [!stand] Oktober 2026 · Early Access – solche Kniffe können mit jedem Patch verschwinden. Dieser hier ist genau das passiert.
 
 ## Der Griff
 
@@ -49,6 +51,12 @@ Die Arbeitsteilung, die sich daraus ergibt:
 3. **Der Pilot fliegt den Anflug** an den Markierungen vorbei statt hindurch.
 
 Für den Recon ändert sich nichts an seiner Arbeit — er markiert ohnehin. Nur wird seine Arbeit jetzt auch in der Luft gelesen.
+
+## Was Season 2 ändert
+
+Ab dem 15. Oktober braucht der Entfernungsmesser **Batterien**. Aus einem Gerät, das man einmal kauft und dann hat, wird eines mit laufenden Kosten — und mit einem Platz im Rucksack für den Nachschub.
+
+Für diesen Griff heißt das zweierlei: Er kostet ab dann pro Flug Geld, und er hört auf zu funktionieren, wenn die Ladung leer ist. Ob das Lagebild beim Wechsel in die Ego-Perspektive überhaupt noch erscheint, muss jemand nach dem 15. nachprüfen. Wir tragen es nach, sobald es jemand getan hat.
 
 ## Was wir nicht wissen
 
