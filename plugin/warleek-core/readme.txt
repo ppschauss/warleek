@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.20.0
+Stable tag: 2.20.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.20.1 =
+* Medic-Guide: Eine Rauchgranate hält lang genug für Wiederbeleben **und** Heilen – der Rat, eine zweite für den Rückweg zu werfen, war falsch und ist ersetzt.
 
 = 2.20.0 =
 * Neuer Guide „Der Medic-Rucksack": Pistole statt Gewehr, Rauch als Werkzeug, und der Griff, mit dem die eingesetzte Batterie einen Rucksackplatz freigibt.

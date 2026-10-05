@@ -43,6 +43,8 @@ Nicht enthalten: Symbole oder Renderings einzelner Waffen und Fahrzeuge – die 
 - **Eingesetzte Batterie belegt keinen Rucksackplatz** – direkt nach dem Kauf einsetzen spart ein Fach. Von Patrick im Spiel beobachtet (Oktober 2026).
 - GGX 18: vollautomatisch, 9×19 mm, ~1.200 Schuss/min, 22 Schaden, ~50 m wirksam, **0,63 kg, 2×2 Inventarfläche**, Wardog 70, ~$50.000 Freischaltung, $800/Leben.
 - Field Backpack hat mehr Fächer als der Scout Backpack.
+- **Eine Rauchgranate hält lang genug für Wiederbeleben und anschließendes Heilen** – eine pro Aktion reicht, zwei sind Verschwendung. Von Patrick im Spiel beobachtet (Oktober 2026).
+- Medic-Loadout in der Praxis: nur eine Pistole (möglichst vollautomatisch) statt Gewehr, der gesparte Platz geht in Rauch.
 
 ## FOB
 - FOB-Deploy-Item kaufen (2×3 Inventarfläche), Platzierung via Inventar/Quickslot auf begehbarem Gelände mit Platz für LKW/Heli

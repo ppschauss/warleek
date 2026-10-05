@@ -8,8 +8,8 @@ image_alt: Sanitaeter kniet neben einem Verwundeten, geoeffneter Rucksack mit Ve
 excerpt: Pistole statt Gewehr, Rauch statt Feuerkraft, Defi mit eingesetzter Batterie – und der Griff, mit dem die große Batterie keinen Rucksackplatz mehr kostet.
 seo_title: Wardogs Medic Loadout Deutsch – Rucksack richtig packen | Warleek
 seo_description: Defibrillator, Batterien, Stims, Rauch und die richtige Zweitwaffe: wie ein Medic seinen Rucksack packt und dabei Platz gewinnt. Auf Deutsch für Spieler in Deutschland, Österreich und der Schweiz.
-quellen: [Öffentliche Community-Datenbanken und Guides zu WARDOGS (Stand Oktober 2026), Batterie-Griff im Spiel beobachtet von Patrick Schauß (Warleek)]
-geprueft: teilweise – der Batterie-Griff im Spiel beobachtet (Oktober 2026), die Zahlen aus Community-Quellen übernommen
+quellen: [Öffentliche Community-Datenbanken und Guides zu WARDOGS (Stand Oktober 2026), Batterie-Griff und Rauch-Dauer im Spiel beobachtet von Patrick Schauß (Warleek)]
+geprueft: teilweise – Batterie-Griff, Waffenwahl und Rauch-Dauer im Spiel beobachtet (Oktober 2026); die Zahlen zu Ausrüstung und Freischaltstufen aus Community-Quellen übernommen
 ---
 
 Das Problem eines Medics ist selten das Können. Es ist der Platz. Du willst Defi, Batterie, Verbände, Healpacks und Stims mitnehmen – und der Rucksack ist voll, bevor die Munition drin ist.
@@ -36,12 +36,15 @@ Auf 50 Meter und darunter reicht eine Pistole für den Moment, in dem dich jeman
 
 Was du mit dem gesparten Platz einpackst: **Rauchgranaten.**
 
-Ein Medic muss zweimal durch offenes Gelände – rein zum Gefallenen und wieder raus. Rauch macht aus beidem eine Sache, die man überlebt:
+Ein Medic muss durch offenes Gelände zu jemandem, der genau deshalb liegt, weil dort jemand hinschießt. Rauch macht daraus eine Sache, die man überlebt.
 
-- **Rein:** Wurf zwischen dich und die Sichtlinie, dann los. Nicht auf den Gefallenen werfen, sondern zwischen ihn und den Schützen.
-- **Raus:** Zweite Granate, sobald er steht. Ein frisch Aufgestellter ist langsam und hat kaum Leben – ohne Deckung stirbt er sofort wieder, und deine Punkteaktion war umsonst.
+**Der Wurf:** zwischen den Gefallenen und den Schützen, nicht auf den Gefallenen. Du willst die Sichtlinie brechen, nicht die Stelle markieren, an der gleich zwei Leute knien.
 
-Das ist der Unterschied zwischen einem Medic, der Wiederbelebungen sammelt, und einem, der zweimal dieselbe Leiche besucht.
+**Und dann bleibst du drin.** Eine Rauchgranate hält lang genug für den ganzen Vorgang – aufstellen **und** heilen. Das ist der eigentliche Punkt:
+
+> [!hinweis] Lauf nicht weg, sobald er steht. Ein frisch Aufgestellter ist langsam und hat kaum Leben; wer ihn in dem Zustand aus dem Rauch schickt, hat ihn nur kurz ausgeliehen. Heil ihn fertig, solange der Rauch steht – dafür reicht die Zeit.
+
+Deshalb brauchst du auch nicht zwei Granaten pro Mann. Eine, richtig geworfen, deckt die komplette Aktion ab. Das macht Rauch zum billigsten Werkzeug im Rucksack, gemessen an dem, was es rettet.
 
 ## Was es gibt und wann
 
