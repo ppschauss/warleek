@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.21.0
+Stable tag: 2.22.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.22.0 =
+* „Weiter in der Datenbank" zeigt jetzt Karten mit Bild, Titel und Preis statt einer Textliste – eine Waffe erkennt man an der Silhouette schneller als am Namen.
+* Zweite Kartenzeile zeigt Preis, sonst Baukosten, sonst „kostenlos" bei Startwaffen, sonst die Rolle. Jede Karte sagt etwas.
 
 = 2.21.0 =
 * Fünf neue Guides: RoI-Vergleich (was eine Minute wirklich einbringt), Geld verdienen ohne einen Schuss, Die Palette als beste Investition, Season 2 am 15. Oktober, und Team-Switching/FOB-Sabotage.

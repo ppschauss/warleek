@@ -248,11 +248,31 @@ function warleek_render_item_liste( $attrs = array() ) {
 	}
 	$q = new WP_Query( $args );
 	if ( ! $q->posts ) { return ''; }
+
 	$out = '<ul class="wl-itemliste">';
 	foreach ( $q->posts as $p ) {
-		$preis = warleek_item_wert( 'preis', get_post_meta( $p->ID, 'item_preis', true ) );
-		$out  .= '<li><a href="' . esc_url( get_permalink( $p ) ) . '" title="' . warleek_item_linktitel( $p ) . '">' . esc_html( get_the_title( $p ) ) . '</a>'
-			. ( $preis ? ' <span>' . esc_html( $preis ) . '</span>' : '' ) . '</li>';
+		// Zweite Zeile: Preis, sonst Baukosten, sonst die Rolle. Jede Karte soll
+		// etwas sagen – ein Bauwerk hat keinen Preis, aber Baukosten.
+		$wert = warleek_item_wert( 'preis', get_post_meta( $p->ID, 'item_preis', true ) );
+		if ( '' === $wert ) { $wert = warleek_item_wert( 'baukosten', get_post_meta( $p->ID, 'item_baukosten', true ) ); }
+		if ( '' === $wert ) {
+			$frei = (string) get_post_meta( $p->ID, 'item_freischaltung', true );
+			// Startwaffen haben weder Preis noch Baukosten – „kostenlos" sagt mehr
+			// als die Rolle, die ohnehin eine Zeile tiefer im Datenblatt steht.
+			$wert = str_contains( strtolower( $frei ), 'startwaffe' ) ? 'kostenlos' : (string) get_post_meta( $p->ID, 'item_rolle', true );
+		}
+
+		// Alt-Text leer: Der Titel steht direkt darunter, sonst liest ein
+		// Screenreader denselben Namen zweimal vor.
+		$bild = get_the_post_thumbnail( $p, 'medium', array( 'alt' => '', 'loading' => 'lazy', 'decoding' => 'async' ) );
+
+		$out .= '<li class="wl-itemkarte">'
+			. '<a class="wl-itemkarte__link" href="' . esc_url( get_permalink( $p ) ) . '" title="' . warleek_item_linktitel( $p ) . '">'
+			. ( $bild ? '<span class="wl-itemkarte__bild">' . $bild . '</span>' : '<span class="wl-itemkarte__bild is-leer" aria-hidden="true"></span>' )
+			. '<span class="wl-itemkarte__text">'
+			. '<span class="wl-itemkarte__titel">' . esc_html( get_the_title( $p ) ) . '</span>'
+			. ( '' !== $wert ? '<span class="wl-itemkarte__wert">' . esc_html( $wert ) . '</span>' : '' )
+			. '</span></a></li>';
 	}
 	wp_reset_postdata();
 	return $out . '</ul>';
