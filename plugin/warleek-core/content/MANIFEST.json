@@ -80,12 +80,12 @@
         "size": 94242
     },
     "guide-logistik-run.webp": {
-        "alt": "Soldat zurrt eine Versorgungspalette auf einem LKW fest",
+        "alt": "Beladener Logistik-LKW auf einer Schotterpiste, hinten gestapelte Versorgungspaletten unter Spanngurten",
         "use": "guide-logistik-run",
         "size": 53792
     },
     "guide-geld.webp": {
-        "alt": "Hände zählen Geldscheine auf einer Munitionskiste",
+        "alt": "Geoeffneter Geldkoffer auf einer Kistenpalette im Versorgungszelt, daneben ein Klemmbrett mit Lieferschein",
         "use": "guide-geld",
         "size": 50814
     },
@@ -190,7 +190,7 @@
         "size": 46734
     },
     "guide-fob-verteidigen.webp": {
-        "alt": "Befestigte FOB in der Abenddaemmerung mit Sandsackwaellen, Moerserstellung, Wachturm und Verteidigern",
+        "alt": "Beschaedigte HESCO-Mauer an einer Basis in der Daemmerung, dahinter Rauch und ein umgestuerztes Fahrzeug",
         "use": "guide-fob-verteidigen",
         "size": 54082
     },
@@ -210,7 +210,7 @@
         "size": 92996
     },
     "guide-kontrollzone.webp": {
-        "alt": "Blick von oben ueber ein Industrietal in der Daemmerung mit vier Funktuermen auf einzelnen Huegeln",
+        "alt": "Blick ueber ein umkaempftes Tal bei aufziehendem Wetter, Rauchsaeulen am Horizont und ein Helikopter im Tiefflug",
         "use": "guide-kontrollzone",
         "size": 57124
     },

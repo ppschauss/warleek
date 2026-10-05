@@ -2,7 +2,7 @@
 title: Was du ohne Freischaltung schon hast
 slug: wardogs-ohne-freischaltung
 thema: einsteiger
-order: 1
+order: 6
 image: guide-erste-runde
 image_alt: Frisch ausgeruestete Soldaten am Rand des Hauptlagers, daneben ein leichtes Fahrzeug und gestapelte Nachschubkisten
 excerpt: Fünfzehn Dinge stehen dir ab der ersten Minute offen – drei davon kostenlos. Welche das sind und was sie taugen.

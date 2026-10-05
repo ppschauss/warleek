@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.20.1
+Stable tag: 2.21.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.21.0 =
+* Fünf neue Guides: RoI-Vergleich (was eine Minute wirklich einbringt), Geld verdienen ohne einen Schuss, Die Palette als beste Investition, Season 2 am 15. Oktober, und Team-Switching/FOB-Sabotage.
+* Doppelte Reihenfolge im Einsteiger-Bereich behoben – zwei Guides lagen auf Position 1.
+* 37 Guides gesamt.
 
 = 2.20.1 =
 * Medic-Guide: Eine Rauchgranate hält lang genug für Wiederbeleben **und** Heilen – der Rat, eine zweite für den Rückweg zu werfen, war falsch und ist ersetzt.
