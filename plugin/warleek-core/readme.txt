@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.23.0
+Stable tag: 2.24.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.24.0 =
+* Neu: **Änderungsverlauf** an jedem Datenbank-Eintrag. Ändert ein Patch einen Wert, steht künftig unter dem Eintrag, was vorher galt, seit wann nicht mehr und welche Patch Note zeitlich am nächsten lag.
+* Dazu ein Veralterungshinweis: Sind seit der letzten Änderung am Eintrag Patch Notes erschienen, sagt der Eintrag das selbst.
 
 = 2.23.0 =
 * Zwei neue Kategorien: **Ausrüstung** und **Wurfwaffen**. Erster Schwung mit 40 Einträgen – Verbände, Stims, Defibrillator, Ferngläser, Entfernungsmesser, Rucksäcke, Rauch- und Signalgranaten, C4.

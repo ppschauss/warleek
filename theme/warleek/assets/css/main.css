@@ -624,3 +624,18 @@ html.has-modal-open .wl-consent { display: none; }
 	border-top: 1px solid rgb(var(--wl-accent-rgb) / 0.18);
 	font-size: 0.82rem;
 }
+
+/* Änderungsverlauf eines Datenbank-Eintrags */
+.wl-verlauf { margin: var(--wp--preset--spacing--40) 0 0; }
+.wl-verlauf h2 { font-size: 1.1rem !important; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.7rem; color: var(--wp--preset--color--sand); }
+.wl-verlauf__warnung {
+	margin: 0 0 0.9rem;
+	padding: 0.7rem 0.9rem;
+	border: 1px solid rgb(var(--wl-accent-rgb) / 0.4);
+	border-radius: var(--wl-radius);
+	background: rgb(var(--wl-accent-rgb) / 0.07);
+	font-size: 0.9rem;
+}
+.wl-verlauf .wl-tabelle { margin-bottom: 0.6rem; }
+.wl-verlauf s { color: var(--wp--preset--color--steel); text-decoration-thickness: 1px; }
+.wl-verlauf__fuss { margin: 0; font-size: 0.8rem; color: var(--wp--preset--color--steel); }

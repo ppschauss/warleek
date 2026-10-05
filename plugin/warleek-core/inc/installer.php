@@ -524,6 +524,7 @@ function warleek_item_inhalt( array $e ) {
 		. '<p class="wl-stand">Stand: September 2026 · Early Access – Werte ändern sich mit Patches.</p>' . "\n"
 		. '[warleek_datenblatt]' . "\n"
 		. ( $links ? '<h2>Dazu passend</h2><ul>' . $links . '</ul>' . "\n" : '' )
+		. '[warleek_item_verlauf]' . "\n"
 		. '[warleek_item_herkunft]' . "\n";
 }
 
@@ -534,6 +535,59 @@ function warleek_item_inhalt( array $e ) {
  * bleibt veröffentlicht. So lässt sich der Schritt beliebig oft laufen, ohne den
  * Plan durcheinanderzubringen.
  */
+/**
+ * Wertänderungen eines Eintrags festhalten.
+ *
+ * Ein Early-Access-Spiel ändert Preise und Stufen mit jedem Patch. Ohne
+ * Protokoll steht auf der Seite irgendwann eine Zahl, von der niemand mehr
+ * weiß, seit wann sie gilt – und die alte ist spurlos weg. Hier wird jede
+ * Änderung mit Datum und der zu diesem Zeitpunkt jüngsten Patch Note abgelegt.
+ *
+ * Die Patch Note ist bewusst als *zeitlich nächste* gekennzeichnet, nicht als
+ * Ursache: Wir wissen nur, wann wir den neuen Wert eingespielt haben, nicht,
+ * welcher Patch ihn verursacht hat.
+ *
+ * Beim ersten Anlegen eines Eintrags wird nichts protokolliert – da gibt es
+ * keinen alten Wert, nur einen ersten.
+ *
+ * @param int   $id      Beitrag.
+ * @param array $alt     Werte vor dem Schreiben (Feld => Wert).
+ * @param array $neu     Werte, die geschrieben werden.
+ * @return int Zahl der festgehaltenen Änderungen.
+ */
+function warleek_item_verlauf_merken( $id, array $alt, array $neu ) {
+	$felder = warleek_item_felder();
+	$leer   = true;
+	foreach ( $alt as $wert ) { if ( '' !== (string) $wert ) { $leer = false; break; } }
+	if ( $leer ) { return 0; }   // frisch angelegt: kein Vorher
+
+	$aenderungen = array();
+	foreach ( $felder as $key => $def ) {
+		$a = (string) ( $alt[ $key ] ?? '' );
+		$n = (string) ( $neu[ $key ] ?? '' );
+		if ( $a === $n ) { continue; }
+		$aenderungen[] = array( 'feld' => $key, 'alt' => $a, 'neu' => $n );
+	}
+	if ( ! $aenderungen ) { return 0; }
+
+	$patch = get_posts( array( 'post_type' => 'patchnote', 'post_status' => 'publish', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'DESC', 'fields' => 'ids' ) );
+
+	// Achtung: `(array) ''` ergibt array( '' ), nicht ein leeres Array – ein
+	// fehlendes Meta würde sonst als erster, leerer Schritt mitgezählt.
+	$verlauf   = get_post_meta( $id, '_warleek_verlauf', true );
+	$verlauf   = is_array( $verlauf ) ? array_values( array_filter( $verlauf, 'is_array' ) ) : array();
+	$verlauf[] = array(
+		'zeit'        => current_time( 'mysql' ),
+		'patch'       => $patch ? (int) $patch[0] : 0,
+		'aenderungen' => $aenderungen,
+	);
+	// Nur die jüngsten Einträge behalten – eine Seite ist kein Archiv.
+	if ( count( $verlauf ) > 20 ) { $verlauf = array_slice( $verlauf, -20 ); }
+	update_post_meta( $id, '_warleek_verlauf', $verlauf );
+	warleek_log( sprintf( '%d Wertänderung(en) protokolliert: %s', count( $aenderungen ), get_post_field( 'post_name', $id ) ) );
+	return count( $aenderungen );
+}
+
 function warleek_step_items( $force = false ) {
 	$items = warleek_content_json( 'items' );
 	$media = (array) get_option( 'warleek_media_map', array() );
@@ -672,6 +726,9 @@ function warleek_step_items( $force = false ) {
 		if ( $halten ) {
 			warleek_log( 'Werte behalten (bearbeitet): ' . $e['slug'] );
 		} else {
+			// Vor dem Überschreiben festhalten, was sich ändert – sonst ist der
+			// alte Wert weg, und niemand kann nachvollziehen, wann er galt.
+			warleek_item_verlauf_merken( $id, $ist, $geplant );
 			foreach ( warleek_item_felder() as $key => $def ) {
 				$wert = (string) ( $e['felder'][ $key ] ?? '' );
 				if ( '' === $wert ) { delete_post_meta( $id, 'item_' . $key ); } else { update_post_meta( $id, 'item_' . $key, $wert ); }

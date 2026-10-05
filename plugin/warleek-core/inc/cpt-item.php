@@ -112,6 +112,86 @@ add_shortcode( 'warleek_datenblatt', function ( $atts ) {
 	return warleek_item_tabelle( (int) $a['id'] );
 } );
 
+/**
+ * Wie viele Patch Notes seit der letzten Änderung am Eintrag erschienen sind.
+ *
+ * Das ist der ehrlichste verfügbare Hinweis auf Veralterung: Wir wissen nicht,
+ * ob ein Patch genau diesen Gegenstand angefasst hat – aber wir wissen, dass
+ * seitdem etwas passiert ist und niemand nachgesehen hat.
+ *
+ * @param int $id Beitrag.
+ * @return array{anzahl:int, neueste:int}
+ */
+function warleek_item_patches_seither( $id ) {
+	$stand = get_post_modified_time( 'Y-m-d H:i:s', false, $id );
+	$q = new WP_Query( array(
+		'post_type'      => 'patchnote',
+		'post_status'    => 'publish',
+		'posts_per_page' => 1,
+		'fields'         => 'ids',
+		'date_query'     => array( array( 'after' => $stand, 'inclusive' => false ) ),
+		'orderby'        => 'date',
+		'order'          => 'DESC',
+	) );
+	return array( 'anzahl' => (int) $q->found_posts, 'neueste' => $q->posts ? (int) $q->posts[0] : 0 );
+}
+
+/**
+ * Änderungsverlauf eines Eintrags als Abschnitt.
+ *
+ * Zeigt, was sich wann geändert hat – mit dem alten Wert, damit nachvollziehbar
+ * bleibt, was früher galt und seit wann es das nicht mehr tut.
+ */
+function warleek_render_item_verlauf( $id = 0 ) {
+	$id = $id ? (int) $id : (int) get_the_ID();
+	if ( ! $id ) { return ''; }
+
+	$verlauf = array_filter( (array) get_post_meta( $id, '_warleek_verlauf', true ) );
+	$seither = warleek_item_patches_seither( $id );
+	if ( ! $verlauf && ! $seither['anzahl'] ) { return ''; }
+
+	$felder = warleek_item_felder();
+	$out    = '<div class="wl-verlauf"><h2>Was sich geändert hat</h2>';
+
+	if ( $seither['anzahl'] ) {
+		$link = $seither['neueste'] ? get_permalink( $seither['neueste'] ) : get_post_type_archive_link( 'patchnote' );
+		$out .= '<p class="wl-verlauf__warnung">' . sprintf(
+			/* translators: %s: Zahl der Patch Notes */
+			esc_html( _n(
+				'Seit der letzten Prüfung dieses Eintrags ist %s Patch Note erschienen. Die Werte können veraltet sein.',
+				'Seit der letzten Prüfung dieses Eintrags sind %s Patch Notes erschienen. Die Werte können veraltet sein.',
+				$seither['anzahl'],
+				'warleek'
+			) ),
+			'<a href="' . esc_url( $link ) . '">' . (int) $seither['anzahl'] . '</a>'
+		) . '</p>';
+	}
+
+	if ( $verlauf ) {
+		$zeilen = '';
+		foreach ( array_reverse( $verlauf ) as $schritt ) {
+			$datum = mysql2date( 'd.m.Y', $schritt['zeit'] ?? '' );
+			$patch = ! empty( $schritt['patch'] ) ? get_post( (int) $schritt['patch'] ) : null;
+			foreach ( (array) ( $schritt['aenderungen'] ?? array() ) as $a ) {
+				$label = $felder[ $a['feld'] ][0] ?? $a['feld'];
+				$alt   = '' === $a['alt'] ? '—' : warleek_item_wert( $a['feld'], $a['alt'] );
+				$neu   = '' === $a['neu'] ? '—' : warleek_item_wert( $a['feld'], $a['neu'] );
+				$zeilen .= '<tr><td>' . esc_html( $datum ) . '</td>'
+					. '<td>' . esc_html( $label ) . '</td>'
+					. '<td><s>' . esc_html( $alt ) . '</s> → <strong>' . esc_html( $neu ) . '</strong></td>'
+					. '<td>' . ( $patch ? '<a href="' . esc_url( get_permalink( $patch ) ) . '">' . esc_html( get_the_title( $patch ) ) . '</a>' : '—' ) . '</td></tr>';
+			}
+		}
+		$out .= '<figure class="wp-block-table wl-tabelle"><table><thead><tr>'
+			. '<th scope="col">Datum</th><th scope="col">Feld</th><th scope="col">Änderung</th><th scope="col">Nächste Patch Note</th>'
+			. '</tr></thead><tbody>' . $zeilen . '</tbody></table></figure>'
+			. '<p class="wl-verlauf__fuss">Die Patch Note ist die zeitlich nächste, nicht zwingend die Ursache. Festgehalten wird, wann wir den neuen Wert eingespielt haben.</p>';
+	}
+
+	return $out . '</div>';
+}
+add_shortcode( 'warleek_item_verlauf', function () { return warleek_render_item_verlauf(); } );
+
 /** Herkunftskasten, wie bei den Guides. */
 add_shortcode( 'warleek_item_herkunft', function () {
 	$id  = get_the_ID();
