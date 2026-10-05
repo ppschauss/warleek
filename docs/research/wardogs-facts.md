@@ -46,6 +46,15 @@ Nicht enthalten: Symbole oder Renderings einzelner Waffen und Fahrzeuge – die 
 - **Eine Rauchgranate hält lang genug für Wiederbeleben und anschließendes Heilen** – eine pro Aktion reicht, zwei sind Verschwendung. Von Patrick im Spiel beobachtet (Oktober 2026).
 - Medic-Loadout in der Praxis: nur eine Pistole (möglichst vollautomatisch) statt Gewehr, der gesparte Platz geht in Rauch.
 
+## Griefing und Strafen (Stand Oktober 2026)
+- **Teamkill-Strafe rund $1.800** (Foren-Angabe). Gemessen an Loadouts im fünfstelligen Bereich eher ein Preis als eine Strafe.
+- **Melden:** Punktetafel mit TAB, Rechtsklick auf den Namen → Stummschalten/Melden, eigener Punkt **Griefing**.
+- **Aussteigen im Downed-Zustand** lässt den Charakter samt Ausrüstung verschwinden – in der Community als Loot-Denial gegen Team-Looter verbreitet. Von uns **nicht nachgemessen**, Quelle sind Community-Angaben.
+- **Masche aus den Foren:** Gruppen kesseln jemanden mit Fahrzeugen ein und beleben sich gegenseitig wieder, bis der Eingekesselte versehentlich trifft und zahlt – das Strafsystem belohnt dort den Angreifer.
+- Erlebt und berichtet von Patrick Schauß (Oktober 2026): Teamkollegen ziehen Gefallene in Deckung, looten sie und lassen sie liegen; auch der Defibrillator wird aus der Tasche genommen.
+- **Rüstung verschleißt statt zu brechen:** Haltbarkeitsreserve je Stufe nach Community-Angaben 200 (Stufe 1), 220 (2), 250 (3), 300 (4). Ist sie aufgebraucht, schützt die Platte für den Rest des Lebens nicht mehr. Daraus folgt die wirksamste Antwort auf Team-Looter: Rüstung zerschießen statt töten – keine Teamkill-Strafe, der Gegenüber läuft trotzdem ungeschützt weiter. Von Patrick vorgeschlagen, Mechanik über Community-Guides belegt. Haken laut Patrick: keine Geldstrafe, aber die ausgeteilte Menge ist schwer zu dosieren – ein Feuerstoß zu lang und es wird doch ein Teamkill.
+- Quelle: Steam-Community-Diskussionen zu WARDOGS
+
 ## FOB
 - FOB-Deploy-Item kaufen (2×3 Inventarfläche), Platzierung via Inventar/Quickslot auf begehbarem Gelände mit Platz für LKW/Heli
 - Nach Deploy erscheint eine quadratische Bauzone auf der Map

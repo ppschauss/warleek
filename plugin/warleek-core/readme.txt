@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.24.1
+Stable tag: 2.25.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.25.0 =
+* Ausrüstung vollständig: 34 weitere Einträge (Panzerung, Helme, Westen, Paletten, Kisten, Ghillie, Fallschirme, Werkzeug). 172 Einträge gesamt.
+* Neuer Standpunkt-Beitrag zu Team-Griefing und Looting – terminiert auf den 6. Oktober.
+* Guides lassen sich jetzt terminieren: Kopfblock-Feld `veroeffentlichen`.
+* Veröffentlichung der Datenbank auf 7–12 Einträge pro Tag erhöht, damit die Warteschlange im Zwei-Wochen-Fenster bleibt.
 
 = 2.24.1 =
 * Behoben: Nach einem Update standen neue Datenbank-Einträge ohne Bild da, wenn der Medien-Schritt nicht mitlief. „Datenbank anlegen" holt fehlende Bilder jetzt selbst nach und meldet, wie viele Einträge ohne blieben.

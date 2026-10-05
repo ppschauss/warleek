@@ -46,6 +46,9 @@ foreach ( $files as $file ) {
 		'title'   => (string) ( $meta['title'] ?? '' ),
 		'thema'   => (string) ( $meta['thema'] ?? 'einsteiger' ),
 		'image'   => (string) ( $meta['image'] ?? '' ),
+		// Optionales Veröffentlichungsdatum (Y-m-d oder Y-m-d H:i). Liegt es in der
+		// Zukunft, legt der Installer den Guide terminiert an statt sofort sichtbar.
+		'datum'   => trim( (string) ( $meta['veroeffentlichen'] ?? '' ) ),
 		'order'   => (int) ( $meta['order'] ?? 0 ),
 		'excerpt' => (string) ( $meta['excerpt'] ?? '' ),
 		'seo'     => array(

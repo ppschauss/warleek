@@ -175,7 +175,7 @@
         "size": 13402
     },
     "guide-anfaengerfehler.webp": {
-        "alt": "Einzelner Soldat steht ungedeckt mitten auf einem Kiesplatz, waehrend Einschlaege Staub aufwirbeln",
+        "alt": "Gefallener Soldat liegt im Schlamm, daneben ein geoeffneter Rucksack, im Hintergrund entfernt sich eine Gestalt",
         "use": "guide-anfaengerfehler",
         "size": 115212
     },
@@ -1283,6 +1283,204 @@
         "alt": "Verband aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
         "use": "item-wardogs-verband",
         "size": 8028,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-arsenal-backpack.webp": {
+        "alt": "Arsenal-Rucksack + 2 Schlingen aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-arsenal-backpack",
+        "size": 7644,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-bohrer-leicht.webp": {
+        "alt": "Leichter Bohrer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-bohrer-leicht",
+        "size": 8238,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-bohrer-schwer.webp": {
+        "alt": "Schwerer Bohrer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-bohrer-schwer",
+        "size": 12948,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-fallschirm.webp": {
+        "alt": "Fallschirm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-fallschirm",
+        "size": 9718,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-ghillie-anzug-tot.webp": {
+        "alt": "Ghillie-Anzug (Dead) aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-ghillie-anzug-tot",
+        "size": 11180,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-ghillie-anzug.webp": {
+        "alt": "Ghillie-Anzug aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-ghillie-anzug",
+        "size": 12280,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-ghillie-kopf-tot.webp": {
+        "alt": "Ghillie-Kopfbedeckung (Dead) aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-ghillie-kopf-tot",
+        "size": 14246,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-ghillie-kopf.webp": {
+        "alt": "Ghillie-Kopfbedeckung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-ghillie-kopf",
+        "size": 11782,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-gunner-backpack.webp": {
+        "alt": "Gunner-Rucksack + Schlinge aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-gunner-backpack",
+        "size": 7778,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-halftrack-backpack.webp": {
+        "alt": "Halftrack-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-halftrack-backpack",
+        "size": 10146,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-helm-1.webp": {
+        "alt": "Helm Stufe 1 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-helm-1",
+        "size": 6320,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-helm-2.webp": {
+        "alt": "Helm Stufe 2 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-helm-2",
+        "size": 6718,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-helm-3.webp": {
+        "alt": "Helm Stufe 3 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-helm-3",
+        "size": 7400,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-helm-4.webp": {
+        "alt": "Helm Stufe 4 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-helm-4",
+        "size": 7822,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-kanister.webp": {
+        "alt": "Kanister aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-kanister",
+        "size": 7530,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-kiste-gross-gepanzert.webp": {
+        "alt": "Große gepanzerte Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-kiste-gross-gepanzert",
+        "size": 15338,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-kiste-gross.webp": {
+        "alt": "Große Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-kiste-gross",
+        "size": 14018,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-kiste-klein-gepanzert.webp": {
+        "alt": "Kleine gepanzerte Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-kiste-klein-gepanzert",
+        "size": 11178,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-kiste-klein.webp": {
+        "alt": "Kleine Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-kiste-klein",
+        "size": 9666,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-palette-ammo.webp": {
+        "alt": "Palette Ammo-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-palette-ammo",
+        "size": 12222,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-palette-build.webp": {
+        "alt": "Palette Build-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-palette-build",
+        "size": 11778,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-palette-fuel.webp": {
+        "alt": "Palette Fuel-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-palette-fuel",
+        "size": 12150,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-palette-mechanical.webp": {
+        "alt": "Palette Mechanical-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-palette-mechanical",
+        "size": 11944,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-panzerung-1.webp": {
+        "alt": "Panzerung Stufe 1 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-panzerung-1",
+        "size": 7782,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-panzerung-2.webp": {
+        "alt": "Panzerung Stufe 2 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-panzerung-2",
+        "size": 7218,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-panzerung-3.webp": {
+        "alt": "Panzerung Stufe 3 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-panzerung-3",
+        "size": 6908,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-panzerung-4.webp": {
+        "alt": "Panzerung Stufe 4 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-panzerung-4",
+        "size": 7002,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-pouch.webp": {
+        "alt": "Tasche aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-pouch",
+        "size": 7336,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-sport-fallschirm.webp": {
+        "alt": "Sport-Fallschirm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-sport-fallschirm",
+        "size": 8776,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-weste-gross.webp": {
+        "alt": "Große Taktikweste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-weste-gross",
+        "size": 6362,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-weste-klein.webp": {
+        "alt": "Kleine Taktikweste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-weste-klein",
+        "size": 7314,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-weste-mittel.webp": {
+        "alt": "Mittlere Taktikweste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-weste-mittel",
+        "size": 7272,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-wrench.webp": {
+        "alt": "Wrench aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-wrench",
+        "size": 5868,
         "credit": "Spiel-Asset · © BULKHEAD / Team17"
     }
 }

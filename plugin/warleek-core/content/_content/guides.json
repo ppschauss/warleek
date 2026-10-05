@@ -22,6 +22,7 @@
         "title": "Die drei Fraktionen: Lonestar, Valkyra und Manticore im Vergleich",
         "thema": "einsteiger",
         "image": "guide-fraktionen",
+        "datum": "",
         "order": 2,
         "excerpt": "Blau, Rot oder Grün? Was die drei Fraktionen unterscheidet, was die Statistik sagt – und welche du als Neuling nehmen solltest.",
         "seo": {
@@ -40,6 +41,7 @@
         "title": "Zehn Anfängerfehler in Wardogs – und was du stattdessen tust",
         "thema": "einsteiger",
         "image": "guide-anfaengerfehler",
+        "datum": "",
         "order": 3,
         "excerpt": "Teure Loadouts, einsame Sprints zur Zone, der Heli am Berghang. Die Fehler, die fast jeder macht, und die Gegenmaßnahme in einem Satz.",
         "seo": {
@@ -58,6 +60,7 @@
         "title": "Kein Klassensystem: die sechs Fortschritts-Tracks verstehen",
         "thema": "einsteiger",
         "image": "guide-progression",
+        "datum": "",
         "order": 4,
         "excerpt": "Assault, Medic, Recon, Support, Driver, Pilot – du wählst keine Klasse, du wirst eine. Wie Freischaltungen, Career-Level und Cash zusammenhängen.",
         "seo": {
@@ -75,6 +78,7 @@
         "title": "Spawnen und an die Front kommen: Deployment-Board und Spawn-APC",
         "thema": "einsteiger",
         "image": "guide-spawnen",
+        "datum": "",
         "order": 5,
         "excerpt": "Warum die FOB kein Spawnpunkt ist, wie der M113 APC funktioniert und wie du aufhörst, drei Minuten pro Leben zu laufen.",
         "seo": {
@@ -92,6 +96,7 @@
         "title": "Was du ohne Freischaltung schon hast",
         "thema": "einsteiger",
         "image": "guide-erste-runde",
+        "datum": "",
         "order": 6,
         "excerpt": "Fünfzehn Dinge stehen dir ab der ersten Minute offen – drei davon kostenlos. Welche das sind und was sie taugen.",
         "seo": {
@@ -110,6 +115,7 @@
         "title": "Geld verdienen ohne einen Schuss",
         "thema": "einsteiger",
         "image": "guide-recon",
+        "datum": "",
         "order": 7,
         "excerpt": "Fernglas für $75, Leute fahren, Wiederbeleben: vier Wege, mit denen du dein Konto füllst, bevor du überhaupt eine ordentliche Waffe hast.",
         "seo": {
@@ -127,6 +133,7 @@
         "title": "Kontrollzone, Hot Zone und die vier Türme – so gewinnt man Matches",
         "thema": "gameplay",
         "image": "guide-kontrollzone",
+        "datum": "",
         "order": 10,
         "excerpt": "Punkte gibt es für Körper in der Zone, nicht für Kills. Wie der Zähler tickt, was die Hot Zone verdoppelt und wozu der vierstellige Code dient.",
         "seo": {
@@ -180,6 +187,7 @@
         "title": "Medic spielen: Wiederbeleben ist eine Punktaktion",
         "thema": "gameplay",
         "image": "guide-medic",
+        "datum": "",
         "order": 13,
         "excerpt": "Verbandszeug, Field Resuscitator, Defibrillator – was wann freigeschaltet wird, wo du stehen musst und warum der Medic die unterschätzteste Rolle im Spiel ist.",
         "seo": {
@@ -197,6 +205,7 @@
         "title": "Recon: Spotten verdient mehr als Schießen",
         "thema": "gameplay",
         "image": "guide-recon",
+        "datum": "",
         "order": 14,
         "excerpt": "Das Fernglas für rund $75 ist die profitabelste Anschaffung im Spiel. Wie Spotten funktioniert, was der Ghillie taugt und welches Gewehr sich wann lohnt.",
         "seo": {
@@ -214,6 +223,7 @@
         "title": "Panzer knacken: Trefferzonen, Werfer und der Weg nach hinten",
         "thema": "gameplay",
         "image": "guide-panzer",
+        "datum": "",
         "order": 15,
         "excerpt": "Frontal schießen dauert dreimal so lange wie hinten. Welche Waffe wann, wo die Schwachstellen sitzen und wie du als Infanterist einen Panzer wirklich aufhältst.",
         "seo": {
@@ -231,6 +241,7 @@
         "title": "Entfernungsmesser im Heli: der Pilot sieht alles Markierte",
         "thema": "gameplay",
         "image": "guide-rangefinder",
+        "datum": "",
         "order": 16,
         "excerpt": "Mit dem Entfernungsmesser in der Hand einsteigen, dann in die Ego-Perspektive wechseln – und als Pilot das Lagebild des Teams sehen. Seit dem 2. Oktober deaktiviert, ab Season 2 mit Batterien zurück.",
         "seo": {
@@ -251,6 +262,7 @@
         "title": "Der Medic-Rucksack: Defi, Stims, Healpacks – und ein Slot geschenkt",
         "thema": "gameplay",
         "image": "guide-medic",
+        "datum": "",
         "order": 17,
         "excerpt": "Pistole statt Gewehr, Rauch statt Feuerkraft, Defi mit eingesetzter Batterie – und der Griff, mit dem die große Batterie keinen Rucksackplatz mehr kostet.",
         "seo": {
@@ -269,6 +281,7 @@
         "title": "Was eine Minute wirklich einbringt: der RoI-Vergleich",
         "thema": "gameplay",
         "image": "guide-geld",
+        "datum": "",
         "order": 18,
         "excerpt": "Kill, Zone, Palette, Transport – was jede Tätigkeit pro Minute abwirft. Die Tabelle erklärt, warum Abschüsse die schlechteste Einnahmequelle im Spiel sind.",
         "seo": {
@@ -286,6 +299,7 @@
         "title": "Season 2 am 15. Oktober: Wipe, Regen und ein Panzer gegen die Heli-Plage",
         "thema": "gameplay",
         "image": "guide-kontrollzone",
+        "datum": "",
         "order": 19,
         "excerpt": "Was zurückgesetzt wird, was bleibt, und was neu dazukommt – Stand vor dem Start. Mit der Trennung zwischen Bestätigtem und Vermutetem.",
         "seo": {
@@ -322,6 +336,7 @@
         "title": "Support und Hammer: was du womit bauen darfst",
         "thema": "fob",
         "image": "guide-support-bauen",
+        "datum": "",
         "order": 21,
         "excerpt": "Kleiner, mittlerer, großer Hammer – die drei Stufen entscheiden, was auf deiner Baustelle entsteht. Plus: was ein Bauwerk wirklich kostet.",
         "seo": {
@@ -339,6 +354,7 @@
         "title": "FOB verteidigen: Sichtlinien, Emplacements und der Nachschub dahinter",
         "thema": "fob",
         "image": "guide-fob-verteidigen",
+        "datum": "",
         "order": 22,
         "excerpt": "Eine FOB fällt selten durch einen Sturmangriff. Sie fällt, weil der Nachschub ausbleibt oder jemand aus 400 Metern hineinsehen kann.",
         "seo": {
@@ -356,6 +372,7 @@
         "title": "Flugabwehr: Talon und Vanguard CIWS bauen – und umfliegen",
         "thema": "fob",
         "image": "guide-flugabwehr",
+        "datum": "",
         "order": 23,
         "excerpt": "Die beiden teuersten Bauwerke im Spiel, ihr Nutzen und ihre Schwäche. Dazu: wie du als Pilot an ihnen vorbeikommst und wie du sie vom Boden aus abräumst.",
         "seo": {
@@ -373,6 +390,7 @@
         "title": "Wenn der Gegner von innen kommt: Team-Switching und FOB-Sabotage",
         "thema": "fob",
         "image": "guide-fob-verteidigen",
+        "datum": "",
         "order": 24,
         "excerpt": "Manche wechseln mitten im Match die Seite, laufen in die eigene FOB und reißen die Mauern ein. Was dahintersteckt und wie ihr eine Basis dagegen baut.",
         "seo": {
@@ -410,6 +428,7 @@
         "title": "Welches Fahrzeug für welche Fracht: der Logistik-Fuhrpark",
         "thema": "logistik",
         "image": "guide-logistik-fahrzeuge",
+        "datum": "",
         "order": 31,
         "excerpt": "Ural, Kodiak, Humvee oder Helikopter? Was wirklich Paletten trägt, was nur Kisten schafft – und warum die Waffenvariante nichts an der Ladung ändert.",
         "seo": {
@@ -427,6 +446,7 @@
         "title": "Die Palette: $400 rein, $3.900 raus",
         "thema": "logistik",
         "image": "guide-logistik-run",
+        "datum": "",
         "order": 32,
         "excerpt": "Die beste Investition im Spiel, nachgerechnet: Kaufpreis, Abgabe, Abbauprämie – und warum zwei Paletten pro Fahrt den Unterschied machen.",
         "seo": {
@@ -444,6 +464,7 @@
         "title": "Waffen kaufen: der Pfad von der Gratis-Knarre zur FAL",
         "thema": "equipment",
         "image": "guide-waffen",
+        "datum": "",
         "order": 40,
         "excerpt": "Preise, Freischaltstufen und die Frage, die wirklich zählt: Verdient dein durchschnittliches Leben mehr, als dein Loadout kostet?",
         "seo": {
@@ -461,6 +482,7 @@
         "title": "Zeroing und Ballistik: warum dein Schuss zu tief liegt",
         "thema": "equipment",
         "image": "guide-zeroing",
+        "datum": "",
         "order": 41,
         "excerpt": "Wardogs rechnet echten Kugelfall und echte Flugzeit. Wie du das Zielfernrohr einstellst, was Mündungsgeschwindigkeit bedeutet und wann du vorhalten musst.",
         "seo": {
@@ -478,6 +500,7 @@
         "title": "Gewichtsklassen: warum dein Loadout dich langsam macht",
         "thema": "equipment",
         "image": "guide-gewicht",
+        "datum": "",
         "order": 42,
         "excerpt": "Vier Stufen, die das Spiel nicht erklärt. In der schwersten gibt es keinen taktischen Sprint – und wer dort fällt, lässt sich nicht in Deckung ziehen.",
         "seo": {
@@ -512,6 +535,7 @@
         "title": "Helikopter fliegen mit Maus und Tastatur – Flugassistenten aus",
         "thema": "equipment",
         "image": "guide-helikopter",
+        "datum": "",
         "order": 44,
         "excerpt": "Die Standardeinstellung kämpft gegen dich. Welche Assistenten raus müssen, welche Tasten wohin gehören und warum du auf dem Schießstand anfängst.",
         "seo": {
@@ -530,6 +554,7 @@
         "title": "Die besten Einstellungen: mehr FPS, bessere Sicht, weniger Input-Lag",
         "thema": "technik",
         "image": "guide-einstellungen",
+        "datum": "",
         "order": 50,
         "excerpt": "Nicht alles auf Niedrig. Welche Optionen Leistung kosten, ohne dir etwas zu zeigen – und welche du hochlassen solltest, weil sie Gegner sichtbar machen.",
         "seo": {
@@ -547,6 +572,7 @@
         "title": "Ruckler beheben, obwohl die FPS stimmen",
         "thema": "technik",
         "image": "guide-ruckler",
+        "datum": "",
         "order": 51,
         "excerpt": "120 Bilder pro Sekunde und trotzdem Hänger: Shader, VRAM, Datenträger, Hintergrundprogramme. Die Ursachen in der Reihenfolge, in der du sie prüfst.",
         "seo": {
@@ -564,6 +590,7 @@
         "title": "Tastenbelegung und versteckte Mechaniken, die niemand erklärt",
         "thema": "technik",
         "image": "guide-tastenbelegung",
+        "datum": "",
         "order": 52,
         "excerpt": "Lehnen beim Laufen, Magazin abwerfen, Munition im Schnellkauf, Rauch aus dem APC – ein Dutzend Handgriffe, die im Tutorial fehlen.",
         "seo": {
@@ -598,6 +625,7 @@
         "title": "HOTAS-Empfindlichkeit, Deadzone und Kurven – dreh den Regler nicht herunter",
         "thema": "technik",
         "image": "guide-hotas-settings",
+        "datum": "",
         "order": 54,
         "excerpt": "Der Regler unter 1.0 nimmt dir nicht nur das Zappeln, sondern auch die maximale Drehrate. Warum das so ist, was stattdessen hilft – und wo sich zwei erfahrene Piloten offen widersprechen.",
         "seo": {
@@ -616,6 +644,7 @@
         "title": "Mit dem HOTAS fliegen: Gieren führt, Rollen folgt",
         "thema": "technik",
         "image": "guide-hotas-fliegen",
+        "datum": "",
         "order": 55,
         "excerpt": "Flugassistenten aus, Sichtfeld hoch, und dann die drei Bewegungen, die zählen: tief fliegen, Combat Orbit, schnelle Landung. Für alle, die am Stick sitzen statt an der Maus.",
         "seo": {
@@ -634,6 +663,7 @@
         "title": "Der Lonestar-Überlebensguide – wie man in Blau verliert, aber mit Haltung",
         "thema": "gameplay",
         "image": "guide-lonestar",
+        "datum": "",
         "order": 60,
         "excerpt": "Satire. Ein Ehrenguide für Team Blau: die Fraktion mit der kürzesten Warteschlange, der besten Sicht auf den eigenen Untergang und den hellsten Hosen im Wald.",
         "seo": {
@@ -646,5 +676,26 @@
             "Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "nein"
+    },
+    {
+        "slug": "wardogs-griefing-standpunkt",
+        "title": "Wer dich auslootet, statt dich aufzustellen",
+        "thema": "gameplay",
+        "image": "guide-anfaengerfehler",
+        "datum": "2026-10-06 09:00",
+        "order": 61,
+        "excerpt": "Ein Standpunkt zu Team-Griefing – was gerade passiert, warum der Teamkill die schlechtere Antwort ist, und welcher Schutz wirkt, den man trotzdem nicht empfehlen möchte.",
+        "seo": {
+            "title": "Wardogs Griefing & Team-Looting – was hilft | Warleek",
+            "description": "Teamkollegen looten dich statt dich aufzustellen. Was dagegen hilft, wie man meldet und warum der verbreitete Schutz keiner sein sollte. Standpunkt auf Deutsch für Spieler in Deutschland, Österreich und der Schweiz."
+        },
+        "html": "\n<div class=\"wl-note\"><p><strong>Hinweis</strong> <strong>Das hier ist ein Standpunkt, kein Guide.</strong> Wir beschreiben ein Problem und sagen, was wir davon halten. Wer eine Anleitung sucht, findet die unter „FOB verteidigen&quot; und bei der Team-Switching-Sabotage.</p></div>\n<p>Du gehst zu Boden. Jemand aus deinem Team rennt los, zieht dich aus dem Feuer in Deckung — und dann passiert nichts. Er nimmt deine Ausrüstung und lässt dich liegen.</p>\n<p>Das In-Sicherheit-Ziehen hat nie dir gegolten. Es war Deckung für ihn, während er dich ausräumt.</p>\n<p>Die zweite Variante ist noch dreister: Jemand nimmt <strong>deinen Defibrillator</strong> aus deiner Tasche — das Gerät, mit dem man dich aufstellen könnte — und zieht damit ab.</p>\n<h2>Warum das funktioniert</h2>\n<p>Weil es sich rechnet. Ein Loadout kostet schnell einen fünfstelligen Betrag; die Strafe für einen Teamkill liegt nach Angaben aus den Foren bei rund <strong>$1.800</strong>. Wer dir Ausrüstung im Wert von $30.000 abnimmt, zahlt im schlimmsten Fall einen Bruchteil davon.</p>\n<p>Dazu kommt: Aussteigen ist teuer. Wer eine Runde verlässt, verliert, was er mitgenommen hat. Das Spiel hält dich also in einer Situation fest, in der dich jemand gerade bestiehlt.</p>\n<h2>Der verbreitete Schutz — und warum wir ihn nicht empfehlen</h2>\n<p>In der Community kursiert ein Griff: <strong>Sofort aussteigen, solange du am Boden liegst.</strong> Dann verschwindet dein Charakter samt Ausrüstung, und niemand kann sie aufheben — weder der Gegner noch der eigene Mann, der gerade die Hand ausgestreckt hat.</p>\n<p>Das ist derzeit der einzige Schutz, der zuverlässig greift. Und trotzdem:</p>\n<div class=\"wl-note\"><p><strong>Hinweis</strong> <strong>Wir empfehlen das nicht.</strong> Du bestrafst damit ein ganzes Team für das Verhalten eines Einzelnen — die anderen vier stehen plötzlich ohne dich da. Und du machst es dir zur Gewohnheit, in einer Lage auszusteigen, in der dich jemand vielleicht doch aufgestellt hätte.</p></div>\n<p>Dass der Griff überhaupt die beste Antwort ist, sagt mehr über den Zustand aus als über die Leute, die ihn benutzen.</p>\n<p>Nachgemessen haben wir ihn nicht — das steht so in den Foren und wird dort breit weitergegeben.</p>\n<h2>Die bessere Antwort als der Teamkill</h2>\n<p>Der naheliegende Reflex ist, den Dieb umzulegen. Das kostet dich nach Foren-Angaben rund <strong>$1.800</strong> — und hat eine Falle, die uns beim Nachlesen selbst überrascht hat:</p>\n<div class=\"wl-note\"><p><strong>Hinweis</strong> <strong>Es gibt Gruppen, die genau darauf warten.</strong> In den Foren wird beschrieben, wie Spieler jemanden mit Fahrzeugen einkesseln und sich gegenseitig immer wieder aufstellen, bis der Eingekesselte aus Versehen trifft — und dann zahlt er. In dieser Konstellation belohnt das Strafsystem den Angreifer.</p></div>\n<p>Es gibt eine Antwort, die billiger ist und besser trifft: <strong>Schieß ihm die Rüstung kaputt, statt ihn zu töten.</strong></p>\n<p>Rüstung in Wardogs hat eine Haltbarkeitsreserve, die sich mit jedem Treffer abnutzt — nach Community-Angaben 200 Punkte auf Stufe 1 bis 300 auf Stufe 4. Ist sie aufgebraucht, schützt die Platte nichts mehr, und zwar <strong>für den Rest dieses Lebens</strong>. Sie geht nicht einfach kaputt, sie verschleißt.</p>\n<p>Das heißt konkret:</p>\n<ul><li><strong>Du zahlst keine Teamkill-Strafe</strong>, solange du ihn nicht umlegst</li><li>Seine Stufe-4-Rüstung für rund <strong>$4.000</strong> ist trotzdem wertlos</li><li>Er läuft den Rest des Lebens ungeschützt herum — mit deiner Ausrüstung im Rucksack, die ihm jetzt nichts mehr nützt</li></ul>\n<p>Das ist der Punkt, an dem sich Looten nicht mehr rechnet, ohne dass du in die Einkesselungs-Falle läufst.</p>\n<div class=\"wl-note\"><p><strong>Hinweis</strong> <strong>Der Haken ist die Dosierung.</strong> Solange du ihn nicht umlegst, zahlst du keinen Cent — aber es ist schwer zu steuern, wie viel du austeilst. Ein Feuerstoß zu lang, und aus der kostenlosen Antwort werden rund $1.800. Kurze, gezielte Stöße statt Dauerfeuer, und dazwischen hinsehen.</p></div>\n<p>Und das Selbstverständliche: Du musst sicher sein, dass du den Richtigen vor dir hast. Im Zweifel melden statt schießen — eine falsche Meldung lässt sich klären, ein falscher Feuerstoß nicht.</p>\n<h2>Was sicher hilft</h2>\n<p><strong>Melden.</strong> Auf dem PC die Punktetafel mit <strong>TAB</strong> öffnen, mit Rechtsklick auf den Namen — dort gibt es Stummschalten und Melden, mit einem eigenen Punkt für <strong>Griefing</strong>. Das kostet dich nichts und ist der einzige Weg, der beim Entwickler ankommt.</p>\n<p><strong>Benennen.</strong> Schreib in den Chat, wer es war. Nicht als Beschimpfung, sondern als Information: Die anderen im Team wissen dann, wem sie nicht den Rücken zudrehen.</p>\n<p><strong>Mit Leuten spielen, die du kennst.</strong> Die unspektakulärste Antwort und die wirksamste. Gegen ein soziales Problem hilft selten eine technische Lösung.</p>\n<h2>Was sich ändern müsste</h2>\n<p>Drei Dinge, und keines davon liegt bei uns:</p>\n<ol><li><strong>Die Strafe muss sich am Wert orientieren</strong>, nicht an einem festen Betrag. $1.800 für $30.000 Ausrüstung ist keine Strafe, das ist ein Preis.</li><li><strong>Looten im eigenen Team gehört eingeschränkt</strong> — oder zumindest so protokolliert, dass eine Meldung etwas belegt.</li><li><strong>Die Einkesselungs-Masche gehört erkannt.</strong> Ein System, in dem der Angegriffene zahlt, ist kaputt.</li></ol>\n<p>Bis dahin bleibt: melden, benennen, und sich nicht einreden lassen, dass das normal ist.</p>\n<p>Wenn dir das auch passiert ist — schreib uns. Je besser dokumentiert, desto schwerer ist es wegzuwischen.</p>\n",
+        "quellen": [
+            "Eigene Erfahrung von Patrick Schauß (Warleek)",
+            "Oktober 2026",
+            "Öffentliche Diskussionen in den Steam-Foren zu WARDOGS (Stand Oktober 2026)",
+            "Community-Guides zum Rüstungssystem (Haltbarkeitswerte)"
+        ],
+        "geprueft": "teilweise – die beschriebenen Situationen selbst erlebt; Zahlen zur Strafe und der Meldeweg aus den Steam-Foren, von uns nicht nachgemessen"
     }
 ]

@@ -364,6 +364,25 @@ function warleek_guide_herkunft( array $g ) {
 		. $pruef . $bild . $nachweis . '</div>' . "\n";
 }
 
+/**
+ * Veröffentlichungsdatum eines Guides prüfen.
+ *
+ * Nimmt `Y-m-d` oder `Y-m-d H:i`; ohne Uhrzeit wird 09:00 angenommen. Liegt der
+ * Termin in der Vergangenheit, gibt es nichts zu terminieren.
+ *
+ * @param string $roh Angabe aus dem Kopfblock.
+ * @return string Zeitstempel oder leer.
+ */
+function warleek_guide_termin( $roh ) {
+	$roh = trim( (string) $roh );
+	if ( '' === $roh ) { return ''; }
+	if ( preg_match( '/^\d{4}-\d{2}-\d{2}$/', $roh ) ) { $roh .= ' 09:00:00'; }
+	elseif ( preg_match( '/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/', $roh ) ) { $roh .= ':00'; }
+	$zeit = strtotime( $roh );
+	if ( ! $zeit || $zeit <= current_time( 'timestamp' ) ) { return ''; }
+	return gmdate( 'Y-m-d H:i:s', $zeit );
+}
+
 function warleek_seed_guides( array $guides, array $media, array $site, $force = false ) {
 	foreach ( $site['themen'] as $slug => $t ) {
 		$term = term_exists( $slug, 'guide-thema' );
@@ -373,7 +392,27 @@ function warleek_seed_guides( array $guides, array $media, array $site, $force =
 	foreach ( $guides as $g ) {
 		// Bilder im Fließtext stehen als Asset-Schlüssel – hier werden URLs daraus.
 		$content = warleek_html_to_blocks( warleek_resolve_asset_src( $g['html'] . warleek_guide_herkunft( $g ), $media ) );
-		$id = warleek_upsert_post( array( 'post_title' => $g['title'], 'post_name' => $g['slug'], 'post_content' => $content, 'post_excerpt' => $g['excerpt'], 'menu_order' => (int) ( $g['order'] ?? 0 ) ), 'guide', 0, $force );
+		$daten = array(
+			'post_title'   => $g['title'],
+			'post_name'    => $g['slug'],
+			'post_content' => $content,
+			'post_excerpt' => $g['excerpt'],
+			'menu_order'   => (int) ( $g['order'] ?? 0 ),
+		);
+		// Ein Datum in der Zukunft heißt: terminieren statt sofort veröffentlichen.
+		// Bei einem bereits veröffentlichten Guide wird das ignoriert – was draußen
+		// ist, holen wir nicht zurück.
+		$termin = warleek_guide_termin( $g['datum'] ?? '' );
+		if ( $termin ) {
+			$da = get_posts( array( 'post_type' => 'guide', 'name' => $g['slug'], 'post_status' => array( 'publish', 'future', 'draft' ), 'posts_per_page' => 1, 'fields' => 'ids' ) );
+			if ( ! $da || 'publish' !== get_post_status( (int) $da[0] ) ) {
+				$daten['post_status']   = 'future';
+				$daten['post_date']     = $termin;
+				$daten['post_date_gmt'] = get_gmt_from_date( $termin );
+				warleek_log( sprintf( 'geplant für %s: %s', substr( $termin, 0, 16 ), $g['slug'] ) );
+			}
+		}
+		$id = warleek_upsert_post( $daten, 'guide', 0, $force );
 		wp_set_object_terms( $id, $g['thema'], 'guide-thema' );
 		if ( ! empty( $g['image'] ) && ! empty( $media[ $g['image'] ] ) ) { set_post_thumbnail( $id, $media[ $g['image'] ] ); }
 		warleek_set_seo( $id, $g['seo'] ?? array(), false, $force );
@@ -422,7 +461,7 @@ function warleek_seed_nav( array $nav ) {
  * @return string[] MySQL-Zeitstempel in lokaler Zeit.
  */
 function warleek_item_pro_tag() {
-	$r   = (array) apply_filters( 'warleek_item_pro_tag', array( 5, 10 ) );
+	$r   = (array) apply_filters( 'warleek_item_pro_tag', array( 7, 12 ) );
 	$min = max( 1, (int) ( $r[0] ?? 5 ) );
 	$max = max( $min, (int) ( $r[1] ?? 10 ) );
 	return array( $min, $max );
