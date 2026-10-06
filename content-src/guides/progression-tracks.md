@@ -10,6 +10,9 @@ seo_title: Wardogs Progression & Klassen – Guide auf Deutsch | Warleek
 seo_description: Assault, Medic, Recon, Support, Driver und Pilot: wie die sechs Tracks, Career-Level und Cash zusammenhängen. Deutsche Anleitung für die DACH-Region.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: starterleek
+frage: Wie funktioniert die Progression in Wardogs?
+antwort: Wardogs hat kein Klassensystem. Sechs Tracks – Assault, Medic, Recon, Support, Driver und Pilot – steigen durch das, was du tust, darüber läuft das Career-Level. Eine Track-Stufe schaltet nicht die Waffe frei, sondern das Recht, sie zu kaufen.
 ---
 
 Wardogs hat keinen Klassen-Auswahlbildschirm. Du entscheidest nicht, wer du bist – du wirst es dadurch, was du tust. Wer das nicht weiß, levelt in sechs Richtungen gleichzeitig ein bisschen und schaltet nirgends etwas frei.
@@ -64,3 +67,25 @@ Was dagegen hilft: Aktionen, die **mehrfach** zählen. Spotten zahlt auf Recon u
 ## Ein Loadout, das mitwächst
 
 Praktisch sieht gesunder Fortschritt so aus: Du hast eine Hauptrolle, ein Werkzeug aus einer zweiten und ein Budget, das ein Leben verträgt. Beispiel Recon mit Support-Zweitnutzen: Fernglas, Scharfschützengewehr aus der unteren Preisklasse, dazu ein kleiner Hammer für Sandsäcke. Damit spottest du, hältst eine Sichtlinie und baust dir die Deckung, in der du liegst.
+
+## Häufige Fragen
+
+### Hat Wardogs Klassen?
+
+Nein. Es gibt sechs Fortschritts-Tracks, die parallel steigen, je nachdem was du tust. Ein Medic mit Sturmgewehr ist ein Sturmsoldat mit Medikit – versteckte Klassenboni gibt es nicht.
+
+### Was schaltet ein Track-Level in Wardogs frei?
+
+Das Recht, etwas zu kaufen, nicht den Gegenstand selbst. Bezahlt wird danach bei jedem Leben neu aus dem Cash-Konto. Cash ist die laufende Miete, das Level nur der Mietvertrag.
+
+### Welchen Track sollte man zuerst spielen?
+
+Driver, Recon oder Medic. Alle drei funktionieren ohne gutes Zielen. Assault ist die verlockendste und die härteste, weil sie über Kills steigt – und die klappen am Anfang nicht.
+
+### Warum geht der Fortschritt ab Career-Level 10 langsamer?
+
+Die Erfahrungskurven zwischen Stufe 10 und 20 wurden nach Season 1 deutlich gestreckt. Dagegen helfen Aktionen, die mehrfach zählen: Spotten, eine FOB bauen, den APC nach vorn fahren.
+
+### Sind die Preise auf niedrigen Track-Stufen günstiger?
+
+Ja. Unterhalb von Track-Level 9 sind die Preise halbiert. Die ersten Stufen sind damit nicht nur schnell erreicht, sondern auch billig zu bespielen.

@@ -10,6 +10,9 @@ seo_title: Wardogs Anfängerfehler vermeiden – Guide Deutsch | Warleek
 seo_description: Zehn typische Fehler von Wardogs-Neulingen und die Gegenmaßnahme: teures Loadout, Alleingänge, falsche Rolle. Auf Deutsch für Spieler in DACH.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026), Offizielle WARDOGS-Ankündigungen und Patch Notes bei Steam]
 geprueft: nein
+autor: starterleek
+frage: Was sind die häufigsten Anfängerfehler in Wardogs?
+antwort: Ein zu teures Loadout kaufen, allein zur Kontrollzone rennen und Abschüsse für den Sieg halten. Punkte gibt es dafür, dass mehr eigene Leute in der Zone stehen. Kauf billig, bis ein durchschnittliches Leben mehr einbringt, als es kostet.
 ---
 
 Die meisten schlechten Runden in Wardogs entstehen nicht durch schlechtes Zielen. Sie entstehen durch zehn Entscheidungen, die vor dem ersten Schuss fallen. Hier sind sie, jeweils mit der Gegenmaßnahme.
@@ -79,3 +82,21 @@ Sie ist es für alle. 100 Spieler, drei Fraktionen, 2×2 Kilometer Zone auf eine
 **Stattdessen:** Spiel drei Runden mit einer Rolle und einem Ziel pro Runde („heute fahre ich nur Nachschub"). Danach ergibt der Rest von selbst Sinn.
 
 > [!hinweis] Ein guter erster Abend sieht so aus: Squad beitreten, billiges Loadout, Nachschub fahren, zuhören. Danach hast du mehr Geld als am Anfang und kennst die Karte.
+
+## Häufige Fragen
+
+### Wie viel Geld hat man in Wardogs am Anfang?
+
+$10.000. Das reicht für ein sehr gutes Loadout oder für zehn brauchbare – in den ersten Stunden ist die zweite Rechnung die richtige.
+
+### Bringen Kills in Wardogs den Sieg?
+
+Nein. Punkte gibt es, wenn mehr eigene Leute in der Zone stehen als von jeder anderen Fraktion, während der Zähler tickt. Ein Abschuss ist nur deshalb wertvoll, weil er einen Körper aus der Zone entfernt.
+
+### Was kostet eine FOB in Wardogs?
+
+Rund $4.887. Sie ist der teuerste Fehlkauf im Spiel, wenn sie an der falschen Stelle steht – deshalb vorher im Squad abstimmen, ob überhaupt eine gebraucht wird.
+
+### Welche Rolle ist für Einsteiger am besten?
+
+Logistik oder Recon. Beide funktionieren ohne gutes Zielen und zahlen zuverlässig. Wichtig ist, die ersten zehn Stunden bei einer Richtung zu bleiben, statt nach jedem Tod zu wechseln.

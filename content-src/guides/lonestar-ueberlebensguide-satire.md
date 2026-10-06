@@ -10,6 +10,9 @@ seo_title: Wardogs Team Blau (Lonestar) – Satire auf Deutsch | Warleek
 seo_description: Satire: Warum die blaue Fraktion immer offen ist, was helle Hosen im Unterholz bewirken und wie man mit Haltung verliert. Auf Deutsch für DACH.
 quellen: [Äußerungen der Entwickler von BULKHEAD‚ zitiert in Community-Berichten, Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: adminleek
+frage: Ist der Lonestar-Überlebensguide ernst gemeint?
+antwort: Nein, dieser Guide ist Satire und enthält keine belastbaren Taktiken. Die sachliche Fassung zum Thema steht im Guide über die drei Fraktionen: Alle kaufen aus demselben Katalog, Blau verliert statistisch häufiger, die Unterschiede sind sozial und nicht mechanisch.
 ---
 
 > [!achtung] Dieser Guide ist **Satire**. Er enthält keine belastbaren Taktiken, dafür Zuneigung. Die ernst gemeinte Fassung steht unter [Die drei Fraktionen im Vergleich](/guides/wardogs-fraktionen/).

@@ -10,6 +10,9 @@ seo_title: Wardogs Helikopter fliegen – Guide auf Deutsch | Warleek
 seo_description: Maus und Tastatur, Flugassistenten aus, MH-6 als Lern-Heli: Helikopter sicher fliegen. Deutsche Anleitung für Spieler in DACH.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026), Video-Guide von <a href="https://www.youtube.com/watch?v=IHcD8c_iqD0" rel="nofollow noopener noreferrer">Tote Torres</a> (Logitech G940‚ Screenshots mit Zeitangabe im Text)]
 geprueft: nein
+autor: pilotleek
+frage: Wie fliegt man in Wardogs einen Helikopter mit Maus und Tastatur?
+antwort: Maussteuerung für Drehflügler einschalten und die Flugassistenten ausschalten: Stability Assist, Auto-Hover, Envelope Limits und Turn Coordination. Danach Maus für die Lage, W und S für die Höhe, A und D fürs Gieren.
 ---
 
 Der häufigste Helikopter-Verlust in Wardogs passiert in den ersten dreißig Sekunden nach dem Kauf, am Hang neben dem Hauptlager. Das liegt nicht an mangelndem Talent, sondern an den Voreinstellungen.
@@ -86,3 +89,25 @@ Was du dort übst: Schweben auf der Stelle. Hundert Meter vorwärts und wieder z
 Ein MH-6, der nichts anderes tut, als volle Kabinen an den Zonenrand zu fliegen, bewegt mehr Körper pro Minute als jede andere Rolle. Und Körper in der Zone sind die Währung, in der Wardogs zahlt.
 
 Wer lieber mit einem echten Steuerknüppel fliegt: [Wardogs mit HOTAS – Dual-Stick einrichten](/guides/wardogs-hotas-dual-stick/).
+
+## Häufige Fragen
+
+### Welchen Helikopter nimmt man zum Lernen?
+
+Den MH-6 für rund $6.250. Er ist der billigste, der gutmütigste und mit sechs Plätzen der nützlichste – Leute an den Zonenrand zu fliegen ist mehr wert als jeder Raketenangriff.
+
+### Soll man die Flugassistenten einschalten?
+
+Nein. Sie fühlen sich sicherer an, verzögern aber jede Korrektur – und genau die brauchst du beim Landen im Gelände.
+
+### Wie landet man einen Helikopter richtig?
+
+Geschwindigkeit vor dem Landepunkt abbauen, nicht darüber. Stabilisieren, dann das Kollektiv gleichmäßig zurücknehmen. Ein Aufsetzen mit Restgeschwindigkeit ist ein Absturz mit Anlauf.
+
+### Wo kann man Fliegen üben, ohne zu zahlen?
+
+Auf dem Schießstand. Dort kosten Helikopter nichts und niemand schießt. Dreißig Minuten dort sind mehr wert als zehn verlorene Helikopter im Match.
+
+### Kann man in der Luft aus dem Helikopter aussteigen?
+
+Ja, am Fallschirm. Das erspart dem Piloten die Landung im beschossenen Gelände.

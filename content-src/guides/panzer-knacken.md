@@ -10,6 +10,9 @@ seo_title: Wardogs Panzer zerstören – Anleitung Deutsch | Warleek
 seo_description: Trefferzonen, MAAWS, RPG-7, C4 und AT-Minen: Wie Infanterie in Wardogs Panzer aufhält. Deutsche Anleitung für Spieler in der DACH-Region.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: armoryleek
+frage: Wie zerstört man in Wardogs einen Panzer?
+antwort: Von hinten. Mit dem MAAWS fällt ein Kampfpanzer am Heck in rund 11 Sekunden, an der Flanke in rund 22 und von vorn erst in rund 33. Wohin du triffst, entscheidet damit mehr als womit.
 ---
 
 Ein Panzer in der Kontrollzone kippt ein Gefecht, bis ihn jemand ausschaltet. Die gute Nachricht: Das kann Infanterie. Die schlechte: nicht von vorn.
@@ -77,3 +80,21 @@ Dieselbe Tabelle gilt gegen dich. Daraus folgt:
 - **Nach Treffern nachsehen.** Eine beschädigte Kette repariert sich nicht von selbst; an einer Reparaturstation oder mit einem Support-Spieler geht sie wieder.
 
 > [!hinweis] Ein Panzer ist in Wardogs kein Alleingang, sondern eine Teamausrüstung. Zwei Infanteristen daneben sind mehr wert als die dickste Frontpanzerung.
+
+## Häufige Fragen
+
+### Wo ist ein Panzer in Wardogs am schwächsten?
+
+Am Heck, also am Motordeck. Mit dem MAAWS dauert die Zerstörung dort rund 11 Sekunden, an der Flanke rund 22 und von der Front rund 33.
+
+### Welche Waffe nimmt man gegen Panzer in Wardogs?
+
+Der MAAWS ab Support 20 für rund $2.600 ist die eigentliche Panzerabwehr. Die RPG-7 ab Support 5 für rund $2.000 ist der günstige Allrounder gegen leichte Fahrzeuge; C4 und AT-Minen sind die unterschätzten Optionen.
+
+### Soll man auf Ketten oder auf den Rumpf schießen?
+
+Kette zuerst, wenn der Panzer flüchten könnte – ohne Laufwerk kommt er nicht weg. Motor, wenn er dich jagt. Der Rumpf erst, wenn er ohnehin feststeht.
+
+### Wie kommt man an das Heck eines Panzers?
+
+Zu zweit: Einer zeigt sich seitlich und bindet die Aufmerksamkeit, der andere geht ums Gebäude. Dazu Rauch, Innenhöfe und enge Gassen. Allein gegen einen aufmerksamen Panzer zu flankieren ist Glücksspiel.

@@ -10,6 +10,9 @@ seo_title: Wardogs Geld pro Minute – RoI-Vergleich Deutsch | Warleek
 seo_description: Kills, Zonenzeit, Paletten und Transport im direkten Ertragsvergleich. Was sich lohnt – für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Guides und Datenbanken zu WARDOGS (Stand Oktober 2026)]
 geprueft: nein
+autor: tacticleek
+frage: Was bringt in Wardogs am meisten Geld pro Minute?
+antwort: Die Versorgungspalette mit rund $3.900 Gewinn pro Stück. Zeit in der Hot Zone zahlt rund $800 pro Minute, ohne einen Schuss. Ein Abschuss im offenen Gelände bringt dagegen nur rund $300 – bei vollem Risiko.
 ---
 
 Jede Runde Wardogs ist eine Rechnung: Dein Loadout kostet Geld, dein Tod kostet Geld, und was du in der Zwischenzeit tust, bringt welches ein. Die meisten Spieler schätzen diese Rechnung falsch ein — sie jagen Abschüsse und wundern sich, warum das Konto nicht wächst.
@@ -66,3 +69,21 @@ Das ist keine Aufforderung, nicht zu kämpfen. Es ist die Feststellung, dass das
 Sie stammen aus Community-Quellen und sind von uns nicht im Spiel nachgemessen. Die **Verhältnisse** dürften stabiler sein als die absoluten Beträge: Dass die Hot Zone ein Vielfaches des offenen Geländes zahlt und eine Palette ein Vielfaches eines Abschusses, ist der Teil, auf den du dich verlassen kannst.
 
 Wenn du selbst mitzählst und etwas deutlich abweicht, schreib uns — besonders, falls sich mit Season 2 die Economy verschiebt.
+
+## Häufige Fragen
+
+### Wie viel bringt ein Kill in Wardogs?
+
+Rund $300 im offenen Gelände, rund $1.500 in der Kontrollzone und rund $3.000 in der Hot Zone. Derselbe Abschuss ist je nach Ort das Zehnfache wert.
+
+### Wie viel verdient man pro Minute in der Zone?
+
+Rund $400 pro Minute in der Kontrollzone und rund $800 in der Hot Zone – ohne dass ein Schuss fallen muss.
+
+### Warum sind Kills die schlechteste Einnahmequelle?
+
+Der Ertrag ist niedrig, das Risiko hoch, und zwischen zwei Gefechten vergehen Minuten mit Laufen, Nachladen und Warten. Eine Palette verdient, während du fährst.
+
+### Sind die Beträge im Spiel nachgemessen?
+
+Nein. Sie stammen aus Community-Quellen und sind von uns nicht im Spiel überprüft. Verlässlicher als die absoluten Beträge sind die Verhältnisse zueinander.

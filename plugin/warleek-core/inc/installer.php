@@ -415,6 +415,9 @@ function warleek_seed_guides( array $guides, array $media, array $site, $force =
 		$id = warleek_upsert_post( $daten, 'guide', 0, $force );
 		wp_set_object_terms( $id, $g['thema'], 'guide-thema' );
 		if ( ! empty( $g['image'] ) && ! empty( $media[ $g['image'] ] ) ) { set_post_thumbnail( $id, $media[ $g['image'] ] ); }
+		// Verfassende Rolle (LogisticLeek, MedicLeek …). Nur setzen, wenn im
+		// Kopfblock eine steht – eine leere Angabe würde eine vorhandene löschen.
+		if ( ! empty( $g['autor'] ) ) { update_post_meta( $id, '_warleek_autor', sanitize_title( $g['autor'] ) ); }
 		warleek_set_seo( $id, $g['seo'] ?? array(), false, $force );
 	}
 }
@@ -534,6 +537,111 @@ function warleek_item_reihenfolge( array $items ) {
 	return $reihen;
 }
 
+/**
+ * Antwortkasten und FAQ eines Datenbank-Eintrags – aus den Feldern erzeugt.
+ *
+ * Warum erzeugt und nicht geschrieben: 172 Einträge von Hand mit Direktantworten
+ * zu versehen, hieße 172 Gelegenheiten für einen Zahlendreher. Die Felder stehen
+ * ohnehin in items.json; der Kasten formuliert sie nur aus.
+ *
+ * Zwei Grenzen, die bewusst gezogen sind:
+ *
+ * 1. **Höchstens drei Fragen.** Jede Datenblatt-Zeile als eigene Frage zu
+ *    spiegeln, ergäbe fünf fast gleichlautende Paare auf 172 Seiten – sichtbar
+ *    getemplatet und für niemanden eine Hilfe. Aufgenommen wird nur, was eine
+ *    andere Formulierung liefert als die Tabelle.
+ * 2. **Kein grammatisches Geschlecht.** „die AK-74“ gegen „der Ural“ lässt sich
+ *    aus den Daten nicht ableiten, und ein falscher Artikel auf 172 Seiten fällt
+ *    auf. Die Fragen sind deshalb so gebaut, dass sie ohne Artikel auskommen
+ *    („Wie wird X freigeschaltet?“).
+ *
+ * @param array $e Eintrag aus items.json.
+ * @return array{block: string, faq: string}
+ */
+function warleek_item_aeo( array $e ) {
+	$name = (string) $e['title'];
+	$f    = (array) ( $e['felder'] ?? array() );
+	$w    = function ( $key ) use ( $f ) {
+		return isset( $f[ $key ] ) ? warleek_item_wert( $key, $f[ $key ] ) : '';
+	};
+
+	$rolle   = $w( 'rolle' );
+	$preis   = $w( 'preis' );
+	$gebuehr = $w( 'freischaltkosten' );
+	$frei    = $w( 'freischaltung' );
+	$bau     = $w( 'baukosten' );
+	$start   = ! empty( $e['start'] );
+
+	/* --- Direktantwort: ein Satzgefüge aus genau den Werten, die da sind --- */
+	$satz = $rolle ? sprintf( '%s – %s in WARDOGS.', $name, $rolle ) : sprintf( '%s in WARDOGS.', $name );
+
+	$merkmale = array();
+	foreach ( array( 'kaliber' => 'Kaliber %s', 'tempo' => 'Höchstgeschwindigkeit %s', 'sitze' => '%s Sitzplätze' ) as $key => $muster ) {
+		$v = $w( $key );
+		if ( '' !== $v ) { $merkmale[] = sprintf( $muster, $v ); }
+	}
+	if ( $merkmale ) { $satz .= ' ' . ucfirst( implode( ', ', $merkmale ) ) . '.'; }
+
+	if ( $start ) {
+		$satz .= ' Von Anfang an verfügbar – ohne Freischaltung und ohne Kosten.';
+	} else {
+		$kosten = array();
+		if ( '' !== $preis ) { $kosten[] = 'Preis ' . $preis; }
+		if ( '' !== $bau ) { $kosten[] = 'Baukosten ' . $bau; }
+		if ( '' !== $frei ) { $kosten[] = 'Freischaltung: ' . $frei; }
+		if ( '' !== $gebuehr ) { $kosten[] = 'einmalige Freischaltgebühr ' . $gebuehr; }
+		if ( $kosten ) { $satz .= ' ' . ucfirst( implode( ', ', $kosten ) ) . '.'; }
+	}
+	$satz .= ' Stand: Oktober 2026 · Early Access.';
+
+	// Die Überschrift ist absichtlich keine Frage: Sie spiegelt, wie gesucht wird
+	// („wardogs ak-74 preis“). Als Question wandert sie deshalb nicht ins FAQPage –
+	// warleek_aeo_faq_ld() nimmt nur auf, was auf ein Fragezeichen endet.
+	$titel = $name . ' in Wardogs: ' . ( $start ? 'Rolle und Werte' : 'Preis, Freischaltung und Werte' );
+	$block = warleek_aeo_antwort_block( esc_html( $titel ), esc_html( $satz ) );
+
+	/* --- Höchstens drei Fragen, jede mit eigener Formulierung --- */
+	$paare = array();
+	if ( '' !== $preis || '' !== $bau || '' !== $gebuehr || $start ) {
+		if ( $start ) {
+			$a = sprintf( '%s ist eine Startausrüstung: keine Freischaltung, keine Kosten.', $name );
+		} else {
+			$teile = array();
+			if ( '' !== $preis ) { $teile[] = 'Der Preis liegt bei ' . $preis . '.'; }
+			if ( '' !== $bau ) { $teile[] = 'Der Bau kostet ' . $bau . '.'; }
+			if ( '' !== $gebuehr ) { $teile[] = 'Dazu kommt einmalig ' . $gebuehr . ' für die Freischaltung.'; }
+			$a = implode( ' ', $teile );
+		}
+		$paare[] = array( sprintf( 'Was kostet %s in Wardogs?', $name ), $a );
+	}
+	if ( ! $start && '' !== $frei ) {
+		// Ohne Präposition: Der Wert kann „Assault 3“ sein oder „mittlerer Hammer“ –
+		// ein „über“ davor erzeugt bei der zweiten Form einen falschen Kasus.
+		$a = rtrim( $frei, '.' ) . '.';
+		$a = mb_strtoupper( mb_substr( $a, 0, 1 ) ) . mb_substr( $a, 1 );   // Satzanfang
+
+		if ( '' !== $gebuehr ) { $a .= ' Die einmalige Gebühr beträgt ' . $gebuehr . '.'; }
+		$paare[] = array( sprintf( 'Wie wird %s freigeschaltet?', $name ), $a );
+	}
+	// Die Rollenfrage nur, wenn die Rolle mehr sagt als die Kategorie. Bei einem
+	// Bauwerk mit der Rolle „Bauwerk“ wäre die Antwort eine Tautologie – und 172
+	// Seiten mit tautologischen FAQ-Paaren sind Füllmaterial, kein Inhalt.
+	if ( '' !== $rolle && ! in_array( mb_strtolower( $rolle ), array( 'bauwerk', 'fahrzeug', 'waffe', 'ausrüstung', 'emplacement', 'wurfwaffe' ), true ) ) {
+		$paare[] = array( sprintf( 'Welche Rolle hat %s in Wardogs?', $name ), rtrim( $rolle, '.' ) . '.' );
+	}
+	$paare = array_slice( $paare, 0, 3 );
+
+	$faq = '';
+	if ( $paare ) {
+		$faq = '<h2 class="wl-faq-titel">Häufige Fragen</h2>';
+		foreach ( $paare as $pa ) {
+			$faq .= '<h3 class="wl-faq-frage">' . esc_html( $pa[0] ) . '</h3><p>' . esc_html( $pa[1] ) . '</p>';
+		}
+	}
+
+	return array( 'block' => $block, 'faq' => $faq );
+}
+
 /** Beschreibung, Datenblatt und Querverweise je Eintrag. */
 function warleek_item_inhalt( array $e ) {
 	// Die Beschreibung steht in items.json und ist je Eintrag geschrieben –
@@ -559,9 +667,12 @@ function warleek_item_inhalt( array $e ) {
 		$links .= '<li><a href="' . esc_url( $url ) . '">' . esc_html( $label ) . '</a></li>';
 	}
 
-	return "\n" . $satz . "\n"
+	$aeo = warleek_item_aeo( $e );
+
+	return "\n" . $aeo['block'] . "\n" . $satz . "\n"
 		. '<p class="wl-stand">Stand: September 2026 · Early Access – Werte ändern sich mit Patches.</p>' . "\n"
 		. '[warleek_datenblatt]' . "\n"
+		. ( $aeo['faq'] ? $aeo['faq'] . "\n" : '' )
 		. ( $links ? '<h2>Dazu passend</h2><ul>' . $links . '</ul>' . "\n" : '' )
 		. '[warleek_item_verlauf]' . "\n"
 		. '[warleek_item_herkunft]' . "\n";
@@ -888,6 +999,12 @@ function warleek_install_steps() {
 			'description' => 'Legt die mitgelieferten Partner-Einträge an (später im Backend unter „Partner" pflegbar).',
 			'callback'    => 'warleek_step_partners',
 		),
+		'autoren' => array(
+			'label'       => 'Autorenrollen anlegen',
+			'description' => 'Legt die Redaktionsrollen an, unter denen die Guides erscheinen (AdminLeek, LogisticLeek, MedicLeek …).',
+			'callback'    => 'warleek_step_autoren',
+			'force'       => 'Überschreibt Beschreibungstexte der Rollen, auch wenn sie im Backend geändert wurden.',
+		),
 		'nav' => array(
 			'label'       => 'Navigation & Startseite',
 			'description' => 'Haupt- und Footer-Menü, Startseite, Website-Logo, Favicon, Permalinks.',
@@ -1030,6 +1147,35 @@ function warleek_step_partners( $force = false ) {
 		$n++;
 	}
 	return array( 'ok' => true, 'msg' => sprintf( '%d Partner angelegt bzw. aktualisiert.', $n ) );
+}
+
+/**
+ * Redaktionsrollen anlegen (AdminLeek, LogisticLeek …).
+ *
+ * Bilder sind optional: Eine Rolle ohne Porträt ist besser als ein erzeugtes
+ * Gesicht, das es nicht gibt.
+ */
+function warleek_step_autoren( $force = false ) {
+	$autoren = warleek_content_json( 'autoren' );
+	if ( ! $autoren ) { return array( 'ok' => true, 'msg' => 'Keine Autorenrollen mitgeliefert.' ); }
+	$media = (array) get_option( 'warleek_media_map', array() );
+	$n     = 0;
+	foreach ( $autoren as $i => $a ) {
+		$id = warleek_upsert_post( array(
+			'post_title'   => $a['title'],
+			'post_name'    => $a['slug'],
+			'post_content' => warleek_html_to_blocks( warleek_md_to_html( (string) ( $a['text'] ?? '' ), false ) ),
+			'post_excerpt' => (string) ( $a['excerpt'] ?? '' ),
+			'menu_order'   => (int) ( $a['order'] ?? ( $i + 1 ) ),
+		), 'autor', 0, $force );
+		if ( ! $id ) { continue; }
+		update_post_meta( $id, 'autor_rolle', sanitize_text_field( $a['rolle'] ?? '' ) );
+		update_post_meta( $id, 'autor_schwerpunkt', sanitize_text_field( $a['schwerpunkt'] ?? '' ) );
+		$key = $a['image'] ?? ( 'autor-' . $a['slug'] );
+		if ( ! empty( $media[ $key ] ) ) { set_post_thumbnail( $id, $media[ $key ] ); }
+		$n++;
+	}
+	return array( 'ok' => true, 'msg' => sprintf( '%d Autorenrollen angelegt bzw. aktualisiert.', $n ) );
 }
 
 function warleek_step_nav( $force = false ) {

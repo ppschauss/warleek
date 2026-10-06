@@ -10,6 +10,9 @@ seo_title: Wardogs Entfernungsmesser im Heli – Trick Deutsch | Warleek
 seo_description: Als Pilot alle Markierungen des Teams sehen – und warum das Gerät gerade fehlt. Für Spieler in Deutschland, Österreich und der Schweiz.
 quellen: [Im Spiel beobachtet von Patrick Schauß (Warleek), Oktober 2026, 'Steam-Hotfix vom 02.10.2026: IR-Rangefinder deaktiviert, Rückkehr mit Season 2 gegen Batterien']
 geprueft: im Spiel beobachtet (Oktober 2026); dass das Gerät seit dem 02.10. draußen ist und mit Season 2 gegen Batterien zurückkommt, von Patrick Schauß bestätigt. Reichweite und Dauer nicht systematisch vermessen
+autor: pilotleek
+frage: Wie sieht ein Pilot in Wardogs alle Markierungen?
+antwort: Entfernungsmesser in die Hand nehmen, dann einsteigen, dann in die Ego-Perspektive wechseln. Auf die Reihenfolge kommt es an. Wichtig: Seit dem Hotfix vom 2. Oktober 2026 ist das Gerät nicht im Spiel und kommt erst mit Season 2 zurück.
 ---
 
 Es gibt einen Griff, der aus einem Transporthubschrauber einen fliegenden Aufklärer macht — und er kostet nichts außer der richtigen Reihenfolge beim Einsteigen. Kostete, genauer gesagt: Seit dem 2. Oktober ist das Gerät nicht mehr zu haben. Ab dem 15. Oktober schon wieder, dann gegen Batterien.
@@ -67,3 +70,21 @@ Hier gehört ein ehrliches Wort hin. Dieser Griff stammt aus eigener Beobachtung
 **Und der wichtigste Vorbehalt:** Es ist gut möglich, dass das so nicht gedacht ist. Was wie ein Kniff aussieht, ist oft ein Fehler, der beim nächsten Patch verschwindet. Nutz es, solange es da ist — aber bau deine Flugweise nicht darauf auf.
 
 Wenn du mehr dazu herausfindest — Reichweiten, Dauer, andere Sitze — schreib uns. Wir ergänzen es und schreiben dazu, was sich geändert hat.
+
+## Häufige Fragen
+
+### Funktioniert der Entfernungsmesser-Griff aktuell?
+
+Nein. Das Gerät wurde mit dem Hotfix vom 2. Oktober 2026 aus dem Händler genommen, weil es nach Angabe der Entwickler zu stark war. Mit Season 2 am 15. Oktober kommt es zurück – dann mit Batterien.
+
+### In welcher Reihenfolge muss man vorgehen?
+
+Der Entfernungsmesser muss gezogen sein, bevor du einsteigst – nicht danach. Erst Gerät in die Hand, dann auf den Pilotensitz, dann in die Ego-Perspektive.
+
+### Was ändert Season 2 an diesem Griff?
+
+Der Entfernungsmesser wird zum Verbrauchsgut: Er braucht Batterien, kostet damit pro Flug Geld und belegt einen Platz im Rucksack für den Nachschub. Ob das Lagebild danach überhaupt noch erscheint, muss jemand nach dem 15. Oktober nachprüfen.
+
+### Was ist an diesem Griff nicht geprüft?
+
+Auf welche Entfernung Markierungen im Cockpit sichtbar bleiben, wie lange sie stehen, ob das Fernglas genauso funktioniert und ob es auch auf anderen Sitzen als dem Pilotensitz geht. Die Beobachtung stammt aus dem Spiel, nicht aus den Patch Notes.

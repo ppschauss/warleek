@@ -10,6 +10,9 @@ seo_title: Wardogs Support & Bauen – Guide auf Deutsch | Warleek
 seo_description: Hammer-Stufen, Baukosten und was sich zuerst lohnt: Support in Wardogs auf Deutsch erklärt, für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: engineerleek
+frage: Welchen Hammer braucht man in Wardogs zum Bauen?
+antwort: Der kleine Hammer baut nur Basics wie Sandsäcke und Stacheldraht, der mittlere zusätzlich Türen und HESCO-Elemente. Für alles andere – Mörser, Flugabwehr, Tankstelle, Reparaturstation – brauchst du den großen Hammer ab Support-Stufe 8.
 ---
 
 Bauen ist in Wardogs keine Nebenbeschäftigung, sondern die Art, wie ein Team Gelände in Besitz nimmt. Und es hängt an einem Gegenstand, den die meisten zu spät kaufen: dem Hammer.
@@ -83,3 +86,25 @@ Eine frische FOB braucht zuerst **Build**. Eine FOB mit aktiven Mörsern braucht
 Der Support-Track ist mehr als Bauen: schwere Waffen (M249 SAW, PKM), Werfer (RPG-7 ab Support 5, MAAWS ab Support 20), Minen – und **Reparatur**. Ein Support-Spieler, der einen angeschlagenen Panzer wieder fahrbereit macht, rettet ein Fahrzeug im Wert von $14.000.
 
 Das macht ihn zur wohl nützlichsten Rolle für ein Squad, das eine Stellung hält: Er baut sie, er repariert, was hineingefahren wird, und er hat die Waffe gegen das, was sie angreift.
+
+## Häufige Fragen
+
+### Ab welcher Stufe gibt es den großen Hammer?
+
+Ab Support 8. Das ist die einzige echte Hürde beim Bauen und schnell genommen: Sandsäcke setzen, Fahrzeuge reparieren, mit Werfern und LMGs arbeiten zahlt alles auf Support ein.
+
+### Was kostet eine HESCO-Wand in Wardogs?
+
+46 Build-Supplies. Ein HESCO-Block liegt bei 10 bis 14, eine Tür bei 14, ein Tor bei 52 und ein Bunker bei 61.
+
+### Was ist das teuerste Bauwerk in Wardogs?
+
+Das Drill Rig mit rund 1.351 Build-Supplies, gefolgt vom Vanguard CIWS mit 901 und dem Talon 9K-SAM mit 601. Solche Posten sind Teamentscheidungen – das Material muss erst jemand herfahren.
+
+### Welche Versorgungsarten lagert eine FOB?
+
+Vier, und sie sind nicht austauschbar: Build zum Bauen, Ammo für Mörser und Emplacements, Fuel für Fahrzeuge und Drill Rig, Mechanical für Reparaturen und Munitionskauf.
+
+### Was baut man in einer FOB zuerst?
+
+Sichtlinien schließen mit HESCO-Elementen – Deckung ist billiger als jedes Geschütz. Dann Zugänge, dann Nachschub, dann Waffen, und Flugabwehr erst, wenn gegnerische Helikopter tatsächlich ein Problem sind.

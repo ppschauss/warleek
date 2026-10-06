@@ -10,6 +10,9 @@ seo_title: Wardogs Fraktionen auf Deutsch erklärt | Warleek
 seo_description: Lonestar, Valkyra und Manticore im Vergleich: Farben, Siegquoten und welche Fraktion sich für Neulinge lohnt. Deutscher Guide für die DACH-Region.
 quellen: [Äußerungen der Entwickler von BULKHEAD‚ zitiert in Community-Berichten, Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: starterleek
+frage: Welche Fraktion sollte man in Wardogs wählen?
+antwort: Alle drei Fraktionen kaufen aus demselben Katalog, eigene Waffen oder Fahrzeuge gibt es nicht. Statistisch gewinnt Grün am häufigsten, Blau fällt deutlich ab. Für Einsteiger sind Grün oder Rot die bessere Wahl, weil dort mehr erfahrene Spieler stehen.
 ---
 
 In jedem Match von Wardogs kämpfen drei Fraktionen gleichzeitig um dieselbe Kontrollzone. Bis zu 100 Spieler, aufgeteilt auf drei Seiten – also rund 33 pro Fraktion. Welche du nimmst, entscheidest du beim Beitritt, und die Entscheidung hat mehr Folgen, als die Auswahlmaske vermuten lässt.
@@ -60,3 +63,21 @@ Praktisch spürst du es beim Beitreten: **Grün und Rot sind oft sofort voll, Bl
 Dass Blau verliert, ist inzwischen ein Running Gag: „Grün ist einfach, Rot ist normal, Blau ist Albtraum-Modus." Die Entwickler nehmen es bisher eher als Folklore denn als Fehler. Wir haben dem Thema einen eigenen – **nicht ganz ernst gemeinten** – Guide gewidmet: [Der Lonestar-Überlebensguide](/guides/lonestar-ueberlebensguide/).
 
 Und zur Ehrenrettung: Die Unterschiede sind statistisch, nicht individuell. Ein eingespieltes Squad auf Blau schlägt drei unkoordinierte auf Grün an jedem Tag der Woche.
+
+## Häufige Fragen
+
+### Haben die Fraktionen in Wardogs unterschiedliche Waffen?
+
+Nein. Alle drei kaufen aus demselben Katalog, bauen dieselben FOBs und fliegen dieselben Helikopter. Fraktionsspezifische Waffen, Fahrzeuge oder Fähigkeiten sind nicht angekündigt.
+
+### Welche Fraktion gewinnt in Wardogs am häufigsten?
+
+Grün (Manticore) gewinnt am häufigsten, Rot (Valkyra) liegt nah dran, Blau (Lonestar) fällt deutlich ab. Das Muster hält sich laut Entwicklern seit der Pre-Alpha.
+
+### Kann man die Fraktion in Wardogs wechseln?
+
+Ja, von Match zu Match. Die Fraktion ist keine Kontoeinstellung – Cash, Waffen und Fortschritt bleiben beim Wechsel erhalten.
+
+### Warum ist Blau beim Beitreten oft noch frei?
+
+Weil erfahrene Spieler die Seite meiden, die verliert. Grün und Rot sind oft sofort voll; wer schnell in eine Runde will, kommt über Blau am schnellsten hinein.

@@ -10,6 +10,9 @@ seo_title: Wardogs Gewichtsklassen – Loadout-Guide Deutsch | Warleek
 seo_description: Warum Weste, Werfer und Zubehör dein Tempo bestimmen und die schwerste Klasse den Sprint kostet. Wardogs auf Deutsch für Spieler in DACH.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: armoryleek
+frage: Was machen die Gewichtsklassen in Wardogs?
+antwort: Vier Stufen steuern dein Tempo. In der schwersten ist der taktische Sprint abgeschaltet, und ein Gefallener in schwerer Ausrüstung lässt sich nicht in Deckung ziehen – er muss dort wiederbelebt werden, wo er liegt.
 ---
 
 Das Spiel sagt dir, was Dinge kosten. Es sagt dir nicht besonders deutlich, was sie **wiegen**. Dabei ist die Gewichtsklasse eine der Stellschrauben mit der größten Wirkung auf dein Überleben.
@@ -67,3 +70,25 @@ Und dann streich in dieser Reihenfolge:
 Wardogs vergibt Punkte für **Anwesenheit in der Zone**. Alles, was dich schneller dorthin bringt, dich schneller aus einer schlechten Lage bringt und dich schneller wieder aufstehen lässt, zahlt direkt auf die Wertung ein.
 
 Fünf Prozent mehr Panzerung, die dich 20 Prozent langsamer machen, sind in diesem Spiel ein schlechtes Geschäft. Mehr dazu in [Kontrollzone, Hot Zone und die vier Türme](/guides/wardogs-kontrollzone/).
+
+## Häufige Fragen
+
+### Was passiert in der schwersten Gewichtsklasse?
+
+Der taktische Sprint ist abgeschaltet, und wer dort fällt, lässt sich nicht in Deckung ziehen. Dein Medic muss die offene Fläche betreten – häufig heißt das zwei Tote statt einem.
+
+### Was macht ein Loadout unbemerkt schwer?
+
+Schalldämpfer, Werfer samt Rakete, das dritte Dutzend Magazine und die große Weste. Die Waffe selbst ist selten das Problem.
+
+### Große oder mittlere Weste in Wardogs?
+
+Die mittlere, wenn du nicht als wandelndes Depot unterwegs bist. Sie lädt spürbar schneller nach als die große – das ist der Posten, an dem sich am meisten holen lässt.
+
+### Wie testet man, ob man zu schwer ist?
+
+Geh mit dem Loadout einmal quer über einen Hof. Wenn du beim taktischen Sprint kein anderes Tempo spürst als beim normalen Laufen, bist du zu schwer.
+
+### Welche Rolle braucht welches Gewicht?
+
+Medic, Recon, Driver und Pilot leicht; Assault mittel; Support mittel bis schwer. Schwer lohnt nur, wenn du eine feste Stellung verteidigst und ohnehin nicht weit kommst.

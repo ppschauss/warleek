@@ -10,6 +10,9 @@ seo_title: Wardogs HOTAS Empfindlichkeit & Kurven (Deutsch) | Warleek
 seo_description: Warum der Regler unter 1.0 Drehrate kostet, wann eine Deadzone nötig ist und wie eine Kurve hilft. Wardogs auf Deutsch für die DACH-Region.
 quellen: [Video-Guide von <a href="https://www.youtube.com/watch?v=wtRRZ8nPfFM" rel="nofollow noopener noreferrer">Sim Controls</a> (VKB Gladiator‚ Screenshots mit Zeitangabe im Text), Video-Guide von <a href="https://www.youtube.com/watch?v=IHcD8c_iqD0" rel="nofollow noopener noreferrer">Tote Torres</a> (Logitech G940‚ Screenshots mit Zeitangabe im Text)]
 geprueft: nein
+autor: techleek
+frage: Welche HOTAS-Empfindlichkeit braucht Wardogs?
+antwort: 1.0 oder darüber – den Regler herunterzudrehen ist die falsche Richtung. Er senkt auch die maximale Drehrate am Anschlag. Die Feinarbeit um die Mitte baust du als Kennlinie im Treiber deines Sticks, denn Wardogs hat keine Kurveneinstellung.
 ---
 
 Wenn der Helikopter am Stick zappelt, ist der erste Griff immer derselbe: Empfindlichkeit runter. In Wardogs ist das die falsche Richtung – und der Grund dafür ist der interessanteste Teil dieses Guides.
@@ -122,3 +125,25 @@ Dieser Guide fasst zwei englischsprachige Videos zusammen und ergänzt sie um da
 > [!hinweis] Die Bildschirmfotos in diesem Guide stammen aus den beiden verlinkten Videos und sind jeweils mit Kanal und Zeitangabe gekennzeichnet. Alle Rechte daran liegen bei den Urhebern; sie stehen hier als Beleg zu dem, was im Text erklärt wird.
 
 Wie du damit tatsächlich fliegst, steht im Guide [Mit dem HOTAS fliegen](/guides/wardogs-hotas-fliegen/). Für die reine Tastenbelegung am Dual-Stick: [Wardogs mit HOTAS – T.16000M einrichten](/guides/wardogs-hotas-dual-stick/).
+
+## Häufige Fragen
+
+### Wie liest Wardogs einen analogen Stick?
+
+Im Kern wie Tastatureingaben: Solange ein Ausschlag anliegt, dreht der Helikopter weiter in diese Richtung. Er nimmt keine Lage ein und hält sie. Richtig ist deshalb tippen statt halten – Ausschlag geben, zurück zur Mitte.
+
+### Warum ist der Empfindlichkeitsregler eine Falle?
+
+Weil er die ganze Kennlinie absenkt. Du wirst ruhiger um die Mittelstellung, verlierst aber die maximale Drehrate am Anschlag. Je weiter unter 1.0, desto mehr Steuerautorität gibst du ab.
+
+### Wie bekommt man Feinarbeit ohne Verlust am Anschlag?
+
+Mit einer Kennlinie im Treiber des Sticks – VKB, Virpil, Thrustmaster oder Logitech bringen die Software mit. Flach um die Mitte, steil zum Anschlag, am Ende derselbe Maximalwert wie vorher.
+
+### Wann braucht ein Stick eine Deadzone?
+
+Nur wenn er sich nicht selbst zentriert. Ein Stick mit Federn braucht keine oder sehr wenig; einer mit ausgebauten Federn etwa 0.02 auf Pitch und Roll. Wardogs muss null zuverlässig erkennen, sonst dreht der Helikopter endlos weiter.
+
+### Wie kalibriert man das Kollektiv?
+
+Den Schubhebel langsam von unten nach oben führen und beobachten, wann die Anzeige im Bild das Maximum erreicht. Ist sie früher oben als der Hebel, bleibt physischer Weg ungenutzt – dann die Empfindlichkeit senken, bis beide gleichzeitig ankommen.

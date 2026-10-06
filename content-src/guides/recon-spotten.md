@@ -10,6 +10,9 @@ seo_title: Wardogs Recon & Sniper – Guide auf Deutsch | Warleek
 seo_description: Spotten mit dem Fernglas, Ghillie, Mosin, SVD und SV-98: Recon in Wardogs auf Deutsch erklärt – für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: tacticleek
+frage: Wie verdient man als Recon in Wardogs am meisten?
+antwort: Mit dem Fernglas für rund $75, nicht mit dem Gewehr. Einen Gegner anvisieren und die Maustaste halten markiert ihn für das ganze Team. Das zahlt doppelt – für das Markieren und für den fremden Abschuss – und verrät die eigene Position nicht.
 ---
 
 Der Recon-Track ist die Sniper-Linie: Scharfschützen- und Marksman-Gewehre, Optiken, Zweibeine, Claymores, der Compound-Bogen und der Ghillie-Anzug. Und er hat eine Eigenart, die ihn von jedem anderen Track unterscheidet: **Die beste Einnahmequelle ist nicht die Waffe.**
@@ -78,3 +81,21 @@ Wechsle die Position nach zwei, drei Schüssen. In Wardogs findet dich sonst irg
 ## Claymores nicht vergessen
 
 Aus dem Recon-Track kommen Claymores. Eine hinter dir auf dem Weg, den ein Flankierer nehmen müsste, ist billiger als jede Wachsamkeit. Wer Dächer und Ruinen hält, sichert damit die Treppe, die er nicht im Blick hat.
+
+## Häufige Fragen
+
+### Was kostet das Fernglas in Wardogs?
+
+Rund $75. Beim Händler über den Spezialisten-Slot, dann Recon. Es ist die billigste Anschaffung im Spiel mit dem besten Verhältnis von Einsatz zu Ertrag.
+
+### Welches Scharfschützengewehr für den Anfang?
+
+Die Scout Rifle TD für rund $1.100 ist ab Start verfügbar und reicht völlig. Kugelfall und Flugzeit sind dieselben wie bei den teuren Gewehren – nur der Preis pro Tod nicht.
+
+### Lohnt sich der Ghillie-Anzug in Wardogs?
+
+Wenn du oft die Position wechselst und Abstand hältst, ja. Wer lange auf demselben Fleck liegt und feuert, fährt mit normaler Schutzausrüstung besser – der Ghillie schützt nicht, er versteckt. Mündungsfeuer, Staub und Bewegung sieht der Gegner trotzdem.
+
+### Wo sollte ein Sniper in Wardogs liegen?
+
+Am Rand der Kontrollzone mit Blick hinein, nicht 600 Meter entfernt. Dort zählst du für die Wertung mit und bist nah genug, um zu spotten, was deine Leute wirklich bedrängt.

@@ -244,6 +244,26 @@ html.wl-js .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp
 .wl-note--alert { border-color: rgb(var(--wl-alert-rgb) / 0.45); background: rgb(var(--wl-alert-rgb) / 0.07); }
 .wl-note strong:first-child { display: block; font-family: var(--wp--preset--font-family--mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--wp--preset--color--leek); margin-bottom: 0.25rem; }
 .wl-note--alert strong:first-child { color: var(--wp--preset--color--alert); }
+/* Direktantwort oben im Text: das Stück, das eine Antwortmaschine ausliest.
+   Deshalb optisch abgesetzt, aber ohne Spielerei – es ist eine Auskunft. */
+.wl-antwort { margin: 0 0 var(--wp--preset--spacing--40); padding: 1.25rem 1.5rem; border: 1px solid rgb(var(--wl-accent-rgb) / 0.3); border-radius: var(--wl-radius); background: rgb(var(--wl-accent-rgb) / 0.05); }
+.wl-prose .wl-antwort h2, .wl-antwort h2 { margin: 0 0 0.5rem; padding-left: 0; border-left: 0; font-size: clamp(1.15rem, 1rem + 0.8vw, 1.45rem); }
+.wl-antwort p { margin: 0; font-size: 1.05rem; }
+.wl-antwort p + p { margin-top: 0.5rem; }
+
+/* Häufige Fragen */
+.wl-prose h3.wl-faq-frage { margin-top: var(--wp--preset--spacing--30); font-size: 1.1rem; }
+.wl-prose h3.wl-faq-frage + p { margin-top: 0.35rem; }
+
+/* Verfassende Rolle unter dem Titel */
+.wl-verfasser { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 var(--wp--preset--spacing--30); font-size: 0.9rem; color: var(--wp--preset--color--steel); }
+.wl-verfasser__bild img { width: 2.25rem; height: 2.25rem; border-radius: 50%; object-fit: cover; display: block; }
+.wl-verfasser a { color: var(--wp--preset--color--leek); text-decoration: none; font-weight: 600; }
+.wl-verfasser a:hover, .wl-verfasser a:focus-visible { text-decoration: underline; }
+.wl-verfasser__rolle::before { content: "· "; }
+.wl-note--klein { margin-top: var(--wp--preset--spacing--40); font-size: 0.9rem; }
+.wl-autorguides { padding-left: 1.2rem; }
+
 .wl-stand { font-family: var(--wp--preset--font-family--mono); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--wp--preset--color--steel); text-transform: uppercase; }
 .wp-block-table { overflow-x: auto; }
 .wl-page-title { margin-top: var(--wp--preset--spacing--60); }

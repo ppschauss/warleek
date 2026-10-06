@@ -10,6 +10,9 @@ seo_title: Wardogs Flugabwehr Deutsch: Talon & CIWS | Warleek
 seo_description: Talon 9K-SAM und Vanguard CIWS bauen, platzieren, umfliegen und zerstören. Flugabwehr-Guide für Wardogs auf Deutsch, für die DACH-Region.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: engineerleek
+frage: Wann lohnt sich Flugabwehr in Wardogs?
+antwort: Erst wenn der Gegner tatsächlich mit Helikoptern arbeitet, die Sichtlinien geschlossen sind und der Nachschub steht. Der Talon 9K-SAM kostet rund 601 Build-Supplies, der Vanguard CIWS rund 901 – das sind mehrere Logistikrunden.
 ---
 
 Helikopter sind in Wardogs der schnellste Weg, Leute in die Zone zu bringen. Entsprechend ist Flugabwehr die Antwort darauf – und gleichzeitig der teuerste Posten auf jeder Baustelle.
@@ -76,3 +79,25 @@ Eine Flugabwehr in Reichweite ist kein Grund, nicht mehr zu fliegen – sie ist 
 ## Und was ist mit dem Flakpanzer?
 
 Es gibt zusätzlich ein fahrbares Flugabwehrfahrzeug (Flakpanzer Gepard, rund $10.000). Der Vorteil gegenüber der gebauten Anlage: Er steht nicht fest und lässt sich dorthin bringen, wo gerade geflogen wird. Der Nachteil: Er ist ein Fahrzeug – und damit selbst Ziel für alles aus dem Guide [Panzer knacken](/guides/wardogs-panzer-knacken/).
+
+## Häufige Fragen
+
+### Was unterscheidet Talon 9K-SAM und Vanguard CIWS?
+
+Der Talon verschießt wärmesuchende Raketen auf große Entfernung und zwingt Piloten zu Ausweichmanövern. Der CIWS ist eine manuell bediente Schnellfeuerkanone für den Nahbereich und zerlegt alles, was in ihrem Bogen verweilt.
+
+### Wo platziert man Flugabwehr in Wardogs?
+
+Nicht auf dem höchsten Punkt. Sie braucht freien Himmel, nicht freie Sicht ins Tal – eine Terrasse hinter einer Geländekante. Talon und CIWS gehören getrennt, nebeneinander sind sie ein einziger Mörsertreffer.
+
+### Wie fliegt man als Pilot an Flugabwehr vorbei?
+
+Tief fliegen und Gelände dazwischen legen, die Reichweite der Systeme einmal abfliegen, nicht schweben – der CIWS bestraft Verweilen, nicht Vorbeifliegen. Fackeln sind der Notfall, nicht der Standard.
+
+### Wie räumt man eine Flugabwehrstellung vom Boden ab?
+
+Markieren lassen, dann Mörser aus sicherer Entfernung – die eleganteste Lösung, weil niemand hin muss. Sonst RPG-7 oder MAAWS aus einer Richtung, die die Basis nicht einsieht, oder C4 mit Fernzünder.
+
+### Gibt es ein fahrbares Flugabwehrsystem?
+
+Ja, den Flakpanzer Gepard für rund $10.000. Er steht nicht fest und lässt sich dorthin bringen, wo geflogen wird – ist dafür als Fahrzeug selbst angreifbar.

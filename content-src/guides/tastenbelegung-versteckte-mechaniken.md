@@ -10,6 +10,9 @@ seo_title: Wardogs Tastenbelegung & Kniffe (Deutsch) | Warleek
 seo_description: Lehnen, Magazin abwerfen, Schnellkauf, Zeroing-Tasten und Rauch aus dem APC: versteckte Mechaniken auf Deutsch erklärt, für DACH-Spieler.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: techleek
+frage: Welche Tastenbelegung sollte man in Wardogs ändern?
+antwort: Lehnen weg von Q und E – dort kollidiert es mit dem Ausweichen, und nur getrennt kannst du um Ecken schauen, während du dich bewegst. Dazu die Karte von M auf G und Granaten auf die Zahlenreihe.
 ---
 
 Wardogs erklärt das Nötigste. Der Rest steht in keinem Tutorial und macht trotzdem den Unterschied zwischen umständlich und flüssig. Hier ist die Sammlung.
@@ -74,3 +77,25 @@ Vier Gewichtsklassen steuern dein Tempo, und die schwerste nimmt dir den taktisc
 - V im APC = Rauch, dabei drehen
 - F im Fahrzeug = Vorräte
 - J = Squad, K = Umgebung
+
+## Häufige Fragen
+
+### Warum sollte man Lehnen von Q und E wegnehmen?
+
+Weil dort in der Voreinstellung auch das Ausweichen liegt. Du kannst also nicht gleichzeitig lehnen und seitwärts laufen. Getrennt gelegt, kannst du um Ecken schauen, ohne aus der Deckung zu treten – der wirksamste einzelne Handgriff.
+
+### Wie schaltet man den Voice-Chat in Wardogs ein?
+
+Escape → Audio → Voice-Chat, dort Voice-Chat, Squad-Voice und Proximity-Voice einschalten. Danach spricht J gedrückt zum Squad und K zu allen in der Nähe. Gegner in der Nähe hören den Proximity-Chat mit.
+
+### Was macht Strg beim Nachladen?
+
+Es wirft das teilweise verbrauchte Magazin auf den Boden – die Animation ist schneller. Der Preis ist die Restmunition. Nimm es, wenn jemand vor dir steht, lass es, wenn du in Ruhe nachlädst.
+
+### Wie legt man eine Rauchwand um den M113?
+
+Rauch mit V auslösen und das Fahrzeug dabei einmal um 360 Grad drehen. Dann liegt der Rauch um die ganze Position statt nur in eine Richtung – für eine Bergung unter Beschuss der Unterschied.
+
+### Was führt der M113 an Vorräten mit?
+
+Reparaturmaterial und Sprit, erreichbar über das Fahrzeuginventar mit F. Wer das weiß, muss nicht zur FOB zurück.

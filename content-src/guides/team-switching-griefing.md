@@ -10,6 +10,9 @@ seo_title: Wardogs Team-Switching & FOB-Sabotage – Schutz | Warleek
 seo_description: Spieler wechseln mitten im Match die Fraktion und sabotieren Basen von innen. Wie man dagegen baut – für Deutschland, Österreich und die Schweiz.
 quellen: ['Berichterstattung zu Team-Switching in WARDOGS (Kotaku, Oktober 2026)', Öffentliche Community-Diskussionen auf Steam und Reddit (Stand Oktober 2026)]
 geprueft: nein
+autor: engineerleek
+frage: Was ist Team-Switching in Wardogs?
+antwort: Spieler wechseln mitten im Match die Fraktion, laufen in die FOB ihres alten Teams und reißen die Verteidigung von innen ein. Kein Exploit – der Seitenwechsel ist eine Funktion des Spiels, die gegen leere Teams helfen soll.
 ---
 
 Es gibt in Wardogs einen Angriff, gegen den keine Mauer hilft: Jemand wechselt mitten im Match auf die andere Seite, läuft durch das Tor, das für ihn offen steht, und reißt die Verteidigung von innen ein. Danach wechselt er zurück — oder auch nicht.
@@ -61,3 +64,21 @@ Gegen den Seitenwechsel selbst könnt ihr nichts tun. Gegen seine Wirkung schon:
 Dieser Guide beschreibt ein Problem, für das es gerade keine saubere Lösung gibt. Die Bauempfehlungen oben machen eine FOB widerstandsfähiger — gegen Sabotage wie gegen jeden anderen Angriff. Sie verhindern den Seitenwechsel nicht.
 
 Wenn Season 2 oder ein späterer Patch daran etwas ändert, tragen wir es hier nach und schreiben dazu, was vorher galt.
+
+## Häufige Fragen
+
+### Woran erkennt man FOB-Sabotage von innen?
+
+Verteidigungsbauten fallen ohne Beschuss, und der Schaden beginnt in der Mitte statt an der Zufahrtsseite. Eine angegriffene FOB wird von außen kleiner, eine sabotierte verliert zuerst, was innen steht.
+
+### Kann man den Fraktionswechsel verhindern?
+
+Nein. Gegen den Seitenwechsel selbst lässt sich nichts tun, nur gegen seine Wirkung: verteilte Stellungen statt eines Bunkers, wenige Tore, kleiner Umring und Nachschub im Blickfeld der Stellungen.
+
+### Warum hilft es, Tore sparsam zu setzen?
+
+Jede Durchfahrt ist ein Weg nach innen, der nicht erst aufgebrochen werden muss. Ein Tor reicht meistens.
+
+### Was ist die wirksamste Maßnahme gegen Sabotage?
+
+Dass jemand dableibt. Eine FOB ohne Besatzung ist kein Bauwerk, sondern ein Materiallager für den Gegner.

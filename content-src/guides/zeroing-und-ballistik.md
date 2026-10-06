@@ -10,6 +10,9 @@ seo_title: Wardogs Zeroing & Ballistik erklärt (Deutsch) | Warleek
 seo_description: Kugelfall, Flugzeit und Zeroing in 100-Meter-Schritten: auf Distanz treffen. Deutsche Anleitung für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: armoryleek
+frage: Warum liegen meine Schüsse in Wardogs zu tief?
+antwort: Weil Wardogs echte Ballistik rechnet: Kugeln fallen und brauchen Zeit bis zum Ziel. Stell im Zielfernrohr mit Bild-auf und Bild-ab den Zero in 100-Meter-Schritten auf die Entfernung ein, dann fallen Haltepunkt und Einschlag zusammen.
 ---
 
 Wenn deine Schüsse auf Entfernung zu tief einschlagen, liegt das nicht an deiner Maus. Wardogs rechnet echte Ballistik: Kugeln fallen, und sie brauchen Zeit bis zum Ziel.
@@ -73,3 +76,25 @@ Lose Patronen lassen sich später wieder in Magazine packen; in einem gepanzerte
 ## Kurz gefasst
 
 Zero setzen, bevor das Ziel da ist. Entfernung messen statt schätzen. Zweibein benutzen. Und die Optik nach der Kampfdistanz wählen, nicht nach dem Preis.
+
+## Häufige Fragen
+
+### Wie stellt man das Zeroing in Wardogs ein?
+
+Im Zielfernrohr mit Bild-auf und Bild-ab in 100-Meter-Schritten. Der aktuelle Wert steht im Glas.
+
+### Wann sollte man den Zero einstellen?
+
+Wenn du deine Position wählst, nicht wenn du ein Ziel siehst. Sonst sind drei Sekunden vorbei und das Ziel ist in Deckung. Miss die Entfernung zur gegenüberliegenden Kante und stell den Wert sofort.
+
+### Was bestimmt den Kugelfall in Wardogs?
+
+Die Mündungsgeschwindigkeit in Metern pro Sekunde, die im Waffenmenü steht. Sie entscheidet, wie lange das Geschoss unterwegs ist und wie viel es dabei fällt – zwei Gewehre mit demselben Kaliber können sich deutlich unterscheiden.
+
+### Welche Optik sollte man wählen?
+
+Die nach der Kampfdistanz, nicht nach dem Preis. Eine große Optik auf einem Sturmgewehr, mit dem du auf 80 Metern kämpfst, macht dich langsamer, ohne dich treffsicherer zu machen.
+
+### Was bringt das Zweibein?
+
+Auf einer Mauerkante oder im Liegen aufgesetzt senkt es den Rückstoß deutlich, besonders bei Marksman-Gewehren. Es passiert nicht automatisch – du musst an der richtigen Stelle stehen.

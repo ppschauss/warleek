@@ -64,6 +64,7 @@ function warleek_md_to_html( $md, $strip_first_h1 = true ) {
 	$para  = array();
 	$n     = count( $lines );
 	$first_h1_done = ! $strip_first_h1;
+	$in_faq        = false;   // innerhalb von „Häufige Fragen“
 
 	$flush = function () use ( &$out, &$para ) {
 		if ( $para ) { $out[] = '<p>' . warleek_md_inline( implode( ' ', $para ) ) . '</p>'; $para = array(); }
@@ -84,7 +85,18 @@ function warleek_md_to_html( $md, $strip_first_h1 = true ) {
 			$level = strlen( $m[1] );
 			if ( 1 === $level && ! $first_h1_done ) { $first_h1_done = true; continue; } // Titel überspringen
 			$level = max( 2, min( 4, 1 === $level ? 2 : $level ) );                       // im Inhalt beginnt h2
-			$out[] = '<h' . $level . '>' . warleek_md_inline( $m[2] ) . '</h' . $level . '>';
+			// „Häufige Fragen“ eröffnet einen FAQ-Abschnitt: die Überschriften darin
+			// werden markiert, damit `warleek_aeo_extract()` die Paare findet. Jede
+			// weitere h2 beendet den Abschnitt – sonst gälte der halbe Guide als FAQ.
+			$titel = trim( html_entity_decode( warleek_md_strip( warleek_md_inline( $m[2] ) ), ENT_QUOTES, 'UTF-8' ) );
+			$klasse = '';
+			if ( 2 === $level ) {
+				$in_faq = (bool) preg_match( '/^(häufige fragen|faq|fragen und antworten)$/iu', $titel );
+				if ( $in_faq ) { $klasse = ' class="wl-faq-titel"'; }
+			} elseif ( $in_faq && 3 === $level ) {
+				$klasse = ' class="wl-faq-frage"';
+			}
+			$out[] = '<h' . $level . $klasse . '>' . warleek_md_inline( $m[2] ) . '</h' . $level . '>';
 			continue;
 		}
 
@@ -190,6 +202,11 @@ function warleek_md_to_html( $md, $strip_first_h1 = true ) {
 	$flush();
 
 	return implode( "\n", $out );
+}
+
+/** Tags entfernen – der Build läuft als nacktes PHP, ohne WordPress-Funktionen. */
+function warleek_md_strip( $html ) {
+	return strip_tags( (string) $html );
 }
 
 /** Zerlegt eine Tabellenzeile in Zellen. */

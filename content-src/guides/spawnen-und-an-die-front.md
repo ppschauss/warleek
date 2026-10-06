@@ -10,6 +10,9 @@ seo_title: Wardogs Spawn & APC erklärt (Deutsch) | Warleek
 seo_description: Warum die FOB kein Spawnpunkt ist und wie M113 APC und Deployment-Board funktionieren. Wardogs-Anleitung auf Deutsch für Spieler in DACH.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: starterleek
+frage: Wie kommt man in Wardogs schneller an die Front?
+antwort: Über das Spawn-Fahrzeug, den M113 APC SV. Er muss stehen, dann wählen Teamkollegen ihn auf dem Deployment-Board und erscheinen nach rund zehn Sekunden im Fahrzeug. Die FOB ist kein Spawnpunkt, sie gibt nur Bauzone und Nachschublager.
 ---
 
 Die häufigste stille Zeitverschwendung in Wardogs ist der Fußmarsch. Du stirbst, spawnst im Hauptlager, und zwei Minuten später bist du wieder dort, wo du gestorben bist – falls der Kampf noch da ist. Das lässt sich fast vollständig abstellen.
@@ -68,3 +71,25 @@ Aus dem Transporthelikopter steigt man übrigens auch in der Luft aus – am Fal
 Rechne kurz nach: Wenn dreißig Leute pro Tod zwei Minuten laufen und dreißig Mal pro Match sterben, verliert dein Team ungefähr eine Stunde Präsenz in der Zone. Die Punkte werden aber danach vergeben, **wer gerade drinsteht**.
 
 Ein APC weiter vorn und ein Pilot mit Taxi-Dienst sind deshalb keine Nebensache. Sie sind der Unterschied zwischen einem Team, das dauernd ankommt, und einem, das dauernd unterwegs ist.
+
+## Häufige Fragen
+
+### Kann man in Wardogs an der FOB spawnen?
+
+Nein. Eine FOB gibt Bauzone und Nachschublager, aber niemand spawnt darin. Vorwärts-Spawns kommen allein vom Spawn-Fahrzeug.
+
+### Wie oft kann man auf demselben APC spawnen?
+
+Nur im Abstand von mehreren Minuten, zuletzt etwa alle neun. Der APC ist ein Sprungbrett, das gelegentlich neu lädt, kein Dauerspawn.
+
+### Wo stellt man den Spawn-APC am besten ab?
+
+Nah genug, dass der Fußweg unter einer Minute liegt, weit genug, dass er nicht im direkten Feuer steht. Zwischen APC und Gegner sollte Gelände liegen – eine Senke hinter dem Hügel etwa.
+
+### Wie macht man einen Spawn-APC unbrauchbar?
+
+Indem man die Radarschüssel auf dem Dach zerschießt. Das nimmt die Spawn-Funktion, ohne das Fahrzeug zu zerstören. Stell ihn deshalb so ab, dass das Dach nicht von einem Hang einsehbar ist.
+
+### Lohnt es sich, den APC nach vorn zu fahren?
+
+Ja. Wer ihn fährt, bekommt Cash und Erfahrung für jeden, der darauf spawnt, und das zählt auf den Driver-Track. Es ist eine der ruhigsten Einnahmequellen im Spiel.

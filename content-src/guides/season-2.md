@@ -10,6 +10,9 @@ seo_title: Wardogs Season 2 Deutsch – Wipe, Regen, Flakpanzer | Warleek
 seo_description: Progressions-Reset, Regen und ein Flakpanzer: was zum 15. Oktober bestätigt ist und was nicht. Für Deutschland, Österreich und die Schweiz.
 quellen: [Season-2-Ankündigung und Community-Zusammenfassungen (Stand 5. Oktober 2026), 'Steam-Hotfix vom 02.10.2026 zum IR-Entfernungsmesser']
 geprueft: nein – Stand vor dem Start, wird nach dem 15.10. überarbeitet
+autor: adminleek
+frage: Was ändert sich mit Season 2 in Wardogs?
+antwort: Season 2 startet am 15. Oktober 2026 und setzt den Fortschritt zurück. Neu kommen wechselndes Wetter mit Regen, Feuer als Umgebungseffekt und ein Flugabwehrpanzer gegen die Helikopter-Dominanz. Der IR-Entfernungsmesser kehrt zurück, dann mit Batterien.
 ---
 
 Am **15. Oktober 2026** startet Season 2 — die erste große Saison seit dem Early-Access-Start im September. Dieser Guide steht vor dem Start und trennt deshalb sauber: was bestätigt ist, was angekündigt wurde, und was Leute vermuten.
@@ -61,3 +64,21 @@ Ob Season 2 davon etwas angeht, steht in keiner Ankündigung.
 4. Wenn du etwas Neues im Spiel siehst, das hier fehlt: schreib uns
 
 Wir überarbeiten diesen Guide nach dem Start und schreiben dann dazu, was sich gegenüber dieser Fassung geändert hat.
+
+## Häufige Fragen
+
+### Wann startet Season 2 in Wardogs?
+
+Am 15. Oktober 2026 – die erste große Saison seit dem Early-Access-Start im September.
+
+### Was wird beim Wipe zurückgesetzt?
+
+Season 2 setzt den Fortschritt zurück. Was genau dazugehört – Tracks, Career-Level, Cash, Freischaltungen – ist in den Ankündigungen nicht im Detail aufgeschlüsselt.
+
+### Sollte man vor dem Wipe sein Geld ausgeben?
+
+Ja, im Zweifel lieber ausgeben als sparen. Ein Konto mit $400.000 am 14. Oktober ist am 16. möglicherweise nichts wert, und Freischaltgebühren kurz vor einem Wipe lohnen selten.
+
+### Gibt es einen Fahrplan für weitere Inhalte?
+
+Nein. Bulkhead hat keinen datierten Feature-Fahrplan veröffentlicht. Die Ansage lautet sinngemäß, dass die Arbeit ins Metagame und in Fehlerbehebungen geht statt in einen stetigen Strom neuer Inhalte.

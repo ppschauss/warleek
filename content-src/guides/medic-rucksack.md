@@ -10,6 +10,9 @@ seo_title: Wardogs Medic-Loadout – Rucksack packen | Warleek
 seo_description: Defi, Batterien, Stims, Rauch und die richtige Zweitwaffe: wie ein Medic packt und dabei Platz gewinnt. Für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Datenbanken und Guides zu WARDOGS (Stand Oktober 2026), Batterie-Griff und Rauch-Dauer im Spiel beobachtet von Patrick Schauß (Warleek)]
 geprueft: teilweise – Batterie-Ladungen und -Plätze, der Tausch-Griff, Waffenwahl und Rauch-Dauer im Spiel geprüft von Patrick Schauß (Oktober 2026); Freischaltstufen, Preise und Gewichte aus Community-Quellen übernommen
+autor: medicleek
+frage: Was packt ein Medic in Wardogs in den Rucksack?
+antwort: Nur eine Pistole als Waffe, dazu Rauchgranaten, den Defibrillator mit eingesetzter großer Batterie, zwei First Aid Kits, fünf Verbände und sechs Stim Pens. Ein Sturmgewehr belegt den Platz, den du für die eigentliche Arbeit brauchst.
 ---
 
 Das Problem eines Medics ist selten das Können. Es ist der Platz. Du willst Defi, Batterie, Verbände, Healpacks und Stims mitnehmen – und der Rucksack ist voll, bevor die Munition drin ist.
@@ -117,3 +120,29 @@ Zwei Kilogramm für die große Batterie sind der Posten, den du dabei zuerst nac
 Ob eine Ladung genau einer Wiederbelebung entspricht oder ob auch anderes daran zieht, haben wir nicht systematisch geprüft. Die Ladungszahlen selbst — 4 und 10 — stammen aus dem Spiel.
 
 Ebenfalls offen: ob sich mit Season 2 am Preis oder an den Ladungen etwas ändert. Wenn dir etwas auffällt, schreib uns.
+
+## Häufige Fragen
+
+### Welche Batterie nimmt man für den Defibrillator?
+
+Die große mit 10 Ladungen – aber direkt beim Händler gegen die eingesetzte Standardbatterie tauschen. Eine eingesetzte Batterie belegt keinen Rucksackplatz; wer die große nur einsteckt, trägt sie als Fracht über zwei Felder.
+
+### Warum spart der Batterie-Tausch einen Slot?
+
+Der Defibrillator kommt mit der Standardbatterie drin. Setzt du die große ein und nimmst die kleine heraus, liegt nur noch die kleine im Rucksack: ein Feld statt zwei, und du hast trotzdem beide Ladungen dabei.
+
+### Welche Pistole für den Medic in Wardogs?
+
+Die GGX 18 ist dafür gebaut: vollautomatisch, 0,63 kg, 2×2 Felder – aber erst ab Wardog 70 und rund $50.000 Freischaltung. Bis dahin tut die GGX 17 ab Wardog 1 für rund $200 pro Leben denselben Dienst.
+
+### Wie viele Rauchgranaten braucht ein Medic?
+
+Eine pro Aktion reicht. Richtig geworfen – zwischen Gefallenen und Schützen, nicht auf den Gefallenen – hält sie lang genug für Aufstellen und Heilen zusammen.
+
+### Welchen Rucksack nimmt ein Medic?
+
+Den Field Backpack, nicht den Scout. Der Scout hat weniger Fächer, und als Medic fehlt dir genau das. Das Mehrgewicht holt sich das Loadout an anderer Stelle zurück.
+
+### Was streicht man zuerst, wenn der Platz nicht reicht?
+
+Erst die Ersatzbatterie, dann ein First Aid Kit. Nie die Stims und nie den letzten Rauch.

@@ -10,6 +10,9 @@ seo_title: Wardogs mit HOTAS fliegen – Guide auf Deutsch | Warleek
 seo_description: Assistenten aus, Gieren führt, Combat Orbit und die schnelle Landung: Helikopter am Stick. Deutscher Wardogs-Guide für Spieler in DACH.
 quellen: [Video-Guide von <a href="https://www.youtube.com/watch?v=IHcD8c_iqD0" rel="nofollow noopener noreferrer">Tote Torres</a> (Logitech G940‚ Screenshots mit Zeitangabe im Text), Video-Guide von <a href="https://www.youtube.com/watch?v=wtRRZ8nPfFM" rel="nofollow noopener noreferrer">Sim Controls</a> (VKB Gladiator‚ Screenshots mit Zeitangabe im Text)]
 geprueft: nein
+autor: pilotleek
+frage: Wie fliegt man in Wardogs mit einem HOTAS?
+antwort: Mit dem Gieren steuern, nicht mit dem Rollen: Die Nase richtest du über Pedale oder Twist-Achse aus, der Stick macht Pitch und kleine Rollkorrekturen. Alle Flugassistenten aus, Sichtfeld hoch, und so tief wie möglich fliegen.
 ---
 
 Die Einstellungen sind das eine, das Fliegen das andere. Dieser Guide ist der zweite Teil: Wenn Empfindlichkeit, Deadzone und Kurven stehen – [Erklärung dazu hier](/guides/wardogs-hotas-empfindlichkeit/) –, geht es darum, wie man den Helikopter tatsächlich bewegt.
@@ -108,3 +111,25 @@ Flugabwehr steht meist erhöht. Du kommst tief und schnell an, ziehst über der 
 > [!hinweis] Die Bildschirmfotos in diesem Guide stammen aus den beiden verlinkten Videos und sind jeweils mit Kanal und Zeitangabe gekennzeichnet. Alle Rechte daran liegen bei den Urhebern; sie stehen hier als Beleg zu dem, was im Text erklärt wird.
 
 Wer mit Maus und Tastatur fliegt, findet das Passende unter [Helikopter fliegen mit Maus und Tastatur](/guides/wardogs-helikopter-fliegen/).
+
+## Häufige Fragen
+
+### Soll man am Stick die Flugassistenten einschalten?
+
+Nein, alle aus. Das Flugmodell fühlt sich ohnehin schwer und träge an; wer dazu gegen glättende Regler kämpft, hat zwei Gegner. Und genau weil das Modell träge ist, bleibt der Helikopter auch ohne Auto-Hover bereitwillig an Ort und Stelle.
+
+### Warum führt das Gieren und nicht das Rollen?
+
+Weil Zielen im Helikopter heißt, die Nase dorthin zu bringen, wo etwas steht. Richtung ausschließlich mit dem Gieren ändern, Rollen nur für Mikrokorrekturen.
+
+### Welches Sichtfeld sollte man einstellen?
+
+Im Cockpit hoch, in der Gegend von 110 statt der engen Voreinstellung, in der Außenansicht so weit wie möglich. Enges Sichtfeld erzeugt Tunnelblick – du klebst am Ziel und übersiehst, was von der Seite kommt.
+
+### Was ist der Combat Orbit?
+
+Das Manöver, um ein Ziel zu bekämpfen, ohne stehen zu bleiben: Gieren hält die Nase auf dem Ziel, Rollen bestimmt, wie schnell du seitlich darum herumwanderst. Flieg ihn nicht länger als nötig – man zeigt sich dabei.
+
+### Was schützt besser als Täuschkörper?
+
+Gelände. Flugabwehr sieht, was über den Horizont ragt, also Baumwipfelhöhe, Flussläufe und Senken nutzen. Täuschkörper sind der Notfall, nicht die Methode.

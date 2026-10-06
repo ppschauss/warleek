@@ -10,6 +10,9 @@ seo_title: Wardogs Kontrollzone & Hot Zone – Guide Deutsch | Warleek
 seo_description: Punkte, Hot Zone, vier Türme und der Code: So gewinnt dein Team Matches. Wardogs auf Deutsch für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026), Offizielle WARDOGS-Ankündigungen und Patch Notes bei Steam]
 geprueft: nein
+autor: tacticleek
+frage: Wie gewinnt man ein Match in Wardogs?
+antwort: Alle 30 Sekunden bekommt die Fraktion mit den meisten Spielern in der 2×2 Kilometer großen Kontrollzone einen Punkt; bei 100 ist das Match gewonnen. In der Hot Zone zählt jeder Spieler doppelt. Abschüsse stehen nirgends auf der Tafel.
 ---
 
 Wardogs sieht aus wie ein Shooter und wird gewertet wie ein Brettspiel. Wer das nicht trennt, spielt gut und verliert trotzdem.
@@ -72,3 +75,21 @@ Praktisch heißt das: **Zwei Squads nehmen Türme, während der Rest die Zone h�
 ## Die unbequeme Wahrheit
 
 Wardogs belohnt Anwesenheit. Ein mittelmäßiger Schütze, der jede Runde 25 Minuten in der Zone steht, wiederbelebt wird und weitermacht, ist für sein Team wertvoller als ein sehr guter Schütze, der alle drei Minuten stirbt und zurückläuft.
+
+## Häufige Fragen
+
+### Wie viele Punkte braucht man in Wardogs zum Sieg?
+
+100. Etwa alle 30 Sekunden geht ein Punkt an die Fraktion, die gerade die meisten Spieler in der Kontrollzone hat.
+
+### Was ist die Hot Zone in Wardogs?
+
+Ein kleinerer, gelb markierter Bereich, der innerhalb der Kontrollzone wandert. Dort zählt jeder Spieler doppelt und verdient doppelt Cash – zehn Leute in der Hot Zone wiegen zwanzig anderswo in der Zone auf.
+
+### Wofür sind die vier Türme in Wardogs gut?
+
+Jeder eroberte Turm gibt eine Ziffer. Mit allen vier habt ihr den pro Match zufälligen vierstelligen Code; wer ihn am Terminal eingibt, darf die Hot Zone auf einen eigenen Turm ziehen.
+
+### Zählen Kills für den Sieg in Wardogs?
+
+Nein. Ein Abschuss ist nur deshalb wertvoll, weil er einen gegnerischen Körper aus der Zone nimmt. Tot sein kostet doppelt: Du fehlst in der Zone, der Gegner nicht.

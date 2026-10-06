@@ -10,6 +10,9 @@ seo_title: Wardogs Paletten Gewinn – Logistik lohnt sich | Warleek
 seo_description: Was eine Versorgungspalette kostet und einbringt und welches Fahrzeug sich rechnet. Logistik-Guide für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Guides und Datenbanken zu WARDOGS (Stand Oktober 2026)]
 geprueft: nein
+autor: logisticleek
+frage: Was bringt eine Versorgungspalette in Wardogs?
+antwort: Rund $400 Einkauf, rund $2.500 bei der Abgabe im Zielgebiet und rund $1.800, wenn ein Teamkollege sie an der FOB abbaut. Unterm Strich rund $3.900 Gewinn pro Palette, ohne dass ein Schuss fallen muss.
 ---
 
 Es gibt im Spiel keinen Gegenstand mit einem besseren Verhältnis von Einsatz zu Ertrag. Eine Versorgungspalette kostet rund **$400** und bringt am Ende rund **$3.900 Gewinn** — ohne dass du einen Schuss abgeben musst.
@@ -68,3 +71,25 @@ Dazu kommt, was nicht auf dem Konto steht: Dein Team hat Baustoff für Mauern, M
 5. Sofort zurück — die zweite Fahrt ist die, die den Abend bezahlt
 
 Wer das dreimal macht, hat mehr verdient als die meisten im Gefecht — und sein Team hat gewonnen, weil die FOB stand.
+
+## Häufige Fragen
+
+### Warum bekommt man oft nur $2.500 statt $3.900?
+
+Weil die Palette noch abgebaut werden muss. Die Abgabe bringt $2.500, die restlichen rund $1.800 fließen erst, wenn jemand sie an der FOB abbaut. Sag es beim Abladen kurz an – sonst entstehen die $1.800 einfach nicht.
+
+### Wie viele Paletten trägt der Ural?
+
+Zwei pro Fahrt. Das verdoppelt den Ertrag bei gleichem Zeitaufwand, weil die Fahrt genauso lang dauert.
+
+### Was kostet die Freischaltung des Ural?
+
+Einmalig rund $35.000 – in Season 1 von $50.000 gesenkt – und danach rund $5.000 pro Stück. Nach zwei Paletten ist er bezahlt.
+
+### Trägt der Kodiak Paletten?
+
+Nein, nur Kisten. Das ist das kleinere Geschäft, läuft aber ab Minute eins ohne Freischaltung.
+
+### Welche Route nimmt man mit einer Ladung?
+
+Nicht die kürzeste, wenn sie durch die Kontrollzone führt. Ein Umweg von dreißig Sekunden ist billiger als ein zerschossener LKW samt Ladung.

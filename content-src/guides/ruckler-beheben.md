@@ -10,6 +10,9 @@ seo_title: Wardogs ruckelt? Ursachen und Fixes auf Deutsch | Warleek
 seo_description: Shader, VRAM, SSD und Hintergrundprogramme: Ruckler beheben, auch wenn die FPS stimmen. Deutsche Anleitung für Spieler in der DACH-Region.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: techleek
+frage: Was tun, wenn Wardogs ruckelt, obwohl die FPS stimmen?
+antwort: Das ist kein Leistungsproblem, sondern ein Ruckelproblem. Die Ursachen in dieser Reihenfolge prüfen: Shader werden noch übersetzt, das Spiel liegt auf einer langsamen Platte, der Grafikspeicher ist voll, Hintergrundprogramme, Energieeinstellungen, Bildsynchronisation.
 ---
 
 Es gibt zwei völlig verschiedene Probleme, die beide „die Seite läuft schlecht" heißen: **zu wenige Bilder pro Sekunde** und **ungleichmäßige Bilder**. Das zweite ist unangenehmer, weil es auch auftritt, wenn der Zähler oben rechts gut aussieht.
@@ -68,3 +71,25 @@ Und miss nicht nach Gefühl: Die meisten Overlays zeigen neben der Bildrate auch
 ## Wenn nichts hilft
 
 Dann liegt es möglicherweise am Spiel selbst. Wardogs ist im Early Access, und Patches ändern das Leistungsverhalten deutlich – in beide Richtungen. Ein Blick in die [Patch Notes](/patch-notes/) lohnt sich, bevor du den Rechner auseinandernimmst: Manchmal ist der Ruckler, den du seit gestern hast, genau das, was zwei Absätze weiter oben als bekanntes Problem steht.
+
+## Häufige Fragen
+
+### Wie unterscheidet man Leistungs- und Ruckelproblem?
+
+Eine durchgehend niedrige Zahl – etwa 40 statt 120 – ist ein Leistungsproblem. Eine hohe Zahl mit kurzen Aussetzern beim Betreten neuer Gebiete oder beim Drehen der Kamera ist ein Ruckelproblem.
+
+### Warum ruckelt es nach einem Update besonders?
+
+Weil die Grafikkarte Effekte in Maschinencode übersetzt, während du spielst. Das passiert einmal pro Effekt. Eine Runde im Schießstand oder ein ruhiges Match, bewusst durch verschiedene Gebiete, beendet den Spuk meist.
+
+### Welche Hardware hilft gegen Nachladehänger?
+
+Eine NVMe-SSD. Das ist die einzige Hardwareempfehlung in diesem Guide, die fast immer etwas bringt – Wardogs lädt viel nach.
+
+### Woran erkennt man zu wenig Grafikspeicher?
+
+An kurzen Einfrierern statt niedriger Bildrate. Texturstufe eine Stufe herunter, dann prüfen, ob die Hänger verschwinden.
+
+### Wie geht man beim Suchen vor?
+
+Eine Sache ändern, eine Runde spielen, danach urteilen. Und nicht nach Gefühl messen: Die meisten Overlays zeigen neben der Bildrate auch die Bildzeit – ein Ausschlag dort ist ein Ruckler, den die durchschnittliche Bildrate verschweigt.

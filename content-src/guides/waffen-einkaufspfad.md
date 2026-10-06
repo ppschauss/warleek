@@ -10,6 +10,9 @@ seo_title: Wardogs Waffen & Preise – Guide auf Deutsch | Warleek
 seo_description: T-21, AK-74, Galil, M4 und FAL: Preise, Freischaltungen und die sinnvolle Kaufreihenfolge. Wardogs-Waffenguide auf Deutsch für DACH-Spieler.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: armoryleek
+frage: Welche Waffe sollte man in Wardogs kaufen?
+antwort: Die, die dein Konto verträgt – du zahlst bei jedem Leben neu. T-21 für rund $600 in den ersten Runden, dann die AK-74 für rund $1.600 als Arbeitstier. Unterhalb von Track-Stufe 9 sind alle Preise halbiert.
 ---
 
 Waffen sind in Wardogs keine Belohnung, sondern eine laufende Ausgabe. Du zahlst nicht einmal, du zahlst **bei jedem Leben**. Deshalb ist die richtige Waffe fast nie die beste, sondern die, die dein Konto verträgt.
@@ -81,3 +84,29 @@ Und ein Effekt, den Neulinge übersehen: Zubehör hat **Gewicht**. Ein Schalldä
 ## Der Trick mit dem Einkauf
 
 Beim Händler lässt sich Munition schneller kaufen, als das Menü vermuten lässt: **Strg gedrückt halten und auf die Munitionsfelder unter der Primärwaffe klicken** füllt sie direkt auf. Spart pro Leben ein paar Sekunden – und über einen Abend eine Menge Geduld.
+
+## Häufige Fragen
+
+### Wie viel verliert man beim Tod in Wardogs?
+
+Einen Großteil des Waffenwerts bekommst du zurück; der Verlust liegt in der Größenordnung von zehn Prozent. Ein Tod ist also kein Totalschaden, aber zehn Tode mit der FAL sind ein spürbares Loch.
+
+### Was kostet die AK-74 in Wardogs?
+
+Rund $1.600 ab Assault 3. Sie ist das Arbeitstier: zuverlässig und billig genug, um sie zehnmal pro Abend zu verlieren.
+
+### Lohnt sich die M4 zwischen Galil und FAL?
+
+Kein Muss. Der Pfad, der funktioniert: T-21, dann AK-74, danach Galil – oder direkt die FAL für rund $6.500, wenn das Konto es trägt.
+
+### Welche frühe Anschaffung lohnt sich am meisten?
+
+Die RPG-7 für rund $2.000 ab Support 5, wenn dein Team Fahrzeugprobleme hat. Rund $2.000 gegen ein gegnerisches Fahrzeug im Wert von $10.000 ist ein gutes Tauschgeschäft.
+
+### Was macht ein Loadout unerwartet teuer?
+
+Die Optik. Munition, Magazine und Weste kommen zur Waffe dazu; ein günstiges Prismenvisier reicht für fast alles. Und Zubehör hat Gewicht – ein Schalldämpfer kann dich in die nächste Gewichtsklasse schieben.
+
+### Wie kauft man Munition schneller ein?
+
+Strg gedrückt halten und auf die Munitionsfelder unter der Primärwaffe klicken füllt sie direkt auf.

@@ -1,0 +1,74 @@
+[
+	{
+		"slug": "adminleek",
+		"title": "AdminLeek",
+		"rolle": "Redaktion, Patch Notes und Seitenpflege",
+		"schwerpunkt": "Patch Notes, Seitenpflege, Quellenprüfung, Early Access",
+		"excerpt": "Hält die Seite zusammen: Patch Notes, Quellen, Korrekturen.",
+		"text": "Kümmert sich um das, was keinen eigenen Guide ergibt: Patch Notes übersetzen und einordnen, Zahlen gegenprüfen, Korrekturen nachtragen, wenn ein Patch eine Angabe überholt.\n\nWenn auf dieser Seite etwas falsch ist, landet es hier. Hinweise sind willkommen – gerade die unbequemen."
+	},
+	{
+		"slug": "starterleek",
+		"title": "StarterLeek",
+		"rolle": "Einstieg und erste Runden",
+		"schwerpunkt": "Einsteiger, Fraktionen, Spawn, erste Käufe, Geld verdienen",
+		"excerpt": "Schreibt für die ersten Stunden: was das Spiel nicht erklärt.",
+		"text": "Wardogs erklärt wenig. Diese Rolle schreibt die Guides für alles, was man in den ersten Stunden falsch macht: zu teuer kaufen, an der falschen Stelle kämpfen, die Fraktion nach der Farbe wählen.\n\nMaßstab ist immer: Hätte mir das in der ersten Runde geholfen?"
+	},
+	{
+		"slug": "tacticleek",
+		"title": "TacticLeek",
+		"rolle": "Gefecht, Zonen und Spielverständnis",
+		"schwerpunkt": "Kontrollzone, Hot Zone, Gewichtsklassen, Progression, Economy",
+		"excerpt": "Rechnet nach, wofür das Spiel wirklich bezahlt.",
+		"text": "Beschäftigt sich mit der Frage, was eine Minute im Spiel einbringt – und warum Abschüsse dabei fast immer die schlechteste Antwort sind.\n\nHier entstehen die Guides mit Tabellen: Erträge, Gewichtsklassen, Tracks, und was ein Patch daran verschiebt."
+	},
+	{
+		"slug": "engineerleek",
+		"title": "EngineerLeek",
+		"rolle": "FOB, Bau und Verteidigung",
+		"schwerpunkt": "FOB bauen, HESCO, Emplacements, Flugabwehr, Sabotage",
+		"excerpt": "Baut Basen, die nicht beim ersten Mörser fallen.",
+		"text": "Eine FOB fällt selten durch einen Sturmangriff. Sie fällt, weil der Nachschub ausbleibt, weil alles in einem Bunker steht oder weil jemand von innen anfängt.\n\nDiese Rolle schreibt über Bauabstände, Sichtlinien und darüber, welche Stellung ihr Geld wert ist."
+	},
+	{
+		"slug": "logisticleek",
+		"title": "LogisticLeek",
+		"rolle": "Logistik und Nachschub",
+		"schwerpunkt": "Paletten, Fahrzeuge, Routen, Build-Supplies, Transport",
+		"excerpt": "Fährt Paletten und rechnet vor, warum das besser zahlt als Kämpfen.",
+		"text": "Die Versorgungspalette ist der Gegenstand mit dem besten Verhältnis von Einsatz zu Ertrag im ganzen Spiel. Trotzdem fahren sie zu wenige.\n\nHier geht es um Ladeflächen, Routen abseits der Kontrollzone und die zweite Fahrt, die den Abend bezahlt."
+	},
+	{
+		"slug": "armoryleek",
+		"title": "ArmoryLeek",
+		"rolle": "Waffen, Munition und Ausrüstung",
+		"schwerpunkt": "Waffen kaufen, Kaliber, Munitionstypen, Anbauteile, Zeroing",
+		"excerpt": "Sortiert Waffen nach dem, was sie pro Leben kosten.",
+		"text": "Eine teure Waffe kostet nicht einmal Geld, sondern bei jedem Tod erneut. Diese Rolle schreibt über Einkaufspfade, die das berücksichtigen.\n\nDazu: Kaliber, Munitionssorten, Zeroing und die Frage, welches Anbauteil wirklich etwas ändert."
+	},
+	{
+		"slug": "medicleek",
+		"title": "MedicLeek",
+		"rolle": "Rettung, Heilung und Wiederbelebung",
+		"schwerpunkt": "Defibrillator, Stims, Verbände, Wiederbeleben, Rauchgranaten",
+		"excerpt": "Stellt Leute auf – mit Pistole, Rauch und einem vollen Rucksack.",
+		"text": "Wiederbeleben ist eine Punkteaktion, nicht nur eine Geste. Wer mit dem richtigen Rucksack unterwegs ist, verdient damit mehr als mit Abschüssen.\n\nHier geht es um Rauch als Deckung, um Slots im Rucksack und darum, was man beim Griefing der eigenen Leute tun kann."
+	},
+	{
+		"slug": "pilotleek",
+		"title": "PilotLeek",
+		"rolle": "Helikopter und Luftunterstützung",
+		"schwerpunkt": "Helikopter fliegen, HOTAS, Entfernungsmesser, Flugabwehr umgehen",
+		"excerpt": "Fliegt – und erklärt, wie man nicht abgeschossen wird.",
+		"text": "Helikopter prägten Season 1 und werden ab Season 2 härter angefasst. Diese Rolle schreibt über Anflugwege, Höhen und darüber, wie eine CWIS aus der Nähe aussieht.\n\nDazu die Steuerung: HOTAS, Empfindlichkeiten, Erste-Person-Sicht."
+	},
+	{
+		"slug": "techleek",
+		"title": "TechLeek",
+		"rolle": "Technik, Einstellungen und Leistung",
+		"schwerpunkt": "Grafikeinstellungen, Tastenbelegung, Leistung, versteckte Mechaniken",
+		"excerpt": "Sucht die Einstellungen, die Leistung kosten, ohne etwas zu zeigen.",
+		"text": "Nicht alles auf Niedrig: Manche Optionen kosten Bilder pro Sekunde und zeigen dafür nichts, andere machen Gegner sichtbar und sollten hochbleiben.\n\nDazu Tastenbelegungen und die Mechaniken, die im Spiel nirgends erklärt werden."
+	}
+]

@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.26.0
+Stable tag: 2.27.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,14 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.27.0 =
+* Antwort-Optimierung: Jeder Guide trägt oben einen Antwortkasten (`frage:`/`antwort:` im Kopfblock) – bisher stand dort ein Teaser, also eine Frage statt einer Auskunft.
+* Abschnitt „Häufige Fragen" in allen 38 Guides, 173 Frage-Antwort-Paare. Datenbank-Einträge bekommen Kasten und bis zu drei Fragen aus ihren Feldern erzeugt.
+* `FAQPage` und `speakable` als JSON-LD – abgeleitet aus dem **gespeicherten Inhalt**, damit Auszeichnung und sichtbarer Text nicht auseinanderlaufen können.
+* Neue Autorenrollen (CPT `autor`): AdminLeek, StarterLeek, TacticLeek, EngineerLeek, LogisticLeek, ArmoryLeek, MedicLeek, PilotLeek, TechLeek – mit eigener Seite, Verfasserzeile und `author` als Person. `reviewedBy` bleibt die reale Person.
+* Wegweiser für Sprachmodelle unter `/llms.txt`, bei jedem Abruf erzeugt.
+* Behoben: Die letzte FAQ-Antwort einer Seite zog alles Nachfolgende in das Schema – im Guide den Herkunftskasten, beim Datenbank-Eintrag die Shortcodes.
 
 = 2.26.0 =
 * Der Griefing-Beitrag ist auf die eigentlich nützliche Information ausgerichtet: Inventar öffnen sperrt im Downed-Zustand das eigene Kit. Titel, SEO und Aufbau folgen dem.

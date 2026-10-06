@@ -10,6 +10,9 @@ seo_title: Wardogs Medic Guide Deutsch: Wiederbeleben | Warleek
 seo_description: Field Resuscitator, Defibrillator, Positionierung und Cash pro Revive. Der Medic-Guide für Wardogs auf Deutsch, für Spieler in DACH.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: medicleek
+frage: Lohnt es sich, in Wardogs Medic zu spielen?
+antwort: Ja. Eine gelungene Wiederbelebung zahlt sofort Cash in der Größenordnung von $1.200 aus, levelt den Medic-Track und hält einen Körper in der Zone, der sonst zwei Minuten zurücklaufen müsste. Zwanzig Revives sind rund $24.000 pro Runde.
 ---
 
 In einem Spiel, in dem Punkte für **anwesende Körper** vergeben werden, ist der Mann, der Körper wieder aufstellt, keine Nebenrolle. Trotzdem spielen ihn zu wenige – und die meisten spielen ihn falsch herum.
@@ -70,3 +73,25 @@ Und einen, den du **nicht** aufstellst: den Kameraden in schwerer Ausrüstungskl
 Ein Squad ohne Medic verliert bei jedem Gefecht Leute dauerhaft und muss den Weg zurück laufen. Ein Squad mit Medic verliert dieselben Leute für zehn Sekunden. Über eine ganze Runde ist das der Unterschied zwischen einer Stellung, die hält, und einer, die alle fünf Minuten neu aufgebaut wird.
 
 Passend dazu: [Kontrollzone, Hot Zone und die vier Türme](/guides/wardogs-kontrollzone/) erklärt, warum genau das die Wertung entscheidet.
+
+## Häufige Fragen
+
+### Was bringt eine Wiederbelebung in Wardogs?
+
+Sofort Cash in der Größenordnung von $1.200, dazu Erfahrung auf dem Medic-Track – und der Spieler bleibt in der Zone statt zwei Minuten zurückzulaufen.
+
+### Wann bekommt man den Defibrillator in Wardogs?
+
+Ab Medic 11 für rund $25.000. Davor gibt es ab Medic 2 den Field Resuscitator für rund $10.000; Verbandszeug ist von Anfang an dabei.
+
+### Wo sollte ein Medic in Wardogs stehen?
+
+Eine Deckung hinter der vordersten Reihe des Squads, mit einem vorher bekannten Fluchtweg. Nah genug, um in Sekunden bei einem Gefallenen zu sein, weit genug, um nicht als Erster gesehen zu werden.
+
+### Wen stellt man zuerst wieder auf?
+
+Den, der in Deckung liegt – der andere fällt sofort wieder. Danach den Spieler mit dem teuren Loadout, dann den näher an der Hot Zone. Wer schwere Ausrüstung trägt und offen liegt, lässt sich nicht in Deckung ziehen.
+
+### Was ist der häufigste Fehler als Medic?
+
+In dieselbe Sichtlinie zu laufen, in der der Kollege gefallen ist. Das macht aus einem Ausfall zwei. Nimm den Umweg durch die Deckung, auch wenn er fünf Sekunden kostet.

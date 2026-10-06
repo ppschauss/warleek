@@ -10,6 +10,9 @@ seo_title: Wardogs ohne Freischaltung – Startausrüstung Deutsch | Warleek
 seo_description: Alle Waffen, Fahrzeuge und Bauwerke ohne Track-Stufe, mit Preisen und Einsatzzweck. Für Einsteiger in Deutschland, Österreich und der Schweiz.
 quellen: [Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026), Offizielles Pressematerial von BULKHEAD/Team17 (Startkapital)]
 geprueft: nein
+autor: starterleek
+frage: Was hat man in Wardogs ohne Freischaltung schon?
+antwort: Fünfzehn Einträge stehen ab der ersten Minute offen. Drei Sturmgewehre – Bushmaster M17S, A-91 und KH-2002 – kosten gar nichts. Dazu sechs Dinge, die nur Geld kosten, und vier Bauwerke, die sich ohne FOB setzen lassen.
 ---
 
 Die Track-Stufen in Wardogs lesen sich wie eine lange Liste von Dingen, die du noch nicht hast. Das täuscht. **Fünfzehn Einträge stehen dir ab der ersten Minute offen**, und drei davon kosten überhaupt nichts.
@@ -69,3 +72,21 @@ Keine Bauzone heißt: du kannst sie **mitten in die Kontrollzone** setzen. Zehn 
 Du brauchst nichts freizuschalten, um nützlich zu sein. Ein kostenloses Startgewehr, Sandsäcke für $10 an der richtigen Stelle und ein Kodiak, der vier Leute in die Zone fährt — das ist mehr Beitrag zum Spielstand als jede Waffe, für die du erst 35 Stufen sammelst.
 
 Das Geld, das du dabei nicht ausgibst, ist später die Freischaltgebühr für die Waffe, die du wirklich willst.
+
+## Häufige Fragen
+
+### Welche Waffen sind in Wardogs von Anfang an kostenlos?
+
+Bushmaster M17S, A-91 und KH-2002. Alle drei sind Sturmgewehre im Kaliber 5,56 × 45 mm und praktisch gleichwertig; A-91 und KH-2002 sind Bullpups, also kürzer gebaut.
+
+### Welches Fahrzeug bekommt man ohne Freischaltung?
+
+Den Bobcat für $500 mit zwei Plätzen und ohne Fracht, und den Kodiak für $2.500 mit vier Plätzen, rund 154 km/h und Platz für Kisten. Der Kodiak ist das schnellste Radfahrzeug im Spiel.
+
+### Was kann man in Wardogs ohne FOB bauen?
+
+Recon-Zelt und Stacheldraht für je 5 Build-Supplies, Sandsäcke für 10 und Hedgehog für 14. Weil sie keine Bauzone brauchen, lassen sie sich mitten in die Kontrollzone setzen.
+
+### Was kostet die GGX 17 in Wardogs?
+
+Einmalig $5.000 für die Freischaltung über Wardog 1, danach $200 pro Leben. Das ist die billigste Zweitwaffe im Spiel.

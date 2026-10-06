@@ -16,6 +16,7 @@
 
 $root = dirname( __DIR__ );
 require $root . '/plugin/warleek-core/inc/markdown.php';
+require $root . '/plugin/warleek-core/inc/aeo.php';
 
 $dry      = in_array( '--dry-run', $argv, true );
 $src      = $root . '/content-src/guides';
@@ -58,7 +59,47 @@ foreach ( $files as $file ) {
 		'html'    => "\n" . warleek_md_to_html( $fm['body'] ) . "\n",
 		'quellen' => array_values( array_filter( (array) ( $meta['quellen'] ?? array() ) ) ),
 		'geprueft'=> (string) ( $meta['geprueft'] ?? '' ),
+		'autor'   => trim( (string) ( $meta['autor'] ?? '' ) ),
 	);
+
+	// Direktantwort: `frage:` + `antwort:` werden zum Kasten ganz oben im Text.
+	// Er steht vor dem Fließtext, weil Antwortmaschinen die ersten Absätze lesen –
+	// und dort stand bisher ein Teaser, also eine Frage statt einer Auskunft.
+	$frage   = trim( (string) ( $meta['frage'] ?? '' ) );
+	$antwort = trim( (string) ( $meta['antwort'] ?? '' ) );
+	if ( '' !== $frage || '' !== $antwort ) {
+		if ( '' === $frage || '' === $antwort ) {
+			fwrite( STDERR, "! $slug: frage und antwort gehören zusammen, eines fehlt\n" ); $warn++;
+		} else {
+			if ( ! str_ends_with( $frage, '?' ) ) {
+				fwrite( STDERR, "! $slug: frage endet nicht auf ein Fragezeichen\n" ); $warn++;
+			}
+			$wz = warleek_aeo_wortzahl( $antwort );
+			if ( $wz < WARLEEK_AEO_WORT_MIN || $wz > WARLEEK_AEO_WORT_MAX ) {
+				fwrite( STDERR, sprintf(
+					"! %s: antwort hat %d Wörter (sinnvoll %d–%d)\n",
+					$slug, $wz, WARLEEK_AEO_WORT_MIN, WARLEEK_AEO_WORT_MAX
+				) );
+				$warn++;
+			}
+			$guide['html'] = "\n" . warleek_aeo_antwort_block(
+				warleek_md_inline( $frage ),
+				warleek_md_inline( $antwort )
+			) . $guide['html'];
+		}
+	}
+
+	// FAQ-Abschnitt gegenprüfen: `## Häufige Fragen` ohne `###`-Fragen darunter
+	// erzeugt eine leere Auszeichnung, und eine Frage ohne Fragezeichen ist keine.
+	$aeo = warleek_aeo_extract( $guide['html'] );
+	if ( preg_match( '/^##\s*(Häufige Fragen|FAQ|Fragen und Antworten)\s*$/mu', $fm['body'] ) && ! $aeo['faq'] ) {
+		fwrite( STDERR, "! $slug: Abschnitt „Häufige Fragen“ ohne ###-Fragen darunter\n" ); $warn++;
+	}
+	foreach ( $aeo['faq'] as $paar ) {
+		if ( ! str_ends_with( $paar['frage'], '?' ) ) {
+			fwrite( STDERR, sprintf( "! %s: FAQ-Frage ohne Fragezeichen: %s\n", $slug, $paar['frage'] ) ); $warn++;
+		}
+	}
 
 	foreach ( array( 'title', 'excerpt' ) as $pflicht ) {
 		if ( '' === $guide[ $pflicht ] ) { fwrite( STDERR, "! $slug: $pflicht fehlt\n" ); $warn++; }

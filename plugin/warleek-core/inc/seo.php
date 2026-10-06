@@ -179,6 +179,27 @@ function warleek_seo_kuerzen( $text, $max = 158 ) {
 	return rtrim( $kurz, " .,;:–-" ) . '…';
 }
 
+/**
+ * Direktantwort und FAQ einer Seite auszeichnen.
+ *
+ * Liest beides aus dem gespeicherten Inhalt, nicht aus eigenen Feldern – damit
+ * die Auszeichnung und der sichtbare Text nicht auseinanderlaufen können. Wer
+ * den Antwortkasten im Backend umschreibt, ändert das Schema automatisch mit.
+ *
+ * @param int|WP_Post $post Beitrag.
+ * @return array Ergebnis von `warleek_aeo_extract()` – für den Aufrufer, der
+ *               `speakable` und `abstract` daran hängt.
+ */
+function warleek_seo_aeo_ausgeben( $post ) {
+	if ( ! function_exists( 'warleek_aeo_extract' ) ) { return array( 'frage' => '', 'antwort' => '', 'faq' => array() ); }
+	$aeo = warleek_aeo_extract( (string) get_post_field( 'post_content', $post, 'raw' ) );
+	$faq = warleek_aeo_faq_ld( $aeo, get_permalink( $post ) );
+	if ( $faq ) {
+		echo '<script type="application/ld+json">' . wp_json_encode( $faq, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+	}
+	return $aeo;
+}
+
 function warleek_seo_head() {
 	$home = home_url( '/' );
 	$logo = get_theme_mod( 'custom_logo' ) ?: (int) get_option( 'site_logo', 0 );
@@ -215,6 +236,20 @@ function warleek_seo_head() {
 			'mainEntityOfPage' => get_permalink( $g ),
 		);
 		if ( has_post_thumbnail( $g ) ) { $art['image'] = get_the_post_thumbnail_url( $g, 'large' ); }
+		// Verfassende Rolle statt anonymer Organisation. Wichtig: Das ersetzt nur
+		// `author`. `reviewedBy` bleibt die reale Person aus den Optionen – eine
+		// Redaktionsrolle kann schreiben, aber nicht für sich selbst bürgen.
+		if ( function_exists( 'warleek_guide_autor' ) ) {
+			$person = warleek_autor_person_ld( warleek_guide_autor( $g ) );
+			if ( $person ) { $art['author'] = $person; }
+		}
+		// Antwortkasten: als `abstract` für Antwortmaschinen und als `speakable`
+		// für Vorleser – damit ein Assistent die Antwort liest und nicht den Guide.
+		$aeo = warleek_seo_aeo_ausgeben( $g );
+		if ( '' !== $aeo['antwort'] ) {
+			$art['abstract']  = $aeo['antwort'];
+			$art['speakable'] = warleek_aeo_speakable();
+		}
 		echo '<script type="application/ld+json">' . wp_json_encode( $art, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
 	}
 
@@ -262,6 +297,11 @@ function warleek_seo_head() {
 		);
 		$ld = array_merge( $ld, warleek_seo_item_herkunft_ld( $it->ID ) );
 		if ( has_post_thumbnail( $it ) ) { $ld['image'] = get_the_post_thumbnail_url( $it, 'large' ); }
+		$aeo = warleek_seo_aeo_ausgeben( $it );
+		if ( '' !== $aeo['antwort'] ) {
+			$ld['abstract']  = $aeo['antwort'];
+			$ld['speakable'] = warleek_aeo_speakable();
+		}
 		echo '<script type="application/ld+json">' . wp_json_encode( $ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
 	}
 

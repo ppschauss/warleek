@@ -10,6 +10,9 @@ seo_title: Wardogs Logistik-Fahrzeuge im Vergleich (Deutsch) | Warleek
 seo_description: Ural, Kodiak, Humvee oder Helikopter: Was Paletten trägt, was kostet und wann sich welches lohnt. Deutscher Wardogs-Guide für die DACH-Region.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: logisticleek
+frage: Welches Fahrzeug trägt in Wardogs Paletten?
+antwort: Der URAL ab Driver 3 für rund $5.000 ist das Logistikfahrzeug für volle Paletten, der Ural Defender ab Driver 18 dasselbe gepanzert. Kodiak, Humvee und MH-6 tragen nur Kisten; Bobcat und Dune Buggy tragen gar keine Fracht.
 ---
 
 Die häufigste vergeudete Runde in der Logistik beginnt damit, dass jemand mit dem falschen Fahrzeug zum Händler fährt. Paletten passen nicht in jedes Auto, und ein Buggy trägt gar nichts.
@@ -69,3 +72,25 @@ Das ist der Grund, warum Logistik die beste Einsteigerrolle ist: Sie ist der ein
 - **Mit vollem Ural parken und aussteigen, um mitzukämpfen.** Das Fahrzeug ist weg, wenn du zurückkommst.
 - **Vier Paletten derselben Art fahren, wenn drei Arten fehlen.** Prüfen, dann kaufen.
 - **Nachts ohne Licht fahren, um nicht gesehen zu werden.** Du wirst trotzdem gesehen und fährst gegen einen Felsen.
+
+## Häufige Fragen
+
+### Was ist der Unterschied zwischen Paletten und Kisten?
+
+Paletten sind die effiziente Form: viel von einer Versorgungsart, günstiger pro Einheit, aber nur mit Ladefläche transportierbar. Kisten sind flexibel – weniger Menge, dafür mehrere Arten nebeneinander und in kleineren Fahrzeugen.
+
+### Tragen die bewaffneten Varianten mehr?
+
+Nein. Kodiak [M249], Humvee [Minigun] und Ural Defender [M249] tragen nicht mehr als die unbewaffneten. Du bezahlst für Feuerkraft und Sitzplätze, nicht für Kapazität.
+
+### Welches Fahrzeug für den ersten Run einer Runde?
+
+Den Ural. Eine neue FOB will Build-Supplies in Menge, und genau das transportiert er. Zum Nachfüllen zwischendurch reicht der Kodiak – schnell, billig, wendig.
+
+### Was wird beim Abladen am häufigsten vergessen?
+
+Die Fracht ins Lager zu übertragen. Was neben der FOB liegt, ist nicht im Lager und zählt nicht.
+
+### Was bringt ein Logistik-Run netto?
+
+Rund $400 Einkauf gegen rund $2.500 bei der Abgabe, also netto rund $2.100 pro Palette, plus Driver-Erfahrung. Findet die Ablieferung in der Hot Zone statt, verdoppelt sich der Cash-Anteil.

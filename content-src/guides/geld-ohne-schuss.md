@@ -10,6 +10,9 @@ seo_title: Wardogs Geld verdienen ohne Kämpfen – Guide Deutsch | Warleek
 seo_description: Spotten, transportieren, wiederbeleben, liefern: Geld verdienen ohne zu kämpfen. Einsteiger-Guide für Deutschland, Österreich und die Schweiz.
 quellen: [Öffentliche Community-Guides zu WARDOGS (Stand Oktober 2026)]
 geprueft: nein
+autor: starterleek
+frage: Wie verdient man in Wardogs Geld, ohne zu kämpfen?
+antwort: Vier Wege: Gegner mit dem Fernglas für $75 markieren, Teamkollegen mit einem billigen Fahrzeug transportieren, Gefallene wiederbeleben und Versorgungspaletten fahren. Eine Palette kostet rund $400 und bringt bei der Abgabe rund $2.500.
 ---
 
 Du startest mit $10.000 und einem kostenlosen Gewehr. Wer damit sofort in Gefechte geht, ist nach zwanzig Minuten pleite und hat nichts gelernt. Es gibt vier Tätigkeiten, die zuverlässig zahlen und bei denen dich praktisch niemand erschießt.
@@ -64,3 +67,21 @@ Die Reihenfolge, die funktioniert:
 Wardogs bezahlt Teamarbeit, nicht Abschüsse. Markieren, fahren, aufstellen, liefern — das sind keine Ersatzhandlungen für Leute, die nicht zielen können. Es sind die Tätigkeiten, für die das Spiel am besten zahlt.
 
 Dass sie nebenbei auch dein Team gewinnen lassen, ist kein Zufall.
+
+## Häufige Fragen
+
+### Was ist die beste erste Investition in Wardogs?
+
+Das Fernglas für $75. Markieren bringt sofort einen kleinen Betrag und Assists in dreistelliger Höhe – und es verrät deine Position nicht, weil es kein Mündungsfeuer gibt.
+
+### Wie viel bringt ein Transport in die Hot Zone?
+
+$500 bis $1.000 pro Person, nochmal rund $500, wenn der Mitfahrer überlebt, und laufend etwas für jeden Abschuss, den er danach macht.
+
+### Was bringt eine Versorgungspalette in Wardogs?
+
+Rund $400 Einkauf, rund $2.500 bei der Abgabe, dazu rund $1.800, wenn ein Teamkollege sie an der FOB abbaut.
+
+### Sollte man das erste Geld in eine bessere Waffe stecken?
+
+Nein. Die kostet bei jedem Tod erneut, und als Anfänger stirbt man oft. Die Reihenfolge, die funktioniert: Fernglas, billiges Fahrzeug, kleiner Hammer – erst dann eine bessere Waffe.

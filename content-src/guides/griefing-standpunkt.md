@@ -11,6 +11,9 @@ seo_title: Wardogs Looten verhindern – Teammates & Griefing | Warleek
 seo_description: Teammates looten dich? Inventar öffnen sperrt dein Loadout. Was wirklich schützt und was nicht – für Deutschland, Österreich und die Schweiz.
 quellen: [Im Spiel beobachtet von Patrick Schauß (Warleek), Oktober 2026, Öffentliche Diskussionen in den Steam-Foren zu WARDOGS (Stand Oktober 2026), 'Community-Guides zum Rüstungssystem (Haltbarkeitswerte)']
 geprueft: teilweise – TAB-Sperre, Rüstungsabnutzung und die beschriebenen Situationen im Spiel beobachtet (Oktober 2026); Strafbeträge und Meldeweg aus den Steam-Foren, von uns nicht nachgemessen
+autor: medicleek
+frage: Wie verhindert man, dass Teammates einen in Wardogs auslooten?
+antwort: Drück TAB, sobald du am Boden liegst. Solange dein Inventar offen ist, ist das Kit nach unserer Beobachtung gesperrt und niemand nimmt dir etwas weg. Ein Tastendruck, der das komplette Loadout rettet – in den Steam-Foren ist die Lesart allerdings umstritten.
 ---
 
 Du gehst zu Boden. Jemand aus deinem Team rennt los, zieht dich aus dem Feuer in Deckung — und dann passiert nichts. Er nimmt deine Ausrüstung und lässt dich liegen.
@@ -88,3 +91,25 @@ Die Steam-Foren sind voll von Vorschlägen, und drei kommen immer wieder:
 Bis dahin gilt: **TAB drücken, melden, benennen** — und sich nicht einreden lassen, dass das normal ist.
 
 Wenn du die Inventarsperre nachprüfst, schreib uns, was du beobachtet hast. Je besser belegt, desto schwerer wegzudiskutieren.
+
+## Häufige Fragen
+
+### Was bedeutet die Meldung „gesperrt“ im Downed-Zustand?
+
+Darüber streiten die Steam-Foren. Die eine Lesart: Es ist für dich gesperrt, Teammates kommen aber heran. Die andere: Niemand kommt heran, solange du im Inventar bist. Unsere Beobachtung deckt sich mit der zweiten – nachgemessen über viele Fälle haben wir es nicht.
+
+### Was kostet ein Teamkill in Wardogs?
+
+Nach Angaben aus den Steam-Foren rund $1.800. Von uns nicht nachgemessen. Bei einem Loadout im Wert von $30.000 ist das keine Strafe, sondern ein Preis.
+
+### Was tut man gegen einen Teamgriefer, ohne Strafe zu zahlen?
+
+Die Rüstung zerstören statt den Spieler. Die Haltbarkeitsreserve liegt nach Community-Angaben zwischen 200 Punkten auf Stufe 1 und 300 auf Stufe 4; ist sie aufgebraucht, schützt die Platte für den Rest des Lebens nicht mehr. Schwer zu dosieren – kurze Stöße statt Dauerfeuer.
+
+### Wie meldet man Griefing in Wardogs?
+
+Punktetafel öffnen, Rechtsklick auf den Namen. Dort gibt es Stummschalten und Melden mit einem eigenen Punkt für Griefing. Es kostet nichts und ist der einzige Weg, der beim Entwickler ankommt.
+
+### Sollte man beim Auslooten die Runde verlassen?
+
+Wir empfehlen es nicht. Es funktioniert nach Community-Angaben, bestraft aber ein ganzes Team für das Verhalten eines Einzelnen. Mit TAB brauchst du es nicht.

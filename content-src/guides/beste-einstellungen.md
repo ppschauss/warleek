@@ -10,6 +10,9 @@ seo_title: Wardogs beste Einstellungen (Deutsch) – mehr FPS | Warleek
 seo_description: Welche Grafikoptionen FPS kosten, welche Sichtbarkeit bringen, dazu DLSS, FSR und Input-Lag. Wardogs-Einstellungen auf Deutsch für DACH.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: techleek
+frage: Welche Einstellungen sind in Wardogs die besten?
+antwort: Nicht alles auf Niedrig. Schütze, was Information liefert – Sichtweite, Modelldetails, Schatten auf Mittel. Kürze, was nur Stimmung liefert: globale Beleuchtung aus, Spiegelungen und Nachbearbeitung nach unten, DLSS oder FSR auf Qualität.
 ---
 
 Der verbreitete Rat lautet „alles auf Niedrig". Der ist falsch. In einem Spiel, in dem du Gegner auf 400 Metern erkennen musst, kostet die falsche Sparmaßnahme mehr Runden, als sie Bilder pro Sekunde bringt.
@@ -79,3 +82,29 @@ Und den Voice-Chat einschalten – siehe [Squad-Kommunikation & Funk](/guides/sq
 6. **Erst danach** Modelldetails und Sichtweite anfassen.
 
 Wenn die Bildrate hoch ist und es trotzdem hakt, ist es kein Grafikproblem, sondern ein Ruckelproblem. Dafür gibt es einen eigenen Guide: [Ruckler und Nachladehänger beheben](/guides/wardogs-ruckler-beheben/).
+
+## Häufige Fragen
+
+### Soll man in Wardogs alles auf Niedrig stellen?
+
+Nein. In einem Spiel, in dem du Gegner auf 400 Metern erkennen musst, kostet die falsche Sparmaßnahme mehr Runden, als sie Bilder pro Sekunde bringt.
+
+### Welche Einstellung kostet am meisten Leistung?
+
+Die globale Beleuchtung – der teuerste einzelne Posten. Sie ist der erste Schalter, den man ausmacht.
+
+### Sollte man die Schatten ganz abschalten?
+
+Nein, Mittel ist der Kompromiss. Ein Schatten hinter einer Mauer verrät Bewegung, bevor du den Spieler siehst.
+
+### Was hilft gegen Input-Lag in Wardogs?
+
+V-Sync aus, wenn du keinen variablen Bildwiederholer hast, Reflex oder Anti-Lag einschalten, und die FPS-Grenze knapp unter die Bildwiederholrate setzen. Ein Bild, das nie angezeigt wird, kostet nur Latenz.
+
+### Wie weit darf man die Auflösungsskalierung senken?
+
+Nicht unter 70 Prozent. Ab da werden Gegner auf Distanz zu Matsch, und du gewinnst FPS, die du nicht nutzen kannst.
+
+### Welche Audio-Einstellungen helfen beim Orten?
+
+Dynamikumfang auf die engere Einstellung, damit leise Geräusche nicht untergehen, und Musik leiser bei lauteren Effekten – die Musik verdeckt genau die Frequenzen, in denen Schritte liegen.

@@ -10,6 +10,9 @@ seo_title: Wardogs FOB verteidigen – Anleitung (Deutsch) | Warleek
 seo_description: Sichtlinien schließen, Mörser und Stingray setzen, Nachschub sichern: FOB-Verteidigung in Wardogs auf Deutsch – für Spieler in DACH.
 quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
+autor: engineerleek
+frage: Warum fallen FOBs in Wardogs?
+antwort: Fast nie wegen eines fehlenden Geschützes. Es sind drei Ursachen: Jemand kann hineinsehen, der Nachschub reißt ab, oder niemand ist da. Eine FOB braucht zwei bis drei Leute, die in Rufweite bleiben.
 ---
 
 Der Bau einer FOB ist in zehn Minuten erledigt. Sie am Leben zu halten, ist Arbeit für die ganze Runde. Wenn eine FOB fällt, liegt es fast nie am fehlenden Geschütz – sondern an einer der drei Ursachen unten.
@@ -74,3 +77,25 @@ Der Nebeneffekt: Jede Abgabe bringt rund $2.500. Die Basis zu versorgen ist glei
 - **Aufgeben können.** Wenn zwei Fraktionen gleichzeitig angreifen, ist die Basis verloren. Nehmt mit, was tragbar ist, und baut 300 Meter weiter neu – Material, das ihr rettet, ist Material, das ihr nicht wieder heranfahren müsst.
 
 > [!hinweis] Eine FOB ist kein Spawnpunkt. Wer in der verteidigten Basis stirbt, läuft trotzdem zurück – es sei denn, ein Spawn-APC steht dahinter. Siehe [Spawnen und an die Front kommen](/guides/wardogs-spawnen/).
+
+## Häufige Fragen
+
+### Wohin setzt man die HESCO-Elemente?
+
+Nicht gleichmäßig rundherum, sondern dorthin, wo man hineinsehen kann. Vor dem ersten Bauwerk einmal um die Bauzone gehen und schauen, von welchen Punkten aus die Basis einsehbar ist.
+
+### Wo steht der Mörser in einer FOB am besten?
+
+Tief in der Basis hinter Deckung. Der L81 braucht keinen Sichtkontakt, nur Munition und eine Markierung – er trifft sehr zuverlässig, was ein Recon mit Fernglas markiert hat.
+
+### Lohnt sich ein Vanguard CIWS statt HESCO-Wänden?
+
+Meistens nicht. Für die 901 Build-Supplies eines CIWS bekommst du rund zwanzig Wandsegmente, und die helfen gegen alles – Scharfschützen, Werfer, Zufälle – nicht nur gegen Helikopter.
+
+### Kann man in der eigenen FOB spawnen?
+
+Nein. Wer in der verteidigten Basis stirbt, läuft trotzdem zurück – es sei denn, ein Spawn-APC steht dahinter.
+
+### Was tun, wenn die FOB nicht zu halten ist?
+
+Mitnehmen, was tragbar ist, und 300 Meter weiter neu bauen. Material, das ihr rettet, ist Material, das ihr nicht wieder heranfahren müsst.
