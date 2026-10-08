@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.28.0
+Stable tag: 2.28.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.28.1 =
+* Eigenes Titelbild für den Munitions-Guide: Composing aus vorhandenen Pressekit-Assets (Sturmgewehr, Munitionspalette, MG), abgedunkelt, mit Titel in der Hausschrift. Neues Skript `bin/guide-bild-bauen.py` macht das wiederholbar.
 
 = 2.28.0 =
 * Batch 3: elf Kaliber-Einträge (neue Kategorie „Munition") plus ein Guide zu FMJ, Flesh Damage und Armor Piercing – mit der Trennung zwischen gemessenen Werten (gegen Ungepanzerte) und hergeleiteten (gegen Rüstung).

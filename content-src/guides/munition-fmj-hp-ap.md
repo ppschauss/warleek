@@ -3,8 +3,8 @@ title: "Munition wählen: FMJ, Flesh Damage und Armor Piercing"
 slug: wardogs-munition
 thema: equipment
 order: 45
-image: bild-haendler
-image_alt: Am Haendlertresen liegen Magazine, Optiken und Munitionsschachteln nebeneinander
+image: guide-munition
+image_alt: Drei ueberlagerte Bildkacheln aus WARDOGS: ein Sturmgewehr, eine Palette gestapelter Munitionskisten und ein gurtgefuettertes Maschinengewehr
 excerpt: Drei Sorten je Kaliber, und die Wahl kostet nichts extra. Was Hollow Point verdoppelt, was Armor Piercing kostet – und warum die Rüstungswerte unsicherer sind als die anderen.
 seo_title: Wardogs Munition – FMJ, HP und AP im Vergleich | Warleek
 seo_description: Welche Munitionssorte gegen wen wirkt, mit gemessenen Werten und einer ehrlichen Lücke. Für Deutschland, Österreich und die Schweiz.

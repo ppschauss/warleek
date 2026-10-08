@@ -1494,5 +1494,10 @@
         "use": "item-typ-anbauteil",
         "size": 210672,
         "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "guide-munition.webp": {
+        "alt": "Drei ueberlagerte Bildkacheln aus WARDOGS: ein Sturmgewehr, eine Palette gestapelter Munitionskisten und ein gurtgefuettertes Maschinengewehr",
+        "use": "guide-munition",
+        "size": 20144
     }
 }
