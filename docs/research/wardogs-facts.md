@@ -209,3 +209,52 @@ Freischaltgebühren Fahrzeuge: URAL Driver 3 ($35.000, in Season 1 von $50.000 g
 - Kodiak [Pickup]: 6 Sitze, 154 km/h, ab Driver 10.
 - Humvee: ~95 % weniger Schaden durch Handfeuerwaffen, ~500 HP, dafür nur 113 km/h.
 - URAL: 79 km/h, ~700 HP – Logistikfahrzeug, kein Personentransport.
+
+## Munition (Stand Oktober 2026)
+
+Drei Sorten je Kaliber, dazu jede als Leuchtspur-Variante:
+
+- **Standard (FMJ)** – Basiswert, von Anfang an auf jeder Waffe des passenden Kalibers.
+- **Flesh Damage (HP, Hollow Point)** – gegen Ungepanzerte stark, gegen Rüstung schwach.
+- **Armor Piercing (AP)** – gegen Rüstung und Fahrzeuge stark, gegen ungeschützte Körperteile schwach.
+
+Multiplikatoren – **die beiden Quellen messen Verschiedenes, nicht Widersprüchliches**:
+
+| | gegen ungepanzert | gegen Rüstung |
+|---|---|---|
+| FMJ | 1,0× (Basis) | Basis |
+| HP | **2,0×** | −30 % |
+| AP | **0,8×** | +30 % |
+
+- Die Werte für *ungepanzert* sind im Schießstand **gemessen** (metabot.gg). Dieselbe Quelle schreibt ausdrücklich, den Rüstungsfall **nicht** gemessen zu haben.
+- Die ±30 % *gegen Rüstung* stammen aus der Auswertung bei allthings.how, nicht aus einer Messung.
+- Rüstung senkt eingehenden Kugelschaden auf **gedeckten Körperteilen um 60 %**; ein ungeschützter Arm oder ein ungeschütztes Bein nimmt den vollen Schaden, unabhängig vom Preis der Weste (allthings.how).
+- **Leuchtspur** gibt es zu jeder Sorte, beim Händler mit **(T)** markiert, zum gleichen Preis wie die Variante ohne – bis auf wenige Ausnahmen (allthings.how).
+- Von uns **nicht im Spiel nachgeprüft**.
+- Quellen: metabot.gg/en/wardogs/guides/ammo-types-fmj-hp-ap (Messung ungepanzert), allthings.how/wardogs-ammo-types-what-fmj-hollow-point-and-armor-piercing-do-to-armor/ (Rüstung, Leuchtspur, Kaliberliste)
+
+## Anbauteile (Stand Oktober 2026) — Quellenlage unbrauchbar für Einzelwerte
+
+**Einig sind sich die Quellen nur über die Mechanik:**
+
+- **Vier Steckplätze je Waffe:** Optik, Griff (Foregrip), Mündung, Magazin.
+- **Zwei Kostenarten**, wie bei Waffen und Fahrzeugen: einmalige **Freischaltgebühr** bei Erreichen einer Track-Stufe, danach **Listenpreis pro Kauf**.
+- **Gewicht ist der eigentliche Preis**: Anbauteile schieben das Loadout in die nächste Gewichtsklasse (allthings.how).
+- Empfohlene Reihenfolge beim Ausrüsten: **Magazin → Griff → Optik → Mündung** (xgamingserver).
+- Das Magazin ist der einzige Platz, der ab Werk belegt ist.
+
+**Uneinig sind sie sich bei allem Zählbaren:**
+
+| | Optiken | Magazine | Gesamtzahl | Freischaltstufen |
+|---|---|---|---|---|
+| wardogshub.gg | 21 | 42 | — | — |
+| xgamingserver.com | 8 | 23 | 42 (7 Mündungen, 8 Optiken, 4 Griffe, 23 Magazine) | nicht genannt |
+| allthings.how | — | — | nicht genannt | ja, mit Gebühren |
+
+Die **benannten Teile überschneiden sich fast nicht**: xgamingserver führt „RK6 Tactical Foregrip $380", allthings.how „Rubberized Ergonomic Foregrip $540 / $7.500 Freischaltung bei Assault 11". Keine Liste enthält die Teile der anderen.
+
+> **Keine Einzelwerte übernehmen.** Die Abweichung bei der Gesamtzahl beträgt Faktor fünf, und unser eigener HOTAS-Guide hält bereits fest, dass ein großer Teil der WARDOGS-Seiten in den Suchergebnissen automatisiert erzeugt ist. Preise, Stufen und Teilelisten gehören erst in die Datenbank, wenn sie **im Spiel am Händler abgelesen** sind.
+
+Einzige halbwegs gestützte Einzelwerte (zwei Optiken, aus einer Quelle, früher erfasst): Tricon 1.5x Prisma (0,2 kg, Zeroing 100–200 m), CQ-2x Prisma ($640, 0,31 kg, 100–300 m).
+
+Quellen: allthings.how/wardogs-how-to-get-attachments-for-weapons/, xgamingserver.com/blog/wardogs-attachments-guide/, wardogshub.gg/attachments/

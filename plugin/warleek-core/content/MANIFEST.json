@@ -1482,5 +1482,17 @@
         "use": "item-wardogs-wrench",
         "size": 5868,
         "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-typ-munition.webp": {
+        "alt": "WARDOGS: gurtgefüttertes Maschinengewehr in der Ego-Perspektive – Symbolbild für Munition",
+        "use": "item-typ-munition",
+        "size": 41946,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "item-typ-anbauteil.webp": {
+        "alt": "WARDOGS: Sturmgewehr mit montiertem Rotpunktvisier in der Ego-Perspektive – Symbolbild für Anbauteile",
+        "use": "item-typ-anbauteil",
+        "size": 210672,
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
     }
 }

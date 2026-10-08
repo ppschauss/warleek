@@ -1,698 +1,706 @@
 {
-  "gruppe-sturmgewehr": {
-    "alt": "WARDOGS: Sturmgewehr mit Rotpunktvisier in der Ego-Perspektive in einer Dorfstraße",
-    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
-  },
-  "gruppe-scharfschuetze": {
-    "alt": "WARDOGS: zwei Scharfschützen im Ghillie-Anzug in Stellung auf einer Wiese",
-    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
-  },
-  "gruppe-panzerabwehr": {
-    "alt": "WARDOGS: Soldat feuert eine Panzerabwehrwaffe auf ein gepanzertes Fahrzeug",
-    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
-  },
-  "gruppe-mg": {
-    "alt": "WARDOGS: gurtgefüttertes Maschinengewehr in der Ego-Perspektive, Feuer auf einen Helikopter",
-    "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
-  },
-  "gruppe-helikopter": {
-    "alt": "WARDOGS: leichter Transporthubschrauber im Tiefflug, Soldaten sitzen auf den Kufen",
-    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
-  },
-  "gruppe-panzer": {
-    "alt": "WARDOGS: Kampfpanzer in einer Ortschaft, davor zwei Soldaten",
-    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
-  },
-  "gruppe-lkw": {
-    "alt": "WARDOGS: beladener Logistik-LKW an einer Baustelle im Abendlicht",
-    "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
-  },
-  "typ-waffe": {
-    "alt": "WARDOGS: Gefecht im Hausinneren aus der Ego-Perspektive – Symbolbild für Waffen auf kurze Distanz",
-    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
-  },
-  "typ-fahrzeug": {
-    "alt": "WARDOGS: gepanzertes Radfahrzeug auf einer Piste vor einer Industrieanlage",
-    "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
-  },
-  "typ-emplacement": {
-    "alt": "WARDOGS: montierte Waffe im Anschlag über einer Industrieanlage – Symbolbild für Stellungen",
-    "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
-  },
-  "typ-bauwerk": {
-    "alt": "WARDOGS: befestigter Industriekomplex mit Mauern und Containern – Symbolbild für Bauwerke",
-    "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
-  },
-  "wardogs-a-91": {
-    "alt": "A-91 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ah-6m-miniguns": {
-    "alt": "AH-6M [Miniguns] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ah-6r-rockets": {
-    "alt": "AH-6R [Rockets] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ak-74": {
-    "alt": "AK-74 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-amp-9": {
-    "alt": "AMP-9 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-amr-50": {
-    "alt": "AMR 50 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-bmr-308": {
-    "alt": "BMR-308 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-bobcat": {
-    "alt": "Bobcat aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-bremer-wall": {
-    "alt": "Bremer Wall aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-bunker": {
-    "alt": "Bunker aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-bushmaster-m17s": {
-    "alt": "Bushmaster M17S aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-compound-bow": {
-    "alt": "Compound Bow aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-deagle": {
-    "alt": "Deagle aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-drill-rig": {
-    "alt": "Drill Rig aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-dune-buggy": {
-    "alt": "Dune Buggy aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-fal": {
-    "alt": "FAL aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-flakpanzer-gepard": {
-    "alt": "Flakpanzer Gepard aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-galil": {
-    "alt": "Galil aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ggx-17": {
-    "alt": "GGX 17 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ggx-18": {
-    "alt": "GGX 18 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-havoc": {
-    "alt": "Havoc aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-hedgehog": {
-    "alt": "Hedgehog aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-hesco-block": {
-    "alt": "HESCO-Block aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-hesco-wand": {
-    "alt": "HESCO-Wand aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-humvee-m249": {
-    "alt": "Humvee [M249] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-humvee-minigun": {
-    "alt": "Humvee [Minigun] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-humvee": {
-    "alt": "Humvee aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-judge": {
-    "alt": "Judge aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-kh-2002": {
-    "alt": "KH-2002 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-kodiak-m249": {
-    "alt": "Kodiak [M249] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-kodiak-pickup": {
-    "alt": "Kodiak [Pickup] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-kodiak": {
-    "alt": "Kodiak aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-l2a6": {
-    "alt": "L2A6 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-l81-moerser": {
-    "alt": "L81 Mörser aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-loudspeaker": {
-    "alt": "Loudspeaker aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m113-apc-sv": {
-    "alt": "M113 APC SV aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m1911": {
-    "alt": "M1911 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m249-saw": {
-    "alt": "M249 SAW aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m4": {
-    "alt": "M4 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m500": {
-    "alt": "M500 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-maaws": {
-    "alt": "MAAWS aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-mgl-40": {
-    "alt": "MGL-40 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-mh-6": {
-    "alt": "MH-6 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-mk22": {
-    "alt": "MK22 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-mosin-nagant": {
-    "alt": "Mosin Nagant aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-mp43": {
-    "alt": "MP43 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-mp5": {
-    "alt": "MP5 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-pkm": {
-    "alt": "PKM aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-pp-19-vityaz": {
-    "alt": "PP-19 Vityaz aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-recon-turm": {
-    "alt": "Recon-Turm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-recon-zelt": {
-    "alt": "Recon-Zelt aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-reparaturstation": {
-    "alt": "Reparaturstation aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-rpg-7": {
-    "alt": "RPG-7 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-sandsaecke": {
-    "alt": "Sandsäcke aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-scout-rifle-td": {
-    "alt": "Scout Rifle TD aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-sks": {
-    "alt": "SKS aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-sph-2": {
-    "alt": "SPH-2 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-stacheldraht": {
-    "alt": "Stacheldraht aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-stingray": {
-    "alt": "Stingray aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-super-45": {
-    "alt": "Super-45 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-sv-98": {
-    "alt": "SV-98 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-svd": {
-    "alt": "SVD aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-t-21": {
-    "alt": "T-21 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-talon-9k-sam": {
-    "alt": "Talon 9K-SAM aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-tankstation": {
-    "alt": "Tankstation aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-tor": {
-    "alt": "Tor aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-tuer": {
-    "alt": "Tür aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ural-defender-m249": {
-    "alt": "Ural Defender [M249] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ural-defender": {
-    "alt": "Ural Defender aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-vanguard-ciws": {
-    "alt": "Vanguard CIWS aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-uh-1y-miniguns": {
-    "alt": "UH-1Y [Miniguns] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-uh-1y": {
-    "alt": "UH-1Y aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-2a42-autocannon": {
-    "alt": "2A42 Autocannon aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-9k333-verba": {
-    "alt": "9K333 Verba aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-at-mine": {
-    "alt": "AT-Mine aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-b13-rocket-pods": {
-    "alt": "B 13 Rocket Pods aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-bauradio": {
-    "alt": "Bauradio aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-brechstange": {
-    "alt": "Halligan Bar aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-bunker-boden": {
-    "alt": "Bunkerboden aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-bunker-dach": {
-    "alt": "Bunkerdach aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-claymore": {
-    "alt": "Claymore aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-fob": {
-    "alt": "Forward Operating Base aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-grosser-hammer": {
-    "alt": "Großer Hammer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-hblock": {
-    "alt": "HBlock aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-hesco-block-gross": {
-    "alt": "HESCO-Block (groß) aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-kleiner-hammer": {
-    "alt": "Kleiner Hammer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-l52-kanone": {
-    "alt": "L52 Cannon aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-l55a1-kanone": {
-    "alt": "L55A1 Cannon aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m12g": {
-    "alt": "M12G aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m134d-minigun": {
-    "alt": "M134D Minigun aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m249-mg": {
-    "alt": "M249 Machine Gun aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-mg3a1-koaxial": {
-    "alt": "MG3A1 Coaxial Gun aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-mittlerer-hammer": {
-    "alt": "Mittlerer Hammer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-moerser-unterstand": {
-    "alt": "Mörser-Unterstand aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-munitionskiste": {
-    "alt": "Munitionskiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-oerlikon-gdf": {
-    "alt": "Duel 35mm Oerlikon GDF Cannons aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-schraubenschluessel": {
-    "alt": "Schraubenschlüssel aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "typ-ausruestung": {
-    "alt": "WARDOGS-Spielszene: Soldat in Deckung in einer Industriehalle – Symbolbild für Ausrüstung",
-    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
-  },
-  "typ-wurfwaffe": {
-    "alt": "WARDOGS-Spielszene: Explosion reißt eine Gebäudefassade auf – Symbolbild für Wurfwaffen",
-    "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
-  },
-  "wardogs-adrenalin": {
-    "alt": "Adrenalinspritze aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-assault-backpack": {
-    "alt": "Assault-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-c4": {
-    "alt": "C4-Ladung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-defibrillator-ausr": {
-    "alt": "Defibrillator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-emergency-resuscitator": {
-    "alt": "Emergency Resuscitator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-enox": {
-    "alt": "Enox aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-entfernungsmesser": {
-    "alt": "Entfernungsmesser aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-erste-hilfe-set": {
-    "alt": "Individuelles Erste-Hilfe-Set aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-fernglas": {
-    "alt": "Fernglas aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-fernzuender": {
-    "alt": "Fernzünder aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-field-backpack": {
-    "alt": "Field-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-field-resuscitator": {
-    "alt": "Field Resuscitator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-gold-splittergranate": {
-    "alt": "Goldene Splittergranate aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ied": {
-    "alt": "Unkonventionelle Sprengvorrichtung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ir-entfernungsmesser": {
-    "alt": "Infrarot-Entfernungsmesser aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m18-rauch-schwarz": {
-    "alt": "M18 Rauchgranate: Schwarz aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m18-rauch-weiss": {
-    "alt": "M18 Rauchgranate: Weiß aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m18-signal-alarm": {
-    "alt": "M18 Signalgranate: Alarm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m18-signal-fahrzeug": {
-    "alt": "M18 Signalgranate: Fahrzeug beschädigt aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m18-signal-feind": {
-    "alt": "M18 Signalgranate: Feind aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m18-signal-freund": {
-    "alt": "M18 Signalgranate: Freund aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m18-signal-landezone": {
-    "alt": "M18 Signalgranate: Landezone aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m18-signal-nachschub": {
-    "alt": "M18 Signalgranate: Nachschub aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-m67-splittergranate": {
-    "alt": "M67 Splittergranate aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-medium-backpack-sling": {
-    "alt": "Mittlerer Rucksack + Schlinge aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-medizintasche": {
-    "alt": "Medizintasche aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-monokular": {
-    "alt": "Monokular aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-operator-backpack": {
-    "alt": "Operator-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ruck-backpack": {
-    "alt": "Ruck-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-scout-backpack": {
-    "alt": "Scout-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-verband": {
-    "alt": "Verband aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-arsenal-backpack": {
-    "alt": "Arsenal-Rucksack + 2 Schlingen aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-bohrer-leicht": {
-    "alt": "Leichter Bohrer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-bohrer-schwer": {
-    "alt": "Schwerer Bohrer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-fallschirm": {
-    "alt": "Fallschirm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ghillie-anzug-tot": {
-    "alt": "Ghillie-Anzug (Dead) aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ghillie-anzug": {
-    "alt": "Ghillie-Anzug aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ghillie-kopf-tot": {
-    "alt": "Ghillie-Kopfbedeckung (Dead) aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-ghillie-kopf": {
-    "alt": "Ghillie-Kopfbedeckung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-gunner-backpack": {
-    "alt": "Gunner-Rucksack + Schlinge aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-halftrack-backpack": {
-    "alt": "Halftrack-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-helm-1": {
-    "alt": "Helm Stufe 1 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-helm-2": {
-    "alt": "Helm Stufe 2 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-helm-3": {
-    "alt": "Helm Stufe 3 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-helm-4": {
-    "alt": "Helm Stufe 4 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-kanister": {
-    "alt": "Kanister aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-kiste-gross-gepanzert": {
-    "alt": "Große gepanzerte Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-kiste-gross": {
-    "alt": "Große Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-kiste-klein-gepanzert": {
-    "alt": "Kleine gepanzerte Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-kiste-klein": {
-    "alt": "Kleine Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-palette-ammo": {
-    "alt": "Palette Ammo-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-palette-build": {
-    "alt": "Palette Build-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-palette-fuel": {
-    "alt": "Palette Fuel-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-palette-mechanical": {
-    "alt": "Palette Mechanical-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-panzerung-1": {
-    "alt": "Panzerung Stufe 1 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-panzerung-2": {
-    "alt": "Panzerung Stufe 2 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-panzerung-3": {
-    "alt": "Panzerung Stufe 3 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-panzerung-4": {
-    "alt": "Panzerung Stufe 4 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-pouch": {
-    "alt": "Tasche aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-sport-fallschirm": {
-    "alt": "Sport-Fallschirm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-weste-gross": {
-    "alt": "Große Taktikweste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-weste-klein": {
-    "alt": "Kleine Taktikweste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-weste-mittel": {
-    "alt": "Mittlere Taktikweste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  },
-  "wardogs-wrench": {
-    "alt": "Wrench aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-    "credit": "Spiel-Asset · © BULKHEAD / Team17"
-  }
+    "gruppe-sturmgewehr": {
+        "alt": "WARDOGS: Sturmgewehr mit Rotpunktvisier in der Ego-Perspektive in einer Dorfstraße",
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "gruppe-scharfschuetze": {
+        "alt": "WARDOGS: zwei Scharfschützen im Ghillie-Anzug in Stellung auf einer Wiese",
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "gruppe-panzerabwehr": {
+        "alt": "WARDOGS: Soldat feuert eine Panzerabwehrwaffe auf ein gepanzertes Fahrzeug",
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "gruppe-mg": {
+        "alt": "WARDOGS: gurtgefüttertes Maschinengewehr in der Ego-Perspektive, Feuer auf einen Helikopter",
+        "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
+    },
+    "gruppe-helikopter": {
+        "alt": "WARDOGS: leichter Transporthubschrauber im Tiefflug, Soldaten sitzen auf den Kufen",
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "gruppe-panzer": {
+        "alt": "WARDOGS: Kampfpanzer in einer Ortschaft, davor zwei Soldaten",
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "gruppe-lkw": {
+        "alt": "WARDOGS: beladener Logistik-LKW an einer Baustelle im Abendlicht",
+        "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
+    },
+    "typ-waffe": {
+        "alt": "WARDOGS: Gefecht im Hausinneren aus der Ego-Perspektive – Symbolbild für Waffen auf kurze Distanz",
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "typ-fahrzeug": {
+        "alt": "WARDOGS: gepanzertes Radfahrzeug auf einer Piste vor einer Industrieanlage",
+        "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
+    },
+    "typ-emplacement": {
+        "alt": "WARDOGS: montierte Waffe im Anschlag über einer Industrieanlage – Symbolbild für Stellungen",
+        "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
+    },
+    "typ-bauwerk": {
+        "alt": "WARDOGS: befestigter Industriekomplex mit Mauern und Containern – Symbolbild für Bauwerke",
+        "credit": "Offizieller Trailer (Pressekit) · © BULKHEAD / Team17"
+    },
+    "wardogs-a-91": {
+        "alt": "A-91 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ah-6m-miniguns": {
+        "alt": "AH-6M [Miniguns] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ah-6r-rockets": {
+        "alt": "AH-6R [Rockets] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ak-74": {
+        "alt": "AK-74 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-amp-9": {
+        "alt": "AMP-9 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-amr-50": {
+        "alt": "AMR 50 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-bmr-308": {
+        "alt": "BMR-308 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-bobcat": {
+        "alt": "Bobcat aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-bremer-wall": {
+        "alt": "Bremer Wall aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-bunker": {
+        "alt": "Bunker aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-bushmaster-m17s": {
+        "alt": "Bushmaster M17S aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-compound-bow": {
+        "alt": "Compound Bow aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-deagle": {
+        "alt": "Deagle aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-drill-rig": {
+        "alt": "Drill Rig aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-dune-buggy": {
+        "alt": "Dune Buggy aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-fal": {
+        "alt": "FAL aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-flakpanzer-gepard": {
+        "alt": "Flakpanzer Gepard aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-galil": {
+        "alt": "Galil aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ggx-17": {
+        "alt": "GGX 17 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ggx-18": {
+        "alt": "GGX 18 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-havoc": {
+        "alt": "Havoc aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-hedgehog": {
+        "alt": "Hedgehog aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-hesco-block": {
+        "alt": "HESCO-Block aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-hesco-wand": {
+        "alt": "HESCO-Wand aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-humvee-m249": {
+        "alt": "Humvee [M249] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-humvee-minigun": {
+        "alt": "Humvee [Minigun] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-humvee": {
+        "alt": "Humvee aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-judge": {
+        "alt": "Judge aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-kh-2002": {
+        "alt": "KH-2002 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-kodiak-m249": {
+        "alt": "Kodiak [M249] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-kodiak-pickup": {
+        "alt": "Kodiak [Pickup] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-kodiak": {
+        "alt": "Kodiak aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-l2a6": {
+        "alt": "L2A6 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-l81-moerser": {
+        "alt": "L81 Mörser aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-loudspeaker": {
+        "alt": "Loudspeaker aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m113-apc-sv": {
+        "alt": "M113 APC SV aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m1911": {
+        "alt": "M1911 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m249-saw": {
+        "alt": "M249 SAW aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m4": {
+        "alt": "M4 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m500": {
+        "alt": "M500 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-maaws": {
+        "alt": "MAAWS aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-mgl-40": {
+        "alt": "MGL-40 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-mh-6": {
+        "alt": "MH-6 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-mk22": {
+        "alt": "MK22 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-mosin-nagant": {
+        "alt": "Mosin Nagant aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-mp43": {
+        "alt": "MP43 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-mp5": {
+        "alt": "MP5 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-pkm": {
+        "alt": "PKM aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-pp-19-vityaz": {
+        "alt": "PP-19 Vityaz aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-recon-turm": {
+        "alt": "Recon-Turm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-recon-zelt": {
+        "alt": "Recon-Zelt aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-reparaturstation": {
+        "alt": "Reparaturstation aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-rpg-7": {
+        "alt": "RPG-7 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-sandsaecke": {
+        "alt": "Sandsäcke aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-scout-rifle-td": {
+        "alt": "Scout Rifle TD aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-sks": {
+        "alt": "SKS aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-sph-2": {
+        "alt": "SPH-2 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-stacheldraht": {
+        "alt": "Stacheldraht aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-stingray": {
+        "alt": "Stingray aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-super-45": {
+        "alt": "Super-45 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-sv-98": {
+        "alt": "SV-98 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-svd": {
+        "alt": "SVD aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-t-21": {
+        "alt": "T-21 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-talon-9k-sam": {
+        "alt": "Talon 9K-SAM aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-tankstation": {
+        "alt": "Tankstation aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-tor": {
+        "alt": "Tor aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-tuer": {
+        "alt": "Tür aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ural-defender-m249": {
+        "alt": "Ural Defender [M249] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ural-defender": {
+        "alt": "Ural Defender aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-vanguard-ciws": {
+        "alt": "Vanguard CIWS aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-uh-1y-miniguns": {
+        "alt": "UH-1Y [Miniguns] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-uh-1y": {
+        "alt": "UH-1Y aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-2a42-autocannon": {
+        "alt": "2A42 Autocannon aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-9k333-verba": {
+        "alt": "9K333 Verba aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-at-mine": {
+        "alt": "AT-Mine aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-b13-rocket-pods": {
+        "alt": "B 13 Rocket Pods aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-bauradio": {
+        "alt": "Bauradio aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-brechstange": {
+        "alt": "Halligan Bar aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-bunker-boden": {
+        "alt": "Bunkerboden aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-bunker-dach": {
+        "alt": "Bunkerdach aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-claymore": {
+        "alt": "Claymore aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-fob": {
+        "alt": "Forward Operating Base aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-grosser-hammer": {
+        "alt": "Großer Hammer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-hblock": {
+        "alt": "HBlock aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-hesco-block-gross": {
+        "alt": "HESCO-Block (groß) aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-kleiner-hammer": {
+        "alt": "Kleiner Hammer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-l52-kanone": {
+        "alt": "L52 Cannon aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-l55a1-kanone": {
+        "alt": "L55A1 Cannon aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m12g": {
+        "alt": "M12G aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m134d-minigun": {
+        "alt": "M134D Minigun aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m249-mg": {
+        "alt": "M249 Machine Gun aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-mg3a1-koaxial": {
+        "alt": "MG3A1 Coaxial Gun aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-mittlerer-hammer": {
+        "alt": "Mittlerer Hammer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-moerser-unterstand": {
+        "alt": "Mörser-Unterstand aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-munitionskiste": {
+        "alt": "Munitionskiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-oerlikon-gdf": {
+        "alt": "Duel 35mm Oerlikon GDF Cannons aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-schraubenschluessel": {
+        "alt": "Schraubenschlüssel aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "typ-ausruestung": {
+        "alt": "WARDOGS-Spielszene: Soldat in Deckung in einer Industriehalle – Symbolbild für Ausrüstung",
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "typ-wurfwaffe": {
+        "alt": "WARDOGS-Spielszene: Explosion reißt eine Gebäudefassade auf – Symbolbild für Wurfwaffen",
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "wardogs-adrenalin": {
+        "alt": "Adrenalinspritze aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-assault-backpack": {
+        "alt": "Assault-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-c4": {
+        "alt": "C4-Ladung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-defibrillator-ausr": {
+        "alt": "Defibrillator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-emergency-resuscitator": {
+        "alt": "Emergency Resuscitator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-enox": {
+        "alt": "Enox aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-entfernungsmesser": {
+        "alt": "Entfernungsmesser aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-erste-hilfe-set": {
+        "alt": "Individuelles Erste-Hilfe-Set aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-fernglas": {
+        "alt": "Fernglas aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-fernzuender": {
+        "alt": "Fernzünder aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-field-backpack": {
+        "alt": "Field-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-field-resuscitator": {
+        "alt": "Field Resuscitator aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-gold-splittergranate": {
+        "alt": "Goldene Splittergranate aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ied": {
+        "alt": "Unkonventionelle Sprengvorrichtung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ir-entfernungsmesser": {
+        "alt": "Infrarot-Entfernungsmesser aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m18-rauch-schwarz": {
+        "alt": "M18 Rauchgranate: Schwarz aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m18-rauch-weiss": {
+        "alt": "M18 Rauchgranate: Weiß aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m18-signal-alarm": {
+        "alt": "M18 Signalgranate: Alarm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m18-signal-fahrzeug": {
+        "alt": "M18 Signalgranate: Fahrzeug beschädigt aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m18-signal-feind": {
+        "alt": "M18 Signalgranate: Feind aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m18-signal-freund": {
+        "alt": "M18 Signalgranate: Freund aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m18-signal-landezone": {
+        "alt": "M18 Signalgranate: Landezone aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m18-signal-nachschub": {
+        "alt": "M18 Signalgranate: Nachschub aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-m67-splittergranate": {
+        "alt": "M67 Splittergranate aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-medium-backpack-sling": {
+        "alt": "Mittlerer Rucksack + Schlinge aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-medizintasche": {
+        "alt": "Medizintasche aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-monokular": {
+        "alt": "Monokular aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-operator-backpack": {
+        "alt": "Operator-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ruck-backpack": {
+        "alt": "Ruck-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-scout-backpack": {
+        "alt": "Scout-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-verband": {
+        "alt": "Verband aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-arsenal-backpack": {
+        "alt": "Arsenal-Rucksack + 2 Schlingen aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-bohrer-leicht": {
+        "alt": "Leichter Bohrer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-bohrer-schwer": {
+        "alt": "Schwerer Bohrer aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-fallschirm": {
+        "alt": "Fallschirm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ghillie-anzug-tot": {
+        "alt": "Ghillie-Anzug (Dead) aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ghillie-anzug": {
+        "alt": "Ghillie-Anzug aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ghillie-kopf-tot": {
+        "alt": "Ghillie-Kopfbedeckung (Dead) aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-ghillie-kopf": {
+        "alt": "Ghillie-Kopfbedeckung aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-gunner-backpack": {
+        "alt": "Gunner-Rucksack + Schlinge aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-halftrack-backpack": {
+        "alt": "Halftrack-Rucksack aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-helm-1": {
+        "alt": "Helm Stufe 1 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-helm-2": {
+        "alt": "Helm Stufe 2 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-helm-3": {
+        "alt": "Helm Stufe 3 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-helm-4": {
+        "alt": "Helm Stufe 4 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-kanister": {
+        "alt": "Kanister aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-kiste-gross-gepanzert": {
+        "alt": "Große gepanzerte Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-kiste-gross": {
+        "alt": "Große Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-kiste-klein-gepanzert": {
+        "alt": "Kleine gepanzerte Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-kiste-klein": {
+        "alt": "Kleine Kiste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-palette-ammo": {
+        "alt": "Palette Ammo-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-palette-build": {
+        "alt": "Palette Build-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-palette-fuel": {
+        "alt": "Palette Fuel-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-palette-mechanical": {
+        "alt": "Palette Mechanical-Supplies aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-panzerung-1": {
+        "alt": "Panzerung Stufe 1 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-panzerung-2": {
+        "alt": "Panzerung Stufe 2 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-panzerung-3": {
+        "alt": "Panzerung Stufe 3 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-panzerung-4": {
+        "alt": "Panzerung Stufe 4 aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-pouch": {
+        "alt": "Tasche aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-sport-fallschirm": {
+        "alt": "Sport-Fallschirm aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-weste-gross": {
+        "alt": "Große Taktikweste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-weste-klein": {
+        "alt": "Kleine Taktikweste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-weste-mittel": {
+        "alt": "Mittlere Taktikweste aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-wrench": {
+        "alt": "Wrench aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "typ-munition": {
+        "alt": "WARDOGS: gurtgefüttertes Maschinengewehr in der Ego-Perspektive – Symbolbild für Munition",
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "typ-anbauteil": {
+        "alt": "WARDOGS: Sturmgewehr mit montiertem Rotpunktvisier in der Ego-Perspektive – Symbolbild für Anbauteile",
+        "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    }
 }

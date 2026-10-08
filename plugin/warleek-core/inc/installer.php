@@ -768,6 +768,8 @@ function warleek_step_items( $force = false ) {
 		'bauwerk'     => 'Bauwerke',
 		'ausruestung' => 'Ausrüstung',
 		'wurfwaffe'   => 'Wurfwaffen',
+		'munition'    => 'Munition',
+		'anbauteil'   => 'Anbauteile',
 	);
 	foreach ( $namen as $slug => $name ) {
 		if ( ! term_exists( $slug, 'item-typ' ) ) { wp_insert_term( $name, 'item-typ', array( 'slug' => $slug ) ); }

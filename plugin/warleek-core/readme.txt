@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.27.0
+Stable tag: 2.28.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.28.0 =
+* Batch 3: elf Kaliber-Einträge (neue Kategorie „Munition") plus ein Guide zu FMJ, Flesh Damage und Armor Piercing – mit der Trennung zwischen gemessenen Werten (gegen Ungepanzerte) und hergeleiteten (gegen Rüstung).
+* Batch 4: die vier Anbauteil-Steckplätze als Einträge (neue Kategorie „Anbauteile") plus Guide. **Bewusst ohne Einzelteile**: Drei Quellen nennen 21/8 Optiken und 42/23 Magazine, und ihre Teilelisten überschneiden sich fast nicht. Der Widerspruch ist in docs/research/wardogs-facts.md festgehalten.
+* 187 Datenbank-Einträge gesamt, 40 Guides.
 
 = 2.27.0 =
 * Antwort-Optimierung: Jeder Guide trägt oben einen Antwortkasten (`frage:`/`antwort:` im Kopfblock) – bisher stand dort ein Teaser, also eine Frage statt einer Auskunft.
