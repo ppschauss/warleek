@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.29.1
+Stable tag: 2.29.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.29.2 =
+* Einstellungsseite gegliedert: statt 33 Feldern in einer Liste unter „Community & Spiel" jetzt fünf Abschnitte (Community & Spiel, Autor & Vertrauen, Soziale Profile, Patch Notes übersetzen, Einwilligung & Statistik). Die Autorenfelder lagen vorher zwischen Kontakt-E-Mail und Twitter-Handle und waren praktisch nicht auffindbar.
+* Felder ohne Gruppe fallen unter „Sonstiges" statt unsichtbar zu werden.
 
 = 2.29.1 =
 * Google Consent Mode v2: Im Seitenkopf stehen alle vier Signale auf `denied` – reines JavaScript, kein Aufruf bei Google. Die Einwilligung hebt `analytics_storage` auf `granted`, der Widerruf setzt es zurück; die drei Werbe-Signale bleiben dauerhaft abgelehnt.

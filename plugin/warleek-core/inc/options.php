@@ -127,12 +127,70 @@ function warleek_register_options() {
 		'sanitize_callback' => 'warleek_sanitize_options',
 		'default'           => array(),
 	) );
-	add_settings_section( 'warleek_main', 'Community & Spiel', function () {
-		echo '<p>Links zu den Chat-Kanälen und Grunddaten. Leere Felder blenden den jeweiligen Button aus bzw. markieren ihn als „bald".</p>';
-	}, 'warleek' );
-	foreach ( warleek_option_fields() as $key => $def ) {
-		add_settings_field( $key, $def[0], 'warleek_render_option_field', 'warleek', 'warleek_main', array( 'key' => $key, 'def' => $def, 'label_for' => 'warleek_' . $key ) );
+	$gruppen = warleek_option_gruppen();
+	$felder  = warleek_option_fields();
+	$vergeben = array();
+
+	foreach ( $gruppen as $id => $g ) {
+		add_settings_section( 'warleek_' . $id, $g['titel'], function () use ( $g ) {
+			echo '<p>' . wp_kses_post( $g['text'] ) . '</p>';
+		}, 'warleek' );
+		foreach ( $g['felder'] as $key ) {
+			if ( ! isset( $felder[ $key ] ) ) { continue; }
+			$vergeben[ $key ] = true;
+			add_settings_field( $key, $felder[ $key ][0], 'warleek_render_option_field', 'warleek', 'warleek_' . $id, array( 'key' => $key, 'def' => $felder[ $key ], 'label_for' => 'warleek_' . $key ) );
+		}
 	}
+
+	// Was in keiner Gruppe steht, fällt nicht hinten runter – sonst wäre ein neues
+	// Feld unsichtbar, und das fällt erst auf, wenn jemand es vergeblich sucht.
+	$rest = array_diff_key( $felder, $vergeben );
+	if ( $rest ) {
+		add_settings_section( 'warleek_rest', 'Sonstiges', '__return_false', 'warleek' );
+		foreach ( $rest as $key => $def ) {
+			add_settings_field( $key, $def[0], 'warleek_render_option_field', 'warleek', 'warleek_rest', array( 'key' => $key, 'def' => $def, 'label_for' => 'warleek_' . $key ) );
+		}
+	}
+}
+
+/**
+ * Gliederung der Einstellungsseite.
+ *
+ * Vorher standen alle 33 Felder in einer Liste unter „Community & Spiel" –
+ * die Autorenfelder lagen damit zwischen Kontakt-E-Mail und Twitter-Handle
+ * unter einer Überschrift, die nichts mit Autorenschaft zu tun hat. Wer sie
+ * suchte, fand sie nicht.
+ *
+ * Felder, die hier fehlen, landen automatisch unter „Sonstiges".
+ */
+function warleek_option_gruppen() {
+	return array(
+		'main' => array(
+			'titel'  => 'Community & Spiel',
+			'text'   => 'Links zu den Chat-Kanälen und Grunddaten. Leere Felder blenden den jeweiligen Button aus bzw. markieren ihn als „bald".',
+			'felder' => array( 'discord_url', 'whatsapp_url', 'telegram_url', 'steam_url', 'steam_appid', 'clan_tag', 'kontakt_email' ),
+		),
+		'autor' => array(
+			'titel'  => 'Autor & Vertrauen',
+			'text'   => 'Wer für die Angaben geradesteht. Diese Felder erzeugen <code>reviewedBy</code> in den strukturierten Daten und die Zeile im Herkunftsnachweis – ein benannter, erreichbarer Mensch ist das stärkste Vertrauenssignal, das eine Guide-Seite hat. <strong>Ohne Namen entfällt die Angabe ganz</strong>, statt anonym zu bleiben.',
+			'felder' => array( 'autor_name', 'autor_url', 'autor_rolle', 'autor_profile' ),
+		),
+		'profile' => array(
+			'titel'  => 'Soziale Profile',
+			'text'   => 'Gehen als <code>sameAs</code> ins Organization-Schema und in die Fußzeile.',
+			'felder' => array( 'twitter_handle', 'youtube_url', 'twitch_url', 'instagram_url', 'tiktok_url', 'steam_group_url', 'fb_app_id' ),
+		),
+		'translate' => array(
+			'titel'  => 'Patch Notes übersetzen',
+			'text'   => 'Deutsche Fassung der Steam-Patch-Notes über die Claude-API. Der Schlüssel gehört besser als Konstante <code>WARLEEK_ANTHROPIC_KEY</code> in die <code>wp-config.php</code>.',
+			'felder' => array( 'anthropic_api_key', 'translate_enabled', 'translate_model', 'translate_max_chars', 'translate_budget' ),
+		),
+		'consent' => array(
+			'titel'  => 'Einwilligung & Statistik',
+			'text'   => 'Ohne Zustimmung wird nichts von Dritten geladen. Der Einbindungscode läuft erst nach der Einwilligung – <strong>sobald dort etwas steht, gehört das Werkzeug samt Anbieter in die Datenschutzerklärung</strong>.',
+			'felder' => array( 'consent_enabled', 'consent_title', 'consent_text', 'consent_accept', 'consent_decline', 'consent_media', 'consent_stats', 'consent_stats_label', 'analytics_code' ),
+		),
+	);
 }
 add_action( 'admin_init', 'warleek_register_options' );
 

@@ -3,7 +3,7 @@
  * Plugin Name:       Warleek Core
  * Plugin URI:        https://warleek.de
  * Description:       Funktionskern und Installer der Warleek-Website: Guides & Patch Notes (automatisch von Steam), Chat-Optionen, eigene Blöcke, SEO-Metas – plus ein Klick-Installer für alle Inhalte, Bilder und das benötigte SEO-Plugin.
- * Version:           2.29.1
+ * Version:           2.29.2
  * Requires at least: 6.6
  * Requires PHP:      8.1
  * Author:            Warleek
@@ -18,7 +18,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'WARLEEK_CORE_VERSION', '2.29.1' );
+define( 'WARLEEK_CORE_VERSION', '2.29.2' );
 define( 'WARLEEK_CORE_FILE', __FILE__ );
 define( 'WARLEEK_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WARLEEK_CORE_URI', plugin_dir_url( __FILE__ ) );
