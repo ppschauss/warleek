@@ -200,6 +200,56 @@ add_action( 'admin_notices', function () {
 /* ------------------------------------------------------------- Statistik */
 
 /**
+ * Erkennt, ob der hinterlegte Analyse-Code ein Google-Tag ist.
+ *
+ * Nur dann ergibt Googles Consent Mode Sinn; bei einem anderen Werkzeug wären
+ * die Signale wirkungslos.
+ */
+function warleek_analytics_ist_google() {
+	$code = (string) warleek_opt( 'analytics_code' );
+	return (bool) preg_match( '#googletagmanager\.com|gtag\s*\(#i', $code );
+}
+
+/**
+ * Consent Mode v2: Vorgabewerte setzen, bevor irgendetwas lädt.
+ *
+ * Das ist **reines JavaScript ohne Netzwerkaufruf** – es legt nur die
+ * Voreinstellung „alles abgelehnt" in den dataLayer. Erst wenn die Einwilligung
+ * vorliegt, wird `gtag.js` nachgeladen und der Stand auf `granted` aktualisiert.
+ *
+ * **Warum nicht Googles „Advanced"-Modus.** Dort lädt das Google-Tag auf jeder
+ * Seite sofort und sendet schon vor der Einwilligung cookielose Signale an
+ * Google – mit Seiten-URL, Verweisquelle und IP. Das ist die Voraussetzung für
+ * Googles Modellierung, widerspricht aber der Zusage in unserer
+ * Datenschutzerklärung, dass ohne Zustimmung keine Verbindung zu fremden
+ * Servern aufgebaut wird. Der Nutzen wäre für diese Seite ohnehin null: Die
+ * Modellierung greift erst ab erheblichen Datenmengen, und wir schalten keine
+ * Werbung. Deshalb: Signale ja, Vorab-Übertragung nein.
+ *
+ * `ad_storage`, `ad_user_data` und `ad_personalization` bleiben dauerhaft auf
+ * `denied` – wir nutzen keine Werbefunktionen und wollen auch keine.
+ */
+function warleek_consent_mode_defaults() {
+	if ( is_admin() || ! warleek_consent_aktiv() ) { return; }
+	if ( ! array_key_exists( 'statistik', warleek_consent_kategorien() ) ) { return; }
+	if ( '' === trim( (string) warleek_opt( 'analytics_code' ) ) || ! warleek_analytics_ist_google() ) { return; }
+	?>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+	'ad_storage': 'denied',
+	'ad_user_data': 'denied',
+	'ad_personalization': 'denied',
+	'analytics_storage': 'denied',
+	'wait_for_update': 500
+});
+</script>
+	<?php
+}
+add_action( 'wp_head', 'warleek_consent_mode_defaults', 1 );
+
+/**
  * Analyse-Skript einbinden – gesperrt bis zur Einwilligung.
  *
  * Der hinterlegte Block steht in einem `<template>` und wird erst ausgeführt,
@@ -246,8 +296,18 @@ function warleek_analytics_code() {
 			});
 		});
 	}
-	document.addEventListener('warleek-consent-change', function(ev){ if (ev.detail && ev.detail.statistik) { starten(); } });
-	if (window.warleekConsent && window.warleekConsent.has('statistik')) { starten(); }
+	// Consent Mode: Jede Änderung wird gemeldet – auch der Widerruf. Ist gtag
+	// noch nicht geladen, landet der Aufruf im dataLayer und wird nachgeholt.
+	function melden(erlaubt){
+		if (typeof gtag !== 'function') { return; }
+		gtag('consent', 'update', { 'analytics_storage': erlaubt ? 'granted' : 'denied' });
+	}
+	document.addEventListener('warleek-consent-change', function(ev){
+		var ja = !!(ev.detail && ev.detail.statistik);
+		melden(ja);
+		if (ja) { starten(); }
+	});
+	if (window.warleekConsent && window.warleekConsent.has('statistik')) { melden(true); starten(); }
 })();
 </script>
 	<?php

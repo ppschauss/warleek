@@ -19,6 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
  * standardmäßig erhebt – und es ist das, was die Datenschutzerklärung zusagt.
  *
  * Der Block wird erst nach der Einwilligung ausgeführt (`inc/consent.php`).
+ * Die Vorgabewerte des Consent Mode stehen dort schon im Kopf der Seite – hier
+ * wird nur noch auf `granted` hochgestuft.
  *
  * @return string
  */

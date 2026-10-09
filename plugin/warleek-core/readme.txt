@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.29.0
+Stable tag: 2.29.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.29.1 =
+* Google Consent Mode v2: Im Seitenkopf stehen alle vier Signale auf `denied` – reines JavaScript, kein Aufruf bei Google. Die Einwilligung hebt `analytics_storage` auf `granted`, der Widerruf setzt es zurück; die drei Werbe-Signale bleiben dauerhaft abgelehnt.
+* Googles „Advanced"-Modus bewusst **nicht** übernommen: Dort gingen schon vor der Einwilligung Signale an Google. Begründung in CLAUDE.md und in der Datenschutzerklärung.
+* Neu: `bin/consent-mode-check.cjs` prüft alle drei Zustände (ohne Einwilligung, nach Zustimmung, nach Widerruf).
 
 = 2.29.0 =
 * Google Analytics 4 (G-QDSF1KLBMM) eingebunden – **erst nach Einwilligung**. Ohne Zustimmung wird kein Skript von Google geladen und keine Verbindung aufgebaut.
