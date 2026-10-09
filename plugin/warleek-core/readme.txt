@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.28.1
+Stable tag: 2.29.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,13 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.29.0 =
+* Google Analytics 4 (G-QDSF1KLBMM) eingebunden – **erst nach Einwilligung**. Ohne Zustimmung wird kein Skript von Google geladen und keine Verbindung aufgebaut.
+* Einwilligungsbanner hat jetzt zwei Kategorien (externe Videos, Reichweitenmessung), einzeln wählbar. Texte überarbeitet: Die alte Fassung sagte „lädt nichts von fremden Servern", was mit Analytics nicht mehr stimmt.
+* Datenschutzerklärung: Abschnitt 5 nennt Anbieter, Mess-ID, verarbeitete Daten, Cookies, Speicherdauer, Rechtsgrundlage, Widerruf und Opt-out.
+* **Sicherheitsrelevante Korrektur:** Der Analyse-Code lag in einem `<script type="text/plain">`. Das `</script>` des GA-Schnipsels beendete den Platzhalter vorzeitig, wodurch der zweite Teil zu einem echten, sofort ausgeführten Skript wurde – die Einwilligung wurde umgangen. Der Code steht jetzt in einem `<template>`, dessen Inhalt inert bleibt.
+* Neu: `bin/ga-check.cjs` prüft automatisiert, dass vor der Zustimmung nichts an Google geht.
 
 = 2.28.1 =
 * Eigenes Titelbild für den Munitions-Guide: Composing aus vorhandenen Pressekit-Assets (Sturmgewehr, Munitionspalette, MG), abgedunkelt, mit Titel in der Hausschrift. Neues Skript `bin/guide-bild-bauen.py` macht das wiederholbar.

@@ -8,6 +8,34 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /** Felddefinitionen: key => [label, type, default, description]. */
+/**
+ * Vorgabe für den Analyse-Einbindungscode: Google Analytics 4 für warleek.de.
+ *
+ * Steht als Vorgabe und nicht fest verdrahtet – wer im Backend etwas anderes
+ * einträgt, gewinnt (`warleek_opt()` nimmt den gespeicherten Wert, sobald er
+ * nicht leer ist). Zwei Zeilen sind bewusst dabei: `allow_google_signals` und
+ * `allow_ad_personalization_signals` auf false schalten die geräteübergreifende
+ * Zuordnung und die Werbepersonalisierung ab. Das ist weniger, als Google
+ * standardmäßig erhebt – und es ist das, was die Datenschutzerklärung zusagt.
+ *
+ * Der Block wird erst nach der Einwilligung ausgeführt (`inc/consent.php`).
+ *
+ * @return string
+ */
+function warleek_analytics_vorgabe() {
+	return <<<'GA'
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QDSF1KLBMM"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('set', 'allow_google_signals', false);
+gtag('set', 'allow_ad_personalization_signals', false);
+gtag('config', 'G-QDSF1KLBMM');
+</script>
+GA;
+}
+
 function warleek_option_fields() {
 	return array(
 		'discord_url'   => array( 'Discord-Invite',        'url',  '',        'Vollständiger Invite-Link, z. B. https://discord.gg/xyz. Leer = Button zeigt „bald".' ),
@@ -34,14 +62,14 @@ function warleek_option_fields() {
 		'translate_max_chars'=> array( 'Längengrenze (Zeichen)',  'int',      '20000', 'Längere Patch Notes bleiben englisch, statt eine teure Anfrage zu riskieren.' ),
 		'translate_budget'   => array( 'Übersetzungen je Lauf',   'int',      '5',   'Deckel pro Sync-Lauf. Der stündliche Cron holt den Rest nach.' ),
 		'consent_enabled'    => array( 'Einwilligungs-Banner',    'bool',     '1',   'Zeigt den Hinweis unten am Bildschirm. Ohne eingebettete externe Medien ist er rechtlich nicht nötig – dann kannst du ihn ausschalten.' ),
-		'consent_title'      => array( 'Banner: Überschrift',     'text',     'Externe Videos erlauben?', 'Kurze Zeile über dem Text.' ),
-		'consent_text'       => array( 'Banner: Text',            'textarea', 'Warleek setzt keine Werbe- oder Analyse-Cookies und lädt nichts von fremden Servern. Nur für eingebettete Videos brauchen wir deine Einwilligung – erst dann wird eine Verbindung zu YouTube oder Vimeo aufgebaut.', 'Was im Banner steht. Bleib bei dem, was die Seite wirklich tut.' ),
-		'consent_accept'     => array( 'Banner: Zustimmen',       'text',     'Externe Videos erlauben', 'Beschriftung der Zustimmen-Schaltfläche.' ),
+		'consent_title'      => array( 'Banner: Überschrift',     'text',     'Deine Entscheidung', 'Kurze Zeile über dem Text.' ),
+		'consent_text'       => array( 'Banner: Text',            'textarea', 'Warleek zeigt keine Werbung und verkauft keine Daten. Zwei Dinge brauchen trotzdem deine Einwilligung, weil dabei fremde Server ins Spiel kommen: eingebettete Videos (YouTube, Vimeo) und die Reichweitenmessung mit Google Analytics. Ohne Zustimmung wird nichts davon geladen. Du kannst jede Kategorie einzeln wählen und die Entscheidung jederzeit ändern.', 'Was im Banner steht. Bleib bei dem, was die Seite wirklich tut.' ),
+		'consent_accept'     => array( 'Banner: Zustimmen',       'text',     'Auswahl erlauben', 'Beschriftung der Zustimmen-Schaltfläche.' ),
 		'consent_decline'    => array( 'Banner: Ablehnen',        'text',     'Nur notwendige',          'Beschriftung der Ablehnen-Schaltfläche. Muss gleichwertig aussehen – das ist Vorschrift.' ),
 		'consent_media'      => array( 'Kategorie: externe Medien', 'bool',   '1',   'Einwilligung für eingebettete Videos von YouTube und Vimeo abfragen.' ),
-		'consent_stats'      => array( 'Kategorie: Statistik',      'bool',   '0',   'Einwilligung für Reichweitenmessung abfragen. Erst einschalten, wenn unten auch ein Skript hinterlegt ist.' ),
-		'consent_stats_label'=> array( 'Statistik: Beschriftung',   'text',   'Anonyme Reichweitenmessung', 'Steht als Auswahl im Banner.' ),
-		'analytics_code'     => array( 'Statistik: Einbindungscode', 'code',  '',    'Vollständiger &lt;script&gt;-Block deines Analyse-Werkzeugs. Wird erst nach der Einwilligung ausgeführt – vorher steht er als toter Text im Quelltext. Leer lassen, solange nichts gemessen wird. <strong>Wichtig:</strong> Sobald hier etwas steht, gehört das Werkzeug samt Anbieter auch in die Datenschutzerklärung.' ),
+		'consent_stats'      => array( 'Kategorie: Statistik',      'bool',   '1',   'Einwilligung für Reichweitenmessung abfragen. Erst einschalten, wenn unten auch ein Skript hinterlegt ist.' ),
+		'consent_stats_label'=> array( 'Statistik: Beschriftung',   'text',   'Reichweitenmessung (Google Analytics)', 'Steht als Auswahl im Banner. Den Anbieter benennen, nicht „anonyme Statistik" schreiben – Google Analytics ist nicht anonym.' ),
+		'analytics_code'     => array( 'Statistik: Einbindungscode', 'code',  warleek_analytics_vorgabe(),    'Vollständiger &lt;script&gt;-Block deines Analyse-Werkzeugs. Wird erst nach der Einwilligung ausgeführt – vorher steht er als toter Text im Quelltext. Leer lassen, solange nichts gemessen wird. <strong>Wichtig:</strong> Sobald hier etwas steht, gehört das Werkzeug samt Anbieter auch in die Datenschutzerklärung.' ),
 		'external_nofollow'  => array( 'Externe Links entwerten',   'bool',   '1',   'Setzt bei allen externen Links in Guides und Patch Notes rel="nofollow noopener noreferrer" – gedacht für Quellenangaben.' ),
 	);
 }

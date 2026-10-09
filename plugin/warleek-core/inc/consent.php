@@ -145,14 +145,73 @@ function warleek_consent_script() {
 }
 add_action( 'wp_footer', 'warleek_consent_script', 21 );
 
+/* ---------------------------------------------------- Einmalige Umstellung */
+
+/**
+ * Statistik-Kategorie einschalten und veraltete Bannertexte ersetzen.
+ *
+ * Läuft genau einmal. Nötig, weil ein gespeicherter Optionswert die Vorgabe
+ * schlägt: `consent_stats` stand als `0` in der Datenbank, und eine neue
+ * Vorgabe in `warleek_option_fields()` hätte daran nichts geändert.
+ *
+ * **Texte werden nur ersetzt, wenn sie unverändert sind.** Der alte Bannertext
+ * sagte „lädt nichts von fremden Servern" – das stimmt mit Google Analytics
+ * nicht mehr. Eine eigene Formulierung des Betreibers wird aber nicht
+ * überschrieben; stattdessen steht dann ein Hinweis im Backend.
+ */
+function warleek_consent_ga_umstellung() {
+	if ( get_option( 'warleek_consent_ga_v1' ) ) { return; }
+
+	$alt = array(
+		'consent_title'  => 'Externe Videos erlauben?',
+		'consent_text'   => 'Warleek setzt keine Werbe- oder Analyse-Cookies und lädt nichts von fremden Servern. Nur für eingebettete Videos brauchen wir deine Einwilligung – erst dann wird eine Verbindung zu YouTube oder Vimeo aufgebaut.',
+		'consent_accept' => 'Externe Videos erlauben',
+	);
+
+	$opts   = (array) get_option( 'warleek_options', array() );
+	$felder = warleek_option_fields();
+	$eigen  = array();
+
+	foreach ( $alt as $key => $alter_text ) {
+		if ( ! isset( $opts[ $key ] ) || '' === $opts[ $key ] ) { continue; }   // leer: Vorgabe greift ohnehin
+		if ( trim( (string) $opts[ $key ] ) === $alter_text ) {
+			$opts[ $key ] = $felder[ $key ][2];                                  // unverändert: neue Fassung übernehmen
+		} else {
+			$eigen[] = $key;                                                     // eigener Text: stehen lassen
+		}
+	}
+
+	$opts['consent_enabled'] = '1';
+	$opts['consent_stats']   = '1';
+	update_option( 'warleek_options', $opts );
+	update_option( 'warleek_consent_ga_v1', $eigen ? implode( ',', $eigen ) : '1' );
+}
+add_action( 'admin_init', 'warleek_consent_ga_umstellung' );
+
+/** Hinweis, wenn eigene Bannertexte stehen geblieben sind. */
+add_action( 'admin_notices', function () {
+	$stand = (string) get_option( 'warleek_consent_ga_v1' );
+	if ( '' === $stand || '1' === $stand || ! current_user_can( 'manage_options' ) ) { return; }
+	echo '<div class="notice notice-warning"><p><strong>Warleek:</strong> Die Statistik-Einwilligung ist jetzt aktiv (Google Analytics). '
+		. 'Diese Bannertexte sind von dir angepasst und wurden deshalb <em>nicht</em> überschrieben: <code>' . esc_html( $stand ) . '</code>. '
+		. 'Bitte prüfen, ob sie noch stimmen – ein Text, der „wir laden nichts von fremden Servern" sagt, ist mit Analytics falsch.</p></div>';
+} );
+
 /* ------------------------------------------------------------- Statistik */
 
 /**
  * Analyse-Skript einbinden – gesperrt bis zur Einwilligung.
  *
- * Der hinterlegte Block steht als `type="text/plain"` im Quelltext und wird
- * erst ausgeführt, wenn die Kategorie „statistik" freigegeben ist. Ohne
- * Einwilligung passiert nichts, auch kein Netzwerkaufruf.
+ * Der hinterlegte Block steht in einem `<template>` und wird erst ausgeführt,
+ * wenn die Kategorie „statistik" freigegeben ist. Ohne Einwilligung passiert
+ * nichts, auch kein Netzwerkaufruf.
+ *
+ * **Warum `<template>` und nicht `<script type="text/plain">`:** Ein Analyse-
+ * Schnipsel besteht fast immer aus zwei Tags – externes `gtag.js` plus
+ * Konfiguration. Das `</script>` des ersten beendet einen Platzhalter-Script
+ * vorzeitig; der Rest des Blocks wird dann zu echten, sofort ausgeführten
+ * Skripten und umgeht die Einwilligung. Ein `<template>` ist dagegen inert:
+ * Skripte darin werden geparst, aber weder ausgeführt noch nachgeladen.
  */
 function warleek_analytics_code() {
 	if ( is_admin() ) { return; }
@@ -165,21 +224,20 @@ function warleek_analytics_code() {
 		return;
 	}
 	?>
-<script type="text/plain" data-wl-consent-code="statistik"><?php echo $code; // phpcs:ignore WordPress.Security.EscapeOutput -- bewusst roher Einbindungscode aus den Einstellungen ?></script>
+<template data-wl-consent-code="statistik"><?php echo $code; // phpcs:ignore WordPress.Security.EscapeOutput -- bewusst roher Einbindungscode aus den Einstellungen ?></template>
 <script>
 (function(){
 	function starten(){
-		document.querySelectorAll('[data-wl-consent-code="statistik"]').forEach(function(platzhalter){
+		document.querySelectorAll('template[data-wl-consent-code="statistik"]').forEach(function(platzhalter){
 			if (platzhalter.dataset.wlAktiv) { return; }
 			platzhalter.dataset.wlAktiv = '1';
-			// Der hinterlegte Block kann mehrere Tags enthalten – deshalb über einen
-			// Container parsen und jedes Skript einzeln neu erzeugen, sonst führt es nicht aus.
-			var hilf = document.createElement('div');
-			hilf.innerHTML = platzhalter.textContent;
-			hilf.childNodes.forEach(function(k){
+			// Der Inhalt eines <template> ist inert: Skripte darin werden geparst,
+			// aber nicht ausgeführt und ihr src wird nicht geladen. Zum Starten wird
+			// jedes Skript neu erzeugt – ein geklontes führt nicht aus.
+			platzhalter.content.childNodes.forEach(function(k){
 				if (k.tagName === 'SCRIPT') {
 					var s = document.createElement('script');
-					[...k.attributes].forEach(function(a){ s.setAttribute(a.name, a.value); });
+					[].forEach.call(k.attributes, function(a){ s.setAttribute(a.name, a.value); });
 					s.text = k.text;
 					document.head.appendChild(s);
 				} else if (k.nodeType === 1) {
