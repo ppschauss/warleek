@@ -130,41 +130,68 @@
     },
     {
         "slug": "community",
-        "title": "Partner & Community",
+        "title": "Deutsche Wardogs Community",
         "parent": null,
         "template": "page-hub",
         "hero": {
-            "image": "hero-partner",
-            "page": true,
-            "eyebrow": "Partner",
-            "h1": "Communities, mit denen wir uns <em>verstehen</em>",
-            "lead": "Warleek schreibt Guides – gespielt wird in Gruppen. Hier stehen die deutschsprachigen Communities, Clans und Kanäle, die wir guten Gewissens weiterempfehlen.",
+            "eyebrow": "Community",
+            "h1": "Die deutsche Wardogs Community",
+            "text": "Taktik-Shooter auf Deutsch: Treffpunkt ist r/WardogsDeutsch. Dazu Partner-Communitys aus Deutschland, Österreich und der Schweiz.",
+            "image": "hero-community-reddit",
             "buttons": [
                 {
-                    "label": "Discord beitreten",
-                    "url": "#discord"
+                    "text": "Zu r/WardogsDeutsch",
+                    "url": "https://www.reddit.com/r/WardogsDeutsch/",
+                    "style": "fill"
+                },
+                {
+                    "text": "Alle Guides",
+                    "url": "/guides/",
+                    "style": "outline"
                 }
             ]
         },
         "seo": {
-            "title": "Wardogs Partner & Communitys (Deutsch) | Warleek",
-            "description": "Befreundete deutschsprachige Wardogs-Communitys, Clans und Discord-Server aus Deutschland, Österreich und der Schweiz – plus Weg zur Partnerschaft."
+            "title": "Deutsche Wardogs Community – Reddit & Partner | Warleek",
+            "description": "Wardogs auf Deutsch: der Subreddit r/WardogsDeutsch, Partner-Communitys und Guides zum Taktik-Shooter. Für Deutschland, Österreich und die Schweiz."
         },
         "sections": [
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "reddit",
+                        "eyebrow": "Reddit",
+                        "h2": "r/WardogsDeutsch – der deutsche Wardogs-Reddit",
+                        "text": "Fragen, Taktik, FOB-Bauten und jeder neue Guide zuerst. Kein Zwang zum Beitritt, kein Bewerbungsverfahren – lesen reicht."
+                    }
+                ]
+            },
             {
                 "type": "section",
                 "inner": [
                     {
                         "type": "prose",
-                        "html": "\n<h2>Warum wir Partner empfehlen statt selbst zu rekrutieren</h2>\n<p>Warleek ist eine Guide-Seite. Wir schreiben auf, wie FOBs funktionieren und warum der Logistik-Run sich lohnt – aber ein Squad zusammenzuhalten, Spielabende zu organisieren und Leute einzuarbeiten, das machen andere besser. Deshalb führen wir keinen eigenen Clan mehr, sondern verweisen auf Gruppen, die genau das tun.</p>\n<p>Jeder Partner hier ist deutschsprachig, offen für neue Leute und von uns persönlich angespielt. Wer auf der Liste steht, wurde nicht dafür bezahlt.</p>\n"
+                        "html": "\n<h2>Was du in der deutschen Wardogs Community findest</h2>\n<p><strong>Wardogs</strong> ist ein taktischer Militär-Shooter mit 100 Spielern, drei Fraktionen und einer Wirtschaft, die jede Entscheidung bepreist. Fast alles dazu steht auf Englisch. Dieser Treffpunkt ist der Versuch, das auf Deutsch nachzuholen – für Spielerinnen und Spieler aus Deutschland, Österreich und der Schweiz.</p>\n<ul>\n<li><strong>Neue Guides zuerst.</strong> Jeder Guide erscheint mit Zusammenfassung im Subreddit, bevor ihn jemand sucht.</li>\n<li><strong>Einträge aus der Datenbank.</strong> Waffen, Fahrzeuge, Bauwerke – mit Werten, Quellen und dem Vermerk, was davon nachgeprüft ist.</li>\n<li><strong>Patch Notes auf Deutsch.</strong> Übersetzt und eingeordnet, statt im Original zu versanden.</li>\n<li><strong>Korrekturen.</strong> Wenn wir danebenliegen, steht es dort – mitsamt dem, was vorher galt.</li>\n</ul>\n<p>Was dort <em>nicht</em> passiert: Rekrutierung. Warleek führt keinen Clan. Wer ein Squad sucht, findet es bei den Partnern weiter unten.</p>\n"
                     }
                 ]
             },
             {
                 "type": "section",
                 "surface": true,
-                "eyebrow": "Unsere Partner",
-                "h2": "Wo du Mitspieler findest",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Warum Reddit statt Discord?</h2>\n<p>Ein Discord ist gut für den Abend und schlecht für alles danach. Was dort geschrieben wird, ist zwei Tage später nicht mehr auffindbar – weder für Suchmaschinen noch für die Leute, die dieselbe Frage nächste Woche haben.</p>\n<p>Ein Subreddit ist das Gegenteil: öffentlich, durchsuchbar, dauerhaft. Eine Antwort, die heute geschrieben wird, hilft in einem halben Jahr noch jemandem. Für eine Seite, deren ganzer Zweck das Nachschlagen ist, ist das die passendere Form.</p>\n<p>Dazu kommt ein praktischer Punkt: Reddit braucht keine Einladung und kein Konto, um zu lesen.</p>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "eyebrow": "Partner",
+                "h2": "Deutschsprachige Wardogs-Communitys und Clans",
+                "text": "Wer ein festes Squad sucht, ist hier richtiger als bei uns.",
                 "inner": [
                     {
                         "type": "partner",
@@ -174,22 +201,46 @@
             },
             {
                 "type": "section",
+                "surface": true,
                 "inner": [
                     {
                         "type": "prose",
-                        "html": "\n<h2 id=\"partner-werden\">Partner werden</h2>\n<p>Du führst eine deutschsprachige Wardogs-Community und möchtest hier stehen? Schreib uns – im Discord oder per Mail. Wir schauen vorbei, spielen einen Abend mit und nehmen dich auf, wenn es passt. Drei Dinge erwarten wir:</p>\n<ul>\n<li><strong>Deutschsprachig und offen.</strong> Neue Leute sollen ohne Bewerbungsverfahren reinschauen können.</li>\n<li><strong>Aktiv.</strong> Ein Discord, in dem seit drei Monaten niemand geschrieben hat, hilft niemandem.</li>\n<li><strong>Anständiger Umgang.</strong> Kein Toxic-Gerede, keine Cheats, kein Ärger in fremden Lobbys.</li>\n</ul>\n<p>Im Gegenzug verlinken wir euch hier, und ihr dürft unsere Guides in eurem Discord teilen, so viel ihr wollt.</p>\n"
+                        "html": "\n<h2 id=\"partner-werden\">Partner werden</h2>\n<p>Du führst eine deutschsprachige Wardogs-Community und möchtest hier stehen? Schreib uns – auf Reddit oder per Mail. Wir schauen vorbei, spielen einen Abend mit und nehmen dich auf, wenn es passt. Drei Dinge erwarten wir:</p>\n<ul>\n<li><strong>Deutschsprachig und offen.</strong> Neue Leute sollen ohne Bewerbungsverfahren reinschauen können.</li>\n<li><strong>Aktiv.</strong> Ein Server, in dem seit drei Monaten niemand geschrieben hat, hilft niemandem.</li>\n<li><strong>Anständiger Umgang.</strong> Kein Toxic-Gerede, keine Cheats, kein Ärger in fremden Lobbys.</li>\n</ul>\n<p>Im Gegenzug verlinken wir euch hier, und ihr dürft unsere Guides teilen, so viel ihr wollt. Wer auf der Liste steht, hat dafür nicht bezahlt.</p>\n"
                     }
                 ]
             },
             {
                 "type": "section",
-                "surface": true,
                 "inner": [
                     {
-                        "type": "discord",
-                        "eyebrow": "Discord",
-                        "h2": "Der Warleek-Discord",
-                        "text": "Für Rückfragen zu den Guides, Korrekturen und Themenwünsche – und um Leute für den Abend zu finden."
+                        "type": "faq",
+                        "heading": "Häufige Fragen zur deutschen Wardogs Community",
+                        "items": [
+                            {
+                                "q": "Gibt es eine deutsche Wardogs Community?",
+                                "a": "Ja – r/WardogsDeutsch ist der deutschsprachige Treffpunkt zum Spiel, offen für Leute aus Deutschland, Österreich und der Schweiz. Lesen geht ohne Konto."
+                            },
+                            {
+                                "q": "Wo finde ich den deutschen Wardogs-Reddit?",
+                                "a": "Unter reddit.com/r/WardogsDeutsch. Dort erscheinen neue Guides, Einträge aus der Datenbank und die deutschen Patch Notes."
+                            },
+                            {
+                                "q": "Was für ein Spiel ist Wardogs?",
+                                "a": "Ein taktischer Militär-Shooter von BULKHEAD, veröffentlicht von Team17, seit September 2026 im Early Access. Bis zu 100 Spieler, drei Fraktionen, Basenbau, Logistik und eine Wirtschaft, in der jedes Loadout Geld kostet."
+                            },
+                            {
+                                "q": "Braucht man für die Community einen Clan?",
+                                "a": "Nein. Warleek führt selbst keinen Clan und rekrutiert nicht. Wer ein festes Squad sucht, findet auf dieser Seite Partner-Communitys, die genau das anbieten."
+                            },
+                            {
+                                "q": "Gibt es Wardogs-Guides auf Deutsch?",
+                                "a": "Ja, auf dieser Seite – mit Quellenangabe an jedem Guide und dem Vermerk, ob die Angaben im Spiel nachgeprüft sind. Dazu eine Datenbank mit Waffen, Fahrzeugen, Bauwerken und Munition."
+                            },
+                            {
+                                "q": "Warum kein Discord?",
+                                "a": "Weil Gesprochenes im Chat nach zwei Tagen nicht mehr auffindbar ist. Ein Subreddit bleibt öffentlich und durchsuchbar – passender für eine Seite, deren Zweck das Nachschlagen ist."
+                            }
+                        ]
                     }
                 ]
             }

@@ -204,7 +204,7 @@ function warleek_seo_head() {
 	$home = home_url( '/' );
 	$logo = get_theme_mod( 'custom_logo' ) ?: (int) get_option( 'site_logo', 0 );
 	$logo_url = $logo ? wp_get_attachment_image_url( $logo, 'full' ) : '';
-	$same = array_filter( array( warleek_opt( 'discord_url' ), warleek_opt( 'whatsapp_url' ), warleek_opt( 'telegram_url' ), warleek_opt( 'steam_url' ), warleek_opt( 'steam_group_url' ), warleek_opt( 'youtube_url' ), warleek_opt( 'twitch_url' ), warleek_opt( 'instagram_url' ), warleek_opt( 'tiktok_url' ), warleek_opt( 'twitter_handle' ) ? 'https://x.com/' . ltrim( warleek_opt( 'twitter_handle' ), '@' ) : '' ) );
+	$same = array_filter( array( warleek_opt( 'reddit_url' ), warleek_opt( 'discord_url' ), warleek_opt( 'whatsapp_url' ), warleek_opt( 'telegram_url' ), warleek_opt( 'steam_url' ), warleek_opt( 'steam_group_url' ), warleek_opt( 'youtube_url' ), warleek_opt( 'twitch_url' ), warleek_opt( 'instagram_url' ), warleek_opt( 'tiktok_url' ), warleek_opt( 'twitter_handle' ) ? 'https://x.com/' . ltrim( warleek_opt( 'twitter_handle' ), '@' ) : '' ) );
 	$org = array(
 		'@context' => 'https://schema.org', '@type' => 'Organization', 'name' => 'Warleek', 'url' => $home,
 		'description' => get_bloginfo( 'description' ), 'sameAs' => array_values( $same ),

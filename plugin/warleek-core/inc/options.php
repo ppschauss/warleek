@@ -40,6 +40,14 @@ GA;
 
 function warleek_option_fields() {
 	return array(
+		'reddit_url'    => array( 'Subreddit',             'url',  'https://www.reddit.com/r/WardogsDeutsch/', 'Die deutschsprachige Community der Seite. Erscheint als Hauptkanal im Kopfbereich, in der Fußzeile und auf der Community-Seite.' ),
+		'reddit_sub'    => array( 'Subreddit-Name',        'text', 'WardogsDeutsch', 'Ohne r/ davor. Wird zum Posten aus WordPress verwendet.' ),
+		'reddit_auto'   => array( 'Neue Guides automatisch posten', 'bool', '0', 'Sobald ein Guide erscheint, geht eine Zusammenfassung mit Link in den Subreddit. Erst einschalten, wenn der Probelauf sauber durchläuft.' ),
+		'reddit_drip'   => array( 'Ältere Inhalte nachreichen',     'bool', '0', 'Täglich <strong>ein</strong> älterer Guide oder Datenbank-Eintrag um 17:30. Gemischte, aber reproduzierbare Reihenfolge.' ),
+		'reddit_id'     => array( 'Reddit: Client-ID',      'text',     '', 'Aus reddit.com/prefs/apps, App-Typ <em>script</em>. Besser als Konstante <code>WARLEEK_REDDIT_ID</code> in der wp-config.php.' ),
+		'reddit_secret' => array( 'Reddit: Client-Secret',  'password', '', 'Konstante: <code>WARLEEK_REDDIT_SECRET</code>. Leer lassen behält den gespeicherten Wert.' ),
+		'reddit_user'   => array( 'Reddit: Benutzername',   'text',     '', 'Das Konto, unter dem gepostet wird. Konstante: <code>WARLEEK_REDDIT_USER</code>.' ),
+		'reddit_pass'   => array( 'Reddit: Passwort',       'password', '', 'Konstante: <code>WARLEEK_REDDIT_PASS</code>. Bei aktiver Zwei-Faktor-Anmeldung funktioniert das Skript-Verfahren nicht.' ),
 		'discord_url'   => array( 'Discord-Invite',        'url',  '',        'Vollständiger Invite-Link, z. B. https://discord.gg/xyz. Leer = Button zeigt „bald".' ),
 		'whatsapp_url'  => array( 'WhatsApp-Gruppe',       'url',  '',        'Einladungslink der WhatsApp-Community/-Gruppe.' ),
 		'telegram_url'  => array( 'Telegram-Gruppe',       'url',  '',        'Link zur Telegram-Gruppe, z. B. https://t.me/xyz.' ),
@@ -174,6 +182,11 @@ function warleek_option_gruppen() {
 			'titel'  => 'Autor & Vertrauen',
 			'text'   => 'Wer für die Angaben geradesteht. Diese Felder erzeugen <code>reviewedBy</code> in den strukturierten Daten und die Zeile im Herkunftsnachweis – ein benannter, erreichbarer Mensch ist das stärkste Vertrauenssignal, das eine Guide-Seite hat. <strong>Ohne Namen entfällt die Angabe ganz</strong>, statt anonym zu bleiben.',
 			'felder' => array( 'autor_name', 'autor_url', 'autor_rolle', 'autor_profile' ),
+		),
+		'reddit' => array(
+			'titel'  => 'Reddit',
+			'text'   => 'Der Subreddit ist der Community-Kanal der Seite. Die Zugangsdaten braucht nur, wer aus WordPress heraus posten will – sie gehören besser als Konstanten in die <code>wp-config.php</code> als in die Datenbank. <strong>Vor dem Einschalten einen Probelauf machen:</strong> <code>wp warleek reddit --probe</code>.',
+			'felder' => array( 'reddit_url', 'reddit_sub', 'reddit_auto', 'reddit_drip', 'reddit_id', 'reddit_secret', 'reddit_user', 'reddit_pass' ),
 		),
 		'profile' => array(
 			'titel'  => 'Soziale Profile',

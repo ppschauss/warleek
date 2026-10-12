@@ -3021,8 +3021,8 @@
             "rolle": "Sturmgewehr",
             "hinweis": "Neu in Season 2"
         },
-        "start": true,
-        "gruppe": "sturmgewehr"
+        "gruppe": "sturmgewehr",
+        "sofort": true
     },
     {
         "slug": "wardogs-m14",
@@ -3037,8 +3037,8 @@
             "rolle": "Designated Marksman Rifle (DMR)",
             "hinweis": "Neu in Season 2"
         },
-        "start": true,
-        "gruppe": "scharfschuetze"
+        "gruppe": "scharfschuetze",
+        "sofort": true
     },
     {
         "slug": "wardogs-pp-19-bizon",
@@ -3053,8 +3053,8 @@
             "rolle": "Maschinenpistole",
             "hinweis": "Neu in Season 2"
         },
-        "start": true,
-        "gruppe": "sturmgewehr"
+        "gruppe": "sturmgewehr",
+        "sofort": true
     },
     {
         "slug": "wardogs-evo-3-ultra",
@@ -3070,8 +3070,8 @@
             "rolle": "Leichtes Maschinengewehr",
             "hinweis": "Neu in Season 2"
         },
-        "start": true,
-        "gruppe": "mg"
+        "gruppe": "mg",
+        "sofort": true
     },
     {
         "slug": "wardogs-molotov",
@@ -3086,8 +3086,8 @@
             "rolle": "Brandsatz zur Flächenverweigerung",
             "hinweis": "Neu in Season 2"
         },
-        "start": true,
-        "gruppe": "wurfwaffe"
+        "gruppe": "wurfwaffe",
+        "sofort": true
     },
     {
         "slug": "wardogs-wolf-110",
@@ -3102,8 +3102,8 @@
             "rolle": "Schneller leichter Radtransporter",
             "hinweis": "Neu in Season 2"
         },
-        "start": true,
-        "gruppe": "lkw"
+        "gruppe": "lkw",
+        "sofort": true
     },
     {
         "slug": "wardogs-wolf-110-assault",
@@ -3118,8 +3118,8 @@
             "rolle": "Bewaffneter Radtransporter mit M2 Browning",
             "hinweis": "Neu in Season 2"
         },
-        "start": true,
-        "gruppe": "lkw"
+        "gruppe": "lkw",
+        "sofort": true
     },
     {
         "slug": "wardogs-t-72",
@@ -3134,8 +3134,8 @@
             "rolle": "Kampfpanzer",
             "hinweis": "Neu in Season 2 – langsamer als der Leopard, dafür billiger und sparsamer"
         },
-        "start": true,
-        "gruppe": "panzer"
+        "gruppe": "panzer",
+        "sofort": true
     },
     {
         "slug": "wardogs-mg-nest",
@@ -3150,8 +3150,8 @@
             "rolle": "Bemannte M2-Browning-Stellung",
             "hinweis": "Neu in Season 2"
         },
-        "start": true,
-        "gruppe": "mg"
+        "gruppe": "mg",
+        "sofort": true
     },
     {
         "slug": "wardogs-large-shelter",
@@ -3166,8 +3166,8 @@
             "rolle": "Große Metallüberdachung",
             "hinweis": "Neu in Season 2"
         },
-        "start": true,
-        "gruppe": "bauwerk"
+        "gruppe": "bauwerk",
+        "sofort": true
     },
     {
         "slug": "wardogs-wooden-step",
@@ -3182,7 +3182,7 @@
             "rolle": "Holzstufe",
             "hinweis": "Neu in Season 2"
         },
-        "start": true,
-        "gruppe": "bauwerk"
+        "gruppe": "bauwerk",
+        "sofort": true
     }
 ]

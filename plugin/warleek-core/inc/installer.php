@@ -271,8 +271,12 @@ function warleek_render_section( array $s, array $media, array $site ) {
 		case 'topics':     return warleek_b_group( warleek_b_block( 'topics' ), array( 'layout' => 'default', 'wide_align' => true ) );
 		case 'partner':    return warleek_b_group( warleek_b_block( 'partner-grid', array( 'count' => (int) ( $s['count'] ?? 12 ) ) ), array( 'layout' => 'default', 'wide_align' => true ) );
 		case 'guidefilter':return warleek_b_group( warleek_b_block( 'guide-filter' ), array( 'layout' => 'default', 'wide_align' => true ) );
+		// `reddit` und `discord` bauen dasselbe – der Kanal-Block zeigt ohnehin,
+		// was in den Optionen hinterlegt ist. Zwei Namen nur, damit die Seiten
+		// lesbar bleiben.
+		case 'reddit':
 		case 'discord':    return warleek_build_cta( array(
-			'eyebrow' => $s['eyebrow'] ?? 'Discord',
+			'eyebrow' => $s['eyebrow'] ?? 'Reddit',
 			'h2'      => $s['h2'] ?? 'Fragen zu einem Guide?',
 			'text'    => $s['text'] ?? '',
 		) ) . warleek_b_group( warleek_b_block( 'chat-buttons', array( 'layout' => $s['layout'] ?? 'row' ) ), array( 'layout' => 'default', 'class' => 'wl-cta__chat' ) );
@@ -418,6 +422,10 @@ function warleek_seed_guides( array $guides, array $media, array $site, $force =
 		// Verfassende Rolle (LogisticLeek, MedicLeek …). Nur setzen, wenn im
 		// Kopfblock eine steht – eine leere Angabe würde eine vorhandene löschen.
 		if ( ! empty( $g['autor'] ) ) { update_post_meta( $id, '_warleek_autor', sanitize_title( $g['autor'] ) ); }
+		// Herkunft auch als Meta ablegen, nicht nur im Text: Andere Stellen –
+		// der Reddit-Auszug, der Herkunftsnachweis – brauchen sie strukturiert.
+		update_post_meta( $id, '_warleek_quellen', array_values( array_filter( (array) ( $g['quellen'] ?? array() ) ) ) );
+		update_post_meta( $id, '_warleek_geprueft', (string) ( $g['geprueft'] ?? '' ) );
 		warleek_set_seo( $id, $g['seo'] ?? array(), false, $force );
 	}
 }
@@ -535,6 +543,22 @@ function warleek_item_reihenfolge( array $items ) {
 		}
 	}
 	return $reihen;
+}
+
+/**
+ * Erscheint der Eintrag sofort statt in der Warteschlange?
+ *
+ * **Zwei Bedeutungen, die nicht dasselbe sind:** `start` heißt „im Spiel ohne
+ * Freischaltung verfügbar" und steht so auch im Text des Eintrags. `sofort`
+ * heißt nur „nicht terminieren". Season-2-Inhalte sind sofort zu
+ * veröffentlichen, aber ganz sicher keine Startausrüstung – als beides über
+ * `start` lief, behauptete der T-72 auf seiner Seite, er koste nichts.
+ *
+ * @param array $e Eintrag aus items.json.
+ * @return bool
+ */
+function warleek_item_sofort( array $e ) {
+	return ! empty( $e['start'] ) || ! empty( $e['sofort'] );
 }
 
 /**
@@ -789,7 +813,7 @@ function warleek_step_items( $force = false ) {
 		$da = get_posts( array( 'post_type' => 'item', 'name' => $e['slug'], 'post_status' => array( 'publish', 'future', 'draft', 'pending', 'private' ), 'posts_per_page' => 1, 'fields' => 'ids' ) );
 		$id = $da ? (int) $da[0] : 0;
 		$status[ $e['slug'] ] = $id ? array( 'id' => $id, 'status' => get_post_status( $id ), 'datum' => get_post_field( 'post_date', $id ) ) : null;
-		if ( ! empty( $e['start'] ) ) { continue; }
+		if ( warleek_item_sofort( $e ) ) { continue; }
 		// Alles, was noch wartet, wird gemeinsam neu verteilt – auch das bereits
 		// Geplante. Sonst bekämen nachgelieferte Einträge einen eigenen Plan ab
 		// morgen und stapelten sich auf die bestehenden Termine.
@@ -832,7 +856,7 @@ function warleek_step_items( $force = false ) {
 				unset( $daten['post_title'] );
 				warleek_log( 'Titel behalten (bearbeitet): ' . $e['slug'] );
 			}
-			if ( ! empty( $e['start'] ) && 'future' === $vorhanden['status'] ) {
+			if ( warleek_item_sofort( $e ) && 'future' === $vorhanden['status'] ) {
 				$daten['post_status']   = 'publish';
 				$daten['post_date']     = $jetzt;
 				$daten['post_date_gmt'] = get_gmt_from_date( $jetzt );
@@ -847,15 +871,15 @@ function warleek_step_items( $force = false ) {
 			wp_update_post( wp_slash( $daten ) );
 			$akt++;
 		} else {
-			$termin = ! empty( $e['start'] ) ? $jetzt : ( $plan[ $e['slug'] ] ?? $jetzt );
+			$termin = warleek_item_sofort( $e ) ? $jetzt : ( $plan[ $e['slug'] ] ?? $jetzt );
 			$daten['post_type']     = 'item';
-			$daten['post_status']   = empty( $e['start'] ) ? 'future' : 'publish';
+			$daten['post_status']   = warleek_item_sofort( $e ) ? 'publish' : 'future';
 			$daten['post_date']     = $termin;
 			$daten['post_date_gmt'] = get_gmt_from_date( $termin );
 			$id = wp_insert_post( wp_slash( $daten ) );
 			if ( is_wp_error( $id ) || ! $id ) { continue; }
 			$neu++;
-			if ( empty( $e['start'] ) ) {
+			if ( ! warleek_item_sofort( $e ) ) {
 				warleek_log( sprintf( 'geplant für %s: %s', substr( $termin, 0, 16 ), $e['slug'] ) );
 			} else {
 				$sofort++;

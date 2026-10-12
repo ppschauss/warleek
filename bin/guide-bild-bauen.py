@@ -135,13 +135,32 @@ def build(hintergrund, kacheln, titel, unterzeile, ziel):
     leinwand.alpha_composite(schatten)
 
     # --- Titel ------------------------------------------------------------
+    # Leerer Titel heißt: kein Text ins Bild. Nötig für Hero-Hintergründe, über
+    # denen die Seite ihre eigene H1 legt – sonst steht der Titel zweimal da,
+    # einmal eingebrannt und einmal als Überschrift.
+    if not titel:
+        leinwand.convert("RGB").save(ziel, "WEBP", quality=88, method=6)
+        print("  geschrieben: %s (%d B, ohne Text)" % (ziel, os.path.getsize(ziel)))
+        return
+
     d = ImageDraw.Draw(leinwand)
-    f_titel = schrift("800", 92)
+    # Schriftgröße an die Breite anpassen. Fest eingestellte 92 px liefen bei
+    # „Deutsche Wardogs Community" rechts aus dem Bild – ein Titel, der nicht
+    # passt, ist kein Titel.
+    x0   = 64
+    platz = W - 2 * x0
+    gr   = 92
+    while gr > 40:
+        f_titel = schrift("800", gr)
+        if d.textbbox((0, 0), titel, font=f_titel)[2] <= platz:
+            break
+        gr -= 3
     f_unter = schrift("700", 30)
+    if unterzeile and d.textbbox((0, 0), unterzeile, font=f_unter)[2] > platz:
+        f_unter = schrift("700", 26)
 
     # Der Block wird von der Unterkante her aufgebaut: Titel, Akzentstrich,
     # Unterzeile. Vorher hing die Unterzeile unter dem Bildrand.
-    x0     = 64
     rand   = 54
     hu     = d.textbbox((0, 0), unterzeile, font=f_unter)[3] if unterzeile else 0
     y_unter = H - rand - hu
@@ -160,6 +179,18 @@ def build(hintergrund, kacheln, titel, unterzeile, ziel):
 
 
 REZEPTE = {
+    "community": dict(
+        hintergrund="gruppe-sturmgewehr.webp",
+        kacheln=[
+            ("wardogs-palette-ammo.webp",   (28, 62), (360, 203), -5, 0.86),
+            ("wardogs-m249-saw.webp",       (614, 48), (360, 203), 5, 0.90),
+            ("gruppe-helikopter.webp",      (322, 132), (396, 223), -2, 1.05),
+        ],
+        # Ohne Text: Darüber legt die Seite ihre eigene H1.
+        titel="",
+        unterzeile="",
+        name="hero-community-reddit",
+    ),
     "munition": dict(
         hintergrund="gruppe-mg.webp",
         kacheln=[

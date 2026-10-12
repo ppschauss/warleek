@@ -13,6 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 /* ------------------------------------------------------------- Icons */
 function warleek_icon( $name ) {
 	$icons = array(
+		'reddit'   => '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a2.1 2.1 0 0 0-3.6-1.5 10.3 10.3 0 0 0-5.5-1.7l.9-4.2 2.9.6a1.5 1.5 0 1 0 .2-1l-3.5-.7a.5.5 0 0 0-.6.4l-1.1 5A10.3 10.3 0 0 0 5.6 10.5 2.1 2.1 0 1 0 3.2 14a4.2 4.2 0 0 0 0 .6c0 3.2 3.9 5.8 8.8 5.8s8.8-2.6 8.8-5.8a4.2 4.2 0 0 0 0-.6A2.1 2.1 0 0 0 22 12ZM7.5 13.5a1.5 1.5 0 1 1 1.5 1.5 1.5 1.5 0 0 1-1.5-1.5Zm8.2 4a5.8 5.8 0 0 1-3.7 1.1 5.8 5.8 0 0 1-3.7-1.1.5.5 0 0 1 .7-.7 4.9 4.9 0 0 0 3 .8 4.9 4.9 0 0 0 3-.8.5.5 0 1 1 .7.7Zm-.7-2.5a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5Z"/></svg>',
 		'discord'  => '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.5 2.3 15.7 15.7 0 0 0-15.4 0A18 18 0 0 1 8.8 3.4L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9 0 13.4.3 17.8a19.9 19.9 0 0 0 6 3l1.3-2a12.8 12.8 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 11.8 0l.5.4a12.7 12.7 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5-.9-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>',
 		'whatsapp' => '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.1.6 2.9.5a2.5 2.5 0 0 0 1.6-1.2c.2-.6.2-1 .1-1.2l-.5-.3Z"/></svg>',
 		'telegram' => '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.7 19.6c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.5-.6-.2L6.2 13.3l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 3c.9-.3 1.6.2 1.4 1.3Z"/></svg>',
@@ -27,16 +28,23 @@ function warleek_icon( $name ) {
 /* ------------------------------------------------------ Chat-Buttons */
 function warleek_render_chat_buttons( $attrs = array() ) {
 	$layout   = isset( $attrs['layout'] ) ? $attrs['layout'] : 'row';
+	// Reihenfolge ist Absicht: Reddit ist der Kanal der Seite. Discord, WhatsApp
+	// und Telegram bleiben nur, solange ein Link hinterlegt ist – leere Felder
+	// fallen unten raus, statt als „bald" zu stehen.
 	$channels = array(
+		'reddit'   => array( 'Reddit',   warleek_opt( 'reddit_url' ) ),
 		'discord'  => array( 'Discord',  warleek_opt( 'discord_url' ) ),
 		'whatsapp' => array( 'WhatsApp', warleek_opt( 'whatsapp_url' ) ),
 		'telegram' => array( 'Telegram', warleek_opt( 'telegram_url' ) ),
 	);
-	if ( 'header' === $layout ) { $channels = array( 'discord' => $channels['discord'] ); }
+	foreach ( $channels as $k => $c ) {
+		if ( 'reddit' !== $k && '' === trim( (string) $c[1] ) ) { unset( $channels[ $k ] ); }
+	}
+	if ( 'header' === $layout ) { $channels = array( 'reddit' => $channels['reddit'] ); }
 	$out = '<div class="wl-chat wl-chat--' . esc_attr( $layout ) . '">';
 	foreach ( $channels as $key => $c ) {
 		list( $label, $url ) = $c;
-		$label_full = 'header' === $layout ? 'Discord' : $label . ' beitreten';
+		$label_full = 'header' === $layout ? 'Reddit' : $label . ' beitreten';
 		if ( $url ) {
 			$out .= '<a class="wl-chat__btn wl-chat__btn--' . $key . '" href="' . esc_url( $url ) . '" target="_blank" rel="noopener">' . warleek_icon( $key ) . '<span>' . esc_html( $label_full ) . '</span></a>';
 		} else {

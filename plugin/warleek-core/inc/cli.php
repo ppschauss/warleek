@@ -195,6 +195,69 @@ class Warleek_Core_CLI {
 	/**
 	 * Zeigt den Installationsstatus.
 	 */
+	/**
+	 * Auf Reddit posten.
+	 *
+	 * ## OPTIONEN
+	 *
+	 * [<slug>]
+	 * : Guide oder Datenbank-Eintrag. Ohne Angabe wird der nächste aus der
+	 *   Warteschlange genommen.
+	 *
+	 * [--probe]
+	 * : Nichts senden, nur zeigen, was rausginge.
+	 *
+	 * [--stand]
+	 * : Nur den Stand der Warteschlange ausgeben.
+	 *
+	 * ## BEISPIELE
+	 *
+	 *     wp warleek reddit --stand
+	 *     wp warleek reddit wardogs-munition --probe
+	 *     wp warleek reddit
+	 */
+	public function reddit( $args, $assoc ) {
+		$probe = ! empty( $assoc['probe'] );
+
+		if ( ! empty( $assoc['stand'] ) ) {
+			$st = warleek_reddit_stand();
+			WP_CLI::log( sprintf( 'Zugangsdaten: %s', $st['bereit'] ? 'vollständig' : 'UNVOLLSTÄNDIG' ) );
+			WP_CLI::log( sprintf( 'Noch nicht gepostet: %d Beiträge', $st['offen'] ) );
+			WP_CLI::log( sprintf( 'Nächster Lauf: %s', $st['naechst'] ? wp_date( 'd.m.Y H:i', $st['naechst'] ) : 'nicht geplant' ) );
+			foreach ( array_slice( warleek_reddit_log(), 0, 8 ) as $z ) {
+				WP_CLI::log( sprintf( '  %s  %s', wp_date( 'd.m. H:i', $z['zeit'] ), $z['text'] ) );
+			}
+			return;
+		}
+
+		$slug = $args[0] ?? '';
+		if ( $slug ) {
+			$post = null;
+			foreach ( array( 'guide', 'item' ) as $t ) {
+				$f = get_posts( array( 'post_type' => $t, 'name' => $slug, 'posts_per_page' => 1, 'post_status' => 'publish' ) );
+				if ( $f ) { $post = $f[0]; break; }
+			}
+			if ( ! $post ) { WP_CLI::error( "Kein veröffentlichter Beitrag mit dem Slug „$slug“." ); }
+		} else {
+			$post = warleek_reddit_naechster();
+			if ( ! $post ) { WP_CLI::success( 'Warteschlange leer – alles gepostet.' ); return; }
+		}
+
+		$res = warleek_reddit_poste( $post, $probe );
+		if ( is_wp_error( $res ) ) { WP_CLI::error( $res->get_error_message() ); }
+
+		if ( $probe ) {
+			WP_CLI::log( str_repeat( '─', 60 ) );
+			WP_CLI::log( 'r/' . $res['sub'] . '  —  ' . $res['titel'] );
+			WP_CLI::log( str_repeat( '─', 60 ) );
+			WP_CLI::log( $res['text'] );
+			WP_CLI::log( str_repeat( '─', 60 ) );
+			WP_CLI::success( 'Trockenlauf – nichts gesendet.' );
+			return;
+		}
+		WP_CLI::success( 'Gepostet: ' . $res['url'] );
+	}
+
 	public function status( $args, $assoc ) {
 		$rows = array();
 		foreach ( warleek_install_status() as $s ) {

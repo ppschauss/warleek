@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.30.1
+Stable tag: 2.31.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,14 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.31.0 =
+* Reddit ist der Community-Kanal der Seite. Kopfbereich, Fußzeile, Organization-Schema und die neu gebaute Community-Seite verweisen auf r/WardogsDeutsch; Discord erscheint nur noch, wenn ein Link hinterlegt ist.
+* Neu: Posten aus WordPress (`inc/reddit.php`). Neue Guides automatisch, ältere Guides und Datenbank-Einträge täglich einer. Trockenlauf über `wp warleek reddit <slug> --probe`.
+* Community-Seite auf die Fokus-Begriffe gebaut, mit eigenem Hero aus vorhandenen Assets und sechs häufigen Fragen.
+* **Behoben:** Season-2-Einträge behaupteten, sie seien Startausrüstung ohne Kosten – `start` wurde für zwei Dinge benutzt. Jetzt trennt `sofort` das Veröffentlichen vom Freischaltstatus.
+* **Behoben:** Der Subreddit-Name wurde mit `trim($v, " /r")` zerlegt, was die Zeichen `r` und `/` an beiden Enden abschneidet.
+* Titelbilder passen die Schriftgröße der Breite an und lassen sich ohne Text erzeugen.
 
 = 2.30.1 =
 * **Behoben:** Der Kopfblock-Parser trennte Listen an jedem Komma, auch innerhalb von Anführungszeichen. Dadurch stand in den Herkunftskästen jede Jahreszahl als eigene Quelle („09.10.2026"). Betraf jeden Guide mit Komma in der Quellenangabe.
