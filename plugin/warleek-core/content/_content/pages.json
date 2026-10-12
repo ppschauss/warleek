@@ -179,11 +179,74 @@
             },
             {
                 "type": "section",
+                "inner": [
+                    {
+                        "type": "columns",
+                        "items": [
+                            {
+                                "image": "bild-hot-zone",
+                                "title": "100 Spieler, drei Fraktionen",
+                                "html": "<p>Auf einer Karte kämpfen drei Seiten gleichzeitig um dieselbe Zone. Wer vorne liegt, wird von zwei Richtungen beschossen.</p>",
+                                "url": "/guides/wardogs-kontrollzone/",
+                                "cta": "Kontrollzone verstehen"
+                            },
+                            {
+                                "image": "bild-zweibein",
+                                "title": "Echte Ballistik",
+                                "html": "<p>Kugeln fallen und brauchen Zeit. Zeroing, Zweibein und Haltung entscheiden auf Distanz mehr als die Waffe.</p>",
+                                "url": "/guides/wardogs-zeroing/",
+                                "cta": "Zeroing lernen"
+                            },
+                            {
+                                "image": "bild-haendler",
+                                "title": "Jede Entscheidung kostet",
+                                "html": "<p>Das Loadout zahlst du bei jedem Leben erneut. Deshalb gewinnt hier selten, wer besser zielt, sondern wer besser rechnet.</p>",
+                                "url": "/guides/wardogs-roi-vergleich/",
+                                "cta": "Die Rechnung sehen"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
                 "surface": true,
                 "inner": [
                     {
                         "type": "prose",
                         "html": "\n<h2>Was du in der deutschen Wardogs Community findest</h2>\n<ul>\n<li><strong>Jeder neue Guide zuerst.</strong> Sobald hier etwas erscheint, geht eine Zusammenfassung mit Quellenangabe in den Subreddit – automatisch, nicht wenn jemand Zeit hat.</li>\n<li><strong>Einträge aus der Datenbank.</strong> Täglich einer: Waffen, Fahrzeuge, Bauwerke, Munition – mit Werten, Quellen und dem Vermerk, was davon im Spiel nachgeprüft ist und was nicht.</li>\n<li><strong>Patch Notes auf Deutsch.</strong> Übersetzt und eingeordnet, statt im englischen Original zu versanden.</li>\n<li><strong>Korrekturen.</strong> Wenn wir danebenliegen, steht es dort – mitsamt dem, was vorher galt. Zuletzt beim angeblichen Season-2-Wipe, den es nach aktueller Quellenlage gar nicht gibt.</li>\n<li><strong>Fragen, die hier keinen Guide ergeben.</strong> „Welche Optik für 200 Meter?“ braucht keinen Artikel, sondern eine Antwort.</li>\n</ul>\n<p>Was dort <em>nicht</em> passiert: Rekrutierung. Warleek führt keinen Clan und sucht keine Mitglieder.</p>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "columns",
+                        "items": [
+                            {
+                                "image": "hero-guides",
+                                "title": "Guides",
+                                "html": "<p>Jeder neue Guide erscheint mit Zusammenfassung und Quellenangabe im Subreddit – automatisch, nicht wenn jemand Zeit hat.</p>",
+                                "url": "/guides/",
+                                "cta": "Alle Guides"
+                            },
+                            {
+                                "image": "community-datenbank",
+                                "title": "Datenbank",
+                                "html": "<p>Täglich ein Eintrag: Waffen, Fahrzeuge, Bauwerke, Munition – mit Werten, Quellen und Änderungsverlauf.</p>",
+                                "url": "/datenbank/",
+                                "cta": "Zur Datenbank"
+                            },
+                            {
+                                "image": "guide-s2-ueberblick",
+                                "title": "Patch Notes",
+                                "html": "<p>Auf Deutsch übersetzt und eingeordnet, statt im englischen Original zu versanden. Season 2 startet am 15. Oktober.</p>",
+                                "url": "/patch-notes/",
+                                "cta": "Patch Notes lesen"
+                            }
+                        ]
                     }
                 ]
             },

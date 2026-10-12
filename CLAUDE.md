@@ -79,7 +79,8 @@ Wardogs-**Guide-Seite** **Warleek** (warleek.de): Block-Theme `theme/warleek` (n
 - **Deutsche Anführungszeichen in Skripten:** `„…"` mit geradem Schlusszeichen beendet den PHP- bzw. Python-String und wirft einen Parse-Fehler – in dieser Codebasis schon dreimal passiert. Schließendes Zeichen ist `“`, nicht `"`. Vor jedem Lauf `php -l` bzw. den Parser selbst entscheiden lassen, statt auf die Ausgabe zu warten: Ein Skript ohne Ausgabe ist meistens ein Skript, das gar nicht lief.
 - Shell-Hinweis: `cd` persistiert nicht zuverlässig zwischen Befehlen → absolute Pfade / `git -C`.
 - Nach einem Branch-Wechsel, der `theme/` oder `plugin/` neu anlegt, zeigt der Bind-Mount ins Leere (alter Inode) → `./manage.sh up` neu starten, sonst fehlen im Container Plugin/Theme.
-- Screenshots: `?snap=1` friert Motion ein, deaktiviert Lazy-Loading; `--disable-dev-shm-usage` ist Pflicht.
+- Screenshots: `?snap=1` friert Motion ein, blendet Deko-Layer aus und deaktiviert Lazy-Loading (`wp_lazy_loading_enabled` auf false); `--disable-dev-shm-usage` ist Pflicht. **Das Lazy-Loading stand lange nur in dieser Notiz, nicht im Code** – Bilder unterhalb des sichtbaren Bereichs blieben im Screenshot leer und wirkten kaputt, obwohl sie sauber ausgeliefert wurden. Bei langen Seiten zusätzlich `--virtual-time-budget=6000` setzen.
+- **Seitenabschnitte lösen Asset-Schlüssel im Fließtext nicht auf** – das tun nur Guides (`warleek_resolve_asset_src()` in `warleek_seed_guides()`). Bilder auf einer Seite gehören deshalb in einen `columns`-Abschnitt, der `image` über die Medien-Map auflöst.
 
 - Beim Entfernen von Seiten: Eintrag in `content/_content/retired.json`, nicht einfach aus `pages.json` löschen – sonst bleibt die Seite veröffentlicht und ohne Weiterleitung online.
 

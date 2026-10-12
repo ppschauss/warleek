@@ -1572,5 +1572,10 @@
         "alt": "Drei ueberlagerte WARDOGS-Szenen: Munitionspalette, Transporthelikopter im Anflug und ein Maschinengewehr",
         "use": "hero-community-reddit",
         "size": 35568
+    },
+    "community-datenbank.webp": {
+        "alt": "Drei ueberlagerte WARDOGS-Szenen: Sturmgewehr, Kampfpanzer und eine Palette Munitionskisten",
+        "use": "community-datenbank",
+        "size": 25502
     }
 }

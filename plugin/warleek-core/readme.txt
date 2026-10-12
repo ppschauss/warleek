@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.31.1
+Stable tag: 2.31.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.31.2 =
+* Die Community-Seite hat jetzt zwei Bildstrecken statt nur eines Headers: drei Karten zum Spiel (Kontrollzone, Ballistik, Wirtschaft) und drei zu den Inhalten (Guides, Datenbank, Patch Notes). Neues Composite „community-datenbank" aus vorhandenen Assets.
+* **Behoben:** `?snap=1` schaltet jetzt tatsächlich das Lazy-Loading ab. Bisher stand das nur in den Projektnotizen – Bilder unterhalb des sichtbaren Bereichs blieben im Screenshot leer und wirkten kaputt.
 
 = 2.31.1 =
 * Die Community-Seite ist jetzt die Reddit-Seite, nicht mehr die Partnerseite mit Reddit-Kasten. Eigener Abschnitt zum Spiel als Taktik-Shooter, „Warum Reddit und kein Discord", Mitmach-Regeln und sieben häufige Fragen. Die Partner stehen kompakt am Ende – gelöscht wird die Funktion nicht, ohne diesen Abschnitt wären die Einträge nirgends sichtbar.

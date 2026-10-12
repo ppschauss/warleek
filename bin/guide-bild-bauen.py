@@ -179,6 +179,17 @@ def build(hintergrund, kacheln, titel, unterzeile, ziel):
 
 
 REZEPTE = {
+    "datenbank": dict(
+        hintergrund="typ-bauwerk.webp",
+        kacheln=[
+            ("wardogs-ak-74.webp",          (34, 70), (330, 186), -6, 0.92),
+            ("wardogs-t-72.webp",           (604, 54), (330, 186), 5, 0.95),
+            ("wardogs-palette-ammo.webp",   (318, 150), (380, 214), -2, 1.06),
+        ],
+        titel="",
+        unterzeile="",
+        name="community-datenbank",
+    ),
     "community": dict(
         hintergrund="gruppe-sturmgewehr.webp",
         kacheln=[

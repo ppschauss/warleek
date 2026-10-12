@@ -7,7 +7,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.31.1' ); }
+if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.31.2' ); }
 define( 'WARLEEK_DIR', get_template_directory() );
 define( 'WARLEEK_URI', get_template_directory_uri() );
 
@@ -83,9 +83,17 @@ function warleek_font_preload() {
 }
 add_action( 'wp_head', 'warleek_font_preload', 1 );
 
-/** ?snap=1 friert Animationen ein und blendet Deko-Layer aus (Screenshots). */
+/**
+ * ?snap=1 friert Animationen ein, blendet Deko-Layer aus und **schaltet
+ * Lazy-Loading ab** (Screenshots).
+ *
+ * Das Lazy-Loading fehlte hier lange, obwohl die Projektnotizen es zusagten:
+ * Bilder unterhalb des sichtbaren Bereichs blieben im Headless-Screenshot leer,
+ * und man hielt sie für kaputt, obwohl sie sauber ausgeliefert wurden.
+ */
 function warleek_snapshot_mode() {
-	if ( isset( $_GET['snap'] ) ) {
+	if ( isset( $_GET['snap'] ) ) {   // phpcs:ignore WordPress.Security.NonceVerification -- reiner Anzeigeschalter
+		add_filter( 'wp_lazy_loading_enabled', '__return_false' );
 		echo '<style id="warleek-snap">*,*::before,*::after{animation:none!important;transition:none!important}.wl-reveal{opacity:1!important;transform:none!important}.wl-smoke,.wl-flare-bar{display:none!important}</style>';
 	}
 }
