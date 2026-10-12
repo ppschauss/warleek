@@ -35,11 +35,43 @@ function warleek_md_front_matter( $text ) {
 			$val = substr( $val, 1, -1 );
 		}
 		if ( str_starts_with( $val, '[' ) && str_ends_with( $val, ']' ) ) {
-			$val = array_values( array_filter( array_map( function ( $x ) { return trim( $x, " \t\"'" ); }, explode( ',', substr( $val, 1, -1 ) ) ) ) );
+			$val = warleek_md_liste( substr( $val, 1, -1 ) );
 		}
 		$meta[ $key ] = $val;
 	}
 	return array( 'meta' => $meta, 'body' => ltrim( substr( $text, strlen( $m[0] ) ), "\n" ) );
+}
+
+/**
+ * Zerlegt `a, b, c` aus dem Kopfblock – aber nicht innerhalb von Anführungszeichen.
+ *
+ * Das naive `explode(',')` hat jede Quellenangabe mit Komma zerrissen: Aus
+ * `'Steam-Ankündigung von BULKHEAD, 09.10.2026'` wurden zwei Quellen, und im
+ * Herkunftskasten stand „09.10.2026" als eigener Eintrag. Betroffen war jeder
+ * Guide mit einer Jahreszahl hinter einem Komma.
+ *
+ * @param string $roh Inhalt zwischen den eckigen Klammern.
+ * @return array
+ */
+function warleek_md_liste( $roh ) {
+	$out = array();
+	$len = strlen( $roh );
+	$akt = '';
+	$in  = '';   // offenes Anführungszeichen, sonst leer
+
+	for ( $i = 0; $i < $len; $i++ ) {
+		$c = $roh[ $i ];
+		if ( '' !== $in ) {
+			if ( $c === $in ) { $in = ''; } else { $akt .= $c; }
+			continue;
+		}
+		if ( "'" === $c || '"' === $c ) { $in = $c; continue; }
+		if ( ',' === $c ) { $out[] = trim( $akt ); $akt = ''; continue; }
+		$akt .= $c;
+	}
+	$out[] = trim( $akt );
+
+	return array_values( array_filter( $out, function ( $x ) { return '' !== $x; } ) );
 }
 
 /**

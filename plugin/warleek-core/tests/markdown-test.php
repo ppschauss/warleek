@@ -17,6 +17,15 @@ chk( 'fm-title', $fm['meta']['title'], 'Mit HOTAS fliegen' );
 chk( 'fm-desc', $fm['meta']['description'], 'Kurztext' );
 chk( 'fm-tags', implode( '|', $fm['meta']['tags'] ), 'wardogs|hotas|joystick' );
 chk( 'fm-body', substr( $fm['body'], 0, 7 ), '# Titel' );
+// Listen werden nicht innerhalb von Anführungszeichen getrennt – sonst wurde aus
+// einer Quelle mit Jahreszahl hinter dem Komma eine zweite, leere Quelle.
+$fmq = warleek_md_front_matter( "---\nquellen: ['Steam-Ankündigung von BULKHEAD, 09.10.2026', 'Eurogamer, 11.10.2026']\n---\nText" );
+chk( 'fm-liste-anzahl', count( $fmq['meta']['quellen'] ), 2 );
+chk( 'fm-liste-1', $fmq['meta']['quellen'][0], 'Steam-Ankündigung von BULKHEAD, 09.10.2026' );
+chk( 'fm-liste-2', $fmq['meta']['quellen'][1], 'Eurogamer, 11.10.2026' );
+$fmd = warleek_md_front_matter( "---\nquellen: [\"Mit, Komma\", Ohne]\n---\nText" );
+chk( 'fm-liste-gemischt', implode( '|', $fmd['meta']['quellen'] ), 'Mit, Komma|Ohne' );
+
 $fm2 = warleek_md_front_matter( "Kein Kopfblock.\n" );
 chk( 'fm-none', $fm2['body'], 'Kein Kopfblock.' );
 

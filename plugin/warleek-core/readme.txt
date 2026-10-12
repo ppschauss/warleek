@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.30.0
+Stable tag: 2.30.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.30.1 =
+* **Behoben:** Der Kopfblock-Parser trennte Listen an jedem Komma, auch innerhalb von Anführungszeichen. Dadurch stand in den Herkunftskästen jede Jahreszahl als eigene Quelle („09.10.2026"). Betraf jeden Guide mit Komma in der Quellenangabe.
+* Neu: `bin/reddit-post.php` erzeugt aus einem Guide einen Reddit-fertigen Beitrag mit Quellenblock.
 
 = 2.30.0 =
 * Season 2: vier neue Beiträge (Überblick, Arsenal, Regen, Wager Vendor) auf Basis der offiziellen Steam-Ankündigung vom 09.10.2026, mit eingebettetem DEVLOG.
