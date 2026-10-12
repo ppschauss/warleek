@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.31.0
+Stable tag: 2.31.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.31.1 =
+* Die Community-Seite ist jetzt die Reddit-Seite, nicht mehr die Partnerseite mit Reddit-Kasten. Eigener Abschnitt zum Spiel als Taktik-Shooter, „Warum Reddit und kein Discord", Mitmach-Regeln und sieben häufige Fragen. Die Partner stehen kompakt am Ende – gelöscht wird die Funktion nicht, ohne diesen Abschnitt wären die Einträge nirgends sichtbar.
+* `/guides/` zeigt 20 statt 12 Guides und sortiert nach Datum absteigend. Themenseiten behalten die redaktionelle Reihenfolge – nach Datum stünde dort der Satire-Guide vor „Deine erste Runde".
 
 = 2.31.0 =
 * Reddit ist der Community-Kanal der Seite. Kopfbereich, Fußzeile, Organization-Schema und die neu gebaute Community-Seite verweisen auf r/WardogsDeutsch; Discord erscheint nur noch, wenn ein Link hinterlegt ist.

@@ -48,15 +48,30 @@ function warleek_guide_themen() {
 /**
  * Guide-Archiv und Themen-Archive einheitlich sortieren.
  *
- * Ohne das sortiert das Archiv nach Datum, das Guides-Raster aber nach `menu_order` –
- * dieselben Guides erscheinen also in unterschiedlicher Reihenfolge. Die Angabe
- * `perPage` im Template greift nicht, weil die Abfrage die Hauptabfrage erbt.
+ * Die Angabe `perPage` im Template greift nicht, weil die Abfrage die
+ * Hauptabfrage erbt – deshalb hier.
+ *
+ * 20 Guides je Seite: Bei 12 lagen bereits über die Hälfte auf Seite zwei.
  */
 function warleek_guide_archive_order( $query ) {
 	if ( is_admin() || ! $query->is_main_query() ) { return; }
-	if ( ! $query->is_post_type_archive( 'guide' ) && ! $query->is_tax( 'guide-thema' ) ) { return; }
-	$query->set( 'orderby', array( 'menu_order' => 'ASC', 'date' => 'DESC' ) );
-	$query->set( 'posts_per_page', 12 );
+	$archiv = $query->is_post_type_archive( 'guide' );
+	$thema  = $query->is_tax( 'guide-thema' );
+	if ( ! $archiv && ! $thema ) { return; }
+
+	// Zwei verschiedene Fragen, zwei verschiedene Sortierungen:
+	//
+	// Die Bibliothek unter /guides/ beantwortet „was ist neu?" – also das
+	// jüngste zuerst. Eine Themenseite beantwortet „wie fange ich an?" – dort
+	// gilt die redaktionelle Reihenfolge aus `menu_order` (einsteiger 1–9,
+	// gameplay 10–19 …), die vom Einfachen zum Schwierigen führt. Nach Datum
+	// sortiert stünde dort der Satire-Guide vor „Deine erste Runde".
+	if ( $archiv ) {
+		$query->set( 'orderby', array( 'date' => 'DESC' ) );
+	} else {
+		$query->set( 'orderby', array( 'menu_order' => 'ASC', 'date' => 'DESC' ) );
+	}
+	$query->set( 'posts_per_page', 20 );
 }
 add_action( 'pre_get_posts', 'warleek_guide_archive_order' );
 

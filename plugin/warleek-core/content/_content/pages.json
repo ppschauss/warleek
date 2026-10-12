@@ -134,9 +134,9 @@
         "parent": null,
         "template": "page-hub",
         "hero": {
-            "eyebrow": "Community",
+            "eyebrow": "r/WardogsDeutsch",
             "h1": "Die deutsche Wardogs Community",
-            "text": "Taktik-Shooter auf Deutsch: Treffpunkt ist r/WardogsDeutsch. Dazu Partner-Communitys aus Deutschland, Österreich und der Schweiz.",
+            "text": "Der deutschsprachige Treffpunkt zum Taktik-Shooter Wardogs – für Spielerinnen und Spieler aus Deutschland, Österreich und der Schweiz.",
             "image": "hero-community-reddit",
             "buttons": [
                 {
@@ -152,8 +152,8 @@
             ]
         },
         "seo": {
-            "title": "Deutsche Wardogs Community – Reddit & Partner | Warleek",
-            "description": "Wardogs auf Deutsch: der Subreddit r/WardogsDeutsch, Partner-Communitys und Guides zum Taktik-Shooter. Für Deutschland, Österreich und die Schweiz."
+            "title": "Deutsche Wardogs Community – r/WardogsDeutsch | Warleek",
+            "description": "Der deutsche Wardogs-Reddit: Taktik, FOB-Bauten, Patch Notes und Guides. Community für Deutschland, Österreich und die Schweiz."
         },
         "sections": [
             {
@@ -162,9 +162,9 @@
                 "inner": [
                     {
                         "type": "reddit",
-                        "eyebrow": "Reddit",
-                        "h2": "r/WardogsDeutsch – der deutsche Wardogs-Reddit",
-                        "text": "Fragen, Taktik, FOB-Bauten und jeder neue Guide zuerst. Kein Zwang zum Beitritt, kein Bewerbungsverfahren – lesen reicht."
+                        "eyebrow": "Mitlesen genügt",
+                        "h2": "r/WardogsDeutsch",
+                        "text": "Kein Bewerbungsverfahren, keine Einladung, kein Konto zum Lesen. Fragen stellen, Taktik diskutieren, FOB-Bauten zeigen."
                     }
                 ]
             },
@@ -173,7 +173,7 @@
                 "inner": [
                     {
                         "type": "prose",
-                        "html": "\n<h2>Was du in der deutschen Wardogs Community findest</h2>\n<p><strong>Wardogs</strong> ist ein taktischer Militär-Shooter mit 100 Spielern, drei Fraktionen und einer Wirtschaft, die jede Entscheidung bepreist. Fast alles dazu steht auf Englisch. Dieser Treffpunkt ist der Versuch, das auf Deutsch nachzuholen – für Spielerinnen und Spieler aus Deutschland, Österreich und der Schweiz.</p>\n<ul>\n<li><strong>Neue Guides zuerst.</strong> Jeder Guide erscheint mit Zusammenfassung im Subreddit, bevor ihn jemand sucht.</li>\n<li><strong>Einträge aus der Datenbank.</strong> Waffen, Fahrzeuge, Bauwerke – mit Werten, Quellen und dem Vermerk, was davon nachgeprüft ist.</li>\n<li><strong>Patch Notes auf Deutsch.</strong> Übersetzt und eingeordnet, statt im Original zu versanden.</li>\n<li><strong>Korrekturen.</strong> Wenn wir danebenliegen, steht es dort – mitsamt dem, was vorher galt.</li>\n</ul>\n<p>Was dort <em>nicht</em> passiert: Rekrutierung. Warleek führt keinen Clan. Wer ein Squad sucht, findet es bei den Partnern weiter unten.</p>\n"
+                        "html": "\n<h2>Wardogs auf Deutsch – ein Taktik-Shooter zwischen Militärsimulation und Wirtschaftsspiel</h2>\n<p><strong>Wardogs</strong> ist ein taktischer Militär-Shooter von BULKHEAD, veröffentlicht von Team17, seit September 2026 im Early Access. Bis zu 100 Spieler, drei Fraktionen gleichzeitig auf einer Karte, echte Ballistik mit Kugelfall und Flugzeit, Basenbau, Logistik – und eine Wirtschaft, die jede Entscheidung bepreist.</p>\n<p>Das macht es näher an einer Militärsimulation als an einem Arena-Shooter: Wer hier gewinnt, hat selten besser gezielt, sondern besser gerechnet. Ein Loadout kostet bei <em>jedem</em> Leben erneut. Eine Versorgungspalette bringt mehr als ein Dutzend Abschüsse. Punkte gibt es für Anwesenheit in der Zone, nicht für den Kill-Feed.</p>\n<p>Genau diese Tiefe ist der Grund für eine deutschsprachige Community: Es gibt viel zu besprechen, und fast alles dazu steht auf Englisch.</p>\n"
                     }
                 ]
             },
@@ -183,15 +183,34 @@
                 "inner": [
                     {
                         "type": "prose",
-                        "html": "\n<h2>Warum Reddit statt Discord?</h2>\n<p>Ein Discord ist gut für den Abend und schlecht für alles danach. Was dort geschrieben wird, ist zwei Tage später nicht mehr auffindbar – weder für Suchmaschinen noch für die Leute, die dieselbe Frage nächste Woche haben.</p>\n<p>Ein Subreddit ist das Gegenteil: öffentlich, durchsuchbar, dauerhaft. Eine Antwort, die heute geschrieben wird, hilft in einem halben Jahr noch jemandem. Für eine Seite, deren ganzer Zweck das Nachschlagen ist, ist das die passendere Form.</p>\n<p>Dazu kommt ein praktischer Punkt: Reddit braucht keine Einladung und kein Konto, um zu lesen.</p>\n"
+                        "html": "\n<h2>Was du in der deutschen Wardogs Community findest</h2>\n<ul>\n<li><strong>Jeder neue Guide zuerst.</strong> Sobald hier etwas erscheint, geht eine Zusammenfassung mit Quellenangabe in den Subreddit – automatisch, nicht wenn jemand Zeit hat.</li>\n<li><strong>Einträge aus der Datenbank.</strong> Täglich einer: Waffen, Fahrzeuge, Bauwerke, Munition – mit Werten, Quellen und dem Vermerk, was davon im Spiel nachgeprüft ist und was nicht.</li>\n<li><strong>Patch Notes auf Deutsch.</strong> Übersetzt und eingeordnet, statt im englischen Original zu versanden.</li>\n<li><strong>Korrekturen.</strong> Wenn wir danebenliegen, steht es dort – mitsamt dem, was vorher galt. Zuletzt beim angeblichen Season-2-Wipe, den es nach aktueller Quellenlage gar nicht gibt.</li>\n<li><strong>Fragen, die hier keinen Guide ergeben.</strong> „Welche Optik für 200 Meter?“ braucht keinen Artikel, sondern eine Antwort.</li>\n</ul>\n<p>Was dort <em>nicht</em> passiert: Rekrutierung. Warleek führt keinen Clan und sucht keine Mitglieder.</p>\n"
                     }
                 ]
             },
             {
                 "type": "section",
-                "eyebrow": "Partner",
-                "h2": "Deutschsprachige Wardogs-Communitys und Clans",
-                "text": "Wer ein festes Squad sucht, ist hier richtiger als bei uns.",
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Warum ein Reddit und kein Discord?</h2>\n<p>Ein Discord ist gut für den Abend und schlecht für alles danach. Was dort geschrieben wird, ist zwei Tage später nicht mehr auffindbar – weder für Suchmaschinen noch für die Leute, die dieselbe Frage nächste Woche haben.</p>\n<p>Ein Subreddit ist das Gegenteil: öffentlich, durchsuchbar, dauerhaft. Eine Antwort von heute hilft in einem halben Jahr noch jemandem. Für eine Seite, deren ganzer Zweck das Nachschlagen ist, ist das die passendere Form – und man braucht kein Konto, um mitzulesen.</p>\n<p>Dass die Community dadurch langsamer wächst als ein Discord mit Einladungslink, nehmen wir in Kauf.</p>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "surface": true,
+                "inner": [
+                    {
+                        "type": "prose",
+                        "html": "\n<h2>Mitmachen</h2>\n<p>Gern gesehen ist alles, was anderen weiterhilft: Fragen, eigene Messungen aus dem Spiel, FOB-Bauten mit Screenshot, Widerspruch zu unseren Guides.</p>\n<p><strong>Widerspruch ausdrücklich eingeschlossen.</strong> An jedem Guide steht, woher die Angaben stammen und ob sie im Spiel nachgeprüft sind. Wer eine Zahl anders misst, soll das schreiben – wir tragen es nach und halten fest, was vorher dort stand.</p>\n<p>Drei Dinge, die den Ton setzen:</p>\n<ul>\n<li><strong>Deutsch oder Englisch</strong>, beides geht. Der Sub ist für den deutschsprachigen Raum, aber niemand wird wegen der Sprache weggeschickt.</li>\n<li><strong>Keine Cheats, keine Exploit-Anleitungen.</strong> Mechaniken erklären ja, Lücken ausnutzen nein.</li>\n<li><strong>Anständiger Umgang.</strong> Auch mit Leuten, die eine Frage stellen, die schon zehnmal kam.</li>\n</ul>\n"
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "eyebrow": "Außerdem",
+                "h2": "Andere deutschsprachige Wardogs-Communitys",
+                "text": "Wer ein festes Squad für den Abend sucht, ist bei diesen Gruppen richtiger als bei uns. Wer hier steht, hat dafür nicht bezahlt.",
                 "inner": [
                     {
                         "type": "partner",
@@ -201,44 +220,38 @@
             },
             {
                 "type": "section",
-                "surface": true,
-                "inner": [
-                    {
-                        "type": "prose",
-                        "html": "\n<h2 id=\"partner-werden\">Partner werden</h2>\n<p>Du führst eine deutschsprachige Wardogs-Community und möchtest hier stehen? Schreib uns – auf Reddit oder per Mail. Wir schauen vorbei, spielen einen Abend mit und nehmen dich auf, wenn es passt. Drei Dinge erwarten wir:</p>\n<ul>\n<li><strong>Deutschsprachig und offen.</strong> Neue Leute sollen ohne Bewerbungsverfahren reinschauen können.</li>\n<li><strong>Aktiv.</strong> Ein Server, in dem seit drei Monaten niemand geschrieben hat, hilft niemandem.</li>\n<li><strong>Anständiger Umgang.</strong> Kein Toxic-Gerede, keine Cheats, kein Ärger in fremden Lobbys.</li>\n</ul>\n<p>Im Gegenzug verlinken wir euch hier, und ihr dürft unsere Guides teilen, so viel ihr wollt. Wer auf der Liste steht, hat dafür nicht bezahlt.</p>\n"
-                    }
-                ]
-            },
-            {
-                "type": "section",
                 "inner": [
                     {
                         "type": "faq",
-                        "heading": "Häufige Fragen zur deutschen Wardogs Community",
+                        "heading": "Häufige Fragen",
                         "items": [
                             {
                                 "q": "Gibt es eine deutsche Wardogs Community?",
-                                "a": "Ja – r/WardogsDeutsch ist der deutschsprachige Treffpunkt zum Spiel, offen für Leute aus Deutschland, Österreich und der Schweiz. Lesen geht ohne Konto."
+                                "a": "Ja – r/WardogsDeutsch ist der deutschsprachige Treffpunkt zum Spiel, offen für Leute aus Deutschland, Österreich und der Schweiz. Zum Mitlesen braucht es kein Konto."
                             },
                             {
                                 "q": "Wo finde ich den deutschen Wardogs-Reddit?",
-                                "a": "Unter reddit.com/r/WardogsDeutsch. Dort erscheinen neue Guides, Einträge aus der Datenbank und die deutschen Patch Notes."
+                                "a": "Unter reddit.com/r/WardogsDeutsch. Dort erscheinen neue Guides, täglich ein Eintrag aus der Datenbank und die deutschen Patch Notes."
                             },
                             {
                                 "q": "Was für ein Spiel ist Wardogs?",
-                                "a": "Ein taktischer Militär-Shooter von BULKHEAD, veröffentlicht von Team17, seit September 2026 im Early Access. Bis zu 100 Spieler, drei Fraktionen, Basenbau, Logistik und eine Wirtschaft, in der jedes Loadout Geld kostet."
+                                "a": "Ein taktischer Militär-Shooter von BULKHEAD, veröffentlicht von Team17, seit September 2026 im Early Access. Bis zu 100 Spieler, drei Fraktionen, echte Ballistik, Basenbau, Logistik und eine Wirtschaft, in der jedes Loadout bei jedem Leben erneut Geld kostet."
                             },
                             {
-                                "q": "Braucht man für die Community einen Clan?",
-                                "a": "Nein. Warleek führt selbst keinen Clan und rekrutiert nicht. Wer ein festes Squad sucht, findet auf dieser Seite Partner-Communitys, die genau das anbieten."
+                                "q": "Ist Wardogs eine Militärsimulation?",
+                                "a": "Es liegt dazwischen. Ballistik, Gewichtsklassen, Nachschub und Basenbau sind simulationsnah, der Einstieg ist aber deutlich zugänglicher als bei klassischen Milsim-Titeln. Wer aus Arena-Shootern kommt, braucht vor allem Geduld beim Rechnen."
+                            },
+                            {
+                                "q": "Braucht man einen Clan, um mitzumachen?",
+                                "a": "Nein. Warleek führt selbst keinen Clan und rekrutiert nicht. Wer ein festes Squad sucht, findet auf dieser Seite deutschsprachige Communitys, die genau das anbieten."
                             },
                             {
                                 "q": "Gibt es Wardogs-Guides auf Deutsch?",
-                                "a": "Ja, auf dieser Seite – mit Quellenangabe an jedem Guide und dem Vermerk, ob die Angaben im Spiel nachgeprüft sind. Dazu eine Datenbank mit Waffen, Fahrzeugen, Bauwerken und Munition."
+                                "a": "Ja, auf dieser Seite – jeder Guide nennt seine Quellen und sagt, ob die Angaben im Spiel nachgeprüft sind. Dazu eine Datenbank mit Waffen, Fahrzeugen, Bauwerken, Ausrüstung und Munition."
                             },
                             {
-                                "q": "Warum kein Discord?",
-                                "a": "Weil Gesprochenes im Chat nach zwei Tagen nicht mehr auffindbar ist. Ein Subreddit bleibt öffentlich und durchsuchbar – passender für eine Seite, deren Zweck das Nachschlagen ist."
+                                "q": "Warum Reddit und nicht Discord?",
+                                "a": "Weil Geschriebenes im Chat nach zwei Tagen nicht mehr auffindbar ist. Ein Subreddit bleibt öffentlich und durchsuchbar – passender für eine Seite, deren Zweck das Nachschlagen ist."
                             }
                         ]
                     }
