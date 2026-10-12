@@ -111,7 +111,7 @@ function warleek_render_autor_zeile( $post = 0 ) {
 	if ( ! $autor ) { return ''; }
 
 	$rolle = trim( (string) get_post_meta( $autor->ID, 'autor_rolle', true ) );
-	$bild  = get_the_post_thumbnail( $autor, 'thumbnail', array( 'alt' => '', 'loading' => 'lazy', 'decoding' => 'async' ) );
+	$bild  = get_the_post_thumbnail( $autor, 'thumbnail', array( 'alt' => '', 'loading' => warleek_lazy(), 'decoding' => 'async' ) );
 
 	return '<p class="wl-verfasser">'
 		. ( $bild ? '<span class="wl-verfasser__bild">' . $bild . '</span>' : '' )

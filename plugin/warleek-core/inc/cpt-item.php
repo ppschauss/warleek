@@ -344,7 +344,7 @@ function warleek_render_item_liste( $attrs = array() ) {
 
 		// Alt-Text leer: Der Titel steht direkt darunter, sonst liest ein
 		// Screenreader denselben Namen zweimal vor.
-		$bild = get_the_post_thumbnail( $p, 'medium', array( 'alt' => '', 'loading' => 'lazy', 'decoding' => 'async' ) );
+		$bild = get_the_post_thumbnail( $p, 'medium', array( 'alt' => '', 'loading' => warleek_lazy(), 'decoding' => 'async' ) );
 
 		$out .= '<li class="wl-itemkarte">'
 			. '<a class="wl-itemkarte__link" href="' . esc_url( get_permalink( $p ) ) . '" title="' . warleek_item_linktitel( $p ) . '">'

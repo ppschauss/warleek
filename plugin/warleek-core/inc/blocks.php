@@ -10,6 +10,20 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
+/**
+ * Lazy-Loading-Wert für Bilder in eigenen Blöcken.
+ *
+ * Im Schnappschuss-Modus (`?snap=1`) muss es aus sein, sonst bleiben Bilder
+ * unterhalb des sichtbaren Bereichs im Screenshot leer – fest verdrahtete
+ * `loading="lazy"`-Attribute überschreibt der Filter `wp_lazy_loading_enabled`
+ * nämlich nicht. Genau daran sind die Partner-Karten hängengeblieben.
+ *
+ * @return string|false
+ */
+function warleek_lazy() {
+	return isset( $_GET['snap'] ) ? false : 'lazy';   // phpcs:ignore WordPress.Security.NonceVerification -- reiner Anzeigeschalter
+}
+
 /* ------------------------------------------------------------- Icons */
 function warleek_icon( $name ) {
 	$icons = array(
@@ -102,7 +116,7 @@ function warleek_render_guides_grid( $attrs = array() ) {
 	foreach ( $q->posts as $p ) {
 		$terms = get_the_terms( $p, 'guide-thema' );
 		$chip  = $terms && ! is_wp_error( $terms ) ? '<span class="wl-tag">' . esc_html( $terms[0]->name ) . '</span>' : '';
-		$img   = has_post_thumbnail( $p ) ? '<div class="wl-card__img">' . get_the_post_thumbnail( $p, 'medium_large', array( 'loading' => 'lazy' ) ) . '</div>' : '';
+		$img   = has_post_thumbnail( $p ) ? '<div class="wl-card__img">' . get_the_post_thumbnail( $p, 'medium_large', array( 'loading' => warleek_lazy() ) ) . '</div>' : '';
 		$mins  = function_exists( 'warleek_reading_time' ) ? warleek_reading_time( $p ) : 0;
 		$out  .= '<article class="wl-card">' . $img
 			. '<p class="wl-card__meta">' . $chip . ( $mins ? '<span class="wl-minutes">' . $mins . ' Min.</span>' : '' ) . '</p>'
@@ -132,7 +146,7 @@ function warleek_render_partner_grid( $attrs = array() ) {
 		$featured = (bool) get_post_meta( $p->ID, 'partner_featured', true );
 		$icon     = $platform ? warleek_icon( $platform ) : '';
 		$img      = has_post_thumbnail( $p )
-			? '<div class="wl-partner__img">' . get_the_post_thumbnail( $p, 'medium', array( 'loading' => 'lazy' ) ) . '</div>'
+			? '<div class="wl-partner__img">' . get_the_post_thumbnail( $p, 'medium', array( 'loading' => warleek_lazy() ) ) . '</div>'
 			: '';
 		$text = trim( wp_strip_all_tags( $p->post_content ) );
 		$out .= '<article class="wl-card wl-partner' . ( $featured ? ' is-featured' : '' ) . '">' . $img
