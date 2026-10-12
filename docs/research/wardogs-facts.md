@@ -258,3 +258,61 @@ Die **benannten Teile überschneiden sich fast nicht**: xgamingserver führt „
 Einzige halbwegs gestützte Einzelwerte (zwei Optiken, aus einer Quelle, früher erfasst): Tricon 1.5x Prisma (0,2 kg, Zeroing 100–200 m), CQ-2x Prisma ($640, 0,31 kg, 100–300 m).
 
 Quellen: allthings.how/wardogs-how-to-get-attachments-for-weapons/, xgamingserver.com/blog/wardogs-attachments-guide/, wardogshub.gg/attachments/
+
+## Season 2 — angekündigt am 9. Oktober 2026, Start 15. Oktober 2026
+
+Primärquelle: Steam-Ankündigung „WARDOGS | Season 02 Preview" von BULKHEAD (KingHoward), 09.10.2026.
+**Es sind ausdrücklich noch nicht die Patch Notes:** „Full patch notes including balance changes will be dropping early next week" und „The update is actively being worked on before we lock in the final details." Alles unten ist Ankündigung, nicht Messung.
+
+**Vier neue Waffen** (dazu „a range of new attachments"):
+- **TCX Spear** – Assault Rifle
+- **M14** – DMR
+- **PP-19 Bizon** – SMG
+- **Evo-3 Ultra** – LMG
+
+**Neue Wurfwaffe:**
+- **Molotov** – Brandsatz, entzündet beim Aufprall eine Fläche und schadet allen im Radius. Über- oder Unterhandwurf. Zweck laut Entwickler: Schaden **und** Flächenverweigerung.
+
+**Vier neue Fahrzeuge:**
+- **Wolf-110** – schneller, leichter Radtransporter
+- **Wolf-110 (Assault)** – derselbe mit ringmontiertem M2 Browning
+- **T-72** – Kampfpanzer, langsamer als der Leopard, dafür **billiger und deutlich sparsamer im Verbrauch**
+- **Flakpanzer Gepard** – Flugabwehrfahrzeug (bei uns bereits in der Datenbank)
+
+**Drei neue Bauwerke:**
+- **MG Nest** – bemannte M2-Browning-Stellung
+- **Large Shelter** – große Metallüberdachung, „for covering key assets or keeping the rain off"
+- **Wooden Step** – „A step. Made of wood."
+
+**Regen (neues Wetter-Preset):** verändert Sicht, Gefechtsentfernungen und Geräusche; wirkt auf die Umgebung ein, auch auf beschädigte und zerstörte Bauwerke. **Donner ist serverweit synchronisiert und kann Schrittgeräusche kurzzeitig überdecken.**
+
+**Experimental Wager Vendor:** Wette auf die eigene Leistung. Du wählst Ziele, legst fest, wie viele Tode du dafür ausgeben willst, setzt deinen Einsatz. Beispiele: X Abschüsse in der Hot Zone, eine Anzahl Spieler transportieren. Je mehr Ziele gestapelt, desto höher Quote und Auszahlung. Ein Wett-Anzeiger sitzt über der Minikarte. Vollständig optional. **Die Entwickler sagen selbst, sie nehmen es womöglich während der Saison wieder heraus, wenn es zu leicht auszunutzen ist.**
+
+**Balance:**
+- **Infrarot-Entfernungsmesser läuft jetzt auf Batterien** (bestätigt, was der Rangefinder-Guide als angekündigt führte)
+- **Super-Heavy-Helm**: gedämpfter Ton, eingeschränktes Sichtfeld, beschlägt beim Sprinten. Heavy und Super Heavy bekommen zusätzlich höhere Suppression-Resistenz
+- Waffenschaden, Rückstoß und Suppression angepasst, Ziel sind klarere Rollen je Waffenklasse
+
+**Fraktionsbalance (Lonestar):** Laut Entwickler ist nicht die Ausrüstung das Problem, sondern die **Stimmung** gegenüber Blau – „sentiment around the blue team is the largest driving factor behind players not wanting to play on it".
+- Alle Fraktions-Spawns auf **Bakurani** verschoben
+- Lonestar-Uniformen **entsättigt**, fallen weniger auf
+- Lonestar bekommt **Cash- und XP-Siegbonus** sowie **Cash- und XP-Multiplikatoren**, nur in Season 2
+- **Händlerrabatt von 20 % für das zurückliegende Team**, sobald es mindestens **40 Punkte** hinter dem Zweiten liegt – gilt für **alle** Teams, nicht nur Lonestar
+- Community-Serverbetreiber, die den Fraktionsbonus ausnutzen, werden bestraft
+
+**Kein Wipe angekündigt.** Weder die Steam-Ankündigung noch die Eurogamer-Meldung erwähnen einen Progressions-Reset. Unser älterer Season-2-Guide hat einen Wipe als gesetzt dargestellt – das war nicht belegt und ist korrigiert.
+
+**Abweichungen zwischen Primärquelle und deutscher Presse** (Eurogamer, 11.10.2026):
+| | Steam (BULKHEAD) | Eurogamer |
+|---|---|---|
+| Sturmgewehr | TCX **Spear** | TCX-**SPR** |
+| Panzer | **T-72** | T-72**B3** |
+| Molotov | ja | nicht erwähnt |
+| Entfernungsmesser/Helme | ja | nicht erwähnt |
+| 20-%-Rabatt ab 40 Punkten | ja | nur „Händler-Rabatte" ohne Zahlen |
+
+Im Zweifel gilt die Steam-Ankündigung.
+
+**Sonstiges aus derselben Ankündigung:** über 3 Millionen verkaufte Exemplare; erste Pre-Season-Pressekonferenz (YouTube `PDtosdp86ms`); DEVLOG zu Season 2 (YouTube `J2VxjMnMDw4`); Nominierung als Best Early Access Game bei den Golden Joystick Awards.
+
+Quellen: store.steampowered.com/news/app/1867240/view/670630562731395011 · eurogamer.de/wardogs-season-2-update-release

@@ -1,84 +1,130 @@
 ---
-title: "Season 2 am 15. Oktober: Wipe, Regen und ein Panzer gegen die Heli-Plage"
+title: "Wardogs Season 2 am 15. Oktober: alles, was angekündigt ist"
 slug: wardogs-season-2
 thema: gameplay
 order: 19
-image: guide-kontrollzone
-image_alt: Blick ueber ein umkaempftes Tal bei aufziehendem Wetter, Rauchsaeulen am Horizont und ein Helikopter im Tiefflug
-excerpt: Was zurückgesetzt wird, was bleibt, und was neu dazukommt – Stand vor dem Start. Mit der Trennung zwischen Bestätigtem und Vermutetem.
-seo_title: Wardogs Season 2 Deutsch – Wipe, Regen, Flakpanzer | Warleek
-seo_description: Progressions-Reset, Regen und ein Flakpanzer: was zum 15. Oktober bestätigt ist und was nicht. Für Deutschland, Österreich und die Schweiz.
-quellen: [Season-2-Ankündigung und Community-Zusammenfassungen (Stand 5. Oktober 2026), 'Steam-Hotfix vom 02.10.2026 zum IR-Entfernungsmesser']
+image: guide-s2-ueberblick
+image_alt: Soldat mit M14 im Regen, Leuchtspuren am Himmel ueber einem Lagerplatz, aus der offiziellen Season-2-Ankuendigung
+excerpt: Vier Waffen, vier Fahrzeuge, Regen, eine Wett-Mechanik und Geld fürs blaue Team. Der Überblick mit Quellenlage – und ohne den Wipe, den es offenbar gar nicht gibt.
+seo_title: Wardogs Season 2 – Überblick zum 15. Oktober | Warleek
+seo_description: Alle Season-2-Inhalte mit Quellen: Waffen, Fahrzeuge, Regen, Wetten und Lonestar-Boni. Für Deutschland, Österreich und die Schweiz.
+quellen: ['Steam-Ankündigung „WARDOGS | Season 02 Preview" von BULKHEAD, 09.10.2026', 'Eurogamer.de zum Season-2-Update, 11.10.2026']
 geprueft: nein – Stand vor dem Start, wird nach dem 15.10. überarbeitet
 autor: adminleek
-frage: Was ändert sich mit Season 2 in Wardogs?
-antwort: Season 2 startet am 15. Oktober 2026 und setzt den Fortschritt zurück. Neu kommen wechselndes Wetter mit Regen, Feuer als Umgebungseffekt und ein Flugabwehrpanzer gegen die Helikopter-Dominanz. Der IR-Entfernungsmesser kehrt zurück, dann mit Batterien.
+frage: Was kommt mit Wardogs Season 2?
+antwort: Season 2 startet am 15. Oktober 2026 mit vier Waffen, einem Molotov, vier Fahrzeugen, drei Bauteilen, Regen als Wetter-Preset und einer experimentellen Wett-Mechanik. Dazu bekommt die blaue Fraktion Lonestar Cash- und XP-Boni. Ein Wipe ist nicht angekündigt.
 ---
 
-Am **15. Oktober 2026** startet Season 2 — die erste große Saison seit dem Early-Access-Start im September. Dieser Guide steht vor dem Start und trennt deshalb sauber: was bestätigt ist, was angekündigt wurde, und was Leute vermuten.
+Am **15. Oktober 2026** startet Season 2. BULKHEAD hat die Inhalte am 9. Oktober vorgestellt — in einer Ankündigung, die ungewöhnlich offen ist, und in einem DEVLOG.
 
-> [!hinweis] **Stand 5. Oktober 2026.** Wir schreiben diesen Guide nach dem Start neu, sobald sich die Dinge im Spiel nachprüfen lassen. Bis dahin: alles hier ist Ankündigung, nicht Erfahrung.
+> [!achtung] **Das sind noch nicht die Patch Notes.** Der Entwickler schreibt selbst: Die vollständigen Patch Notes samt Balance-Änderungen folgen erst, und am Update werde noch gearbeitet, bevor die letzten Details feststehen. Alles hier ist Ankündigung, nicht Erfahrung.
 
-## Der Wipe
+[warleek_video id="J2VxjMnMDw4" title="WARDOGS – Road to Season 2 (DEVLOG)" kanal="BULKHEAD"]
 
-Season 2 setzt den Fortschritt zurück. Was das genau umfasst — Tracks, Career-Level, Cash, Freischaltungen — ist in den Ankündigungen nicht im Detail aufgeschlüsselt.
+## Eine Korrektur in eigener Sache
 
-Für dich heißt das praktisch:
+Unsere frühere Fassung dieses Guides führte einen **Wipe** als gesetzt auf und riet, das Cash vorher auszugeben.
 
-**Gib dein Geld vor dem 15. aus, wenn es zurückgesetzt wird.** Ein Konto mit $400.000 am 14. Oktober ist am 16. möglicherweise nichts wert. Ob und wie viel übertragen wird, steht nicht fest.
+**Das war nicht belegt.** Weder die offizielle Ankündigung noch die deutsche Berichterstattung erwähnen einen Progressions-Reset. Was es gibt, sind Boni, die ausdrücklich nur in Season 2 gelten — das setzt Saisons voraus, sagt aber nichts über Zurücksetzen.
 
-**Freischaltgebühren, die du jetzt noch zahlst, könnten verfallen.** Die FAL für $200.000 freizuschalten lohnt in der Woche vor einem Wipe selten.
+Wenn du wegen uns Geld verbrannt hast: Entschuldigung. Falls die Patch Notes doch einen Wipe nennen, steht er hier, und dann mit Quelle.
 
-> [!stand] Oktober 2026 · Early Access – bei einem Wipe gilt: Im Zweifel lieber ausgeben als sparen.
+## Was neu ins Spiel kommt
 
-## Was neu kommt
+Vier Waffen (**TCX Spear**, **M14**, **PP-19 Bizon**, **Evo-3 Ultra**), ein **Molotov** als Brandsatz, vier Fahrzeuge (**Wolf-110** in zwei Varianten, **T-72**, **Flakpanzer Gepard**) und drei Bauteile (**MG Nest**, **Large Shelter**, **Wooden Step**).
 
-**Regen und Feuer.** Erstmals wechselndes Wetter und Feuer als Umgebungseffekt. Was das für Sicht, Brandschaden und Deckung bedeutet, wird sich zeigen — ein Dorf, das brennt, verändert Sichtlinien dauerhaft.
+Die Einzelheiten — welche Waffe welche Lücke füllt, warum der T-72 trotz geringerer Geschwindigkeit interessant ist, und was ein Brandsatz in einem Spiel ohne Flächenverweigerung ändert — stehen im eigenen Beitrag:
 
-**Ein Flugabwehrpanzer.** Ein neues Fahrzeug nach Gepard-Art, ausdrücklich gegen die Helikopter-Dominanz gerichtet, die das Spiel seit dem Start prägt. Wir haben bereits einen **Flakpanzer Gepard** in der Datenbank; ob es sich um dasselbe Fahrzeug oder ein zweites handelt, ist offen.
+**→ [Season 2: vier Waffen, vier Fahrzeuge, drei Bauteile – und ein Molotov](/guides/wardogs-season-2-arsenal/)**
 
-**Der IR-Entfernungsmesser kehrt zurück** — aber mit Batterien. Er wurde am 2. Oktober aus dem Händler genommen, weil er zu stark war. Ab Season 2 kostet seine Nutzung laufend etwas, statt einmalig beim Kauf.
+Alle elf Einträge stehen bereits in der [Datenbank](/datenbank/), ohne Preise und mit dem Vermerk, dass sie aus der Ankündigung stammen.
 
-## Was das für die Luft bedeutet
+## Regen
 
-Zwei Änderungen zielen auf dasselbe Problem. Helikopter dominierten Season 1, und Season 2 greift von zwei Seiten an:
+Erstmals wechselndes Wetter: Der Regen verändert Sicht, Gefechtsentfernungen und Geräusche und wirkt auf die Umgebung ein, auch auf beschädigte Bauwerke.
 
-- Ein Fahrzeug, das Hubschrauber vom Boden aus vertreibt
-- Ein Aufklärungswerkzeug, das Piloten nicht mehr dauerhaft tragen können
+Der Satz, der daraus eine Mechanik macht: **Der Donner ist serverweit synchronisiert und kann Schrittgeräusche kurzzeitig überdecken.** Alle hören ihn gleichzeitig — also ist er ein Zeitfenster, das beide Seiten nutzen können.
 
-Dazu kam schon am 2. Oktober eine Änderung, die in dieselbe Richtung geht: Die **CWIS zerlegt einen Havoc jetzt in rund 6 statt 12 Sekunden**. Wer viel fliegt, sollte sich darauf einstellen, dass die Luft ab Mitte Oktober deutlich ungemütlicher wird.
+**→ [Regen in Wardogs: Donner, der Schritte verschluckt](/guides/wardogs-season-2-regen/)**
 
-## Was nicht angekündigt ist
+## Wetten auf die eigene Leistung
 
-Bulkhead hat **keinen datierten Feature-Fahrplan** veröffentlicht. Die Ansage lautet sinngemäß, dass die Arbeit ins Metagame und in Fehlerbehebungen geht statt in einen stetigen Strom neuer Inhalte.
+Der **Experimental Wager Vendor** lässt dich Spielgeld auf deine eigene Leistung setzen: Ziele wählen, festlegen wie viele Tode du dafür ausgeben willst, Einsatz setzen. Je mehr Ziele gestapelt, desto höher die Quote.
 
-Das ist eine ehrliche Ansage und passt zu dem, was Spieler seit dem Start am lautesten fordern: Warteschlangen, Serverstabilität und das Problem, dass Linux- und Steam-Deck-Spieler seit dem Anti-Cheat-Wechsel ausgesperrt sind.
+BULKHEAD kündigt im selben Absatz an, das Ganze notfalls wieder zu entfernen, falls es zu leicht auszunutzen ist.
 
-Ob Season 2 davon etwas angeht, steht in keiner Ankündigung.
+**→ [Der Wager Vendor: Wardogs lässt dich auf dich selbst wetten](/guides/wardogs-season-2-wetten/)**
 
-## Unsere Checkliste für die Woche davor
+## Geld fürs blaue Team
 
-1. **Cash ausgeben**, statt es in den Wipe zu tragen
-2. Keine teuren Freischaltungen mehr, die sich nicht sofort auszahlen
-3. Guides, die du nutzt, nach dem 15. gegenprüfen — besonders alles zu Entfernungsmesser und Flugabwehr
-4. Wenn du etwas Neues im Spiel siehst, das hier fehlt: schreib uns
+Der Teil, der uns am meisten interessiert — weil wir über das Lonestar-Problem schon zweimal geschrieben haben, einmal ernst und einmal [nicht](/guides/lonestar-ueberlebensguide/).
 
-Wir überarbeiten diesen Guide nach dem Start und schreiben dann dazu, was sich gegenüber dieser Fassung geändert hat.
+BULKHEAD benennt die Ursache ungewöhnlich direkt: Nicht die Ausrüstung sei das Problem, sondern **die Stimmung**. Die Haltung gegenüber dem blauen Team sei der größte Einzelfaktor dafür, dass Leute es nicht spielen wollen.
+
+Was sich ändert:
+
+| Maßnahme | Gilt für |
+|---|---|
+| Alle Fraktions-Spawns auf **Bakurani** verschoben | alle |
+| Lonestar-Uniformen **entsättigt**, fallen weniger auf | Lonestar |
+| **Cash- und XP-Siegbonus** | Lonestar, nur Season 2 |
+| **Cash- und XP-Multiplikatoren** | Lonestar, nur Season 2 |
+| **20 % Händlerrabatt** ab **40 Punkten** Rückstand auf Platz zwei | alle Teams |
+
+Der Rabatt ist der klügste Posten auf der Liste, weil er nicht an der Farbe hängt, sondern am Rückstand. Ein Team, das hinten liegt, wird üblicherweise ärmer und dadurch noch schwächer — genau der Teufelskreis, den wir im [Fraktions-Guide](/guides/wardogs-fraktionen/) beschrieben haben. Zwanzig Prozent brechen ihn nicht, aber sie bremsen ihn.
+
+Dass Serverbetreiber, die den Fraktionsbonus ausnutzen, bestraft werden sollen, steht ebenfalls dort.
+
+## Balance, die du sofort merkst
+
+**Der IR-Entfernungsmesser läuft jetzt auf Batterien.** Damit ist bestätigt, was wir im [Rangefinder-Beitrag](/guides/wardogs-rangefinder-heli/) als Ankündigung geführt haben. Aus einem Einmalkauf wird ein Verbrauchsgut mit Platzbedarf im Rucksack.
+
+**Helme werden eigenständiger.** Der Super-Heavy-Helm bekommt gedämpften Ton, eingeschränktes Sichtfeld und beschlägt beim Sprinten. Heavy und Super Heavy erhalten dafür höhere Suppression-Resistenz. Das ist eine echte Abwägung statt „mehr Schutz ist besser" — und sie trifft direkt die [Gewichtsklassen-Rechnung](/guides/wardogs-gewichtsklassen/).
+
+**Waffenschaden, Rückstoß und Suppression** werden angepasst, Ziel sind klarere Rollen je Waffenklasse. Zahlen gibt es erst mit den Patch Notes.
+
+Dazu nennt der Entwickler Verbesserungen an Squad-Koordination, Fahrverhalten, Controller-Reaktion und Progression, zusätzliche Belohnungen für Teamplay und Logistik sowie Arbeit an Leistung und Serverstabilität.
+
+## Wo die Quellen auseinandergehen
+
+| | Steam (BULKHEAD) | Eurogamer |
+|---|---|---|
+| Sturmgewehr | TCX **Spear** | TCX-**SPR** |
+| Panzer | **T-72** | T-72**B3** |
+| Molotov | ja | nicht erwähnt |
+| Entfernungsmesser, Helme | ja | nicht erwähnt |
+| Rabatt | 20 % ab 40 Punkten Rückstand | „Händler-Rabatte", ohne Zahlen |
+
+Im Zweifel gilt die Ankündigung des Entwicklers. Wir schreiben dazu, wenn sich das mit den Patch Notes ändert.
+
+## Was wir nach dem 15. nachtragen
+
+Preise und Freischaltstufen aller elf neuen Einträge, die Stärke des Regens, die Dauer des Donner-Fensters, die Quoten beim Wager Vendor — und ob der Wipe, den es nicht geben sollte, vielleicht doch kommt.
+
+Der Änderungsverlauf an jedem [Datenbank-Eintrag](/datenbank/) hält danach fest, was vorher dort stand.
 
 ## Häufige Fragen
 
-### Wann startet Season 2 in Wardogs?
+### Wann startet Wardogs Season 2?
 
-Am 15. Oktober 2026 – die erste große Saison seit dem Early-Access-Start im September.
+Am 15. Oktober 2026. Angekündigt wurde der Termin am 9. Oktober in einer Steam-Vorschau von BULKHEAD.
 
-### Was wird beim Wipe zurückgesetzt?
+### Gibt es bei Season 2 einen Wipe?
 
-Season 2 setzt den Fortschritt zurück. Was genau dazugehört – Tracks, Career-Level, Cash, Freischaltungen – ist in den Ankündigungen nicht im Detail aufgeschlüsselt.
+Nach aktuellem Stand nein. Weder die offizielle Ankündigung noch die Berichterstattung erwähnen einen Progressions-Reset. Eine frühere Fassung dieses Guides hat das falsch dargestellt.
 
-### Sollte man vor dem Wipe sein Geld ausgeben?
+### Was bekommt Lonestar in Season 2?
 
-Ja, im Zweifel lieber ausgeben als sparen. Ein Konto mit $400.000 am 14. Oktober ist am 16. möglicherweise nichts wert, und Freischaltgebühren kurz vor einem Wipe lohnen selten.
+Entsättigte Uniformen, einen Cash- und XP-Siegbonus sowie Cash- und XP-Multiplikatoren — beides ausdrücklich nur für Season 2. Dazu sind auf Bakurani alle Fraktions-Spawns verschoben worden.
 
-### Gibt es einen Fahrplan für weitere Inhalte?
+### Wer bekommt den Händlerrabatt?
 
-Nein. Bulkhead hat keinen datierten Feature-Fahrplan veröffentlicht. Die Ansage lautet sinngemäß, dass die Arbeit ins Metagame und in Fehlerbehebungen geht statt in einen stetigen Strom neuer Inhalte.
+Jedes Team, das mindestens 40 Punkte hinter dem Zweitplatzierten liegt, bekommt 20 Prozent Rabatt. Das gilt nicht nur für Lonestar.
+
+### Kommt der Entfernungsmesser zurück?
+
+Ja, mit Season 2 — allerdings mit Batterien. Aus dem Einmalkauf wird damit ein Verbrauchsgut.
+
+### Sind die Preise der neuen Waffen bekannt?
+
+Nein. Die Ankündigung nennt Namen und Klassen; Preise und Freischaltstufen kommen erst mit den vollständigen Patch Notes.

@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.29.2
+Stable tag: 2.30.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.30.0 =
+* Season 2: vier neue Beiträge (Überblick, Arsenal, Regen, Wager Vendor) auf Basis der offiziellen Steam-Ankündigung vom 09.10.2026, mit eingebettetem DEVLOG.
+* Elf neue Datenbank-Einträge, sofort veröffentlicht und als angekündigt statt geprüft ausgewiesen – ohne Preise, weil es noch keine gibt.
+* **Korrektur:** Der alte Season-2-Guide stellte einen Wipe als gesetzt dar und riet, vorher das Cash auszugeben. Dafür gibt es keine Quelle; die Stelle ist samt Richtigstellung ersetzt.
+* Bildmaterial aus der offiziellen Ankündigung, mit Credit je Datei.
 
 = 2.29.2 =
 * Einstellungsseite gegliedert: statt 33 Feldern in einer Liste unter „Community & Spiel" jetzt fünf Abschnitte (Community & Spiel, Autor & Vertrauen, Soziale Profile, Patch Notes übersetzen, Einwilligung & Statistik). Die Autorenfelder lagen vorher zwischen Kontakt-E-Mail und Twitter-Handle und waren praktisch nicht auffindbar.

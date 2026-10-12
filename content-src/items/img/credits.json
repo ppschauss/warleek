@@ -702,5 +702,37 @@
     "typ-anbauteil": {
         "alt": "WARDOGS: Sturmgewehr mit montiertem Rotpunktvisier in der Ego-Perspektive – Symbolbild für Anbauteile",
         "credit": "Offizielles Pressematerial · © BULKHEAD / Team17"
+    },
+    "wardogs-m14": {
+        "alt": "WARDOGS: M14 mit Holzschaft in der Ego-Perspektive, Regen über einem Lagerplatz",
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "wardogs-tcx-spear": {
+        "alt": "WARDOGS: TCX Spear mit Schalldämpfer in der Ego-Perspektive vor einem Händlerstand im Regen",
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "wardogs-pp-19-bizon": {
+        "alt": "WARDOGS: PP-19 Bizon in der Ego-Perspektive auf nassem Schotter",
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "wardogs-evo-3-ultra": {
+        "alt": "WARDOGS: Evo-3 Ultra mit eingelegtem Munitionsgurt, Kaliberprägung 7,62 × 51 mm sichtbar",
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "wardogs-molotov": {
+        "alt": "WARDOGS: Hand hält eine Glasflasche als Brandsatz, im Hintergrund ein Händlerstand im Regen",
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "wardogs-wolf-110": {
+        "alt": "WARDOGS: zwei Wolf-110 nebeneinander im Regen, der rechte mit ringmontiertem Maschinengewehr",
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "wardogs-t-72": {
+        "alt": "WARDOGS: Kampfpanzer T-72 auf nassem Gelände im Regen",
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "wardogs-mg-nest": {
+        "alt": "WARDOGS: MG-Nest aus Sandsäcken mit montiertem M2 Browning auf einer Holzplattform",
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
     }
 }

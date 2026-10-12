@@ -210,7 +210,7 @@
         "size": 92996
     },
     "guide-kontrollzone.webp": {
-        "alt": "Blick ueber ein umkaempftes Tal bei aufziehendem Wetter, Rauchsaeulen am Horizont und ein Helikopter im Tiefflug",
+        "alt": "Blick von oben ueber ein Industrietal in der Daemmerung mit vier Funktuermen auf einzelnen Huegeln",
         "use": "guide-kontrollzone",
         "size": 57124
     },
@@ -1499,5 +1499,73 @@
         "alt": "Drei ueberlagerte Bildkacheln aus WARDOGS: ein Sturmgewehr, eine Palette gestapelter Munitionskisten und ein gurtgefuettertes Maschinengewehr",
         "use": "guide-munition",
         "size": 20144
+    },
+    "item-wardogs-evo-3-ultra.webp": {
+        "alt": "WARDOGS: Evo-3 Ultra mit eingelegtem Munitionsgurt, Kaliberprägung 7,62 × 51 mm sichtbar",
+        "use": "item-wardogs-evo-3-ultra",
+        "size": 127106,
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "item-wardogs-m14.webp": {
+        "alt": "WARDOGS: M14 mit Holzschaft in der Ego-Perspektive, Regen über einem Lagerplatz",
+        "use": "item-wardogs-m14",
+        "size": 126008,
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "item-wardogs-mg-nest.webp": {
+        "alt": "WARDOGS: MG-Nest aus Sandsäcken mit montiertem M2 Browning auf einer Holzplattform",
+        "use": "item-wardogs-mg-nest",
+        "size": 105818,
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "item-wardogs-molotov.webp": {
+        "alt": "WARDOGS: Hand hält eine Glasflasche als Brandsatz, im Hintergrund ein Händlerstand im Regen",
+        "use": "item-wardogs-molotov",
+        "size": 144486,
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "item-wardogs-pp-19-bizon.webp": {
+        "alt": "WARDOGS: PP-19 Bizon in der Ego-Perspektive auf nassem Schotter",
+        "use": "item-wardogs-pp-19-bizon",
+        "size": 95398,
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "item-wardogs-t-72.webp": {
+        "alt": "WARDOGS: Kampfpanzer T-72 auf nassem Gelände im Regen",
+        "use": "item-wardogs-t-72",
+        "size": 122030,
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "item-wardogs-tcx-spear.webp": {
+        "alt": "WARDOGS: TCX Spear mit Schalldämpfer in der Ego-Perspektive vor einem Händlerstand im Regen",
+        "use": "item-wardogs-tcx-spear",
+        "size": 119966,
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "item-wardogs-wolf-110.webp": {
+        "alt": "WARDOGS: zwei Wolf-110 nebeneinander im Regen, der rechte mit ringmontiertem Maschinengewehr",
+        "use": "item-wardogs-wolf-110",
+        "size": 96122,
+        "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "guide-s2-arsenal.webp": {
+        "alt": "Kampfpanzer T-72 auf nassem Gelaende im Regen, aus der offiziellen Season-2-Ankuendigung",
+        "use": "guide-s2-arsenal",
+        "size": 122030
+    },
+    "guide-s2-regen.webp": {
+        "alt": "Regnerische Landschaft mit Funkturm und tief haengenden Wolken, aus der offiziellen Season-2-Ankuendigung",
+        "use": "guide-s2-regen",
+        "size": 100440
+    },
+    "guide-s2-wetten.webp": {
+        "alt": "Gefechtsszene mit Explosion und Leuchtspuren hinter einer gewoelbten Anzeige, aus der offiziellen Season-2-Ankuendigung",
+        "use": "guide-s2-wetten",
+        "size": 116560
+    },
+    "guide-s2-ueberblick.webp": {
+        "alt": "Soldat mit M14 im Regen, Leuchtspuren am Himmel ueber einem Lagerplatz, aus der offiziellen Season-2-Ankuendigung",
+        "use": "guide-s2-ueberblick",
+        "size": 126008
     }
 }

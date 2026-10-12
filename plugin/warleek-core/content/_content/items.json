@@ -3007,5 +3007,182 @@
         },
         "start": true,
         "gruppe": "anbauteil"
+    },
+    {
+        "slug": "wardogs-tcx-spear",
+        "title": "TCX Spear",
+        "typ": "waffe",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Eines von vier Gewehren, die mit Season 2 dazukommen, und das einzige neue **Sturmgewehr** darunter.\nWas es gegenüber AK-74, Galil oder M4 leisten soll, hat BULKHEAD nicht gesagt. Angekündigt sind parallel Anpassungen an Schaden, Rückstoß und Suppression mit dem Ziel, den Waffenklassen klarere Rollen zu geben – wo sich die TCX Spear darin einsortiert, zeigt erst das Spiel.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "rolle": "Sturmgewehr",
+            "hinweis": "Neu in Season 2"
+        },
+        "start": true,
+        "gruppe": "sturmgewehr"
+    },
+    {
+        "slug": "wardogs-m14",
+        "title": "M14",
+        "typ": "waffe",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Ein Selbstladegewehr mit Holzschaft für die mittlere bis lange Distanz – die Lücke zwischen Sturmgewehr und Scharfschützengewehr.\nFür Recon-Spieler ist das die interessanteste der vier neuen Waffen: ein DMR verlangt kein Ausharren auf einer Sichtlinie, sondern erlaubt Treffer auf Entfernung, während man beweglich bleibt. Wie weit, hängt an Mündungsgeschwindigkeit und Zeroing-Bereich, und beides steht noch nicht fest.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "rolle": "Designated Marksman Rifle (DMR)",
+            "hinweis": "Neu in Season 2"
+        },
+        "start": true,
+        "gruppe": "scharfschuetze"
+    },
+    {
+        "slug": "wardogs-pp-19-bizon",
+        "title": "PP-19 Bizon",
+        "typ": "waffe",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Eine Maschinenpistole – und damit die Waffengattung, die im Spiel am Medic-Track hängt.\nNicht zu verwechseln mit der **PP-19 Vityaz**, die seit Season 1 ab Medic 4 im Katalog steht. Ob die Bizon diese ersetzt, ergänzt oder an einer anderen Stufe hängt, geht aus der Ankündigung nicht hervor.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "rolle": "Maschinenpistole",
+            "hinweis": "Neu in Season 2"
+        },
+        "start": true,
+        "gruppe": "sturmgewehr"
+    },
+    {
+        "slug": "wardogs-evo-3-ultra",
+        "title": "Evo-3 Ultra",
+        "typ": "waffe",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Ein gurtgefüttertes leichtes Maschinengewehr, das sich zwischen M249 SAW und PKM einsortiert.\nDas Kaliber ist auf dem Gehäuse abzulesen: **7,62 × 51 mm**, also die schwerere der beiden MG-Patronen im Spiel. Das spricht für Reichweite und Durchschlag auf Kosten von Gewicht und Munitionsmenge – und Gewicht entscheidet in Wardogs über die Gewichtsklasse.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "kaliber": "7,62 × 51 mm",
+            "rolle": "Leichtes Maschinengewehr",
+            "hinweis": "Neu in Season 2"
+        },
+        "start": true,
+        "gruppe": "mg"
+    },
+    {
+        "slug": "wardogs-molotov",
+        "title": "Molotov",
+        "typ": "wurfwaffe",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Ein Brandsatz, der beim Aufprall eine Fläche entzündet und jeden im Radius verletzt. Über- und Unterhandwurf sind möglich.\nBULKHEAD nennt zwei Zwecke, und der zweite ist der interessantere: Schaden **und Flächenverweigerung**. Bisher gab es im Spiel nichts, womit man einen Raum für mehrere Sekunden unbenutzbar macht, ohne ihn zu halten. Für Treppenhäuser, Durchfahrten und die Zufahrt zu einer FOB ändert das die Rechnung.\nIn der Ankündigung wird der Molotov nicht in der Waffenliste geführt, sondern als eigener Punkt – zusammen mit dem Regen, der erstmals Feuchtigkeit ins Spiel bringt. Ob beides miteinander interagiert, steht nirgends.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "rolle": "Brandsatz zur Flächenverweigerung",
+            "hinweis": "Neu in Season 2"
+        },
+        "start": true,
+        "gruppe": "wurfwaffe"
+    },
+    {
+        "slug": "wardogs-wolf-110",
+        "title": "Wolf-110",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Ein schneller, leichter Transporter auf Rädern.\nOb er Fracht trägt, sagt die Ankündigung nicht – und genau das entscheidet, ob er für Logistik taugt oder nur zum Bewegen von Leuten. Der Kodiak ist bisher das schnellste Radfahrzeug ohne Freischaltung; ob der Wolf-110 ihn ablöst oder daneben steht, zeigt der Händler.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "rolle": "Schneller leichter Radtransporter",
+            "hinweis": "Neu in Season 2"
+        },
+        "start": true,
+        "gruppe": "lkw"
+    },
+    {
+        "slug": "wardogs-wolf-110-assault",
+        "title": "Wolf-110 (Assault)",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Der Wolf-110 mit einem ringmontierten **M2 Browning**.\nFür bewaffnete Varianten gilt im Spiel bisher eine Faustregel: Sie tragen nicht mehr als die unbewaffneten, du zahlst für Feuerkraft und Sitzplätze. Ob das hier genauso ist, wissen wir nicht.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "rolle": "Bewaffneter Radtransporter mit M2 Browning",
+            "hinweis": "Neu in Season 2"
+        },
+        "start": true,
+        "gruppe": "lkw"
+    },
+    {
+        "slug": "wardogs-t-72",
+        "title": "T-72",
+        "typ": "fahrzeug",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Ein Kampfpanzer, den BULKHEAD ausdrücklich gegen den Leopard stellt: **langsamer, dafür billiger und deutlich sparsamer im Verbrauch**.\nDas ist die erste echte Wahl bei schwerem Gerät. Sprit kommt aus dem FOB-Lager und muss gefahren werden – ein Panzer, der weniger verbraucht, kostet das Team weniger Logistik. Wer rechnet, vergleicht nicht nur den Anschaffungspreis, sondern auch, wie viele Fuel-Paletten er pro Runde frisst.\nDie Trefferzonen dürften dieselben bleiben: Heck zuerst.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "rolle": "Kampfpanzer",
+            "hinweis": "Neu in Season 2 – langsamer als der Leopard, dafür billiger und sparsamer"
+        },
+        "start": true,
+        "gruppe": "panzer"
+    },
+    {
+        "slug": "wardogs-mg-nest",
+        "title": "MG Nest",
+        "typ": "emplacement",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Eine bemannte Stellung mit **M2 Browning**, gebaut aus Sandsäcken auf einer Plattform.\nBisher gab es gegen Infanterie nur den Mörser für die Fläche und den Stingray gegen Fahrzeuge. Eine direkt gerichtete MG-Stellung schließt die Lücke dazwischen – zum Preis, dass jemand dahinter sitzen muss und damit sichtbar und ortsfest ist.\nBaukosten stehen noch nicht fest.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "rolle": "Bemannte M2-Browning-Stellung",
+            "hinweis": "Neu in Season 2"
+        },
+        "start": true,
+        "gruppe": "mg"
+    },
+    {
+        "slug": "wardogs-large-shelter",
+        "title": "Large Shelter",
+        "typ": "bauwerk",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Eine große Metallüberdachung. BULKHEAD beschreibt sie als Schutz für wichtiges Gerät – „oder um den Regen abzuhalten“.\nDer Nebensatz ist der Hinweis: Mit dem Regen kommt erstmals ein Wetter-Preset, das Sicht und Geräusche verändert. Eine Überdachung schirmt außerdem gegen Sicht von oben ab, und das ist in einem Spiel mit Helikoptern und Mörsern kein Nebeneffekt.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "rolle": "Große Metallüberdachung",
+            "hinweis": "Neu in Season 2"
+        },
+        "start": true,
+        "gruppe": "bauwerk"
+    },
+    {
+        "slug": "wardogs-wooden-step",
+        "title": "Wooden Step",
+        "typ": "bauwerk",
+        "quellen": [
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+        ],
+        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
+        "text": "Die Beschreibung des Entwicklers lautet vollständig: „A step. Made of wood.“\nSo unscheinbar das klingt – eine Stufe löst ein Problem, das jeder kennt, der eine FOB gebaut hat: An eine Mauer kommt man nur heran, wenn man dahinter stehen kann. Wer bisher auf einen Container oder eine Sandsackreihe klettern musste, bekommt jetzt das passende Teil dafür.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "felder": {
+            "rolle": "Holzstufe",
+            "hinweis": "Neu in Season 2"
+        },
+        "start": true,
+        "gruppe": "bauwerk"
     }
 ]
