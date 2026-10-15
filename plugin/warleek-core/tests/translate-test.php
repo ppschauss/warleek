@@ -20,6 +20,8 @@ $GLOBALS['t_calls']   = 0;
 $GLOBALS['t_spiegel'] = false;
 $GLOBALS['t_system']  = '';
 $GLOBALS['t_pflicht'] = array();
+$GLOBALS['t_kaputt']  = 0;   // so viele der nächsten Antworten bekommen einen Listenpunkt zu viel
+$GLOBALS['t_kaputt_ueber'] = 0;   // jede Antwort verfälschen, deren Ausschnitt länger ist als …
 add_filter( 'pre_http_request', function ( $pre, $args, $url ) {
 	if ( false === strpos( $url, 'api.anthropic.com' ) ) { return $pre; }
 	$GLOBALS['t_calls']++;
@@ -36,6 +38,13 @@ add_filter( 'pre_http_request', function ( $pre, $args, $url ) {
 	// zusammenwachsen – mit einer festen Antwort wäre genau das unsichtbar.
 	if ( ! empty( $GLOBALS['t_spiegel'] ) && preg_match( '#<HTML>\n(.*)\n</HTML>#s', $inhalt, $m ) ) {
 		$nutzlast['html_de'] = $m[1];
+
+		// Strukturfehler nachstellen: ein Listenpunkt zu viel – genau der Fall,
+		// an dem die Season-02-Note gescheitert ist (li: 101 statt 96).
+		$verfaelschen = false;
+		if ( $GLOBALS['t_kaputt'] > 0 ) { $GLOBALS['t_kaputt']--; $verfaelschen = true; }
+		if ( $GLOBALS['t_kaputt_ueber'] && strlen( $m[1] ) > $GLOBALS['t_kaputt_ueber'] ) { $verfaelschen = true; }
+		if ( $verfaelschen ) { $nutzlast['html_de'] .= '<ul><li>einer zu viel</li></ul>'; }
 	}
 	foreach ( array( 'title_de', 'summary' ) as $feld ) {
 		if ( ! in_array( $feld, $GLOBALS['t_pflicht'], true ) ) { unset( $nutzlast[ $feld ] ); }
@@ -138,6 +147,7 @@ t_chk( 'titel aus dem ersten stück', is_array( $mehr ) && 'Wartung & Patch 0.11
 t_chk( 'eine kurzfassung, nicht je stück', is_array( $mehr ) && 1 === count( $mehr['summary'] ) );
 t_chk( 'folgestücke ohne titel im schema', array( 'html_de' ) === $GLOBALS['t_pflicht'], implode( ',', $GLOBALS['t_pflicht'] ) );
 t_chk( 'modell weiß vom ausschnitt', false !== strpos( $GLOBALS['t_system'], 'Stücken übersetzt' ) );
+t_chk( 'elementzahlen in der anweisung', 1 === preg_match( '/Der Ausschnitt enthält [^.]*<h2>/u', $GLOBALS['t_system'] ), mb_substr( $GLOBALS['t_system'], -400 ) );
 
 /* 6d) Deckel: mehr Stücke als erlaubt → bleibt englisch */
 $opts['translate_max_chars'] = '2000'; update_option( 'warleek_options', $opts );
@@ -147,6 +157,73 @@ $deckel = warleek_maybe_translate( 'Y', $zu_lang, 0 );
 t_chk( 'stückdeckel greift', is_wp_error( $deckel ) && 'warleek_tr_toolong' === $deckel->get_error_code(), is_wp_error( $deckel ) ? $deckel->get_error_code() : 'kein Fehler' );
 $GLOBALS['t_spiegel'] = false;
 $opts['translate_max_chars'] = '20000'; update_option( 'warleek_options', $opts );
+
+/* 6e–6h) Nachbesserung, Teilen, Zwischenspeicher.
+   Der Stückspeicher liegt in Transients; er muss zwischen Durchläufen weg,
+   sonst zählt der zweite Testlauf andere Aufrufe als der erste. */
+function wl_tr_cache_leeren() {
+	global $wpdb;
+	$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '\\_transient\\_warleek\\_tr\\_%' OR option_name LIKE '\\_transient\\_timeout\\_warleek\\_tr\\_%'" );
+	wp_cache_flush();
+}
+wl_tr_cache_leeren();
+$GLOBALS['t_spiegel'] = true;
+$opts['translate_budget'] = '200'; $opts['translate_max_chars'] = '20000'; update_option( 'warleek_options', $opts );
+
+/* 6e) Erster Versuch verändert die Struktur, der zweite sitzt */
+$GLOBALS['t_kaputt'] = 1;
+$vorher = $GLOBALS['t_calls'];
+$nach   = warleek_maybe_translate( 'Retry', '<p>' . str_repeat( 'Alpha beta gamma. ', 40 ) . '</p>', 0 );
+t_chk( 'nachbesserung gelingt', is_array( $nach ), is_wp_error( $nach ) ? $nach->get_error_message() : '' );
+t_chk( 'nachbesserung kostet einen aufruf extra', 2 === $GLOBALS['t_calls'] - $vorher, 'Aufrufe: ' . ( $GLOBALS['t_calls'] - $vorher ) );
+t_chk( 'tadel steht in der anweisung', false !== strpos( $GLOBALS['t_system'], 'voriger Versuch wurde verworfen' ) );
+t_chk( 'tadel nennt die abweichung', 1 === preg_match( '/li: \d+ statt \d+/u', $GLOBALS['t_system'] ) );
+$GLOBALS['t_kaputt'] = 0;
+
+/* 6f) Hartnäckig: große Ausschnitte scheitern, kleine gelingen → Stück wird geteilt */
+wl_tr_cache_leeren();
+$GLOBALS['t_kaputt_ueber'] = 1200;
+$opts['translate_max_chars'] = '4000'; update_option( 'warleek_options', $opts );
+$acht = '';
+for ( $i = 1; $i <= 8; $i++ ) { $acht .= '<h2>S' . $i . '</h2><p>' . str_repeat( 'Delta epsilon. ', 25 ) . '</p>'; }
+$vorher = $GLOBALS['t_calls'];
+$geteilt = warleek_maybe_translate( 'Teilen', $acht, 0 );
+t_chk( 'geteiltes stück gelingt', is_array( $geteilt ), is_wp_error( $geteilt ) ? $geteilt->get_error_message() : '' );
+t_chk( 'mehr stücke als am anfang', is_array( $geteilt ) && (int) $geteilt['teile'] > 1, is_array( $geteilt ) ? $geteilt['teile'] . ' Stücke' : '' );
+t_chk( 'text vollständig nach dem teilen', is_array( $geteilt ) && 8 === substr_count( $geteilt['html'], '<h2' ), is_array( $geteilt ) ? substr_count( $geteilt['html'], '<h2' ) . ' Überschriften' : '' );
+t_chk( 'teilen bleibt im aufruf-deckel', $GLOBALS['t_calls'] - $vorher <= warleek_translate_aufruf_deckel( 1 ), 'Aufrufe: ' . ( $GLOBALS['t_calls'] - $vorher ) . ', Deckel ' . warleek_translate_aufruf_deckel( 1 ) );
+t_chk( 'deckel wächst mit den stücken', 10 === warleek_translate_aufruf_deckel( 1 ) && 20 === warleek_translate_aufruf_deckel( 3 ) && 32 === warleek_translate_aufruf_deckel( 8 ), warleek_translate_aufruf_deckel( 1 ) . '/' . warleek_translate_aufruf_deckel( 3 ) . '/' . warleek_translate_aufruf_deckel( 8 ) );
+
+/* 6g) Unteilbar und hartnäckig: nach zwei Versuchen ist Schluss */
+wl_tr_cache_leeren();
+$ein_hart = '<p>' . str_repeat( 'Zeta eta theta. ', 120 ) . '</p>';
+$vorher   = $GLOBALS['t_calls'];
+$hart     = warleek_maybe_translate( 'Hart', $ein_hart, 0 );
+t_chk( 'unteilbares stück gibt auf', is_wp_error( $hart ) && 'warleek_tr_tags' === $hart->get_error_code(), is_wp_error( $hart ) ? $hart->get_error_code() : 'kein Fehler' );
+t_chk( 'genau zwei versuche', 2 === $GLOBALS['t_calls'] - $vorher, 'Aufrufe: ' . ( $GLOBALS['t_calls'] - $vorher ) );
+
+/* 6h) Der Stückspeicher: Ein gescheitertes letztes Stück darf die bezahlten
+   Stücke davor nicht entwerten. */
+wl_tr_cache_leeren();
+$opts['translate_max_chars'] = '2000'; update_option( 'warleek_options', $opts );
+$gemischt = '<p>' . str_repeat( 'Iota kappa. ', 50 ) . '</p><p>' . str_repeat( 'Lambda my. ', 250 ) . '</p>';
+$teile_g  = warleek_html_teile( $gemischt, 2000 );
+t_chk( 'prüfaufbau: zwei stücke', 2 === count( $teile_g ), count( $teile_g ) . ' Stücke' );
+$vorher = $GLOBALS['t_calls'];
+$lauf1  = warleek_maybe_translate( 'Speicher', $gemischt, 0 );
+$kosten1 = $GLOBALS['t_calls'] - $vorher;
+t_chk( 'erster lauf scheitert am letzten stück', is_wp_error( $lauf1 ) && false !== strpos( $lauf1->get_error_message(), 'Stück 2 von 2' ), is_wp_error( $lauf1 ) ? $lauf1->get_error_message() : 'kein Fehler' );
+$vorher2 = $GLOBALS['t_calls'];
+$lauf2   = warleek_maybe_translate( 'Speicher', $gemischt, 0 );
+$kosten2 = $GLOBALS['t_calls'] - $vorher2;
+t_chk( 'zweiter lauf zahlt das erste stück nicht erneut', $kosten2 < $kosten1, $kosten1 . ' dann ' . $kosten2 . ' Aufrufe' );
+t_chk( 'zweiter lauf scheitert weiterhin', is_wp_error( $lauf2 ) );
+$GLOBALS['t_kaputt_ueber'] = 0;
+wl_tr_cache_leeren();
+$GLOBALS['t_spiegel'] = false;
+// Budget bleibt hoch: Der Zähler des Laufs summiert alle Aufrufe dieser Datei,
+// ein knappes Budget würde Test 7 den Budget- statt den HTTP-Fehler liefern.
+$opts['translate_max_chars'] = '20000'; $opts['translate_budget'] = '200'; update_option( 'warleek_options', $opts );
 
 /* 7) API-Fehler: englische Fassung bleibt */
 $GLOBALS['t_http_error'] = true;
@@ -158,6 +235,7 @@ $GLOBALS['t_http_error'] = false;
 $opts['anthropic_api_key'] = ''; update_option( 'warleek_options', $opts );
 t_chk( 'ohne schlüssel aus', null === warleek_maybe_translate( 'A', '<p>B</p>', 0 ) );
 
+wl_tr_cache_leeren();
 wp_delete_post( $p, true );
 update_option( 'warleek_options', $back );
 echo $GLOBALS['wl_tr_fail'] ? $GLOBALS['wl_tr_fail'] . " FAILED\n" : "OK\n";

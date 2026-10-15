@@ -25,6 +25,22 @@ const WARLEEK_TRANSLATE_REV     = 'v1';
  * verhindert, dass ein einziges Dokument das Budget eines Laufs auffrisst.
  */
 const WARLEEK_TRANSLATE_MAX_TEILE = 8;
+/** Harte Obergrenze der API-Aufrufe für **eine** Patch Note. */
+const WARLEEK_TRANSLATE_MAX_AUFRUFE = 32;
+
+/**
+ * Wie viele Anfragen eine Note kosten darf.
+ *
+ * Zwei Versuche je Stück plus Luft zum Teilen. Eine feste Zahl wäre für ein
+ * Dokument aus einem Stück zu großzügig und für eines aus acht zu knapp – und
+ * jeder Aufruf kostet Guthaben.
+ *
+ * @param int $teile Zahl der Stücke zu Beginn.
+ * @return int
+ */
+function warleek_translate_aufruf_deckel( $teile ) {
+	return (int) min( WARLEEK_TRANSLATE_MAX_AUFRUFE, max( 8, 5 * (int) $teile + 5 ) );
+}
 
 /** API-Schlüssel: Konstante in wp-config.php hat Vorrang vor der Einstellung. */
 function warleek_anthropic_key() {
@@ -118,6 +134,39 @@ function warleek_html_fingerprint( $html ) {
 }
 
 /**
+ * Vergleicht Original und Übersetzung – Bilder, Links, Strukturelemente.
+ *
+ * Eigene Funktion, weil die Abweichung nicht nur zum Verwerfen taugt: Sie geht
+ * als Tadel in den nächsten Versuch, und erst damit weiß das Modell, was an
+ * seiner Antwort nicht stimmte.
+ *
+ * @param string $html_en Original.
+ * @param string $html_de Übersetzung.
+ * @return array{code:string,text:string}|string Leerer String, wenn alles passt.
+ */
+function warleek_html_abweichung( $html_en, $html_de ) {
+	$a = warleek_html_fingerprint( $html_en );
+	$b = warleek_html_fingerprint( $html_de );
+	if ( $a['urls'] !== $b['urls'] ) {
+		return array( 'code' => 'warleek_tr_urls', 'text' => 'Übersetzung hat Bilder oder Links verändert – verworfen.' );
+	}
+	foreach ( $a['tags'] as $tag => $n ) {
+		if ( $b['tags'][ $tag ] !== $n ) {
+			return array(
+				'code' => 'warleek_tr_tags',
+				'text' => sprintf( 'Übersetzung hat die Struktur verändert (%s: %d statt %d) – verworfen.', $tag, $b['tags'][ $tag ], $n ),
+			);
+		}
+	}
+	return '';
+}
+
+/** Codes, bei denen ein zweiter Versuch Sinn hat – ein HTTP-Fehler gehört nicht dazu. */
+function warleek_translate_nachbesserbar( $code ) {
+	return in_array( (string) $code, array( 'warleek_tr_tags', 'warleek_tr_urls', 'warleek_tr_empty' ), true );
+}
+
+/**
  * Lange Patch Notes in übersetzbare Stücke schneiden.
  *
  * Geschnitten wird **nur zwischen Elementen der obersten Ebene**. Damit bleibt
@@ -137,7 +186,11 @@ function warleek_html_fingerprint( $html ) {
  */
 function warleek_html_teile( $html, $max ) {
 	$html = (string) $html;
-	$max  = max( 2000, (int) $max );
+	// Untergrenze nur gegen Unsinn: Die Einstellung wird in
+	// warleek_maybe_translate() ohnehin auf 2.000 gehoben. Hier muss deutlich
+	// weniger möglich sein, weil die Nachbesserung ein gescheitertes Stück
+	// halbiert – mit einer Untergrenze von 2.000 wäre genau das unmöglich.
+	$max  = max( 200, (int) $max );
 	if ( strlen( $html ) <= $max ) { return array( $html ); }
 
 	$doc = new DOMDocument();
@@ -210,17 +263,40 @@ Regeln:
 	// Bei einem Stück bleibt Anweisung und Schema **genau** wie zuvor – sonst
 	// würde eine Prompt-Änderung alle bereits übersetzten Notes entwerten und
 	// einen neuen Lauf kostenpflichtig wiederholen lassen.
-	$teil  = max( 1, (int) ( $ctx['teil'] ?? 1 ) );
+	$teil   = max( 1, (int) ( $ctx['teil'] ?? 1 ) );
 	$anzahl = max( 1, (int) ( $ctx['teile'] ?? 1 ) );
-	$meta  = ( 1 === $teil );   // Titel und Kurzfassung entstehen nur einmal.
+	$meta   = array_key_exists( 'meta', $ctx ) ? (bool) $ctx['meta'] : ( 1 === $teil );
 
 	if ( $anzahl > 1 ) {
 		$system .= "\n\nDieses Dokument wird in " . $anzahl . ' Stücken übersetzt, du siehst Stück ' . $teil
 			. '. Übersetze genau diesen Ausschnitt: keine Einleitung, kein Schlusssatz, nichts ergänzen, was außerhalb liegt.'
 			. ' Der Ausschnitt kann mitten in einem Abschnitt beginnen oder enden – das ist richtig so.';
+
+		// Die Elementzahlen ausschreiben. Die Season-02-Note endet in einer Liste
+		// mit 96 fast gleichlautenden Preiszeilen; dort kam das Modell auf 101
+		// Einträge. Eine Zahl, die in der Anweisung steht, ist nachprüfbar – und
+		// genau diese Zahlen prüft die Plausibilitätsprüfung hinterher.
+		$zahlen = array();
+		foreach ( warleek_html_fingerprint( $html_en )['tags'] as $tag => $n ) {
+			if ( $n ) { $zahlen[] = $n . ' <' . $tag . '>'; }
+		}
+		if ( $zahlen ) {
+			$system .= "\n" . 'Der Ausschnitt enthält ' . implode( ', ', $zahlen )
+				. '. Genau so viele muss die Antwort enthalten: Listeneinträge weder zusammenfassen noch aufteilen, keinen hinzufügen, keinen weglassen.';
+		}
+		$system .= "\n" . 'Zeilen, die nur aus Eigennamen, Zahlen und Pfeilen bestehen (etwa „AK74 $1,600 → $800“), werden Zeichen für Zeichen übernommen.';
+
 		if ( $meta ) {
 			$system .= "\n" . 'Die Gliederung des ganzen Dokuments steht unter <GLIEDERUNG>. Die Kurzfassung fasst die **ganze** Patch Note zusammen, nicht nur dieses Stück.';
 		}
+	}
+
+	// Nachbesserung: Was am Vorversuch nicht stimmte, steht in der Anweisung.
+	// Ohne diese Angabe wiederholt ein zweiter Versuch meist denselben Fehler.
+	$tadel = trim( (string) ( $ctx['tadel'] ?? '' ) );
+	if ( '' !== $tadel ) {
+		$system .= "\n\nDein voriger Versuch wurde verworfen: " . $tadel
+			. ' Übersetze den Ausschnitt noch einmal und übernimm die Struktur diesmal unverändert.';
 	}
 
 	$user = "<TITEL>\n" . $title_en . "\n</TITEL>\n<HTML>\n" . $html_en . "\n</HTML>";
@@ -254,16 +330,8 @@ Regeln:
 	if ( '' === trim( $html_de ) ) { return new WP_Error( 'warleek_tr_empty', 'Übersetzung war leer.' ); }
 
 	// Plausibilität: gleiche Bilder, Links und Strukturelemente wie im Original.
-	$a = warleek_html_fingerprint( $html_en );
-	$b = warleek_html_fingerprint( $html_de );
-	if ( $a['urls'] !== $b['urls'] ) {
-		return new WP_Error( 'warleek_tr_urls', 'Übersetzung hat Bilder oder Links verändert – verworfen.' );
-	}
-	foreach ( $a['tags'] as $tag => $n ) {
-		if ( $b['tags'][ $tag ] !== $n ) {
-			return new WP_Error( 'warleek_tr_tags', sprintf( 'Übersetzung hat die Struktur verändert (%s: %d statt %d) – verworfen.', $tag, $b['tags'][ $tag ], $n ) );
-		}
-	}
+	$abw = warleek_html_abweichung( $html_en, $html_de );
+	if ( $abw ) { return new WP_Error( $abw['code'], $abw['text'] ); }
 
 	$summary = array();
 	foreach ( (array) ( $out['summary'] ?? array() ) as $line ) {
@@ -281,6 +349,32 @@ Regeln:
 }
 
 /**
+ * Zwischenspeicher für die bereits übersetzten Stücke **einer** Note.
+ *
+ * Scheitert das letzte Stück, bleibt die ganze Note englisch – die Stücke davor
+ * sind aber bezahlt. Ohne diesen Speicher kostet der nächste Lauf sie erneut.
+ * Schlüssel ist der Fingerabdruck des Stücks, gespeichert wird unter dem Hash
+ * der ganzen Note; ein neues Original wirft den Speicher damit von selbst weg.
+ *
+ * @param string     $hash  Hash der Note.
+ * @param array|null $daten Zum Schreiben; leeres Array löscht.
+ * @return array
+ */
+function warleek_translate_cache( $hash, $daten = null ) {
+	$name = 'warleek_tr_' . $hash;
+	if ( null === $daten ) {
+		$d = get_transient( $name );
+		return is_array( $d ) ? $d : array();
+	}
+	if ( ! $daten ) {
+		delete_transient( $name );
+		return array();
+	}
+	set_transient( $name, $daten, 7 * DAY_IN_SECONDS );
+	return $daten;
+}
+
+/**
  * Übersetzt eine Patch Note, sofern nötig.
  *
  * Wird aus dem Steam-Sync heraus aufgerufen. Gibt das zu speichernde Ergebnis zurück
@@ -289,6 +383,12 @@ Regeln:
  * Lange Notes werden in Stücke geschnitten und stückweise übersetzt – die
  * Season-02-Note hatte 45.438 Zeichen und blieb vorher komplett englisch.
  * Gespeichert wird nur, wenn **alle** Stücke durchgelaufen sind.
+ *
+ * Drei Stufen, wenn ein Stück die Plausibilitätsprüfung nicht übersteht:
+ * zweiter Versuch mit dem Tadel in der Anweisung, dann das Stück in zwei
+ * kleinere teilen, erst dann aufgeben. Grund: Die fehlgeschlagene Stelle der
+ * Season-02-Note war eine Liste mit 96 fast gleichlautenden Preiszeilen, und
+ * eine kurze Liste schreibt sich nachweislich genauer ab als eine lange.
  *
  * @param string   $title_en
  * @param string   $html_en
@@ -306,8 +406,8 @@ function warleek_maybe_translate( $title_en, $html_en, $existing = 0, $retransla
 	if ( $existing && ! $retranslate && get_post_meta( $existing, '_warleek_tr_hash', true ) === $hash ) {
 		return null;
 	}
-	$max   = max( 2000, (int) warleek_opt( 'translate_max_chars', 20000 ) );
-	$teile = warleek_html_teile( $html_en, $max );
+	$max    = max( 2000, (int) warleek_opt( 'translate_max_chars', 20000 ) );
+	$teile  = warleek_html_teile( $html_en, $max );
 	$anzahl = count( $teile );
 	if ( $anzahl > WARLEEK_TRANSLATE_MAX_TEILE ) {
 		return new WP_Error( 'warleek_tr_toolong', sprintf(
@@ -319,23 +419,82 @@ function warleek_maybe_translate( $title_en, $html_en, $existing = 0, $retransla
 		return new WP_Error( 'warleek_tr_budget', 'Übersetzungsbudget für diesen Lauf aufgebraucht – der nächste Lauf macht weiter.' );
 	}
 
+	// „Neu übersetzen" heißt neu bezahlen: Der Speicher aus dem Vorlauf wäre
+	// sonst genau das, was der Knopf wegräumen soll.
+	if ( $retranslate ) { warleek_translate_cache( $hash, array() ); }
+	$cache = warleek_translate_cache( $hash );
+
 	// Eine angefangene Note wird fertig übersetzt, auch wenn ihre Stücke das
 	// Budget überziehen: Eine halb deutsche Patch Note wäre schlechter als eine
 	// englische, und zwischenspeichern lässt sich nur das vollständige Ergebnis.
-	$gliederung = $anzahl > 1 ? warleek_html_gliederung( $html_en ) : array();
-	$gesamt     = array( 'title' => '', 'summary' => array(), 'html' => '', 'model' => '', 'usage' => array(), 'teile' => $anzahl );
+	$gliederung = warleek_html_gliederung( $html_en );
+	$gesamt     = array( 'title' => '', 'summary' => array(), 'html' => '', 'model' => '', 'usage' => array(), 'teile' => 0, 'aufrufe' => 0 );
 
-	foreach ( $teile as $i => $stueck ) {
-		warleek_translate_budget_left( 1 );
-		$res = warleek_translate_html( $title_en, $stueck, array(
-			'teil'       => $i + 1,
-			'teile'      => $anzahl,
-			'gliederung' => $gliederung,
-		) );
-		if ( is_wp_error( $res ) ) {
-			if ( $anzahl < 2 ) { return $res; }
-			return new WP_Error( $res->get_error_code(), sprintf( 'Stück %d von %d: %s', $i + 1, $anzahl, $res->get_error_message() ) );
+	$schlange = array();
+	foreach ( $teile as $i => $stueck ) { $schlange[] = array( 'html' => $stueck, 'meta' => 0 === $i ); }
+
+	$deckel  = warleek_translate_aufruf_deckel( $anzahl );
+	$aufrufe = 0;
+	$nr      = 0;
+	while ( $schlange ) {
+		$job = array_shift( $schlange );
+		$key = md5( $job['html'] );
+
+		// Im Vorlauf schon zweimal gescheitert? Dann gleich klein anfangen,
+		// statt dieselben zwei Aufrufe noch einmal zu bezahlen.
+		if ( ! empty( $cache[ 'teilen:' . $key ] ) ) {
+			$halb = warleek_translate_haelften( $job );
+			if ( $halb ) { array_splice( $schlange, 0, 0, $halb ); continue; }
 		}
+
+		$nr++;
+		$anz = $nr + count( $schlange );
+
+		$res     = isset( $cache[ $key ] ) && is_array( $cache[ $key ] ) ? $cache[ $key ] : null;
+		$letzter = null;
+		if ( ! $res ) {
+			$tadel = '';
+			for ( $versuch = 1; $versuch <= 2; $versuch++ ) {
+				if ( $aufrufe >= $deckel ) {
+					$letzter = new WP_Error( 'warleek_tr_aufrufe', sprintf(
+						'nach %d Anfragen aufgegeben – eine kleinere Stückgröße in den Einstellungen kann helfen.', $deckel
+					) );
+					break;
+				}
+				$aufrufe++;
+				warleek_translate_budget_left( 1 );
+				$r = warleek_translate_html( $title_en, $job['html'], array(
+					'teil'       => $nr,
+					'teile'      => $anz,
+					'gliederung' => $gliederung,
+					'meta'       => $job['meta'],
+					'tadel'      => $tadel,
+				) );
+				if ( ! is_wp_error( $r ) ) { $res = $r; break; }
+				$letzter = $r;
+				if ( ! warleek_translate_nachbesserbar( $r->get_error_code() ) ) { break; }
+				$tadel = $r->get_error_message();
+			}
+		}
+
+		if ( ! $res ) {
+			// Struktur stimmt zweimal nicht: Stück halbieren und einzeln angehen.
+			$halb = warleek_translate_nachbesserbar( $letzter->get_error_code() )
+				? warleek_translate_haelften( $job )
+				: array();
+			if ( $halb ) {
+				$cache[ 'teilen:' . $key ] = 1;
+				warleek_translate_cache( $hash, $cache );
+				array_splice( $schlange, 0, 0, $halb );
+				$nr--;
+				continue;
+			}
+			warleek_translate_cache( $hash, $cache );   // Fortschritt behalten.
+			$text = $letzter->get_error_message();
+			return new WP_Error( $letzter->get_error_code(), $anz > 1 ? sprintf( 'Stück %d von %d: %s', $nr, $anz, $text ) : $text );
+		}
+
+		$cache[ $key ] = $res;
 		$gesamt['html'] .= ( '' === $gesamt['html'] ? '' : "\n" ) . $res['html'];
 		if ( '' === $gesamt['title'] && '' !== (string) $res['title'] ) { $gesamt['title'] = $res['title']; }
 		if ( ! $gesamt['summary'] && ! empty( $res['summary'] ) ) { $gesamt['summary'] = $res['summary']; }
@@ -343,11 +502,35 @@ function warleek_maybe_translate( $title_en, $html_en, $existing = 0, $retransla
 		foreach ( (array) $res['usage'] as $k => $v ) {
 			if ( is_int( $v ) ) { $gesamt['usage'][ $k ] = (int) ( $gesamt['usage'][ $k ] ?? 0 ) + $v; }
 		}
+		$gesamt['teile'] = $nr;
 	}
 
+	warleek_translate_cache( $hash, array() );   // Fertig – der Speicher hat seinen Zweck erfüllt.
+	$gesamt['aufrufe'] = $aufrufe;
 	if ( '' === $gesamt['title'] ) { $gesamt['title'] = $title_en; }
 	$gesamt['hash'] = $hash;
 	return $gesamt;
+}
+
+/**
+ * Ein gescheitertes Stück in zwei kleinere teilen.
+ *
+ * Geschnitten wird wieder nur zwischen Elementen oberster Ebene. Besteht das
+ * Stück aus einem einzigen Element, gibt es nichts zu teilen – dann bleibt es
+ * bei der Absage, denn ein Schnitt mitten in einer Liste würde das umgebende
+ * Tag doppeln.
+ *
+ * @param array $job
+ * @return array<int,array{html:string,meta:bool}> Leer, wenn unteilbar.
+ */
+function warleek_translate_haelften( array $job ) {
+	$halb = warleek_html_teile( $job['html'], (int) ceil( strlen( $job['html'] ) / 2 ) );
+	if ( count( $halb ) < 2 ) { return array(); }
+	$out = array();
+	foreach ( $halb as $i => $h ) {
+		$out[] = array( 'html' => $h, 'meta' => ! empty( $job['meta'] ) && 0 === $i );
+	}
+	return $out;
 }
 
 /** Kurzfassung als Kasten über dem Beitrag. */

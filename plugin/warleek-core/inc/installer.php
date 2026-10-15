@@ -1300,7 +1300,14 @@ function warleek_step_translate( $force = false ) {
 		if ( ! $res ) { $skipped++; continue; }
 		wp_update_post( wp_slash( array( 'ID' => $post->ID, 'post_title' => $res['title'], 'post_content' => $res['html'] ) ) );
 		warleek_store_translation( $post->ID, $res );
-		warleek_log( 'übersetzt: ' . $res['title'] . ( ( $res['teile'] ?? 1 ) > 1 ? sprintf( ' (%d Stücke)', $res['teile'] ) : '' ) );
+		// Mehr Aufrufe als Stücke heißt: Mindestens ein Stück musste nachgebessert
+		// oder geteilt werden. Das kostet Guthaben und gehört ins Protokoll.
+		$teile_n = (int) ( $res['teile'] ?? 1 );
+		$ruf_n   = (int) ( $res['aufrufe'] ?? $teile_n );
+		warleek_log( 'übersetzt: ' . $res['title']
+			. ( $teile_n > 1 ? sprintf( ' (%d Stücke', $teile_n ) : '' )
+			. ( $teile_n > 1 && $ruf_n > $teile_n ? sprintf( ', %d Anfragen – mit Nachbesserung', $ruf_n ) : '' )
+			. ( $teile_n > 1 ? ')' : '' ) );
 		$done++;
 	}
 	return array( 'ok' => 0 === $failed, 'msg' => sprintf( '%d übersetzt, %d unverändert, %d fehlgeschlagen.%s', $done, $skipped, $failed, $last ? ' Zuletzt: ' . $last : '' ) );

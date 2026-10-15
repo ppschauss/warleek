@@ -38,9 +38,17 @@ function warleek_b_buttons( array $buttons, $justify = '' ) {
 	if ( $justify ) { $a['layout']['justifyContent'] = $justify; }
 	$out = '<!-- wp:buttons' . warleek_battr( $a ) . ' --><div class="wp-block-buttons">';
 	foreach ( $buttons as $b ) {
-		$ghost = ! empty( $b['ghost'] );
+		// Beschriftung steht je nach Quelle unter `label` oder `text`, die zweite
+		// Form als `style: outline` statt `ghost`. Eine Schaltflächen-Angabe, die
+		// das Feld anders nennt, hat auf /community/ zwei **leere** Knöpfe
+		// erzeugt: Link vorhanden, Text weg, kein sichtbarer Fehler im Backend.
+		// Lieber beide Schreibweisen lesen, als stillschweigend nichts ausgeben.
+		$beschriftung = (string) ( $b['label'] ?? $b['text'] ?? '' );
+		$ziel         = (string) ( $b['url'] ?? '' );
+		if ( '' === trim( $beschriftung ) || '' === $ziel ) { continue; }
+		$ghost = ! empty( $b['ghost'] ) || 'outline' === ( $b['style'] ?? '' );
 		$ba    = $ghost ? array( 'className' => 'is-style-ghost' ) : array();
-		$out  .= '<!-- wp:button' . warleek_battr( $ba ) . ' --><div class="wp-block-button' . ( $ghost ? ' is-style-ghost' : '' ) . '"><a class="wp-block-button__link wp-element-button" href="' . esc_url( $b['url'] ) . '">' . esc_html( $b['label'] ) . '</a></div><!-- /wp:button -->';
+		$out  .= '<!-- wp:button' . warleek_battr( $ba ) . ' --><div class="wp-block-button' . ( $ghost ? ' is-style-ghost' : '' ) . '"><a class="wp-block-button__link wp-element-button" href="' . esc_url( $ziel ) . '">' . esc_html( $beschriftung ) . '</a></div><!-- /wp:button -->';
 	}
 	return $out . '</div><!-- /wp:buttons -->' . "\n";
 }
@@ -226,7 +234,8 @@ function warleek_build_hero( array $a ) {
 	$inner = '';
 	if ( ! empty( $a['eyebrow'] ) ) { $inner .= warleek_b_paragraph( esc_html( $a['eyebrow'] ), 'wl-eyebrow' ); }
 	$inner .= warleek_b_heading( $a['h1'], 1 );
-	if ( ! empty( $a['lead'] ) ) { $inner .= warleek_b_paragraph( $a['lead'], 'wl-lead' ); }
+	$lead = $a['lead'] ?? $a['text'] ?? '';   // beide Schreibweisen, siehe warleek_b_buttons()
+	if ( '' !== (string) $lead ) { $inner .= warleek_b_paragraph( $lead, 'wl-lead' ); }
 	if ( ! empty( $a['buttons'] ) ) { $inner .= warleek_b_buttons( $a['buttons'] ); }
 	if ( ! empty( $a['tags'] ) ) {
 		$tags = '';

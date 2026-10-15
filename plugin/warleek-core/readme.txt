@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.32.0
+Stable tag: 2.32.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,13 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.32.1 =
+* Lange Patch Notes: Ein Stück, dessen Übersetzung die Struktur verändert, wird nachgebessert statt verworfen – zweiter Versuch mit der Abweichung im Klartext, danach wird das Stück halbiert. Erst wenn auch das scheitert, bleibt die Note englisch.
+* Bei mehreren Stücken nennt die Anweisung die Elementzahlen des Ausschnitts; reine Zahlenzeilen werden Zeichen für Zeichen übernommen.
+* Gelungene Stücke werden zwischengespeichert: Ein Fehlschlag am letzten Stück lässt die vorherigen nicht noch einmal kosten.
+* Das Protokoll weist aus, wenn eine Note nachgebessert werden musste.
+* Community-Seite: Hero-Vorspann und die beiden Schaltflächen waren leer – Angaben standen unter anderem Namen im Inhalt.
 
 = 2.32.0 =
 * **Lange Patch Notes werden jetzt übersetzt.** Dokumente über der Stückgröße werden an Elementgrenzen geschnitten und stückweise übersetzt, danach wieder zusammengesetzt; die Kurzfassung entsteht aus dem ersten Stück plus der Gliederung des ganzen Dokuments. Die Season-02-Note (45.438 Zeichen) blieb vorher komplett englisch.

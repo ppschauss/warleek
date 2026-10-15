@@ -136,18 +136,18 @@
         "hero": {
             "eyebrow": "r/WardogsDeutsch",
             "h1": "Die deutsche Wardogs Community",
-            "text": "Der deutschsprachige Treffpunkt zum Taktik-Shooter Wardogs – für Spielerinnen und Spieler aus Deutschland, Österreich und der Schweiz.",
+            "lead": "Der deutschsprachige Treffpunkt zum Taktik-Shooter Wardogs – für Spielerinnen und Spieler aus Deutschland, Österreich und der Schweiz.",
             "image": "hero-community-reddit",
+            "page": true,
             "buttons": [
                 {
-                    "text": "Zu r/WardogsDeutsch",
-                    "url": "https://www.reddit.com/r/WardogsDeutsch/",
-                    "style": "fill"
+                    "label": "Zu r/WardogsDeutsch",
+                    "url": "https://www.reddit.com/r/WardogsDeutsch/"
                 },
                 {
-                    "text": "Alle Guides",
+                    "label": "Alle Guides",
                     "url": "/guides/",
-                    "style": "outline"
+                    "ghost": true
                 }
             ]
         },
