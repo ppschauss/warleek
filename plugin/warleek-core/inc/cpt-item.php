@@ -228,8 +228,15 @@ add_action( 'manage_item_posts_custom_column', function ( $col, $id ) {
 	if ( 'wl_preis' === $col )    { echo esc_html( warleek_item_wert( 'preis', get_post_meta( $id, 'item_preis', true ) ) ?: '–' ); }
 	if ( 'wl_frei' === $col )     { echo esc_html( get_post_meta( $id, 'item_freischaltung', true ) ?: '–' ); }
 	if ( 'wl_geprueft' === $col ) {
-		$g = (string) get_post_meta( $id, '_warleek_geprueft', true );
-		echo ( '' === $g || 'nein' === strtolower( $g ) ) ? '—' : esc_html( $g );
+		// Kurzform, voller Text als Titel: Die Begründungen sind ganze Sätze
+		// („noch nicht – übernommen aus der Datenbank von …"). Ausgeschrieben
+		// zogen sie jede Zeile der Liste auf Absatzhöhe auseinander.
+		$g     = (string) get_post_meta( $id, '_warleek_geprueft', true );
+		$stand = warleek_herkunft_pruefstand( $g );
+		$kurz  = array( 'aus-quellen' => '—', 'im-spiel-beobachtet' => 'beobachtet', 'im-spiel-geprueft' => 'geprüft' );
+		printf( '<span title="%s">%s</span>',
+			esc_attr( $g ?: 'Im Spiel nicht nachgeprüft.' ),
+			esc_html( $kurz[ $stand['status'] ] ?? '—' ) );
 	}
 }, 10, 2 );
 
