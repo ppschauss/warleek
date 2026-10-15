@@ -49,6 +49,36 @@ pruef( 'Beitragstitel',            (string) get_post_field( 'post_title', $item-
 pruef( 'Datenblatt-Wert (Preis)',  (string) get_post_meta( $item->ID, 'item_preis', true ), '99999' );
 if ( $seite ) { pruef( 'SEO-Beschreibung der Seite', (string) get_post_meta( $seite->ID, '_warleek_seo_desc', true ), 'Eigene Beschreibung der Seite' ); }
 
+// --- Prüfstand von Hand: überlebt er den Lauf? ---
+echo "\n--- Prüfstand von Hand ---\n";
+$pruefstand = warleek_item_pruefstand_bauen( 'im-spiel-geprueft', '15.10.2026, AdminLeek' );
+update_post_meta( $item->ID, '_warleek_geprueft', $pruefstand );
+update_post_meta( $item->ID, '_warleek_quellen', 'Eigene Spielaufnahme' );
+warleek_run_step( 'items' );
+pruef( 'Prüfvermerk', (string) get_post_meta( $item->ID, '_warleek_geprueft', true ), $pruefstand );
+pruef( 'Quellen',     (string) get_post_meta( $item->ID, '_warleek_quellen', true ), 'Eigene Spielaufnahme' );
+
+// --- Frisch angelegter Eintrag: Werte beim ERSTEN Lauf, nicht erst beim zweiten ---
+// Der Bearbeitungsschutz arbeitete hier gegen sich selbst: Datenblatt, Herkunft
+// und SEO werden nach dem Anlegen geschrieben, standen bei der Prüfung also noch
+// leer und galten als „von Hand bearbeitet".
+echo "\n--- frisch angelegter Eintrag ---\n";
+$opfer = get_posts( array( 'post_type' => 'item', 'post_status' => 'any', 'numberposts' => 1, 'orderby' => 'ID', 'order' => 'DESC' ) )[0];
+$slug  = $opfer->post_name;
+wp_delete_post( $opfer->ID, true );
+warleek_run_step( 'items' );
+$wieder = get_posts( array( 'post_type' => 'item', 'name' => $slug, 'post_status' => 'any', 'numberposts' => 1 ) );
+if ( $wieder ) {
+	$w = $wieder[0]->ID;
+	pruef( 'Rolle gesetzt',     '' !== (string) get_post_meta( $w, 'item_rolle', true ) ? 'ja' : 'nein', 'ja' );
+	pruef( 'Prüfstand gesetzt', '' !== (string) get_post_meta( $w, '_warleek_geprueft', true ) ? 'ja' : 'nein', 'ja' );
+	pruef( 'Quellen gesetzt',   '' !== (string) get_post_meta( $w, '_warleek_quellen', true ) ? 'ja' : 'nein', 'ja' );
+	pruef( 'SEO-Titel gesetzt', '' !== (string) get_post_meta( $w, '_warleek_seo_title', true ) ? 'ja' : 'nein', 'ja' );
+} else {
+	$GLOBALS['wl_fehler']++;
+	echo "  !!  Eintrag $slug wurde nicht neu angelegt\n";
+}
+
 // --- Und mit force? Dann muss der Seed gewinnen ---
 echo "\n--- Seed MIT force (soll überschreiben) ---\n";
 warleek_run_step( 'items', true );

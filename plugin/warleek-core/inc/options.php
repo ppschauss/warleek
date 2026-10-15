@@ -69,7 +69,7 @@ function warleek_option_fields() {
 		'anthropic_api_key'  => array( 'Anthropic API-Schlüssel', 'password', '', 'Für die deutsche Übersetzung der Patch Notes. Sicherer: als Konstante WARLEEK_ANTHROPIC_KEY in der wp-config.php – die hat Vorrang.' ),
 		'translate_enabled'  => array( 'Patch Notes übersetzen',  'bool',     '1', 'Aus: Patch Notes bleiben englisch.' ),
 		'translate_model'    => array( 'Modell',                  'text',     'claude-opus-5', 'claude-opus-5 (Standard), claude-sonnet-5 oder claude-haiku-4-5 als günstigere Alternativen.' ),
-		'translate_max_chars'=> array( 'Längengrenze (Zeichen)',  'int',      '20000', 'Längere Patch Notes bleiben englisch, statt eine teure Anfrage zu riskieren.' ),
+		'translate_max_chars'=> array( 'Stückgröße (Zeichen)',    'int',      '20000', 'Längere Patch Notes werden an Absatzgrenzen in Stücke geschnitten und stückweise übersetzt. Höchstens acht Stücke je Note.' ),
 		'translate_budget'   => array( 'Übersetzungen je Lauf',   'int',      '5',   'Deckel pro Sync-Lauf. Der stündliche Cron holt den Rest nach.' ),
 		'consent_enabled'    => array( 'Einwilligungs-Banner',    'bool',     '1',   'Zeigt den Hinweis unten am Bildschirm. Ohne eingebettete externe Medien ist er rechtlich nicht nötig – dann kannst du ihn ausschalten.' ),
 		'consent_title'      => array( 'Banner: Überschrift',     'text',     'Deine Entscheidung', 'Kurze Zeile über dem Text.' ),

@@ -184,6 +184,7 @@ function warleek_upsert_post( array $data, $type, $parent = 0, $force = false ) 
 
 	$data = array_merge( $data, array( 'post_type' => $type, 'post_status' => 'publish', 'post_parent' => $parent ) );
 	$id   = wp_insert_post( wp_slash( $data ) );
+	if ( $id && ! is_wp_error( $id ) ) { warleek_seed_frisch( (int) $id ); }
 	if ( $id && ! is_wp_error( $id ) && isset( $data['post_content'] ) ) {
 		update_post_meta( $id, '_warleek_seed_hash', md5( (string) get_post_field( 'post_content', $id, 'raw' ) ) );
 	}
@@ -239,7 +240,33 @@ function warleek_set_seo( $id, array $seo, $noindex = false, $force = false ) {
  * @param string $geplant  Fingerabdruck dessen, was der Seed schreiben würde.
  * @return bool
  */
+/**
+ * Beiträge, die dieser Lauf selbst angelegt hat.
+ *
+ * Nötig, weil der Bearbeitungsschutz sonst gegen sich selbst arbeitet: Felder,
+ * die **nach** dem Anlegen geschrieben werden – Datenblatt, Herkunft, SEO –
+ * stehen im Moment der Prüfung noch leer, weichen damit vom Plan ab und gelten
+ * als „von Hand bearbeitet". Ergebnis: Ein neuer Eintrag blieb bis zum zweiten
+ * Seed-Lauf ohne Werte, ohne Quellen und ohne SEO-Felder. Ein Beitrag, der eine
+ * Zeile zuvor entstanden ist, kann niemand bearbeitet haben.
+ *
+ * @param int $id Beitrag vermerken (0 = nur abfragen).
+ * @return array<int,bool>
+ */
+function warleek_seed_frisch( $id = 0 ) {
+	static $liste = array();
+	if ( $id ) { $liste[ (int) $id ] = true; }
+	return $liste;
+}
+
+/** Wurde dieser Beitrag in diesem Lauf angelegt? */
+function warleek_ist_frisch( $id ) {
+	$liste = warleek_seed_frisch();
+	return ! empty( $liste[ (int) $id ] );
+}
+
 function warleek_seed_behalten( $id, $feld, $jetzt, $geplant ) {
+	if ( warleek_ist_frisch( $id ) ) { return false; }
 	$marke = (string) get_post_meta( $id, $feld, true );
 	if ( $marke ) { return $jetzt !== $marke; }
 	if ( $jetzt === $geplant ) { return false; }
@@ -878,6 +905,7 @@ function warleek_step_items( $force = false ) {
 			$daten['post_date_gmt'] = get_gmt_from_date( $termin );
 			$id = wp_insert_post( wp_slash( $daten ) );
 			if ( is_wp_error( $id ) || ! $id ) { continue; }
+			warleek_seed_frisch( (int) $id );
 			$neu++;
 			if ( ! warleek_item_sofort( $e ) ) {
 				warleek_log( sprintf( 'geplant für %s: %s', substr( $termin, 0, 16 ), $e['slug'] ) );
@@ -933,8 +961,30 @@ function warleek_step_items( $force = false ) {
 			foreach ( warleek_item_felder() as $key => $def ) { $neu_ist[ $key ] = (string) get_post_meta( $id, 'item_' . $key, true ); }
 			update_post_meta( $id, '_warleek_seed_felder', md5( (string) wp_json_encode( $neu_ist ) ) );
 		}
-		update_post_meta( $id, '_warleek_quellen', implode( ' | ', (array) ( $e['quellen'] ?? array() ) ) );
-		update_post_meta( $id, '_warleek_geprueft', (string) ( $e['geprueft'] ?? 'nein' ) );
+		// Herkunft und Prüfstand genauso schützen wie die Datenblatt-Werte: Wer im
+		// Backend „im Spiel geprüft, 15.10.2026" einträgt, hat etwas getan, das die
+		// mitgelieferte Datei nicht wissen kann. Das nächste Update darf diesen
+		// Vermerk nicht auf „nein" zurücksetzen.
+		$h_ist = array(
+			'quellen'  => (string) get_post_meta( $id, '_warleek_quellen', true ),
+			'geprueft' => (string) get_post_meta( $id, '_warleek_geprueft', true ),
+		);
+		$h_plan = array(
+			'quellen'  => implode( ' | ', (array) ( $e['quellen'] ?? array() ) ),
+			'geprueft' => (string) ( $e['geprueft'] ?? 'nein' ),
+		);
+		$h_halten = ! $force && warleek_seed_behalten(
+			$id, '_warleek_seed_herkunft',
+			md5( (string) wp_json_encode( $h_ist ) ),
+			md5( (string) wp_json_encode( $h_plan ) )
+		);
+		if ( $h_halten ) {
+			warleek_log( 'Prüfstand behalten (bearbeitet): ' . $e['slug'] );
+		} else {
+			update_post_meta( $id, '_warleek_quellen', $h_plan['quellen'] );
+			update_post_meta( $id, '_warleek_geprueft', $h_plan['geprueft'] );
+			update_post_meta( $id, '_warleek_seed_herkunft', md5( (string) wp_json_encode( $h_plan ) ) );
+		}
 
 		$typname = $namen[ $e['typ'] ] ?? '';
 		warleek_set_seo( $id, array(
@@ -1250,7 +1300,7 @@ function warleek_step_translate( $force = false ) {
 		if ( ! $res ) { $skipped++; continue; }
 		wp_update_post( wp_slash( array( 'ID' => $post->ID, 'post_title' => $res['title'], 'post_content' => $res['html'] ) ) );
 		warleek_store_translation( $post->ID, $res );
-		warleek_log( 'übersetzt: ' . $res['title'] );
+		warleek_log( 'übersetzt: ' . $res['title'] . ( ( $res['teile'] ?? 1 ) > 1 ? sprintf( ' (%d Stücke)', $res['teile'] ) : '' ) );
 		$done++;
 	}
 	return array( 'ok' => 0 === $failed, 'msg' => sprintf( '%d übersetzt, %d unverändert, %d fehlgeschlagen.%s', $done, $skipped, $failed, $last ? ' Zuletzt: ' . $last : '' ) );

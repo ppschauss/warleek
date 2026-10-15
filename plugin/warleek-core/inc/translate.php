@@ -17,6 +17,14 @@ const WARLEEK_ANTHROPIC_URL     = 'https://api.anthropic.com/v1/messages';
 const WARLEEK_ANTHROPIC_VERSION = '2023-06-01';
 /** Hash-Version: erhöhen, wenn sich Prompt oder Ausgabeformat ändern. */
 const WARLEEK_TRANSLATE_REV     = 'v1';
+/**
+ * Höchstzahl der Stücke je Patch Note.
+ *
+ * Bei der voreingestellten Stückgröße sind das rund 160.000 Zeichen – mehr als
+ * jede bisherige Ankündigung. Der Deckel ist kein Qualitätsurteil, sondern
+ * verhindert, dass ein einziges Dokument das Budget eines Laufs auffrisst.
+ */
+const WARLEEK_TRANSLATE_MAX_TEILE = 8;
 
 /** API-Schlüssel: Konstante in wp-config.php hat Vorrang vor der Einstellung. */
 function warleek_anthropic_key() {
@@ -45,15 +53,16 @@ function warleek_translate_budget_left( $spend = 0 ) {
  * @param string $system System-Anweisung.
  * @param string $user   Nutzerinhalt.
  * @param array  $schema JSON-Schema für die Antwort.
+ * @param int    $max_tokens Obergrenze der Antwortlänge.
  * @return array|WP_Error Dekodierte Antwort nach Schema.
  */
-function warleek_anthropic_request( $system, $user, array $schema ) {
+function warleek_anthropic_request( $system, $user, array $schema, $max_tokens = 16000 ) {
 	$key = warleek_anthropic_key();
 	if ( ! $key ) { return new WP_Error( 'warleek_no_key', 'Kein Anthropic-API-Schlüssel hinterlegt.' ); }
 
 	$body = array(
 		'model'         => (string) warleek_opt( 'translate_model', 'claude-opus-5' ),
-		'max_tokens'    => 16000,
+		'max_tokens'    => max( 4000, min( 32000, (int) $max_tokens ) ),
 		'output_config' => array(
 			'effort' => 'low', // Übersetzen braucht keine große Denktiefe – spart Geld.
 			'format' => array( 'type' => 'json_schema', 'schema' => $schema ),
@@ -109,13 +118,86 @@ function warleek_html_fingerprint( $html ) {
 }
 
 /**
+ * Lange Patch Notes in übersetzbare Stücke schneiden.
+ *
+ * Geschnitten wird **nur zwischen Elementen der obersten Ebene**. Damit bleibt
+ * jedes Stück für sich gültiges HTML mit ausgeglichenen Tags – Voraussetzung
+ * dafür, dass die Plausibilitätsprüfung (gleiche Bilder, Links, Struktur) je
+ * Stück überhaupt greifen kann.
+ *
+ * Ein einzelnes Element, das allein größer als die Stückgröße ist, wird
+ * **nicht** aufgebrochen: Ein Schnitt mitten in einer Liste müsste das
+ * umgebende Tag doppeln, und nach dem Zusammensetzen stünde im Dokument ein
+ * `<ul>` mehr als im Original. Lieber ein zu großes Stück, dessen
+ * Antwortbudget mitwächst, als eine veränderte Struktur.
+ *
+ * @param string $html Englisches HTML.
+ * @param int    $max  Stückgröße in Zeichen.
+ * @return array<int,string> Mindestens ein Stück; aneinandergehängt wieder das Original.
+ */
+function warleek_html_teile( $html, $max ) {
+	$html = (string) $html;
+	$max  = max( 2000, (int) $max );
+	if ( strlen( $html ) <= $max ) { return array( $html ); }
+
+	$doc = new DOMDocument();
+	libxml_use_internal_errors( true );
+	$doc->loadHTML(
+		'<?xml encoding="UTF-8"><div id="wl-teile">' . $html . '</div>',
+		LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD
+	);
+	libxml_clear_errors();
+	$root = $doc->getElementById( 'wl-teile' );
+	if ( ! $root ) { return array( $html ); }   // Nicht lesbar? Dann unverändert weitergeben.
+
+	$teile = array();
+	$akt   = '';
+	foreach ( $root->childNodes as $node ) {
+		$stueck = (string) $doc->saveHTML( $node );
+		if ( '' === trim( $stueck ) ) { $akt .= $stueck; continue; }
+		if ( '' !== $akt && strlen( $akt ) + strlen( $stueck ) > $max ) {
+			$teile[] = $akt;
+			$akt     = '';
+		}
+		$akt .= $stueck;
+	}
+	if ( '' !== trim( $akt ) ) { $teile[] = $akt; }
+	return $teile ? $teile : array( $html );
+}
+
+/**
+ * Gliederung eines Dokuments: die Abschnittsüberschriften in ihrer Reihenfolge.
+ *
+ * Geht beim stückweisen Übersetzen in den **ersten** Aufruf mit, damit die
+ * Kurzfassung die ganze Patch Note zusammenfasst und nicht nur das erste Stück,
+ * das sie zufällig gesehen hat.
+ *
+ * @param string $html
+ * @return array<int,string>
+ */
+function warleek_html_gliederung( $html ) {
+	$out = array();
+	// Nur h2 und h3: Bei der Season-02-Note ergaben h1–h4 über hundert Zeilen,
+	// darunter jede einzelne Waffenbezeichnung. Eine Gliederung, die alles
+	// aufzählt, gliedert nichts.
+	if ( preg_match_all( '#<h[23][^>]*>(.*?)</h[23]>#is', (string) $html, $m ) ) {
+		foreach ( $m[1] as $roh ) {
+			$titel = trim( html_entity_decode( wp_strip_all_tags( $roh ), ENT_QUOTES, 'UTF-8' ) );
+			if ( '' !== $titel ) { $out[] = $titel; }
+		}
+	}
+	return $out;
+}
+
+/**
  * Übersetzt ein Stück Patch-Note-HTML.
  *
  * @param string $title_en Englischer Titel.
- * @param string $html_en  Englisches HTML.
+ * @param string $html_en  Englisches HTML (ein Stück oder das ganze Dokument).
+ * @param array  $ctx      Optional `teil`, `teile`, `gliederung` für die Stückelung.
  * @return array{title:string,summary:array,html:string,model:string,usage:array}|WP_Error
  */
-function warleek_translate_html( $title_en, $html_en ) {
+function warleek_translate_html( $title_en, $html_en, array $ctx = array() ) {
 	$system = 'Du übersetzt offizielle Patch Notes des Spiels WARDOGS aus dem Englischen ins Deutsche für eine Fan-Guide-Seite.
 
 Regeln:
@@ -125,20 +207,47 @@ Regeln:
 - Zahlen, Prozentwerte, Zeitangaben und Tastenbelegungen exakt übernehmen.
 - Fasse zusätzlich das Wichtigste in drei bis fünf kurzen deutschen Stichpunkten zusammen: was sich für Spieler tatsächlich ändert. Keine Meta-Sätze wie „Dieser Patch enthält".';
 
+	// Bei einem Stück bleibt Anweisung und Schema **genau** wie zuvor – sonst
+	// würde eine Prompt-Änderung alle bereits übersetzten Notes entwerten und
+	// einen neuen Lauf kostenpflichtig wiederholen lassen.
+	$teil  = max( 1, (int) ( $ctx['teil'] ?? 1 ) );
+	$anzahl = max( 1, (int) ( $ctx['teile'] ?? 1 ) );
+	$meta  = ( 1 === $teil );   // Titel und Kurzfassung entstehen nur einmal.
+
+	if ( $anzahl > 1 ) {
+		$system .= "\n\nDieses Dokument wird in " . $anzahl . ' Stücken übersetzt, du siehst Stück ' . $teil
+			. '. Übersetze genau diesen Ausschnitt: keine Einleitung, kein Schlusssatz, nichts ergänzen, was außerhalb liegt.'
+			. ' Der Ausschnitt kann mitten in einem Abschnitt beginnen oder enden – das ist richtig so.';
+		if ( $meta ) {
+			$system .= "\n" . 'Die Gliederung des ganzen Dokuments steht unter <GLIEDERUNG>. Die Kurzfassung fasst die **ganze** Patch Note zusammen, nicht nur dieses Stück.';
+		}
+	}
+
 	$user = "<TITEL>\n" . $title_en . "\n</TITEL>\n<HTML>\n" . $html_en . "\n</HTML>";
+	if ( $meta && $anzahl > 1 && ! empty( $ctx['gliederung'] ) ) {
+		$user .= "\n<GLIEDERUNG>\n- " . implode( "\n- ", (array) $ctx['gliederung'] ) . "\n</GLIEDERUNG>";
+	}
+
+	$eigenschaften = array();
+	$pflicht       = array();
+	if ( $meta ) {
+		$eigenschaften['title_de'] = array( 'type' => 'string', 'description' => 'Der übersetzte Titel.' );
+		$eigenschaften['summary']  = array( 'type' => 'array', 'items' => array( 'type' => 'string' ), 'description' => 'Drei bis fünf Stichpunkte.' );
+		$pflicht                   = array( 'title_de', 'summary' );
+	}
+	$eigenschaften['html_de'] = array( 'type' => 'string', 'description' => 'Das übersetzte HTML mit unveränderten Tags und URLs.' );
+	$pflicht[]                = 'html_de';
 
 	$schema = array(
 		'type'                 => 'object',
 		'additionalProperties' => false,
-		'required'             => array( 'title_de', 'summary', 'html_de' ),
-		'properties'           => array(
-			'title_de' => array( 'type' => 'string', 'description' => 'Der übersetzte Titel.' ),
-			'summary'  => array( 'type' => 'array', 'items' => array( 'type' => 'string' ), 'description' => 'Drei bis fünf Stichpunkte.' ),
-			'html_de'  => array( 'type' => 'string', 'description' => 'Das übersetzte HTML mit unveränderten Tags und URLs.' ),
-		),
+		'required'             => $pflicht,
+		'properties'           => $eigenschaften,
 	);
 
-	$out = warleek_anthropic_request( $system, $user, $schema );
+	// Deutsch ist länger als Englisch, und das JSON-Format kostet zusätzlich
+	// Zeichen. Die Vorgabe von 16.000 bleibt die Untergrenze.
+	$out = warleek_anthropic_request( $system, $user, $schema, max( 16000, (int) ( strlen( $html_en ) / 2 ) ) );
 	if ( is_wp_error( $out ) ) { return $out; }
 
 	$html_de = (string) ( $out['html_de'] ?? '' );
@@ -163,7 +272,7 @@ Regeln:
 	}
 
 	return array(
-		'title'   => trim( wp_strip_all_tags( (string) ( $out['title_de'] ?? $title_en ) ) ) ?: $title_en,
+		'title'   => $meta ? ( trim( wp_strip_all_tags( (string) ( $out['title_de'] ?? $title_en ) ) ) ?: $title_en ) : '',
 		'summary' => array_slice( $summary, 0, 5 ),
 		'html'    => wp_kses_post( $html_de ),
 		'model'   => (string) ( $out['_model'] ?? '' ),
@@ -177,11 +286,15 @@ Regeln:
  * Wird aus dem Steam-Sync heraus aufgerufen. Gibt das zu speichernde Ergebnis zurück
  * oder null, wenn nichts zu tun ist (dann bleibt die englische Fassung stehen).
  *
+ * Lange Notes werden in Stücke geschnitten und stückweise übersetzt – die
+ * Season-02-Note hatte 45.438 Zeichen und blieb vorher komplett englisch.
+ * Gespeichert wird nur, wenn **alle** Stücke durchgelaufen sind.
+ *
  * @param string   $title_en
  * @param string   $html_en
  * @param int      $existing Vorhandene Beitrags-ID (0 = neu).
  * @param bool     $retranslate Zwischenspeicher übergehen.
- * @return array{title:string,html:string,summary:array,hash:string,model:string}|null|WP_Error
+ * @return array{title:string,html:string,summary:array,hash:string,model:string,teile:int}|null|WP_Error
  */
 function warleek_maybe_translate( $title_en, $html_en, $existing = 0, $retranslate = false ) {
 	if ( ! warleek_translate_enabled() ) { return null; }
@@ -193,20 +306,48 @@ function warleek_maybe_translate( $title_en, $html_en, $existing = 0, $retransla
 	if ( $existing && ! $retranslate && get_post_meta( $existing, '_warleek_tr_hash', true ) === $hash ) {
 		return null;
 	}
-	$max = max( 2000, (int) warleek_opt( 'translate_max_chars', 20000 ) );
-	if ( strlen( $html_en ) > $max ) {
-		return new WP_Error( 'warleek_tr_toolong', sprintf( 'Patch Note zu lang (%d Zeichen, Grenze %d) – bleibt englisch.', strlen( $html_en ), $max ) );
+	$max   = max( 2000, (int) warleek_opt( 'translate_max_chars', 20000 ) );
+	$teile = warleek_html_teile( $html_en, $max );
+	$anzahl = count( $teile );
+	if ( $anzahl > WARLEEK_TRANSLATE_MAX_TEILE ) {
+		return new WP_Error( 'warleek_tr_toolong', sprintf(
+			'Patch Note zu lang (%d Zeichen ergeben %d Stücke, erlaubt sind %d) – bleibt englisch.',
+			strlen( $html_en ), $anzahl, WARLEEK_TRANSLATE_MAX_TEILE
+		) );
 	}
 	if ( ! warleek_translate_budget_left() ) {
 		return new WP_Error( 'warleek_tr_budget', 'Übersetzungsbudget für diesen Lauf aufgebraucht – der nächste Lauf macht weiter.' );
 	}
 
-	warleek_translate_budget_left( 1 );
-	$res = warleek_translate_html( $title_en, $html_en );
-	if ( is_wp_error( $res ) ) { return $res; }
+	// Eine angefangene Note wird fertig übersetzt, auch wenn ihre Stücke das
+	// Budget überziehen: Eine halb deutsche Patch Note wäre schlechter als eine
+	// englische, und zwischenspeichern lässt sich nur das vollständige Ergebnis.
+	$gliederung = $anzahl > 1 ? warleek_html_gliederung( $html_en ) : array();
+	$gesamt     = array( 'title' => '', 'summary' => array(), 'html' => '', 'model' => '', 'usage' => array(), 'teile' => $anzahl );
 
-	$res['hash'] = $hash;
-	return $res;
+	foreach ( $teile as $i => $stueck ) {
+		warleek_translate_budget_left( 1 );
+		$res = warleek_translate_html( $title_en, $stueck, array(
+			'teil'       => $i + 1,
+			'teile'      => $anzahl,
+			'gliederung' => $gliederung,
+		) );
+		if ( is_wp_error( $res ) ) {
+			if ( $anzahl < 2 ) { return $res; }
+			return new WP_Error( $res->get_error_code(), sprintf( 'Stück %d von %d: %s', $i + 1, $anzahl, $res->get_error_message() ) );
+		}
+		$gesamt['html'] .= ( '' === $gesamt['html'] ? '' : "\n" ) . $res['html'];
+		if ( '' === $gesamt['title'] && '' !== (string) $res['title'] ) { $gesamt['title'] = $res['title']; }
+		if ( ! $gesamt['summary'] && ! empty( $res['summary'] ) ) { $gesamt['summary'] = $res['summary']; }
+		if ( '' !== (string) $res['model'] ) { $gesamt['model'] = $res['model']; }
+		foreach ( (array) $res['usage'] as $k => $v ) {
+			if ( is_int( $v ) ) { $gesamt['usage'][ $k ] = (int) ( $gesamt['usage'][ $k ] ?? 0 ) + $v; }
+		}
+	}
+
+	if ( '' === $gesamt['title'] ) { $gesamt['title'] = $title_en; }
+	$gesamt['hash'] = $hash;
+	return $gesamt;
 }
 
 /** Kurzfassung als Kasten über dem Beitrag. */

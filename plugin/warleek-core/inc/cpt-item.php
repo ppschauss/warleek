@@ -233,6 +233,240 @@ add_action( 'manage_item_posts_custom_column', function ( $col, $id ) {
 	}
 }, 10, 2 );
 
+/* ------------------------------------------------- Prüfstand von Hand pflegen */
+
+/**
+ * Die drei Prüfstände, wie sie im Herkunftsnachweis heißen.
+ *
+ * Bewusst dieselben Schlüssel wie in `warleek_herkunft_pruefstand()`: Eine
+ * zweite Benennung für dieselbe Sache liefe irgendwann auseinander.
+ */
+function warleek_pruefstaende() {
+	return array(
+		'aus-quellen'         => 'nicht nachgeprüft – aus den genannten Quellen übernommen',
+		'im-spiel-beobachtet' => 'im Spiel beobachtet, aber nicht systematisch vermessen',
+		'im-spiel-geprueft'   => 'im Spiel am Gegenstand abgeglichen',
+	);
+}
+
+/**
+ * Regulärer Ausdruck für „nicht nachgeprüft".
+ *
+ * Wird für die Filterliste im Backend als Datenbankabfrage gebraucht. Er muss
+ * zu `warleek_herkunft_pruefstand()` passen – `tests/pruefstand-test.php`
+ * vergleicht beide über eine Reihe echter Werte, damit das nicht auseinanderläuft.
+ */
+function warleek_pruefstand_regex_offen() {
+	return '^[[:space:]]*($|nein|noch nicht)';
+}
+
+/**
+ * Gespeicherten Text in Auswahl plus Zusatz zerlegen.
+ *
+ * Das Feld `_warleek_geprueft` ist Freitext und bleibt es auch: Daraus liest der
+ * Herkunftsnachweis den Prüfstand, und im Guide steht der Text wörtlich. Das
+ * Formular ist nur ein Werkzeug darauf, kein zweiter Speicherort.
+ *
+ * @param string $roh Inhalt von `_warleek_geprueft`.
+ * @return array{status:string,detail:string}
+ */
+function warleek_item_pruefstand_teile( $roh ) {
+	$roh    = trim( (string) $roh );
+	$status = function_exists( 'warleek_herkunft_pruefstand' )
+		? warleek_herkunft_pruefstand( $roh )['status']
+		: ( '' === $roh ? 'aus-quellen' : 'im-spiel-geprueft' );
+
+	$detail = $roh;
+	if ( 'aus-quellen' === $status ) {
+		// „nein" und „nein, Preis unklar" → der Zusatz ist das, was dahinter steht.
+		$detail = (string) preg_replace( '/^\s*(nein|noch nicht)[\s,;:–-]*/iu', '', $roh );
+	} elseif ( 'im-spiel-beobachtet' === $status ) {
+		$detail = (string) preg_replace( '/^\s*im spiel beobachtet[\s,;:–-]*/iu', '', $roh );
+	}
+	return array( 'status' => $status, 'detail' => trim( $detail ) );
+}
+
+/**
+ * Aus Auswahl und Zusatz wieder den zu speichernden Text bauen.
+ *
+ * Die Schlüsselwörter sind Absicht: `warleek_herkunft_pruefstand()` erkennt den
+ * Stand am Text, nicht an einem zweiten Feld. Wer „geprüft" wählt und nichts
+ * dazuschreibt, bekommt das heutige Datum – ein Prüfvermerk ohne Zeitpunkt
+ * behauptet mehr, als er belegt.
+ *
+ * @param string $status Schlüssel aus warleek_pruefstaende().
+ * @param string $detail Freier Zusatz (wer, wann, wie).
+ * @param string $heute  Datum für den leeren Prüfvermerk.
+ * @return string
+ */
+function warleek_item_pruefstand_bauen( $status, $detail, $heute = '' ) {
+	$detail = trim( (string) preg_replace( '/\s+/u', ' ', (string) $detail ) );
+	switch ( $status ) {
+		case 'im-spiel-geprueft':
+			if ( '' === $detail ) { return $heute ?: 'geprüft'; }
+			// Ein Zusatz wie „nein, nur Teilwerte" würde den Stand beim Zurücklesen
+			// umdeuten; ein vorangestellter Stand fängt das auf, weil „nein" nur am
+			// Anfang zählt. Steht dagegen „beobachtet" im Zusatz, bleibt es dabei:
+			// Der Text gewinnt, und das ist die **vorsichtigere** der beiden
+			// Lesarten. Deshalb zeigt das Formular darunter, was daraus gelesen wird.
+			$teile = warleek_item_pruefstand_teile( $detail );
+			return 'im-spiel-geprueft' === $teile['status'] ? $detail : 'Im Spiel geprüft, ' . $detail;
+		case 'im-spiel-beobachtet':
+			return '' === $detail ? 'Im Spiel beobachtet' : 'Im Spiel beobachtet, ' . $detail;
+		default:
+			return '' === $detail ? 'nein' : 'nein, ' . $detail;
+	}
+}
+
+/** Quellen stehen als `a | b | c` in einem Feld – im Formular eine je Zeile. */
+function warleek_item_quellen_lesen( $id ) {
+	return array_values( array_filter( array_map( 'trim', explode( '|', (string) get_post_meta( $id, '_warleek_quellen', true ) ) ) ) );
+}
+
+add_action( 'add_meta_boxes_item', function ( $post ) {
+	add_meta_box( 'warleek-herkunft', 'Herkunft & Prüfstand', 'warleek_item_herkunft_box', null, 'normal', 'high' );
+} );
+
+/** Das Formular. Ohne es wäre der Prüfstand nur per Code änderbar. */
+function warleek_item_herkunft_box( $post ) {
+	$teile   = warleek_item_pruefstand_teile( get_post_meta( $post->ID, '_warleek_geprueft', true ) );
+	$quellen = warleek_item_quellen_lesen( $post->ID );
+	wp_nonce_field( 'warleek_herkunft_' . $post->ID, 'warleek_herkunft_nonce' );
+	?>
+	<p>
+		<label for="wl-pruefstand"><strong>Prüfstand</strong></label><br>
+		<select name="warleek_pruefstand" id="wl-pruefstand" style="max-width:100%">
+			<?php foreach ( warleek_pruefstaende() as $key => $text ) : ?>
+				<option value="<?php echo esc_attr( $key ); ?>" <?php selected( $teile['status'], $key ); ?>><?php echo esc_html( $text ); ?></option>
+			<?php endforeach; ?>
+		</select>
+	</p>
+	<p>
+		<label for="wl-pruefdetail"><strong>Wer und wann</strong></label><br>
+		<input type="text" class="large-text" name="warleek_pruefdetail" id="wl-pruefdetail"
+			value="<?php echo esc_attr( $teile['detail'] ); ?>"
+			placeholder="<?php echo esc_attr( date_i18n( 'd.m.Y' ) . ', AdminLeek' ); ?>">
+		<span class="description">Steht so auf der Seite und im Herkunftsnachweis. Bei „geprüft" ohne Angabe wird das heutige Datum eingesetzt – ein Prüfvermerk ohne Zeitpunkt behauptet mehr, als er belegt.</span>
+	</p>
+	<p>
+		<label for="wl-quellen"><strong>Quellen</strong> – eine je Zeile</label><br>
+		<textarea name="warleek_quellen" id="wl-quellen" class="large-text code" rows="4"
+			placeholder="Steam-Ankündigung von BULKHEAD, 09.10.2026"><?php echo esc_textarea( implode( "\n", $quellen ) ); ?></textarea>
+	</p>
+	<?php
+	$roh   = (string) get_post_meta( $post->ID, '_warleek_geprueft', true );
+	$namen = warleek_pruefstaende();
+	?>
+	<p class="description">
+		Gespeichert: <code><?php echo esc_html( $roh ?: '—' ); ?></code><br>
+		Wird gelesen als: <strong><?php echo esc_html( $namen[ $teile['status'] ] ?? '—' ); ?></strong>.
+		Der Prüfstand steckt im Text selbst, nicht in einem zweiten Feld – ein Zusatz,
+		der „beobachtet" enthält, macht daraus den vorsichtigeren Stand.<br>
+		Was hier geändert wird, bleibt beim nächsten Inhalts-Update stehen.
+	</p>
+	<?php
+}
+
+/** Speichern. Nonce, Rechte, kein Autosave – sonst leert eine Zwischenspeicherung die Felder. */
+function warleek_item_herkunft_speichern( $post_id ) {
+	if ( ! isset( $_POST['warleek_herkunft_nonce'] ) ) { return; }
+	if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['warleek_herkunft_nonce'] ) ), 'warleek_herkunft_' . $post_id ) ) { return; }
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
+	if ( wp_is_post_revision( $post_id ) ) { return; }
+	if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+	$status = sanitize_key( wp_unslash( $_POST['warleek_pruefstand'] ?? 'aus-quellen' ) );
+	if ( ! isset( warleek_pruefstaende()[ $status ] ) ) { $status = 'aus-quellen'; }
+	$detail = sanitize_text_field( wp_unslash( $_POST['warleek_pruefdetail'] ?? '' ) );
+
+	update_post_meta( $post_id, '_warleek_geprueft', warleek_item_pruefstand_bauen( $status, $detail, date_i18n( 'd.m.Y' ) ) );
+
+	$quellen = array_values( array_filter( array_map( 'trim', preg_split( '/\r\n|\r|\n/', (string) wp_unslash( $_POST['warleek_quellen'] ?? '' ) ) ) ) );
+	$quellen = array_map( 'sanitize_text_field', $quellen );
+	update_post_meta( $post_id, '_warleek_quellen', implode( ' | ', $quellen ) );
+
+	// Die Seed-Marke bleibt absichtlich unberührt: Sie hält den Stand des
+	// Installers fest. Weicht der Wert davon ab, gilt der Eintrag als bearbeitet
+	// und das nächste Inhalts-Update lässt ihn in Ruhe.
+	if ( function_exists( 'warleek_herkunft_cache_leeren' ) ) { warleek_herkunft_cache_leeren(); }
+}
+add_action( 'save_post_item', 'warleek_item_herkunft_speichern' );
+
+/**
+ * Sammelbearbeitung: Prüfstand für mehrere Einträge auf einmal setzen.
+ *
+ * Bei knapp 200 Einträgen ist das der Weg, der tatsächlich benutzt wird – der
+ * Einzeleditor ist für den Eintrag, an dem auch der Zusatz steht.
+ */
+add_filter( 'bulk_actions-edit-item', function ( $actions ) {
+	$actions['wl_geprueft']   = 'Prüfstand: im Spiel geprüft (heute)';
+	$actions['wl_beobachtet'] = 'Prüfstand: im Spiel beobachtet';
+	$actions['wl_offen']      = 'Prüfstand: nicht nachgeprüft';
+	return $actions;
+} );
+
+add_filter( 'handle_bulk_actions-edit-item', function ( $redirect, $doaction, $ids ) {
+	$karte = array( 'wl_geprueft' => 'im-spiel-geprueft', 'wl_beobachtet' => 'im-spiel-beobachtet', 'wl_offen' => 'aus-quellen' );
+	if ( empty( $karte[ $doaction ] ) ) { return $redirect; }
+
+	// Wer prüft, steht in den Optionen. Ohne Namen bleibt es beim Datum – eine
+	// erfundene Person wäre genau die Sorte Unwahrheit, gegen die der
+	// Herkunftsnachweis gebaut ist.
+	$name   = trim( (string) warleek_opt( 'autor_name' ) );
+	$detail = 'im-spiel-geprueft' === $karte[ $doaction ]
+		? trim( date_i18n( 'd.m.Y' ) . ( $name ? ', ' . $name : '' ) )
+		: '';
+
+	$n = 0;
+	foreach ( (array) $ids as $id ) {
+		if ( ! current_user_can( 'edit_post', $id ) ) { continue; }
+		update_post_meta( (int) $id, '_warleek_geprueft', warleek_item_pruefstand_bauen( $karte[ $doaction ], $detail, date_i18n( 'd.m.Y' ) ) );
+		$n++;
+	}
+	if ( function_exists( 'warleek_herkunft_cache_leeren' ) ) { warleek_herkunft_cache_leeren(); }
+	return add_query_arg( 'wl_pruefstand_gesetzt', $n, $redirect );
+}, 10, 3 );
+
+add_action( 'admin_notices', function () {
+	$n = isset( $_GET['wl_pruefstand_gesetzt'] ) ? (int) $_GET['wl_pruefstand_gesetzt'] : 0;
+	if ( $n > 0 ) {
+		printf( '<div class="notice notice-success is-dismissible"><p>%s</p></div>',
+			esc_html( sprintf( _n( 'Prüfstand bei %d Eintrag geändert.', 'Prüfstand bei %d Einträgen geändert.', $n ), $n ) ) );
+	}
+} );
+
+/** Filter über der Liste: zeigt, was noch offen ist. */
+add_action( 'restrict_manage_posts', function ( $post_type ) {
+	if ( 'item' !== $post_type ) { return; }
+	$aktiv = isset( $_GET['wl_pruefstand'] ) ? sanitize_key( $_GET['wl_pruefstand'] ) : '';
+	echo '<label class="screen-reader-text" for="wl-filter-pruefstand">Nach Prüfstand filtern</label>';
+	echo '<select name="wl_pruefstand" id="wl-filter-pruefstand">';
+	echo '<option value="">Prüfstand: alle</option>';
+	echo '<option value="offen"' . selected( $aktiv, 'offen', false ) . '>nicht nachgeprüft</option>';
+	echo '<option value="geprueft"' . selected( $aktiv, 'geprueft', false ) . '>geprüft oder beobachtet</option>';
+	echo '</select>';
+} );
+
+add_action( 'pre_get_posts', function ( $q ) {
+	if ( ! is_admin() || ! $q->is_main_query() || 'item' !== $q->get( 'post_type' ) ) { return; }
+	$wahl = isset( $_GET['wl_pruefstand'] ) ? sanitize_key( $_GET['wl_pruefstand'] ) : '';
+	if ( ! in_array( $wahl, array( 'offen', 'geprueft' ), true ) ) { return; }
+
+	// Gefragt wird am Freitext selbst, nicht an einem zweiten Feld: Ein
+	// abgeleitetes Statusfeld wäre eine zweite Wahrheit, die irgendwann abweicht.
+	if ( 'offen' === $wahl ) {
+		$q->set( 'meta_query', array(
+			'relation' => 'OR',
+			array( 'key' => '_warleek_geprueft', 'compare' => 'NOT EXISTS' ),
+			array( 'key' => '_warleek_geprueft', 'value' => warleek_pruefstand_regex_offen(), 'compare' => 'REGEXP' ),
+		) );
+	} else {
+		$q->set( 'meta_query', array(
+			array( 'key' => '_warleek_geprueft', 'value' => warleek_pruefstand_regex_offen(), 'compare' => 'NOT REGEXP' ),
+		) );
+	}
+} );
+
 /* ---------------------------------------------------- Datenbank-Blöcke */
 
 /**

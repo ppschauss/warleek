@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.31.3
+Stable tag: 2.32.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.32.0 =
+* **Lange Patch Notes werden jetzt übersetzt.** Dokumente über der Stückgröße werden an Elementgrenzen geschnitten und stückweise übersetzt, danach wieder zusammengesetzt; die Kurzfassung entsteht aus dem ersten Stück plus der Gliederung des ganzen Dokuments. Die Season-02-Note (45.438 Zeichen) blieb vorher komplett englisch.
+* **Prüfstand und Quellen sind im Backend änderbar.** Neuer Kasten „Herkunft & Prüfstand" am Datenbank-Eintrag (Auswahl, „wer und wann", Quellen je Zeile, dazu die Lesart des gespeicherten Textes), Sammelbearbeitung für mehrere Einträge und ein Filter „nicht nachgeprüft" über der Liste. Bisher ließ sich das nur im Code ändern.
+* **Behoben:** Der Bearbeitungsschutz arbeitete beim ersten Lauf gegen sich selbst. Datenblatt, Herkunft und SEO-Felder werden nach dem Anlegen geschrieben, standen bei der Prüfung also noch leer und galten als „von Hand bearbeitet" – ein neu hinzugekommener Eintrag blieb bis zum zweiten Seed-Lauf ohne Werte.
 
 = 2.31.3 =
 * Fest verdrahtete `loading="lazy"`-Attribute in Partner-, Item- und Autoren-Karten respektieren jetzt den Schnappschuss-Modus (`warleek_lazy()`).
