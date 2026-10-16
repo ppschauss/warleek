@@ -183,10 +183,137 @@ function warleek_reddit_submit( $titel, $text, $probe = false ) {
 /* ------------------------------------------------------- Text erzeugen */
 
 /**
+ * Text auf das Vergleichbare eindampfen: klein, ohne Satzzeichen, ein Leerraum.
+ *
+ * Dient nur dem Doppelungs-Test, nicht der Anzeige.
+ *
+ * @param string $s Text.
+ * @return string
+ */
+function warleek_reddit_norm( $s ) {
+	$s = wp_strip_all_tags( (string) $s );
+	$s = str_replace( array( '–', '—', '„', '“', '”', '‘', '’' ), array( '-', '-', '"', '"', '"', "'", "'" ), $s );
+	$s = mb_strtolower( $s, 'UTF-8' );
+	$s = preg_replace( '/[^\p{L}\p{N}]+/u', ' ', $s );
+	return trim( (string) $s );
+}
+
+/**
+ * Datenblatt eines Eintrags als Liste aus Beschriftung und fertigem Wert.
+ *
+ * Nimmt dieselbe Quelle wie die Tabelle auf der Seite
+ * (`warleek_item_felder()` / `warleek_item_wert()`), damit Beitrag und Seite
+ * nicht auseinanderlaufen können.
+ *
+ * @param int $id Eintrag.
+ * @return array<int, array{0:string, 1:string}>
+ */
+function warleek_reddit_item_werte( $id ) {
+	if ( ! function_exists( 'warleek_item_felder' ) ) { return array(); }
+	$out = array();
+	foreach ( warleek_item_felder() as $key => $def ) {
+		$wert = warleek_item_wert( $key, get_post_meta( $id, 'item_' . $key, true ) );
+		if ( '' === $wert ) { continue; }
+		$out[] = array( (string) $def[0], (string) $wert );
+	}
+	return $out;
+}
+
+/**
+ * Sätze streichen, die nur wiederholen, was im Datenblatt steht.
+ *
+ * Die Direktantwort eines Eintrags ist aus genau den Werten gebaut, die jetzt
+ * als Tabelle im Beitrag stehen (`warleek_item_aeo()`). Ungefiltert stand bei
+ * der Reparaturstation „121 Build-Supplies" viermal im selben kurzen Text:
+ * im Titel, im Einleitungssatz, in der Tabelle und in der Frage darunter.
+ *
+ * Gestrichen wird **wertgetrieben**, nicht nach Satzposition: Ein Satz fällt
+ * weg, wenn sich jedes seiner inhaltstragenden Wörter in der Tabelle
+ * wiederfindet. „Kaliber 5,56 × 45 mm." fällt damit weg, „Stand: Oktober 2026
+ * · Early Access." und „Von Anfang an verfügbar …" bleiben stehen. Ändert
+ * sich der Satzbau in der Antwort, bleibt die Regel gültig.
+ *
+ * @param string $text  Direktantwort.
+ * @param array  $werte Ergebnis von warleek_reddit_item_werte().
+ * @return string
+ */
+function warleek_reddit_ohne_werte( $text, array $werte ) {
+	$tabelle = array();
+	foreach ( $werte as $w ) {
+		foreach ( explode( ' ', warleek_reddit_norm( $w[0] . ' ' . $w[1] ) ) as $t ) {
+			if ( '' !== $t ) { $tabelle[ warleek_reddit_stamm( $t ) ] = 1; }
+		}
+	}
+	if ( ! $tabelle ) { return $text; }
+
+	$saetze = preg_split( '/(?<=\.)\s+/u', trim( (string) $text ) );
+	$bleibt = array();
+	foreach ( (array) $saetze as $satz ) {
+		$woerter = array_filter( explode( ' ', warleek_reddit_norm( $satz ) ), function ( $t ) {
+			return mb_strlen( $t ) > 1;
+		} );
+		$neu = false;
+		foreach ( $woerter as $t ) {
+			if ( ! isset( $tabelle[ warleek_reddit_stamm( $t ) ] ) ) { $neu = true; break; }
+		}
+		if ( $neu || ! $woerter ) { $bleibt[] = $satz; }
+	}
+	// Alles gestrichen hieße ein Beitrag ohne Einleitung – dann lieber doppelt.
+	return $bleibt ? implode( ' ', $bleibt ) : $text;
+}
+
+/**
+ * Grober Wortstamm – nur für den Doppelungs-Test.
+ *
+ * „einmalige" gegen „einmalig" in der Tabellenbeschriftung reichte, um einen
+ * Satz stehen zu lassen, der sonst Wort für Wort schon darüberstand. Ein
+ * vollwertiger Stemmer wäre dafür zu viel; abgeschnitten werden die fünf
+ * häufigen Endungen, und nur, wenn genug Wort übrig bleibt.
+ *
+ * @param string $t Ein kleingeschriebenes Wort.
+ * @return string
+ */
+function warleek_reddit_stamm( $t ) {
+	foreach ( array( 'en', 'em', 'er', 'es', 'e' ) as $endung ) {
+		if ( str_ends_with( $t, $endung ) && mb_strlen( $t ) - mb_strlen( $endung ) >= 4 ) {
+			return mb_substr( $t, 0, mb_strlen( $t ) - mb_strlen( $endung ) );
+		}
+	}
+	return $t;
+}
+
+/**
+ * Was hinter den Namen eines Eintrags in den Titel gehört.
+ *
+ * Ein Titel, der bei 198 Beiträgen immer gleich endet, ist eine Feed-Zeile.
+ * Steht eine Zahl zur Verfügung, steht sie im Titel – sie ist der Grund, den
+ * Beitrag zu öffnen.
+ *
+ * **Ohne Präposition**, siehe CLAUDE.md: „ab Assault 3" ginge, „über mittlerer
+ * Hammer" nicht, und das grammatische Geschlecht steht nirgends in den Daten.
+ * Deshalb Doppelpunkt statt Vorwort.
+ *
+ * @param array $werte Ergebnis von warleek_reddit_item_werte().
+ * @return string
+ */
+function warleek_reddit_item_titelzusatz( array $werte ) {
+	$map = array();
+	foreach ( $werte as $w ) { $map[ $w[0] ] = $w[1]; }
+
+	$kern = $map['Preis'] ?? $map['Baukosten'] ?? '';
+	$frei = $map['Freischaltung'] ?? '';
+
+	if ( '' === $kern && '' === $frei ) { return ' – Werte und Einordnung'; }
+	if ( '' === $kern ) { return ' – Freischaltung: ' . $frei; }
+	if ( '' === $frei ) { return ' – ' . $kern; }
+	return ' – ' . $kern . ', Freischaltung: ' . $frei;
+}
+
+/**
  * Beitragstext zu einem Beitrag der Seite.
  *
- * Aufbau: Direktantwort, bis zu drei Fragen, Quellenlage, Link. Bewusst kurz –
- * siehe Kopfkommentar.
+ * Aufbau: Direktantwort, bei Einträgen das Datenblatt, bis zu drei Fragen,
+ * Quellenlage, Link. Bewusst kurz – siehe Kopfkommentar.
  *
  * @param int|WP_Post $post Guide oder Datenbank-Eintrag.
  * @return array{titel: string, text: string}|WP_Error
@@ -200,8 +327,10 @@ function warleek_reddit_text( $post ) {
 		? warleek_aeo_extract( (string) get_post_field( 'post_content', $post, 'raw' ) )
 		: array( 'frage' => '', 'antwort' => '', 'faq' => array() );
 
+	$werte = $ist_item ? warleek_reddit_item_werte( $post->ID ) : array();
+
 	$titel = get_the_title( $post );
-	if ( $ist_item ) { $titel = 'Wardogs ' . $titel . ' – Werte und Einordnung'; }
+	if ( $ist_item ) { $titel = 'Wardogs ' . $titel . warleek_reddit_item_titelzusatz( $werte ); }
 
 	$zeilen = array();
 
@@ -210,14 +339,40 @@ function warleek_reddit_text( $post ) {
 			$zeilen[] = '**' . $aeo['frage'] . '**';
 			$zeilen[] = '';
 		}
-		$zeilen[] = $aeo['antwort'];
+		$zeilen[] = $werte ? warleek_reddit_ohne_werte( $aeo['antwort'], $werte ) : $aeo['antwort'];
 	} else {
 		$kurz = trim( (string) $post->post_excerpt );
 		if ( '' === $kurz ) { $kurz = wp_trim_words( wp_strip_all_tags( $post->post_content ), 45, '…' ); }
 		$zeilen[] = $kurz;
 	}
 
-	$faq = array_slice( (array) $aeo['faq'], 0, 3 );
+	/* Das Datenblatt ist bei einem Eintrag der eigentliche Inhalt. Ohne es
+	   bestand der Beitrag aus einem Satz und einem Link – auf Reddit zu Recht
+	   als Spam gelesen. */
+	if ( $werte ) {
+		$zeilen[] = '';
+		$zeilen[] = '| Angabe | Wert |';
+		$zeilen[] = '|---|---|';
+		foreach ( $werte as $w ) { $zeilen[] = '| ' . $w[0] . ' | ' . $w[1] . ' |'; }
+	}
+
+	/* **Beim Eintrag kein FAQ-Abschnitt.** Seine Fragen entstehen aus
+	   denselben Werten, die jetzt in der Tabelle stehen
+	   (`warleek_item_aeo()`) – auf der Seite ist das für Antwortmaschinen
+	   gedacht, in einem kurzen Beitrag wäre es dieselbe Zahl zum vierten Mal.
+	   Guides behalten ihr FAQ: das ist geschriebener Text und trägt etwas bei.
+
+	   Was dort trotzdem schon oben steht, fliegt einzeln raus. */
+	$faq = array();
+	if ( ! $ist_item ) {
+		$gesagt = warleek_reddit_norm( implode( ' ', $zeilen ) );
+		foreach ( (array) $aeo['faq'] as $p ) {
+			$a = warleek_reddit_norm( (string) ( $p['antwort'] ?? '' ) );
+			if ( '' === $a || ( '' !== $gesagt && str_contains( $gesagt, $a ) ) ) { continue; }
+			$faq[] = $p;
+			if ( count( $faq ) >= 3 ) { break; }
+		}
+	}
 	if ( $faq ) {
 		$zeilen[] = '';
 		foreach ( $faq as $p ) {
@@ -228,7 +383,10 @@ function warleek_reddit_text( $post ) {
 		}
 	}
 
-	/* Quellenlage: der Teil, der den Beitrag von Werbung unterscheidet. */
+	/* Quellenlage: der Teil, der den Beitrag von Werbung unterscheidet.
+	   Die Leerzeile davor ist Pflicht: Ohne sie klebt der Trenner bei einem
+	   Eintrag ohne FAQ direkt an der Tabelle und beendet sie nicht sauber. */
+	if ( '' !== end( $zeilen ) ) { $zeilen[] = ''; }
 	$zeilen[] = '---';
 	$zeilen[] = '';
 	// Achtung: Bei Datenbank-Einträgen steht hier ein String, bei Guides eine

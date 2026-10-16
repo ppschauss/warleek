@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.32.1
+Stable tag: 2.32.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,13 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.32.2 =
+* Reddit: Der Beitrag zu einem Datenbank-Eintrag trägt jetzt das Datenblatt als Tabelle. Vorher bestand er aus einem Satz und einem Link – bei einem Eintrag pro Tag wäre das als Spam gelesen worden.
+* Reddit: Der Titel eines Eintrags nennt Preis bzw. Baukosten und die Freischaltstufe, statt bei allen Einträgen gleich zu enden.
+* Reddit: Keine Wiederholungen mehr im selben Beitrag – Einträge bekommen keinen FAQ-Abschnitt (er entsteht aus denselben Werten wie die Tabelle), und Sätze der Direktantwort, die nur das Datenblatt wiederholen, fallen weg.
+* Reddit: Fehlende Leerzeile vor dem Trennstrich ergänzt; ohne sie klebte er an der Tabelle.
+* Neu: `tests/reddit-test.php` (stellt keine Netzanfrage) und `docs/reddit-start.md` für die Inbetriebnahme.
 
 = 2.32.1 =
 * Lange Patch Notes: Ein Stück, dessen Übersetzung die Struktur verändert, wird nachgebessert statt verworfen – zweiter Versuch mit der Abweichung im Klartext, danach wird das Stück halbiert. Erst wenn auch das scheitert, bleibt die Note englisch.
