@@ -25,6 +25,25 @@ $cases = [
 	['[list][*][p]Eins[/p][/*][*][p]Zwei[/p][/*][/list]', '<ul><li>Eins</li><li>Zwei</li></ul>'],
 	['[table colwidth="259,133"][tr][th colwidth="259"][p]Region[/p][/th][/tr][tr][td colwidth="259"][p]UTC[/p][/td][/tr][/table]', '<figure class="wp-block-table"><table><tr><th>Region</th></tr><tr><td>UTC</td></tr></table></figure>'],
 	['[dynamiclink href="https://x.de"][/dynamiclink] [foo bar="1"]x[/foo]', '<p><a href="https://x.de" rel="noopener" target="_blank">https://x.de</a> x</p>'],
+	// Platzhalter in einem anderen Block: Das `[p]` wird vor dem `[quote]`
+	// gesichert, sein Platzhalter steckt danach im Zitat. Vorher stand
+	// @@WLB0@@ sichtbar in der Season-02-Note – samt Meta-Beschreibung.
+	['[quote][p]Zitiert[/p][/quote]', '<blockquote><p>Zitiert</p></blockquote>'],
+	['[quote][p]Oben[/p][p]Unten[/p][/quote]', '<blockquote><p>Oben</p><p>Unten</p></blockquote>'],
+	['[quote][p][img src="{STEAM_CLAN_IMAGE}/1/a.png"][/img][/p][/quote]', '<blockquote><p><img src="https://clan.akamai.steamstatic.com/images/1/a.png" alt="" loading="lazy"></p></blockquote>'],
+	// Zwei Ebenen tief, damit der Durchlauf wirklich wiederholt. Die Liste
+	// kommt ohne <p> heraus: Ein `[p]`, das nur einen Block enthält, wird nicht
+	// zum Absatz – sonst stünde ein <ul> in einem <p>.
+	['[quote][p][list][*]Eins[/list][/p][/quote]', '<blockquote><ul><li>Eins</li></ul></blockquote>'],
+	// Kein Platzhalter bleibt stehen, auch nicht als Rest im Fließtext.
+	['Text @@WLB7@@ dahinter', '<p>Text  dahinter</p>'],
+	// Markdown-Fluchtzeichen kommen aus dem Steam-Rohtext mit, nicht aus der
+	// Übersetzung: In der Season-02-Note stand „TCX-SPR \[7.62x39mm]".
+	['[p][b]TCX-SPR [/b]\[7.62x39mm] - Assault Rifle.[/p]', '<p><strong>TCX-SPR </strong>[7.62x39mm] - Assault Rifle.</p>'],
+	['[p]Kodiak \[M249] \$3,750 → \$6,750[/p]', '<p>Kodiak [M249] $3,750 → $6,750</p>'],
+	// Ein Pfad ist kein Fluchtzeichen, und Code bleibt unberührt.
+	['[p]C:\Users\test[/p]', '<p>C:\Users\test</p>'],
+	['[code]a \[b] c[/code]', '<pre><code>a \[b] c</code></pre>'],
 ];
 $fail = 0;
 foreach ( $cases as [$in, $want] ) {

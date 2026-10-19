@@ -29,6 +29,12 @@ function warleek_bbcode_to_html( $bb ) {
 		return $stash( '<pre><code>' . trim( $m[1] ) . '</code></pre>' );
 	}, $text );
 
+	// 1b) Markdown-Fluchtzeichen: Steam liefert sie im Rohtext mit
+	// („TCX-SPR \\[7.62x39mm]", „Kodiak \\[M249]" – 27 Stellen in der
+	// Season-02-Note). In HTML bedeutet der Backslash nichts, also fällt er
+	// weg. Code-Blöcke sind oben schon gesichert und bleiben unberührt.
+	$text = warleek_md_escape_weg( $text );
+
 	// 2) Inline-Tags.
 	$text = preg_replace( '/\[b\](.*?)\[\/b\]/is', '<strong>$1</strong>', $text );
 	$text = preg_replace( '/\[i\](.*?)\[\/i\]/is', '<em>$1</em>', $text );
@@ -87,7 +93,10 @@ function warleek_bbcode_to_html( $bb ) {
 		return $stash( '<p>' . str_replace( "\n", '<br>', $inner ) . '</p>' );
 	}, $text );
 	$text = preg_replace_callback( '/\[quote(?:=[^\]]*)?\](.*?)\[\/quote\]/is', function ( $m ) use ( $stash ) {
-		return $stash( '<blockquote>' . str_replace( "\n", '<br>', trim( $m[1] ) ) . '</blockquote>' );
+		// Zeilenumbrüche neben einem Platzhalter gehören zur Technik, nicht zum
+		// Zitat: Als <br> stehen sie später zwischen zwei Absätzen im Zitatblock.
+		$inner = preg_replace( '/\n*(@@WLB\d+@@)\n*/', '$1', trim( $m[1] ) );
+		return $stash( '<blockquote>' . str_replace( "\n", '<br>', $inner ) . '</blockquote>' );
 	}, $text );
 	$text = preg_replace_callback( '/\[hr\](?:\[\/hr\])?/i', function () use ( $stash ) {
 		return $stash( '<hr>' );
@@ -110,10 +119,57 @@ function warleek_bbcode_to_html( $bb ) {
 	}
 	$flush();
 
+	$out = warleek_bbcode_platzhalter_loesen( $out, $blocks );
+
 	if ( function_exists( 'wp_kses_post' ) ) {
 		$out = wp_kses_post( $out );
 	}
 	return $out;
+}
+
+/**
+ * Löst Platzhalter auf, die in einem anderen Block gelandet sind.
+ *
+ * Schritt 5 ersetzt nur Zeilen, die **genau** ein Platzhalter sind. Ein
+ * `[quote]` mit einem `[p]` darin hatte dessen Platzhalter aber schon
+ * eingeschlossen, bevor die Zeilen überhaupt gebaut wurden – und
+ * `@@WLB188@@` stand danach sichtbar in der Season-02-Note, nicht nur im Text,
+ * sondern auch in der Meta-Beschreibung und im JSON-LD.
+ *
+ * Der Deckel von acht Durchläufen begrenzt die Verschachtelung; was danach
+ * noch dasteht, zeigt auf keinen Block und fällt weg – ein leerer Zitatblock
+ * ist besser als ein sichtbares Stück Technik.
+ *
+ * @param string $html
+ * @param array  $blocks
+ * @return string
+ */
+function warleek_bbcode_platzhalter_loesen( $html, array $blocks ) {
+	for ( $i = 0; $i < 8 && false !== strpos( $html, '@@WLB' ); $i++ ) {
+		$html = preg_replace_callback( '/@@WLB(\\d+)@@/', function ( $m ) use ( $blocks ) {
+			return isset( $blocks[ (int) $m[1] ] ) ? $blocks[ (int) $m[1] ] : '';
+		}, $html );
+	}
+	return preg_replace( '/@@WLB\\d+@@/', '', $html );
+}
+
+/**
+ * Entfernt Markdown-Fluchtzeichen aus Text, der als HTML weiterverwendet wird.
+ *
+ * Betrifft nur die Zeichen, die Markdown überhaupt maskiert; ein `\\U` wie in
+ * einem Windows-Pfad bleibt stehen. `<pre>` und `<code>` bleiben unberührt –
+ * dort kann der Backslash gemeint sein.
+ *
+ * @param string $text
+ * @return string
+ */
+function warleek_md_escape_weg( $text ) {
+	$teile = preg_split( '#(<(?:pre|code)\\b[^>]*>.*?</(?:pre|code)>)#is', (string) $text, -1, PREG_SPLIT_DELIM_CAPTURE );
+	foreach ( (array) $teile as $i => $t ) {
+		if ( 1 === $i % 2 ) { continue; }
+		$teile[ $i ] = preg_replace( '/\\\\([\\[\\]*_#`~|(){}+.!$-])/', '$1', $t );
+	}
+	return implode( '', $teile );
 }
 
 /** Erlaubt nur http(s)-URLs, löst Steam-Platzhalter auf, gibt attribut-sicheren String zurück. */

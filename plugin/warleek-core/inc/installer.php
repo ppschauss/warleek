@@ -633,8 +633,13 @@ function warleek_item_aeo( array $e ) {
 	}
 	if ( $merkmale ) { $satz .= ' ' . ucfirst( implode( ', ', $merkmale ) ) . '.'; }
 
-	if ( $start ) {
+	if ( $start && '' === $preis ) {
 		$satz .= ' Von Anfang an verfügbar – ohne Freischaltung und ohne Kosten.';
+	} elseif ( $start ) {
+		/* Seit Season 2 gibt es Startausrüstung, die pro Leben Geld kostet: Die
+		   AK-74 braucht keine Freischaltung mehr, schlägt aber mit $800 zu Buche.
+		   „Ohne Kosten" wäre hier falsch. */
+		$satz .= ' Von Anfang an freigeschaltet – ohne Gebühr, Preis ' . $preis . '.';
 	} else {
 		$kosten = array();
 		if ( '' !== $preis ) { $kosten[] = 'Preis ' . $preis; }
@@ -643,7 +648,7 @@ function warleek_item_aeo( array $e ) {
 		if ( '' !== $gebuehr ) { $kosten[] = 'einmalige Freischaltgebühr ' . $gebuehr; }
 		if ( $kosten ) { $satz .= ' ' . ucfirst( implode( ', ', $kosten ) ) . '.'; }
 	}
-	$satz .= ' Stand: Oktober 2026 · Early Access.';
+	$satz .= ' Stand: ' . warleek_item_stand( $e ) . ' · Early Access.';
 
 	// Die Überschrift ist absichtlich keine Frage: Sie spiegelt, wie gesucht wird
 	// („wardogs ak-74 preis“). Als Question wandert sie deshalb nicht ins FAQPage –
@@ -721,12 +726,32 @@ function warleek_item_inhalt( array $e ) {
 	$aeo = warleek_item_aeo( $e );
 
 	return "\n" . $aeo['block'] . "\n" . $satz . "\n"
-		. '<p class="wl-stand">Stand: September 2026 · Early Access – Werte ändern sich mit Patches.</p>' . "\n"
+		. '<p class="wl-stand">Stand: ' . warleek_item_stand( $e ) . ' · Early Access – Werte ändern sich mit Patches.</p>' . "\n"
 		. '[warleek_datenblatt]' . "\n"
 		. ( $aeo['faq'] ? $aeo['faq'] . "\n" : '' )
 		. ( $links ? '<h2>Dazu passend</h2><ul>' . $links . '</ul>' . "\n" : '' )
 		. '[warleek_item_verlauf]' . "\n"
 		. '[warleek_item_herkunft]' . "\n";
+}
+
+/**
+ * Stand der Werte eines Eintrags, als Monatsangabe für den Fließtext.
+ *
+ * Zwei Stellen der Eintragsseite nennen ihn – die Direktantwort oben und der
+ * Hinweis unter dem Text –, und sie müssen dasselbe sagen. Vorher stand oben
+ * „Oktober 2026" und unten „September 2026", beides hart verdrahtet.
+ *
+ * Abgeleitet wird er aus den Quellen des Eintrags: Wer die Season-2-Patch-Notes
+ * nennt, trägt Werte aus Season 2.
+ *
+ * @param array $e Eintrag aus items.json.
+ * @return string
+ */
+function warleek_item_stand( array $e ) {
+	foreach ( (array) ( $e['quellen'] ?? array() ) as $q ) {
+		if ( false !== strpos( (string) $q, 'Season 02 Patch Notes' ) ) { return 'Oktober 2026 (Season 2)'; }
+	}
+	return 'Oktober 2026';
 }
 
 /**
@@ -970,7 +995,10 @@ function warleek_step_items( $force = false ) {
 			'geprueft' => (string) get_post_meta( $id, '_warleek_geprueft', true ),
 		);
 		$h_plan = array(
-			'quellen'  => implode( ' | ', (array) ( $e['quellen'] ?? array() ) ),
+			// Zeilenweise, nicht „a | b": Seit den Season-2-Patch-Notes steht ein
+			// senkrechter Strich im Quellentext selbst („WARDOGS | Season 02 Patch
+			// Notes"), und der Trenner zerlegte die Angabe mitten im Titel.
+			'quellen'  => implode( "\n", (array) ( $e['quellen'] ?? array() ) ),
 			'geprueft' => (string) ( $e['geprueft'] ?? 'nein' ),
 		);
 		$h_halten = ! $force && warleek_seed_behalten(

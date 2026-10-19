@@ -88,7 +88,7 @@ function warleek_steam_upsert_patchnote( array $item, $force = false ) {
 	if ( $translated ) {
 		$html = $translated['html'];
 	}
-	$plain = html_entity_decode( trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( preg_replace( '/<\/(p|li|h[1-6]|blockquote|tr)>/i', ' ', $html ) ) ) ), ENT_QUOTES, 'UTF-8' );
+	$plain = warleek_patchnote_klartext( $html );
 	$title = trim( (string) ( $item['title'] ?? '' ) );
 	if ( $title && 0 === strcasecmp( mb_substr( $plain, 0, mb_strlen( $title ) ), $title ) ) { $plain = trim( mb_substr( $plain, mb_strlen( $title ) ) ); }
 	$data  = array(
@@ -96,7 +96,7 @@ function warleek_steam_upsert_patchnote( array $item, $force = false ) {
 		'post_status'   => 'publish',
 		'post_title'    => sanitize_text_field( $translated['title'] ?? ( $item['title'] ?? 'Patch Note' ) ),
 		'post_content'  => $html,
-		'post_excerpt'  => mb_substr( $plain, 0, 160 ) . ( mb_strlen( $plain ) > 160 ? '…' : '' ),
+		'post_excerpt'  => warleek_patchnote_auszug( $plain, $translated['summary'] ?? array() ),
 		'post_date'     => wp_date( 'Y-m-d H:i:s', $ts ),
 		'post_date_gmt' => gmdate( 'Y-m-d H:i:s', $ts ),
 		'meta_input'    => array(
@@ -121,6 +121,113 @@ function warleek_steam_upsert_patchnote( array $item, $force = false ) {
 	warleek_store_translation( (int) $id, $translated, $tr_error );
 	warleek_localize_remote_images( (int) $id );
 	return array( 'id' => (int) $id, 'action' => 'created' );
+}
+
+/** HTML einer Patch Note als Klartext, Blockgrenzen werden zu Leerzeichen. */
+function warleek_patchnote_klartext( $html ) {
+	$text = preg_replace( '#</(p|li|h[1-6]|blockquote|tr)>#i', ' ', (string) $html );
+	return html_entity_decode( trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( $text ) ) ), ENT_QUOTES, 'UTF-8' );
+}
+
+/**
+ * Auszug einer Patch Note.
+ *
+ * Steht eine deutsche Kurzfassung bereit, trägt **sie** den Auszug: Ihr erster
+ * Stichpunkt ist ein ganzer Satz, während der abgeschnittene Fließtext mit
+ * „WARDOGS SEASON 2 Trailer …" anfängt.
+ *
+ * Wichtiger noch ist der Fall, der die Season-02-Note getroffen hat: Der
+ * Auszug entstand beim ersten Sync aus dem damals **englischen** Inhalt. Die
+ * Übersetzung kam später über die CLI und schrieb Titel und Inhalt neu, den
+ * Auszug aber nicht – und Rank Math baut die Meta-Beschreibung daraus. Auf der
+ * Seite stand deutscher Text, in der Beschreibung „Season 2 drops on October
+ * 15th". Deshalb wird der Auszug überall dort neu gesetzt, wo übersetzt wird.
+ *
+ * @param string $plain   Klartext der deutschen Fassung.
+ * @param array  $summary Stichpunkte der Kurzfassung, falls vorhanden.
+ * @return string
+ */
+function warleek_patchnote_auszug( $plain, $summary = array() ) {
+	$kurz = '';
+	foreach ( (array) $summary as $line ) {
+		$line = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( (string) $line ) ) );
+		if ( '' !== $line ) { $kurz = $line; break; }
+	}
+	$text = $kurz ?: trim( preg_replace( '/\s+/', ' ', (string) $plain ) );
+	if ( mb_strlen( $text ) <= 160 ) { return $text; }
+	$text    = mb_substr( $text, 0, 160 );
+	$schnitt = mb_strrpos( $text, ' ' );
+	return rtrim( ( $schnitt && $schnitt > 100 ) ? mb_substr( $text, 0, $schnitt ) : $text, " ,;:–-" ) . '…';
+}
+
+/**
+ * Einmalige Reparatur bereits gespeicherter Patch Notes.
+ *
+ * Drei Fehler steckten im ausgelieferten Text der Season-02-Note und ließen
+ * sich nicht durch einen neuen Sync beheben, weil der Fingerabdruck gleich
+ * geblieben wäre – und ein `--force` würde die Übersetzung erneut bezahlen:
+ *
+ * 1. `@@WLB188@@` stand sichtbar im Text. Der Block dahinter ist nicht mehr zu
+ *    retten (das rohe BBCode legen wir nicht ab), also fällt die Marke weg –
+ *    ein leeres Zitat ist besser als ein sichtbares Stück Technik. Neue Syncs
+ *    lösen den Platzhalter richtig auf, siehe `inc/bbcode.php`.
+ * 2. Markdown-Fluchtzeichen aus der Übersetzung („Kodiak \[M249]").
+ * 3. Der Auszug war beim ersten Sync englisch und blieb es nach der späteren
+ *    Übersetzung – Rank Math baut daraus die Meta-Beschreibung.
+ *
+ * Läuft einmal und merkt sich das in `warleek_patchnote_fix_v1`.
+ */
+function warleek_patchnote_reparatur() {
+	if ( get_option( 'warleek_patchnote_fix_v1' ) ) { return; }
+
+	$posts   = get_posts( array( 'post_type' => 'patchnote', 'post_status' => 'any', 'posts_per_page' => -1 ) );
+	$geaendert = 0;
+
+	foreach ( $posts as $post ) {
+		$inhalt = warleek_patchnote_putzen( $post->post_content );
+		$quelle = get_post_meta( $post->ID, '_warleek_src_html', true );
+		$neu    = array();
+
+		if ( $inhalt !== $post->post_content ) { $neu['post_content'] = $inhalt; }
+
+		// Auszug nur dann neu, wenn eine deutsche Fassung vorliegt. Ohne
+		// Übersetzung ist der englische Auszug die einzige Wahrheit, die da ist.
+		if ( get_post_meta( $post->ID, '_warleek_tr_hash', true ) ) {
+			$auszug = warleek_patchnote_auszug(
+				warleek_patchnote_klartext( $inhalt ),
+				(array) get_post_meta( $post->ID, '_warleek_summary', true )
+			);
+			if ( $auszug && $auszug !== $post->post_excerpt ) { $neu['post_excerpt'] = $auszug; }
+		}
+
+		if ( $neu ) {
+			$neu['ID'] = $post->ID;
+			wp_update_post( wp_slash( $neu ) );
+			$geaendert++;
+		}
+		if ( is_string( $quelle ) && '' !== $quelle ) {
+			$sauber = warleek_patchnote_putzen( $quelle );
+			if ( $sauber !== $quelle ) { update_post_meta( $post->ID, '_warleek_src_html', $sauber ); }
+		}
+	}
+
+	update_option( 'warleek_patchnote_fix_v1', $geaendert ?: '1' );
+	if ( $geaendert && function_exists( 'warleek_log' ) ) {
+		warleek_log( sprintf( 'Patch Notes nachgebessert: %d.', $geaendert ) );
+	}
+}
+add_action( 'admin_init', 'warleek_patchnote_reparatur' );
+
+/** Platzhalter-Reste, Fluchtzeichen und die davon leer gebliebenen Blöcke entfernen. */
+function warleek_patchnote_putzen( $html ) {
+	$html = preg_replace( '/@@WLB\d+@@/', '', (string) $html );
+	if ( function_exists( 'warleek_md_escape_weg' ) ) {
+		$html = warleek_md_escape_weg( $html );
+	}
+	// Was ohne den Platzhalter nur noch eine leere Hülle ist, fliegt mit.
+	$html = preg_replace( '#<p[^>]*>\s*</p>#i', '', $html );
+	$html = preg_replace( '#<blockquote[^>]*>\s*</blockquote>#i', '', $html );
+	return $html;
 }
 
 /** Übersetzungsergebnis bzw. Fehler an der Patch Note ablegen. */

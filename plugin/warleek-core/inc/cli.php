@@ -126,7 +126,14 @@ class Warleek_Core_CLI {
 			$res = warleek_maybe_translate( $src_title ?: $post->post_title, $src_html, $post->ID, $retr );
 			if ( is_wp_error( $res ) ) { WP_CLI::warning( $post->post_title . ': ' . $res->get_error_message() ); $failed++; continue; }
 			if ( ! $res ) { $skipped++; continue; }
-			wp_update_post( wp_slash( array( 'ID' => $post->ID, 'post_title' => $res['title'], 'post_content' => $res['html'] ) ) );
+			// Der Auszug muss mit: Er stammt aus dem Sync und war dort noch
+			// englisch – Rank Math baut die Meta-Beschreibung daraus.
+			wp_update_post( wp_slash( array(
+				'ID'           => $post->ID,
+				'post_title'   => $res['title'],
+				'post_content' => $res['html'],
+				'post_excerpt' => warleek_patchnote_auszug( warleek_patchnote_klartext( $res['html'] ), $res['summary'] ),
+			) ) );
 			warleek_store_translation( $post->ID, $res );
 			WP_CLI::log( '✓ ' . $res['title'] );
 			$done++;

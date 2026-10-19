@@ -5,23 +5,23 @@ thema: gameplay
 order: 14
 image: guide-recon
 image_alt: Scharfschuetze im Ghillie-Anzug liegt im Morgengrauen auf einem Felsgrat und beobachtet mit dem Fernglas
-excerpt: Das Fernglas für rund $75 ist die profitabelste Anschaffung im Spiel. Wie Spotten funktioniert, was der Ghillie taugt und welches Gewehr sich wann lohnt.
+excerpt: Das Fernglas für rund $180 ist die profitabelste Anschaffung im Spiel. Wie Spotten funktioniert, was der Ghillie taugt und welches Gewehr sich wann lohnt.
 seo_title: Wardogs Recon & Sniper – Guide auf Deutsch | Warleek
 seo_description: Spotten mit dem Fernglas, Ghillie, Mosin, SVD und SV-98: Recon in Wardogs auf Deutsch erklärt – für Deutschland, Österreich und die Schweiz.
-quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
 autor: tacticleek
 frage: Wie verdient man als Recon in Wardogs am meisten?
-antwort: Mit dem Fernglas für rund $75, nicht mit dem Gewehr. Einen Gegner anvisieren und die Maustaste halten markiert ihn für das ganze Team. Das zahlt doppelt – für das Markieren und für den fremden Abschuss – und verrät die eigene Position nicht.
+antwort: Mit dem Fernglas für rund $180, nicht mit dem Gewehr. Einen Gegner anvisieren und die Maustaste halten markiert ihn für das ganze Team. Das zahlt doppelt – für das Markieren und für den fremden Abschuss – und verrät die eigene Position nicht.
 ---
 
 Der Recon-Track ist die Sniper-Linie: Scharfschützen- und Marksman-Gewehre, Optiken, Zweibeine, Claymores, der Compound-Bogen und der Ghillie-Anzug. Und er hat eine Eigenart, die ihn von jedem anderen Track unterscheidet: **Die beste Einnahmequelle ist nicht die Waffe.**
 
-> [!stand] September 2026 · Early Access – Preise und Freischaltstufen ändern sich mit Patches.
+> [!stand] Oktober 2026 · Early Access – Stand nach dem Season-2-Update vom 15.10.2026. Preise und Freischaltstufen ändern sich mit Patches.
 
 ## Das Fernglas ist der Trick
 
-Ein Fernglas kostet etwa **$75**. Du visierst einen Gegner an, hältst die linke Maustaste – und markierst ihn damit **für das ganze Team**. Dafür bekommst du Recon-Erfahrung und Geld. Erledigt danach jemand den markierten Gegner, gibt es noch einmal etwas obendrauf.
+Ein Fernglas kostet etwa **$180**. Du visierst einen Gegner an, hältst die linke Maustaste – und markierst ihn damit **für das ganze Team**. Dafür bekommst du Recon-Erfahrung und Geld. Erledigt danach jemand den markierten Gegner, gibt es noch einmal etwas obendrauf.
 
 Das heißt:
 
@@ -29,7 +29,9 @@ Das heißt:
 - Es zahlt über die **gesamte Teamleistung**, nicht nur deine eigene.
 - Es **verrät deine Position nicht**, weil kein Schuss fällt.
 
-Für rund $75. Wer Recon 10 oder 19 erreichen will, kommt über das Fernglas schneller und billiger dorthin als über jedes Gewehr.
+Für rund $180. Wer Recon 10 oder 18 erreichen will, kommt über das Fernglas schneller und billiger dorthin als über jedes Gewehr.
+
+> [!hinweis] **Season 2 hat das Geschäft verkleinert, nicht beendet.** Die Spotting-Belohnungen liegen rund 30 % unter Season 1, und das Fernglas kostet statt $75 jetzt $180. Dafür skalieren die Beträge seit Season 2 mit dem **Wert** des markierten Ziels: Ein Panzer zahlt mehr als eine Kiste. Wer gezielt teure Ziele markiert, verliert weniger als die Prozentzahl vermuten lässt. Zwei Dinge funktionieren nicht mehr: Spots an unfertigen Bauwerken zu farmen (die Belohnung skaliert jetzt mit dem Baufortschritt), und ein von der gegnerischen Fraktion zerstörtes markiertes Ziel zahlt nur noch 25 statt 50 Prozent.
 
 ![Beobachten statt schießen: Vom Dach aus markiert das Fernglas Gegner für das ganze Team, ohne die eigene Position zu verraten.](bild-fernglas)
 
@@ -43,8 +45,8 @@ Für rund $75. Wer Recon 10 oder 19 erreichen will, kommt über das Fernglas sch
 | SKS | rund $2.400 | Recon 5 |
 | Mosin Nagant | rund $4.500 | Recon 10 |
 | SVD | rund $4.800 | Recon 12 |
-| SV-98 | rund $5.200 | Recon 19 |
-| MK22 | rund $6.400 | Recon 25 |
+| SV-98 | rund $5.200 | Recon 18 |
+| MK22 | rund $6.400 | Recon 30 |
 | BMR-308 | rund $6.000 | Recon 30 |
 | AMR 50 | rund $8.800 | Recon 35 |
 
@@ -86,7 +88,7 @@ Aus dem Recon-Track kommen Claymores. Eine hinter dir auf dem Weg, den ein Flank
 
 ### Was kostet das Fernglas in Wardogs?
 
-Rund $75. Beim Händler über den Spezialisten-Slot, dann Recon. Es ist die billigste Anschaffung im Spiel mit dem besten Verhältnis von Einsatz zu Ertrag.
+Rund $180 – seit Season 2, vorher waren es $75. Beim Händler über den Spezialisten-Slot, dann Recon. Es ist die billigste Anschaffung im Spiel mit dem besten Verhältnis von Einsatz zu Ertrag.
 
 ### Welches Scharfschützengewehr für den Anfang?
 

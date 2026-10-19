@@ -5,19 +5,19 @@ thema: einsteiger
 order: 6
 image: guide-erste-runde
 image_alt: Frisch ausgeruestete Soldaten am Rand des Hauptlagers, daneben ein leichtes Fahrzeug und gestapelte Nachschubkisten
-excerpt: Fünfzehn Dinge stehen dir ab der ersten Minute offen – drei davon kostenlos. Welche das sind und was sie taugen.
+excerpt: Sechzehn Dinge stehen dir ab der ersten Minute offen – drei davon kostenlos, und seit Season 2 auch die AK-74. Welche das sind und was sie taugen.
 seo_title: Wardogs ohne Freischaltung – Startausrüstung Deutsch | Warleek
 seo_description: Alle Waffen, Fahrzeuge und Bauwerke ohne Track-Stufe, mit Preisen und Einsatzzweck. Für Einsteiger in Deutschland, Österreich und der Schweiz.
-quellen: [Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026), Offizielles Pressematerial von BULKHEAD/Team17 (Startkapital)]
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026), Offizielles Pressematerial von BULKHEAD/Team17 (Startkapital)]
 geprueft: nein
 autor: starterleek
 frage: Was hat man in Wardogs ohne Freischaltung schon?
-antwort: Fünfzehn Einträge stehen ab der ersten Minute offen. Drei Sturmgewehre – Bushmaster M17S, A-91 und KH-2002 – kosten gar nichts. Dazu sechs Dinge, die nur Geld kosten, und vier Bauwerke, die sich ohne FOB setzen lassen.
+antwort: Sechzehn Einträge stehen ab der ersten Minute offen. Drei Sturmgewehre – Bushmaster M17S, A-91 und KH-2002 – kosten gar nichts. Dazu seit Season 2 die AK-74 und die PP-19 Bizon, vier weitere Dinge gegen Geld und vier Bauwerke ohne FOB.
 ---
 
-Die Track-Stufen in Wardogs lesen sich wie eine lange Liste von Dingen, die du noch nicht hast. Das täuscht. **Fünfzehn Einträge stehen dir ab der ersten Minute offen**, und drei davon kosten überhaupt nichts.
+Die Track-Stufen in Wardogs lesen sich wie eine lange Liste von Dingen, die du noch nicht hast. Das täuscht. **Sechzehn Einträge stehen dir ab der ersten Minute offen**, und drei davon kosten überhaupt nichts.
 
-> [!stand] Oktober 2026 · Early Access – Preise und Freischaltungen ändern sich mit Patches.
+> [!stand] Oktober 2026 · Early Access – Stand nach dem Season-2-Update vom 15.10.2026. Preise und Freischaltungen ändern sich mit Patches.
 
 ## Drei Gewehre, kostenlos
 
@@ -35,10 +35,12 @@ Keine Track-Stufe nötig — du zahlst nur pro Leben beziehungsweise pro Stück.
 |---|---|---|
 | **MP43** | $400 | Schrotflinte. Die billigste Waffe, die auf kurze Distanz etwas ausrichtet |
 | **Bobcat** | $500 | Zwei Plätze, 75 km/h, **keine Fracht** |
-| **T-21** | $600 | Die günstigste Verbesserung gegenüber den Startgewehren |
-| **AMP-9** | $900 | Maschinenpistole. Leicht, schnell im Anschlag, auf Entfernung wirkungslos |
-| **Scout Rifle TD** | $1.100 | Einsteiger-Präzisionsgewehr |
+| **AK-74** | $800 | **Neu frei in Season 2.** Das Arbeitstier der Assault-Linie |
+| **PP-19 Bizon** | $1.000 | **Neu in Season 2.** Freie Maschinenpistole des Medic, 53 Schuss |
+| **Scout Rifle TD** | $1.200 | Einsteiger-Präzisionsgewehr |
 | **Kodiak** | $2.500 | Vier Plätze, 154 km/h, trägt Kisten |
+
+> [!hinweis] Season 2 hat hier zwei Plätze getauscht. Die **AK-74** braucht keine Freischaltung mehr und kostet nur noch $800 – sie ist damit die beste Waffe, die ab Runde eins zu haben ist. Dafür stehen **T-21** (jetzt Assault 3, $10.000, $1.200 pro Leben) und **AMP-9** (jetzt Medic 20, $75.000, $1.375) nicht mehr frei zur Verfügung.
 
 Zwei Empfehlungen daraus:
 
@@ -65,11 +67,11 @@ Keine Bauzone heißt: du kannst sie **mitten in die Kontrollzone** setzen. Zehn 
 
 **M113 APC SV** — kostet nichts, steht aber erst ab etwa 20 Teampunkten im Hauptlager. Dafür ist es das Spawn-Fahrzeug: nach vorn fahren, in Deckung abstellen, stehen lassen. Danach spawnen Teamkollegen darauf, statt den ganzen Weg zu laufen.
 
-**GGX 17** — läuft über Wardog 1, also das Konto-Level statt einen Track. Die Stufe hast du sofort, die Freischaltung kostet aber einmalig $5.000. Danach $200 pro Leben, die billigste Zweitwaffe im Spiel. Für den Moment, in dem das Gewehr leer ist und Nachladen zu lange dauert.
+**Judge** — läuft über Wardog 1, also das Konto-Level statt einen Track. Die Stufe hast du sofort, die Freischaltung kostet aber einmalig $5.000. Danach $250 pro Leben. Season 2 hat sie mit der GGX 17 getauscht: Die Judge ist jetzt die erste Pistole, die GGX 17 steht auf Wardog 18 und kostet $15.000 Freischaltung.
 
 ## Was das für die erste Stunde heißt
 
-Du brauchst nichts freizuschalten, um nützlich zu sein. Ein kostenloses Startgewehr, Sandsäcke für $10 an der richtigen Stelle und ein Kodiak, der vier Leute in die Zone fährt — das ist mehr Beitrag zum Spielstand als jede Waffe, für die du erst 35 Stufen sammelst.
+Du brauchst nichts freizuschalten, um nützlich zu sein. Seit Season 2 noch weniger als vorher: Die AK-74 für $800 ist ab Runde eins zu haben, und sie ist genau die Waffe, mit der die meisten dauerhaft fahren. Dazu Sandsäcke für $10 an der richtigen Stelle und ein Kodiak, der vier Leute in die Zone fährt — das ist mehr Beitrag zum Spielstand als jede Waffe, für die du erst 35 Stufen sammelst.
 
 Das Geld, das du dabei nicht ausgibst, ist später die Freischaltgebühr für die Waffe, die du wirklich willst.
 
@@ -87,6 +89,10 @@ Den Bobcat für $500 mit zwei Plätzen und ohne Fracht, und den Kodiak für $2.5
 
 Recon-Zelt und Stacheldraht für je 5 Build-Supplies, Sandsäcke für 10 und Hedgehog für 14. Weil sie keine Bauzone brauchen, lassen sie sich mitten in die Kontrollzone setzen.
 
-### Was kostet die GGX 17 in Wardogs?
+### Welche Pistole bekommt man als Erstes?
 
-Einmalig $5.000 für die Freischaltung über Wardog 1, danach $200 pro Leben. Das ist die billigste Zweitwaffe im Spiel.
+Seit Season 2 die Judge: Wardog 1, einmalig $5.000, danach $250 pro Leben. Die GGX 17 ist mit $200 pro Leben weiterhin die billigste im Unterhalt, steht aber jetzt auf Wardog 18 und kostet $15.000 Freischaltung.
+
+### Welche Waffe sollte man in Season 2 zuerst kaufen?
+
+Die AK-74 für rund $800. Sie braucht seit Season 2 keine Freischaltung mehr und ist damit die stärkste Waffe, die ohne Track-Stufe zu haben ist.

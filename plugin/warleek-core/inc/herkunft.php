@@ -90,7 +90,7 @@ function warleek_herkunft_daten() {
 
 	foreach ( $posts as $p ) {
 		$pruef   = warleek_herkunft_pruefstand( get_post_meta( $p->ID, '_warleek_geprueft', true ) );
-		$quellen = array_values( array_filter( array_map( 'trim', explode( '|', (string) get_post_meta( $p->ID, '_warleek_quellen', true ) ) ) ) );
+		$quellen = warleek_item_quellen_teilen( get_post_meta( $p->ID, '_warleek_quellen', true ) );
 		$zaehler[ $pruef['status'] ] = ( $zaehler[ $pruef['status'] ] ?? 0 ) + 1;
 
 		$werte = array();

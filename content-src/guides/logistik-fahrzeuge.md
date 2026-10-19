@@ -8,11 +8,11 @@ image_alt: Schwerer Nachschub-LKW mit verzurrten Paletten auf einer Bergstrasse 
 excerpt: Ural, Kodiak, Humvee oder Helikopter? Was wirklich Paletten trägt, was nur Kisten schafft – und warum die Waffenvariante nichts an der Ladung ändert.
 seo_title: Wardogs Logistik-Fahrzeuge im Vergleich (Deutsch) | Warleek
 seo_description: Ural, Kodiak, Humvee oder Helikopter: Was Paletten trägt, was kostet und wann sich welches lohnt. Deutscher Wardogs-Guide für die DACH-Region.
-quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
 autor: logisticleek
 frage: Welches Fahrzeug trägt in Wardogs Paletten?
-antwort: Der URAL ab Driver 3 für rund $5.000 ist das Logistikfahrzeug für volle Paletten, der Ural Defender ab Driver 18 dasselbe gepanzert. Kodiak, Humvee und MH-6 tragen nur Kisten; Bobcat und Dune Buggy tragen gar keine Fracht.
+antwort: Der URAL ab Driver 3 für rund $5.000 ist das Logistikfahrzeug für volle Paletten, der Ural Defender ab Driver 15 dasselbe gepanzert. Kodiak, Humvee und MH-6 tragen nur Kisten; Bobcat und Dune Buggy tragen gar keine Fracht.
 ---
 
 Die häufigste vergeudete Runde in der Logistik beginnt damit, dass jemand mit dem falschen Fahrzeug zum Händler fährt. Paletten passen nicht in jedes Auto, und ein Buggy trägt gar nichts.
@@ -31,12 +31,12 @@ Faustregel: Eine neue FOB braucht Paletten Build. Eine laufende FOB braucht Kist
 | Fahrzeug | Preis | Freischaltung | Taugt für |
 | --- | --- | --- | --- |
 | **URAL** | rund $5.000 | Driver 3 | **Volle Paletten** – das Logistikfahrzeug |
-| **Ural Defender** | rund $6.000 | Driver 18 | Wie oben, gepanzert für riskante Routen |
+| **Ural Defender** | rund $7.200 | Driver 15 | Wie oben, gepanzert für riskante Routen |
 | **Kodiak** | rund $2.500 | ab Start | Kisten, schnelle kleine Läufe (154 km/h) |
 | **Kodiak [Pickup]** | rund $3.000 | Driver 10 | Kisten plus sechs Sitze |
-| **Humvee** | rund $3.000 | Driver 15 | Kisten, robuster als Kodiak |
+| **Humvee** | rund $3.000 | Driver 14 | Kisten, robuster als Kodiak |
 | **MH-6** | rund $6.250 | Pilot | Luftfracht und sechs Passagiere |
-| **Bobcat / Dune Buggy** | $500 / $1.500 | — | **Keine Fracht.** Fortbewegung, sonst nichts |
+| **Bobcat / Dune Buggy** | $500 / $1.500 | — / Driver 9 | **Keine Fracht.** Fortbewegung, sonst nichts |
 
 > [!hinweis] Die bewaffneten Varianten (Kodiak [M249], Humvee [Minigun], Ural Defender [M249]) tragen **nicht mehr** als die unbewaffneten. Du bezahlst für Feuerkraft und Sitzplätze, nicht für Kapazität.
 

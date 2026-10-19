@@ -8,7 +8,7 @@ image_alt: Sanitaeter kniet hinter einer Betonmauer bei einem verwundeten Kamera
 excerpt: Verbandszeug, Field Resuscitator, Defibrillator – was wann freigeschaltet wird, wo du stehen musst und warum der Medic die unterschätzteste Rolle im Spiel ist.
 seo_title: Wardogs Medic Guide Deutsch: Wiederbeleben | Warleek
 seo_description: Field Resuscitator, Defibrillator, Positionierung und Cash pro Revive. Der Medic-Guide für Wardogs auf Deutsch, für Spieler in DACH.
-quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
 geprueft: nein
 autor: medicleek
 frage: Lohnt es sich, in Wardogs Medic zu spielen?
@@ -25,9 +25,9 @@ In einem Spiel, in dem Punkte für **anwesende Körper** vergeben werden, ist de
 | --- | --- | --- |
 | **Verbandszeug** | von Anfang an | Heilt dich und andere, stoppt Bluten |
 | **Field Resuscitator** | Medic 2 (rund $10.000) | Bringt Gefallene zurück auf die Beine |
-| **Defibrillator** | Medic 11 (rund $25.000) | Schnellere, zuverlässigere Wiederbelebung |
+| **Defibrillator** | Medic 22 (rund $110.000) | Schnellere, zuverlässigere Wiederbelebung |
 
-Dazu kommen aus dem Medic-Track die Maschinenpistolen: PP-19 Vityaz (Medic 4), MP5 (Medic 15), Super-45 (Medic 35). Das ist die Waffengattung, die zur Rolle passt – kurz, leicht, auf Distanzen, auf denen du ohnehin arbeitest.
+Dazu kommen aus dem Medic-Track die Maschinenpistolen: PP-19 Bizon (von Anfang an), MP5 (Medic 4), PP-19 Vityaz (Medic 15), AMP-9 (Medic 20), Super-45 (Medic 35). Das ist die Waffengattung, die zur Rolle passt – kurz, leicht, auf Distanzen, auf denen du ohnehin arbeitest.
 
 ## Warum es sich rechnet
 
@@ -82,7 +82,7 @@ Sofort Cash in der Größenordnung von $1.200, dazu Erfahrung auf dem Medic-Trac
 
 ### Wann bekommt man den Defibrillator in Wardogs?
 
-Ab Medic 11 für rund $25.000. Davor gibt es ab Medic 2 den Field Resuscitator für rund $10.000; Verbandszeug ist von Anfang an dabei.
+Seit Season 2 ab Medic 22 für rund $110.000 – vorher waren es Medic 11 und $50.000. Davor gibt es ab Medic 2 den Field Resuscitator für rund $10.000; Verbandszeug ist von Anfang an dabei.
 
 ### Wo sollte ein Medic in Wardogs stehen?
 

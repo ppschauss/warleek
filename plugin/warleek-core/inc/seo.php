@@ -546,7 +546,7 @@ function warleek_seo_person_ld() {
 function warleek_seo_item_herkunft_ld( $id ) {
 	$out = array();
 
-	$quellen = array_filter( array_map( 'trim', explode( '|', (string) get_post_meta( $id, '_warleek_quellen', true ) ) ) );
+	$quellen = warleek_item_quellen_teilen( get_post_meta( $id, '_warleek_quellen', true ) );
 	if ( $quellen ) {
 		$out['citation'] = array_map( function ( $q ) {
 			return filter_var( $q, FILTER_VALIDATE_URL )

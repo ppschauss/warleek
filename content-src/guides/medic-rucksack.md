@@ -8,7 +8,7 @@ image_alt: Sanitaeter kniet neben einem Verwundeten, geoeffneter Rucksack mit Ve
 excerpt: Pistole statt Gewehr, Rauch statt Feuerkraft, Defi mit eingesetzter Batterie – und der Griff, mit dem die große Batterie keinen Rucksackplatz mehr kostet.
 seo_title: Wardogs Medic-Loadout – Rucksack packen | Warleek
 seo_description: Defi, Batterien, Stims, Rauch und die richtige Zweitwaffe: wie ein Medic packt und dabei Platz gewinnt. Für Deutschland, Österreich und die Schweiz.
-quellen: [Öffentliche Community-Datenbanken und Guides zu WARDOGS (Stand Oktober 2026), Batterie-Griff und Rauch-Dauer im Spiel beobachtet von Patrick Schauß (Warleek)]
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', Öffentliche Community-Datenbanken und Guides zu WARDOGS (Stand Oktober 2026), Batterie-Griff und Rauch-Dauer im Spiel beobachtet von Patrick Schauß (Warleek)]
 geprueft: teilweise – Batterie-Ladungen und -Plätze, der Tausch-Griff, Waffenwahl und Rauch-Dauer im Spiel geprüft von Patrick Schauß (Oktober 2026); Freischaltstufen, Preise und Gewichte aus Community-Quellen übernommen
 autor: medicleek
 frage: Was packt ein Medic in Wardogs in den Rucksack?
@@ -55,12 +55,14 @@ Deshalb brauchst du auch nicht zwei Granaten pro Mann. Eine, richtig geworfen, d
 |---|---|
 | Verbandszeug | von Anfang an |
 | Field Resuscitator | Medic 2 |
-| Individual First Aid Kit | Medic 9 |
-| **Defibrillator** | Medic 11 |
-| Stim Pen | Medic 14 |
-| Medical Bag | Medic 24 |
+| Individual First Aid Kit | Medic 10 |
+| **Medical Bag** | Medic 14 |
+| Stim Pen | Medic 16 |
+| **Defibrillator** | Medic 22 |
 
-Der **Defibrillator** ist der Einschnitt. Er stellt sofort auf, statt mit dem Resuscitator zu arbeiten – und er ist der Grund, warum der Rucksack plötzlich eng wird. Freischaltung rund $25.000, Kaufpreis rund $1.600 pro Leben.
+> [!hinweis] **Season 2 hat die Reihenfolge gedreht.** Die Medical Bag kommt jetzt auf Medic 14 statt 24 und kostet $50.000 statt $75.000 Freischaltung – der Defibrillator wandert dafür von Medic 11 auf **22** und kostet $110.000 statt $50.000. Heilen kommt früher, Wiederbeleben später. Die Haltbarkeit der Medical Bag stieg von 100 auf 150.
+
+Der **Defibrillator** ist der Einschnitt. Er stellt sofort auf, statt mit dem Resuscitator zu arbeiten – und er ist der Grund, warum der Rucksack plötzlich eng wird. Freischaltung rund $110.000, Kaufpreis rund $1.600 pro Leben.
 
 Denn er läuft nicht von allein: **Er braucht eine Batterie.**
 

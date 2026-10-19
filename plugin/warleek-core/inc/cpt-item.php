@@ -195,9 +195,8 @@ add_shortcode( 'warleek_item_verlauf', function () { return warleek_render_item_
 /** Herkunftskasten, wie bei den Guides. */
 add_shortcode( 'warleek_item_herkunft', function () {
 	$id  = get_the_ID();
-	$q   = get_post_meta( $id, '_warleek_quellen', true );
 	$g   = get_post_meta( $id, '_warleek_geprueft', true );
-	$arr = $q ? array_map( 'trim', explode( '|', (string) $q ) ) : array();
+	$arr = warleek_item_quellen_lesen( $id );
 	return warleek_guide_herkunft( array( 'quellen' => $arr, 'geprueft' => $g, 'bild' => warleek_bildquelle( $id ) ) );
 } );
 
@@ -325,9 +324,35 @@ function warleek_item_pruefstand_bauen( $status, $detail, $heute = '' ) {
 	}
 }
 
-/** Quellen stehen als `a | b | c` in einem Feld – im Formular eine je Zeile. */
+/**
+ * Quellen stehen zeilenweise in einem Feld – so wie im Formular.
+ *
+ * Früher waren sie als `a | b | c` abgelegt. Das ging so lange gut, wie keine
+ * Quelle selbst einen senkrechten Strich enthielt; die Season-2-Patch-Notes
+ * heißen „WARDOGS | Season 02 Patch Notes" und wurden mitten im Titel zerlegt.
+ * Alte Werte liest `warleek_item_quellen_teilen()` weiter mit.
+ */
 function warleek_item_quellen_lesen( $id ) {
-	return array_values( array_filter( array_map( 'trim', explode( '|', (string) get_post_meta( $id, '_warleek_quellen', true ) ) ) ) );
+	return warleek_item_quellen_teilen( get_post_meta( $id, '_warleek_quellen', true ) );
+}
+
+/**
+ * Zerlegt den gespeicherten Quellenwert.
+ *
+ * Zeilen gewinnen. Nur wenn **keine** Zeilenumbrüche da sind, wird der alte
+ * Trenner ` | ` gelesen – ein einzeiliger Altwert ist der einzige Fall, in dem
+ * er noch vorkommen kann.
+ *
+ * @param mixed $roh
+ * @return string[]
+ */
+function warleek_item_quellen_teilen( $roh ) {
+	if ( is_array( $roh ) ) { $teile = $roh; }
+	else {
+		$roh   = (string) $roh;
+		$teile = false === strpos( $roh, "\n" ) ? explode( ' | ', $roh ) : preg_split( '/\r\n|\r|\n/', $roh );
+	}
+	return array_values( array_filter( array_map( 'trim', array_map( 'strval', (array) $teile ) ) ) );
 }
 
 add_action( 'add_meta_boxes_item', function ( $post ) {
@@ -390,7 +415,7 @@ function warleek_item_herkunft_speichern( $post_id ) {
 
 	$quellen = array_values( array_filter( array_map( 'trim', preg_split( '/\r\n|\r|\n/', (string) wp_unslash( $_POST['warleek_quellen'] ?? '' ) ) ) ) );
 	$quellen = array_map( 'sanitize_text_field', $quellen );
-	update_post_meta( $post_id, '_warleek_quellen', implode( ' | ', $quellen ) );
+	update_post_meta( $post_id, '_warleek_quellen', implode( "\n", $quellen ) );
 
 	// Die Seed-Marke bleibt absichtlich unberührt: Sie hält den Stand des
 	// Installers fest. Weicht der Wert davon ab, gilt der Eintrag als bearbeitet

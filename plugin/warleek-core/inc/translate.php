@@ -328,6 +328,7 @@ Regeln:
 
 	$html_de = (string) ( $out['html_de'] ?? '' );
 	if ( '' === trim( $html_de ) ) { return new WP_Error( 'warleek_tr_empty', 'Übersetzung war leer.' ); }
+	$html_de = warleek_md_escape_weg( $html_de );
 
 	// Plausibilität: gleiche Bilder, Links und Strukturelemente wie im Original.
 	$abw = warleek_html_abweichung( $html_en, $html_de );

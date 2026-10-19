@@ -12,12 +12,12 @@ quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 20
 geprueft: nein
 autor: armoryleek
 frage: Welche Waffe sollte man in Wardogs kaufen?
-antwort: Die, die dein Konto verträgt – du zahlst bei jedem Leben neu. T-21 für rund $600 in den ersten Runden, dann die AK-74 für rund $1.600 als Arbeitstier. Unterhalb von Track-Stufe 9 sind alle Preise halbiert.
+antwort: Die, die dein Konto verträgt – du zahlst bei jedem Leben neu. Seit Season 2 ist die AK-74 für rund $800 ohne Freischaltung zu haben und damit die erste Wahl. Unterhalb von Track-Stufe 9 sind alle Preise halbiert.
 ---
 
 Waffen sind in Wardogs keine Belohnung, sondern eine laufende Ausgabe. Du zahlst nicht einmal, du zahlst **bei jedem Leben**. Deshalb ist die richtige Waffe fast nie die beste, sondern die, die dein Konto verträgt.
 
-> [!stand] September 2026 · Early Access – Preise und Freischaltstufen ändern sich mit Patches.
+> [!stand] Oktober 2026 · Early Access – Stand nach dem Season-2-Update vom 15.10.2026. Preise und Freischaltstufen ändern sich mit Patches.
 
 ## Die Regel
 
@@ -30,48 +30,61 @@ Zwei Zahlen helfen beim Rechnen: Unterhalb von Track-Stufe 9 sind die Preise **h
 | Waffe | Preis | Freischaltung |
 | --- | --- | --- |
 | Bushmaster M17S / A-91 / KH-2002 | gratis | Startwaffen |
-| **T-21** | rund $600 | ab Start |
-| **AK-74** | rund $1.600 | Assault 3 |
-| **Galil** | rund $2.200 | Assault 10 |
-| **M4** | rund $2.800 | Assault 20 |
-| **FAL** | rund $6.500 | Assault 35 |
+| **AK-74** | rund $800 | **ab Start** |
+| **T-21** | rund $1.200 | Assault 3, $10.000 |
+| **TCX-SPR** | rund $3.200 | Assault 20, $100.000 |
+| **Galil** | rund $2.000 | Assault 10, $35.000 |
+| **M4** | rund $2.800 | Assault 28, $150.000 |
+| **FAL** | rund $6.000 | Assault 35, $250.000 |
 
 Die drei Startgewehre sind praktisch gleichwertig – gleiche Klasse, gleiches Kaliber, kaum spürbare Unterschiede. Sie taugen, bis du etwas Besseres bezahlen kannst, und keinen Tag länger.
 
-**Der Pfad, der funktioniert:** T-21 für die ersten Runden. Dann AK-74 als Arbeitstier – zuverlässig und billig genug, um sie zehnmal pro Abend zu verlieren. Danach Galil, oder direkt FAL, wenn das Konto es trägt. Die M4 dazwischen ist kein Muss.
+**Season 2 hat diesen Pfad umgedreht.** Die AK-74 braucht keine Freischaltung mehr und kostet nur noch die Hälfte; die T-21, bisher die günstige Einsteigerwaffe, steht jetzt hinter Assault 3 und kostet doppelt so viel. Wer neu anfängt, geht also direkt zur AK-74 und lässt die T-21 aus — es sei denn, das 5,56-Kaliber passt besser in die Munitionsplanung deines Squads.
+
+**Der Pfad, der funktioniert:** AK-74 als Arbeitstier ab der ersten Runde – zuverlässig und billig genug, um sie zehnmal pro Abend zu verlieren. Danach Galil, oder direkt FAL, wenn das Konto es trägt. Die neue TCX-SPR hat die M4 von Stufe 20 verdrängt; beide sind kein Muss. Rechne dabei mit, dass 7,62 × 39 mm seit Season 2 19 % Grundschaden verloren hat – das betrifft TCX-SPR und AK-74.
 
 ## Maschinenpistolen und Schrot
 
 | Waffe | Preis | Freischaltung |
 | --- | --- | --- |
 | MP43 (Schrot) | rund $400 | ab Start |
-| AMP-9 | rund $900 | ab Start |
-| PP-19 Vityaz | rund $1.200 | Medic 4 |
+| **PP-19 Bizon** | rund $1.000 | **ab Start (Medic)** |
 | M500 (Schrot) | rund $1.200 | Support 10 |
-| MP5 | rund $1.500 | Medic 15 |
-| Super-45 | rund $2.600 | Medic 35 |
+| **MP5** | rund $1.800 | Medic 4, $25.000 |
+| **PP-19 Vityaz** | rund $1.200 | Medic 15, $50.000 |
+| **AMP-9** | rund $1.375 | Medic 20, $75.000 |
+| **Super-45** | rund $5.600 | Medic 35, $200.000 |
 
 MPs sind die Medic-Linie: leicht, kurz, gut auf den Distanzen, auf denen Sanitäter arbeiten. Wer als Medic spielt, levelt sie ohnehin nebenbei.
+
+**Season 2 hat die Linie neu sortiert.** Die PP-19 Bizon ist die neue freie Maschinenpistole, die AMP-9 dafür hinter Medic 20 gewandert. Die MP5 kommt jetzt schon auf Medic 4 und kostet nur noch $25.000 Freischaltung statt $75.000 – dafür hat sie ein stärker horizontales Rückstoßmuster bekommen. Die Super-45 verliert jenseits von 50 m deutlich mehr Schaden und kostet mehr als doppelt so viel.
 
 ## Unterstützungswaffen
 
 | Waffe | Preis | Freischaltung |
 | --- | --- | --- |
-| M249 SAW | rund $3.200 | Support 15 |
-| PKM | rund $4.500 | Support 30 |
-| RPG-7 | rund $2.000 | Support 5 |
-| MAAWS | rund $2.600 | Support 20 |
-| MGL-40 | rund $6.000 | Support 35 |
+| **PKM** | rund $4.100 | Support 15, $100.000 |
+| **M249 SAW** | rund $3.200 | Support 20, $150.000 |
+| **Evo-3 Ultra** | rund $7.250 | Support 30, $200.000 |
+| **RPG-7** | rund $1.800 | Support 5, $30.000 |
+| **MAAWS** | rund $2.400 | Support 18, $100.000 |
+| **MGL-40** | rund $7.500 | Support 35, $250.000 |
 
-Der RPG-7 ist die wichtigste frühe Anschaffung überhaupt, wenn dein Team Fahrzeugprobleme hat. Rund $2.000 gegen ein gegnerisches Fahrzeug im Wert von $10.000 ist ein gutes Tauschgeschäft. Siehe [Panzer knacken](/guides/wardogs-panzer-knacken/).
+PKM und M249 haben mit Season 2 die Plätze getauscht: Die PKM kommt jetzt auf Support 15, die M249 auf 20. Für LMGs gilt dabei die Einschränkung aus dem Schadens-Rework – ihr Körperschaden entspricht jetzt dem von Sturmgewehren.
+
+Der RPG-7 ist die wichtigste frühe Anschaffung überhaupt, wenn dein Team Fahrzeugprobleme hat. Rund $1.800 gegen ein gegnerisches Fahrzeug im Wert von $22.000 ist ein gutes Tauschgeschäft. Siehe [Panzer knacken](/guides/wardogs-panzer-knacken/).
 
 ## Scharfschützen
 
-Mosin Nagant (rund $4.500, Recon 10), SVD (rund $4.800, Recon 12), SV-98 (rund $5.200, Recon 19), MK22 (rund $6.400, Recon 25), AMR 50 (rund $8.800, Recon 35). Für den Einstieg reicht die Scout Rifle TD für rund $1.100 – die Treffer macht die Ballistik, nicht der Preis. Siehe [Recon](/guides/wardogs-recon/).
+Mosin Nagant (rund $4.500, Recon 10), SVD (rund $4.800, Recon 12), SV-98 (rund $5.200, Recon 18), BMR-308 (rund $6.250, Recon 20), M14 (rund $7.400, Recon 25), MK22 (rund $6.400, Recon 30), AMR 50 (rund $14.800, Recon 35). Für den Einstieg reicht die Scout Rifle TD für rund $1.200 – die Treffer macht die Ballistik, nicht der Preis. Siehe [Recon](/guides/wardogs-recon/).
+
+Zwei Hinweise zu Season 2: Die AMR 50 kostet mit $14.800 jetzt fast das Doppelte, und die Mosin hat keinen Zugriff mehr auf andere Optiken – sie bekommt stattdessen ein eigenes PU-91/30-Visier.
 
 ## Pistolen
 
-GGX 17 (rund $200), Judge (rund $250), M1911 (rund $300), GGX 18 (rund $800), Deagle (rund $900). Sie hängen nicht an einem Track, sondern am Kontostand-Level. Eine Pistole ist billig und rettet gelegentlich ein Gefecht, in dem du nachladen müsstest – nimm eine mit.
+Judge (rund $250, Wardog 1), GGX 17 (rund $200, Wardog 18), M1911 (rund $300, Wardog 40), Deagle (rund $750, Wardog 65), GGX 18 (rund $1.000, Wardog 85). Sie hängen nicht an einem Track, sondern am Kontostand-Level. Eine Pistole ist billig und rettet gelegentlich ein Gefecht, in dem du nachladen müsstest – nimm eine mit.
+
+Season 2 hat Judge und GGX 17 die Plätze tauschen lassen: Die Judge ist jetzt die erste Pistole überhaupt, die GGX 18 die letzte und mit $1.000 die teuerste.
 
 ## Was du beim Kauf noch bezahlst
 

@@ -8,7 +8,7 @@ image_alt: Blick aus dem offenen Cockpit eines leichten Helikopters, der tief ue
 excerpt: Die Standardeinstellung kämpft gegen dich. Welche Assistenten raus müssen, welche Tasten wohin gehören und warum du auf dem Schießstand anfängst.
 seo_title: Wardogs Helikopter fliegen – Guide auf Deutsch | Warleek
 seo_description: Maus und Tastatur, Flugassistenten aus, MH-6 als Lern-Heli: Helikopter sicher fliegen. Deutsche Anleitung für Spieler in DACH.
-quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026), Video-Guide von <a href="https://www.youtube.com/watch?v=IHcD8c_iqD0" rel="nofollow noopener noreferrer">Tote Torres</a> (Logitech G940‚ Screenshots mit Zeitangabe im Text)]
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026), Video-Guide von <a href="https://www.youtube.com/watch?v=IHcD8c_iqD0" rel="nofollow noopener noreferrer">Tote Torres</a> (Logitech G940‚ Screenshots mit Zeitangabe im Text)]
 geprueft: nein
 autor: pilotleek
 frage: Wie fliegt man in Wardogs einen Helikopter mit Maus und Tastatur?
@@ -25,9 +25,12 @@ Der häufigste Helikopter-Verlust in Wardogs passiert in den ersten dreißig Sek
 | --- | --- | --- | --- |
 | **MH-6** | rund $6.250 | 6 | Der Lern- und Taxi-Heli |
 | Z20 Lakota | rund $7.400 | 13 | Truppentransport in Menge |
-| AH-6M [Miniguns] | rund $7.000 | 2 | Bodenunterstützung |
-| AH-6R [Rockets] | rund $12.500 | 2 | Panzer- und Stellungsbekämpfung |
-| Havoc | rund $18.000 | 2 | Der teure Kampfhubschrauber |
+| AH-6M [Miniguns] | rund $12.000 | 2 | Bodenunterstützung, Pilot 8 |
+| AH-6R [Rockets] | rund $18.800 | 2 | Panzer- und Stellungsbekämpfung |
+| Z20 Lakota [Miniguns] | rund $15.000 | 13 | Transport mit Eigenschutz |
+| Havoc | rund $28.000 | 2 | Der teure Kampfhubschrauber |
+
+> [!hinweis] **Season 2 hat die bewaffneten Helikopter deutlich verteuert.** Die AH-6M mit Miniguns kostet $12.000 statt $7.000 und schaltet erst auf Pilot 8 statt 4 frei, die Freischaltung kostet $125.000 statt $50.000 – die Entwickler nennen sie ausdrücklich zu stark für ihre frühe Stufe. Der Havoc liegt bei $28.000 pro Stück und $650.000 Freischaltung. Dazu verlieren Minigun-Kaliber bis zu 19 % Grundschaden, und das Cockpitglas wirkt jetzt in beide Richtungen: Hindurchschießen beschädigt den eigenen Helikopter.
 
 Fang mit dem MH-6 an. Er ist der billigste, der gutmütigste und der nützlichste – sechs Leute an den Rand der Zone zu fliegen, ist mehr wert als jeder Raketenangriff.
 

@@ -1577,5 +1577,30 @@
         "alt": "Drei ueberlagerte WARDOGS-Szenen: Sturmgewehr, Kampfpanzer und eine Palette Munitionskisten",
         "use": "community-datenbank",
         "size": 25502
+    },
+    "guide-s2-bauen.webp": {
+        "alt": "Tor, Moerser und Drill Rig als Kacheln vor einem abgedunkelten Spielhintergrund",
+        "use": "guide-s2-bauen",
+        "size": 16206
+    },
+    "guide-s2-lonestar.webp": {
+        "alt": "Kodiak, Versorgungspalette und FOB als Kacheln vor einem abgedunkelten Spielhintergrund",
+        "use": "guide-s2-lonestar",
+        "size": 17314
+    },
+    "guide-s2-preise.webp": {
+        "alt": "AK-74, Kampfpanzer und Helm als Kacheln vor einem abgedunkelten Spielhintergrund",
+        "use": "guide-s2-preise",
+        "size": 17024
+    },
+    "guide-s2-progression.webp": {
+        "alt": "MP5, Medizintasche und PKM als Kacheln vor einem abgedunkelten Spielhintergrund",
+        "use": "guide-s2-progression",
+        "size": 16434
+    },
+    "guide-s2-schaden.webp": {
+        "alt": "Schwere Weste, FAL und Praezisionsgewehr als Kacheln vor einem abgedunkelten Spielhintergrund",
+        "use": "guide-s2-schaden",
+        "size": 15090
     }
 }

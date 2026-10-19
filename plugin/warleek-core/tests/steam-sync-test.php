@@ -19,5 +19,32 @@ $c = warleek_steam_upsert_patchnote( $items[0], true );
 if ( ! is_wp_error( $c ) && 'updated' !== $c['action'] ) { $fail++; echo "FAIL force should update: {$c['action']}\n"; }
 $html = get_post( $a['id'] )->post_content;
 if ( strpos( $html, '[' ) !== false && preg_match( '/\[(p|h1|b|list)\]/', $html ) ) { $fail++; echo "FAIL BBCode-Reste im Content\n"; }
+
+/* Auszug: Die Kurzfassung gewinnt, weil der Fließtext einer Patch Note mit
+   „WARDOGS SEASON 2 Trailer …" anfängt – und weil der Auszug, solange er aus
+   dem Inhalt kam, nach einer späteren Übersetzung englisch blieb. */
+$lang = str_repeat( 'Wort ', 60 );
+if ( 'FOB-Spawn repariert.' !== warleek_patchnote_auszug( $lang, array( 'FOB-Spawn repariert.' ) ) ) {
+	$fail++; echo "FAIL Auszug nimmt die Kurzfassung nicht\n";
+}
+if ( 'Zweiter Punkt' !== warleek_patchnote_auszug( $lang, array( '', '  ', 'Zweiter Punkt' ) ) ) {
+	$fail++; echo "FAIL Auszug überspringt leere Stichpunkte nicht\n";
+}
+$ohne = warleek_patchnote_auszug( $lang, array() );
+if ( mb_strlen( $ohne ) > 161 || '…' !== mb_substr( $ohne, -1 ) ) {
+	$fail++; echo 'FAIL Auszug ohne Kurzfassung: ' . mb_strlen( $ohne ) . " Zeichen\n";
+}
+// Nicht mitten im Wort abschneiden.
+if ( false !== strpos( $ohne, 'Wor…' ) ) { $fail++; echo "FAIL Auszug schneidet im Wort\n"; }
+if ( 'Kurz.' !== warleek_patchnote_auszug( 'Kurz.', array() ) ) { $fail++; echo "FAIL kurzer Text wird verändert\n"; }
+if ( 'A B C' !== warleek_patchnote_klartext( "<p>A</p>\n<li>B</li><h2>C</h2>" ) ) {
+	$fail++; echo 'FAIL Klartext: ' . warleek_patchnote_klartext( "<p>A</p>\n<li>B</li><h2>C</h2>" ) . "\n";
+}
+
+/* Reparatur: Platzhalter-Reste und Fluchtzeichen fliegen raus, die leere Hülle mit. */
+$dreck = '<p>Vorher</p><blockquote><p>@@WLB188@@</p></blockquote><li>Kodiak \[M249]</li>';
+$rein  = warleek_patchnote_putzen( $dreck );
+if ( '<p>Vorher</p><li>Kodiak [M249]</li>' !== $rein ) { $fail++; echo "FAIL Putzen: $rein\n"; }
+
 wp_delete_post( $a['id'], true );
 echo $fail ? "$fail FAILED\n" : "OK\n";

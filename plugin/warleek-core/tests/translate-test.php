@@ -225,6 +225,23 @@ $GLOBALS['t_spiegel'] = false;
 // ein knappes Budget würde Test 7 den Budget- statt den HTTP-Fehler liefern.
 $opts['translate_max_chars'] = '20000'; $opts['translate_budget'] = '200'; update_option( 'warleek_options', $opts );
 
+/* 6b) Markdown-Fluchtzeichen fallen weg.
+      Das Modell antwortet in HTML, schreibt aber „TCX-SPR \[7.62x39mm]" –
+      27 solcher Stellen standen sichtbar in der Season-02-Note. */
+t_chk( 'escape vor klammer weg', '<p>TCX-SPR [7.62x39mm]</p>' === warleek_md_escape_weg( '<p>TCX-SPR \[7.62x39mm]</p>' ),
+	warleek_md_escape_weg( '<p>TCX-SPR \[7.62x39mm]</p>' ) );
+t_chk( 'escape vor stern und raute weg', '<li>5 * 3, #1</li>' === warleek_md_escape_weg( '<li>5 \* 3, \#1</li>' ) );
+// Ein Pfad ist kein Fluchtzeichen: \U steht nicht in der Markdown-Liste.
+t_chk( 'pfad bleibt', '<p>C:\Users</p>' === warleek_md_escape_weg( '<p>C:\Users</p>' ) );
+t_chk( 'code bleibt unberührt', '<pre><code>a \[b]</code></pre>' === warleek_md_escape_weg( '<pre><code>a \[b]</code></pre>' ) );
+// Und derselbe Weg einmal durch die ganze Übersetzung.
+$GLOBALS['t_payload']['html_de'] = '<h2>Preise</h2><ul><li>Kodiak \[M249] $3,750</li></ul>';
+$ohne = warleek_maybe_translate( 'Preise', '<h2>Prices</h2><ul><li>Kodiak [M249] $3,750</li></ul>', 0, true );
+t_chk( 'übersetzung kommt ohne backslash an', is_array( $ohne ) && false === strpos( $ohne['html'], '\\' ),
+	is_wp_error( $ohne ) ? $ohne->get_error_message() : ( is_array( $ohne ) ? $ohne['html'] : 'null' ) );
+$GLOBALS['t_payload']['html_de'] = $html_de;
+wl_tr_cache_leeren();
+
 /* 7) API-Fehler: englische Fassung bleibt */
 $GLOBALS['t_http_error'] = true;
 $err = warleek_maybe_translate( 'Z', '<p>Hello</p>', 0 );

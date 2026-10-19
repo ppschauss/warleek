@@ -4,10 +4,11 @@
         "title": "Bushmaster M17S",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Eines von drei Sturmgewehren, die von Anfang an ohne Freischaltung und ohne Kosten bereitstehen. Die drei Startgewehre sind praktisch gleichwertig: gleiche Klasse, gleiches Kaliber, kaum spürbare Unterschiede.\nAnwendung: die ersten Runden, solange jeder Tod noch Geld kostet, das du nicht hast. Sobald du die T-21 für $600 oder die AK-74 bezahlen kannst, gibt es keinen Grund mehr, dabei zu bleiben.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Eines von drei Sturmgewehren, die von Anfang an ohne Freischaltung und ohne Kosten bereitstehen. Die drei Startgewehre sind praktisch gleichwertig: gleiche Klasse, gleiches Kaliber, kaum spürbare Unterschiede.\nAnwendung: die ersten Runden – und seit Season 2 nur noch diese. Die AK-74 kostet jetzt ebenfalls keine Freischaltung und rund $800 pro Leben; wer sie sich leisten kann, hat keinen Grund mehr, bei einem Startgewehr zu bleiben.",
         "felder": {
             "freischaltung": "Startwaffe, keine Gebühr",
             "kaliber": "5,56 × 45 mm",
@@ -55,48 +56,52 @@
         "title": "T-21",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Die erste Waffe, die Geld kostet, und mit rund $600 pro Leben die günstigste Verbesserung gegenüber den Startgewehren. Eine Freischaltung braucht sie nicht.\nAnwendung: die Brücke zwischen Startwaffe und AK-74. Solange du oft stirbst, ist sie die richtige Wahl – sechshundert Dollar pro Leben verzeiht das Konto, sechstausend nicht.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Assault 3, einmalig rund $10.000, danach rund $1.200 pro Leben. Mit Season 2 ist sie von der frei kaufbaren Einsteigerwaffe zur ersten Freischaltung der Assault-Linie geworden – und doppelt so teuer pro Leben wie vorher. Das 30-Schuss-STANAG-Magazin liegt jetzt bei.\nAnwendung: Die AK-74 kostet seit Season 2 keine Freischaltung mehr und mit rund $800 pro Leben weniger als die T-21. Wer rechnet, geht direkt zur AK-74 und nimmt die T-21 nur, wenn ihr 5,56-Kaliber in die Munitionsplanung des Squads passt.",
         "felder": {
-            "preis": "600",
-            "freischaltung": "ohne Stufe kaufbar",
+            "preis": "1200",
+            "freischaltung": "Assault 3",
             "kaliber": "5,56 × 45 mm",
-            "rolle": "Sturmgewehr"
+            "rolle": "Sturmgewehr",
+            "freischaltkosten": "10000"
         },
-        "start": true,
-        "gruppe": "sturmgewehr"
+        "gruppe": "sturmgewehr",
+        "sofort": true
     },
     {
         "slug": "wardogs-ak-74",
         "title": "AK-74",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Das Arbeitstier der Assault-Linie. Freigeschaltet mit Assault 3 gegen eine einmalige Gebühr von rund $10.000, danach rund $1.600 pro Leben. Community-Werte nennen etwa 305 Brust-DPS, rund 500 m wirksame Reichweite und mit 3 kg ein geringeres Gewicht als die Galil – dafür trägt sie insgesamt mehr Munition.\nAnwendung: die Waffe, mit der die meisten am längsten fahren. Zuverlässig, berechenbar im Rückstoß und billig genug, um sie an einem Abend zehnmal zu verlieren.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Das Arbeitstier der Assault-Linie – und seit Season 2 von Anfang an freigeschaltet, ohne Gebühr, für rund $800 pro Leben. Vorher kostete sie Assault 3 und rund $10.000 einmalig, der Kaufpreis lag bei $1.600. Community-Werte nennen etwa 305 Brust-DPS, rund 500 m wirksame Reichweite und mit 3 kg ein geringeres Gewicht als die Galil – dafür trägt sie insgesamt mehr Munition.\nAnwendung: die Waffe, mit der die meisten am längsten fahren, und seit Season 2 die erste Wahl ab Runde eins. Zuverlässig, berechenbar im Rückstoß und billig genug, um sie an einem Abend zehnmal zu verlieren.",
         "felder": {
-            "preis": "1600",
-            "freischaltung": "Assault 3",
-            "freischaltkosten": "10000",
+            "preis": "800",
+            "freischaltung": "Startwaffe, keine Gebühr",
             "kaliber": "5,45 × 39 mm",
             "rolle": "Sturmgewehr"
         },
-        "gruppe": "sturmgewehr"
+        "gruppe": "sturmgewehr",
+        "start": true
     },
     {
         "slug": "wardogs-galil",
         "title": "Galil",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Freigeschaltet mit Assault 10 gegen rund $35.000, Kaufpreis rund $2.200 pro Leben. Sie trifft härter als die AK-74 – Community-Werte nennen etwa 329 Brust-DPS und 30,8 Schaden pro Treffer, also rund 8 % mehr – kostet dafür Gewicht (3,95 kg), Magazininhalt und Reichweite (etwa 400 m statt 500 m).\nAnwendung: wenn dir Wirkung pro Treffer wichtiger ist als Nachschubreichweite und du auf mittlere Entfernung kämpfst. Wer berechenbaren Rückstoß und volle Taschen will, bleibt bei der AK-74.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Freigeschaltet mit Assault 10 gegen rund $35.000, Kaufpreis rund $2.000 pro Leben. Sie trifft härter als die AK-74 – Community-Werte nennen etwa 329 Brust-DPS und 30,8 Schaden pro Treffer, also rund 8 % mehr – kostet dafür Gewicht (3,95 kg), Magazininhalt und Reichweite (etwa 400 m statt 500 m).\nAnwendung: wenn dir Wirkung pro Treffer wichtiger ist als Nachschubreichweite und du auf mittlere Entfernung kämpfst. Wer berechenbaren Rückstoß und volle Taschen will, bleibt bei der AK-74.",
         "felder": {
-            "preis": "2200",
+            "preis": "2000",
             "freischaltung": "Assault 10",
             "freischaltkosten": "35000",
             "kaliber": "5,56 × 45 mm",
@@ -109,14 +114,15 @@
         "title": "M4",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Assault 20, einmalig rund $100.000, danach rund $2.800 pro Leben. Ab hier wird die Sturmgewehr-Linie spürbar besser, ohne dass das Konto gleich bluten muss.\nAnwendung: der solide Schritt vor der FAL. Wenn du die $100.000 für die Freischaltung übrig hast und dein durchschnittliches Leben mehr einbringt als $2.800, lohnt sie sich; sonst wartest du.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Assault 28, einmalig rund $150.000, danach rund $2.800 pro Leben. Ab hier wird die Sturmgewehr-Linie spürbar besser, ohne dass das Konto gleich bluten muss.\nAnwendung: der solide Schritt vor der FAL. Wenn du die $150.000 für die Freischaltung übrig hast und dein durchschnittliches Leben mehr einbringt als $2.800, lohnt sie sich; sonst wartest du.",
         "felder": {
             "preis": "2800",
-            "freischaltung": "Assault 20",
-            "freischaltkosten": "100000",
+            "freischaltung": "Assault 28",
+            "freischaltkosten": "150000",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         },
@@ -127,14 +133,15 @@
         "title": "FAL",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Das Ende der Assault-Linie: Assault 35, einmalig rund $200.000, danach rund $6.500 pro Leben. Mit 60 Schaden pro Treffer und Vollautomatik das schnellste Sturmgewehr im Spiel. Anfangs gibt es sie nur mit 10er- und 20er-Magazinen; das 30er kommt erst mit weiterem Fortschritt.\nAnwendung: erst, wenn dein Konto zehn Tode am Stück verträgt. $6.500 pro Leben sind bei einem schlechten Abend schnell $50.000 – rechne vorher nach, was ein durchschnittliches Leben bei dir einbringt.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Das Ende der Assault-Linie: Assault 35, einmalig rund $250.000, danach rund $6.000 pro Leben. Mit 60 Schaden pro Treffer und Vollautomatik das schnellste Sturmgewehr im Spiel. Anfangs gibt es sie nur mit 10er- und 20er-Magazinen; das 30er kommt erst mit weiterem Fortschritt.\nAnwendung: erst, wenn dein Konto zehn Tode am Stück verträgt. $6.000 pro Leben sind bei einem schlechten Abend schnell $50.000 – rechne vorher nach, was ein durchschnittliches Leben bei dir einbringt.",
         "felder": {
-            "preis": "6500",
+            "preis": "6000",
             "freischaltung": "Assault 35",
-            "freischaltkosten": "200000",
+            "freischaltkosten": "250000",
             "kaliber": ".308 Winchester",
             "rolle": "Sturmgewehr"
         },
@@ -162,31 +169,34 @@
         "title": "AMP-9",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Maschinenpistole für rund $900 pro Leben, ebenfalls ohne Freischaltung zu haben. Leicht, schnell im Anschlag, dafür auf Entfernung wirkungslos.\nAnwendung: die günstige Zweitwaffe für alle, die viel in Deckung arbeiten – Sanitäter, Bauleute, Fahrer. Wer ohnehin selten über fünfzig Meter schießt, spart hier viel Geld.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Medic 20, einmalig rund $75.000, danach rund $1.375 pro Leben. In Season 1 war sie ohne Freischaltung für rund $900 zu haben; mit Season 2 wandert sie hinter eine Stufe und wird teurer. Leicht, schnell im Anschlag, dafür auf Entfernung wirkungslos.\nAnwendung: An ihre Stelle als freie Maschinenpistole des Medic ist die PP-19 Bizon getreten – die kostet nichts an Freischaltung und rund $1.000 pro Leben. Die AMP-9 lohnt erst, wenn du ihren Anschlag gewohnt bist.",
         "felder": {
-            "preis": "900",
-            "freischaltung": "ohne Stufe kaufbar",
+            "preis": "1375",
+            "freischaltung": "Medic 20",
             "kaliber": "9 × 19 mm",
-            "rolle": "Maschinenpistole"
+            "rolle": "Maschinenpistole",
+            "freischaltkosten": "75000"
         },
-        "start": true
+        "sofort": true
     },
     {
         "slug": "wardogs-pp-19-vityaz",
         "title": "PP-19 Vityaz",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Erste Maschinenpistole der Medic-Linie: Medic 4, einmalig rund $25.000, danach rund $1.200 pro Leben. Die Medic-Stufen steigen durch Heilen und Wiederbeleben, nicht durch Kills – sie kommt also nebenbei.\nAnwendung: die Standardwaffe für Sanitäter. Kurz genug, um beim Aufstellen eines Gefallenen nicht im Weg zu sein, und billig genug, um sie im Gefecht nicht zu vermissen.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Erste Maschinenpistole der Medic-Linie: Medic 15, einmalig rund $50.000, danach rund $1.200 pro Leben. Die Medic-Stufen steigen durch Heilen und Wiederbeleben, nicht durch Kills – sie kommt also nebenbei.\nAnwendung: die Standardwaffe für Sanitäter. Kurz genug, um beim Aufstellen eines Gefallenen nicht im Weg zu sein, und billig genug, um sie im Gefecht nicht zu vermissen.",
         "felder": {
             "preis": "1200",
-            "freischaltung": "Medic 4",
-            "freischaltkosten": "25000",
+            "freischaltung": "Medic 15",
+            "freischaltkosten": "50000",
             "kaliber": "9 × 19 mm",
             "rolle": "Maschinenpistole"
         }
@@ -213,14 +223,15 @@
         "title": "MP5",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Medic 15, einmalig rund $75.000, danach rund $1.500 pro Leben. Der ruhigere, kontrollierbarere Schritt nach der PP-19.\nAnwendung: Sanitäter, die häufig in Gebäuden arbeiten und dort auch mal einen Zweikampf gewinnen müssen. Der Aufpreis gegenüber der PP-19 ist gering, der Unterschied im Rückstoß spürbar.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Medic 4, einmalig rund $25.000, danach rund $1.800 pro Leben. Der ruhigere, kontrollierbarere Schritt nach der PP-19.\nAnwendung: Sanitäter, die häufig in Gebäuden arbeiten und dort auch mal einen Zweikampf gewinnen müssen. Der Aufpreis gegenüber der PP-19 ist gering, der Unterschied im Rückstoß spürbar.",
         "felder": {
-            "preis": "1500",
-            "freischaltung": "Medic 15",
-            "freischaltkosten": "75000",
+            "preis": "1800",
+            "freischaltung": "Medic 4",
+            "freischaltkosten": "25000",
             "kaliber": "9 × 19 mm",
             "rolle": "Maschinenpistole"
         }
@@ -230,14 +241,15 @@
         "title": "Super-45",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Ende der Medic-Linie: Medic 35, einmalig rund $150.000, danach rund $2.600 pro Leben. Größeres Kaliber, entsprechend mehr Wirkung pro Treffer.\nAnwendung: für Sanitäter, die weit vorne arbeiten und dort regelmäßig selbst kämpfen. Wer hinter der Deckung bleibt, wo ein Sanitäter hingehört, braucht sie nicht.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Ende der Medic-Linie: Medic 35, einmalig rund $200.000, danach rund $5.600 pro Leben. Größeres Kaliber, entsprechend mehr Wirkung pro Treffer.\nAnwendung: für Sanitäter, die weit vorne arbeiten und dort regelmäßig selbst kämpfen. Wer hinter der Deckung bleibt, wo ein Sanitäter hingehört, braucht sie nicht.",
         "felder": {
-            "preis": "2600",
+            "preis": "5600",
             "freischaltung": "Medic 35",
-            "freischaltkosten": "150000",
+            "freischaltkosten": "200000",
             "kaliber": ".45 ACP",
             "rolle": "Maschinenpistole"
         }
@@ -247,12 +259,13 @@
         "title": "Scout Rifle TD",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Das Einsteiger-Präzisionsgewehr: rund $1.100 pro Leben, keine Freischaltung nötig.\nAnwendung: um Ballistik zu lernen, ohne Geld zu verbrennen. Kugelfall und Flugzeit sind dieselben wie bei den teuren Gewehren – wer damit nicht trifft, trifft mit einer Mosin auch nicht.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Das Einsteiger-Präzisionsgewehr: rund $1.200 pro Leben, keine Freischaltung nötig.\nAnwendung: um Ballistik zu lernen, ohne Geld zu verbrennen. Kugelfall und Flugzeit sind dieselben wie bei den teuren Gewehren – wer damit nicht trifft, trifft mit einer Mosin auch nicht.",
         "felder": {
-            "preis": "1100",
+            "preis": "1200",
             "freischaltung": "ohne Stufe kaufbar",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Marksman-Gewehr"
@@ -319,13 +332,14 @@
         "title": "SV-98",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Recon 19, einmalig rund $100.000, danach rund $5.200 pro Leben. Nach Community-Werten tötet ein Kopftreffer sofort, ein Rumpftreffer zweimal auch durch Panzerung der Stufe 2 – bei etwa doppelter nutzbarer Reichweite gegenüber der Mosin.\nAnwendung: das Allrounder-Scharfschützengewehr. Die $700 Aufpreis zur Mosin zahlen sich aus, sobald du regelmäßig über 400 m schießt.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 18, einmalig rund $100.000, danach rund $5.200 pro Leben. Nach Community-Werten tötet ein Kopftreffer sofort, ein Rumpftreffer zweimal auch durch Panzerung der Stufe 2 – bei etwa doppelter nutzbarer Reichweite gegenüber der Mosin.\nAnwendung: das Allrounder-Scharfschützengewehr. Die $700 Aufpreis zur Mosin zahlen sich aus, sobald du regelmäßig über 400 m schießt.",
         "felder": {
             "preis": "5200",
-            "freischaltung": "Recon 19",
+            "freischaltung": "Recon 18",
             "freischaltkosten": "100000",
             "kaliber": "7,62 × 54 mm",
             "rolle": "Scharfschützengewehr"
@@ -337,13 +351,14 @@
         "title": "MK22",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Recon 25, einmalig rund $150.000, danach rund $6.400 pro Leben. 60 Grundschaden und rund 1.000 m wirksame Reichweite.\nAnwendung: für Positionen, von denen aus man ein ganzes Tal einsieht. Auf kürzeren Distanzen holt die günstigere SV-98 dasselbe Ergebnis.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 30, einmalig rund $150.000, danach rund $6.400 pro Leben. 60 Grundschaden und rund 1.000 m wirksame Reichweite.\nAnwendung: für Positionen, von denen aus man ein ganzes Tal einsieht. Auf kürzeren Distanzen holt die günstigere SV-98 dasselbe Ergebnis.",
         "felder": {
             "preis": "6400",
-            "freischaltung": "Recon 25",
+            "freischaltung": "Recon 30",
             "freischaltkosten": "150000",
             "kaliber": ".308 Winchester",
             "rolle": "Scharfschützengewehr"
@@ -355,13 +370,14 @@
         "title": "BMR-308",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Recon 30, einmalig rund $125.000, danach rund $6.000 pro Leben. Präzisionsgewehr im .308-Kaliber.\nAnwendung: eine Alternative im oberen Recon-Bereich. Ob sie sich gegenüber MK22 und SV-98 lohnt, hängt an Werten, die wir nicht selbst nachgemessen haben – hier lohnt eigenes Ausprobieren besonders.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 20, einmalig rund $125.000, danach rund $6.250 pro Leben. Präzisionsgewehr im .308-Kaliber.\nAnwendung: eine Alternative im oberen Recon-Bereich. Ob sie sich gegenüber MK22 und SV-98 lohnt, hängt an Werten, die wir nicht selbst nachgemessen haben – hier lohnt eigenes Ausprobieren besonders.",
         "felder": {
-            "preis": "6000",
-            "freischaltung": "Recon 30",
+            "preis": "6250",
+            "freischaltung": "Recon 20",
             "freischaltkosten": "125000",
             "kaliber": ".308 Winchester",
             "rolle": "Scharfschützengewehr"
@@ -373,12 +389,13 @@
         "title": "AMR 50",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Das Ende der Recon-Linie: Recon 35, einmalig rund $200.000, danach rund $8.800 pro Leben. Mit .50 BMG, rund 107 Grundschaden und etwa 2.000 m wirksamer Reichweite die einzige echte Anti-Materiel-Waffe.\nAnwendung: gegen Material statt gegen Infanterie – Stellungen, leichte Fahrzeuge, Ausrüstung auf große Entfernung. Als reine Scharfschützenwaffe gegen Personen ist sie für ihren Preis überdimensioniert.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Das Ende der Recon-Linie: Recon 35, einmalig rund $200.000, danach rund $14.800 pro Leben. Mit .50 BMG, rund 107 Grundschaden und etwa 2.000 m wirksamer Reichweite die einzige echte Anti-Materiel-Waffe.\nAnwendung: gegen Material statt gegen Infanterie – Stellungen, leichte Fahrzeuge, Ausrüstung auf große Entfernung. Als reine Scharfschützenwaffe gegen Personen ist sie für ihren Preis überdimensioniert.",
         "felder": {
-            "preis": "8800",
+            "preis": "14800",
             "freischaltung": "Recon 35",
             "freischaltkosten": "200000",
             "kaliber": ".50 BMG",
@@ -391,14 +408,15 @@
         "title": "M249 SAW",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Support 15, einmalig rund $100.000, danach rund $3.200 pro Leben. Gurtgefüttertes leichtes Maschinengewehr.\nAnwendung: eine Sichtlinie zuhalten, während andere vorrücken. Auf einem Zweibein oder einer Mauerkante aufgelegt sinkt der Rückstoß deutlich – freihändig verschwendet man nur Munition.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Support 20, einmalig rund $150.000, danach rund $3.200 pro Leben. Gurtgefüttertes leichtes Maschinengewehr.\nAnwendung: eine Sichtlinie zuhalten, während andere vorrücken. Auf einem Zweibein oder einer Mauerkante aufgelegt sinkt der Rückstoß deutlich – freihändig verschwendet man nur Munition.",
         "felder": {
             "preis": "3200",
-            "freischaltung": "Support 15",
-            "freischaltkosten": "100000",
+            "freischaltung": "Support 20",
+            "freischaltkosten": "150000",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Leichtes Maschinengewehr"
         },
@@ -409,14 +427,15 @@
         "title": "PKM",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Support 30, einmalig rund $150.000, danach rund $4.500 pro Leben. Größeres Kaliber als die M249, entsprechend mehr Wirkung und mehr Rückstoß.\nAnwendung: feste Stellungen und Zufahrten. Wer damit in Bewegung kämpft, zahlt Gewicht und Rückstoß, ohne den Vorteil zu nutzen.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Support 15, einmalig rund $100.000, danach rund $4.100 pro Leben. Größeres Kaliber als die M249, entsprechend mehr Wirkung und mehr Rückstoß.\nAnwendung: feste Stellungen und Zufahrten. Wer damit in Bewegung kämpft, zahlt Gewicht und Rückstoß, ohne den Vorteil zu nutzen.",
         "felder": {
-            "preis": "4500",
-            "freischaltung": "Support 30",
-            "freischaltkosten": "150000",
+            "preis": "4100",
+            "freischaltung": "Support 15",
+            "freischaltkosten": "100000",
             "kaliber": "7,62 × 54 mm",
             "rolle": "Leichtes Maschinengewehr"
         },
@@ -427,32 +446,34 @@
         "title": "GGX 17",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Die erste Pistole, freigeschaltet über das Konto-Level statt über einen Track. Für rund $200 pro Leben die billigste Zweitwaffe im Spiel.\nAnwendung: für den Moment, in dem das Gewehr leer ist und Nachladen zu lange dauert. Nimm eine mit – sie kostet fast nichts und rettet gelegentlich ein Gefecht.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Wardog 18 gegen rund $15.000, danach rund $200 pro Leben – die billigste Zweitwaffe im Spiel. Mit Season 2 hat sie ihren Platz mit der Judge getauscht: Die stand vorher auf Stufe 18, die GGX 17 auf Stufe 1.\nAnwendung: für den Moment, in dem das Gewehr leer ist und Nachladen zu lange dauert. Wer neu anfängt, bekommt jetzt zuerst die Judge – die GGX 17 kommt später, bleibt aber die günstigste im Unterhalt.",
         "felder": {
             "preis": "200",
-            "freischaltung": "Wardog 1",
-            "freischaltkosten": "5000",
+            "freischaltung": "Wardog 18",
+            "freischaltkosten": "15000",
             "kaliber": "9 × 19 mm",
             "rolle": "Pistole"
         },
-        "start": true
+        "sofort": true
     },
     {
         "slug": "wardogs-judge",
         "title": "Judge",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Revolver mit großem Kaliber, freigeschaltet mit Wardog 18 gegen rund $15.000, danach rund $250 pro Leben.\nAnwendung: auf sehr kurze Distanz wirkungsvoller als die GGX 17, dafür mit wenigen Schuss. Eine Frage des Geschmacks, keine der Notwendigkeit.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Revolver mit großem Kaliber, seit Season 2 die **erste Pistole** im WARDOG-Track: Wardog 1 gegen rund $5.000, danach rund $250 pro Leben. Vorher lag sie auf Stufe 18 und kostete $15.000 Gebühr.\nAnwendung: auf sehr kurze Distanz wirkungsvoller als die GGX 17, dafür mit wenigen Schuss. Seit Season 2 ist sie die Zweitwaffe, mit der fast jeder anfängt.",
         "felder": {
             "preis": "250",
-            "freischaltung": "Wardog 18",
-            "freischaltkosten": "15000",
+            "freischaltung": "Wardog 1",
+            "freischaltkosten": "5000",
             "kaliber": ".45 Colt",
             "rolle": "Pistole"
         }
@@ -479,14 +500,15 @@
         "title": "GGX 18",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Wardog 70 gegen rund $50.000, danach rund $800 pro Leben. Schnellfeuerpistole mit hoher Kadenz.\nAnwendung: als Notfallwaffe auf kürzeste Distanz. Für den Preis von vier GGX 17 muss man den Unterschied allerdings wollen.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Wardog 85 gegen rund $125.000, danach rund $1.000 pro Leben. Season 2 hat sie von Stufe 70 auf 85 verschoben und die Gebühr von $50.000 auf $125.000 angehoben – sie ist jetzt die letzte und teuerste Pistole im Spiel. Schnellfeuerpistole mit hoher Kadenz.\nAnwendung: als Notfallwaffe auf kürzeste Distanz. Für den Preis von fünf GGX 17 muss man den Unterschied allerdings wollen.",
         "felder": {
-            "preis": "800",
-            "freischaltung": "Wardog 70",
-            "freischaltkosten": "50000",
+            "preis": "1000",
+            "freischaltung": "Wardog 85",
+            "freischaltkosten": "125000",
             "kaliber": "9 × 19 mm",
             "rolle": "Pistole"
         }
@@ -496,13 +518,14 @@
         "title": "Deagle",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Die teuerste Pistole: Wardog 85 gegen rund $75.000, danach rund $900 pro Leben.\nAnwendung: schwere Wirkung aus der Zweitwaffe. Sinnvoll vor allem für Leute, die viel mit Präzisionsgewehren arbeiten und im Nahbereich etwas brauchen, das sofort wirkt.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Wardog 65 gegen rund $75.000, danach rund $750 pro Leben. Mit Season 2 zwanzig Stufen früher freigeschaltet und im Kaufpreis gesenkt – die teuerste Pistole ist sie damit nicht mehr, das ist jetzt die GGX 18 für rund $1.000.\nAnwendung: schwere Wirkung aus der Zweitwaffe. Sinnvoll vor allem für Leute, die viel mit Präzisionsgewehren arbeiten und im Nahbereich etwas brauchen, das sofort wirkt.",
         "felder": {
-            "preis": "900",
-            "freischaltung": "Wardog 85",
+            "preis": "750",
+            "freischaltung": "Wardog 65",
             "freischaltkosten": "75000",
             "kaliber": ".50 AE",
             "rolle": "Pistole"
@@ -513,12 +536,13 @@
         "title": "RPG-7",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Support 5, einmalig rund $30.000, danach rund $2.000 pro Leben. Die günstige Panzerabwehr und für viele Teams die wichtigste frühe Anschaffung überhaupt.\nAnwendung: gegen leichte und mittlere Fahrzeuge, gegen Stellungen und gegen Flugabwehr aus der Distanz. Entscheidend ist nicht die Waffe, sondern die Trefferzone – ins Heck wirkt jeder Werfer ein Vielfaches dessen, was er von vorn schafft.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Support 5, einmalig rund $30.000, danach rund $1.800 pro Leben. Die günstige Panzerabwehr und für viele Teams die wichtigste frühe Anschaffung überhaupt.\nAnwendung: gegen leichte und mittlere Fahrzeuge, gegen Stellungen und gegen Flugabwehr aus der Distanz. Entscheidend ist nicht die Waffe, sondern die Trefferzone – ins Heck wirkt jeder Werfer ein Vielfaches dessen, was er von vorn schafft.",
         "felder": {
-            "preis": "2000",
+            "preis": "1800",
             "freischaltung": "Support 5",
             "freischaltkosten": "30000",
             "kaliber": "93 mm Rakete",
@@ -531,14 +555,15 @@
         "title": "MAAWS",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Support 20, einmalig rund $125.000, danach rund $2.600 pro Leben. Die eigentliche Panzerabwehrwaffe im Spiel.\nAnwendung: gegen Kampfpanzer, wenn du flankieren kannst. Nach Community-Messungen fällt ein Panzer bei Treffern ins Motordeck in etwa elf Sekunden, von der Seite in rund zweiundzwanzig und von vorn erst in gut dreiunddreißig.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Support 18, einmalig rund $100.000, danach rund $2.400 pro Leben. Die eigentliche Panzerabwehrwaffe im Spiel.\nAnwendung: gegen Kampfpanzer, wenn du flankieren kannst. Nach Community-Messungen fällt ein Panzer bei Treffern ins Motordeck in etwa elf Sekunden, von der Seite in rund zweiundzwanzig und von vorn erst in gut dreiunddreißig.",
         "felder": {
-            "preis": "2600",
-            "freischaltung": "Support 20",
-            "freischaltkosten": "125000",
+            "preis": "2400",
+            "freischaltung": "Support 18",
+            "freischaltkosten": "100000",
             "kaliber": "84 mm",
             "rolle": "Panzerabwehr"
         },
@@ -549,14 +574,15 @@
         "title": "MGL-40",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Support 35, einmalig rund $200.000, danach rund $6.000 pro Leben. Mehrschüssiger Granatwerfer.\nAnwendung: gegen Infanterie in Deckung und gegen Gruppen in engen Stellungen. Teuer genug, dass man ihn gezielt für eine bestimmte Lage kauft, nicht als Standardausrüstung.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Support 35, einmalig rund $250.000, danach rund $7.500 pro Leben. Mehrschüssiger Granatwerfer.\nAnwendung: gegen Infanterie in Deckung und gegen Gruppen in engen Stellungen. Teuer genug, dass man ihn gezielt für eine bestimmte Lage kauft, nicht als Standardausrüstung.",
         "felder": {
-            "preis": "6000",
+            "preis": "7500",
             "freischaltung": "Support 35",
-            "freischaltkosten": "200000",
+            "freischaltkosten": "250000",
             "kaliber": "40 mm",
             "rolle": "Granatwerfer"
         },
@@ -567,14 +593,15 @@
         "title": "Compound Bow",
         "typ": "waffe",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Recon 17, einmalig rund $75.000, danach rund $800 pro Leben. Lautlos, ohne Mündungsfeuer.\nAnwendung: für Späher, die nicht entdeckt werden wollen. In einem Spiel, in dem ein Schuss die eigene Position verrät, ist Lautlosigkeit ein echter Vorteil – die Flugbahn verlangt allerdings Übung.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 16, einmalig rund $150.000, danach rund $1.350 pro Leben. Lautlos, ohne Mündungsfeuer.\nAnwendung: für Späher, die nicht entdeckt werden wollen. In einem Spiel, in dem ein Schuss die eigene Position verrät, ist Lautlosigkeit ein echter Vorteil – die Flugbahn verlangt allerdings Übung.",
         "felder": {
-            "preis": "800",
-            "freischaltung": "Recon 17",
-            "freischaltkosten": "75000",
+            "preis": "1350",
+            "freischaltung": "Recon 16",
+            "freischaltkosten": "150000",
             "kaliber": "Pfeile",
             "rolle": "Lautlose Waffe"
         }
@@ -602,14 +629,15 @@
         "title": "AH-6M [Miniguns]",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Pilot 4, einmalig rund $50.000, danach rund $7.000 pro Stück. Zwei Plätze, rund 350 km/h, Miniguns.\nAnwendung: Bodenunterstützung gegen Infanterie. Gegen Panzer richtet er wenig aus, und gegen Flugabwehr ist er so verwundbar wie jeder andere Helikopter – tief bleiben, Gelände nutzen.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Pilot 8, einmalig rund $125.000, danach rund $12.000 pro Stück. Zwei Plätze, rund 350 km/h, Miniguns.\nAnwendung: Bodenunterstützung gegen Infanterie. Gegen Panzer richtet er wenig aus, und gegen Flugabwehr ist er so verwundbar wie jeder andere Helikopter – tief bleiben, Gelände nutzen.",
         "felder": {
-            "preis": "7000",
-            "freischaltung": "Pilot 4",
-            "freischaltkosten": "50000",
+            "preis": "12000",
+            "freischaltung": "Pilot 8",
+            "freischaltkosten": "125000",
             "sitze": "2",
             "tempo": "350",
             "rolle": "Kampfhelikopter"
@@ -621,12 +649,13 @@
         "title": "AH-6R [Rockets]",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Pilot 20, einmalig rund $250.000, danach rund $12.500 pro Stück. Zwei Plätze, rund 350 km/h, Raketen.\nAnwendung: gegen Fahrzeuge und feste Stellungen. Die Freischaltgebühr ist der eigentliche Brocken – überleg vorher, ob dein Team überhaupt Ziele hat, für die sich das lohnt.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Pilot 20, einmalig rund $250.000, danach rund $18.800 pro Stück. Zwei Plätze, rund 350 km/h, Raketen.\nAnwendung: gegen Fahrzeuge und feste Stellungen. Die Freischaltgebühr ist der eigentliche Brocken – überleg vorher, ob dein Team überhaupt Ziele hat, für die sich das lohnt.",
         "felder": {
-            "preis": "12500",
+            "preis": "18800",
             "freischaltung": "Pilot 20",
             "freischaltkosten": "250000",
             "sitze": "2",
@@ -658,14 +687,15 @@
         "title": "UH-1Y [Miniguns]",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Pilot 25, einmalig rund $75.000, danach rund $8.000 pro Stück. Wie der normale Lakota, zusätzlich mit Miniguns.\nAnwendung: Transport, der sich beim Absetzen selbst decken kann. Der Aufpreis von rund $600 pro Stück ist gering; die Freischaltung auf Pilot 25 ist der eigentliche Preis.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Pilot 25, einmalig rund $85.000, danach rund $15.000 pro Stück. Wie der normale Lakota, zusätzlich mit Miniguns.\nAnwendung: Transport, der sich beim Absetzen selbst decken kann. Der Aufpreis von rund $600 pro Stück ist gering; die Freischaltung auf Pilot 25 ist der eigentliche Preis.",
         "felder": {
-            "preis": "8000",
+            "preis": "15000",
             "freischaltung": "Pilot 25",
-            "freischaltkosten": "75000",
+            "freischaltkosten": "85000",
             "sitze": "13",
             "tempo": "445",
             "rolle": "Transporthelikopter mit Bewaffnung"
@@ -677,14 +707,15 @@
         "title": "Havoc",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Der teuerste Helikopter: Pilot 35, einmalig rund $500.000, danach rund $18.000 pro Stück. Zwei Plätze, rund 400 km/h.\nAnwendung: schwerer Kampfhubschrauber gegen Panzer und Stellungen. Bei diesem Preis ist jeder Abschuss durch eine Flugabwehrstellung ein Abend Arbeit – erst fliegen, wenn du weißt, wo der Gegner seine Talons stehen hat.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Der teuerste Helikopter: Pilot 35, einmalig rund $650.000, danach rund $28.000 pro Stück. Zwei Plätze, rund 400 km/h.\nAnwendung: schwerer Kampfhubschrauber gegen Panzer und Stellungen. Bei diesem Preis ist jeder Abschuss durch eine Flugabwehrstellung ein Abend Arbeit – erst fliegen, wenn du weißt, wo der Gegner seine Talons stehen hat.",
         "felder": {
-            "preis": "18000",
+            "preis": "28000",
             "freischaltung": "Pilot 35",
-            "freischaltkosten": "500000",
+            "freischaltkosten": "650000",
             "sitze": "2",
             "tempo": "400",
             "rolle": "Kampfhelikopter"
@@ -696,16 +727,18 @@
         "title": "Flakpanzer Gepard",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Rund $10.000 pro Stück, zwei Plätze, rund 65 km/h. Fahrbare Flugabwehr.\nAnwendung: der Vorteil gegenüber gebauter Flugabwehr ist die Beweglichkeit – er steht dort, wo gerade geflogen wird. Der Nachteil: Er ist ein Fahrzeug und damit selbst ein Ziel für jeden Werfer.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 25, einmalig rund $300.000, danach rund $14.000 pro Stück. Zwei Plätze, rund 65 km/h. Die Patch Notes führen ihn als **neues Fahrzeug der Season 2**; unsere älteren Angaben nannten rund $10.000 ohne Stufenangabe. Welche davon für Season 1 stimmte, können wir nicht belegen – die Werte hier sind die der Patch Notes.\nAnwendung: der Vorteil gegenüber gebauter Flugabwehr ist die Beweglichkeit – er steht dort, wo gerade geflogen wird. Der Nachteil: Er ist ein Fahrzeug und damit selbst ein Ziel für jeden Werfer. Bei $14.000 pro Stück ist das eine teure Antwort auf einen einzelnen Helikopter.",
         "felder": {
-            "preis": "10000",
-            "freischaltung": "Driver-Linie",
+            "preis": "14000",
+            "freischaltung": "Driver 25",
             "sitze": "2",
             "tempo": "65",
-            "rolle": "Flugabwehrpanzer"
+            "rolle": "Flugabwehrpanzer",
+            "freischaltkosten": "300000"
         },
         "gruppe": "panzer"
     },
@@ -714,14 +747,15 @@
         "title": "SPH-2",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Der späteste Freischaltung im Spiel: Career 90, einmalig rund $500.000, danach rund $8.000 pro Stück. Drei Plätze, rund 65 km/h. In Season 1 von Career 55 auf 90 und von $400.000 auf $500.000 angehoben.\nAnwendung: Artillerie auf Distanz, gegen Stellungen und FOBs. Wirkt nur mit jemandem, der Ziele markiert – ohne Aufklärung schießt man auf Landschaft.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 31, einmalig rund $350.000, danach rund $8.000 pro Stück. Drei Plätze, rund 65 km/h. Mit Season 2 vom WARDOG-Track auf Level 90 in den Driver-Track auf Level 31 gewandert – die späteste Freischaltung im Spiel ist sie damit nicht mehr, und die Gebühr fiel von $500.000 auf $350.000.\nAnwendung: Artillerie auf Distanz, gegen Stellungen und FOBs. Wirkt nur mit jemandem, der Ziele markiert – ohne Aufklärung schießt man auf Landschaft. Ihre XP fließen seit Season 2 in den Driver-, nicht mehr in den Support-Track.",
         "felder": {
             "preis": "8000",
-            "freischaltung": "Career 90",
-            "freischaltkosten": "500000",
+            "freischaltung": "Driver 31",
+            "freischaltkosten": "350000",
             "sitze": "3",
             "tempo": "65",
             "rolle": "Artilleriepanzer"
@@ -733,12 +767,13 @@
         "title": "L2A6",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Der Kampfpanzer: Driver 35, einmalig rund $500.000, danach rund $14.000 pro Stück. Drei Plätze, rund 65 km/h.\nAnwendung: Gelände halten und Infanterie binden. Nie allein fahren – ein Panzer ohne Begleitung ist ein Ziel mit Fahrgestell, und sein Motordeck am Heck fällt in rund elf Sekunden.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Der Kampfpanzer: Driver 35, einmalig rund $500.000, danach rund $22.000 pro Stück. Drei Plätze, rund 65 km/h.\nAnwendung: Gelände halten und Infanterie binden. Nie allein fahren – ein Panzer ohne Begleitung ist ein Ziel mit Fahrgestell, und sein Motordeck am Heck fällt in rund elf Sekunden.",
         "felder": {
-            "preis": "14000",
+            "preis": "22000",
             "freischaltung": "Driver 35",
             "freischaltkosten": "500000",
             "sitze": "3",
@@ -785,13 +820,14 @@
         "title": "Dune Buggy",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Driver 8, rund $1.500 pro Stück, drei Plätze, rund 130 km/h.\nAnwendung: schnell und wendig, gut um allein oder zu dritt Strecke zu machen. Wie der Bobcat trägt er keine Fracht und bietet keinen Schutz.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 9, rund $1.500 pro Stück, drei Plätze, rund 130 km/h. Mit Season 2 um eine Stufe nach hinten gerückt.\nAnwendung: schnell und wendig, gut um allein oder zu dritt Strecke zu machen. Wie der Bobcat trägt er keine Fracht und bietet keinen Schutz. Season 2 hat seine Bremsen schwächer gemacht – er rutscht und driftet jetzt mehr.",
         "felder": {
             "preis": "1500",
-            "freischaltung": "Driver 8",
+            "freischaltung": "Driver 9",
             "sitze": "3",
             "tempo": "130",
             "rolle": "Leichtes Fahrzeug, keine Fracht"
@@ -820,12 +856,13 @@
         "title": "Kodiak [M249]",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Driver 6, rund $3.750 pro Stück, fünf Plätze, rund 154 km/h, mit aufgesetztem M249.\nAnwendung: Transport, der sich wehren kann. Wichtig: Die Bewaffnung erhöht die Ladekapazität **nicht** – du bezahlst für Feuerkraft und einen Sitzplatz, nicht für Fracht.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 6, rund $6.750 pro Stück, fünf Plätze, rund 154 km/h, mit aufgesetztem M249.\nAnwendung: Transport, der sich wehren kann. Wichtig: Die Bewaffnung erhöht die Ladekapazität **nicht** – du bezahlst für Feuerkraft und einen Sitzplatz, nicht für Fracht.",
         "felder": {
-            "preis": "3750",
+            "preis": "6750",
             "freischaltung": "Driver 6",
             "sitze": "5",
             "tempo": "154",
@@ -854,14 +891,15 @@
         "title": "Humvee",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Driver 15, einmalig rund $25.000, danach rund $3.000 pro Stück. Vier Plätze, rund 113 km/h. Community-Angaben nennen rund 500 Trefferpunkte und etwa 95 % weniger Schaden durch Handfeuerwaffen.\nAnwendung: wenn die Route umkämpft ist. Den Schutz bezahlst du mit Tempo – auf sicheren Wegen ist der Kodiak die bessere Wahl.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 14, einmalig rund $75.000, danach rund $3.000 pro Stück. Vier Plätze, rund 113 km/h. Community-Angaben nennen rund 500 Trefferpunkte und etwa 95 % weniger Schaden durch Handfeuerwaffen.\nAnwendung: wenn die Route umkämpft ist. Den Schutz bezahlst du mit Tempo – auf sicheren Wegen ist der Kodiak die bessere Wahl.",
         "felder": {
             "preis": "3000",
-            "freischaltung": "Driver 15",
-            "freischaltkosten": "25000",
+            "freischaltung": "Driver 14",
+            "freischaltkosten": "75000",
             "sitze": "4",
             "tempo": "113",
             "rolle": "Transporter für Kisten"
@@ -872,13 +910,14 @@
         "title": "Humvee [M249]",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Driver 20, rund $3.750 pro Stück, fünf Plätze, rund 113 km/h, gepanzert und bewaffnet.\nAnwendung: Begleitfahrzeug für Konvois. Wie bei allen Waffenvarianten gilt: mehr Feuerkraft, nicht mehr Ladung.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 24, rund $8.500 pro Stück, fünf Plätze, rund 113 km/h, gepanzert und bewaffnet.\nAnwendung: Begleitfahrzeug für Konvois. Wie bei allen Waffenvarianten gilt: mehr Feuerkraft, nicht mehr Ladung.",
         "felder": {
-            "preis": "3750",
-            "freischaltung": "Driver 20",
+            "preis": "8500",
+            "freischaltung": "Driver 24",
             "sitze": "5",
             "tempo": "113",
             "rolle": "Transporter mit Bewaffnung"
@@ -889,12 +928,13 @@
         "title": "Humvee [Minigun]",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Driver 30, rund $4.500 pro Stück, fünf Plätze, rund 113 km/h, mit Minigun.\nAnwendung: die schwerste Variante des Humvee. Sinnvoll, wenn dein Team dauerhaft dieselbe umkämpfte Strecke fährt und Begleitschutz braucht.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 30, rund $10.000 pro Stück, fünf Plätze, rund 113 km/h, mit Minigun.\nAnwendung: die schwerste Variante des Humvee. Sinnvoll, wenn dein Team dauerhaft dieselbe umkämpfte Strecke fährt und Begleitschutz braucht.",
         "felder": {
-            "preis": "4500",
+            "preis": "10000",
             "freischaltung": "Driver 30",
             "sitze": "5",
             "tempo": "113",
@@ -906,10 +946,11 @@
         "title": "URAL",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Das Logistikfahrzeug: Driver 3, einmalig rund $35.000 (in Season 1 von $50.000 gesenkt), danach rund $5.000 pro Stück. Drei Plätze, rund 79 km/h, nach Community-Angaben rund 700 Trefferpunkte – und als einziges Fahrzeug ausgelegt für **volle Paletten**.\nAnwendung: Nachschub fahren. Eine Palette kostet rund $400 und bringt bei der Abgabe rund $2.500 – der Ural verdient sich damit schnell zurück. Für Personentransport ist er zu langsam und zu teuer.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Das Logistikfahrzeug: Driver 3, einmalig rund $35.000 (in Season 1 von $50.000 gesenkt), danach rund $5.000 pro Stück. Drei Plätze, rund 79 km/h, nach Community-Angaben rund 700 Trefferpunkte – und als einziges Fahrzeug ausgelegt für **volle Paletten**.\nAnwendung: Nachschub fahren. Eine Palette kostet rund $400 und bringt bei der Abgabe seit Season 2 rund $1.250 statt $2.500 – der Ural verdient sich damit langsamer zurück als in Season 1, aber immer noch sicher. Wer mehrere Fahrten hintereinander macht, bekommt die neuen Lieferserien dazu: +$250 je Palette in Folge, bis zu zehnmal. Für Personentransport ist er zu langsam und zu teuer.",
         "felder": {
             "preis": "5000",
             "freischaltung": "Driver 3",
@@ -925,13 +966,14 @@
         "title": "Ural Defender",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Driver 18, rund $6.000 pro Stück. Gepanzerte Fassung des Ural, drei Plätze, rund 79 km/h.\nAnwendung: dieselbe Ladung auf gefährlicherer Route. Der Aufpreis von rund $1.000 ist billiger als eine verlorene Ladung samt Fahrzeug.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 15, rund $7.200 pro Stück. Gepanzerte Fassung des Ural, drei Plätze, rund 79 km/h.\nAnwendung: dieselbe Ladung auf gefährlicherer Route. Der Aufpreis von rund $1.000 ist billiger als eine verlorene Ladung samt Fahrzeug.",
         "felder": {
-            "preis": "6000",
-            "freischaltung": "Driver 18",
+            "preis": "7200",
+            "freischaltung": "Driver 15",
             "sitze": "3",
             "tempo": "79",
             "rolle": "Gepanzerter Logistik-LKW"
@@ -943,16 +985,18 @@
         "title": "Ural Defender [M249]",
         "typ": "fahrzeug",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Driver 25, rund $6.750 pro Stück, gepanzert und bewaffnet, drei Plätze, rund 79 km/h.\nAnwendung: Nachschub durch umkämpftes Gebiet, wenn niemand zum Begleiten da ist. Die Ladekapazität ist dieselbe wie beim normalen Ural.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 22, einmalig rund $100.000, danach rund $9.500 pro Stück, gepanzert und bewaffnet, drei Plätze, rund 79 km/h. Season 2 zieht die Stufe vor und senkt die Gebühr von $125.000, hebt aber den Kaufpreis von $6.750 an.\nAnwendung: Nachschub durch umkämpftes Gebiet, wenn niemand zum Begleiten da ist. Die Ladekapazität ist dieselbe wie beim normalen Ural. Seit Season 2 ist das Inventar eines gekauften Fahrzeugs standardmäßig nur für Fahrer und Squad offen.",
         "felder": {
-            "preis": "6750",
-            "freischaltung": "Driver 25",
+            "preis": "9500",
+            "freischaltung": "Driver 22",
             "sitze": "3",
             "tempo": "79",
-            "rolle": "Gepanzerter Logistik-LKW mit Bewaffnung"
+            "rolle": "Gepanzerter Logistik-LKW mit Bewaffnung",
+            "freischaltkosten": "100000"
         },
         "gruppe": "lkw"
     },
@@ -961,12 +1005,13 @@
         "title": "L81 Mörser",
         "typ": "emplacement",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Gebaut an einer FOB, rund 91 Build-Supplies, großer Hammer (Support 8).\nAnwendung: indirektes Feuer auf Stellungen, Gruppen und gegnerische FOBs. Er braucht keinen Sichtkontakt, sondern jemanden, der Ziele markiert – deshalb gehört er tief in die Basis hinter Deckung und nicht an den Rand. Ohne Ammo-Nachschub steht er still.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Gebaut an einer FOB, rund 600 Build-Supplies, großer Hammer (Support 8). Season 2 hat die Kosten vervierfacht – die Patch Notes nennen 150 als alten Wert.\nAnwendung: indirektes Feuer auf Stellungen, Gruppen und gegnerische FOBs. Er braucht keinen Sichtkontakt, sondern jemanden, der Ziele markiert – deshalb gehört er tief in die Basis hinter Deckung und nicht an den Rand. Ohne Ammo-Nachschub steht er still, und das wiegt seit Season 2 schwerer: Er zieht pro Palette 150 statt 75 Munition, eine Lieferung reicht also für halb so viele Schüsse. Dazu eine neue Feueranimation – der Spieler lässt die Granate sichtbar ins Rohr fallen.",
         "felder": {
-            "baukosten": "91",
+            "baukosten": "600",
             "freischaltung": "Support 8 (großer Hammer)",
             "rolle": "Indirektes Feuer, braucht Markierung"
         }
@@ -976,12 +1021,13 @@
         "title": "Stingray",
         "typ": "emplacement",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Gebaut an einer FOB, rund 91 Build-Supplies, großer Hammer (Support 8).\nAnwendung: Fahrzeugabwehr aus der Stellung heraus. Gehört mit Blick auf die Zufahrt, nicht auf den Himmel – dafür sind Talon und CIWS da.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Gebaut an einer FOB, rund 650 Build-Supplies, großer Hammer (Support 8). Season 2 hat die Kosten von 150 auf 650 Supplies angehoben.\nAnwendung: Flugabwehr, die auch gegen Bodenziele etwas ausrichtet. Bei 650 Supplies ist sie keine Beigabe mehr, sondern eine Entscheidung gegen etwas anderes – die Entwickler nennen das Ziel ausdrücklich, Bauwerke zu einer Investition zu machen statt zu etwas, das man spammt.",
         "felder": {
-            "baukosten": "91",
+            "baukosten": "650",
             "freischaltung": "Support 8 (großer Hammer)",
             "rolle": "Gegen Fahrzeuge"
         }
@@ -991,12 +1037,13 @@
         "title": "Talon 9K-SAM",
         "typ": "emplacement",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Gebaut an einer FOB, rund 601 Build-Supplies, großer Hammer (Support 8). Nachladbare wärmesuchende Flugabwehrraketen.\nAnwendung: gegnerische Helikopter auf Entfernung zwingen, auszuweichen oder abzudrehen. Braucht freien Himmel, aber keinen freien Horizont – auf einer Kuppe ist er als Erstes weg. 601 Build-Supplies sind mehrere Logistikrunden: eine Teamentscheidung, kein Nebenbei-Bau.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Gebaut an einer FOB, rund 650 Build-Supplies, großer Hammer (Support 8). Nachladbare wärmesuchende Flugabwehrraketen. Season 2 hat die Baukosten von 1.000 auf 650 gesenkt.\nAnwendung: Luftraum über der eigenen Basis sperren. Billiger als in Season 1, im Betrieb aber deutlich teurer: Nachladen dauert 5 statt 2 Sekunden, und eine Munitionspalette füllt 200 statt 50 Schuss nach – dieselbe Lieferung hält also viel länger, dafür braucht jeder Schuss mehr Geduld.",
         "felder": {
-            "baukosten": "601",
+            "baukosten": "650",
             "freischaltung": "Support 8 (großer Hammer)",
             "rolle": "Wärmesuchende Flugabwehr, nachladbar"
         }
@@ -1006,12 +1053,13 @@
         "title": "Vanguard CIWS",
         "typ": "emplacement",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Das teuerste Bauwerk nach dem Drill Rig: rund 901 Build-Supplies, großer Hammer (Support 8). Manuell bediente Schnellfeuerkanone, nach Community-Angaben 20 × 102 mm mit rund 60 Schaden pro Treffer.\nAnwendung: Anflugschneisen im Nahbereich sperren. Er bestraft Schweben, nicht Vorbeifliegen – und er muss **bedient** werden, sonst steht er nur herum. Erst bauen, wenn der Gegner tatsächlich mit Helikoptern arbeitet.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Das teuerste Bauwerk nach dem Drill Rig: rund 1.200 Build-Supplies, großer Hammer (Support 8). Manuell bediente Schnellfeuerkanone, nach Community-Angaben 20 × 102 mm mit rund 60 Schaden pro Treffer. Season 2 hat die Kosten von 1.500 auf 1.200 gesenkt.\nAnwendung: der harte Luftabwehrposten, der auch gegen Infanterie und leichte Deckung wirkt. Season 2 hat ihren Schaden gegen Strukturen sortiert: Sie zerlegt leichte Deckung und tut sich an schweren Befestigungen schwer, statt alles gleich zu behandeln. Gegen das Spawn Vehicle braucht sie jetzt das 2,25-fache der Zeit.",
         "felder": {
-            "baukosten": "901",
+            "baukosten": "1200",
             "freischaltung": "Support 8 (großer Hammer)",
             "rolle": "Manuell bediente Flugabwehrkanone"
         }
@@ -1099,12 +1147,13 @@
         "title": "Bremer Wall",
         "typ": "bauwerk",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Rund 10 Build-Supplies, mittlerer Hammer, braucht eine FOB-Bauzone.\nAnwendung: schnelle gerade Deckung innerhalb der Basis. Gut, um eine Sichtlinie zu schließen, aus der jemand hineinsieht.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund 32 Build-Supplies, mittlerer Hammer, braucht eine FOB-Bauzone.\nAnwendung: schnelle gerade Deckung innerhalb der Basis. Gut, um eine Sichtlinie zu schließen, aus der jemand hineinsieht.",
         "felder": {
-            "baukosten": "10",
+            "baukosten": "32",
             "freischaltung": "mittlerer Hammer",
             "rolle": "Bauwerk"
         }
@@ -1129,12 +1178,13 @@
         "title": "Tür",
         "typ": "bauwerk",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Rund 14 Build-Supplies, mittlerer Hammer, braucht eine FOB.\nAnwendung: Zugang für die eigenen Leute, ohne die Wand zu unterbrechen. Wird regelmäßig vergessen zu schließen.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund 80 Build-Supplies, mittlerer Hammer, braucht eine FOB. Season 2 hat die Kosten von 22 auf 80 Supplies angehoben – nach unseren älteren Angaben lagen sie bei 14, die Patch Notes nennen 22 als alten Wert.\nAnwendung: Zugang für die eigenen Leute, ohne die Wand zu unterbrechen. Seit Season 2 lässt sich eine Tür **nicht mehr mit dem Hammer aufbrechen** – dafür braucht der Gegner die Halligan-Brechstange oder Sprengstoff. Eine geschlossene Tür ist damit erstmals eine echte Hürde, und das Schließen bringt $75.",
         "felder": {
-            "baukosten": "14",
+            "baukosten": "80",
             "freischaltung": "mittlerer Hammer",
             "rolle": "Bauwerk"
         }
@@ -1159,12 +1209,13 @@
         "title": "Tor",
         "typ": "bauwerk",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Rund 52 Build-Supplies, großer Hammer (Support 8), braucht eine FOB.\nAnwendung: Durchfahrt für Fahrzeuge. Ein Tor ist billiger als eine Mauer, die man später selbst wieder abreißt.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund 200 Build-Supplies, großer Hammer (Support 8), braucht eine FOB. Season 2 hat die Kosten von 85 auf 200 Supplies mehr als verdoppelt.\nAnwendung: Zufahrt für Fahrzeuge. Wie die Tür lässt es sich seit Season 2 nicht mehr mit dem Hammer aufbrechen, sondern nur mit der Brechstange oder Sprengstoff – bei 200 Supplies will man es ohnehin nicht leichtfertig setzen.",
         "felder": {
-            "baukosten": "52",
+            "baukosten": "200",
             "freischaltung": "großer Hammer (Support 8)",
             "rolle": "Bauwerk"
         }
@@ -1174,12 +1225,13 @@
         "title": "Bunker",
         "typ": "bauwerk",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Rund 61 Build-Supplies, großer Hammer, braucht eine FOB.\nAnwendung: geschützte Feuerstellung. Nicht die ganze Besatzung in einen Bunker stellen – ein Mörsertreffer nimmt sonst alle auf einmal.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund 200 Build-Supplies, großer Hammer, braucht eine FOB.\nAnwendung: geschützte Feuerstellung. Nicht die ganze Besatzung in einen Bunker stellen – ein Mörsertreffer nimmt sonst alle auf einmal.",
         "felder": {
-            "baukosten": "61",
+            "baukosten": "200",
             "freischaltung": "großer Hammer (Support 8)",
             "rolle": "Bauwerk"
         }
@@ -1189,12 +1241,13 @@
         "title": "Recon-Turm",
         "typ": "bauwerk",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Rund 61 Build-Supplies, großer Hammer, braucht eine FOB.\nAnwendung: Übersicht über das Umfeld der Basis. Lohnt nur, wenn tatsächlich jemand oben sitzt und markiert.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund 200 Build-Supplies, großer Hammer, braucht eine FOB.\nAnwendung: Übersicht über das Umfeld der Basis. Lohnt nur, wenn tatsächlich jemand oben sitzt und markiert.",
         "felder": {
-            "baukosten": "61",
+            "baukosten": "200",
             "freischaltung": "großer Hammer (Support 8)",
             "rolle": "Bauwerk"
         }
@@ -1219,10 +1272,11 @@
         "title": "Reparaturstation",
         "typ": "bauwerk",
         "quellen": [
-            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
+            "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Rund 121 Build-Supplies, großer Hammer, braucht eine FOB und Mechanical im Lager.\nAnwendung: beschädigte Fahrzeuge wieder fahrbereit machen. Ein geretteter L2A6 entspricht rund $14.000, die niemand neu bezahlen muss.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund 121 Build-Supplies, großer Hammer (Support 8), braucht eine FOB und Mechanical-Supplies.\nAnwendung: beschädigte Fahrzeuge wieder fahrbereit machen. Ein geretteter L2A6 entspricht seit Season 2 rund $22.000, die niemand neu bezahlen muss – die Station rechnet sich damit noch schneller als in Season 1, wo der Panzer $14.000 kostete.",
         "felder": {
             "baukosten": "121",
             "freischaltung": "großer Hammer (Support 8)",
@@ -1235,10 +1289,11 @@
         "typ": "bauwerk",
         "quellen": [
             "allthings.how (Hot-Zone-Mechanik des Drill Rig)",
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Das teuerste Bauwerk im Spiel: rund 1.351 Build-Supplies, großer Hammer, braucht eine FOB und Fuel. Er fördert **keinen Nachschub** – er zieht die **Hot Zone zu deiner FOB** und hält sie dort, solange er läuft. Nach Community-Angaben braucht ein Durchlauf mindestens rund 1.200 Fuel-Supplies (etwa eine Palette), bis rund 6.000 für die längste Laufzeit.\nAnwendung: aus einer gut gebauten Basis Kartenkontrolle machen, statt der Hot Zone hinterherzufahren. In der Hot Zone zählt jeder Spieler doppelt und verdient doppelt – deshalb lohnt der Aufwand überhaupt. Nichts für den Anfang einer Runde.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Das teuerste Bauwerk im Spiel: rund 1.351 Build-Supplies, großer Hammer, braucht eine FOB und Fuel. Er fördert **keinen Nachschub** – er zieht die **Hot Zone zu deiner FOB** und hält sie dort, solange er läuft. Season 2 hat die Werte deutlich verschärft: mindestens **2.000 Fuel** zum Aktivieren statt 1.500, maximal **300 Sekunden** Laufzeit statt 375, dafür bis zu 10.000 Fuel Fassungsvermögen statt 7.500 – und nach der Zerstörung eine deutlich längere Sperre, bevor ein Ersatz steht.\nAnwendung: aus einer gut gebauten Basis Kartenkontrolle machen, statt der Hot Zone hinterherzufahren. In der Hot Zone zählt jeder Spieler doppelt und verdient doppelt – deshalb lohnt der Aufwand überhaupt. Die Entwickler nennen als Ziel ausdrücklich, Mehrfach-Drill-Rig-Basen unattraktiver zu machen; wer so baut, braucht seit Season 2 mehr Fuel für weniger Laufzeit.",
         "felder": {
             "baukosten": "1351",
             "freischaltung": "großer Hammer (Support 8)",
@@ -1251,15 +1306,17 @@
         "title": "9K333 Verba",
         "typ": "waffe",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Tragbare Flugabwehrrakete für rund $800 pro Leben, Kaliber 72 mm, nach Quellenangabe rund 100 Schuss pro Minute. Mit 17,25 kg und einer Inventarfläche von 7×2 das schwerste Stück, das ein Soldat mitnehmen kann – es belegt den halben Rucksack.\nAnwendung: Hubschrauber vertreiben, ohne eine Stellung bauen zu müssen. Wer Talon und Vanguard nicht an der richtigen Stelle hat, trägt die Abwehr eben selbst dorthin. Gegen Infanterie nutzlos – wer sie einpackt, braucht jemanden, der ihn deckt.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Support 14, rund $800 pro Leben, Kaliber 72 mm, nach Quellenangabe rund 100 Schuss pro Minute. Season 2 hat sie von Stufe 16 vorgezogen. Mit 17,25 kg und einer Inventarfläche von 7×2 das schwerste Stück, das ein Soldat mitnehmen kann – es belegt den halben Rucksack.\nAnwendung: Hubschrauber vertreiben, ohne eine Stellung bauen zu müssen. Wer Talon und Vanguard nicht an der richtigen Stelle hat, trägt die Abwehr eben selbst dorthin. Gegen Infanterie nutzlos – wer sie einpackt, braucht jemanden, der ihn deckt.",
         "felder": {
             "preis": "800",
             "kaliber": "72 mm",
             "rolle": "Schulterluftabwehr",
-            "hinweis": "Inventarfläche 7×2, 17,25 kg"
+            "hinweis": "Inventarfläche 7×2, 17,25 kg",
+            "freischaltung": "Support 14"
         }
     },
     {
@@ -1442,10 +1499,11 @@
         "title": "Schraubenschlüssel",
         "typ": "bauwerk",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Werkzeug zum Reparieren, Inventarfläche 1×1. Einen Preis führt die Quelle nicht.\nAnwendung: Fahrzeuge im Feld wieder fahrbereit machen, ohne zur Reparaturstation zurückzufahren. Ein geretteter L2A6 entspricht rund $14.000 – der Platz im Rucksack lohnt sich für jeden, der mit schwerem Gerät unterwegs ist.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Reparaturwerkzeug für den Rucksack.\nAnwendung: Fahrzeuge im Feld flicken, statt sie zurückzufahren. Ein geretteter L2A6 entspricht seit Season 2 rund $22.000 – der Platz im Rucksack lohnt sich für jeden, der mit schwerem Gerät unterwegs ist. Reparatur-XP fließen jetzt in den Driver- oder Pilot-Track, je nachdem was du reparierst, statt pauschal in Support.",
         "felder": {
             "rolle": "Reparaturwerkzeug",
             "hinweis": "Inventarfläche 1×1; Preis in der Quelle nicht angegeben"
@@ -1456,12 +1514,13 @@
         "title": "Halligan Bar",
         "typ": "bauwerk",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Brechstange für rund $1.100, 2,8 kg. Das Werkzeug, mit dem sich Verschlossenes öffnen lässt, statt es aufzuschießen.\nAnwendung: leise in Gebäude kommen und eigene Bauwerke wieder abräumen. Wer ein Tor falsch gesetzt hat, ist froh, dass es nicht gesprengt werden muss.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Brechstange für rund $885, 2,8 kg – in Season 1 kostete sie $1.100. Season 2 hat ihr Aufgabengebiet erweitert: Sie öffnet jetzt **Türen und Tore**, hält sieben statt fünf Anwendungen, und jede aufgebrochene Tür bringt einmalig $100.\nAnwendung: leise in Gebäude kommen und eigene Bauwerke wieder abräumen. Wichtiger seit Season 2: Mit dem Hammer lassen sich Türen und Tore nicht mehr aufbrechen – wer in eine verschlossene feindliche FOB will, braucht die Brechstange oder Sprengstoff.",
         "felder": {
-            "preis": "1100",
+            "preis": "885",
             "rolle": "Brechwerkzeug",
             "hinweis": "Inventarfläche 3×1, 2,8 kg, Spezialisten-Platz"
         }
@@ -1500,14 +1559,17 @@
         "title": "Claymore",
         "typ": "bauwerk",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Richtmine gegen Infanterie, rund $900 und nur 1,6 kg schwer.\nAnwendung: den Rücken einer Stellung sichern. In einem Treppenhaus oder an der Rückseite einer FOB ersetzt sie den Mann, der sonst dort stehen müsste – und sie schläft nicht ein.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 23, einmalig rund $90.000, danach rund $900 pro Stück, 1,6 kg. Season 2 hat die Stufe um eine nach hinten gesetzt und die Gebühr von $50.000 auf $90.000 angehoben.\nAnwendung: den Rücken einer Stellung sichern. In einem Treppenhaus oder an der Rückseite einer FOB ersetzt sie den Mann, der sonst dort stehen müsste – und sie schläft nicht ein.",
         "felder": {
             "preis": "900",
             "rolle": "Richtmine gegen Infanterie",
-            "hinweis": "Inventarfläche 2×1, 1,6 kg"
+            "hinweis": "Inventarfläche 2×1, 1,6 kg",
+            "freischaltung": "Recon 23",
+            "freischaltkosten": "90000"
         }
     },
     {
@@ -1601,10 +1663,11 @@
         "title": "Mörser-Unterstand",
         "typ": "bauwerk",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund 100 Build-Supplies – ein teures Bauwerk, vergleichbar mit dem Mörser selbst.\nAnwendung: die Mörserstellung gegen Gegenfeuer schützen. Lohnt dort, wo der Mörser längere Zeit steht und das Team mit Markierungen versorgt wird; für ein paar Schuss aus dem Hinterhalt sind 100 Supplies zu viel.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund 100 Build-Supplies – gemessen am Mörser selbst, der seit Season 2 600 Supplies kostet, ist das ein kleiner Aufpreis.\nAnwendung: die Mörserstellung gegen Gegenfeuer schützen. Mit dem sechsfachen Preis des Mörsers seit Season 2 ist der Unterstand von einem Luxus zu einer naheliegenden Absicherung geworden: 100 Supplies mehr, um 600 nicht zu verlieren.",
         "felder": {
             "baukosten": "100",
             "rolle": "Geschützte Stellung für indirektes Feuer"
@@ -1630,13 +1693,15 @@
         "title": "M18 Rauchgranate: Schwarz",
         "typ": "wurfwaffe",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Schwarzer Rauch für rund $100. Deckt wie der weiße, fällt in hellem Gelände stärker auf und in dunkler Umgebung weniger.\nAnwendung: dieselbe wie beim weißen Rauch – die Farbe ist eine Frage des Untergrunds, nicht der Wirkung.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Schwarzer Rauch ab Medic 23 für rund $100. Season 2 hat ihn von Stufe 21 nach hinten verschoben. Deckt wie der weiße, fällt in hellem Gelände stärker auf und in dunkler Umgebung weniger.\nAnwendung: dieselbe wie beim weißen Rauch – die Farbe ist eine Frage des Untergrunds, nicht der Wirkung.",
         "felder": {
             "preis": "100",
-            "rolle": "Sichtschutz"
+            "rolle": "Sichtschutz",
+            "freischaltung": "Medic 23"
         },
         "gruppe": "rauch"
     },
@@ -1795,13 +1860,15 @@
         "title": "Fernzünder",
         "typ": "wurfwaffe",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Der Zünder für rund $550. Ohne ihn liegt das C4 nur herum.\nAnwendung: Pflichtkauf, sobald du C4 mitnimmst. Rechne ihn beim Loadout mit ein – wer nur den Sprengstoff kauft, hat $250 für Dekoration ausgegeben.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Assault 4, rund $650. Mit Season 2 sind Fernzünder und C4 vom Support- in den Assault-Track gewandert (vorher Support 2), und der Zünder ist von $550 auf $650 gestiegen. Ohne ihn liegt das C4 nur herum.\nAnwendung: Pflichtkauf, sobald du C4 mitnimmst. Rechne ihn beim Loadout mit ein – wer nur den Sprengstoff kauft, hat $250 für Dekoration ausgegeben. Die XP dafür fließen jetzt in den Assault-Track.",
         "felder": {
-            "preis": "550",
-            "rolle": "Zündet C4 und Sprengfallen"
+            "preis": "650",
+            "rolle": "Zündet C4 und Sprengfallen",
+            "freischaltung": "Assault 4"
         },
         "gruppe": "sprengstoff"
     },
@@ -1856,13 +1923,15 @@
         "title": "Adrenalinspritze",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Stim für rund $250.\nAnwendung: das Einzige, was unter Beschuss schnell genug wirkt. Wenn im Rucksack der Platz knapp wird, streichst du anderes – nie die Stims.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Stim ab Medic 16 für rund $250. Season 2 hat die Freischaltung von Stufe 14 nach hinten verschoben.\nAnwendung: das Einzige, was unter Beschuss schnell genug wirkt. Wenn im Rucksack der Platz knapp wird, streichst du anderes – nie die Stims.",
         "felder": {
             "preis": "250",
-            "rolle": "Sofortwirkung"
+            "rolle": "Sofortwirkung",
+            "freischaltung": "Medic 16"
         },
         "gruppe": "medizin"
     },
@@ -1871,13 +1940,14 @@
         "title": "Individuelles Erste-Hilfe-Set",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Erste-Hilfe-Set ab Medic 9, rund $800 pro Stück.\nAnwendung: für den Fall, dass jemand wirklich runter ist. Zwei davon im Rucksack sind die übliche Mitnahme – mehr kostet Platz, den du für Rauch brauchst.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Erste-Hilfe-Set ab Medic 10, rund $800 pro Stück. Mit Season 2 um eine Stufe nach hinten gerückt.\nAnwendung: der Verband für den Ernstfall. Heilt mehr als der einfache Verband und braucht dafür länger – was unter Beschuss der Unterschied zwischen Heilung und Tod ist.",
         "felder": {
             "preis": "800",
-            "freischaltung": "Medic 9",
+            "freischaltung": "Medic 10",
             "rolle": "Heilung"
         },
         "gruppe": "medizin"
@@ -1887,14 +1957,16 @@
         "title": "Medizintasche",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Die große Tasche ab Medic 24 für rund $2.000.\nAnwendung: ein Squad versorgen, statt einen Mann. Lohnt dort, wo ihr eine Stellung über längere Zeit haltet und der Weg zum Lager zu weit ist.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Medic 14, einmalig rund $50.000, danach rund $1.800. Season 2 hat sie von Stufe 24 auf 14 vorgezogen und Gebühr und Kaufpreis gesenkt – zusammen mit dem nach hinten verschobenen Defibrillator ist das die größte Umstellung im Medic-Track.\nAnwendung: ein Squad versorgen, statt einen Mann. Lohnt dort, wo ihr eine Stellung über längere Zeit haltet und der Weg zum Lager zu weit ist – und ist seit Season 2 zehn Stufen früher zu haben.",
         "felder": {
-            "preis": "2000",
-            "freischaltung": "Medic 24",
-            "rolle": "Heilung für mehrere"
+            "preis": "1800",
+            "freischaltung": "Medic 14",
+            "rolle": "Heilung für mehrere",
+            "freischaltkosten": "50000"
         },
         "gruppe": "medizin"
     },
@@ -1903,15 +1975,17 @@
         "title": "Defibrillator",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Ab Medic 11, rund $1.600 pro Leben. Stellt sofort auf, statt lange zu reanimieren – und ist der Grund, warum der Medic-Rucksack plötzlich eng wird.\nAnwendung: Die eingesetzte Batterie belegt keinen Rucksackplatz. Tausch die große direkt beim Händler gegen die eingesetzte Standardbatterie: Du gewinnst ein Feld und hast 10 statt 4 Ladungen im Gerät.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Medic 22, einmalig rund $110.000, danach rund $1.600 pro Leben. Season 2 hat ihn von Stufe 11 auf 22 verschoben und die Gebühr von $50.000 auf $110.000 mehr als verdoppelt – er ist jetzt eine Anschaffung für die zweite Hälfte des Medic-Tracks. Stellt sofort auf, statt lange zu reanimieren.\nAnwendung: Die eingesetzte Batterie belegt keinen Rucksackplatz. Tausch die große direkt beim Händler gegen die eingesetzte Standardbatterie: Du gewinnst ein Feld und hast 10 statt 4 Ladungen im Gerät. Bis Stufe 22 bleibt der Field Resuscitator das Mittel der Wahl.",
         "felder": {
             "preis": "1600",
-            "freischaltung": "Medic 11",
+            "freischaltung": "Medic 22",
             "rolle": "Sofortige Wiederbelebung",
-            "hinweis": "Braucht eine Batterie: Standard 4 Ladungen (1 Feld), große 10 Ladungen (2 Felder)"
+            "hinweis": "Braucht eine Batterie: Standard 4 Ladungen (1 Feld), große 10 Ladungen (2 Felder)",
+            "freischaltkosten": "110000"
         },
         "gruppe": "medizin"
     },
@@ -1920,12 +1994,13 @@
         "title": "Field Resuscitator",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Das erste richtige Wiederbelebungsgerät, ab Medic 2 für rund $500.\nAnwendung: die Brücke bis zum Defibrillator. Langsamer als dieser, aber ein Zehntel des Preises und ohne Batterie – für Medics unterhalb von Stufe 11 das Mittel der Wahl.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Das erste richtige Wiederbelebungsgerät, ab Medic 2 für rund $425.\nAnwendung: die Brücke bis zum Defibrillator. Langsamer als dieser, aber ein Zehntel des Preises und ohne Batterie – für Medics unterhalb von Stufe 11 das Mittel der Wahl.",
         "felder": {
-            "preis": "500",
+            "preis": "425",
             "freischaltung": "Medic 2",
             "rolle": "Wiederbelebung"
         },
@@ -2042,12 +2117,13 @@
         "title": "Fernglas",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $75 – die billigste Anschaffung im Spiel mit dem besten Verhältnis von Einsatz zu Ertrag.\nAnwendung: Gegner anvisieren, Maustaste halten, Markierung steht fürs ganze Team. Bringt sofort Geld, dazu einen Assist, wenn jemand den Markierten erledigt – und verrät deine Position nicht, weil es kein Mündungsfeuer gibt.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund $180 – in Season 1 waren es $75. Trotz der Erhöhung bleibt es die Anschaffung mit dem besten Verhältnis von Einsatz zu Ertrag, auch wenn das Spotting-Geld mit Season 2 um rund 30 % gesenkt wurde und jetzt mit dem Wert des gefundenen Ziels steigt.\nAnwendung: Gegner anvisieren, Maustaste halten, Markierung steht fürs ganze Team. Bringt Geld, dazu einen Assist, wenn jemand den Markierten erledigt – und verrät deine Position nicht, weil es kein Mündungsfeuer gibt. Seit Season 2 zahlt ein markierter Panzer deutlich mehr als eine markierte Kiste.",
         "felder": {
-            "preis": "75",
+            "preis": "180",
             "rolle": "Markieren fürs Team"
         },
         "gruppe": "optik"
@@ -2057,12 +2133,13 @@
         "title": "Monokular",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Ab Recon 2, rund $150.\nAnwendung: wie das Fernglas, kompakter. Für Recon-Spieler die Stufe zwischen Fernglas und Entfernungsmesser.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Ab Recon 2, rund $350.\nAnwendung: wie das Fernglas, kompakter. Für Recon-Spieler die Stufe zwischen Fernglas und Entfernungsmesser.",
         "felder": {
-            "preis": "150",
+            "preis": "350",
             "freischaltung": "Recon 2",
             "rolle": "Markieren fürs Team"
         },
@@ -2073,14 +2150,16 @@
         "title": "Entfernungsmesser",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Ab Recon 8, rund $400. Liefert zur Markierung die Entfernung mit.\nAnwendung: Pflicht für alles, was indirekt feuert. Ein Mörser trifft nicht, was er sieht, sondern was ihm jemand mit Entfernung meldet.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 8, einmalig rund $25.000, danach rund $1.450. Beides ist mit Season 2 gestiegen: Die Gebühr lag bei $15.000, der Kaufpreis bei $400. Liefert zur Markierung die Entfernung mit.\nAnwendung: Pflicht für alles, was indirekt feuert. Ein Mörser trifft nicht, was er sieht, sondern was ihm jemand mit Entfernung meldet. Bei rund $1.450 pro Leben lohnt es sich, nicht mit ihm in der Hand vorzulaufen.",
         "felder": {
-            "preis": "400",
+            "preis": "1450",
             "freischaltung": "Recon 8",
-            "rolle": "Markieren mit Entfernung"
+            "rolle": "Markieren mit Entfernung",
+            "freischaltkosten": "25000"
         },
         "gruppe": "optik"
     },
@@ -2089,12 +2168,13 @@
         "title": "Infrarot-Entfernungsmesser",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $1.200. **Seit dem Hotfix vom 2. Oktober 2026 nicht mehr im Händler** – nach Angabe der Entwickler zu stark. Mit Season 2 am 15. Oktober kommt er zurück, dann aber mit Batterien.\nAnwendung: Wärmebild statt Sichtlinie. Solange er fehlt, tut der normale Entfernungsmesser den Dienst für ein Drittel des Preises.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund $3.200 – fast das Dreifache des Preises aus Season 1. Nach dem Hotfix vom 2. Oktober 2026 war er aus dem Händler verschwunden, mit Season 2 ist er zurück und **läuft auf Batterien**: Eine Batterie hält nach Angabe der Entwickler rund 80 Sekunden aktive Nutzung und leert sich schneller, wenn man ihn hastig ein- und ausschaltet.\nAnwendung: Wärmebild statt Sichtlinie, jetzt mit Uhr. Einschalten, Ziel suchen, ausschalten – nicht durchlaufen lassen. Für den dreifachen Preis des normalen Entfernungsmessers muss die Wärmesicht den Unterschied machen, sonst ist der billige die bessere Rechnung.",
         "felder": {
-            "preis": "1200",
+            "preis": "3200",
             "rolle": "Wärmebild mit Entfernung",
             "hinweis": "Seit 02.10.2026 nicht im Händler; Rückkehr mit Season 2 gegen Batterien"
         },
@@ -2195,12 +2275,13 @@
         "title": "Ruck-Rucksack",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $2.400 – der große unter den regulären Rucksäcken.\nAnwendung: für Bauer und Logistiker, die Material schleppen. Das Gewicht holt sich die Gewichtsklasse zurück, also plan den Rest des Loadouts entsprechend leicht.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund $1.600 – der große unter den regulären Rucksäcken.\nAnwendung: für Bauer und Logistiker, die Material schleppen. Das Gewicht holt sich die Gewichtsklasse zurück, also plan den Rest des Loadouts entsprechend leicht.",
         "felder": {
-            "preis": "2400",
+            "preis": "1600",
             "rolle": "Großer Rucksack"
         },
         "gruppe": "rucksack"
@@ -2255,13 +2336,15 @@
         "title": "Panzerung Stufe 3",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $2.000 pro Leben.\nAnwendung: für Spieler, die vorn stehen und selten fallen. Das Gewicht zieht an deiner Gewichtsklasse – prüf vorher, ob dir der taktische Sprint erhalten bleibt.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Wardog 70, rund $2.500 pro Leben. Season 2 hat die Freischaltung von Stufe 60 auf 70 verschoben, den Preis von $2.000 angehoben **und die Schutzwirkung gesenkt: 50 % statt 55 % Schadensreduktion.**\nAnwendung: für Spieler, die vorn stehen und selten fallen. Das Gewicht zieht an deiner Gewichtsklasse – prüf vorher, ob dir der taktische Sprint erhalten bleibt. Seit Season 2 ist die Rechnung schlechter geworden: mehr Geld, später freigeschaltet, weniger Wirkung.",
         "felder": {
-            "preis": "2000",
-            "rolle": "Körperschutz"
+            "preis": "2500",
+            "rolle": "Körperschutz",
+            "freischaltung": "Wardog 70"
         },
         "gruppe": "panzerung"
     },
@@ -2270,12 +2353,13 @@
         "title": "Panzerung Stufe 4",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Die schwerste Weste, rund $4.000 pro Leben.\nAnwendung: nur dort, wo du dir das Stehen leisten kannst und das Geld hast. In der schwersten Gewichtsklasse gibt es keinen taktischen Sprint – und ein Gefallener in Heavy lässt sich nicht in Deckung ziehen.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Die schwerste Weste, rund $5.000 pro Leben – in Season 1 waren es $4.000. Die Schadensreduktion ist mit Season 2 von 65 % auf **60 %** gesenkt.\nAnwendung: nur dort, wo du dir das Stehen leisten kannst und das Geld hast. In der schwersten Gewichtsklasse gibt es keinen taktischen Sprint – und ein Gefallener in Heavy lässt sich nicht in Deckung ziehen.",
         "felder": {
-            "preis": "4000",
+            "preis": "5000",
             "rolle": "Körperschutz, schwerste Stufe"
         },
         "gruppe": "panzerung"
@@ -2315,13 +2399,15 @@
         "title": "Helm Stufe 3",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $1.500.\nAnwendung: passend zur Panzerung Stufe 3. Helm und Weste in derselben Stufe zu fahren ist selten falsch – eine Lücke nach oben kostet dich mehr als die paar hundert Dollar Ersparnis.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Wardog 70, rund $2.000. Wie die Panzerung derselben Stufe später freigeschaltet (vorher 60), teurer (vorher $1.500) und mit **50 % statt 55 % Schadensreduktion**. Dafür hält er seit Season 2 mehr Suppression aus.\nAnwendung: passend zur Panzerung Stufe 3. Helm und Weste in derselben Stufe zu fahren ist selten falsch – eine Lücke nach oben kostet dich mehr als die paar hundert Dollar Ersparnis.",
         "felder": {
-            "preis": "1500",
-            "rolle": "Kopfschutz"
+            "preis": "2000",
+            "rolle": "Kopfschutz",
+            "freischaltung": "Wardog 70"
         },
         "gruppe": "panzerung"
     },
@@ -2330,12 +2416,13 @@
         "title": "Helm Stufe 4",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $3.000, der schwerste Helm.\nAnwendung: das Gegenstück zur Panzerung Stufe 4 und mit denselben Vorbehalten. Zusammen sind das $7.000 pro Leben, bevor du eine Waffe in der Hand hast.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund $4.500, der schwerste Helm – in Season 1 $3.000. Season 2 senkt seine Schadensreduktion von 65 % auf **60 %** und gibt ihm handfeste Nachteile: **gedämpfter Ton, eingeschränktes Sichtfeld, und er beschlägt beim Sprinten.** Dafür hält er mehr Suppression aus.\nAnwendung: das Gegenstück zur Panzerung Stufe 4 und seit Season 2 eine echte Abwägung statt einer reinen Geldfrage. Wer auf Geräusche angewiesen ist – Sanitäter, Aufklärer –, verliert mit diesem Helm mehr, als er an Schutz gewinnt. Zusammen mit der Weste sind das $9.500 pro Leben, bevor du eine Waffe in der Hand hast.",
         "felder": {
-            "preis": "3000",
+            "preis": "4500",
             "rolle": "Kopfschutz, schwerste Stufe"
         },
         "gruppe": "panzerung"
@@ -2420,12 +2507,13 @@
         "title": "Arsenal-Rucksack + 2 Schlingen",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $5.000 mit Platz für zwei zusätzliche Langwaffen.\nAnwendung: für Spieler, die zwei Rollen gleichzeitig abdecken wollen – etwa Gewehr und Panzerabwehr. Der Preis entspricht einem Logistik-Run; das Gewicht entspricht einer Gewichtsklasse.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund $4.000 mit Platz für zwei zusätzliche Langwaffen.\nAnwendung: für Spieler, die zwei Rollen gleichzeitig abdecken wollen – etwa Gewehr und Panzerabwehr. Der Preis entspricht einem Logistik-Run; das Gewicht entspricht einer Gewichtsklasse.",
         "felder": {
-            "preis": "5000",
+            "preis": "4000",
             "rolle": "Großer Rucksack mit zwei Waffenhalterungen"
         },
         "gruppe": "rucksack"
@@ -2435,12 +2523,13 @@
         "title": "Gunner-Rucksack + Schlinge",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $3.500, ausgelegt auf Munition für schwere Waffen.\nAnwendung: für M249 und PKM. Ein Maschinengewehr ohne genug Gurte ist eine teure Art, einmal zu feuern.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund $2.400, ausgelegt auf Munition für schwere Waffen.\nAnwendung: für M249 und PKM. Ein Maschinengewehr ohne genug Gurte ist eine teure Art, einmal zu feuern.",
         "felder": {
-            "preis": "3500",
+            "preis": "2400",
             "rolle": "Rucksack für schwere Waffen"
         },
         "gruppe": "rucksack"
@@ -2465,10 +2554,11 @@
         "title": "Palette Build-Supplies",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $400 im Einkauf – und rund $2.500 bei der Abgabe, plus rund $1.800, wenn ein Teamkollege sie an der FOB abbaut.\nAnwendung: der Baustoff für Mauern, Bunker und Stellungen. Gemessen am Gewinn die beste Investition im Spiel, siehe den Logistik-Guide.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund $400 im Einkauf – und seit Season 2 rund $1.250 bei der Abgabe statt der $2.500 aus Season 1. Aus einem Bodenfahrzeug abgegeben liegt die XP-Belohnung höher als aus der Luft.\nAnwendung: der Baustoff für Mauern, Bunker und Stellungen. Die Rechnung hat sich mit Season 2 halbiert, und zugleich sind die Baukosten gestiegen – ein Tor kostet 200 statt 85 Supplies. Gut bleibt das Geschäft trotzdem: rund dreifacher Einsatz, bei einer Fahrt ohne Gefechtsrisiko. Neu sind Lieferserien, die jede aufeinanderfolgende Palette mit +$250 belohnen, bis zu zehnmal.",
         "felder": {
             "preis": "400",
             "rolle": "Nachschub für Bauwerke"
@@ -2480,13 +2570,16 @@
         "title": "Palette Ammo-Supplies",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $400. Versorgt Mörser und Flugabwehr mit Munition.\nAnwendung: Eine FOB mit Mörser und ohne Ammo-Paletten hat ein Rohr und keine Wirkung. Wer baut, muss auch diese Sorte fahren – nicht nur Build-Supplies.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Wardog 9, einmalig rund $25.000, danach rund $400 pro Palette. Auch sie war in Season 1 von Anfang an verfügbar. Versorgt Mörser und Flugabwehr mit Munition.\nAnwendung: Eine FOB mit Mörser und ohne Ammo-Paletten hat ein Rohr und keine Wirkung. Seit Season 2 wiegt das schwerer: Der Mörser zieht pro Palette 150 statt 75 Munition, der Talon 200 statt 50 – dieselbe Lieferung reicht für deutlich weniger Schüsse.",
         "felder": {
             "preis": "400",
-            "rolle": "Nachschub für Munition"
+            "rolle": "Nachschub für Munition",
+            "freischaltung": "Wardog 9",
+            "freischaltkosten": "25000"
         },
         "gruppe": "palette"
     },
@@ -2495,13 +2588,16 @@
         "title": "Palette Fuel-Supplies",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $400. Treibstoff für Tankstation, Fahrzeuge und den Drill Rig.\nAnwendung: Pflicht, sobald dein Team dauerhaft mit Fahrzeugen arbeitet. Der Drill Rig allein nimmt nach Community-Angaben ab rund 1.200 Fuel pro Durchlauf.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Wardog 16, einmalig rund $50.000, danach rund $400 pro Palette. In Season 1 ohne Freischaltung. Treibstoff für Tankstation, Fahrzeuge und den Drill Rig.\nAnwendung: Pflicht, sobald dein Team dauerhaft mit Fahrzeugen arbeitet. Der Drill Rig braucht seit Season 2 mindestens 2.000 Fuel zum Anlaufen statt 1.500 und läuft pro Einheit kürzer – maximal 300 statt 375 Sekunden. Wer Drill Rigs betreibt, fährt jetzt mehr Fuel für weniger Laufzeit.",
         "felder": {
             "preis": "400",
-            "rolle": "Nachschub für Treibstoff"
+            "rolle": "Nachschub für Treibstoff",
+            "freischaltung": "Wardog 16",
+            "freischaltkosten": "50000"
         },
         "gruppe": "palette"
     },
@@ -2510,13 +2606,16 @@
         "title": "Palette Mechanical-Supplies",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $400. Material für die Reparaturstation.\nAnwendung: Ein geretteter Kampfpanzer entspricht einem fünfstelligen Betrag. Diese Palette ist die Versicherung dafür – und die billigste im Vierer-Sortiment gemessen an dem, was sie erhält.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Wardog 5, einmalig rund $10.000, danach rund $400 pro Palette. In Season 1 war sie von Anfang an verfügbar; mit Season 2 steht sie hinter einer Freischaltung. Material für die Reparaturstation.\nAnwendung: Ein geretteter Kampfpanzer entspricht einem fünfstelligen Betrag. Diese Palette ist die Versicherung dafür – und die billigste im Vierer-Sortiment gemessen an dem, was sie erhält.",
         "felder": {
             "preis": "400",
-            "rolle": "Nachschub für Reparaturen"
+            "rolle": "Nachschub für Reparaturen",
+            "freischaltung": "Wardog 5",
+            "freischaltkosten": "10000"
         },
         "gruppe": "palette"
     },
@@ -2540,13 +2639,15 @@
         "title": "Große Kiste",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $300.\nAnwendung: wie die kleine, mit mehr Inhalt. Wer kein Palettenfahrzeug freigeschaltet hat, bewegt damit trotzdem Nachschub – langsamer, aber ab Minute eins.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 17, rund $300. Mit Season 2 um eine Stufe nach hinten gerückt.\nAnwendung: wie die kleine, mit mehr Inhalt. Wer kein Palettenfahrzeug freigeschaltet hat, bewegt damit trotzdem Nachschub – langsamer, aber früh. Seit Season 2 bringt eine abgeworfene große Kiste $500 statt $1.000, eine kleine $250 statt $500.",
         "felder": {
             "preis": "300",
-            "rolle": "Transportbehälter"
+            "rolle": "Transportbehälter",
+            "freischaltung": "Driver 17"
         },
         "gruppe": "kiste"
     },
@@ -2585,13 +2686,15 @@
         "title": "Ghillie-Anzug",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $3.000 für den Körperteil des Tarnanzugs.\nAnwendung: Scharfschützen, die liegen bleiben wollen. Der Anzug ersetzt keine Stellung – er verlängert nur die Zeit, bis jemand die Stellung findet, die du dir gesucht hast.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 26, rund $3.000 für den Körperteil des Tarnanzugs. Season 2 hat die Freischaltung von Stufe 24 nach hinten verschoben.\nAnwendung: Scharfschützen, die liegen bleiben wollen. Der Anzug ersetzt keine Stellung – er verlängert nur die Zeit, bis jemand die Stellung findet, die du dir gesucht hast.",
         "felder": {
             "preis": "3000",
-            "rolle": "Tarnung, Körper"
+            "rolle": "Tarnung, Körper",
+            "freischaltung": "Recon 26"
         },
         "gruppe": "tarnung"
     },
@@ -2600,13 +2703,15 @@
         "title": "Ghillie-Kopfbedeckung",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $2.500, das Gegenstück zum Anzug.\nAnwendung: Beides zusammen kostet rund $5.500 pro Leben. Für einen Recon, der Spotting-Geld verdient, amortisiert sich das über die Runde – für einen Gelegenheits-Sniper nicht.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 26, rund $2.500 – das Gegenstück zum Anzug, mit Season 2 von Stufe 24 nach hinten verschoben.\nAnwendung: Beides zusammen kostet rund $5.500 pro Leben. Für einen Recon, der Spotting-Geld verdient, amortisiert sich das über die Runde – seit Season 2 allerdings langsamer, weil Spotting rund 30 % weniger einbringt.",
         "felder": {
             "preis": "2500",
-            "rolle": "Tarnung, Kopf"
+            "rolle": "Tarnung, Kopf",
+            "freischaltung": "Recon 26"
         },
         "gruppe": "tarnung"
     },
@@ -2615,13 +2720,15 @@
         "title": "Ghillie-Anzug (Dead)",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $3.500, eine andere Ausführung des Anzugs.\nAnwendung: Nach der Bezeichnung auf trockenes, abgestorbenes Gelände abgestimmt, während die Standard-variante zu grünem Bewuchs passt. Welche wo besser trägt, hängt an der Karte – belastbare Vergleichswerte haben wir nicht.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 41, rund $3.500 – eine andere Ausführung des Anzugs. Season 2 hat sie von Stufe 27 auf 41 verschoben, also deutlich nach hinten.\nAnwendung: Nach der Bezeichnung auf trockenes, abgestorbenes Gelände abgestimmt, während die Standardvariante zu grünem Bewuchs passt. Welche wo besser trägt, hängt an der Karte – belastbare Vergleichswerte haben wir nicht.",
         "felder": {
             "preis": "3500",
-            "rolle": "Tarnung, Körper (andere Farbgebung)"
+            "rolle": "Tarnung, Körper (andere Farbgebung)",
+            "freischaltung": "Recon 41"
         },
         "gruppe": "tarnung"
     },
@@ -2630,13 +2737,15 @@
         "title": "Ghillie-Kopfbedeckung (Dead)",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $2.800, passend zum Anzug derselben Ausführung.\nAnwendung: Nimm Kopf und Körper in derselben Variante – eine grüne Haube über einem braunen Anzug ist genau die Art Detail, an der ein aufmerksamer Gegner dich findet.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 41, rund $2.800, passend zum Anzug derselben Ausführung – ebenfalls von Stufe 27 nach hinten verschoben.\nAnwendung: Nimm Kopf und Körper in derselben Variante – eine grüne Haube über einem braunen Anzug ist genau die Art Detail, an der ein aufmerksamer Gegner dich findet.",
         "felder": {
             "preis": "2800",
-            "rolle": "Tarnung, Kopf (andere Farbgebung)"
+            "rolle": "Tarnung, Kopf (andere Farbgebung)",
+            "freischaltung": "Recon 41"
         },
         "gruppe": "tarnung"
     },
@@ -2645,12 +2754,13 @@
         "title": "Wrench",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Reparaturwerkzeug für rund $150.\nAnwendung: Fahrzeuge im Feld flicken, statt zur Reparaturstation zurückzufahren. Die Quelle führt im Bau-Bereich zusätzlich einen „Spanner“ ohne Preis; ob das dasselbe Werkzeug unter anderem Namen ist, können wir nicht belegen.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Reparaturwerkzeug für rund $180.\nAnwendung: Fahrzeuge im Feld flicken, statt zur Reparaturstation zurückzufahren. Die Quelle führt im Bau-Bereich zusätzlich einen „Spanner“ ohne Preis; ob das dasselbe Werkzeug unter anderem Namen ist, können wir nicht belegen.",
         "felder": {
-            "preis": "150",
+            "preis": "180",
             "rolle": "Reparaturwerkzeug",
             "hinweis": "Der Bau-Bereich führt zusätzlich einen „Spanner“ – worin sie sich unterscheiden, ist uns nicht bekannt"
         },
@@ -2691,13 +2801,15 @@
         "title": "Schwerer Bohrer",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $1.300.\nAnwendung: wie beim leichten Bohrer fehlen uns belastbare Angaben zur Wirkung. Wir tragen sie nach, sobald wir sie belegen können.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund $1.300, die Freischaltung kostet seit Season 2 rund $50.000 statt $25.000.\nAnwendung: wie beim leichten Bohrer fehlen uns belastbare Angaben zur Wirkung. Wir tragen sie nach, sobald wir sie belegen können.",
         "felder": {
             "preis": "1300",
-            "rolle": "Werkzeug"
+            "rolle": "Werkzeug",
+            "freischaltkosten": "50000"
         },
         "gruppe": "werkzeug"
     },
@@ -2706,12 +2818,13 @@
         "title": "Fallschirm",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $100.\nAnwendung: aus einem Transporthubschrauber in der Luft aussteigen, statt ihn landen zu lassen. Für $100 sparst du dem Piloten den Anflug in eine Zone, in der er abgeschossen wird.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund $500.\nAnwendung: aus einem Transporthubschrauber in der Luft aussteigen, statt ihn landen zu lassen. Für $500 sparst du dem Piloten den Anflug in eine Zone, in der er abgeschossen wird.",
         "felder": {
-            "preis": "100",
+            "preis": "500",
             "rolle": "Absprung"
         },
         "gruppe": "fallschirm"
@@ -2721,13 +2834,15 @@
         "title": "Sport-Fallschirm",
         "typ": "ausruestung",
         "quellen": [
-            "Datenbank von wardogshub.uk (Stand Oktober 2026)"
+            "Datenbank von wardogshub.uk (Stand Oktober 2026)",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Rund $1.000 – die zehnfache Ausgabe gegenüber dem einfachen Schirm.\nAnwendung: Nach der Bezeichnung besser steuerbar. Für wen sich das lohnt, hängt daran, ob du beim Absprung ein bestimmtes Dach treffen willst oder nur irgendwie herunterkommen musst.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Wardog 34, rund $700 – in Season 1 kostete er $1.000, der einfache Schirm dafür nur $100 statt heute $500. Der Abstand zwischen beiden ist damit von zehnfach auf etwa das Eineinhalbfache geschrumpft.\nAnwendung: Nach der Bezeichnung besser steuerbar. Seit Season 2 ist der Aufpreis so klein, dass die Frage kaum noch eine ist – wer überhaupt springt, nimmt den Sportschirm.",
         "felder": {
-            "preis": "1000",
-            "rolle": "Absprung, steuerbar"
+            "preis": "700",
+            "rolle": "Absprung, steuerbar",
+            "freischaltung": "Wardog 34"
         },
         "gruppe": "fallschirm"
     },
@@ -3010,16 +3125,21 @@
     },
     {
         "slug": "wardogs-tcx-spear",
-        "title": "TCX Spear",
+        "title": "TCX-SPR",
         "typ": "waffe",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Eines von vier Gewehren, die mit Season 2 dazukommen, und das einzige neue **Sturmgewehr** darunter.\nWas es gegenüber AK-74, Galil oder M4 leisten soll, hat BULKHEAD nicht gesagt. Angekündigt sind parallel Anpassungen an Schaden, Rückstoß und Suppression mit dem Ziel, den Waffenklassen klarere Rollen zu geben – wo sich die TCX Spear darin einsortiert, zeigt erst das Spiel.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Assault 20, einmalig rund $100.000, danach rund $3.200 pro Leben. Das einzige neue Sturmgewehr der Season 2, im Kaliber 7,62 × 39 mm, und es nimmt im Assault-Track den Platz ein, auf dem vorher die M4 stand – die ist auf Stufe 28 gewandert. Das 28-Schuss-Magazin kommt mit.\nAnwendung: der neue Mittelweg der Assault-Linie. Achtung bei der Rechnung: Season 2 hat den Grundschaden von 7,62 × 39 mm um 19 % gesenkt, die TCX-SPR trifft also weniger hart als dieselbe Munition in Season 1. Dafür liegt sie laut Entwickler näher an M4 und FAL als vorher.",
         "felder": {
             "rolle": "Sturmgewehr",
-            "hinweis": "Neu in Season 2"
+            "hinweis": "Neu in Season 2",
+            "preis": "3200",
+            "freischaltung": "Assault 20",
+            "freischaltkosten": "100000",
+            "kaliber": "7,62 × 39 mm"
         },
         "gruppe": "sturmgewehr",
         "sofort": true
@@ -3029,13 +3149,18 @@
         "title": "M14",
         "typ": "waffe",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Ein Selbstladegewehr mit Holzschaft für die mittlere bis lange Distanz – die Lücke zwischen Sturmgewehr und Scharfschützengewehr.\nFür Recon-Spieler ist das die interessanteste der vier neuen Waffen: ein DMR verlangt kein Ausharren auf einer Sichtlinie, sondern erlaubt Treffer auf Entfernung, während man beweglich bleibt. Wie weit, hängt an Mündungsgeschwindigkeit und Zeroing-Bereich, und beides steht noch nicht fest.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Recon 25, einmalig rund $100.000, danach rund $7.400 pro Leben. Ein Selbstladegewehr mit Holzschaft im Kaliber .308 Winchester – die Lücke zwischen Sturmgewehr und Scharfschützengewehr.\nAnwendung: für Recon-Spieler die interessanteste der vier neuen Waffen: Ein DMR verlangt kein Ausharren auf einer Sichtlinie, sondern erlaubt Treffer auf Entfernung in Bewegung. Rechne den Schadens-Rework mit: .308 verliert in Season 2 25 % Grundschaden, und bei DMRs sind Kopf- und Oberkörpertreffer ausdrücklich schwächer als vorher. Sie schlägt härter zu als ein Sturmgewehr, ist aber kein schneller feuerndes Scharfschützengewehr.",
         "felder": {
-            "rolle": "Designated Marksman Rifle (DMR)",
-            "hinweis": "Neu in Season 2"
+            "rolle": "Marksman Rifle",
+            "hinweis": "Neu in Season 2",
+            "preis": "7400",
+            "freischaltung": "Recon 25",
+            "freischaltkosten": "100000",
+            "kaliber": ".308 Winchester"
         },
         "gruppe": "scharfschuetze",
         "sofort": true
@@ -3045,30 +3170,38 @@
         "title": "PP-19 Bizon",
         "typ": "waffe",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Eine Maschinenpistole – und damit die Waffengattung, die im Spiel am Medic-Track hängt.\nNicht zu verwechseln mit der **PP-19 Vityaz**, die seit Season 1 ab Medic 4 im Katalog steht. Ob die Bizon diese ersetzt, ergänzt oder an einer anderen Stufe hängt, geht aus der Ankündigung nicht hervor.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Von Anfang an freigeschaltet, rund $1.000 pro Leben – die neue freie Maschinenpistole des Medic. Sie übernimmt den Platz der AMP-9, die seit Season 2 Medic 20 und rund $75.000 Gebühr kostet. Das 53-Schuss-Magazin liegt bei.\nAnwendung: die Standardwaffe für Sanitäter ab Runde eins, und mit 53 Schuss im Magazin die mit der längsten Feuerdauer in dieser Klasse. Kurz genug, um beim Aufstellen eines Gefallenen nicht im Weg zu sein, und billig genug, um sie nicht zu vermissen.",
         "felder": {
             "rolle": "Maschinenpistole",
-            "hinweis": "Neu in Season 2"
+            "hinweis": "Neu in Season 2",
+            "preis": "1000",
+            "freischaltung": "Medic – von Anfang an freigeschaltet",
+            "kaliber": "9 × 19 mm"
         },
         "gruppe": "sturmgewehr",
-        "sofort": true
+        "start": true
     },
     {
         "slug": "wardogs-evo-3-ultra",
         "title": "Evo-3 Ultra",
         "typ": "waffe",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Ein gurtgefüttertes leichtes Maschinengewehr, das sich zwischen M249 SAW und PKM einsortiert.\nDas Kaliber ist auf dem Gehäuse abzulesen: **7,62 × 51 mm**, also die schwerere der beiden MG-Patronen im Spiel. Das spricht für Reichweite und Durchschlag auf Kosten von Gewicht und Munitionsmenge – und Gewicht entscheidet in Wardogs über die Gewichtsklasse.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Support 30, einmalig rund $200.000, danach rund $7.250 pro Leben. Ein gurtgefüttertes leichtes Maschinengewehr im Kaliber .308 Winchester, mit 50-Schuss-Box.\nAnwendung: Mit rund $7.250 pro Leben das teuerste MG im Spiel – und das in einer Season, die LMGs ausdrücklich zurückgenommen hat: .308 verliert 25 % Grundschaden, und der Körperschaden von LMGs entspricht jetzt dem von Sturmgewehren. Der Vorteil liegt in Dauerfeuer und Magazingröße, nicht mehr im Schaden pro Treffer. Wer eine Stellung hält, bekommt dafür die ruhigste Feuerplattform im Spiel.",
         "felder": {
-            "kaliber": "7,62 × 51 mm",
+            "kaliber": ".308 Winchester",
             "rolle": "Leichtes Maschinengewehr",
-            "hinweis": "Neu in Season 2"
+            "hinweis": "Neu in Season 2",
+            "preis": "7250",
+            "freischaltung": "Support 30",
+            "freischaltkosten": "200000"
         },
         "gruppe": "mg",
         "sofort": true
@@ -3078,13 +3211,17 @@
         "title": "Molotov",
         "typ": "wurfwaffe",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Ein Brandsatz, der beim Aufprall eine Fläche entzündet und jeden im Radius verletzt. Über- und Unterhandwurf sind möglich.\nBULKHEAD nennt zwei Zwecke, und der zweite ist der interessantere: Schaden **und Flächenverweigerung**. Bisher gab es im Spiel nichts, womit man einen Raum für mehrere Sekunden unbenutzbar macht, ohne ihn zu halten. Für Treppenhäuser, Durchfahrten und die Zufahrt zu einer FOB ändert das die Rechnung.\nIn der Ankündigung wird der Molotov nicht in der Waffenliste geführt, sondern als eigener Punkt – zusammen mit dem Regen, der erstmals Feuchtigkeit ins Spiel bringt. Ob beides miteinander interagiert, steht nirgends.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Assault 13, einmalig rund $25.000, danach rund $340 pro Stück. Ein geworfener Brandsatz, der beim Aufprall Feuer verspritzt und jeden verbrennt, der darin steht. Über- und Unterhandwurf sind möglich.\nAnwendung: Er verursacht Aufprallschaden, und die Flammen wirken über Zeit. Zwei Eigenheiten machen ihn interessant: Er entzündet zerstörbares Laub, und **Regen schwächt sein Feuer** – im neuen Regenwetter ist er also die schlechtere Wahl. Für $340 das billigste Mittel, um eine Stellung oder ein Treppenhaus für einige Sekunden unbenutzbar zu machen.",
         "felder": {
-            "rolle": "Brandsatz zur Flächenverweigerung",
-            "hinweis": "Neu in Season 2"
+            "rolle": "Brandsatz",
+            "hinweis": "Neu in Season 2",
+            "preis": "340",
+            "freischaltung": "Assault 13",
+            "freischaltkosten": "25000"
         },
         "gruppe": "wurfwaffe",
         "sofort": true
@@ -3094,45 +3231,57 @@
         "title": "Wolf-110",
         "typ": "fahrzeug",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Ein schneller, leichter Transporter auf Rädern.\nOb er Fracht trägt, sagt die Ankündigung nicht – und genau das entscheidet, ob er für Logistik taugt oder nur zum Bewegen von Leuten. Der Kodiak ist bisher das schnellste Radfahrzeug ohne Freischaltung; ob der Wolf-110 ihn ablöst oder daneben steht, zeigt der Händler.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 8, einmalig rund $50.000, danach rund $2.200 pro Stück. Ein schneller, leichter Transporter auf Rädern, neu mit Season 2.\nAnwendung: der frühe Schritt im Driver-Track, eine Stufe vor dem Dune Buggy. Zerstört bringt er dem Gegner nur $450 – weniger als jedes andere Fahrzeug außer dem Bobcat. Wer früh Strecke machen muss, ohne ein teures Ziel zu sein, fährt ihn.",
         "felder": {
             "rolle": "Schneller leichter Radtransporter",
-            "hinweis": "Neu in Season 2"
+            "hinweis": "Neu in Season 2",
+            "preis": "2200",
+            "freischaltung": "Driver 8",
+            "freischaltkosten": "50000"
         },
         "gruppe": "lkw",
         "sofort": true
     },
     {
         "slug": "wardogs-wolf-110-assault",
-        "title": "Wolf-110 (Assault)",
+        "title": "Wolf-110 [M2 Browning]",
         "typ": "fahrzeug",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Der Wolf-110 mit einem ringmontierten **M2 Browning**.\nFür bewaffnete Varianten gilt im Spiel bisher eine Faustregel: Sie tragen nicht mehr als die unbewaffneten, du zahlst für Feuerkraft und Sitzplätze. Ob das hier genauso ist, wissen wir nicht.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 16, einmalig rund $125.000, danach rund $7.800 pro Stück. Der Wolf-110 mit einem ringmontierten **M2 Browning**.\nAnwendung: die bewaffnete Variante schließt im Driver-Track die Lücke vor dem L2A6 – Fahrer, die Kills suchen, müssen nicht mehr bis Stufe 35 warten. Der Preis dafür: Zerstört bringt er dem Gegner $3.900 statt $450, und bewaffnete Varianten geben seit Season 2 das Eineinhalbfache an XP.",
         "felder": {
-            "rolle": "Bewaffneter Radtransporter mit M2 Browning",
-            "hinweis": "Neu in Season 2"
+            "rolle": "Radtransporter mit M2 Browning",
+            "hinweis": "Neu in Season 2",
+            "preis": "7800",
+            "freischaltung": "Driver 16",
+            "freischaltkosten": "125000"
         },
         "gruppe": "lkw",
         "sofort": true
     },
     {
         "slug": "wardogs-t-72",
-        "title": "T-72",
+        "title": "T-72B3",
         "typ": "fahrzeug",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Ein Kampfpanzer, den BULKHEAD ausdrücklich gegen den Leopard stellt: **langsamer, dafür billiger und deutlich sparsamer im Verbrauch**.\nDas ist die erste echte Wahl bei schwerem Gerät. Sprit kommt aus dem FOB-Lager und muss gefahren werden – ein Panzer, der weniger verbraucht, kostet das Team weniger Logistik. Wer rechnet, vergleicht nicht nur den Anschaffungspreis, sondern auch, wie viele Fuel-Paletten er pro Runde frisst.\nDie Trefferzonen dürften dieselben bleiben: Heck zuerst.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Driver 20, einmalig rund $250.000, danach rund $16.000 pro Stück. Ein Kampfpanzer, den BULKHEAD ausdrücklich gegen den L2A6 stellt: **langsamer, dafür billiger und etwas sparsamer im Verbrauch.**\nAnwendung: die erste echte Wahl bei schwerem Gerät – und fünfzehn Stufen früher zu haben als der L2A6. Der kostet seit Season 2 rund $22.000 pro Stück, der T-72B3 $16.000; dazu kommt der geringere Verbrauch, und Sprit muss aus dem FOB-Lager gefahren werden. Wer nicht die letzten Prozent Panzerung braucht, fährt den günstigeren Panzer.",
         "felder": {
             "rolle": "Kampfpanzer",
-            "hinweis": "Neu in Season 2 – langsamer als der Leopard, dafür billiger und sparsamer"
+            "hinweis": "Neu in Season 2 – langsamer als der Leopard, dafür billiger und sparsamer",
+            "preis": "16000",
+            "freischaltung": "Driver 20",
+            "freischaltkosten": "250000"
         },
         "gruppe": "panzer",
         "sofort": true
@@ -3142,13 +3291,16 @@
         "title": "MG Nest",
         "typ": "emplacement",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Eine bemannte Stellung mit **M2 Browning**, gebaut aus Sandsäcken auf einer Plattform.\nBisher gab es gegen Infanterie nur den Mörser für die Fläche und den Stingray gegen Fahrzeuge. Eine direkt gerichtete MG-Stellung schließt die Lücke dazwischen – zum Preis, dass jemand dahinter sitzen muss und damit sichtbar und ortsfest ist.\nBaukosten stehen noch nicht fest.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund 650 Build-Supplies, großer Hammer. Eine bemannte Stellung mit **M2 Browning**, neu mit Season 2.\nAnwendung: dieselben Kosten wie Stingray und Talon, also kein billiger Zusatz, sondern eine Entscheidung. Anders als Mörser und Flugabwehr braucht sie keine Munitionspalette, sondern einen Mann – und der steht dabei ungeschützt. Zerstört bringt sie dem Gegner $650.",
         "felder": {
             "rolle": "Bemannte M2-Browning-Stellung",
-            "hinweis": "Neu in Season 2"
+            "hinweis": "Neu in Season 2",
+            "baukosten": "650",
+            "freischaltung": "großer Hammer"
         },
         "gruppe": "mg",
         "sofort": true
@@ -3158,13 +3310,16 @@
         "title": "Large Shelter",
         "typ": "bauwerk",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Eine große Metallüberdachung. BULKHEAD beschreibt sie als Schutz für wichtiges Gerät – „oder um den Regen abzuhalten“.\nDer Nebensatz ist der Hinweis: Mit dem Regen kommt erstmals ein Wetter-Preset, das Sicht und Geräusche verändert. Eine Überdachung schirmt außerdem gegen Sicht von oben ab, und das ist in einem Spiel mit Helikoptern und Mörsern kein Nebeneffekt.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Rund 250 Build-Supplies, mittlerer Hammer. Eine große Metallüberdachung, neu mit Season 2. BULKHEAD beschreibt sie als Schutz für wichtiges Gerät – „oder um den Regen abzuhalten“.\nAnwendung: Mit dem neuen Regenwetter ist das kein Scherz: Regen kommt durch zerstörte Dächer, macht Oberflächen sichtbar nass und beeinflusst Spotting-Reichweite und Molotov-Feuer. 250 Supplies sind allerdings mehr als eine Tür und ein Tor zusammen – das lohnt nur über etwas, das den Platz wert ist.",
         "felder": {
-            "rolle": "Große Metallüberdachung",
-            "hinweis": "Neu in Season 2"
+            "rolle": "Bauwerk",
+            "hinweis": "Neu in Season 2",
+            "baukosten": "250",
+            "freischaltung": "mittlerer Hammer"
         },
         "gruppe": "bauwerk",
         "sofort": true
@@ -3174,13 +3329,15 @@
         "title": "Wooden Step",
         "typ": "bauwerk",
         "quellen": [
-            "Steam-Ankündigung „WARDOGS | Season 02 Preview\" von BULKHEAD, 09.10.2026"
+            "Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026",
+            "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
-        "geprueft": "nein – angekündigt für Season 2 am 15.10.2026, von uns nicht im Spiel gesehen. Preise und Freischaltstufen stehen noch nicht fest; die vollständigen Patch Notes hat BULKHEAD für die Woche nach der Ankündigung angekündigt.",
-        "text": "Die Beschreibung des Entwicklers lautet vollständig: „A step. Made of wood.“\nSo unscheinbar das klingt – eine Stufe löst ein Problem, das jeder kennt, der eine FOB gebaut hat: An eine Mauer kommt man nur heran, wenn man dahinter stehen kann. Wer bisher auf einen Container oder eine Sandsackreihe klettern musste, bekommt jetzt das passende Teil dafür.\n\n> [!hinweis] Dieser Eintrag beschreibt angekündigte Inhalte aus der Season-2-Vorschau vom 9. Oktober 2026. Preis, Freischaltung und Werte tragen wir nach, sobald sie im Spiel ablesbar sind.",
+        "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
+        "text": "Kleiner Hammer. Die Beschreibung des Entwicklers lautet vollständig: „A step. Made of wood.“\nAnwendung: eine Stufe, um Höhenunterschiede zu überbrücken – ab dem kleinen Hammer verfügbar und damit das erste neue Bauteil, das jeder bauen kann. Die Patch Notes nennen in der Kostenliste eine „Wood Base“ mit 15 Build-Supplies; ob damit diese Stufe gemeint ist, geht aus dem Text nicht eindeutig hervor, deshalb steht hier kein Preis.",
         "felder": {
-            "rolle": "Holzstufe",
-            "hinweis": "Neu in Season 2"
+            "rolle": "Bauwerk",
+            "hinweis": "Build-Supply-Kosten in den Patch Notes nicht eindeutig benannt",
+            "freischaltung": "kleiner Hammer"
         },
         "gruppe": "bauwerk",
         "sofort": true

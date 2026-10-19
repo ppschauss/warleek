@@ -389,11 +389,10 @@ function warleek_reddit_text( $post ) {
 	if ( '' !== end( $zeilen ) ) { $zeilen[] = ''; }
 	$zeilen[] = '---';
 	$zeilen[] = '';
-	// Achtung: Bei Datenbank-Einträgen steht hier ein String, bei Guides eine
-	// Liste. `(array) ''` ergäbe `array('')` – deshalb vorher prüfen.
-	$roh      = get_post_meta( $post->ID, '_warleek_quellen', true );
-	$quellen  = is_array( $roh ) ? $roh : array_filter( array_map( 'trim', explode( "\n", (string) $roh ) ) );
-	$quellen  = array_values( array_filter( array_map( 'strval', $quellen ) ) );
+	// Bei Datenbank-Einträgen steht hier ein String mit einer Quelle je Zeile,
+	// bei Guides eine Liste. `warleek_item_quellen_teilen()` nimmt beides und
+	// liest auch den alten Trenner ` | ` noch mit.
+	$quellen  = warleek_item_quellen_teilen( get_post_meta( $post->ID, '_warleek_quellen', true ) );
 	if ( $quellen ) {
 		$zeilen[] = '**Quellen:** ' . implode( ' · ', $quellen );
 		$zeilen[] = '';

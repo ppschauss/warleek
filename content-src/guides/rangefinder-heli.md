@@ -5,19 +5,19 @@ thema: gameplay
 order: 16
 image: guide-rangefinder
 image_alt: Montage aus zwei Bildern - links ein Beobachter mit Fernglas auf einem Dach, rechts der Blick aus einem Helikoptercockpit mit eingezeichneten Markierungen
-excerpt: Mit dem Entfernungsmesser in der Hand einsteigen, dann in die Ego-Perspektive wechseln – und als Pilot das Lagebild des Teams sehen. Seit dem 2. Oktober deaktiviert, ab Season 2 mit Batterien zurück.
+excerpt: Mit dem Entfernungsmesser in der Hand einsteigen, dann in die Ego-Perspektive wechseln – und als Pilot das Lagebild des Teams sehen. Seit Season 2 ist das Gerät zurück, läuft aber auf Batterien.
 seo_title: Wardogs Entfernungsmesser im Heli – Trick Deutsch | Warleek
 seo_description: Als Pilot alle Markierungen des Teams sehen – und warum das Gerät gerade fehlt. Für Spieler in Deutschland, Österreich und der Schweiz.
-quellen: [Im Spiel beobachtet von Patrick Schauß (Warleek), Oktober 2026, 'Steam-Hotfix vom 02.10.2026: IR-Rangefinder deaktiviert, Rückkehr mit Season 2 gegen Batterien']
-geprueft: im Spiel beobachtet (Oktober 2026); dass das Gerät seit dem 02.10. draußen ist und mit Season 2 gegen Batterien zurückkommt, von Patrick Schauß bestätigt. Reichweite und Dauer nicht systematisch vermessen
+quellen: [Im Spiel beobachtet von Patrick Schauß (Warleek), Oktober 2026, 'Steam-Hotfix vom 02.10.2026: IR-Rangefinder deaktiviert', 'Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026']
+geprueft: im Spiel beobachtet (Oktober 2026), aber vor Season 2. Die Batteriewerte stammen aus den Patch Notes vom 14.10.2026 und sind von uns nicht nachgemessen
 autor: pilotleek
 frage: Wie sieht ein Pilot in Wardogs alle Markierungen?
-antwort: Entfernungsmesser in die Hand nehmen, dann einsteigen, dann in die Ego-Perspektive wechseln. Auf die Reihenfolge kommt es an. Wichtig: Seit dem Hotfix vom 2. Oktober 2026 ist das Gerät nicht im Spiel und kommt erst mit Season 2 zurück.
+antwort: Entfernungsmesser in die Hand nehmen, dann einsteigen, dann in die Ego-Perspektive wechseln. Auf die Reihenfolge kommt es an. Seit Season 2 läuft das Gerät auf Batterien – eine hält rund 80 Sekunden aktive Nutzung.
 ---
 
-Es gibt einen Griff, der aus einem Transporthubschrauber einen fliegenden Aufklärer macht — und er kostet nichts außer der richtigen Reihenfolge beim Einsteigen. Kostete, genauer gesagt: Seit dem 2. Oktober ist das Gerät nicht mehr zu haben. Ab dem 15. Oktober schon wieder, dann gegen Batterien.
+Es gibt einen Griff, der aus einem Transporthubschrauber einen fliegenden Aufklärer macht — und er kostete nichts außer der richtigen Reihenfolge beim Einsteigen. Kostete, genauer gesagt: Seit Season 2 läuft das Gerät auf Batterien und kostet $3.200 statt $1.200.
 
-> [!hinweis] **Stand 5. Oktober 2026: Der IR-Entfernungsmesser ist nicht im Spiel.** Er wurde mit dem Hotfix vom 2. Oktober aus dem Händler genommen – nach Angabe der Entwickler war er zu stark. Mit **Season 2 am 15. Oktober** kommt er zurück, dann aber **mit Batterien**: als Verbrauchsgut statt als Einmalkauf. Was unten steht, gilt bis dahin nicht und muss danach neu geprüft werden.
+> [!hinweis] **Stand Oktober 2026: Der IR-Entfernungsmesser ist mit Season 2 zurück – auf Batterien.** Nach Angabe der Entwickler hält eine Batterie rund **80 Sekunden aktive Nutzung** und entlädt sich schneller, wenn man das Gerät hastig ein- und ausschaltet. Der Kaufpreis ist von $1.200 auf **$3.200** gestiegen. Wir haben das nach dem 15. Oktober nicht erneut im Spiel geprüft.
 
 > [!stand] Oktober 2026 · Early Access – solche Kniffe können mit jedem Patch verschwinden. Dieser hier ist genau das passiert.
 
@@ -49,7 +49,7 @@ Der Griff ist nur so gut wie die Markierungen, die es gibt. Ohne Recon am Boden 
 
 Die Arbeitsteilung, die sich daraus ergibt:
 
-1. **Ein Recon markiert.** Fernglas ab rund $75, Entfernungsmesser ab Recon 8. Anvisieren, Maustaste halten.
+1. **Ein Recon markiert.** Fernglas ab rund $180, Entfernungsmesser ab Recon 8 (rund $1.450). Anvisieren, Maustaste halten.
 2. **Der Pilot steigt mit gezogenem Entfernungsmesser ein** und wechselt in die Ego-Perspektive.
 3. **Der Pilot fliegt den Anflug** an den Markierungen vorbei statt hindurch.
 
@@ -57,7 +57,7 @@ Für den Recon ändert sich nichts an seiner Arbeit — er markiert ohnehin. Nur
 
 ## Was Season 2 ändert
 
-Ab dem 15. Oktober braucht der Entfernungsmesser **Batterien**. Aus einem Gerät, das man einmal kauft und dann hat, wird eines mit laufenden Kosten — und mit einem Platz im Rucksack für den Nachschub.
+Seit Season 2 braucht der Entfernungsmesser **Batterien**. Aus einem Gerät, das man einmal kauft und dann hat, wird eines mit laufenden Kosten — und mit einem Platz im Rucksack für den Nachschub. Rund 80 Sekunden aktive Nutzung je Batterie heißt: einschalten, Ziel suchen, ausschalten. Nicht durchlaufen lassen.
 
 Für diesen Griff heißt das zweierlei: Er kostet ab dann pro Flug Geld, und er hört auf zu funktionieren, wenn die Ladung leer ist. Ob das Lagebild beim Wechsel in die Ego-Perspektive überhaupt noch erscheint, muss jemand nach dem 15. nachprüfen. Wir tragen es nach, sobald es jemand getan hat.
 
@@ -75,7 +75,7 @@ Wenn du mehr dazu herausfindest — Reichweiten, Dauer, andere Sitze — schreib
 
 ### Funktioniert der Entfernungsmesser-Griff aktuell?
 
-Nein. Das Gerät wurde mit dem Hotfix vom 2. Oktober 2026 aus dem Händler genommen, weil es nach Angabe der Entwickler zu stark war. Mit Season 2 am 15. Oktober kommt es zurück – dann mit Batterien.
+Ja, seit Season 2 wieder. Es war vom Hotfix am 2. Oktober 2026 bis zum 15. Oktober aus dem Händler genommen, weil es nach Angabe der Entwickler zu stark war. Jetzt läuft es auf Batterien und kostet $3.200 statt $1.200.
 
 ### In welcher Reihenfolge muss man vorgehen?
 
@@ -83,7 +83,7 @@ Der Entfernungsmesser muss gezogen sein, bevor du einsteigst – nicht danach. E
 
 ### Was ändert Season 2 an diesem Griff?
 
-Der Entfernungsmesser wird zum Verbrauchsgut: Er braucht Batterien, kostet damit pro Flug Geld und belegt einen Platz im Rucksack für den Nachschub. Ob das Lagebild danach überhaupt noch erscheint, muss jemand nach dem 15. Oktober nachprüfen.
+Der Entfernungsmesser ist ein Verbrauchsgut geworden: Er braucht Batterien, kostet damit pro Flug Geld und belegt einen Platz im Rucksack für den Nachschub. Ob das Lagebild danach überhaupt noch erscheint, haben wir seit Season 2 nicht nachgeprüft.
 
 ### Was ist an diesem Griff nicht geprüft?
 

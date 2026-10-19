@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.32.2
+Stable tag: 2.33.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,15 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.33.0 =
+* Season 2: 98 Datenbank-Einträge auf die Werte der Patch Notes vom 14.10.2026 gebracht – 79 Preise, 96 Track-Verschiebungen, 22 Freischaltgebühren und die Baukosten. Jede Änderung steht im Verlauf des Eintrags.
+* Fünf neue Guides zu Season 2 (Schadens-Rework, Progression, Preise, Bauen, Lonestar-Bonus); zwölf bestehende Guides auf die neuen Zahlen gezogen.
+* Patch Notes: Platzhalter eines Blocks, der in einem Zitat steckte, stand sichtbar im Text und in der Meta-Beschreibung – wird jetzt aufgelöst.
+* Patch Notes: Markdown-Fluchtzeichen aus dem Steam-Rohtext („Kodiak \[M249]") werden entfernt.
+* Patch Notes: Der Auszug wird beim Übersetzen neu gesetzt – vorher blieb die englische Fassung in der Meta-Beschreibung stehen. Bestehende Notes repariert ein einmaliger Durchlauf.
+* Quellen eines Eintrags stehen zeilenweise statt mit „ | “ getrennt; eine Quelle mit senkrechtem Strich im Titel wurde sonst zerlegt.
+* Der Stand eines Eintrags kommt aus seinen Quellen, statt an zwei Stellen verschieden zu behaupten.
 
 = 2.32.2 =
 * Reddit: Der Beitrag zu einem Datenbank-Eintrag trägt jetzt das Datenblatt als Tabelle. Vorher bestand er aus einem Satz und einem Link – bei einem Eintrag pro Tag wäre das als Spam gelesen worden.

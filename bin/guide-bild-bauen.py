@@ -202,6 +202,62 @@ REZEPTE = {
         unterzeile="",
         name="hero-community-reddit",
     ),
+    # --- Season 2 -----------------------------------------------------------
+    "s2-schaden": dict(
+        hintergrund="gruppe-scharfschuetze.webp",
+        kacheln=[
+            ("wardogs-panzerung-4.webp",  (34, 60), (352, 198), -5, 0.90),
+            ("wardogs-fal.webp",          (598, 46), (352, 198), 4, 0.92),
+            ("wardogs-bmr-308.webp", (316, 130), (392, 220), -2, 1.06),
+        ],
+        titel="",
+        unterzeile="",
+        name="guide-s2-schaden",
+    ),
+    "s2-progression": dict(
+        hintergrund="gruppe-sturmgewehr.webp",
+        kacheln=[
+            ("wardogs-mp5.webp",          (30, 64), (348, 196), -6, 0.90),
+            ("wardogs-medizintasche.webp",(604, 50), (348, 196), 5, 0.93),
+            ("wardogs-pkm.webp",          (318, 128), (392, 220), -2, 1.05),
+        ],
+        titel="",
+        unterzeile="",
+        name="guide-s2-progression",
+    ),
+    "s2-preise": dict(
+        hintergrund="gruppe-lkw.webp",
+        kacheln=[
+            ("wardogs-ak-74.webp",        (32, 62), (350, 197), -5, 0.90),
+            ("wardogs-l2a6.webp",         (600, 48), (350, 197), 4, 0.94),
+            ("wardogs-helm-4.webp",       (318, 130), (388, 218), -2, 1.06),
+        ],
+        titel="",
+        unterzeile="",
+        name="guide-s2-preise",
+    ),
+    "s2-bauen": dict(
+        hintergrund="typ-bauwerk.webp",
+        kacheln=[
+            ("wardogs-tor.webp",          (34, 58), (352, 198), -5, 0.90),
+            ("wardogs-l81-moerser.webp",  (598, 46), (352, 198), 5, 0.93),
+            ("wardogs-drill-rig.webp",    (316, 128), (392, 220), -2, 1.06),
+        ],
+        titel="",
+        unterzeile="",
+        name="guide-s2-bauen",
+    ),
+    "s2-lonestar": dict(
+        hintergrund="gruppe-panzer.webp",
+        kacheln=[
+            ("wardogs-kodiak.webp",       (32, 60), (350, 197), -5, 0.90),
+            ("wardogs-palette-build.webp",(602, 48), (350, 197), 4, 0.95),
+            ("wardogs-fob.webp",          (318, 130), (390, 219), -2, 1.05),
+        ],
+        titel="",
+        unterzeile="",
+        name="guide-s2-lonestar",
+    ),
     "munition": dict(
         hintergrund="gruppe-mg.webp",
         kacheln=[

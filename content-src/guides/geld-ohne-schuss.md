@@ -5,33 +5,35 @@ thema: einsteiger
 order: 7
 image: guide-recon
 image_alt: Spaeher liegt mit Fernglas an einer Mauerkante und beobachtet ein Tal, das Gewehr abgelegt neben sich
-excerpt: Fernglas für $75, Leute fahren, Wiederbeleben: vier Wege, mit denen du dein Konto füllst, bevor du überhaupt eine ordentliche Waffe hast.
+excerpt: Fernglas für $180, Leute fahren, Wiederbeleben: vier Wege, mit denen du dein Konto füllst, bevor du überhaupt eine ordentliche Waffe hast.
 seo_title: Wardogs Geld verdienen ohne Kämpfen – Guide Deutsch | Warleek
 seo_description: Spotten, transportieren, wiederbeleben, liefern: Geld verdienen ohne zu kämpfen. Einsteiger-Guide für Deutschland, Österreich und die Schweiz.
-quellen: [Öffentliche Community-Guides zu WARDOGS (Stand Oktober 2026)]
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', Öffentliche Community-Guides zu WARDOGS (Stand Oktober 2026)]
 geprueft: nein
 autor: starterleek
 frage: Wie verdient man in Wardogs Geld, ohne zu kämpfen?
-antwort: Vier Wege: Gegner mit dem Fernglas für $75 markieren, Teamkollegen mit einem billigen Fahrzeug transportieren, Gefallene wiederbeleben und Versorgungspaletten fahren. Eine Palette kostet rund $400 und bringt bei der Abgabe rund $2.500.
+antwort: Vier Wege: Gegner mit dem Fernglas für $180 markieren, Teamkollegen mit einem billigen Fahrzeug transportieren, Gefallene wiederbeleben und Versorgungspaletten fahren. Eine Palette kostet rund $400 und bringt bei der Abgabe rund $2.500.
 ---
 
 Du startest mit $10.000 und einem kostenlosen Gewehr. Wer damit sofort in Gefechte geht, ist nach zwanzig Minuten pleite und hat nichts gelernt. Es gibt vier Tätigkeiten, die zuverlässig zahlen und bei denen dich praktisch niemand erschießt.
 
-> [!stand] Oktober 2026 · Early Access – Beträge ändern sich mit Patches.
+> [!stand] Oktober 2026 · Early Access – Stand nach dem Season-2-Update vom 15.10.2026. Beträge ändern sich mit Patches.
 
-## 1. Das Fernglas für $75
+## 1. Das Fernglas für $180
 
 Die billigste Anschaffung im Spiel mit dem besten Verhältnis. Gegner anvisieren, Maustaste halten — die Markierung steht für das ganze Team.
 
 Du bekommst sofort einen kleinen Betrag, und wenn jemand den markierten Gegner erledigt, kommt ein Assist in dreistelliger Höhe dazu. **Dein Mündungsfeuer verrät dich dabei nicht**, weil es keines gibt.
 
-> [!hinweis] Als Anfänger ist das Fernglas deine erste Investition, nicht die bessere Waffe. $75 Risiko gegen einen Ertrag, der den ganzen Abend läuft.
+> [!hinweis] Als Anfänger ist das Fernglas deine erste Investition, nicht die bessere Waffe. $180 Risiko gegen einen Ertrag, der den ganzen Abend läuft.
+
+Season 2 hat die Spotting-Belohnungen um rund 30 % gesenkt und das Fernglas von $75 auf $180 verteuert. Es bleibt der beste Einstieg — die Beträge skalieren jetzt mit dem Wert des markierten Ziels, ein Panzer zahlt also mehr als eine Kiste.
 
 Nebenbei steigt dein Recon-Track — und der schaltet die Dinge frei, die du später sowieso willst.
 
 ## 2. Leute fahren
 
-Kauf dir ein billiges Fahrzeug und bring Teamkollegen dorthin, wo sie gebraucht werden. Ein Transport in die Hot Zone bringt $500 bis $1.000 pro Person, nochmal rund $500, wenn der Mitfahrer überlebt, und laufend etwas für jeden Abschuss, den er danach macht.
+Kauf dir ein billiges Fahrzeug und bring Teamkollegen dorthin, wo sie gebraucht werden. Ein Transport in die Hot Zone bringt seit Season 2 rund $350 pro Person im Bodenfahrzeug (vorher $500), die Rückfahrt rund $150 (vorher $250). Neu ist dafür die **Rückfahrt-Serie**: +$50 je Fahrt in Folge, bis zu zehnmal. Wer pendelt statt das Fahrzeug stehenzulassen, verdient mehr als vorher.
 
 Der **Bobcat** für rund $500 reicht dafür. Vier Leute bewegst du mit dem Kodiak für rund $2.500 — der ist mit rund 154 km/h außerdem das schnellste Rad-Fahrzeug im Spiel.
 
@@ -55,7 +57,7 @@ Der häufigste Anfängerfehler ist, das erste verdiente Geld in die teuerste ver
 
 Die Reihenfolge, die funktioniert:
 
-1. Fernglas ($75)
+1. Fernglas ($180)
 2. Ein billiges Fahrzeug ($500–2.500)
 3. Der kleine Hammer ($100) — Sandsäcke an der richtigen Stelle halten dich am Leben
 4. **Erst dann** eine bessere Waffe
@@ -72,7 +74,7 @@ Dass sie nebenbei auch dein Team gewinnen lassen, ist kein Zufall.
 
 ### Was ist die beste erste Investition in Wardogs?
 
-Das Fernglas für $75. Markieren bringt sofort einen kleinen Betrag und Assists in dreistelliger Höhe – und es verrät deine Position nicht, weil es kein Mündungsfeuer gibt.
+Das Fernglas für $180. Markieren bringt sofort einen kleinen Betrag und Assists in dreistelliger Höhe – und es verrät deine Position nicht, weil es kein Mündungsfeuer gibt.
 
 ### Wie viel bringt ein Transport in die Hot Zone?
 

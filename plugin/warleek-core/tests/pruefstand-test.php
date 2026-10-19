@@ -63,4 +63,20 @@ foreach ( $proben as $wert ) {
 /* 5) Die Auswahlliste deckt genau die Stände des Herkunftsnachweises ab */
 p_chk( 'auswahl deckt alle stände', array( 'aus-quellen', 'im-spiel-beobachtet', 'im-spiel-geprueft' ) === array_keys( warleek_pruefstaende() ) );
 
+/* 6) Quellen zerlegen: Zeilen gewinnen, der alte Trenner wird noch gelesen.
+      Anlass: Die Season-2-Patch-Notes heißen „WARDOGS | Season 02 Patch Notes“ –
+      mit dem alten ` | ` als Trenner wurde die Angabe mitten im Titel zerlegt
+      und stand auf der Seite, im Reddit-Beitrag und im Herkunftsnachweis als
+      zwei halbe Quellen. */
+$neu = "Quelle A\nSteam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026";
+p_chk( 'zeilenweise: zwei Quellen', 2 === count( warleek_item_quellen_teilen( $neu ) ),
+	count( warleek_item_quellen_teilen( $neu ) ) . ' Teile' );
+p_chk( 'senkrechter Strich bleibt im Titel',
+	false !== strpos( warleek_item_quellen_teilen( $neu )[1] ?? '', 'WARDOGS | Season 02' ),
+	warleek_item_quellen_teilen( $neu )[1] ?? '—' );
+p_chk( 'alter Trenner wird gelesen', array( 'A', 'B' ) === warleek_item_quellen_teilen( 'A | B' ) );
+p_chk( 'einzelne Quelle bleibt ganz', array( 'Nur eine' ) === warleek_item_quellen_teilen( 'Nur eine' ) );
+p_chk( 'liste geht auch', array( 'A', 'B' ) === warleek_item_quellen_teilen( array( 'A', ' B ', '' ) ) );
+p_chk( 'leer bleibt leer', array() === warleek_item_quellen_teilen( '' ) );
+
 echo $GLOBALS['wl_pruef_fehler'] ? $GLOBALS['wl_pruef_fehler'] . " FAILED\n" : "OK\n";
