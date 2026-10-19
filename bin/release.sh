@@ -78,7 +78,10 @@ if [[ $PUBLISH -eq 0 ]]; then
 fi
 
 command -v gh >/dev/null || fehler "gh (GitHub CLI) fehlt."
-gh auth status >/dev/null 2>&1 || fehler "gh ist nicht angemeldet."
+# Nicht der Rückgabewert von `gh auth status` zählt, sondern ob das **aktive**
+# Konto angemeldet ist: Ein zweites, abgelaufenes Konto in hosts.yml lässt den
+# Befehl scheitern, obwohl die Veröffentlichung laufen würde.
+gh auth status --active >/dev/null 2>&1 || gh api user >/dev/null 2>&1 || fehler "gh ist nicht angemeldet."
 
 git tag -a "$TAG" -m "Warleek $VERSION"
 git push origin "$TAG"
