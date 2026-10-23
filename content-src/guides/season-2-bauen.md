@@ -2,7 +2,7 @@
 title: "Bauen ist eine Investition geworden: die neuen Baukosten"
 slug: wardogs-season-2-bauen
 thema: fob
-order: 25
+order: 26
 image: guide-s2-bauen
 image_alt: Tor, Moerser und Drill Rig als Kacheln vor einem abgedunkelten Spielhintergrund
 excerpt: Der Mörser kostet das Vierfache, das Tor mehr als das Doppelte, und der Drill Rig läuft kürzer bei mehr Verbrauch. Was Season 2 am FOB-Bau geändert hat – und wie man jetzt plant.

@@ -2,22 +2,22 @@
 title: Flugabwehr: Talon und Vanguard CIWS bauen – und umfliegen
 slug: wardogs-flugabwehr
 thema: fob
-order: 23
+order: 24
 image: guide-flugabwehr
 image_alt: Flugabwehrstellung mit angewinkelten Startrohren auf einer Betonplatte, ein Helikopter dreht in der Ferne ab
 excerpt: Die beiden teuersten Bauwerke im Spiel, ihr Nutzen und ihre Schwäche. Dazu: wie du als Pilot an ihnen vorbeikommst und wie du sie vom Boden aus abräumst.
 seo_title: Wardogs Flugabwehr Deutsch: Talon & CIWS | Warleek
 seo_description: Talon 9K-SAM und Vanguard CIWS bauen, platzieren, umfliegen und zerstören. Flugabwehr-Guide für Wardogs auf Deutsch, für die DACH-Region.
-quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
-geprueft: nein
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', 'Öffentliche Community-Guides und Wikis zu WARDOGS (Stand Oktober 2026)']
+geprueft: nein – Baukosten aus den Season-2-Patch-Notes, von uns nicht im Spiel nachgebaut
 autor: engineerleek
 frage: Wann lohnt sich Flugabwehr in Wardogs?
-antwort: Erst wenn der Gegner tatsächlich mit Helikoptern arbeitet, die Sichtlinien geschlossen sind und der Nachschub steht. Der Talon 9K-SAM kostet rund 601 Build-Supplies, der Vanguard CIWS rund 901 – das sind mehrere Logistikrunden.
+antwort: Erst wenn der Gegner tatsächlich mit Helikoptern arbeitet, die Sichtlinien geschlossen sind und der Nachschub steht. Seit Season 2 kostet der Talon 9K-SAM 650 Build-Supplies, der Vanguard CIWS 1.200 – das sind mehrere Logistikrunden.
 ---
 
 Helikopter sind in Wardogs der schnellste Weg, Leute in die Zone zu bringen. Entsprechend ist Flugabwehr die Antwort darauf – und gleichzeitig der teuerste Posten auf jeder Baustelle.
 
-> [!stand] September 2026 · Early Access – Kosten und Werte ändern sich mit Patches.
+> [!stand] Oktober 2026 · Early Access – Baukosten auf dem Stand der Season-02-Patch-Notes vom 14.10.2026.
 
 ## Die beiden Systeme
 
@@ -25,7 +25,9 @@ Helikopter sind in Wardogs der schnellste Weg, Leute in die Zone zu bringen. Ent
 | --- | --- | --- |
 | Art | Wärmesuchende Raketen, nachladbar | Schnellfeuerkanone, manuell bedient |
 | Reichweite | weit | nah |
-| Baukosten | rund 601 Build-Supplies | rund 901 Build-Supplies |
+| Baukosten | 650 Build-Supplies | 1.200 Build-Supplies |
+| Nachladen | 5 Sekunden (vorher 2) | laufend |
+| Nachschub je Munitionspalette | 200 Schuss (vorher 50) | — |
 | Wirkung | zwingt Piloten zu Ausweichmanövern und Fackeln | zerlegt alles, was in ihrem Bogen verweilt |
 | Track | Support | Support |
 
@@ -37,7 +39,9 @@ Beide sind **gebaute** Anlagen, keine Fundstücke: Sie entstehen an einer FOB mi
 
 ## Wann sie sich lohnen – und wann nicht
 
-Ehrlich gerechnet: 901 Build-Supplies sind mehrere Logistikrunden. Dafür bekommst du rund zwanzig HESCO-Wandsegmente.
+Ehrlich gerechnet: 1.200 Build-Supplies sind mehrere Logistikrunden. Dafür bekommst du rund sechsundzwanzig HESCO-Wandsegmente.
+
+Season 2 hat die Rechnung verschoben: Der Talon wurde von 1.000 auf 650 Supplies **billiger**, der CIWS von 1.500 auf 1.200 – während Mörser (600) und Stingray (650) teurer wurden. Die vier Stellungen liegen damit preislich eng beieinander, und die Wahl ist eine taktische, keine finanzielle mehr. Dafür lädt der Talon jetzt 5 statt 2 Sekunden nach, und der CIWS unterscheidet beim Schaden gegen Bauwerke: Er zerlegt leichte Deckung und tut sich an schweren Befestigungen schwer.
 
 **Bau Flugabwehr, wenn:**
 - Der Gegner tatsächlich mit Helikoptern arbeitet – Taxi-Flüge, Angriffs-Helis, Nachschub aus der Luft.

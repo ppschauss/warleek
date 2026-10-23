@@ -2,14 +2,14 @@
 title: Support und Hammer: was du womit bauen darfst
 slug: wardogs-support-bauen
 thema: fob
-order: 21
+order: 22
 image: guide-support-bauen
 image_alt: Soldat baut mit schwerem Hammer eine HESCO-Mauer in einer Forward Operating Base, Nachschubpaletten daneben
 excerpt: Kleiner, mittlerer, großer Hammer – die drei Stufen entscheiden, was auf deiner Baustelle entsteht. Plus: was ein Bauwerk wirklich kostet.
 seo_title: Wardogs Support & Bauen – Guide auf Deutsch | Warleek
 seo_description: Hammer-Stufen, Baukosten und was sich zuerst lohnt: Support in Wardogs auf Deutsch erklärt, für Deutschland, Österreich und die Schweiz.
-quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
-geprueft: nein
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', 'Öffentliche Community-Guides und Wikis zu WARDOGS (Stand Oktober 2026)']
+geprueft: nein – Baukosten aus den Season-2-Patch-Notes, von uns nicht im Spiel nachgebaut
 autor: engineerleek
 frage: Welchen Hammer braucht man in Wardogs zum Bauen?
 antwort: Der kleine Hammer baut nur Basics wie Sandsäcke und Stacheldraht, der mittlere zusätzlich Türen und HESCO-Elemente. Für alles andere – Mörser, Flugabwehr, Tankstelle, Reparaturstation – brauchst du den großen Hammer ab Support-Stufe 8.
@@ -17,7 +17,7 @@ antwort: Der kleine Hammer baut nur Basics wie Sandsäcke und Stacheldraht, der 
 
 Bauen ist in Wardogs keine Nebenbeschäftigung, sondern die Art, wie ein Team Gelände in Besitz nimmt. Und es hängt an einem Gegenstand, den die meisten zu spät kaufen: dem Hammer.
 
-> [!stand] September 2026 · Early Access – Kosten und Freischaltungen ändern sich mit Patches.
+> [!stand] Oktober 2026 · Early Access – Baukosten auf dem Stand der Season-02-Patch-Notes vom 14.10.2026.
 
 ## Die drei Hammer
 
@@ -41,22 +41,27 @@ Gebaut wird aus **Build-Supplies**, die im FOB-Lager liegen müssen (oder in dei
 | Recon-Zelt | 5 | nein |
 | Sandsäcke | 10 | nein |
 | Hedgehog | 14 | nein |
-| Bremer Wall | 10 | ja |
-| HESCO-Block | 10–14 | ja |
-| Tür | 14 | ja |
+| HESCO-Block | 12 | ja |
+| Bremer Wall | 32 | ja |
 | HESCO-Wand | 46 | ja |
-| Tor | 52 | ja |
-| Bunker | 61 | ja |
-| Recon-Turm | 61 | ja |
-| Mörser (L81) | 91 | ja |
-| Stingray | 91 | ja |
+| Tür | 80 | ja |
+| Mörser-Unterstand | 100 | ja |
+| Tor | 200 | ja |
+| Bunker, Recon-Turm, Luftschutzraum | 200 | ja |
+| Large Shelter | 250 | ja |
 | Tankstelle | 121 | ja |
 | Reparaturstation | 121 | ja |
-| Talon 9K-SAM | 601 | ja |
-| Vanguard CIWS | 901 | ja |
+| L81 Mörser | 600 | ja |
+| Stingray | 650 | ja |
+| Talon 9K-SAM | 650 | ja |
+| MG Nest | 650 | ja |
+| Vanguard CIWS | 1.200 | ja |
 | Drill Rig | 1.351 | ja |
+| Hot Zone Magnet | 2.750 | ja |
 
-Die Spanne ist der Punkt. Sandsäcke sind Kleingeld, ein Vanguard CIWS ist eine Teamentscheidung – 901 Build-Supplies müssen erst jemand herfahren. Wer ohne Absprache das teuerste Ding in die Bauzone setzt, verbrennt die Arbeit von drei Logistikrunden.
+Die Spanne ist der Punkt. Sandsäcke sind Kleingeld, ein Vanguard CIWS ist eine Teamentscheidung – 1.200 Build-Supplies muss erst jemand herfahren. Wer ohne Absprache das teuerste Ding in die Bauzone setzt, verbrennt die Arbeit mehrerer Logistikrunden.
+
+Seit Season 2 sind die Stellungen deutlich teurer: Der Mörser kostet 600 statt 150 Supplies, die Stingray 650 statt 150, ein Tor 200 statt 85. Billiger wurden nur Talon und Vanguard CIWS. Was das für die Planung bedeutet, steht in [Bauen ist eine Investition geworden](/guides/wardogs-season-2-bauen/).
 
 ![Eine halb gefüllte HESCO-Wand: Die Deckung entsteht abschnittsweise, das Material muss jemand heranfahren.](bild-hesco)
 
@@ -83,7 +88,7 @@ Eine frische FOB braucht zuerst **Build**. Eine FOB mit aktiven Mörsern braucht
 
 ## Was Support sonst noch kann
 
-Der Support-Track ist mehr als Bauen: schwere Waffen (M249 SAW, PKM), Werfer (RPG-7 ab Support 5, MAAWS ab Support 20), Minen – und **Reparatur**. Ein Support-Spieler, der einen angeschlagenen Panzer wieder fahrbereit macht, rettet ein Fahrzeug im Wert von $14.000.
+Der Support-Track ist mehr als Bauen: schwere Waffen (M249 SAW, PKM), Werfer (RPG-7 ab Support 5, MAAWS ab Support 20), Minen – und **Reparatur**. Ein Support-Spieler, der einen angeschlagenen Panzer wieder fahrbereit macht, rettet ein Fahrzeug im Wert von $22.000 – so viel kostet der L2A6 seit Season 2. Die XP dafür gehen seit Season 2 allerdings in den Driver- oder Pilot-Track, je nach Fahrzeug, nicht mehr pauschal auf Support.
 
 Das macht ihn zur wohl nützlichsten Rolle für ein Squad, das eine Stellung hält: Er baut sie, er repariert, was hineingefahren wird, und er hat die Waffe gegen das, was sie angreift.
 
@@ -95,11 +100,11 @@ Ab Support 8. Das ist die einzige echte Hürde beim Bauen und schnell genommen: 
 
 ### Was kostet eine HESCO-Wand in Wardogs?
 
-46 Build-Supplies. Ein HESCO-Block liegt bei 10 bis 14, eine Tür bei 14, ein Tor bei 52 und ein Bunker bei 61.
+46 Build-Supplies. Ein HESCO-Block liegt bei 12, eine Bremer Mauer bei 32, eine Tür bei 80, ein Tor bei 200 und ein Bunker ebenfalls bei 200.
 
 ### Was ist das teuerste Bauwerk in Wardogs?
 
-Das Drill Rig mit rund 1.351 Build-Supplies, gefolgt vom Vanguard CIWS mit 901 und dem Talon 9K-SAM mit 601. Solche Posten sind Teamentscheidungen – das Material muss erst jemand herfahren.
+Der Hot Zone Magnet mit 2.750 Build-Supplies, dahinter das Drill Rig mit rund 1.351 und der Vanguard CIWS mit 1.200. Solche Posten sind Teamentscheidungen – das Material muss erst jemand herfahren.
 
 ### Welche Versorgungsarten lagert eine FOB?
 

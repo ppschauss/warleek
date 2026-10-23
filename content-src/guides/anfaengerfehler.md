@@ -8,8 +8,8 @@ image_alt: Einzelner Soldat steht ungedeckt mitten auf einem Kiesplatz, waehrend
 excerpt: Teure Loadouts, einsame Sprints zur Zone, der Heli am Berghang. Die Fehler, die fast jeder macht, und die Gegenmaßnahme in einem Satz.
 seo_title: Wardogs Anfängerfehler vermeiden – Guide Deutsch | Warleek
 seo_description: Zehn typische Fehler von Wardogs-Neulingen und die Gegenmaßnahme: teures Loadout, Alleingänge, falsche Rolle. Auf Deutsch für Spieler in DACH.
-quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026), Offizielle WARDOGS-Ankündigungen und Patch Notes bei Steam]
-geprueft: nein
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', 'Öffentliche Community-Guides und Wikis zu WARDOGS (Stand Oktober 2026)', 'Offizielle WARDOGS-Ankündigungen und Patch Notes bei Steam']
+geprueft: nein – Beträge aus den Season-2-Patch-Notes und öffentlichen Datenbanken, von uns nicht im Spiel nachgeprüft
 autor: starterleek
 frage: Was sind die häufigsten Anfängerfehler in Wardogs?
 antwort: Ein zu teures Loadout kaufen, allein zur Kontrollzone rennen und Abschüsse für den Sieg halten. Punkte gibt es dafür, dass mehr eigene Leute in der Zone stehen. Kauf billig, bis ein durchschnittliches Leben mehr einbringt, als es kostet.
@@ -17,7 +17,7 @@ antwort: Ein zu teures Loadout kaufen, allein zur Kontrollzone rennen und Absch�
 
 Die meisten schlechten Runden in Wardogs entstehen nicht durch schlechtes Zielen. Sie entstehen durch zehn Entscheidungen, die vor dem ersten Schuss fallen. Hier sind sie, jeweils mit der Gegenmaßnahme.
 
-> [!stand] September 2026 · Early Access – Preise und Werte können sich mit Patches ändern.
+> [!stand] Oktober 2026 · Early Access – Beträge auf dem Stand der Season-02-Patch-Notes vom 14.10.2026.
 
 ## 1. Zu teuer sterben
 
@@ -53,7 +53,7 @@ Der Klassiker: $6.250 für einen MH-6, dreißig Sekunden später liegt er am Ber
 
 ## 6. Die eigene FOB an den falschen Ort setzen
 
-Eine FOB kostet rund $4.887 und ist der teuerste Fehlkauf im Spiel, wenn sie falsch steht. Ohne Absprache steht sie meistens falsch.
+Eine FOB kostet rund $7.500 und ist der teuerste Fehlkauf im Spiel, wenn sie falsch steht. Ohne Absprache steht sie meistens falsch.
 
 **Stattdessen:** Frag im Squad, ob eine gebraucht wird und wo. Wenn niemand antwortet, wird keine gebraucht.
 
@@ -67,7 +67,7 @@ Wardogs hat kein Klassensystem – du levelst sechs Fortschritts-Tracks parallel
 
 Jede FOB, jeder Mörser, jede Reparaturstation lebt von Nachschub, den jemand hinfahren muss. Wer das nicht tut, wundert sich, warum nichts gebaut werden kann.
 
-**Stattdessen:** Eine Palette kostet rund $400 und bringt bei der Abgabe rund $2.500. Das ist der sicherste Verdienst im Spiel – und dein Team braucht es ohnehin. Siehe [Der Logistik-Run, der sich lohnt](/guides/logistik-run-der-sich-lohnt/).
+**Stattdessen:** Eine Palette kostet rund $400 und bringt bei der Abgabe rund $1.250, bei jeder weiteren in Folge $250 mehr. Das ist der sicherste Verdienst im Spiel – und dein Team braucht es ohnehin. Siehe [Der Logistik-Run, der sich lohnt](/guides/logistik-run-der-sich-lohnt/).
 
 ## 9. Im Stehen kämpfen
 
@@ -95,7 +95,7 @@ Nein. Punkte gibt es, wenn mehr eigene Leute in der Zone stehen als von jeder an
 
 ### Was kostet eine FOB in Wardogs?
 
-Rund $4.887. Sie ist der teuerste Fehlkauf im Spiel, wenn sie an der falschen Stelle steht – deshalb vorher im Squad abstimmen, ob überhaupt eine gebraucht wird.
+Rund $7.500 plus rund 30 Build-Supplies beim Aufstellen. Sie ist der teuerste Fehlkauf im Spiel, wenn sie an der falschen Stelle steht – deshalb vorher im Squad abstimmen, ob überhaupt eine gebraucht wird.
 
 ### Welche Rolle ist für Einsteiger am besten?
 

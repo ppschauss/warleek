@@ -1602,5 +1602,10 @@
         "alt": "Schwere Weste, FAL und Praezisionsgewehr als Kacheln vor einem abgedunkelten Spielhintergrund",
         "use": "guide-s2-schaden",
         "size": 15090
+    },
+    "guide-fob-grundlagen.webp": {
+        "alt": "FOB-Modul, grosser Hammer und eine Palette Build-Supplies als Kacheln vor einem abgedunkelten Spielhintergrund",
+        "use": "guide-fob-grundlagen",
+        "size": 16418
     }
 }

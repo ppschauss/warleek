@@ -8,11 +8,11 @@ image_alt: Spaeher liegt mit Fernglas an einer Mauerkante und beobachtet ein Tal
 excerpt: Fernglas für $180, Leute fahren, Wiederbeleben: vier Wege, mit denen du dein Konto füllst, bevor du überhaupt eine ordentliche Waffe hast.
 seo_title: Wardogs Geld verdienen ohne Kämpfen – Guide Deutsch | Warleek
 seo_description: Spotten, transportieren, wiederbeleben, liefern: Geld verdienen ohne zu kämpfen. Einsteiger-Guide für Deutschland, Österreich und die Schweiz.
-quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', Öffentliche Community-Guides zu WARDOGS (Stand Oktober 2026)]
-geprueft: nein
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', 'Öffentliche Community-Guides zu WARDOGS (Stand Oktober 2026)']
+geprueft: nein – Beträge aus den Season-2-Patch-Notes, von uns nicht im Spiel nachgerechnet
 autor: starterleek
 frage: Wie verdient man in Wardogs Geld, ohne zu kämpfen?
-antwort: Vier Wege: Gegner mit dem Fernglas für $180 markieren, Teamkollegen mit einem billigen Fahrzeug transportieren, Gefallene wiederbeleben und Versorgungspaletten fahren. Eine Palette kostet rund $400 und bringt bei der Abgabe rund $2.500.
+antwort: Vier Wege: Gegner mit dem Fernglas für $180 markieren, Teamkollegen mit einem billigen Fahrzeug transportieren, Gefallene wiederbeleben und Versorgungspaletten fahren. Eine Palette kostet rund $400 und bringt bei der Abgabe rund $1.250.
 ---
 
 Du startest mit $10.000 und einem kostenlosen Gewehr. Wer damit sofort in Gefechte geht, ist nach zwanzig Minuten pleite und hat nichts gelernt. Es gibt vier Tätigkeiten, die zuverlässig zahlen und bei denen dich praktisch niemand erschießt.
@@ -47,7 +47,7 @@ Der Vorteil gegenüber dem Kämpfen: Du bist dort, wo gerade jemand gefallen ist
 
 ## 4. Nachschub fahren
 
-Sobald du ein Fahrzeug mit Ladefläche hast, wird es richtig lukrativ: Eine Palette kostet rund $400 und bringt bei der Abgabe rund $2.500, plus rund $1.800, wenn ein Teamkollege sie an der FOB abbaut.
+Sobald du ein Fahrzeug mit Ladefläche hast, wird es richtig lukrativ: Eine Palette kostet rund $400 und bringt bei der Abgabe rund $1.250 – und jede weitere Palette in Folge $250 mehr, bis zu zehnmal. Ob es die Abbauprämie von rund $1.800 aus Season 1 noch gibt, steht nicht in den Patch Notes; wir tragen es nach, sobald wir es belegen können.
 
 Das ist der Punkt, an dem Geldverdienen aufhört, ein Nebenjob zu sein. Dazu haben wir einen eigenen Guide.
 
@@ -82,7 +82,7 @@ $500 bis $1.000 pro Person, nochmal rund $500, wenn der Mitfahrer überlebt, und
 
 ### Was bringt eine Versorgungspalette in Wardogs?
 
-Rund $400 Einkauf, rund $2.500 bei der Abgabe, dazu rund $1.800, wenn ein Teamkollege sie an der FOB abbaut.
+Rund $400 Einkauf, rund $1.250 bei der Abgabe in der Kontrollzone, dazu $250 für jede weitere Palette in Folge. Die Abbauprämie von rund $1.800 aus Season 1 ist in den Season-2-Patch-Notes nicht bestätigt.
 
 ### Sollte man das erste Geld in eine bessere Waffe stecken?
 

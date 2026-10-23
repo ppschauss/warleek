@@ -8,8 +8,8 @@ image_alt: Schwerer Nachschub-LKW mit verzurrten Paletten auf einer Bergstrasse 
 excerpt: Ural, Kodiak, Humvee oder Helikopter? Was wirklich Paletten trägt, was nur Kisten schafft – und warum die Waffenvariante nichts an der Ladung ändert.
 seo_title: Wardogs Logistik-Fahrzeuge im Vergleich (Deutsch) | Warleek
 seo_description: Ural, Kodiak, Humvee oder Helikopter: Was Paletten trägt, was kostet und wann sich welches lohnt. Deutscher Wardogs-Guide für die DACH-Region.
-quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
-geprueft: nein
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', 'Öffentliche Community-Guides und Wikis zu WARDOGS (Stand Oktober 2026)']
+geprueft: nein – Erträge aus den Season-2-Patch-Notes, von uns nicht im Spiel nachgerechnet
 autor: logisticleek
 frage: Welches Fahrzeug trägt in Wardogs Paletten?
 antwort: Der URAL ab Driver 3 für rund $5.000 ist das Logistikfahrzeug für volle Paletten, der Ural Defender ab Driver 15 dasselbe gepanzert. Kodiak, Humvee und MH-6 tragen nur Kisten; Bobcat und Dune Buggy tragen gar keine Fracht.
@@ -17,7 +17,7 @@ antwort: Der URAL ab Driver 3 für rund $5.000 ist das Logistikfahrzeug für vol
 
 Die häufigste vergeudete Runde in der Logistik beginnt damit, dass jemand mit dem falschen Fahrzeug zum Händler fährt. Paletten passen nicht in jedes Auto, und ein Buggy trägt gar nichts.
 
-> [!stand] September 2026 · Early Access – Preise und Kapazitäten ändern sich mit Patches.
+> [!stand] Oktober 2026 · Early Access – Erträge auf dem Stand der Season-02-Patch-Notes vom 14.10.2026.
 
 ## Zwei Frachtformate
 
@@ -42,7 +42,7 @@ Faustregel: Eine neue FOB braucht Paletten Build. Eine laufende FOB braucht Kist
 
 ## Welches wann
 
-**Der erste Run einer Runde: Ural.** Eine neue FOB will Build-Supplies in Menge, und das ist genau, was ein Ural transportiert. Rund $5.000 klingen viel, aber das Fahrzeug bleibt erhalten, solange es niemand zerschießt – und eine Palette bringt bei der Abgabe rund $2.500 gegenüber rund $400 Einkauf.
+**Der erste Run einer Runde: Ural.** Eine neue FOB will Build-Supplies in Menge, und das ist genau, was ein Ural transportiert. Rund $5.000 klingen viel, aber das Fahrzeug bleibt erhalten, solange es niemand zerschießt – und eine Palette bringt bei der Abgabe rund $1.250 gegenüber rund $400 Einkauf.
 
 ![Paletten werden auf den Ural verzurrt – eine Ladung, die eine frische FOB überhaupt erst baufähig macht.](bild-ural-laden)
 
@@ -62,7 +62,7 @@ Faustregel: Eine neue FOB braucht Paletten Build. Eine laufende FOB braucht Kist
 
 ## Was ein Run wirklich bringt
 
-Palette kaufen rund $400, Abgabe rund $2.500 – netto rund $2.100 pro Palette, plus Erfahrung auf dem Driver-Track, plus eine FOB, die bauen kann. Wenn die Ablieferung in der **Hot Zone** stattfindet, verdoppelt sich der Cash-Anteil.
+Palette kaufen rund $400, Abgabe rund $1.250 – netto rund $850 pro Palette, plus Erfahrung auf dem Driver-Track, plus eine FOB, die bauen kann. Dazu die Lieferserie: jede weitere Palette in Folge bringt $250 mehr, bis zu zehnmal, und die Rückfahrt zählt mit $150 plus $50 je Fahrt in Folge.
 
 Das ist der Grund, warum Logistik die beste Einsteigerrolle ist: Sie ist der einzige Job im Spiel, der zuverlässig Geld bringt, ohne dass du ein Gefecht gewinnen musst.
 
@@ -93,4 +93,4 @@ Die Fracht ins Lager zu übertragen. Was neben der FOB liegt, ist nicht im Lager
 
 ### Was bringt ein Logistik-Run netto?
 
-Rund $400 Einkauf gegen rund $2.500 bei der Abgabe, also netto rund $2.100 pro Palette, plus Driver-Erfahrung. Findet die Ablieferung in der Hot Zone statt, verdoppelt sich der Cash-Anteil.
+Rund $400 Einkauf gegen rund $1.250 bei der Abgabe in der Kontrollzone, also netto rund $850 pro Palette, plus Driver-Erfahrung. Dazu zahlt jede weitere Palette in Folge $250 mehr, bis zu zehnmal.

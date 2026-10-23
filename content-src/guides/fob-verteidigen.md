@@ -2,14 +2,14 @@
 title: FOB verteidigen: Sichtlinien, Emplacements und der Nachschub dahinter
 slug: wardogs-fob-verteidigen
 thema: fob
-order: 22
+order: 23
 image: guide-fob-verteidigen
 image_alt: Befestigte FOB in der Abenddaemmerung mit Sandsackwaellen, Moerserstellung, Wachturm und Verteidigern
 excerpt: Eine FOB fällt selten durch einen Sturmangriff. Sie fällt, weil der Nachschub ausbleibt oder jemand aus 400 Metern hineinsehen kann.
 seo_title: Wardogs FOB verteidigen – Anleitung (Deutsch) | Warleek
 seo_description: Sichtlinien schließen, Mörser und Stingray setzen, Nachschub sichern: FOB-Verteidigung in Wardogs auf Deutsch – für Spieler in DACH.
-quellen: [Öffentliche Community-Guides und Wikis zu WARDOGS (Stand September 2026)]
-geprueft: nein
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', 'Öffentliche Community-Guides und Wikis zu WARDOGS (Stand Oktober 2026)']
+geprueft: nein – Werte aus den Season-2-Patch-Notes, von uns nicht im Spiel nachgeprüft
 autor: engineerleek
 frage: Warum fallen FOBs in Wardogs?
 antwort: Fast nie wegen eines fehlenden Geschützes. Es sind drei Ursachen: Jemand kann hineinsehen, der Nachschub reißt ab, oder niemand ist da. Eine FOB braucht zwei bis drei Leute, die in Rufweite bleiben.
@@ -17,7 +17,7 @@ antwort: Fast nie wegen eines fehlenden Geschützes. Es sind drei Ursachen: Jema
 
 Der Bau einer FOB ist in zehn Minuten erledigt. Sie am Leben zu halten, ist Arbeit für die ganze Runde. Wenn eine FOB fällt, liegt es fast nie am fehlenden Geschütz – sondern an einer der drei Ursachen unten.
 
-> [!stand] September 2026 · Early Access – Kosten und Werte ändern sich mit Patches.
+> [!stand] Oktober 2026 · Early Access – Baukosten und Belohnungen auf dem Stand der Season-02-Patch-Notes vom 14.10.2026.
 
 ## Die drei Gründe, warum FOBs fallen
 
@@ -29,9 +29,9 @@ Der Bau einer FOB ist in zehn Minuten erledigt. Sie am Leben zu halten, ist Arbe
 
 ## Sichtlinien vor Geschützen
 
-Die günstigste Verteidigung ist Sicht zu nehmen. Zur Erinnerung: HESCO-Block 10–14 Build-Supplies, HESCO-Wand 46, Mörser 91, Vanguard CIWS 901.
+Die günstigste Verteidigung ist Sicht zu nehmen. Zur Erinnerung: HESCO-Block 12 Build-Supplies, HESCO-Wand 46, Mörser 600, Vanguard CIWS 1.200.
 
-Für den Preis eines CIWS bekommst du rund zwanzig Wandsegmente. In den meisten Runden ist das die bessere Investition, weil sie gegen alles hilft – Scharfschützen, Werfer, Zufälle – und nicht nur gegen Helikopter.
+Für den Preis eines CIWS bekommst du rund sechsundzwanzig Wandsegmente. In den meisten Runden ist das die bessere Investition, weil sie gegen alles hilft – Scharfschützen, Werfer, Zufälle – und nicht nur gegen Helikopter.
 
 Merke dir drei Höhen:
 - **Brusthoch**, wo geschossen werden soll.
@@ -67,11 +67,13 @@ Eine gut laufende Basis hat einen Menschen, der nichts anderes macht. Der Rhythm
 3. Am FOB abladen **und ins Lager übertragen**. Eine Palette, die daneben liegt, zählt nicht.
 4. Von vorn.
 
-Der Nebeneffekt: Jede Abgabe bringt rund $2.500. Die Basis zu versorgen ist gleichzeitig die zuverlässigste Einnahmequelle im Spiel.
+Der Nebeneffekt: Jede abgegebene Palette bringt seit Season 2 rund $1.250 statt der $2.500 aus Season 1 – dafür zahlt jede weitere Palette in Folge +$250 obendrauf, bis zu zehnmal. Genau deshalb lohnt sich der vierte Weg mehr als der erste, und die Basis zu versorgen bleibt die zuverlässigste Einnahmequelle im Spiel.
+
+> [!hinweis] Seit Season 2 bringt eine **zerstörte** FOB dem Gegner bis zu $7.500 extra – gestaffelt nach dem, was sie gelagert hatte, Maximum bei 25.000 Supplies. Eine randvolle Basis ist damit das lukrativste Ziel auf der Karte. Nachschub heranfahren, ja – aber nicht alles in einem Lager stapeln.
 
 ## Wenn es ernst wird
 
-- **Tore schließen.** Klingt banal, wird ständig vergessen.
+- **Tore schließen.** Klingt banal, wird ständig vergessen – und bringt seit Season 2 $75 je geschlossener Tür. Mit dem Hammer lässt sich keine Tür mehr aufbrechen; der Gegner braucht Brechstange oder Sprengstoff.
 - **Nicht alle in denselben Bunker.** Ein Mörsertreffer nimmt sonst die ganze Besatzung.
 - **Reparieren, während gekämpft wird.** Ein Support-Spieler, der Wände wieder hochzieht, ist mehr wert als der dritte Schütze.
 - **Aufgeben können.** Wenn zwei Fraktionen gleichzeitig angreifen, ist die Basis verloren. Nehmt mit, was tragbar ist, und baut 300 Meter weiter neu – Material, das ihr rettet, ist Material, das ihr nicht wieder heranfahren müsst.
@@ -90,7 +92,7 @@ Tief in der Basis hinter Deckung. Der L81 braucht keinen Sichtkontakt, nur Munit
 
 ### Lohnt sich ein Vanguard CIWS statt HESCO-Wänden?
 
-Meistens nicht. Für die 901 Build-Supplies eines CIWS bekommst du rund zwanzig Wandsegmente, und die helfen gegen alles – Scharfschützen, Werfer, Zufälle – nicht nur gegen Helikopter.
+Meistens nicht. Für die 1.200 Build-Supplies eines CIWS bekommst du rund sechsundzwanzig Wandsegmente, und die helfen gegen alles – Scharfschützen, Werfer, Zufälle – nicht nur gegen Helikopter.
 
 ### Kann man in der eigenen FOB spawnen?
 

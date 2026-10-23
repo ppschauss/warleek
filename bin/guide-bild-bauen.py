@@ -247,6 +247,19 @@ REZEPTE = {
         unterzeile="",
         name="guide-s2-bauen",
     ),
+    # FOB-Grundlagen: Modul in der Mitte, Werkzeug links, Nachschub rechts –
+    # die drei Dinge, um die der Guide kreist.
+    "fob-grundlagen": dict(
+        hintergrund="typ-bauwerk.webp",
+        kacheln=[
+            ("wardogs-grosser-hammer.webp", (32, 60), (350, 197), -5, 0.90),
+            ("wardogs-palette-build.webp",  (602, 48), (350, 197), 4, 0.95),
+            ("wardogs-fob.webp",            (318, 130), (390, 219), -2, 1.05),
+        ],
+        titel="",
+        unterzeile="",
+        name="guide-fob-grundlagen",
+    ),
     "s2-lonestar": dict(
         hintergrund="gruppe-panzer.webp",
         kacheln=[

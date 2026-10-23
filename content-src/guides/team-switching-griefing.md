@@ -2,7 +2,7 @@
 title: "Wenn der Gegner von innen kommt: Team-Switching und FOB-Sabotage"
 slug: wardogs-team-switching
 thema: fob
-order: 24
+order: 25
 image: guide-fob-verteidigen
 image_alt: Beschaedigte HESCO-Mauer an einer Basis in der Daemmerung, dahinter Rauch und ein umgestuerztes Fahrzeug
 excerpt: Manche wechseln mitten im Match die Seite, laufen in die eigene FOB und reißen die Mauern ein. Was dahintersteckt und wie ihr eine Basis dagegen baut.

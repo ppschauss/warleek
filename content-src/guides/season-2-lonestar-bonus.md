@@ -1,39 +1,39 @@
 ---
-title: "Lonestar zahlt jetzt: das Fraktions-Experiment und der 20-Prozent-Rabatt"
+title: "Der Lonestar-Bonus ist nach einem Tag wieder weg"
 slug: wardogs-season-2-lonestar-bonus
 thema: gameplay
 order: 11
 image: guide-s2-lonestar
 image_alt: Kodiak, Versorgungspalette und FOB als Kacheln vor einem abgedunkelten Spielhintergrund
-excerpt: Das blaue Team bekommt Geld- und XP-Boni, jede unterlegene Fraktion 20 Prozent Rabatt beim Händler. Dazu halbierte Logistik-Erträge und neue Lieferserien – die Wirtschaft von Season 2.
-seo_title: Wardogs Lonestar-Bonus & Rabatt Season 2 | Warleek
-seo_description: Fraktionsboni, Händlerrabatt und die neuen Geldquellen nach dem Season-2-Update erklärt. Für Spieler in Deutschland, Österreich und der Schweiz.
-quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026']
-geprueft: nein – Werte aus den Patch Notes, von uns nicht im Spiel nachgerechnet
+excerpt: BULKHEAD hat den Bonus für das blaue Team einen Tag nach dem Start gestrichen: „We were wrong.“ Was bleibt, ist der 20-Prozent-Rabatt für das unterlegene Team – und eine umgebaute Wirtschaft.
+seo_title: Wardogs Lonestar-Bonus gestrichen – Season 2 | Warleek
+seo_description: Warum der Bonus für das blaue Team nach einem Tag endete, was der Händlerrabatt bringt und wie sich Geld verdienen in Season 2 ändert. Für Spieler in DACH.
+quellen: ['Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', 'Video-Statement von BULKHEAD-CEO Joe Brammer, 16.10.2026, berichtet von PCGamesN und Rock Paper Shotgun', 'Stellungnahme von BULKHEAD zu Season 3, 17.10.2026, berichtet von PCGamesN']
+geprueft: nein – Werte aus den Patch Notes und aus Entwickler-Aussagen, von uns nicht im Spiel nachgerechnet
 autor: tacticleek
-frage: Was bringt der Lonestar-Bonus in Wardogs Season 2?
-antwort: Lonestar bekommt in Season 2 einen Cash- und XP-Bonus für Siege und zusätzliche Multiplikatoren für Teamplay-Aktionen. Unabhängig davon erhält jede Fraktion 20 Prozent Rabatt beim Händler, sobald sie mindestens 40 Punkte hinter dem zweiten Platz liegt.
+frage: Gibt es den Lonestar-Bonus in Wardogs noch?
+antwort: Nein. BULKHEAD hat den Cash- und XP-Bonus für das blaue Team am 16. Oktober 2026 nach einem Tag wieder gestrichen. Geblieben ist der Händlerrabatt von 20 Prozent, den jede Fraktion erhält, sobald sie mindestens 40 Punkte hinter dem zweiten Platz liegt.
 ---
 
-Lonestar hatte eine deutlich schlechtere Siegquote als die beiden anderen Fraktionen. Die Patch Notes nennen den Grund ungewöhnlich offen: Es liegt weniger an der sichtbaren Uniform oder den Spawn-Punkten als an der **Stimmung** rund um das blaue Team — Spieler wollen dort nicht spielen.
+Lonestar hatte eine deutlich schlechtere Siegquote als die beiden anderen Fraktionen. Die Patch Notes nannten den Grund ungewöhnlich offen: Es liege weniger an Uniform oder Spawn-Punkten als an der **Stimmung** rund um das blaue Team — Spieler wollen dort nicht spielen. Die Antwort darauf nannte BULKHEAD selbst ein **soziales Experiment**: Geld- und XP-Boni nur für Blau.
 
-BULKHEAD nennt die Antwort darauf selbst ein **soziales Experiment**.
+Das Experiment hat **einen Tag** gehalten.
 
-> [!stand] Oktober 2026 · Early Access – alle Angaben stammen aus den Patch Notes vom 14.10.2026.
+> [!stand] 23. Oktober 2026 · Early Access – Patch Notes vom 14.10.2026, Bonus-Ende am 16.10.2026, Season-3-Aussage vom 17.10.2026.
 
-## Was Lonestar bekommt
+## Der Bonus ist gestrichen
 
-- einen **Cash- und XP-Bonus bei Sieg**, nur in Season 2
-- **Cash- und XP-Multiplikatoren für Teamplay-Aktionen**, nur in Season 2
-- alle Fraktions-Spawns auf **Bakurani** wurden verlegt
+Am **16. Oktober 2026**, einen Tag nach dem Saisonstart, hat BULKHEAD-CEO Joe Brammer den Bonus in einem Video beendet. Sein Satz dazu: „We were wrong. We fucked up.“
 
-Konkrete Prozentwerte nennen die Patch Notes nicht. Die Begründung dafür steht in der Ankündigung selbst: Lonestar ist eine etablierte PMC, gestützt von einer der führenden Volkswirtschaften der Welt — „Lonestar hat Geld … und Lonestar braucht dich.“
+Was passiert war: Der Bonus betrug **5 % Cash und 2,5 % XP** — klein genug, dass man ihn beim Spielen kaum merkt, aber groß genug, dass gerade die ambitionierten Spieler zu Blau wechselten. Lonestar gewann daraufhin „by far the most“. Geplant war der Versuch für etwa eine Woche; nach einem Tag war er vorbei.
 
-Wer Community-Server betreibt und den Fraktionsbonus nachweislich ausnutzt, wird laut Patch Notes bestraft.
+Was **bleibt**, ist die Maßnahme, die laut Brammer von Anfang an die wirksamere war: Alle Fraktions-Spawns auf **Bakurani** wurden verlegt, und das hatte die Siegquoten im Test bereits ausgeglichen. Dazu die entsättigten Lonestar-Uniformen.
+
+> [!hinweis] Lies das als Hinweis auf den Stand des Spiels, nicht als Panne: Wir sind im Early Access, und BULKHEAD hat am **17. Oktober** nachgelegt, dass Season 2 sich für viele nicht wie ein Neuanfang angefühlt habe — die beschleunigte Progression sei „the wrong call“ gewesen. Man prüfe, **Season 3 deutlich vorzuziehen**. Zahlen aus dieser Saison können also kürzer gelten als üblich.
 
 ## Der Rabatt gilt für alle
 
-Die zweite Änderung geht unter, ist aber die wichtigere:
+Die andere Maßnahme ging in der Aufregung unter, ist aber die wirksamere:
 
 > **20 % Rabatt beim Händler**, sobald dein Team mindestens **40 Punkte hinter dem zweiten Platz** liegt.
 
@@ -109,15 +109,19 @@ Wer über Support leveln wollte, indem er Dinge sprengt, muss umplanen. Und wer 
 1. **Prüf den Punktestand vor dem Einkauf.** 20 % Rabatt sind bei schwerem Gerät vierstellig.
 2. **Fahr Serien, nicht Einzelfahrten.** Zehn Paletten in Folge sind mehr wert als zwanzig verteilte.
 3. **Spotting bleibt richtig, trägt aber weniger.** Die Belohnung sank um 30 %, das Fernglas kostet das Zweieinhalbfache — es lohnt sich trotzdem, nur nicht mehr als Haupteinnahme.
-4. **Lonestar auszuprobieren kostet dich in Season 2 nichts, sondern bringt etwas ein.** Wenn du ohnehin keine feste Fraktion fährst: Das ist der Moment.
+4. **Lonestar bleibt eine Überlegung wert — nur nicht wegen des Geldes.** Der Bonus ist weg, die neuen Spawns auf Bakurani sind geblieben. Wer das blaue Team wegen seines Rufs gemieden hat, prüft am besten selbst nach, was davon noch stimmt.
 
 Welche Tätigkeit was abwirft, steht im RoI-Vergleich.
 
 ## Häufige Fragen
 
+### Gibt es den Lonestar-Bonus noch?
+
+Nein. BULKHEAD hat ihn am 16. Oktober 2026 nach einem Tag gestrichen. Er betrug 5 Prozent Cash und 2,5 Prozent XP und zog vor allem ambitionierte Spieler zu Blau, worauf Lonestar deutlich zu oft gewann.
+
 ### Bekommt nur Lonestar den Rabatt in Season 2?
 
-Nein. Der 20-Prozent-Rabatt beim Händler gilt für jede Fraktion, die mindestens 40 Punkte hinter dem zweiten Platz liegt. Nur die Sieg- und Teamplay-Boni sind Lonestar vorbehalten.
+Nein. Der 20-Prozent-Rabatt beim Händler gilt für jede Fraktion, die mindestens 40 Punkte hinter dem zweiten Platz liegt. Er ist von dem gestrichenen Bonus unabhängig und gilt weiter.
 
 ### Wie viel bringt eine Versorgungspalette in Season 2?
 

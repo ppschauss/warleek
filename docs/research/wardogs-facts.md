@@ -316,3 +316,85 @@ Im Zweifel gilt die Steam-Ankündigung.
 **Sonstiges aus derselben Ankündigung:** über 3 Millionen verkaufte Exemplare; erste Pre-Season-Pressekonferenz (YouTube `PDtosdp86ms`); DEVLOG zu Season 2 (YouTube `J2VxjMnMDw4`); Nominierung als Best Early Access Game bei den Golden Joystick Awards.
 
 Quellen: store.steampowered.com/news/app/1867240/view/670630562731395011 · eurogamer.de/wardogs-season-2-update-release
+
+---
+
+## FOB-Grundlagen und Belohnungen (aus den Season-02-Patch-Notes, 14.10.2026)
+
+Primärquelle: Steam-Ankündigung „WARDOGS | Season 02 Patch Notes" von BULKHEAD (Lossy),
+14.10.2026. Abschnitte „Cash & XP Reward Changes", „Misc Building Changes",
+„Buildable Destroyed", „Supply Crate Destroyed", „Logistics".
+
+**FOB-Belohnungen:**
+- FOB hacken: Hacker $2.500 / 250 XP; **neu** zusätzlich alle Teamkollegen im FOB-Radius
+  $1.000 / 250 XP
+- FOB zerstören: Bonus **bis zu +$7.500 / +250 XP**, abhängig vom gelagerten Vorrat,
+  Maximum bei 25.000 Supplies
+- Freundliche FOB-Tür schließen: **$75**
+- Tür aufbrechen (Halligan): $100, einmal je Tür; Anwendungen 5 → 7
+
+**Türen und Tore:** lassen sich **nicht mehr mit dem Hammer** aufbrechen, nur noch mit der
+Halligan-Brechstange oder Sprengstoff.
+
+**Logistik-Belohnungen (Season 2, Werte laut Nachtrag der Patch Notes für Abgabe in der
+Kontrollzone):**
+- Palette abgeben $2.500 → **$1.250**, XP 500 → 400 (750 → 500 vom Bodenfahrzeug)
+- Kiste abgeben: klein $500 → **$250**, groß $1.000 → **$500**
+- Spieler transportiert $150 → $100; vom Bodenfahrzeug $500 → $350
+- Rückfahrt (Bodenfahrzeug) $250 → $150
+- **Lieferserien neu:** Kisten +$100 / +50 XP je Stück in Folge (max. 10), Paletten
+  +$250 / +100 XP (max. 10), Spieler +$25 / +5 XP (max. 25), Rückfahrten +$50 / +25 XP (max. 10)
+- Ausdrücklicher Nachtrag der Entwickler: Die zuerst veröffentlichten Zahlen waren
+  Basiswerte **ohne** Zonen-Multiplikator; die nun genannten gelten für die Abgabe **in der
+  Kontrollzone**. Außerhalb liegt der Ertrag niedriger.
+
+**Zerstörte Bauwerke bringen jetzt den Supply-Wert als Cash** (XP rund 25 % davon):
+Mörser und Stingray je $650, Talon $650, Vanguard CIWS $1.200, Tür $100, Tor $200,
+Tank-/Reparaturstation $200, MG Nest $650, Large Shelter $250, Hot Zone Magnet $2.750.
+Zerstörte Fracht: Kiste klein $300, groß $600, gepanzert klein $1.000, groß $1.600,
+Palette $800.
+
+**Stacheldraht bringt bei Kills kein Geld und keine XP mehr.** Sandsäcke und Stacheldraht
+lassen sich auf Bremer-Mauern setzen. Unfertige Bauteile stürzen ein, sobald die Stütze fehlt.
+
+**Kaufpreise unverändert durch Season 2** (keine Nennung in den Preislisten der Patch Notes):
+FOB-Deploy rund $7.500 plus rund 30 Build-Supplies beim Aufstellen, kleiner Hammer $100,
+mittlerer Hammer $800, großer Hammer $2.400 (Support 8), Paletten je $400, Kiste klein $150,
+groß $300. Halligan-Brechstange $1.100 → $885. Quelle der Kaufpreise: Datenbank
+wardogshub.uk, Stand Oktober 2026.
+
+**Inventarfläche des FOB-Items:** Quellen widersprechen sich – unsere ältere Notiz sagt 2×3,
+der Artikel von GHBSmith (04.09.2026, Beta) sagt 3×3. Im Text deshalb ohne Zahl.
+
+**Support 8 für den großen Hammer** steht weiter nur in Drittquellen; die Patch Notes nennen
+beim Support-Track keine Hammer-Stufen. Dass Stufe 8 schneller erreicht wird, folgt aus der
+neuen XP-Kurve (Stufe 10 jetzt 25.000 statt 35.000 XP).
+
+Quelle: Steam-Ankündigung der Patch Notes, App 1867240, gid 1846651706674560 (14.10.2026)
+
+## Nach dem Season-2-Start: zwei Korrekturen durch BULKHEAD (16./17.10.2026)
+
+**Der Lonestar-Bonus ist nach einem Tag wieder weg.** CEO Joe Brammer in einem Video am
+16.10.2026: „We were wrong. We fucked up." Der Bonus betrug **5 % Cash und 2,5 % XP** – klein,
+aber er zog gerade die ambitionierten Spieler zu Blau, worauf Lonestar „by far the most"
+gewann. Geplant war ein Versuch über etwa eine Woche; er wurde sofort beendet. Die
+Spawn-Umstellung auf Bakurani bleibt und war nach Angabe der Entwickler die eigentliche
+Maßnahme.
+
+**Driver-Progression:** Ein Exploit mit kurzen Logistik-Schleifen um eine selbst gesetzte FOB
+erlaubte sehr schnelles Hochleveln im Driver-Track und damit früh Panzer. Ein vorläufiger Fix
+bremst den Track; wer es „extremely obtusely" ausgenutzt hat, bekam 24 Stunden Sperre
+(laut Brammer „less than a thousand people").
+
+**Mid-Season-Update 2.5:** geplant sind „limited"/„primitive"-Server (Name offen) mit
+Obergrenze für Ausrüstung – ohne Stufe-4-Panzerung, ohne Panzer und Artillerie.
+
+**Season 3 möglicherweise deutlich früher.** BULKHEAD am 17.10.2026: Season 2 habe sich für
+viele nicht wie ein Neuanfang angefühlt, die beschleunigte Progression sei „the wrong call"
+gewesen; manche erreichten Endgame-Ausrüstung „within days". Kein kurzfristiger Reset, aber
+man prüfe, Season 3 „significantly" vorzuziehen. Tageshöchstwert laut derselben Meldung
+300.000 gleichzeitige Spieler.
+
+Quellen: pcgamesn.com/wardogs/season-2-mistakes-bulkhead-apology (16.10.2026) ·
+pcgamesn.com/wardogs/season-3-early-start (17.10.2026) ·
+rockpapershotgun.com/we-were-wrong-wardogs-devs-end-season-2s-team-specific-cash-and-xp-bonus-experiment-after-a-single-tumultuous-day

@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.33.0
+Stable tag: 2.34.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,13 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.34.0 =
+* Neuer Guide „FOB-Grundlagen": kaufen, aufstellen, versorgen – Anstoß war ein englischer Artikel von GHBSmith, Zahlen und Gliederung sind eigene.
+* Der Lonestar-Bonus ist nach einem Tag gestrichen worden; der Guide dazu und die Season-2-Übersicht sagen das jetzt.
+* Sieben Guides trugen nach der Datenkorrektur weiter Season-1-Zahlen: Baukosten in „Support und Hammer", „FOB verteidigen", „Flugabwehr" und „FOB bauen Schritt für Schritt", der Palettenertrag von $2.500 in „Anfängerfehler", „Geld ohne Schuss" und „Logistik-Fahrzeuge".
+* FOB-Kaufpreis von rund $4.887 auf rund $7.500 berichtigt.
+* Zehnerblock des Themas FOB um eins verschoben, damit die Grundlagen vorn stehen.
 
 = 2.33.0 =
 * Season 2: 98 Datenbank-Einträge auf die Werte der Patch Notes vom 14.10.2026 gebracht – 79 Preise, 96 Track-Verschiebungen, 22 Freischaltgebühren und die Baukosten. Jede Änderung steht im Verlauf des Eintrags.

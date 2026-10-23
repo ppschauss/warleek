@@ -8,8 +8,8 @@ image_alt: Soldat mit M14 im Regen, Leuchtspuren am Himmel ueber einem Lagerplat
 excerpt: Vier Waffen, vier Fahrzeuge, Regen, eine Wett-Mechanik und Geld fürs blaue Team. Der Überblick mit Quellenlage – und ohne den Wipe, den es offenbar gar nicht gibt.
 seo_title: Wardogs Season 2 – Überblick zum 15. Oktober | Warleek
 seo_description: Alle Season-2-Inhalte mit Quellen: Waffen, Fahrzeuge, Regen, Wetten und Lonestar-Boni. Für Deutschland, Österreich und die Schweiz.
-quellen: ['Steam-Ankündigung „WARDOGS | Season 02 Preview" von BULKHEAD, 09.10.2026', 'Eurogamer.de zum Season-2-Update, 11.10.2026']
-geprueft: nein – Stand vor dem Start, wird nach dem 15.10. überarbeitet
+quellen: ['Steam-Ankündigung „WARDOGS | Season 02 Preview“ von BULKHEAD, 09.10.2026', 'Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026', 'Video-Statement von BULKHEAD-CEO Joe Brammer, 16.10.2026, berichtet von PCGamesN und Rock Paper Shotgun', 'Eurogamer.de zum Season-2-Update, 11.10.2026']
+geprueft: nein – Angaben aus Ankündigung, Patch Notes und Entwickler-Aussagen, von uns nicht im Spiel nachgeprüft
 autor: adminleek
 frage: Was kommt mit Wardogs Season 2?
 antwort: Season 2 startet am 15. Oktober 2026 mit vier Waffen, einem Molotov, vier Fahrzeugen, drei Bauteilen, Regen als Wetter-Preset und einer experimentellen Wett-Mechanik. Dazu bekommt die blaue Fraktion Lonestar Cash- und XP-Boni. Ein Wipe ist nicht angekündigt.
@@ -67,9 +67,11 @@ Was sich ändert:
 |---|---|
 | Alle Fraktions-Spawns auf **Bakurani** verschoben | alle |
 | Lonestar-Uniformen **entsättigt**, fallen weniger auf | Lonestar |
-| **Cash- und XP-Siegbonus** | Lonestar, nur Season 2 |
-| **Cash- und XP-Multiplikatoren** | Lonestar, nur Season 2 |
+| ~~**Cash- und XP-Siegbonus**~~ – am 16.10.2026 gestrichen | Lonestar |
+| ~~**Cash- und XP-Multiplikatoren**~~ – am 16.10.2026 gestrichen | Lonestar |
 | **20 % Händlerrabatt** ab **40 Punkten** Rückstand auf Platz zwei | alle Teams |
+
+> [!hinweis] **Nachtrag vom 23.10.2026:** Die beiden Lonestar-Boni gibt es nicht mehr. BULKHEAD hat sie am 16. Oktober, einen Tag nach dem Saisonstart, wieder entfernt — sie betrugen 5 % Cash und 2,5 % XP und zogen vor allem ambitionierte Spieler zu Blau, worauf Lonestar deutlich zu oft gewann. Die Einzelheiten stehen in [Der Lonestar-Bonus ist nach einem Tag wieder weg](/guides/wardogs-season-2-lonestar-bonus/).
 
 Der Rabatt ist der klügste Posten auf der Liste, weil er nicht an der Farbe hängt, sondern am Rückstand. Ein Team, das hinten liegt, wird üblicherweise ärmer und dadurch noch schwächer — genau der Teufelskreis, den wir im [Fraktions-Guide](/guides/wardogs-fraktionen/) beschrieben haben. Zwanzig Prozent brechen ihn nicht, aber sie bremsen ihn.
 
@@ -115,7 +117,7 @@ Nach aktuellem Stand nein. Weder die offizielle Ankündigung noch die Berichters
 
 ### Was bekommt Lonestar in Season 2?
 
-Entsättigte Uniformen, einen Cash- und XP-Siegbonus sowie Cash- und XP-Multiplikatoren — beides ausdrücklich nur für Season 2. Dazu sind auf Bakurani alle Fraktions-Spawns verschoben worden.
+Entsättigte Uniformen und verschobene Fraktions-Spawns auf Bakurani. Der zusätzlich angekündigte Cash- und XP-Bonus ist am 16. Oktober 2026 nach einem Tag wieder gestrichen worden.
 
 ### Wer bekommt den Händlerrabatt?
 
