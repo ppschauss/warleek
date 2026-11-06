@@ -1607,5 +1607,65 @@
         "alt": "FOB-Modul, grosser Hammer und eine Palette Build-Supplies als Kacheln vor einem abgedunkelten Spielhintergrund",
         "use": "guide-fob-grundlagen",
         "size": 16418
+    },
+    "bild-ac-rmt-razzia.webp": {
+        "alt": "Spielaufnahme aus einem Boosting-Server: ein Stadion mit aufgebauten Holzkonstruktionen, Dutzende reglos stehende Spielfiguren, eingeblendet ein Abzug von über einer Million Dollar",
+        "use": "bild-ac-rmt-razzia",
+        "size": 67534
+    },
+    "bild-ac-rest.webp": {
+        "alt": "Dieselbe Weltkarte nach der Ban-Welle: Europa und Asien stehen bei 0,10 Prozent, alle übrigen Regionen bei 0,00 Prozent",
+        "use": "bild-ac-rest",
+        "size": 35868
+    },
+    "bild-ac-review-bombs.webp": {
+        "alt": "Einblendung aus dem Devlog mit dem Schriftzug Review Bombs auf dunklem Hintergrund",
+        "use": "bild-ac-review-bombs",
+        "size": 8872
+    },
+    "guide-s3-anticheat.webp": {
+        "alt": "Weltkarte aus dem Devlog mit Prozentwerten für sechs Regionen, darunter die Zeile „% of players that have been flagged as cheaters within each region“",
+        "use": "guide-s3-anticheat",
+        "size": 29614
+    },
+    "bild-s3-sabatulo.webp": {
+        "alt": "Luftaufnahme der neuen Wardogs-Karte Sabatulo mit Plattenbauten, Industrieschornstein und Bergkette im Hintergrund, darüber der eingeblendete Kartenname",
+        "use": "bild-s3-sabatulo",
+        "size": 86134
+    },
+    "bild-s3-sabatulo-gasse.webp": {
+        "alt": "Enge Gasse zwischen zwei Plattenbauten auf der Karte Sabatulo, nasser Asphalt, Balkone und vergitterte Fenster",
+        "use": "bild-s3-sabatulo-gasse",
+        "size": 93748
+    },
+    "bild-s3-sabatulo-halle.webp": {
+        "alt": "Große ausgebrannte Halle mit Sitzreihen, zerborstener Decke und einfallendem Sonnenlicht auf der Karte Sabatulo",
+        "use": "bild-s3-sabatulo-halle",
+        "size": 111160
+    },
+    "bild-s3-sabatulo-markt.webp": {
+        "alt": "Marktstraße auf Sabatulo mit Frachtcontainern, Kisten, parkenden Autos und mehrstöckigen Wohnhäusern",
+        "use": "bild-s3-sabatulo-markt",
+        "size": 80216
+    },
+    "bild-s3-multitrack.webp": {
+        "alt": "Zwei Freischaltkarten nebeneinander: links WARDOG Level 140, rechts PILOT Level 40, beide für dieselbe .308-Munition und beide für 75.000 Dollar",
+        "use": "bild-s3-multitrack",
+        "size": 18210
+    },
+    "bild-s3-serverfilter.webp": {
+        "alt": "Server-Filter in Wardogs mit den vier Schaltflächen Standard, Hardcore, Infantry Mode und Limited Gear",
+        "use": "bild-s3-serverfilter",
+        "size": 15748
+    },
+    "bild-s3-limited-mode.webp": {
+        "alt": "Einblendung Limited Mode mit den drei Kategorien Limited Weaponry and Ammo Types, Limited Gear und Limited Vehicle Selection",
+        "use": "bild-s3-limited-mode",
+        "size": 15394
+    },
+    "guide-s3-ueberblick.webp": {
+        "alt": "Endbild des Devlogs mit dem Schriftzug WARDOGS Season 03 und dem Datum 12th November 2026 über einem Soldaten an einem Maschinengewehr",
+        "use": "guide-s3-ueberblick",
+        "size": 54850
     }
 }
