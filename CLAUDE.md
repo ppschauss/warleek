@@ -1,3 +1,45 @@
+<!-- vps-primaer-hinweis -->
+# wardogs-gc / warleek
+
+> ## ⚠️ Laeuft auf dem VPS — hier auf Unraid NICHT starten
+>
+> Seit dem Cutover am **26.10.2026** ist der **one.com-VPS die primaere Maschine**.
+> Dieser Dienst laeuft dort unter Coolify. Was hier unter `/mnt/cache/appdata`
+> liegt, ist **Altbestand bzw. Rueckfallebene** — Aenderungen daran haben auf den
+> laufenden Betrieb **keine Wirkung**.
+>
+> | | |
+> |---|---|
+> | VPS-Container | `wordpress-5xcxhowej1vuahcnvjvevdxa (Coolify-Ressource `warleek`, Projekt `wp-dev`)` |
+> | VPS-Daten | Coolify-Volume auf dem VPS, DB `db-5xcxhowej1vuahcnvjvevdxa` |
+> | Unraid-Container | `warleek-wp` + `warleek-db` — **am 03.11.2026 gestoppt** |
+> | Produktion | **All-Inkl** (`warleek.de` → `dd26922.kasserver.com`) — **nicht** der VPS |
+>
+> **Regeln**
+>
+> 1. Hier **nicht** starten — kein `docker start`, kein `./manage.sh up`, nichts
+>    ueber die Unraid-WebUI. Zwei Instanzen auf denselben Accounts, Datenbanken
+>    oder Browser-Profilen richten Schaden an (doppelte Nachrichten, zerschossene
+>    Sessions, verlorene Schreibzugriffe).
+> 2. Diagnose **immer zuerst auf dem VPS**. Messwerte, die von Unraid aus
+>    entstehen, sagen nichts ueber den Zustand des VPS aus.
+> 3. Zugang: `ssh administrator@100.64.244.17` — Nutzername **klein**
+>    (`Administrator` wird abgewiesen), Key `~/.ssh/id_ed25519`, nur Public-Key.
+>    Docker dort ausschliesslich mit `sudo`.
+> 4. Der Coolify-Containername enthaelt eine UUID und **aendert sich**, wenn die
+>    Ressource in Coolify neu angelegt wird. Im Zweifel:
+>    `ssh administrator@100.64.244.17 'sudo docker ps --format "{{.Names}}"'`
+>
+> **Der VPS traegt die Dev-Instanz, nicht die Website.** Coolify-Projekt `wp-dev`.
+> Die oeffentliche Seite warleek.de liegt unveraendert auf All-Inkl und wird ueber
+> eine GitHub-Veroeffentlichung aktualisiert (`bin/release.sh --publish`, dann im
+> WP-Backend Plugin aktualisieren und die Installationsschritte ausfuehren, siehe
+> `README-Deploy.md`). Fuer ein Livegehen wird der VPS nicht gebraucht.
+>
+> Hinweis angelegt am 03.11.2026.
+
+---
+
 # warleek (Ordner wardogs-gc)
 
 Wardogs-**Guide-Seite** **Warleek** (warleek.de): Block-Theme `theme/warleek` (nur Design) + Plugin `plugin/warleek-core` (CPTs guide/patchnote/partner, Steam-Sync mit Claude-Übersetzung, Markdown-Import, GitHub-Updater, Optionen, Blöcke, SEO, Inhalte, Installer). Dev via `./manage.sh` (plain `docker run`, Port 8088, Login admin/warleekadmin – nur lokal), Testinstanz für Go-live-Proben auf Port 8089 (`warleek-test-*`), Prod auf All-Inkl (`README-Deploy.md`).
