@@ -19,6 +19,8 @@ Der Recon-Track ist die Sniper-Linie: Scharfschützen- und Marksman-Gewehre, Opt
 
 > [!stand] Oktober 2026 · Early Access – Stand nach dem Season-2-Update vom 15.10.2026. Preise und Freischaltstufen ändern sich mit Patches.
 
+> [!hinweis] Season 3 (12.11.2026): Die Belohnung für **markierte Hochwertziele wurde gesenkt** — ein Panzer bringt $2.000 statt $2.400, ein markierter Spieler 125 statt 150 XP. Dafür bringen zerstörte gegnerische Emplacements das Doppelte. Alle Werte im [Preis-Überblick zu Season 3](/guides/wardogs-season-3-preise/).
+
 ## Das Fernglas ist der Trick
 
 Ein Fernglas kostet etwa **$180**. Du visierst einen Gegner an, hältst die linke Maustaste – und markierst ihn damit **für das ganze Team**. Dafür bekommst du Recon-Erfahrung und Geld. Erledigt danach jemand den markierten Gegner, gibt es noch einmal etwas obendrauf.

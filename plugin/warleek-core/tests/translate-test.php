@@ -22,6 +22,7 @@ $GLOBALS['t_system']  = '';
 $GLOBALS['t_pflicht'] = array();
 $GLOBALS['t_kaputt']  = 0;   // so viele der nächsten Antworten bekommen einen Listenpunkt zu viel
 $GLOBALS['t_kaputt_ueber'] = 0;   // jede Antwort verfälschen, deren Ausschnitt länger ist als …
+$GLOBALS['t_timeout_ueber'] = 0;   // jede Anfrage in die Zeitüberschreitung laufen lassen, deren Ausschnitt länger ist als …
 add_filter( 'pre_http_request', function ( $pre, $args, $url ) {
 	if ( false === strpos( $url, 'api.anthropic.com' ) ) { return $pre; }
 	$GLOBALS['t_calls']++;
@@ -32,6 +33,13 @@ add_filter( 'pre_http_request', function ( $pre, $args, $url ) {
 	$inhalt   = (string) ( $gesendet['messages'][0]['content'] ?? '' );
 	$GLOBALS['t_system'] = (string) ( $gesendet['system'] ?? '' );
 	$GLOBALS['t_pflicht'] = (array) ( $gesendet['output_config']['format']['schema']['required'] ?? array() );
+
+	// Zeitüberschreitung nachstellen: genau der Fall der Season-03-Note, bei der
+	// Stück 2 von 3 nach 120 Sekunden ohne ein einziges Byte abbrach. WordPress
+	// liefert dafür den Fehlercode `http_request_failed`.
+	if ( $GLOBALS['t_timeout_ueber'] && strlen( $inhalt ) > $GLOBALS['t_timeout_ueber'] ) {
+		return new WP_Error( 'http_request_failed', 'cURL error 28: Operation timed out after 120000 milliseconds with 0 bytes received' );
+	}
 
 	// Spiegel: Das gesendete HTML kommt als „Übersetzung" zurück. Damit prüft der
 	// Test, dass Stücke vollständig und in der richtigen Reihenfolge wieder
@@ -201,6 +209,23 @@ $vorher   = $GLOBALS['t_calls'];
 $hart     = warleek_maybe_translate( 'Hart', $ein_hart, 0 );
 t_chk( 'unteilbares stück gibt auf', is_wp_error( $hart ) && 'warleek_tr_tags' === $hart->get_error_code(), is_wp_error( $hart ) ? $hart->get_error_code() : 'kein Fehler' );
 t_chk( 'genau zwei versuche', 2 === $GLOBALS['t_calls'] - $vorher, 'Aufrufe: ' . ( $GLOBALS['t_calls'] - $vorher ) );
+
+/* 6i) Zeitüberschreitung: Ein zu großes Stück läuft in den Timeout. Ein
+   zweiter identischer Versuch würde genauso lange brauchen, also wird sofort
+   halbiert – die Note wird fertig, statt englisch zu bleiben. */
+wl_tr_cache_leeren();
+$GLOBALS['t_kaputt_ueber'] = 0;
+$GLOBALS['t_timeout_ueber'] = 1500;
+$opts['translate_max_chars'] = '4000'; $opts['translate_budget'] = '200'; update_option( 'warleek_options', $opts );
+$lang = '';
+for ( $i = 1; $i <= 6; $i++ ) { $lang .= '<h2>T' . $i . '</h2><p>' . str_repeat( 'Ypsilon phi chi. ', 28 ) . '</p>'; }
+$vorher = $GLOBALS['t_calls'];
+$timeout = warleek_maybe_translate( 'Timeout', $lang, 0 );
+t_chk( 'zeitüberschreitung wird durch teilen aufgefangen', is_array( $timeout ), is_wp_error( $timeout ) ? $timeout->get_error_message() : '' );
+t_chk( 'text nach der zeitüberschreitung vollständig', is_array( $timeout ) && 6 === substr_count( $timeout['html'], '<h2' ), is_array( $timeout ) ? substr_count( $timeout['html'], '<h2' ) . ' Überschriften' : '' );
+t_chk( 'zeitüberschreitung gilt als teilbar', warleek_translate_teilbar( 'http_request_failed' ) );
+t_chk( 'zeitüberschreitung gilt nicht als nachbesserbar', ! warleek_translate_nachbesserbar( 'http_request_failed' ) );
+$GLOBALS['t_timeout_ueber'] = 0;
 
 /* 6h) Der Stückspeicher: Ein gescheitertes letztes Stück darf die bezahlten
    Stücke davor nicht entwerten. */

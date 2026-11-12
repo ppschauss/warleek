@@ -19,6 +19,8 @@ Es gibt einen Griff, der aus einem Transporthubschrauber einen fliegenden Aufkl�
 
 > [!hinweis] **Stand Oktober 2026: Der IR-Entfernungsmesser ist mit Season 2 zurück – auf Batterien.** Nach Angabe der Entwickler hält eine Batterie rund **80 Sekunden aktive Nutzung** und entlädt sich schneller, wenn man das Gerät hastig ein- und ausschaltet. Der Kaufpreis ist von $1.200 auf **$3.200** gestiegen. Wir haben das nach dem 15. Oktober nicht erneut im Spiel geprüft.
 
+> [!achtung] Season 3 (12.11.2026): Der Infrarot-Entfernungsmesser ist **aus dem Händler entfernt**, bis BULKHEAD ein Redesign fertig hat. Der hier beschriebene Griff funktioniert damit vorerst nicht mehr — das Gerät lässt sich schlicht nicht mehr kaufen. Was sonst noch an Ausrüstung geändert wurde, steht bei [Waffen und Ausrüstung in Season 3](/guides/wardogs-season-3-waffen/).
+
 > [!stand] Oktober 2026 · Early Access – solche Kniffe können mit jedem Patch verschwinden. Dieser hier ist genau das passiert.
 
 ## Der Griff

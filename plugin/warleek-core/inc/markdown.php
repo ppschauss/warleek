@@ -220,12 +220,19 @@ function warleek_md_to_html( $md, $strip_first_h1 = true ) {
 			continue;
 		}
 
-		// Bild als eigener Absatz, optional mit Bildunterschrift:
-		// `![Alt-Text](schluessel)` oder `![Alt-Text](schluessel "Bildunterschrift")`
-		if ( preg_match( '/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$/', $t, $m ) ) {
+		// Bild als eigener Absatz, optional mit Bildunterschrift und Breitenangabe:
+		// `![Alt](schluessel)`, `![Alt](schluessel "Unterschrift")`
+		// und `![Alt](schluessel "Unterschrift"){links}`.
+		//
+		// Ohne Angabe nimmt ein Bild die volle Textbreite ein. Das ist fuer einen
+		// Kartenausschnitt richtig und fuer ein einzelnes Ausruestungsstueck
+		// uebertrieben – dafuer gibt es `schmal` (halbe Breite, mittig) sowie
+		// `links` und `rechts` (umflossen, auf schmalen Anzeigen wieder voll).
+		if ( preg_match( '/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)(?:\{(schmal|links|rechts)\})?$/', $t, $m ) ) {
 			$flush();
 			$cap   = isset( $m[3] ) && '' !== trim( $m[3] ) ? '<figcaption>' . warleek_md_inline( $m[3] ) . '</figcaption>' : '';
-			$out[] = '<figure><img src="' . htmlspecialchars( $m[2], ENT_QUOTES, 'UTF-8' ) . '" alt="' . htmlspecialchars( $m[1], ENT_QUOTES, 'UTF-8' ) . '">' . $cap . '</figure>';
+			$cls   = isset( $m[4] ) && '' !== $m[4] ? ' class="wl-bild-' . $m[4] . '"' : '';
+			$out[] = '<figure' . $cls . '><img src="' . htmlspecialchars( $m[2], ENT_QUOTES, 'UTF-8' ) . '" alt="' . htmlspecialchars( $m[1], ENT_QUOTES, 'UTF-8' ) . '">' . $cap . '</figure>';
 			continue;
 		}
 

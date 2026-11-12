@@ -19,6 +19,8 @@ Zwischen Rollen-Level 10 und 20 blieben viele Spieler hängen — ausgerechnet d
 
 > [!stand] Oktober 2026 · Early Access – alle Zahlen stammen aus den Patch Notes vom 14.10.2026.
 
+> [!achtung] Season 3 (12.11.2026) dreht das wieder zurück: Die **XP je Stufe wurde erhöht**, das Tempo liegt wieder näher an Season 1. Dafür dauert die Season rund drei Monate, und es gibt einen Aufholbonus für Spieler mit niedrigem Level. Siehe [Limited Mode und die neue Progression](/guides/wardogs-season-3-limited-mode/).
+
 ## Die neue XP-Tabelle
 
 Benötigte Gesamt-XP je Rollen-Level:

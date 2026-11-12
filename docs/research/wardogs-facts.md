@@ -398,3 +398,158 @@ man prüfe, Season 3 „significantly" vorzuziehen. Tageshöchstwert laut dersel
 Quellen: pcgamesn.com/wardogs/season-2-mistakes-bulkhead-apology (16.10.2026) ·
 pcgamesn.com/wardogs/season-3-early-start (17.10.2026) ·
 rockpapershotgun.com/we-were-wrong-wardogs-devs-end-season-2s-team-specific-cash-and-xp-bonus-experiment-after-a-single-tumultuous-day
+
+## Season 3 — Devlog 06.11.2026, Patch Notes 11.11.2026, Start 12.11.2026
+
+Primärquellen: Steam-Ankündigung „WARDOGS | Road to Season 3" (gid 1848664643347097,
+06.11.2026) und „WARDOGS | Season 03 Patch Notes" (gid 1849192144179736, 11.11.2026),
+beide App 1867240, Autor Lossy. Wartungsfenster 12.11.2026, 13:00–15:00 UTC,
+rund zwei Stunden Ausfall.
+
+**Karte Sabatulo:** erste Stadtkarte. Enge Straßen, Hochhäuser, viel Zerstörung;
+genannte Orte Krankenhaus, Schwimmbad, Kraftwerk, Flussufer.
+
+**Limited Mode:** Vendor-Angebot auf das begrenzt, was früh bis mittig in der Season
+verfügbar ist. Laut Patch Notes **ohne**: Hollow-Point- und AP-Munition, Panzerung
+Stufe 3 und 4, Angriffsfahrzeuge, CIWS, Stingray, MG Nest, Drill Rig, Panzerabwehrminen.
+Fortschritt und Geld zählen in andere Modi hinein. **Widerspruch zum Devlog:** Dort
+nannte die Einblendung zusätzlich „NO.M4 // NO.AMR.50 // NO.MGL.40" und „*FULL LIST TBD",
+die gesprochene Fassung „FMJ only / tier 2 armour max / no Havocs". Maßgeblich sind die
+Patch Notes.
+
+**Season-Länge rund 3 Monate.** Preis-Erhöhung um $5 zum Ende von Season 3 am
+28.01.2027; Bestandskäufer zahlen nichts nach. Nächste Erhöhung geplant zum
+Early-Access-Jubiläum im September 2027.
+
+### Waffen und Ausrüstung
+- **Infrarot-Entfernungsmesser aus dem Vendor entfernt**, bis ein Redesign steht.
+  Begründung: zu häufig in fast jedem Match, der Batterie-Nerf aus Season 2 reichte nicht.
+- **Sturmgewehre und LMGs:** Torso-Schaden der Sturmgewehre zurück auf Season-1-Werte,
+  LMG-Torso gleichgezogen. Gegenüber Season 2: oberer Torso **+13 %**, mittlerer **+3 %**,
+  unterer **+3 %**. Gilt mit und ohne Panzerung; die prozentuale Reduktion durch
+  Panzerung bleibt unverändert.
+- **TCX-SPR:** weniger Rückstoß, weniger seitliche Drift im Dauerfeuer.
+- **DMRs:** Körper – jeder DMR tötet ungepanzert jetzt in **2 statt 3** Schüssen.
+  Gegen Panzerung brauchen SVD, BMR-308 und M14 **1–2 Schüsse weniger** auf jeder Stufe,
+  die SKS einen weniger gegen Stufe 2 und 4. Kopf ohne Helm **1 statt 2** Treffer;
+  SVD, BMR-308 und M14 durch Stufe-3-Helm **2 statt 3**. Hals mehr Schaden, bleibt
+  bei 2 Treffern. Arme und Beine unverändert. Begründung: Season 2 war zusammen mit
+  den Rückstoß-Änderungen übersteuert.
+- **Compound Bow:** Pfeilgeschwindigkeit **+50 %**.
+- **Molotow:** setzt Getroffene jetzt in Brand (Schaden, erzwingt das Fallenlassen des
+  gehaltenen Gegenstands). Freischaltgebühr **$25.000 → $12.500**. Weniger Schaden gegen
+  gepanzerte Fahrzeuge und schwere Panzerung.
+- **Halligan-Brechstange:** öffnet jetzt gegnerische Nachschubkisten, ein zufälliger
+  Gegenstand fällt heraus.
+- **Gewichtskorrekturen:** AMP-9-20-Schuss-Magazin 1 kg → 0,3 kg; IED 1,5 kg → 2,7 kg;
+  IED-Zünder 1,5 kg → 0,2 kg.
+
+### Fallschirme
+- **Basic:** jetzt Notfallschirm. Öffnet langsamer, lässt sich unter rund **20 m** nicht
+  mehr ziehen, wirksam ab rund **100 m** (ab rund 60 m noch überlebbar bei sofortiger
+  Reaktion). Preis **$500 → $1.250**.
+- **Sport:** dreht, gleitet und sinkt deutlich schneller, stärkeres und längeres Abfangen.
+  Kommt etwas schneller herunter. Wirksam ab rund **60 m** (ab rund 40 m noch überlebbar).
+  Preis **$700 → $2.250**.
+- Hubschrauber-Passagiere sehen ihre **Höhe über Grund** über der Minikarte.
+- Neue Belohnung für den Absprung in eine gegnerische FOB.
+
+### Fahrzeuge
+- Radfahrzeuge rollen ohne Gas bergab; mehr Traktion bei Ural und Humvee; Ural, Kodiak,
+  Humvee, Dune Buggy und Wolf-110 verlieren Grip oberhalb ihrer normalen Höchstgeschwindigkeit.
+  Der Ural rollt rückwärts nicht mehr schneller, als er vorwärts fährt.
+- **Rückwärtsgang:** Bobcat 16 → ~25, Kodiak 33 → ~57, Humvee 35 → ~57, Dune Buggy 43 → ~50,
+  Ural 15 → 27, Wolf-110 27 → ~40 km/h.
+- **Fahrzeug-Miniguns gegen Infanterie:** Kopf +50 %, Hals +78 %, oberer Torso +64 %,
+  mittlerer +55 %, unterer +50 %, Becken/Arme/Beine +56 %. Liegt damit zwischen Season 1 und 2.
+- **AH-6R Littlebird [Rockets]** verschießt eigene 70-mm-Raketen statt der 122-mm des Havoc.
+  Schaden unverändert, aber Schubinstabilität und Flugwackeln – etwas schwächer gegen
+  Infanterie, unverändert gegen Fahrzeuge und FOBs.
+- **Littlebird-Cockpit** (MH-6, AH-6R, AH-6M): mehr Schutz für Pilot und Co-Pilot,
+  zwischen Season 1 und 2.
+- **Fenster:** Das Season-2-Material für Regen erzeugte Schlieren in der Ego-Perspektive –
+  war nicht in den Season-2-Notes genannt und ist jetzt behoben.
+- **Vanguard CIWS / 20×102 mm:** Treffer zählen je Fahrzeugsektion nur noch einmal pro
+  Geschoss statt mehrfach beim Durchschlag. Havoc und Z20 Lakota rund wie Season 2,
+  Littlebirds etwas weniger. Maximaler Anstellwinkel der Flugabwehr **65° → 60°**,
+  der tote Winkel über der Stellung wächst.
+- **Panzer** sind widerstandsfähiger gegen Granaten (vorher konnte eine Granate den Motor
+  zerstören). Granatwerfer: Ketten 3 Treffer statt 1, Heckmotor 5–6 statt 3.
+- Buchsbaumhecken lassen sich von Fahrzeugen (außer Bobcat) überfahren, Steinmauern von
+  Panzern und Artillerie zerstören.
+- **Nachschub-Abwurfhöhen:** Kiste ~60 m → ~35 m, gepanzerte Kiste ~80 m → ~35 m,
+  Palette ~90 m → ~40 m. Gepanzert überlebt keinen höheren Fall mehr als normal.
+  Geschwindigkeit zählt mit, bis rund 80 km/h geht der Abwurf auf diesen Höhen gut.
+  Kisten lassen sich nicht mehr in Schutzzonen absetzen.
+- **Preise:** Wolf-110 [M2 Browning] $7.800 → $6.800, Kodiak [M249] $6.750 → $6.250,
+  AH-6M Littlebird [Miniguns] $12.000 → $10.480, Havoc $28.000 → $26.000.
+
+### Progression und Wirtschaft
+- **XP je Level erhöht**, Tempo insgesamt näher an Season 1.
+- **Multi-Track-Freischaltungen:** Panzerung, Rucksäcke, Taktikwesten und Fallschirme
+  sind über **jeden** Rollen-Track freischaltbar; Munitionssorten liegen dort, wo die
+  zugehörigen Waffen freigeschaltet werden. Das Durchwechseln mehrerer Rollen ist damit
+  nicht mehr der schnellste Weg. **Ausdrücklich eine Übergangslösung** bis zum
+  Intel-basierten Progressionssystem 2027.
+- Rollenspezifischer Vorlauf: Assault bekommt seine Panzerung zuerst, Medic die Taktikweste,
+  Support die Rucksäcke, Recon die AP-Munition.
+- **Verschobene Stufen:** C4 Level 4 → 5; Molotow 13 → 8; Großer Hammer (Support) 8 → 14;
+  Verba (Support) 14 → 8; AMR 50 (Recon) 35 → 41; Panzer Driver 20–35 → 35–50 und
+  WARDOG 145 → 200.
+- **Aufhol-Mechanik:** XP-Bonus und verlängerter Vendor-Rabatt für Spieler mit niedrigem
+  Level, wöchentlich wachsend, je Rolle.
+- **Rabatt der schwächsten Fraktion** bemisst sich jetzt am Abstand zur **ersten** statt
+  zur nächsthöheren Fraktion.
+- **Geld:** zerstörte Emplacements doppelt – Mörser, Talon, MG Nest, Stingray je
+  $650 → $1.300, Vanguard CIWS $1.200 → $2.400. Luftfahrzeug-Killstreaks wieder da.
+  Fahrzeugabschuss mit eigenem Fahrzeug im Umkreis von 1.000 m einer Kontrollzone bringt
+  die volle Zonen-Belohnung. Paletten außerhalb einer eigenen FOB bringen weniger,
+  billige Kisten skaliert weniger (gegen Kisten-Spam). Neue Rückvergütung für Treibstoff
+  in eine FOB, der einen Bohrer startet.
+- **Gesenkte Belohnung für markierte Hochwertziele:** AH-6M/AH-6R $1.000 → $850,
+  Z20 Lakota $1.400 → $1.200, L2A6 $3.300 → $3.000, T-72B3 $2.400 → $2.000,
+  Hot Zone Magnet $1.650 → $1.500. XP: Spieler 150 → 125, FOB 250 → 200,
+  Hot Zone Magnet 225 → 200, Spawn-Fahrzeuge 500 → 400.
+- **Der Wager Vendor ist entfernt.** Begründung: Die ursprüngliche Fassung bot zu viele
+  Exploits, die entschärfte Fassung nahm ihm die Rolle. Geht zurück in die Entwicklung.
+
+### Technik, Regeln und Server
+- **Grafik-Manipulation ist bannbar.** NVIDIA Inspector oder andere Fremdsoftware zum
+  Entfernen von Rauch oder Gras, Verändern von Geometrie, LOD-Bias oder Texturen gilt ab
+  Season 3 als Bannwürdig. Wer solche Einstellungen gesetzt hat, wird beim Start mit einem
+  Hinweisfenster blockiert; das Umgehen des Hinweises ist bannbar.
+- **„Potato"-Schatten** erscheinen im Menü nur, wenn die Hardware beim Start als echte
+  Mindestanforderung erkannt wird. Ab Season 3 wird die Einstellung beim Start
+  zurückgesetzt, wenn sie außerhalb des Menüs (in den .ini-Dateien) verändert wurde;
+  das Vortäuschen schwächerer Hardware ist bannbar.
+- **Globale Beleuchtung** erscheint nur noch im Preset „Overkill" und ist dort an- und
+  abschaltbar; in allen anderen Presets ist sie aus und ausgeblendet.
+- **Ping-Grenze auf 250** in allen Regionen auf offiziellen Servern – nach der Ban-Welle
+  von über 185.000 Konten und einer Prüfung regionaler Verzerrungen. Community-Server
+  dürfen eigene Grenzen setzen.
+- **DDoS in asiatischen Regionen:** Angriffsvektor identifiziert, Infrastruktur-Änderungen
+  waren für den Season-03-Start vorgesehen. Konten mit Beteiligung werden verfolgt.
+- **Seeding:** je Team spawnen einige unbewaffnete Fahrzeuge kostenlos, alle werden zum
+  Matchstart entfernt. Die Team-Switch-Strafe greift nur noch, wenn man im laufenden
+  Match schon einmal auf dem Server war.
+- **Community-Server:** kleiner Geldbonus fürs Spielen dort, Favoriten im Browser und im
+  Pausenmenü, Filter und Sortierspalte, eigener „Server Rules"-Hinweis beim Beitritt.
+  Der Server-Browser zeigt und filtert Limited-Server.
+- **Steam:** drei neue Erfolge (He's Behind You, Car Jacker, Slot Machine) und
+  Zeitleisten-Marken in Steam-Aufnahmen für Kills, Wiederbelebungen und Aufgeben.
+
+### Movember und Twitch Drops
+- **Tactical-'Stache-DLC:** Schnurrbart-Kosmetik, wächst mit der Spielzeit im November.
+  **100 % des Erlöses** gehen an Movember.
+- **Gold-Market-Tarnungen Season 3:** Defibrillator „Black & Gold" (zeitlich begrenzt),
+  MAAWS „Two-Tone Desert", Compound Bow „Digital Wood", M1911 und FAL „Chocolate Chip".
+  Die Littlebird-Tarnung „Black & Gold" läuft wegen der verkürzten Season 2 zwei Wochen
+  länger weiter.
+- **Twitch Drops aktiv**, Kontoverknüpfung über account.wardogs.com. Schwellen:
+  0:15 Bandage ×2 · 1:00 IED ×1 + Molotow ×2 · 2:00 weißer Rauch ×2 + Adrenalin ×1 +
+  Field Backpack ×1 · 4:00 Basic- und Sportfallschirm je ×1 · 5:30 Halligan ×1 + RPG-7 ×1 +
+  93 mm ×2 · 7:30 Littlebird ×1 + Wolf-110 ×1 · 9:30 kleiner Rucksack + Helm L1 +
+  Panzerung L1 · 11:30 TCX-SPR + 2 Magazine + OKP-7-Reflex + gummierter Ergo-Griff ·
+  15:00 mittlerer Rucksack + Helm L2 + Panzerung L2.
+
+Quelle: Steam-Ankündigung, App 1867240, gid 1849192144179736 (11.11.2026)

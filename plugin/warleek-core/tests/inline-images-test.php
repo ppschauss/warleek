@@ -30,6 +30,8 @@ chk( 'schluessel→url', $html, '<figure><img src="' . esc_url( $url ) . '" alt=
 
 // 2. Unbekannter Schlüssel: figure fliegt raus, statt ein kaputtes Bild zu zeigen.
 chk( 'unbekannt→leer', warleek_resolve_asset_src( '<figure><img src="gibt-es-nicht" alt="x"></figure>', $map ), '' );
+$breit = warleek_resolve_asset_src( '<figure class="wl-bild-links"><img src="' . $key . '" alt="Ein Alt-Text"></figure>', $map );
+chk( 'breitenangabe bleibt erhalten', $breit, '<figure class="wl-bild-links"><img src="' . esc_url( $url ) . '" alt="Ein Alt-Text" data-id="' . $id . '"></figure>' );
 
 // 3. Fertige Adressen bleiben unangetastet.
 $fertig = '<figure><img src="https://example.org/bild.webp" alt="x"></figure>';

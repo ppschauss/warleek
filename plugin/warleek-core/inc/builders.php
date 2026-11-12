@@ -124,9 +124,13 @@ function warleek_resolve_asset_src( $html, array $map ) {
 	if ( ! str_contains( $html, '<img' ) ) { return $html; }
 
 	return (string) preg_replace_callback(
-		'#<figure>\s*<img src="([^"]+)" alt="([^"]*)">\s*((?:<figcaption>.*?</figcaption>)?)\s*</figure>#s',
+		'#<figure([^>]*)>\s*<img src="([^"]+)" alt="([^"]*)">\s*((?:<figcaption>.*?</figcaption>)?)\s*</figure>#s',
 		function ( $m ) use ( $map ) {
-			$key = $m[1];
+			// Gruppe 1 sind die Attribute der <figure> – dort steht die Breitenangabe
+			// aus dem Markdown (`wl-bild-links`). Wird sie hier nicht mitgenommen,
+			// faellt jedes Bild beim Einspielen auf volle Breite zurueck.
+			$attr = $m[1];
+			$key = $m[2];
 			// Fertige Adresse? Dann nichts anfassen.
 			if ( preg_match( '#[/:.]#', $key ) ) { return $m[0]; }
 			if ( empty( $map[ $key ] ) ) {
@@ -136,7 +140,7 @@ function warleek_resolve_asset_src( $html, array $map ) {
 			$id  = (int) $map[ $key ];
 			$url = function_exists( 'wp_get_attachment_url' ) ? wp_get_attachment_url( $id ) : '';
 			if ( ! $url ) { return ''; }
-			return '<figure><img src="' . esc_url( $url ) . '" alt="' . esc_attr( $m[2] ) . '" data-id="' . $id . '">' . $m[3] . '</figure>';
+			return '<figure' . $attr . '><img src="' . esc_url( $url ) . '" alt="' . esc_attr( $m[3] ) . '" data-id="' . $id . '">' . $m[4] . '</figure>';
 		},
 		$html
 	);

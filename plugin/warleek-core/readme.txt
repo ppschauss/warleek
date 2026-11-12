@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.35.0
+Stable tag: 2.36.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,17 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.36.0 =
+* Neun Guides zu den Season-03-Patch-Notes vom 11.11.2026: Überblick, Was neu ist, Waffen und Ausrüstung, Limited Mode mit Für und Wider, Twitch Drops, Preise, Nerfs und Buffs, Movember-DLC sowie Technik und Bann-Regeln. Fünf erscheinen sofort, vier terminiert bis zum 16.11.
+* 43 Datenbank-Einträge auf Season-3-Werte gebracht: vier Fahrzeugpreise, beide Fallschirme, sieben Track-Verschiebungen, drei Gewichte und die halbierte Freischaltgebühr des Molotow. Jede Änderung steht im Verlauf des Eintrags.
+* 14 bestehende Guides tragen jetzt einen Season-3-Hinweis, darunter „Entfernungsmesser im Heli" (Gerät entfernt), „Der Wager Vendor" (ersatzlos gestrichen) und „Beste Einstellungen" (Grafik-Manipulation ist bannbar).
+* Bilder im Guide-Fließtext lassen sich auf halbe Breite setzen oder umfließen: `![Alt](schluessel){schmal|links|rechts}`. Unter 48rem wird wieder jedes Bild voll breit.
+* Übersetzung der Patch Notes lief bei langen Dokumenten in den Timeout: Das Zeitlimit ist jetzt einstellbar (Standard 300 s statt fest 120 s), und eine Zeitüberschreitung lässt das Stück halbieren, statt die ganze Note englisch zu lassen.
+* `warleek_item_stand()` kennt Season 3 – aktualisierte Einträge zeigten sonst weiter „Oktober 2026 (Season 2)".
+
+= 2.35.0 =
+* Zwei Guides zum Devlog „Road to Season 03" vom 06.11.2026: Überblick zu Season 3 und die Ban-Welle mit 185.000 Konten, mit zwölf Bildern aus dem Video.
 
 = 2.34.0 =
 * Neuer Guide „FOB-Grundlagen": kaufen, aufstellen, versorgen – Anstoß war ein englischer Artikel von GHBSmith, Zahlen und Gliederung sind eigene.

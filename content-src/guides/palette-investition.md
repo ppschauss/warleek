@@ -19,6 +19,8 @@ Die Versorgungspalette war in Season 1 das beste Geschäft im Spiel. Season 2 ha
 
 > [!stand] Oktober 2026 · Early Access – alle Beträge stammen aus den Patch Notes vom 14.10.2026.
 
+> [!hinweis] Season 3 (12.11.2026): Paletten lassen sich nur noch aus rund **40 m statt 90 m** abwerfen, Kisten aus rund **35 m**, und wer außerhalb einer eigenen FOB absetzt, bekommt weniger. Billige Kisten zahlen skaliert weniger aus. Neu ist eine Rückvergütung für **Treibstoff**, der in einer FOB einen Bohrer startet. Siehe [Preise in Season 3](/guides/wardogs-season-3-preise/).
+
 ## Die neue Rechnung
 
 | Schritt | Season 1 | Season 2 |

@@ -748,8 +748,16 @@ function warleek_item_inhalt( array $e ) {
  * @return string
  */
 function warleek_item_stand( array $e ) {
-	foreach ( (array) ( $e['quellen'] ?? array() ) as $q ) {
-		if ( false !== strpos( (string) $q, 'Season 02 Patch Notes' ) ) { return 'Oktober 2026 (Season 2)'; }
+	// Von der juengsten Season abwaerts pruefen: Ein Eintrag traegt oft mehrere
+	// Patch Notes als Quelle, und gelten soll die neueste davon.
+	$seasons = array(
+		'Season 03 Patch Notes' => 'November 2026 (Season 3)',
+		'Season 02 Patch Notes' => 'Oktober 2026 (Season 2)',
+	);
+	foreach ( $seasons as $nadel => $stand ) {
+		foreach ( (array) ( $e['quellen'] ?? array() ) as $q ) {
+			if ( false !== strpos( (string) $q, $nadel ) ) { return $stand; }
+		}
 	}
 	return 'Oktober 2026';
 }

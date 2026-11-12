@@ -19,6 +19,8 @@ Bauen ist in Wardogs keine Nebenbeschäftigung, sondern die Art, wie ein Team Ge
 
 > [!stand] Oktober 2026 · Early Access – Baukosten auf dem Stand der Season-02-Patch-Notes vom 14.10.2026.
 
+> [!achtung] Season 3 (12.11.2026): Der **große Hammer** liegt jetzt auf **Support 14** statt 8, die **Verba** im Gegenzug auf **Support 8** statt 14. Alle Emplacements, die den großen Hammer brauchen, verschieben sich entsprechend nach hinten. Mehr dazu beim [Limited Mode und der neuen Progression](/guides/wardogs-season-3-limited-mode/).
+
 ## Die drei Hammer
 
 | Hammer | Was damit geht | Tempo |

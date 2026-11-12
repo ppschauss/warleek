@@ -19,6 +19,8 @@ Das Spiel sagt dir, was Dinge kosten. Es sagt dir nicht besonders deutlich, was 
 
 > [!stand] September 2026 · Early Access – Grenzwerte und Effekte können sich mit Patches ändern.
 
+> [!hinweis] Season 3 (12.11.2026) korrigiert drei Gewichte: Das **AMP-9-20-Schuss-Magazin** wiegt 0,3 statt 1 kg, der **IED** 2,7 statt 1,5 kg und sein **Zünder** 0,2 statt 1,5 kg. Die Grenzwerte unten bleiben unverändert.
+
 ## Vier Stufen
 
 Dein gesamtes Loadout – Weste, Waffen, Munition, Zubehör, Ausrüstungsgegenstände – summiert sich zu einem Gewicht, das dich in eine von vier Klassen einsortiert. Je schwerer, desto langsamer.

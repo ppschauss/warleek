@@ -71,6 +71,7 @@ function warleek_option_fields() {
 		'translate_model'    => array( 'Modell',                  'text',     'claude-opus-5', 'claude-opus-5 (Standard), claude-sonnet-5 oder claude-haiku-4-5 als günstigere Alternativen.' ),
 		'translate_max_chars'=> array( 'Stückgröße (Zeichen)',    'int',      '20000', 'Längere Patch Notes werden an Absatzgrenzen in Stücke geschnitten und stückweise übersetzt. Höchstens acht Stücke je Note.' ),
 		'translate_budget'   => array( 'Übersetzungen je Lauf',   'int',      '5',   'Deckel pro Sync-Lauf. Der stündliche Cron holt den Rest nach.' ),
+		'translate_timeout'  => array( 'Zeitlimit je Anfrage (s)', 'int',      '300', 'Wie lange eine einzelne Anfrage an die Claude-API dauern darf (60–600). Läuft sie ab, wird das Stück halbiert und erneut übersetzt.' ),
 		'consent_enabled'    => array( 'Einwilligungs-Banner',    'bool',     '1',   'Zeigt den Hinweis unten am Bildschirm. Ohne eingebettete externe Medien ist er rechtlich nicht nötig – dann kannst du ihn ausschalten.' ),
 		'consent_title'      => array( 'Banner: Überschrift',     'text',     'Deine Entscheidung', 'Kurze Zeile über dem Text.' ),
 		'consent_text'       => array( 'Banner: Text',            'textarea', 'Warleek zeigt keine Werbung und verkauft keine Daten. Zwei Dinge brauchen trotzdem deine Einwilligung, weil dabei fremde Server ins Spiel kommen: eingebettete Videos (YouTube, Vimeo) und die Reichweitenmessung mit Google Analytics. Ohne Zustimmung wird nichts davon geladen. Du kannst jede Kategorie einzeln wählen und die Entscheidung jederzeit ändern.', 'Was im Banner steht. Bleib bei dem, was die Seite wirklich tut.' ),
@@ -196,7 +197,7 @@ function warleek_option_gruppen() {
 		'translate' => array(
 			'titel'  => 'Patch Notes übersetzen',
 			'text'   => 'Deutsche Fassung der Steam-Patch-Notes über die Claude-API. Der Schlüssel gehört besser als Konstante <code>WARLEEK_ANTHROPIC_KEY</code> in die <code>wp-config.php</code>.',
-			'felder' => array( 'anthropic_api_key', 'translate_enabled', 'translate_model', 'translate_max_chars', 'translate_budget' ),
+			'felder' => array( 'anthropic_api_key', 'translate_enabled', 'translate_model', 'translate_max_chars', 'translate_budget', 'translate_timeout' ),
 		),
 		'consent' => array(
 			'titel'  => 'Einwilligung & Statistik',

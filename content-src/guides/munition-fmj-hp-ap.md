@@ -19,6 +19,8 @@ Jedes Kaliber im Spiel gibt es in drei Sorten, und die meisten Spieler lassen di
 
 > [!stand] Oktober 2026 · Early Access – Werte ändern sich mit Patches.
 
+> [!hinweis] Season 3 (12.11.2026): Die **Munitionssorten wurden über die Rollen-Tracks verteilt** — sie liegen jetzt dort, wo auch die Waffen freigeschaltet werden, die sie verschießen; Recon bekommt AP zuerst. Außerdem haben **Hollow-Point-Treffer** eigene Trefferlaute für Panzerung und Helm bekommen. Im Limited Mode sind HP und AP gar nicht erst käuflich.
+
 ## Die drei Sorten
 
 | Im Spiel | Kurz | Gedacht gegen |

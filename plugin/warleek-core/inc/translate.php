@@ -88,8 +88,11 @@ function warleek_anthropic_request( $system, $user, array $schema, $max_tokens =
 		'messages'      => array( array( 'role' => 'user', 'content' => $user ) ),
 	);
 
+	// Zeitlimit: Opus braucht fuer ein Stueck von 20.000 Zeichen regelmaessig
+	// mehr als zwei Minuten. Die Season-03-Note lief deshalb in cURL-Fehler 28.
+	$zeit = max( 60, min( 600, (int) warleek_opt( 'translate_timeout', 300 ) ) );
 	$res = wp_remote_post( WARLEEK_ANTHROPIC_URL, array(
-		'timeout' => 120,
+		'timeout' => $zeit,
 		'headers' => array(
 			'content-type'      => 'application/json',
 			'x-api-key'         => $key,
@@ -164,6 +167,23 @@ function warleek_html_abweichung( $html_en, $html_de ) {
 /** Codes, bei denen ein zweiter Versuch Sinn hat – ein HTTP-Fehler gehört nicht dazu. */
 function warleek_translate_nachbesserbar( $code ) {
 	return in_array( (string) $code, array( 'warleek_tr_tags', 'warleek_tr_urls', 'warleek_tr_empty' ), true );
+}
+
+/**
+ * Rechtfertigt dieser Fehler, das Stueck zu halbieren?
+ *
+ * Neben den Struktur-Fehlern zaehlt dazu die **Zeitueberschreitung**: Ein
+ * Stueck, fuer das die API laenger braucht als das Zeitlimit, wird mit
+ * demselben Inhalt wieder zu lange brauchen – halb so viel Text dagegen
+ * ungefaehr halb so lange. Ein zweiter identischer Versuch waere hier reine
+ * Geldverbrennung, deshalb steht `http_request_failed` **nicht** in
+ * `warleek_translate_nachbesserbar()`: erst teilen, dann noch einmal fragen.
+ *
+ * @param string $code Fehlercode des letzten Versuchs.
+ * @return bool
+ */
+function warleek_translate_teilbar( $code ) {
+	return warleek_translate_nachbesserbar( $code ) || 'http_request_failed' === (string) $code;
 }
 
 /**
@@ -480,7 +500,7 @@ function warleek_maybe_translate( $title_en, $html_en, $existing = 0, $retransla
 
 		if ( ! $res ) {
 			// Struktur stimmt zweimal nicht: Stück halbieren und einzeln angehen.
-			$halb = warleek_translate_nachbesserbar( $letzter->get_error_code() )
+			$halb = warleek_translate_teilbar( $letzter->get_error_code() )
 				? warleek_translate_haelften( $job )
 				: array();
 			if ( $halb ) {

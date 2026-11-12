@@ -19,6 +19,8 @@ Ein Panzer in der Kontrollzone kippt ein Gefecht, bis ihn jemand ausschaltet. Di
 
 > [!stand] September 2026 · Early Access – Werte und Zeiten ändern sich mit Patches.
 
+> [!hinweis] Season 3 (12.11.2026): Panzer sind deutlich **robuster gegen Granaten** — eine einzelne Granate zerstört den Motor nicht mehr. Der Granatwerfer braucht jetzt **3 Treffer statt 1** für die Ketten und **5 bis 6 statt 3** für den Heckmotor. Die Trefferzonen unten gelten weiter.
+
 ## Die wichtigste Zahl
 
 Wohin du triffst, entscheidet mehr als womit. Als Größenordnung für einen Kampfpanzer mit dem MAAWS:

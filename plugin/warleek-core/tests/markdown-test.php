@@ -59,6 +59,12 @@ chk( 'para-join', warleek_md_to_html( "Zeile eins\nZeile zwei\n\nNeuer Absatz", 
 chk( 'img', warleek_md_to_html( '![Alt Text](bild.webp)', false ), '<figure><img src="bild.webp" alt="Alt Text"></figure>' );
 chk( 'img-caption', warleek_md_to_html( '![Alt](schluessel "Eine **Unterschrift**")', false ), '<figure><img src="schluessel" alt="Alt"><figcaption>Eine <strong>Unterschrift</strong></figcaption></figure>' );
 chk( 'img-leere-caption', warleek_md_to_html( '![Alt](schluessel "")', false ), '<figure><img src="schluessel" alt="Alt"></figure>' );
+chk( 'img-schmal', warleek_md_to_html( '![Alt](schluessel){schmal}', false ), '<figure class="wl-bild-schmal"><img src="schluessel" alt="Alt"></figure>' );
+chk( 'img-links-mit-caption', warleek_md_to_html( '![Alt](schluessel "Unten"){links}', false ), '<figure class="wl-bild-links"><img src="schluessel" alt="Alt"><figcaption>Unten</figcaption></figure>' );
+// Eine unbekannte Breitenangabe faellt auf das Inline-Bild zurueck und bleibt
+// als Text stehen. Gewollt: Ein Tippfehler faellt beim Korrekturlesen auf,
+// statt still ignoriert zu werden.
+chk( 'img-unbekannte-breite-bleibt-sichtbar', warleek_md_to_html( '![Alt](schluessel){riesig}', false ), '<p><img src="schluessel" alt="Alt">{riesig}</p>' );
 
 echo $fail ? "$fail FAILED\n" : "OK\n";
 exit( $fail ? 1 : 0 );

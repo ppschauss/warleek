@@ -19,6 +19,8 @@ Helikopter sind in Wardogs der schnellste Weg, Leute in die Zone zu bringen. Ent
 
 > [!stand] Oktober 2026 · Early Access – Baukosten auf dem Stand der Season-02-Patch-Notes vom 14.10.2026.
 
+> [!hinweis] Season 3 (12.11.2026): Der maximale Anstellwinkel des **Vanguard CIWS** fällt von **65° auf 60°** — der tote Winkel direkt über der Stellung wird größer. Zerstörte Emplacements bringen dem Gegner jetzt das Doppelte: Talon $1.300, CIWS $2.400. Und der große Hammer kommt erst auf Support 14. Siehe [Nerfs und Buffs](/guides/wardogs-season-3-nerfs-buffs/).
+
 ## Die beiden Systeme
 
 | | **Talon 9K-SAM** | **Vanguard CIWS** |

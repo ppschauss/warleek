@@ -19,6 +19,8 @@ Season 2 hat **79 Preise** bewegt. Die meisten davon sind Aufsätze und Magazine
 
 > [!stand] Oktober 2026 · Early Access – alle Beträge stammen aus den Patch Notes vom 14.10.2026.
 
+> [!hinweis] Season 3 (12.11.2026) hat die Preise erneut verschoben: vier Fahrzeuge billiger, beide Fallschirme deutlich teurer, die Freischaltgebühr des Molotow halbiert. Die aktuellen Beträge stehen im [Preis-Überblick zu Season 3](/guides/wardogs-season-3-preise/).
+
 ## Die Richtung ist klar
 
 Infanteriewaffen werden tendenziell billiger, **Fahrzeuge, Optik und Schutz deutlich teurer**. Wer zu Fuß kämpft, zahlt in Season 2 weniger. Wer fährt, fliegt oder aus der Distanz arbeitet, zahlt mehr.

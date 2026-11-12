@@ -19,6 +19,8 @@ Der verbreitete Rat lautet „alles auf Niedrig". Der ist falsch. In einem Spiel
 
 > [!stand] September 2026 · Early Access – Menüpunkte und Wirkung ändern sich mit Patches.
 
+> [!achtung] Season 3 (12.11.2026): **Grafik-Manipulation über Fremdsoftware ist jetzt bannbar** — NVIDIA Inspector und Ähnliches zum Entfernen von Rauch oder Gras, für Geometrie, LOD-Bias oder Texturen. Auch das Erzwingen der „Potato"-Schatten über die .ini-Dateien zählt dazu. Alles hier Empfohlene betrifft ausschließlich das Menü im Spiel und bleibt erlaubt. Die **globale Beleuchtung** erscheint allerdings nur noch im Preset „Overkill"; in allen anderen ist sie ohnehin aus. Einzelheiten bei [Technik und Bann-Regeln in Season 3](/guides/wardogs-season-3-bugfixes/).
+
 ## Das Prinzip
 
 > [!hinweis] Schütze die Einstellungen, die **Information** liefern. Kürze die, die nur **Stimmung** liefern.

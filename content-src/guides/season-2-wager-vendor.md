@@ -19,6 +19,8 @@ Von allem, was Season 2 mitbringt, ist das hier der ungewöhnlichste Punkt — u
 
 > [!stand] Oktober 2026 · Early Access – angekündigt für den 15. Oktober, von uns noch nicht im Spiel erlebt.
 
+> [!achtung] Season 3 (12.11.2026): Der Wager Vendor wurde **ersatzlos entfernt**. Die ursprüngliche Fassung bot nach Angabe der Entwickler zu viele Exploits, die entschärfte nahm ihm seine Rolle; er geht zurück in die Entwicklung. Dieser Guide beschreibt damit ein Stück Spielgeschichte. Siehe [Nerfs und Buffs in Season 3](/guides/wardogs-season-3-nerfs-buffs/).
+
 ## Wie es funktioniert
 
 Beim **Wager Vendor** wettest du Spielgeld auf deine eigene Leistung:

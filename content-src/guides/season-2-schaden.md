@@ -19,6 +19,8 @@ Season 2 ändert nicht einzelne Waffen, sondern die Munition darunter. Wer ein G
 
 > [!stand] Oktober 2026 · Early Access – alle Zahlen stammen aus den Patch Notes vom 14.10.2026 und sind von uns nicht im Spiel nachgemessen.
 
+> [!achtung] Season 3 (12.11.2026) nimmt einen Teil davon zurück: Der Torso-Schaden von **Sturmgewehren und LMGs** liegt wieder auf Season-1-Niveau (oberer Torso +13 % gegenüber Season 2), und **DMRs** töten ungepanzert mit zwei statt drei Schüssen. Die Kaliber-Nerfs unten gelten weiter. Alle neuen Werte bei [Waffen und Ausrüstung in Season 3](/guides/wardogs-season-3-waffen/).
+
 ## Die vier Kaliber
 
 | Kaliber | Grundschaden |

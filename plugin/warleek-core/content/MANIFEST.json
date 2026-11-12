@@ -1667,5 +1667,155 @@
         "alt": "Endbild des Devlogs mit dem Schriftzug WARDOGS Season 03 und dem Datum 12th November 2026 über einem Soldaten an einem Maschinengewehr",
         "use": "guide-s3-ueberblick",
         "size": 54850
+    },
+    "bild-pn-zerstoerung.webp": {
+        "alt": "Zerstörtes Gebäudeinneres mit Loch in der Wand und Trümmern",
+        "use": "bild-pn-zerstoerung",
+        "size": 65166
+    },
+    "bild-pn-sabatulo-gasse2.webp": {
+        "alt": "Enge Gasse zwischen Wohnblöcken mit Pfützen",
+        "use": "bild-pn-sabatulo-gasse2",
+        "size": 90820
+    },
+    "guide-s3-bugfixes.webp": {
+        "alt": "Blick aus einem Hubschrauber-Cockpit bei Regen auf eine Landschaft",
+        "use": "guide-s3-bugfixes",
+        "size": 40070
+    },
+    "bild-pn-multitrack.webp": {
+        "alt": "Freischaltungsleisten für WARDOG-Track und Assault-Track mit geteilten Gegenständen",
+        "use": "bild-pn-multitrack",
+        "size": 18392
+    },
+    "bild-pn-unlock-karten.webp": {
+        "alt": "Zwei Freischaltungskarten im Vergleich: WARDOG-Stufe 140 neben Pilot-Stufe 40",
+        "use": "bild-pn-unlock-karten",
+        "size": 12466
+    },
+    "bild-pn-sabatulo-hof.webp": {
+        "alt": "Innenhof zwischen Wohnblöcken auf Sabatulo",
+        "use": "bild-pn-sabatulo-hof",
+        "size": 76100
+    },
+    "guide-s3-limited.webp": {
+        "alt": "Enge Gasse zwischen Wohnblöcken auf der Karte Sabatulo mit Pfützen auf dem Asphalt",
+        "use": "guide-s3-limited",
+        "size": 100210
+    },
+    "bild-pn-movember.webp": {
+        "alt": "Das Movember Pack mit mehreren Schnurrbart-Stufen und dem Abzeichen für 2026",
+        "use": "bild-pn-movember",
+        "size": 50432
+    },
+    "guide-s3-movember.webp": {
+        "alt": "Werbebild des Movember Packs mit mehreren Schnurrbart-Varianten und einem Abzeichen",
+        "use": "guide-s3-movember",
+        "size": 55072
+    },
+    "bild-pn-cockpit-regen.webp": {
+        "alt": "Blick aus einem Hubschrauber-Cockpit bei Regen durch eine saubere Scheibe",
+        "use": "bild-pn-cockpit-regen",
+        "size": 36286
+    },
+    "bild-pn-spotten.webp": {
+        "alt": "Soldat markiert im Regen ein Ziel in Richtung einer Hochhauskulisse",
+        "use": "bild-pn-spotten",
+        "size": 37194
+    },
+    "guide-s3-buffs.webp": {
+        "alt": "SVD, Minigun und Infrarot-Entfernungsmesser als Kacheln vor einem abgedunkelten Spielhintergrund",
+        "use": "guide-s3-buffs",
+        "size": 16334
+    },
+    "bild-pn-sabatulo-strasse.webp": {
+        "alt": "Straßenzug in Sabatulo zwischen mehrstöckigen Wohnblöcken mit Balkonen",
+        "use": "bild-pn-sabatulo-strasse",
+        "size": 85006
+    },
+    "bild-pn-sabatulo-schwimmbad.webp": {
+        "alt": "Lichthof eines öffentlichen Gebäudes in Sabatulo mit Glasdach und umlaufenden Gängen",
+        "use": "bild-pn-sabatulo-schwimmbad",
+        "size": 88784
+    },
+    "bild-pn-sabatulo-klinik.webp": {
+        "alt": "Flur im Krankenhaus von Sabatulo, Türen zu beiden Seiten, Licht am Ende des Gangs",
+        "use": "bild-pn-sabatulo-klinik",
+        "size": 40206
+    },
+    "bild-pn-camo-defi.webp": {
+        "alt": "Defibrillator in der Tarnung Black &amp; Gold",
+        "use": "bild-pn-camo-defi",
+        "size": 45892
+    },
+    "bild-pn-steam-zeitleiste.webp": {
+        "alt": "Zeitleiste einer Steam-Aufnahme mit Symbolen für einzelne Ereignisse",
+        "use": "bild-pn-steam-zeitleiste",
+        "size": 3738
+    },
+    "guide-s3-neu.webp": {
+        "alt": "Luftaufnahme der Stadtkarte Sabatulo mit Hochhäusern, Rauchsäule und einem anfliegenden Hubschrauber",
+        "use": "guide-s3-neu",
+        "size": 79384
+    },
+    "bild-pn-sabatulo-stadt.webp": {
+        "alt": "Blick über Sabatulo: Hochhäuser, aufsteigender Rauch und ein Hubschrauber über der Stadt",
+        "use": "bild-pn-sabatulo-stadt",
+        "size": 106914
+    },
+    "guide-s3-patchnotes.webp": {
+        "alt": "Werbebild zu WARDOGS Season 03 mit einem Soldaten vor einer brennenden Stadtkulisse",
+        "use": "guide-s3-patchnotes",
+        "size": 63596
+    },
+    "bild-pn-parkplatz.webp": {
+        "alt": "Fahrzeuge unter einem Vordach auf nassem Asphalt",
+        "use": "bild-pn-parkplatz",
+        "size": 40764
+    },
+    "guide-s3-preise.webp": {
+        "alt": "Wolf-110, Havoc und ein Molotowcocktail als Kacheln vor einem abgedunkelten Fahrzeughintergrund",
+        "use": "guide-s3-preise",
+        "size": 38976
+    },
+    "bild-pn-twitch-drops.webp": {
+        "alt": "Übersicht der neun Twitch-Drop-Stufen mit Zuschauzeit und Belohnung",
+        "use": "bild-pn-twitch-drops",
+        "size": 92438
+    },
+    "guide-s3-drops.webp": {
+        "alt": "Littlebird, Wolf-110 und eine Schutzweste als Kacheln vor einem abgedunkelten Spielhintergrund",
+        "use": "guide-s3-drops",
+        "size": 21492
+    },
+    "bild-pn-waffenkiste.webp": {
+        "alt": "Infrarot-Entfernungsmesser mit Spiralkabel auf dunklem Untergrund",
+        "use": "bild-pn-waffenkiste",
+        "size": 19658
+    },
+    "bild-pn-camo-bogen.webp": {
+        "alt": "Compound Bow in der Tarnung Digital Wood mit aufgelegtem Pfeil",
+        "use": "bild-pn-camo-bogen",
+        "size": 56372
+    },
+    "guide-s3-waffen.webp": {
+        "alt": "Ausrüstungsgegenstände auf einem Sandsack, im Vordergrund ein Nachtsichtgerät",
+        "use": "guide-s3-waffen",
+        "size": 21748
+    },
+    "bild-pn-anschlag.webp": {
+        "alt": "Soldat im Anschlag mit Helm und Gesichtstuch",
+        "use": "bild-pn-anschlag",
+        "size": 41272
+    },
+    "bild-pn-camo-maaws.webp": {
+        "alt": "MAAWS in der Tarnung Two-Tone Desert",
+        "use": "bild-pn-camo-maaws",
+        "size": 43060
+    },
+    "bild-pn-camo-fal.webp": {
+        "alt": "FAL in der Tarnung Chocolate Chip",
+        "use": "bild-pn-camo-fal",
+        "size": 52750
     }
 }

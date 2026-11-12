@@ -271,6 +271,39 @@ REZEPTE = {
         unterzeile="",
         name="guide-s2-lonestar",
     ),
+    "s3-preise": dict(
+        hintergrund="typ-fahrzeug.webp",
+        kacheln=[
+            ("wardogs-wolf-110.webp",  (30, 60), (352, 198), -5, 0.90),
+            ("wardogs-havoc.webp",     (600, 46), (352, 198), 4, 0.94),
+            ("wardogs-molotov.webp",   (318, 128), (390, 219), -2, 1.06),
+        ],
+        titel="",
+        unterzeile="",
+        name="guide-s3-preise",
+    ),
+    "s3-buffs": dict(
+        hintergrund="gruppe-scharfschuetze.webp",
+        kacheln=[
+            ("wardogs-svd.webp",                 (28, 58), (356, 200), -5, 0.89),
+            ("wardogs-m134d-minigun.webp",       (602, 44), (356, 200), 5, 0.93),
+            ("wardogs-ir-entfernungsmesser.webp",(316, 130), (392, 220), -2, 1.07),
+        ],
+        titel="",
+        unterzeile="",
+        name="guide-s3-buffs",
+    ),
+    "s3-drops": dict(
+        hintergrund="gruppe-helikopter.webp",
+        kacheln=[
+            ("wardogs-ah-6m-miniguns.webp", (30, 58), (354, 199), -4, 0.90),
+            ("wardogs-wolf-110.webp",       (600, 46), (354, 199), 5, 0.94),
+            ("wardogs-panzerung-2.webp",    (318, 130), (390, 219), -2, 1.06),
+        ],
+        titel="",
+        unterzeile="",
+        name="guide-s3-drops",
+    ),
     "munition": dict(
         hintergrund="gruppe-mg.webp",
         kacheln=[

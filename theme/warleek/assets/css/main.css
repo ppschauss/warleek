@@ -299,6 +299,23 @@ html.wl-js .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp
 .wp-block-buttons > .wp-block-button .wp-block-button__link { position: relative; overflow: hidden; }
 .wp-block-image img { border-radius: var(--wl-radius); }
 .wp-block-image figcaption { color: var(--wp--preset--color--steel); font-size: 0.85rem; }
+
+/* Bilder im Guide-Fliesstext. Ohne Angabe volle Textbreite; `schmal`, `links`
+   und `rechts` kommen aus der Breitenangabe im Markdown – `![Alt](key){links}`.
+   Unter 48rem wird jedes Bild wieder voll breit: ein umflossenes Bild neben
+   zwei Woertern Text ist auf dem Telefon unlesbar. Ueberschriften und Tabellen
+   raeumen den Float ab, sonst rutscht der naechste Abschnitt daneben. */
+.wl-prose figure { margin: 1.75rem 0; }
+.wl-prose figure img { width: 100%; height: auto; border-radius: var(--wl-radius); }
+.wl-prose figcaption, .wl-prose .wp-element-caption { margin-top: 0.5rem; color: var(--wp--preset--color--steel); font-size: 0.85rem; line-height: 1.45; }
+.wl-prose .wl-bild-schmal { max-width: 32rem; margin-inline: auto; }
+@media (min-width: 48rem) {
+	.wl-prose .wl-bild-links,
+	.wl-prose .wl-bild-rechts { max-width: 20rem; margin-top: 0.4rem; }
+	.wl-prose .wl-bild-links  { float: left;  margin-right: 1.75rem; }
+	.wl-prose .wl-bild-rechts { float: right; margin-left: 1.75rem; }
+	.wl-prose h2, .wl-prose h3, .wl-prose table, .wl-prose .wl-note { clear: both; }
+}
 .wp-block-columns { gap: 1.5rem; }
 
 /* Bildbreite-Fallback für Content-Bilder in Spalten */
