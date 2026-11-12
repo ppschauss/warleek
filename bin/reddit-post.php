@@ -78,8 +78,10 @@ function wl_reddit_body( $md ) {
 			$out[] = '> **Achtung:** ' . trim( $m[2] );
 			continue;
 		}
-		// Bild-Assets fliegen raus – die Schlüssel sagen auf Reddit niemandem etwas
-		if ( preg_match( '/^!\[[^\]]*\]\([^)]*\)\s*$/', $t ) ) { continue; }
+		// Bild-Assets fliegen raus – die Schlüssel sagen auf Reddit niemandem etwas.
+		// Die optionale Breitenangabe `{schmal|links|rechts}` muss mit abgedeckt
+		// sein, sonst steht der nackte Asset-Schlüssel im Beitrag.
+		if ( preg_match( '/^!\[[^\]]*\]\([^)]*\)(?:\{[a-z]+\})?\s*$/', $t ) ) { continue; }
 
 		// Interne Links absolut machen
 		$t = preg_replace( '#\]\((/[^)]*)\)#', '](' . BASIS . '$1)', $t );
