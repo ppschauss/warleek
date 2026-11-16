@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.37.1
+Stable tag: 2.37.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,8 +46,12 @@ Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und 
 
 == Changelog ==
 
+= 2.37.2 =
+* Die Domain wird über das Meta-Tag `google-adsense-account` bestätigt. Die Auslieferung einer `/ads.txt` aus dem Plugin ist entfallen – sie lief auf All-Inkl in den WordPress-404 und half damit nicht weiter.
+* Das Tag hängt an der Konto-Kennung, nicht am Schalter „Anzeigen ein": Bestätigt wird, bevor das Konto freigegeben ist.
+
 = 2.37.1 =
-* `/ads.txt` hing an „Anzeigen ein", lieferte deshalb 404 und AdSense konnte die Inhaberschaft der Website nicht bestätigen. Die Datei hängt jetzt allein an der hinterlegten Konto-Kennung – die Prüfung steht ja vor der Freigabe des Kontos.
+* Zwischenschritt, von 2.37.2 abgelöst: Versuch, die Bestätigung über eine aus dem Plugin ausgelieferte `/ads.txt` zu lösen.
 
 = 2.37.0 =
 * Google AdSense eingebunden (`inc/ads.php`): Anzeigen an zwei festen Plätzen in Guides und Patch Notes – nach dem zweiten Abschnitt und vor den häufigen Fragen. Eingefügt beim Ausliefern, damit nichts davon im gespeicherten Inhalt, im JSON-LD oder im Reddit-Beitrag landet. Auto Ads bewusst nicht.

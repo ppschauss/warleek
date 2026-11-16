@@ -2,8 +2,8 @@
 /**
  * Warleek — Google AdSense.
  *
- * Drei Teile: das Skript im Kopfbereich, die Anzeigenplätze im Guide und
- * `/ads.txt`.
+ * Drei Teile: das Meta-Tag zur Bestätigung der Domain, das Skript im
+ * Kopfbereich und die Anzeigenplätze im Guide.
  *
  * **Warum das Skript ohne Einwilligung lädt.** Für die Auslieferung an Nutzer
  * im EWR und in Großbritannien verlangt Google seit Januar 2024 eine von
@@ -71,6 +71,31 @@ function warleek_ads_script() {
 	);
 }
 add_action( 'wp_head', 'warleek_ads_script', 5 );
+
+/**
+ * Meta-Tag zur Bestätigung der Inhaberschaft.
+ *
+ * AdSense bietet drei Wege, eine Domain zu bestätigen: eine `ads.txt`, ein
+ * Code-Schnipsel oder dieses Meta-Tag. Wir nehmen das Tag: Es steht in einer
+ * gewöhnlichen Seite und braucht weder eine zusätzliche Datei im
+ * Web-Verzeichnis noch eine Route, die der Hoster durchreicht. Eine `/ads.txt`
+ * aus dem Plugin heraus lief auf All-Inkl in den 404 der WordPress-Installation.
+ *
+ * **Hängt an der Kennung, nicht am Schalter.** Bestätigt wird, bevor das Konto
+ * freigegeben ist – und solange es nicht freigegeben ist, gibt es keine
+ * Anzeigenblöcke und damit nichts einzuschalten. Ein Tag hinter `ads_enabled`
+ * käme deshalb nie zum Vorschein.
+ *
+ * Das Tag bleibt auch nach der Bestätigung stehen. Google prüft sie
+ * gelegentlich nach, und ein entferntes Tag kostet die Freigabe.
+ */
+function warleek_ads_meta() {
+	if ( is_admin() || is_feed() ) { return; }
+	$client = warleek_ads_client();
+	if ( '' === $client ) { return; }
+	printf( '<meta name="google-adsense-account" content="%s">' . "\n", esc_attr( $client ) );
+}
+add_action( 'wp_head', 'warleek_ads_meta', 2 );
 
 /**
  * Ein Anzeigenplatz.
@@ -170,47 +195,3 @@ function warleek_ads_in_inhalt( $content ) {
 	return $content;
 }
 add_filter( 'the_content', 'warleek_ads_in_inhalt', 20 );
-
-/**
- * `/ads.txt` ausliefern.
- *
- * AdSense braucht die Datei, sonst meldet das Konto dauerhaft „Erfordert
- * Maßnahmen". Eine echte Datei im Web-Verzeichnis hätte Vorrang und bleibt
- * unangetastet – so lässt sich die Automatik übergehen, ohne das Plugin
- * anzufassen.
- *
- * **Die Datei hängt an der Kennung, nicht am Schalter.** Sie zuerst hinter
- * `ads_enabled` zu sperren war falsch herum gedacht: AdSense prüft über
- * `/ads.txt`, ob einem die Domain gehört, und diese Prüfung steht **vor** der
- * Freigabe des Kontos – ohne Freigabe gibt es keine Anzeigenblöcke, ohne
- * Anzeigenblöcke schaltet man die Anzeigen nicht ein, und damit bliebe die
- * Datei für immer verborgen. Sie auszuliefern ist ohnehin harmlos: Sie sagt
- * nur, wer die Werbeplätze dieser Domain verkaufen darf.
- */
-function warleek_ads_txt() {
-	$pfad = untrailingslashit( (string) parse_url( (string) ( $_SERVER['REQUEST_URI'] ?? '' ), PHP_URL_PATH ) );
-	if ( '/ads.txt' !== strtolower( $pfad ) ) { return; }
-	if ( file_exists( ABSPATH . 'ads.txt' ) ) { return; }
-	if ( '' === warleek_ads_client() ) { return; }
-
-	header( 'Content-Type: text/plain; charset=utf-8' );
-	header( 'X-Robots-Tag: noindex' );
-	echo esc_html( warleek_ads_txt_inhalt() );
-	exit;
-}
-
-/**
- * Inhalt der `/ads.txt`.
- *
- * Eigene Funktion, damit sie sich ohne Header und `exit` prüfen lässt.
- * `f08c47fec0942fa0` ist Googles feste Kennung der Zertifizierungsstelle und
- * in jeder AdSense-`ads.txt` dieselbe.
- *
- * @return string Zeile mit Zeilenumbruch, oder '' ohne gültige Kennung.
- */
-function warleek_ads_txt_inhalt() {
-	$client = warleek_ads_client();
-	if ( '' === $client ) { return ''; }
-	return 'google.com, ' . str_replace( 'ca-pub-', 'pub-', $client ) . ", DIRECT, f08c47fec0942fa0\n";
-}
-add_action( 'init', 'warleek_ads_txt' );

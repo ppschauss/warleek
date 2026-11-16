@@ -88,18 +88,19 @@ $pa   = warleek_ads_punkte( $weit );
 chk( 'zwei Plätze bei weitem Abstand', count( $pa ), 2 );
 chk( 'FAQ-Überschrift mit Attributen erkannt', substr( $weit, $pa[1], 8 ), '<h2 id="' );
 
-/* ------------------------------------------------------------ ads.txt */
-chk( 'ads.txt-Zeile', warleek_ads_txt_inhalt(), "google.com, pub-5566154579483105, DIRECT, f08c47fec0942fa0\n" );
+/* ----------------------------------------------------------- Meta-Tag */
+function wl_meta() { ob_start(); warleek_ads_meta(); return trim( ob_get_clean() ); }
 
-// Regression: Die Datei hing zuerst an `ads_enabled`. AdSense prueft damit
-// aber die Inhaberschaft, und zwar bevor man Anzeigen ueberhaupt einschalten
-// kann - die Pruefung scheiterte deshalb zwangslaeufig.
+chk( 'Meta-Tag mit Kennung', wl_meta(), '<meta name="google-adsense-account" content="ca-pub-5566154579483105">' );
+
+// Dieselbe Regression wie bei der ads.txt: Bestätigt wird, bevor das Konto
+// freigegeben ist – ein Tag hinter `ads_enabled` käme nie zum Vorschein.
 $GLOBALS['wl_opt']['ads_enabled'] = '0';
-chk( 'ads.txt auch bei ausgeschalteten Anzeigen', warleek_ads_txt_inhalt(), "google.com, pub-5566154579483105, DIRECT, f08c47fec0942fa0\n" );
+chk( 'Meta-Tag auch bei ausgeschalteten Anzeigen', wl_meta(), '<meta name="google-adsense-account" content="ca-pub-5566154579483105">' );
 $GLOBALS['wl_opt']['ads_enabled'] = '1';
 
-$GLOBALS['wl_opt']['ads_client'] = '';
-chk( 'ohne Kennung keine ads.txt', warleek_ads_txt_inhalt(), '' );
+$GLOBALS['wl_opt']['ads_client'] = 'unsinn';
+chk( 'ohne gültige Kennung kein Meta-Tag', wl_meta(), '' );
 $GLOBALS['wl_opt']['ads_client'] = 'ca-pub-5566154579483105';
 
 echo $fail ? "$fail FAILED\n" : "OK\n";
