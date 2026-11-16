@@ -47,8 +47,10 @@ Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und 
 == Changelog ==
 
 = 2.37.3 =
-* Das Meta-Tag zur AdSense-Bestätigung wurde nie ausgegeben. Ursache: `warleek_opt( 'ads_client', '' )` – ein ausdrücklich übergebener Fallback hat Vorrang vor der Vorgabe aus den Feldern, also kam die hinterlegte Konto-Kennung nie zum Zug. Betrifft dieselbe Stelle auch für die beiden Platz-Kennungen und den Schalter.
-* Der Test dazu lief grün, weil sein Stub nachsichtiger war als `warleek_opt()`. Er bildet die Vorrangregel jetzt nach, und zwei neue Fälle prüfen ausdrücklich den Zustand „nichts gespeichert".
+* **Das Meta-Tag zur AdSense-Bestätigung sitzt jetzt fest im Theme** (`theme/warleek/functions.php`) statt im Plugin. Dafür muss das Theme mit aktualisiert werden – das Plugin allein reicht hier nicht.
+* Grund: Die Plugin-Fassung las die Kennung über `warleek_opt( 'ads_client', '' )`. Ein ausdrücklich übergebener Fallback schlägt dort die Vorgabe aus den Feldern, die hinterlegte Kennung kam nie zum Zug, und das Tag blieb drei Versionen lang unsichtbar – ohne dass etwas fehlschlug. Google prüft die Bestätigung nach; ein Tag hinter Optionswert, Schalter und Vorrangregel kann dabei unbemerkt verschwinden.
+* Derselbe überflüssige Fallback ist auch beim Schalter und den beiden Platz-Kennungen entfernt.
+* Der Test lief grün, weil sein Stub nachsichtiger war als `warleek_opt()`. Er bildet die Vorrangregel jetzt nach; ein neuer Fall prüft den Zustand „nichts gespeichert". Gegenprobe gemacht: Mit wieder eingebautem Fehler schlägt er fehl.
 
 = 2.37.2 =
 * Die Domain wird über das Meta-Tag `google-adsense-account` bestätigt. Die Auslieferung einer `/ads.txt` aus dem Plugin ist entfallen – sie lief auf All-Inkl in den WordPress-404 und half damit nicht weiter.
