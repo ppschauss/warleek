@@ -7,7 +7,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.37.2' ); }
+if ( ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VERSION', '2.37.3' ); }
 define( 'WARLEEK_DIR', get_template_directory() );
 define( 'WARLEEK_URI', get_template_directory_uri() );
 
@@ -82,6 +82,31 @@ function warleek_font_preload() {
 	}
 }
 add_action( 'wp_head', 'warleek_font_preload', 1 );
+
+/**
+ * AdSense-Bestätigung der Domain.
+ *
+ * Fest verdrahtet, ohne Optionsabfrage und ohne Schalter – und das ist nach
+ * drei Fehlversuchen eine bewusste Entscheidung.
+ *
+ * Die Fassung im Plugin las die Kennung über `warleek_opt( 'ads_client', '' )`.
+ * Dort schlägt ein ausdrücklich übergebener Fallback die Vorgabe aus den
+ * Feldern, also kam die hinterlegte Kennung nie zum Zug: Version eingespielt,
+ * Kennung vorhanden, Ausgabe leer – und still, weil nichts fehlschlug.
+ *
+ * Google prüft die Bestätigung gelegentlich nach. Ein Tag, das von einem
+ * Optionswert, einem Schalter und einer Vorrangregel abhängt, kann dabei
+ * unbemerkt verschwinden und kostet die Freigabe des Kontos. Eine Zeichenkette
+ * im Quelltext kann das nicht. Sie gehört damit zur Identität der Seite,
+ * nicht zu ihrer Konfiguration – wie die Domain selbst.
+ *
+ * Ändert sich das AdSense-Konto, ändert sich hier eine Zeile.
+ */
+function warleek_adsense_bestaetigung() {
+	if ( is_admin() || is_feed() ) { return; }
+	echo '<meta name="google-adsense-account" content="ca-pub-5566154579483105">' . "\n";
+}
+add_action( 'wp_head', 'warleek_adsense_bestaetigung', 2 );
 
 /**
  * ?snap=1 friert Animationen ein, blendet Deko-Layer aus und **schaltet

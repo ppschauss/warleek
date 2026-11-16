@@ -2,8 +2,10 @@
 /**
  * Warleek — Google AdSense.
  *
- * Drei Teile: das Meta-Tag zur Bestätigung der Domain, das Skript im
- * Kopfbereich und die Anzeigenplätze im Guide.
+ * Zwei Teile: das Skript im Kopfbereich und die Anzeigenplätze im Guide.
+ *
+ * Das Meta-Tag zur Bestätigung der Domain steht **nicht** hier, sondern fest
+ * verdrahtet in `theme/warleek/functions.php`. Begründung dort.
  *
  * **Warum das Skript ohne Einwilligung lädt.** Für die Auslieferung an Nutzer
  * im EWR und in Großbritannien verlangt Google seit Januar 2024 eine von
@@ -33,15 +35,24 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-/** Kennung des AdSense-Kontos, auf Form geprüft. Leer = nichts einbinden. */
+/**
+ * Kennung des AdSense-Kontos, auf Form geprüft. Leer = nichts einbinden.
+ *
+ * **Ohne zweites Argument aufrufen.** `warleek_opt()` behandelt einen
+ * ausdrücklich übergebenen Fallback als Vorrang vor der Vorgabe aus
+ * `warleek_option_fields()` – ein `warleek_opt( 'ads_client', '' )` liefert
+ * also immer '' und kommt an der hinterlegten Kennung nie vorbei. Genau daran
+ * ist das Meta-Tag bis 2.37.2 hängen geblieben: Version eingespielt, Kennung
+ * als Vorgabe vorhanden, Ausgabe trotzdem leer.
+ */
 function warleek_ads_client() {
-	$v = trim( (string) warleek_opt( 'ads_client', '' ) );
+	$v = trim( (string) warleek_opt( 'ads_client' ) );
 	return preg_match( '/^ca-pub-\d{10,20}$/', $v ) ? $v : '';
 }
 
 /** Anzeigen eingeschaltet und eine brauchbare Kennung hinterlegt? */
 function warleek_ads_aktiv() {
-	return '1' === (string) warleek_opt( 'ads_enabled', '0' ) && '' !== warleek_ads_client();
+	return '1' === (string) warleek_opt( 'ads_enabled' ) && '' !== warleek_ads_client();
 }
 
 /**
@@ -71,31 +82,6 @@ function warleek_ads_script() {
 	);
 }
 add_action( 'wp_head', 'warleek_ads_script', 5 );
-
-/**
- * Meta-Tag zur Bestätigung der Inhaberschaft.
- *
- * AdSense bietet drei Wege, eine Domain zu bestätigen: eine `ads.txt`, ein
- * Code-Schnipsel oder dieses Meta-Tag. Wir nehmen das Tag: Es steht in einer
- * gewöhnlichen Seite und braucht weder eine zusätzliche Datei im
- * Web-Verzeichnis noch eine Route, die der Hoster durchreicht. Eine `/ads.txt`
- * aus dem Plugin heraus lief auf All-Inkl in den 404 der WordPress-Installation.
- *
- * **Hängt an der Kennung, nicht am Schalter.** Bestätigt wird, bevor das Konto
- * freigegeben ist – und solange es nicht freigegeben ist, gibt es keine
- * Anzeigenblöcke und damit nichts einzuschalten. Ein Tag hinter `ads_enabled`
- * käme deshalb nie zum Vorschein.
- *
- * Das Tag bleibt auch nach der Bestätigung stehen. Google prüft sie
- * gelegentlich nach, und ein entferntes Tag kostet die Freigabe.
- */
-function warleek_ads_meta() {
-	if ( is_admin() || is_feed() ) { return; }
-	$client = warleek_ads_client();
-	if ( '' === $client ) { return; }
-	printf( '<meta name="google-adsense-account" content="%s">' . "\n", esc_attr( $client ) );
-}
-add_action( 'wp_head', 'warleek_ads_meta', 2 );
 
 /**
  * Ein Anzeigenplatz.
@@ -179,8 +165,8 @@ function warleek_ads_in_inhalt( $content ) {
 	}
 
 	$einheiten = array(
-		warleek_ads_einheit( (string) warleek_opt( 'ads_slot_text', '' ), 'wl-anzeige--text' ),
-		warleek_ads_einheit( (string) warleek_opt( 'ads_slot_faq', '' ), 'wl-anzeige--faq' ),
+		warleek_ads_einheit( (string) warleek_opt( 'ads_slot_text' ), 'wl-anzeige--text' ),
+		warleek_ads_einheit( (string) warleek_opt( 'ads_slot_faq' ), 'wl-anzeige--faq' ),
 	);
 	$einheiten = array_values( array_filter( $einheiten ) );
 	if ( ! $einheiten ) { return $content; }

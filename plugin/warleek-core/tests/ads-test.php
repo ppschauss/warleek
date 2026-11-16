@@ -2,13 +2,32 @@
 // Standalone-Test ohne WordPress: php tests/ads-test.php
 define( 'ABSPATH', __DIR__ );
 
-$GLOBALS['wl_opt'] = array(
-	'ads_enabled'   => '1',
+/*
+ * Der Stub muss `warleek_opt()` **genau** nachbilden, Vorrangregel inklusive.
+ *
+ * Die erste Fassung lautete `return $GLOBALS['wl_opt'][ $k ] ?? $d;` und war
+ * damit nachsichtiger als das Original: Sie lieferte den Wert auch dann, wenn
+ * der Aufrufer einen ausdruecklichen Fallback uebergeben hatte. Das Original
+ * gibt in diesem Fall den Fallback zurueck – und genau deshalb lief der Test
+ * gruen, waehrend auf der Seite kein Meta-Tag erschien. Ein Stub, der mehr
+ * verzeiht als die Wirklichkeit, prueft nichts.
+ *
+ * Reihenfolge wie im Original: gespeicherter Wert (nicht leer) -> ausdruecklicher
+ * Fallback (nicht null) -> Vorgabe aus den Feldern.
+ */
+$GLOBALS['wl_felder'] = array(          // Vorgaben wie in warleek_option_fields()
+	'ads_enabled'   => '0',
 	'ads_client'    => 'ca-pub-5566154579483105',
-	'ads_slot_text' => '1234567890',
-	'ads_slot_faq'  => '9876543210',
+	'ads_slot_text' => '',
+	'ads_slot_faq'  => '',
 );
-function warleek_opt( $k, $d = '' ) { return $GLOBALS['wl_opt'][ $k ] ?? $d; }
+$GLOBALS['wl_opt'] = array();           // das, was in der Datenbank steht
+
+function warleek_opt( $k, $d = null ) {
+	if ( isset( $GLOBALS['wl_opt'][ $k ] ) && '' !== $GLOBALS['wl_opt'][ $k ] ) { return $GLOBALS['wl_opt'][ $k ]; }
+	if ( null !== $d ) { return $d; }
+	return $GLOBALS['wl_felder'][ $k ] ?? '';
+}
 function esc_attr( $v ) { return htmlspecialchars( (string) $v, ENT_QUOTES, 'UTF-8' ); }
 function esc_html( $v ) { return htmlspecialchars( (string) $v, ENT_QUOTES, 'UTF-8' ); }
 function add_action() {}
@@ -30,6 +49,17 @@ function chk( $label, $got, $want ) {
 }
 
 /* ------------------------------------------------------------- Kennung */
+// Regression: Nichts gespeichert – die Kennung muss aus der Feld-Vorgabe
+// kommen. Genau hier lief es in 2.37.0 bis 2.37.2 schief, weil der Aufruf
+// `warleek_opt( 'ads_client', '' )` die Vorgabe uebersprang.
+chk( 'Kennung aus der Vorgabe, ohne gespeicherten Wert', warleek_ads_client(), 'ca-pub-5566154579483105' );
+
+$GLOBALS['wl_opt'] = array(
+	'ads_enabled'   => '1',
+	'ads_client'    => 'ca-pub-5566154579483105',
+	'ads_slot_text' => '1234567890',
+	'ads_slot_faq'  => '9876543210',
+);
 chk( 'kennung gültig', warleek_ads_client(), 'ca-pub-5566154579483105' );
 $GLOBALS['wl_opt']['ads_client'] = 'pub-5566154579483105';          // falsches Präfix
 chk( 'kennung ohne ca- wird verworfen', warleek_ads_client(), '' );
@@ -87,21 +117,6 @@ $weit = $h2( 'Eins' ) . $h2( 'Zwei' ) . '<h2>Drei</h2>' . str_repeat( '<p>Füllt
 $pa   = warleek_ads_punkte( $weit );
 chk( 'zwei Plätze bei weitem Abstand', count( $pa ), 2 );
 chk( 'FAQ-Überschrift mit Attributen erkannt', substr( $weit, $pa[1], 8 ), '<h2 id="' );
-
-/* ----------------------------------------------------------- Meta-Tag */
-function wl_meta() { ob_start(); warleek_ads_meta(); return trim( ob_get_clean() ); }
-
-chk( 'Meta-Tag mit Kennung', wl_meta(), '<meta name="google-adsense-account" content="ca-pub-5566154579483105">' );
-
-// Dieselbe Regression wie bei der ads.txt: Bestätigt wird, bevor das Konto
-// freigegeben ist – ein Tag hinter `ads_enabled` käme nie zum Vorschein.
-$GLOBALS['wl_opt']['ads_enabled'] = '0';
-chk( 'Meta-Tag auch bei ausgeschalteten Anzeigen', wl_meta(), '<meta name="google-adsense-account" content="ca-pub-5566154579483105">' );
-$GLOBALS['wl_opt']['ads_enabled'] = '1';
-
-$GLOBALS['wl_opt']['ads_client'] = 'unsinn';
-chk( 'ohne gültige Kennung kein Meta-Tag', wl_meta(), '' );
-$GLOBALS['wl_opt']['ads_client'] = 'ca-pub-5566154579483105';
 
 echo $fail ? "$fail FAILED\n" : "OK\n";
 exit( $fail ? 1 : 0 );
