@@ -74,13 +74,17 @@ function warleek_option_fields() {
 		'translate_timeout'  => array( 'Zeitlimit je Anfrage (s)', 'int',      '300', 'Wie lange eine einzelne Anfrage an die Claude-API dauern darf (60–600). Läuft sie ab, wird das Stück halbiert und erneut übersetzt.' ),
 		'consent_enabled'    => array( 'Einwilligungs-Banner',    'bool',     '1',   'Zeigt den Hinweis unten am Bildschirm. Ohne eingebettete externe Medien ist er rechtlich nicht nötig – dann kannst du ihn ausschalten.' ),
 		'consent_title'      => array( 'Banner: Überschrift',     'text',     'Deine Entscheidung', 'Kurze Zeile über dem Text.' ),
-		'consent_text'       => array( 'Banner: Text',            'textarea', 'Warleek zeigt keine Werbung und verkauft keine Daten. Zwei Dinge brauchen trotzdem deine Einwilligung, weil dabei fremde Server ins Spiel kommen: eingebettete Videos (YouTube, Vimeo) und die Reichweitenmessung mit Google Analytics. Ohne Zustimmung wird nichts davon geladen. Du kannst jede Kategorie einzeln wählen und die Entscheidung jederzeit ändern.', 'Was im Banner steht. Bleib bei dem, was die Seite wirklich tut.' ),
+		'consent_text'       => array( 'Banner: Text',            'textarea', 'Warleek finanziert sich über Anzeigen und verkauft keine Daten. Drei Dinge brauchen deine Einwilligung, weil dabei fremde Server ins Spiel kommen: eingebettete Videos (YouTube, Vimeo), die Reichweitenmessung mit Google Analytics und die Werbung von Google AdSense. Ohne Zustimmung wird nichts davon geladen. Du kannst jede Kategorie einzeln wählen und die Entscheidung jederzeit ändern.', 'Was im Banner steht. Bleib bei dem, was die Seite wirklich tut.' ),
 		'consent_accept'     => array( 'Banner: Zustimmen',       'text',     'Auswahl erlauben', 'Beschriftung der Zustimmen-Schaltfläche.' ),
 		'consent_decline'    => array( 'Banner: Ablehnen',        'text',     'Nur notwendige',          'Beschriftung der Ablehnen-Schaltfläche. Muss gleichwertig aussehen – das ist Vorschrift.' ),
 		'consent_media'      => array( 'Kategorie: externe Medien', 'bool',   '1',   'Einwilligung für eingebettete Videos von YouTube und Vimeo abfragen.' ),
 		'consent_stats'      => array( 'Kategorie: Statistik',      'bool',   '1',   'Einwilligung für Reichweitenmessung abfragen. Erst einschalten, wenn unten auch ein Skript hinterlegt ist.' ),
 		'consent_stats_label'=> array( 'Statistik: Beschriftung',   'text',   'Reichweitenmessung (Google Analytics)', 'Steht als Auswahl im Banner. Den Anbieter benennen, nicht „anonyme Statistik" schreiben – Google Analytics ist nicht anonym.' ),
 		'analytics_code'     => array( 'Statistik: Einbindungscode', 'code',  warleek_analytics_vorgabe(),    'Vollständiger &lt;script&gt;-Block deines Analyse-Werkzeugs. Wird erst nach der Einwilligung ausgeführt – vorher steht er als toter Text im Quelltext. Leer lassen, solange nichts gemessen wird. <strong>Wichtig:</strong> Sobald hier etwas steht, gehört das Werkzeug samt Anbieter auch in die Datenschutzerklärung.' ),
+		'ads_enabled'        => array( 'Anzeigen (AdSense)',      'bool',     '0',   'Schaltet Google AdSense ein. Vorher die Kennung unten eintragen und in der Datenschutzerklärung ergänzen. <strong>Für Besucher aus dem EWR liefert Google nur aus, wenn im AdSense-Konto „Privacy &amp; messaging“ als Einwilligungsabfrage aktiv ist</strong> – ein eigenes Banner reicht Google nicht.' ),
+		'ads_client'         => array( 'AdSense: Kennung',        'text',     'ca-pub-5566154579483105', 'Die Konto-Kennung in der Form <code>ca-pub-1234567890123456</code>. Steht im AdSense-Konto unter „Konto → Einstellungen“. Eine abweichende Schreibweise wird ignoriert.' ),
+		'ads_slot_text'      => array( 'AdSense: Platz im Text',  'text',     '',    'Platz-Kennung (nur Ziffern) für die Anzeige nach dem zweiten Abschnitt eines Guides. Leer lassen = dieser Platz bleibt frei.' ),
+		'ads_slot_faq'       => array( 'AdSense: Platz vor FAQ',  'text',     '',    'Platz-Kennung (nur Ziffern) für die Anzeige vor den häufigen Fragen. Steht bewusst <em>vor</em> der Überschrift – zwischen den Fragen würde sie die FAQ-Auszeichnung zerschneiden.' ),
 		'external_nofollow'  => array( 'Externe Links entwerten',   'bool',   '1',   'Setzt bei allen externen Links in Guides und Patch Notes rel="nofollow noopener noreferrer" – gedacht für Quellenangaben.' ),
 	);
 }
@@ -202,7 +206,7 @@ function warleek_option_gruppen() {
 		'consent' => array(
 			'titel'  => 'Einwilligung & Statistik',
 			'text'   => 'Ohne Zustimmung wird nichts von Dritten geladen. Der Einbindungscode läuft erst nach der Einwilligung – <strong>sobald dort etwas steht, gehört das Werkzeug samt Anbieter in die Datenschutzerklärung</strong>.',
-			'felder' => array( 'consent_enabled', 'consent_title', 'consent_text', 'consent_accept', 'consent_decline', 'consent_media', 'consent_stats', 'consent_stats_label', 'analytics_code' ),
+			'felder' => array( 'consent_enabled', 'consent_title', 'consent_text', 'consent_accept', 'consent_decline', 'consent_media', 'consent_stats', 'consent_stats_label', 'analytics_code', 'ads_enabled', 'ads_client', 'ads_slot_text', 'ads_slot_faq' ),
 		),
 	);
 }

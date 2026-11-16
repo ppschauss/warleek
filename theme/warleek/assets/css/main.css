@@ -309,6 +309,30 @@ html.wl-js .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp
 .wl-prose figure img { width: 100%; height: auto; border-radius: var(--wl-radius); }
 .wl-prose figcaption, .wl-prose .wp-element-caption { margin-top: 0.5rem; color: var(--wp--preset--color--steel); font-size: 0.85rem; line-height: 1.45; }
 .wl-prose .wl-bild-schmal { max-width: 32rem; margin-inline: auto; }
+
+/* Anzeigenplaetze. Die Beschriftung ist Pflicht (Trennungsgebot), deshalb
+   steht sie im Markup und wird hier nur gestaltet, nie ausgeblendet. Die
+   Mindesthoehe haelt den Platz frei, damit nichts springt, wenn die Anzeige
+   nachlaedt; bleibt sie leer, faellt der Kasten per :empty-Pruefung am <ins>
+   nicht auf, weil er dann nur die duenne Linie zeigt. */
+.wl-anzeige {
+	display: block;
+	margin: var(--wp--preset--spacing--40, 2rem) 0;
+	padding-top: 0.5rem;
+	border-top: var(--wl-border);
+	clear: both;
+}
+.wl-anzeige__label {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: var(--wp--preset--color--steel);
+	font-family: var(--wp--preset--font-family--heading);
+	font-size: 0.72rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+.wl-anzeige .adsbygoogle { display: block; min-height: 90px; }
+@media print { .wl-anzeige { display: none; } }
 @media (min-width: 48rem) {
 	.wl-prose .wl-bild-links,
 	.wl-prose .wl-bild-rechts { max-width: 20rem; margin-top: 0.4rem; }

@@ -96,6 +96,9 @@ function warleek_consent_script() {
 (function(){
 	var KEY = <?php echo wp_json_encode( WARLEEK_CONSENT_KEY ); ?>;
 	var KATS = <?php echo wp_json_encode( $kategorien ); ?>;
+	// Fruehe Deklaration: `reopen` greift darauf zu, wird aber schon beim
+	// Aufbau des api-Objekts definiert.
+	var tcfStand = null;
 	function lies(){ try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } }
 
 	var api = {
@@ -109,8 +112,21 @@ function warleek_consent_script() {
 			document.dispatchEvent(new CustomEvent('warleek-consent-change', { detail: stand }));
 			var b = document.getElementById('wl-consent'); if (b) { b.hidden = true; }
 		},
-		/** Banner erneut zeigen – für den Link „Einwilligung ändern". */
+		/**
+		 * Banner erneut zeigen – für den Link „Einwilligung ändern".
+		 *
+		 * Regiert Googles CMP, muss der Link **deren** Widerrufs-Dialog öffnen.
+		 * Unser Banner noch einmal zu zeigen waere hier falsch: Es wuerde eine
+		 * Entscheidung entgegennehmen, die Google gar nicht erreicht, und der
+		 * Besucher haette widerrufen, ohne dass sich etwas aendert.
+		 */
 		reopen: function(){
+			if (tcfStand && window.googlefc && window.googlefc.callbackQueue) {
+				window.googlefc.callbackQueue.push({ 'CONSENT_DATA_READY': function(){
+					if (typeof window.googlefc.showRevocationMessage === 'function') { window.googlefc.showRevocationMessage(); }
+				} });
+				return;
+			}
 			var b = document.getElementById('wl-consent'); if (!b) { return; }
 			var stand = lies() || {};
 			b.querySelectorAll('[data-wl-consent-cat]').forEach(function(f){ f.checked = !!stand[f.getAttribute('data-wl-consent-cat')]; });
@@ -134,11 +150,66 @@ function warleek_consent_script() {
 		if (ev.target.closest('[data-wl-consent-reopen]')) { ev.preventDefault(); api.reopen(); }
 	});
 
+	/*
+	 * Googles CMP hat Vorrang, wo sie greift.
+	 *
+	 * Mit AdSense liefert Googles „Privacy & messaging" die Einwilligung aus –
+	 * zertifiziert, wie es Google fuer den EWR verlangt. Zwei Banner
+	 * nebeneinander waeren fuer den Besucher unzumutbar und rechtlich wertlos,
+	 * weil unklar bliebe, was welche Abfrage regelt. Also: Sobald das TCF-API
+	 * meldet, dass die DSGVO greift, bleibt unser Banner weg und der Stand wird
+	 * aus den TCF-Zwecken abgeleitet.
+	 *
+	 * Zuordnung, bewusst eng gewaehlt:
+	 *   Zweck 1 = Informationen auf dem Geraet speichern/abrufen -> externe Videos
+	 *   Zweck 1 + 8 = zusaetzlich Messung der Inhalte-Performance -> Statistik
+	 *
+	 * Meldet sich das API nicht – ausserhalb des EWR, oder weil ein Blocker das
+	 * Google-Skript abfaengt –, uebernimmt nach TCF_FRIST wieder unser Banner.
+	 * Lieber einmal zu viel fragen als eine Einwilligung unterstellen.
+	 */
+	var TCF_ERWARTET = <?php echo ( function_exists( 'warleek_ads_aktiv' ) && warleek_ads_aktiv() ) ? 'true' : 'false'; ?>;
+	var TCF_FRIST    = 3000;
+	var entschieden  = false;
+
+	api.has = function(kat){
+		if (tcfStand) { return !!tcfStand[kat || 'media']; }
+		var s = lies(); return !!(s && s[kat || 'media']);
+	};
+
+	function ausTcf(tcData){
+		var z = (tcData && tcData.purpose && tcData.purpose.consents) || {};
+		return { v: 2, ts: Date.now(), quelle: 'tcf', media: !!z[1], statistik: !!(z[1] && z[8]) };
+	}
+
 	function start(){
+		if (entschieden) { return; }
+		entschieden = true;
 		if (lies() === null) { var b = document.getElementById('wl-consent'); if (b) { b.hidden = false; } }
 		else { document.dispatchEvent(new CustomEvent('warleek-consent-change', { detail: lies() })); }
 	}
-	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', start); } else { start(); }
+
+	function tcfStarten(){
+		var frist = setTimeout(start, TCF_FRIST);
+		var warte = setInterval(function(){
+			if (typeof window.__tcfapi !== 'function') { return; }
+			clearInterval(warte);
+			window.__tcfapi('addEventListener', 2, function(tcData, ok){
+				if (!ok || !tcData) { return; }
+				if (tcData.gdprApplies === false) { clearTimeout(frist); start(); return; }
+				if (tcData.eventStatus !== 'tcloaded' && tcData.eventStatus !== 'useractioncomplete') { return; }
+				clearTimeout(frist);
+				entschieden = true;
+				var b = document.getElementById('wl-consent'); if (b) { b.hidden = true; }
+				tcfStand = ausTcf(tcData);
+				document.dispatchEvent(new CustomEvent('warleek-consent-change', { detail: tcfStand }));
+			});
+		}, 100);
+		setTimeout(function(){ clearInterval(warte); }, TCF_FRIST);
+	}
+
+	function los(){ if (TCF_ERWARTET) { tcfStarten(); } else { start(); } }
+	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', los); } else { los(); }
 })();
 </script>
 	<?php
@@ -188,6 +259,51 @@ function warleek_consent_ga_umstellung() {
 }
 add_action( 'admin_init', 'warleek_consent_ga_umstellung' );
 
+/**
+ * Einmalige Umstellung auf Werbefinanzierung.
+ *
+ * Derselbe Fall wie bei der Analytics-Umstellung: Der gespeicherte Bannertext
+ * schlaegt die Vorgabe. Stuende dort weiter „Warleek zeigt keine Werbung", wuerde
+ * das Banner eine Zusage wiederholen, die die Seite nicht mehr einhaelt – und das
+ * ist nicht bloss unsauber, sondern eine falsche Angabe gegenueber dem Besucher.
+ *
+ * Ein selbst geschriebener Text wird auch hier **nicht** ueberschrieben; dann
+ * steht stattdessen ein Hinweis im Backend.
+ */
+function warleek_consent_ads_umstellung() {
+	if ( get_option( 'warleek_consent_ads_v1' ) ) { return; }
+
+	$alt = array(
+		'consent_text' => 'Warleek zeigt keine Werbung und verkauft keine Daten. Zwei Dinge brauchen trotzdem deine Einwilligung, weil dabei fremde Server ins Spiel kommen: eingebettete Videos (YouTube, Vimeo) und die Reichweitenmessung mit Google Analytics. Ohne Zustimmung wird nichts davon geladen. Du kannst jede Kategorie einzeln wählen und die Entscheidung jederzeit ändern.',
+	);
+
+	$opts   = (array) get_option( 'warleek_options', array() );
+	$felder = warleek_option_fields();
+	$eigen  = array();
+
+	foreach ( $alt as $key => $alter_text ) {
+		if ( ! isset( $opts[ $key ] ) || '' === $opts[ $key ] ) { continue; }
+		if ( trim( (string) $opts[ $key ] ) === $alter_text ) {
+			$opts[ $key ] = $felder[ $key ][2];
+		} else {
+			$eigen[] = $key;
+		}
+	}
+
+	update_option( 'warleek_options', $opts );
+	update_option( 'warleek_consent_ads_v1', $eigen ? implode( ',', $eigen ) : '1' );
+}
+add_action( 'admin_init', 'warleek_consent_ads_umstellung' );
+
+/** Hinweis, wenn ein eigener Bannertext noch Werbefreiheit verspricht. */
+add_action( 'admin_notices', function () {
+	$stand = (string) get_option( 'warleek_consent_ads_v1' );
+	if ( '' === $stand || '1' === $stand || ! current_user_can( 'manage_options' ) ) { return; }
+	echo '<div class="notice notice-warning"><p><strong>Warleek:</strong> Die Seite bindet jetzt Google AdSense ein. '
+		. 'Diese Bannertexte sind von dir angepasst und wurden deshalb <em>nicht</em> überschrieben: <code>' . esc_html( $stand ) . '</code>. '
+		. 'Bitte prüfen – ein Text, der „zeigt keine Werbung" sagt, stimmt jetzt nicht mehr.</p></div>';
+} );
+
 /** Hinweis, wenn eigene Bannertexte stehen geblieben sind. */
 add_action( 'admin_notices', function () {
 	$stand = (string) get_option( 'warleek_consent_ga_v1' );
@@ -226,13 +342,23 @@ function warleek_analytics_ist_google() {
  * Modellierung greift erst ab erheblichen Datenmengen, und wir schalten keine
  * Werbung. Deshalb: Signale ja, Vorab-Übertragung nein.
  *
- * `ad_storage`, `ad_user_data` und `ad_personalization` bleiben dauerhaft auf
- * `denied` – wir nutzen keine Werbefunktionen und wollen auch keine.
+ * `ad_storage`, `ad_user_data` und `ad_personalization` starten ebenfalls auf
+ * `denied`. Seit die Seite AdSense einbindet, bleiben sie dort nicht dauerhaft:
+ * Googles CMP hebt sie nach der Zustimmung selbst an. Entscheidend ist, dass
+ * dieser Block **vor** dem AdSense-Skript steht – deshalb Priorität 1 hier und
+ * Priorität 5 bei `warleek_ads_script()`. Ohne diese Reihenfolge liefe die
+ * erste Auslieferung ohne gesetzten Stand.
  */
 function warleek_consent_mode_defaults() {
-	if ( is_admin() || ! warleek_consent_aktiv() ) { return; }
-	if ( ! array_key_exists( 'statistik', warleek_consent_kategorien() ) ) { return; }
-	if ( '' === trim( (string) warleek_opt( 'analytics_code' ) ) || ! warleek_analytics_ist_google() ) { return; }
+	if ( is_admin() ) { return; }
+	// Zwei Gründe für den Block: Google Analytics hinter dem eigenen Banner –
+	// oder AdSense, das seinen Stand von Googles CMP bekommt.
+	$ga   = warleek_consent_aktiv()
+		&& array_key_exists( 'statistik', warleek_consent_kategorien() )
+		&& '' !== trim( (string) warleek_opt( 'analytics_code' ) )
+		&& warleek_analytics_ist_google();
+	$ads  = function_exists( 'warleek_ads_aktiv' ) && warleek_ads_aktiv();
+	if ( ! $ga && ! $ads ) { return; }
 	?>
 <script>
 window.dataLayer = window.dataLayer || [];

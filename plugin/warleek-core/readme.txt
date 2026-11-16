@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.36.0
+Stable tag: 2.37.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,16 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.37.0 =
+* Google AdSense eingebunden (`inc/ads.php`): Anzeigen an zwei festen Plätzen in Guides und Patch Notes – nach dem zweiten Abschnitt und vor den häufigen Fragen. Eingefügt beim Ausliefern, damit nichts davon im gespeicherten Inhalt, im JSON-LD oder im Reddit-Beitrag landet. Auto Ads bewusst nicht.
+* Jede Anzeige trägt die Beschriftung „Anzeige" im Markup – Trennungsgebot, und ein ausgefallenes Stylesheet darf das nicht aushebeln.
+* Einwilligung läuft über Googles zertifizierte CMP („Privacy & messaging"). Meldet das TCF-API, dass die DSGVO greift, bleibt unser eigenes Banner verborgen und der Stand für Videos und Statistik wird aus den TCF-Zwecken abgeleitet; ohne TCF-API übernimmt nach drei Sekunden wieder unser Banner. „Einwilligung ändern" öffnet dann Googles Widerrufsdialog.
+* Consent Mode v2: `ad_storage`, `ad_user_data` und `ad_personalization` starten weiter auf `denied`, bleiben aber nicht mehr dauerhaft dort – Googles CMP hebt sie nach der Zustimmung an. Der Block läuft jetzt auch ohne Google Analytics.
+* `/ads.txt` wird vom Plugin ausgeliefert, sofern keine echte Datei im Web-Verzeichnis liegt.
+* Vier neue Einstellungen: Anzeigen ein/aus, Konto-Kennung, zwei Platz-Kennungen.
+* Die Zusagen zur Werbefreiheit sind raus – Startseite, About us, Datenschutzerklärung und Bannertext. Die Datenschutzerklärung hat einen neuen Abschnitt 6 zu AdSense, der auch den Aufruf vor der Einwilligung benennt; die folgenden Abschnitte sind umnummeriert.
+* Ein gespeicherter Bannertext wird einmalig ersetzt, sofern er unverändert war; ein selbst geschriebener bleibt stehen und wird im Backend angemahnt.
 
 = 2.36.0 =
 * Neun Guides zu den Season-03-Patch-Notes vom 11.11.2026: Überblick, Was neu ist, Waffen und Ausrüstung, Limited Mode mit Für und Wider, Twitch Drops, Preise, Nerfs und Buffs, Movember-DLC sowie Technik und Bann-Regeln. Fünf erscheinen sofort, vier terminiert bis zum 16.11.
