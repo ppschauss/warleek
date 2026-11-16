@@ -178,17 +178,39 @@ add_filter( 'the_content', 'warleek_ads_in_inhalt', 20 );
  * Maßnahmen". Eine echte Datei im Web-Verzeichnis hätte Vorrang und bleibt
  * unangetastet – so lässt sich die Automatik übergehen, ohne das Plugin
  * anzufassen.
+ *
+ * **Die Datei hängt an der Kennung, nicht am Schalter.** Sie zuerst hinter
+ * `ads_enabled` zu sperren war falsch herum gedacht: AdSense prüft über
+ * `/ads.txt`, ob einem die Domain gehört, und diese Prüfung steht **vor** der
+ * Freigabe des Kontos – ohne Freigabe gibt es keine Anzeigenblöcke, ohne
+ * Anzeigenblöcke schaltet man die Anzeigen nicht ein, und damit bliebe die
+ * Datei für immer verborgen. Sie auszuliefern ist ohnehin harmlos: Sie sagt
+ * nur, wer die Werbeplätze dieser Domain verkaufen darf.
  */
 function warleek_ads_txt() {
 	$pfad = untrailingslashit( (string) parse_url( (string) ( $_SERVER['REQUEST_URI'] ?? '' ), PHP_URL_PATH ) );
 	if ( '/ads.txt' !== strtolower( $pfad ) ) { return; }
 	if ( file_exists( ABSPATH . 'ads.txt' ) ) { return; }
-	if ( ! warleek_ads_aktiv() ) { return; }
+	if ( '' === warleek_ads_client() ) { return; }
 
-	$pub = str_replace( 'ca-pub-', 'pub-', warleek_ads_client() );
 	header( 'Content-Type: text/plain; charset=utf-8' );
 	header( 'X-Robots-Tag: noindex' );
-	echo 'google.com, ' . esc_html( $pub ) . ", DIRECT, f08c47fec0942fa0\n";
+	echo esc_html( warleek_ads_txt_inhalt() );
 	exit;
+}
+
+/**
+ * Inhalt der `/ads.txt`.
+ *
+ * Eigene Funktion, damit sie sich ohne Header und `exit` prüfen lässt.
+ * `f08c47fec0942fa0` ist Googles feste Kennung der Zertifizierungsstelle und
+ * in jeder AdSense-`ads.txt` dieselbe.
+ *
+ * @return string Zeile mit Zeilenumbruch, oder '' ohne gültige Kennung.
+ */
+function warleek_ads_txt_inhalt() {
+	$client = warleek_ads_client();
+	if ( '' === $client ) { return ''; }
+	return 'google.com, ' . str_replace( 'ca-pub-', 'pub-', $client ) . ", DIRECT, f08c47fec0942fa0\n";
 }
 add_action( 'init', 'warleek_ads_txt' );

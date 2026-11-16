@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.37.0
+Stable tag: 2.37.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.37.1 =
+* `/ads.txt` hing an „Anzeigen ein", lieferte deshalb 404 und AdSense konnte die Inhaberschaft der Website nicht bestätigen. Die Datei hängt jetzt allein an der hinterlegten Konto-Kennung – die Prüfung steht ja vor der Freigabe des Kontos.
 
 = 2.37.0 =
 * Google AdSense eingebunden (`inc/ads.php`): Anzeigen an zwei festen Plätzen in Guides und Patch Notes – nach dem zweiten Abschnitt und vor den häufigen Fragen. Eingefügt beim Ausliefern, damit nichts davon im gespeicherten Inhalt, im JSON-LD oder im Reddit-Beitrag landet. Auto Ads bewusst nicht.
