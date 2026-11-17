@@ -38,7 +38,10 @@ if git rev-parse "$TAG" >/dev/null 2>&1; then fehler "Tag $TAG existiert bereits
 
 # --- Pakete bauen
 rm -rf dist && mkdir -p dist
-(cd theme && zip -qr "../dist/warleek-theme-$VERSION.zip" warleek)
+# Das Theme traegt eine eigene Version: Der Name des Pakets richtet sich nach
+# style.css, nicht nach der Plugin-Version – sonst baut das Skript eine Datei,
+# die es hinterher unter anderem Namen hochladen will.
+(cd theme && zip -qr "../dist/warleek-theme-$THEME_CSS.zip" warleek)
 (cd plugin && zip -qr "../dist/warleek-core-$VERSION.zip" warleek-core -x 'warleek-core/tests/*')
 
 BASE="https://github.com/$REPO/releases/download/$TAG"
