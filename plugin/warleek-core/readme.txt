@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.37.3
+Stable tag: 2.38.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,14 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.38.0 =
+* **Neuer Guide „Wardogs Season 4" (`wardogs-season-4`)** zum unbestätigten Leak aus r/WarDogs: Freischaltstufen für Minigun-Littlebird (Pilot 8 → 15), Minigun-Lakota (25 → 8) und großen Hammer (Support 14 → 10) sowie ein 300-Schuss-Magazin für die Helikopter-Minigun.
+* Der Beitrag prüft die Ausgangswerte gegen die Datenbank – alle drei stimmen mit dem Stand nach Season 3 überein – und nennt ebenso, was gegen den Leak spricht. Als Leak ist er in jedem Abschnitt gekennzeichnet; die Datenbank-Einträge bleiben unberührt.
+* Dazu die Herleitung des Starttermins aus Season-Länge, Preiserhöhung und Wochentag (Fenster 28.01. – 11.02.2027) und eine Übersicht dessen, was zu Season 4 bereits belegt ist.
+* Fünf bestehende Guides verweisen mit „unbestätigt"-Hinweis darauf: Season-3-Überblick, Helikopter fliegen, Support/Hammer, Progression, Nerfs und Buffs.
+* Korrektur in `wardogs-helikopter-fliegen`: Die AH-6M [Miniguns] stand noch mit dem Season-2-Preis von $12.000 in der Tabelle, Season 3 hat sie auf $10.480 gesenkt. Dazu ein Hinweis auf die stärkeren Miniguns und das besser geschützte Cockpit.
+* Neues Titelbild `guide-s4-leak` samt Rezept in `bin/guide-bild-bauen.py`.
 
 = 2.37.3 =
 * **Das Meta-Tag zur AdSense-Bestätigung sitzt jetzt fest im Theme** (`theme/warleek/functions.php`) statt im Plugin. Dafür muss das Theme mit aktualisiert werden – das Plugin allein reicht hier nicht.

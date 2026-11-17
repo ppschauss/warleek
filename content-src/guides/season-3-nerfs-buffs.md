@@ -57,6 +57,8 @@ Oberer Torso **+13 %** gegenüber Season 2, mittlerer und unterer je **+3 %**. D
 
 Season 2 hatte die Miniguns nach eigener Aussage stärker geschwächt als beabsichtigt. Die neuen Werte liegen zwischen Season 1 und Season 2. Für Infanterie heißt das: Ein Humvee mit Minigun ist wieder eine echte Bedrohung, und Deckung zählt mehr als Reaktionszeit.
 
+> [!hinweis] **Unbestätigt:** Für Season 4 kursiert ein Leak, nach dem die Minigun-Littlebird ein 300-Schuss-Magazin bekommt und erst auf Pilot 15 freischaltet. Geprüft und eingeordnet in [Wardogs Season 4: der Leak](/guides/wardogs-season-4/).
+
 ### Rückwärtsgang
 
 | Fahrzeug | Vorher | Season 3 |

@@ -21,6 +21,8 @@ Wardogs hat keinen Klassen-Auswahlbildschirm. Du entscheidest nicht, wer du bist
 
 > [!hinweis] Season 3 (12.11.2026): **Panzerung, Rucksäcke, Taktikwesten und Fallschirme lassen sich jetzt über jeden Rollen-Track freischalten.** Das Durchwechseln mehrerer Rollen ist damit nicht mehr der schnellste Weg. Was sich sonst noch verschoben hat, steht beim [Limited Mode und der neuen Progression](/guides/wardogs-season-3-limited-mode/).
 
+> [!hinweis] Diese Multi-Track-Freischaltungen sind laut Patch Notes ausdrücklich eine **Übergangslösung** bis zum intel-basierten Progressionssystem, das BULKHEAD für 2027 angekündigt hat. Was zu Season 4 bisher belegt ist — und was nur behauptet wird —, steht in [Wardogs Season 4](/guides/wardogs-season-4/).
+
 ## Die sechs Tracks
 
 | Track | Steigt durch | Schaltet frei |

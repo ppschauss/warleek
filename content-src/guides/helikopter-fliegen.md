@@ -25,12 +25,16 @@ Der häufigste Helikopter-Verlust in Wardogs passiert in den ersten dreißig Sek
 | --- | --- | --- | --- |
 | **MH-6** | rund $6.250 | 6 | Der Lern- und Taxi-Heli |
 | Z20 Lakota | rund $7.400 | 13 | Truppentransport in Menge |
-| AH-6M [Miniguns] | rund $12.000 | 2 | Bodenunterstützung, Pilot 8 |
+| AH-6M [Miniguns] | rund $10.480 | 2 | Bodenunterstützung, Pilot 8 |
 | AH-6R [Rockets] | rund $18.800 | 2 | Panzer- und Stellungsbekämpfung |
 | Z20 Lakota [Miniguns] | rund $15.000 | 13 | Transport mit Eigenschutz |
 | Havoc | rund $28.000 | 2 | Der teure Kampfhubschrauber |
 
 > [!hinweis] **Season 2 hat die bewaffneten Helikopter deutlich verteuert.** Die AH-6M mit Miniguns kostet $12.000 statt $7.000 und schaltet erst auf Pilot 8 statt 4 frei, die Freischaltung kostet $125.000 statt $50.000 – die Entwickler nennen sie ausdrücklich zu stark für ihre frühe Stufe. Der Havoc liegt bei $28.000 pro Stück und $650.000 Freischaltung. Dazu verlieren Minigun-Kaliber bis zu 19 % Grundschaden, und das Cockpitglas wirkt jetzt in beide Richtungen: Hindurchschießen beschädigt den eigenen Helikopter.
+
+> [!achtung] **Season 3 (12.11.2026) hat das teilweise zurückgenommen.** Die AH-6M [Miniguns] kostet jetzt rund **$10.480** statt $12.000, ihre Miniguns treffen Infanterie wieder deutlich härter (oberer Torso +64 % gegenüber Season 2), und das Littlebird-Cockpit schützt besser. Die Freischaltung bleibt bei Pilot 8. Einzelheiten: [Nerfs und Buffs in Season 3](/guides/wardogs-season-3-nerfs-buffs/).
+
+> [!hinweis] **Unbestätigt:** Ein Leak nennt für Season 4 Pilot **15** statt 8 für die Minigun-Littlebird, Pilot **8** statt 25 für die Minigun-Lakota und ein 300-Schuss-Magazin für die Minigun. Nichts davon ist von BULKHEAD bestätigt — die Prüfung steht in [Wardogs Season 4: der Leak](/guides/wardogs-season-4/).
 
 Fang mit dem MH-6 an. Er ist der billigste, der gutmütigste und der nützlichste – sechs Leute an den Rand der Zone zu fliegen, ist mehr wert als jeder Raketenangriff.
 

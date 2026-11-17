@@ -21,6 +21,8 @@ Bauen ist in Wardogs keine Nebenbeschäftigung, sondern die Art, wie ein Team Ge
 
 > [!achtung] Season 3 (12.11.2026): Der **große Hammer** liegt jetzt auf **Support 14** statt 8, die **Verba** im Gegenzug auf **Support 8** statt 14. Alle Emplacements, die den großen Hammer brauchen, verschieben sich entsprechend nach hinten. Mehr dazu beim [Limited Mode und der neuen Progression](/guides/wardogs-season-3-limited-mode/).
 
+> [!hinweis] **Unbestätigt:** Ein Leak nennt für Season 4 eine Rücknahme auf **Support 10**. Von BULKHEAD bestätigt ist das nicht — eingeordnet in [Wardogs Season 4: der Leak](/guides/wardogs-season-4/).
+
 ## Die drei Hammer
 
 | Hammer | Was damit geht | Tempo |

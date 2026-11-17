@@ -385,7 +385,7 @@
         "size": 35714
     },
     "bild-tieffliegen.webp": {
-        "alt": "Ein leichter Helikopter fliegt dicht über einem Flusslauf zwischen Baumreihen.",
+        "alt": "Ein leichter Helikopter fliegt dicht über einem Flusslauf zwischen Baumreihen",
         "use": "bild-tieffliegen",
         "size": 61668
     },
@@ -1817,5 +1817,10 @@
         "alt": "FAL in der Tarnung Chocolate Chip",
         "use": "bild-pn-camo-fal",
         "size": 52750
+    },
+    "guide-s4-leak.webp": {
+        "alt": "Montage aus Minigun-Lakota, Minigun-Littlebird und großem Hammer vor einem Hubschrauber im Tiefflug",
+        "use": "guide-s4-leak",
+        "size": 14114
     }
 }

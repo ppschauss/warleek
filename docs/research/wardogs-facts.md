@@ -553,3 +553,80 @@ Early-Access-Jubiläum im September 2027.
   15:00 mittlerer Rucksack + Helm L2 + Panzerung L2.
 
 Quelle: Steam-Ankündigung, App 1867240, gid 1849192144179736 (11.11.2026)
+
+---
+
+## Season 4 — Stand 17.11.2026: **nichts offiziell angekündigt**
+
+Es gibt zu Season 4 weder Devlog noch Patch Notes noch einen Termin von BULKHEAD.
+Alles unten ist entweder aus den Season-03-Patch-Notes abgeleitet (belegt) oder ein
+unbestätigter Leak (nicht belegt). **Nichts davon darf in Datenbank-Einträge wandern.**
+
+### Belegt (aus den Season-03-Patch-Notes vom 11.11.2026)
+- **Season-Länge rund drei Monate.** Season 3 startete am 12.11.2026.
+- **Preiserhöhung um $5 „zum Ende von Season 3" am 28.01.2027.** Das ist der einzige
+  offizielle Termin, der am Ende von Season 3 hängt — und damit der beste Anker für den
+  Start von Season 4. Bestandskäufer zahlen nichts nach.
+- **Intel-basiertes Progressionssystem „2027".** Die Multi-Track-Freischaltungen aus
+  Season 3 sind laut Patch Notes ausdrücklich eine **Übergangslösung** bis dahin.
+- **Infrarot-Entfernungsmesser** kommt nach einem Redesign zurück (kein Termin).
+- **Wager Vendor** ist entfernt und „geht zurück in die Entwicklung" (kein Termin).
+- **Limited Mode:** vollständige Ausschlussliste laut Devlog noch „TBD".
+- Nächste Preiserhöhung nach dem 28.01.2027 erst zum EA-Jubiläum im September 2027.
+
+### Starttermine bisher — alle an einem Donnerstag
+| Season | Start | Wochentag | Abstand zur vorigen |
+|---|---|---|---|
+| EA-Start | 10.09.2026 | Donnerstag | — |
+| Season 2 | 15.10.2026 | Donnerstag | 5 Wochen |
+| Season 3 | 12.11.2026 | Donnerstag | 4 Wochen (Season 2 verkürzt) |
+| Season 4 | **unbekannt** | — | angekündigt: rund 3 Monate |
+
+28.01.2027 ist ein Donnerstag, 11.02.2027 ebenfalls. Drei Monate nach dem 12.11.2026
+wäre der 11.02.2027. Daraus folgt das Fenster **28.01.2027 bis Mitte Februar 2027** —
+abgeleitet, nicht bestätigt.
+
+### Unbestätigter Leak (Reddit, r/WarDogs, gesehen 17.11.2026)
+Beitrag mit Ralph-Wiggum-Bild („I'M IN DANGER"), nach eigener Angabe aus
+„sehr vertraulichen Bulkhead-Spieldateien aus dem neuesten Update". Beim Abruf
+rund 111 Stimmen und 57 Kommentare. Der sichtbare Text ist die
+**automatische Reddit-Übersetzung ins Deutsche**; das englische Original liegt uns
+nicht vor — reddit.com ist aus unserem Werkzeug heraus nicht abrufbar, die Kommentare
+konnten wir deshalb **nicht** lesen. Quelle: https://www.reddit.com/r/WarDogs/s/RuSxcBZFmr
+
+Behauptet werden vier Punkte („Staffel 4 Änderungen in Arbeit"):
+1. Minigun-Lakota wird **vor** der Minigun-Littlebird freigeschaltet, „um das frühe
+   Teamplay für Luftnahunterstützung zu fördern".
+2. **Großer Hammer: Stufe 14 → 10**
+3. **Minigun-Lakota: Stufe 25 → 8**
+4. **Minigun-Littlebird: Stufe 8 → 15**
+5. **Neu:** Minigun-Littlebird lädt nach jeweils **300 Schuss** nach
+   (300-Schuss-Magazin, 600 Reserve), „um Abkühlfenster zu schaffen".
+
+**Gegenprüfung der Ausgangswerte an unserer Datenbank (Stand Season 3):**
+
+| Gegenstand | Unser Eintrag | Leak sagt „von" | stimmt? |
+|---|---|---|---|
+| Großer Hammer | Support 14 (Season 3: von 8 auf 14 verschoben) | 14 | ja |
+| UH-1Y [Miniguns] („Lakota") | Pilot 25, $85.000 Gebühr, $15.000/Stück, 13 Sitze | 25 | ja |
+| AH-6M [Miniguns] („Bird") | Pilot 8, $125.000 Gebühr, $10.480/Stück, 2 Sitze | 8 | ja |
+
+Alle drei Ausgangswerte sind korrekt **und aktuell nach Season 3**. Das beweist nichts
+über die Zielwerte, schließt aber die billigste Fälschung aus: Wer das schreibt, kennt
+den Stand nach dem 12.11.2026.
+
+**Was dagegen spricht:** Der Beitrag liefert keine Dateipfade, keine Screenshots, keine
+Hashes. Vor allem nennt er **Begründungen** („um das frühe Teamplay zu fördern",
+„um Abkühlfenster zu schaffen") — in Spieldateien stehen Werte, keine Begründungen.
+Das ist die Sprache von Patch Notes, nicht die eines Datenauszugs. Außerdem fehlen die
+Freischaltgebühren: Eine Lakota auf Pilot 8 bleibt mit $85.000 Gebühr früh unerreichbar.
+
+**Was dafür spricht:** BULKHEAD hat in Season 3 genau so gehandelt — Stufen verschoben
+(C4 4→5, Molotow 13→8, Großer Hammer 8→14, Verba 14→8, AMR 50 35→41, Panzer 20–35→35–50,
+WARDOG 145→200) und Übersteuerungen der Vorsaison zurückgenommen. Die Beschwerde, dass
+die Minigun-Littlebird auf Pilot 8 zu früh und zu stark ist, während Flugabwehr höher
+liegt, steht seit Monaten in den Steam-Rezensionen
+(https://steamcommunity.com/app/1867240/reviews/).
+
+**Regel für uns:** Bis BULKHEAD etwas veröffentlicht, bleibt das ein Leak. Guide
+`wardogs-season-4` sagt das in jedem Abschnitt; Datenbank-Einträge bleiben unberührt.

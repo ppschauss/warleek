@@ -65,6 +65,12 @@ Twitch Drops sind für Season 3 aktiv — bis hin zu einer Littlebird und einem 
 
 → [Die Twitch Drops in Season 3](/guides/wardogs-season-3-twitch-drops/) · [Das Movember-DLC](/guides/wardogs-season-3-movember/) *(erscheint am 15. November)*
 
+## Und danach?
+
+Season 3 soll rund drei Monate laufen; die Patch Notes nennen den 28. Januar 2027 als Ende. Zu Season 4 gibt es bisher keine offizielle Ankündigung, aber bereits einen unbestätigten Leak zu Freischaltstufen.
+
+→ [Wardogs Season 4: der Leak und der wahrscheinliche Starttermin](/guides/wardogs-season-4/)
+
 ## Was wir nicht einordnen können
 
 Die Patch Notes nennen keine Zahlen zur neuen XP-Kurve — nur, dass sie steiler ist und näher an Season 1 liegt. Auch die genauen Schwellen des Aufholbonus fehlen. Beides tragen wir nach, sobald es belastbare Werte gibt.

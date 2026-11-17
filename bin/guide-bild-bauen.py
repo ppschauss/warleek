@@ -304,6 +304,20 @@ REZEPTE = {
         unterzeile="",
         name="guide-s3-drops",
     ),
+    # Season 4: die drei Gegenstaende, um die der Leak kreist — Minigun-Lakota,
+    # Minigun-Littlebird und der grosse Hammer. Kein offizielles Material:
+    # Zu Season 4 gibt es noch keins.
+    "s4-leak": dict(
+        hintergrund="gruppe-helikopter.webp",
+        kacheln=[
+            ("wardogs-uh-1y-miniguns.webp", (30, 58), (354, 199), -5, 0.90),
+            ("wardogs-grosser-hammer.webp", (600, 46), (354, 199), 5, 0.94),
+            ("wardogs-ah-6m-miniguns.webp", (318, 130), (390, 219), -2, 1.06),
+        ],
+        titel="",
+        unterzeile="",
+        name="guide-s4-leak",
+    ),
     "munition": dict(
         hintergrund="gruppe-mg.webp",
         kacheln=[
