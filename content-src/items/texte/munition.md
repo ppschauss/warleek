@@ -1,5 +1,5 @@
 ## wardogs-munition-5-56x45
-**{kaliber}** ist das meistgenutzte Kaliber in Wardogs und das, mit dem fast jeder anfängt: Alle drei kostenlosen Startgewehre verschießen es.
+**{kaliber}** ist das meistgenutzte Kaliber in Wardogs und das, mit dem fast jeder anfängt: Alle drei kostenlosen Startgewehre verschießen es. Eine Schachtel kostet {preis} – zusammen mit [5,45 × 39 mm](/datenbank/wardogs-munition-5-45x39/) das günstigste Gewehrkaliber im Laden.
 
 Damit ist es auch das Kaliber, bei dem die Munitionswahl am häufigsten ansteht. Drei Sorten gibt es zu jedem Kaliber, dazu jede als Leuchtspurvariante:
 
@@ -15,7 +15,7 @@ Praktisch heißt das: Je später die Season, desto mehr Panzerung steht dir gege
 Es kommt auf das Ziel an: Flesh Damage gegen Ungepanzerte, Armor Piercing gegen Rüstung Stufe 3 und 4. Standard ist der Kompromiss und kostet am wenigsten.
 
 ## wardogs-munition-5-45x39
-**{kaliber}** ist das Kaliber der AK-74 – dem ersten lohnenden Schritt weg von den Startgewehren.
+**{kaliber}** ist das Kaliber der AK-74 – dem ersten lohnenden Schritt weg von den Startgewehren. Eine Schachtel kostet {preis}, genauso viel wie beim westlichen Gegenstück.
 
 In der Praxis ist der Unterschied zu [5,56 × 45 mm](/datenbank/wardogs-munition-5-56x45/) gering. Beide sind leichte Zwischenkaliber mit hoher Feuerrate und beherrschbarem Rückstoß; die Community-Angaben nennen für die AK-74 rund 305 Brust-DPS gegenüber rund 329 bei der Galil, die das westliche Kaliber verschießt. Das ist ein Unterschied von etwa acht Prozent und damit kleiner als der zwischen zwei Spielern mit unterschiedlicher Zielgenauigkeit.
 
@@ -27,7 +27,7 @@ Die drei Sorten – Standard, Flesh Damage, Armor Piercing – gibt es auch hier
 Der Unterschied ist gering – nach Community-Angaben rund acht Prozent beim Brust-DPS zugunsten des westlichen Kalibers. Welche Waffe du dir leisten kannst, wiegt schwerer als das Kaliber.
 
 ## wardogs-munition-7-62x39
-**{kaliber}** ist das schwere Zwischenkaliber in Wardogs: deutlich mehr Masse als die 5-mm-Kaliber, dafür mehr Rückstoß und weniger Schuss pro Gewicht.
+**{kaliber}** ist das schwere Zwischenkaliber in Wardogs: deutlich mehr Masse als die 5-mm-Kaliber, dafür mehr Rückstoß und weniger Schuss pro Gewicht. Eine Schachtel kostet {preis} – fast das Dreifache der leichten Kaliber.
 
 Im Spiel steckt es in der [SKS](/datenbank/wardogs-sks/) – einer halbautomatischen Waffe, bei der ohnehin der einzelne Treffer zählt und nicht die Feuerrate. Das passt zusammen: Ein Kaliber, das pro Schuss mehr liefert und dafür schlechter zu kontrollieren ist, gehört in eine Waffe, die ohnehin nicht im Dauerfeuer gespielt wird.
 
@@ -39,7 +39,7 @@ Die Munitionssorten wirken hier wie überall – Flesh Damage gegen Ungepanzerte
 Die SKS. Das Kaliber liefert pro Schuss mehr Masse als die 5-mm-Kaliber, hat dafür mehr Rückstoß und wiegt pro Magazin mehr.
 
 ## wardogs-munition-7-62x54
-**{kaliber}** ist das Arbeitskaliber auf Distanz in Wardogs: [Mosin Nagant](/datenbank/wardogs-mosin-nagant/), [SVD](/datenbank/wardogs-svd/), [SV-98](/datenbank/wardogs-sv-98/) und das [PKM](/datenbank/wardogs-pkm/) teilen es sich.
+**{kaliber}** ist das Arbeitskaliber auf Distanz in Wardogs: [Mosin Nagant](/datenbank/wardogs-mosin-nagant/), [SVD](/datenbank/wardogs-svd/), [SV-98](/datenbank/wardogs-sv-98/) und das [PKM](/datenbank/wardogs-pkm/) teilen es sich. Eine Schachtel kostet {preis}.
 
 Hier lohnt die Munitionswahl am meisten – und zwar aus einem bestimmten Grund: Auf große Entfernung kannst du selten nachkorrigieren. Ein Treffer muss sitzen, und gegen wen er sitzt, weißt du vorher nicht. Wer auf 400 Metern feuert, sieht nicht, ob dort Panzerung Stufe 1 oder Stufe 4 steht.
 
@@ -51,7 +51,7 @@ Nachgemessen haben wir das nicht; die Zahlen stammen aus öffentlichen Auswertun
 Bei 7,62 × 54 mm meist Armor Piercing: Auf große Entfernung weißt du nicht, welche Panzerung dir gegenübersteht, und der Nachteil gegen ungepanzerte Ziele ist kleiner als der Vorteil gegen Rüstung.
 
 ## wardogs-munition-308-winchester
-**{kaliber}** ist das westliche Präzisionskaliber in Wardogs – das Gegenstück zu [7,62 × 54 mm](/datenbank/wardogs-munition-7-62x54/). Verschossen wird es von [FAL](/datenbank/wardogs-fal/), [MK22](/datenbank/wardogs-mk22/) und [BMR-308](/datenbank/wardogs-bmr-308/).
+**{kaliber}** ist das westliche Präzisionskaliber in Wardogs – das Gegenstück zu [7,62 × 54 mm](/datenbank/wardogs-munition-7-62x54/). Verschossen wird es von [FAL](/datenbank/wardogs-fal/), [MK22](/datenbank/wardogs-mk22/) und [BMR-308](/datenbank/wardogs-bmr-308/). Eine Schachtel kostet {preis}.
 
 Alle drei liegen im oberen Preisfeld. Wer sie fährt, zahlt pro Leben spürbar – und sollte wissen, welche Sorte im Magazin steckt, weil ein falsch bestücktes teures Gewehr die teuerste Art ist, nichts zu treffen.
 
@@ -63,7 +63,7 @@ Leuchtspurvarianten gibt es zu jeder Sorte, beim Händler mit **(T)** markiert, 
 FAL, MK22 und BMR-308. Die Spannweite ist groß – von vollautomatisch auf kurze Distanz bis zum Repetierer auf rund 1.000 Meter –, deshalb passt nicht eine Munitionssorte zu allen dreien.
 
 ## wardogs-munition-9x19
-**{kaliber}** ist das Kaliber der Nahdistanz in Wardogs: [AMP-9](/datenbank/wardogs-amp-9/), [PP-19 Vityaz](/datenbank/wardogs-pp-19-vityaz/), [MP5](/datenbank/wardogs-mp5/), [GGX 17](/datenbank/wardogs-ggx-17/) und [GGX 18](/datenbank/wardogs-ggx-18/).
+**{kaliber}** ist das Kaliber der Nahdistanz in Wardogs: [AMP-9](/datenbank/wardogs-amp-9/), [PP-19 Vityaz](/datenbank/wardogs-pp-19-vityaz/), [MP5](/datenbank/wardogs-mp5/), [GGX 17](/datenbank/wardogs-ggx-17/) und [GGX 18](/datenbank/wardogs-ggx-18/). Eine Schachtel kostet {preis} – das billigste Kaliber im Spiel.
 
 Auf unter 50 Meter ist es brauchbar, darüber hinaus nicht. Für Sanitäter ist es trotzdem die richtige Wahl – nicht wegen der Wirkung, sondern wegen des Platzes: Eine Maschinenpistole lässt Raum im Rucksack für das Material, das ein Medic eigentlich tragen soll, und 9-mm-Magazine wiegen wenig.
 
@@ -75,7 +75,7 @@ Die ehrliche Grenze: Gegen schwere Rüstung ist dieses Kaliber die falsche Antwo
 Nur begrenzt. Auf kurze Distanz gegen leichte Ziele ist Flesh Damage stark; gegen Panzerung der Stufen 3 und 4 reicht auch Armor Piercing in diesem Kaliber meist nicht.
 
 ## wardogs-munition-45-acp
-**{kaliber}** ist das schwere Pistolenkaliber in Wardogs: langsamer als [9 × 19 mm](/datenbank/wardogs-munition-9x19/), dafür mit mehr Masse pro Geschoss. Im Spiel steckt es in der [Super-45](/datenbank/wardogs-super-45/) und der [M1911](/datenbank/wardogs-m1911/).
+**{kaliber}** ist das schwere Pistolenkaliber in Wardogs: langsamer als [9 × 19 mm](/datenbank/wardogs-munition-9x19/), dafür mit mehr Masse pro Geschoss. Im Spiel steckt es in der [Super-45](/datenbank/wardogs-super-45/) und der [M1911](/datenbank/wardogs-m1911/). Eine Schachtel kostet {preis}, so viel wie 9 × 19 mm.
 
 Gegen ungepanzerte Ziele auf kurze Distanz ist das eine gute Kombination mit Flesh-Damage-Munition: viel Masse, verdoppelter Schaden, kurze Wege. Das ist die Nische, in der dieses Kaliber besser ist als 9 mm.
 
@@ -87,7 +87,7 @@ Für Sanitäter, die ohnehin Platz sparen wollen, bleibt 9 mm die bessere Wahl; 
 Auf sehr kurze Distanz gegen ungepanzerte Ziele .45 ACP, vor allem mit Flesh Damage. Sonst 9 × 19 mm: mehr Schuss, leichter, auf Entfernung berechenbarer.
 
 ## wardogs-munition-45-colt
-**{kaliber}** ist ein Sonderfall im Katalog von Wardogs: Es gibt genau eine Waffe dafür, den [Judge](/datenbank/wardogs-judge/).
+**{kaliber}** ist ein Sonderfall im Katalog von Wardogs: Es gibt genau eine Waffe dafür, den [Judge](/datenbank/wardogs-judge/). Eine Schachtel kostet {preis} – mehr als das Dreifache von 9 × 19 mm, für eine Waffe mit weniger Schuss.
 
 Eine Revolverpatrone im Spiel zu haben, ist vor allem eine Stilfrage. Praktisch konkurriert sie mit Pistolen, die mehr Schuss im Magazin tragen – und in einem Spiel, in dem die Zweitwaffe für den Moment da ist, in dem das Gewehr leer ist, sind Schuss im Magazin das Argument.
 
@@ -99,7 +99,7 @@ Die drei Munitionssorten gibt es auch hier. Bei einer Waffe mit wenigen Schuss p
 Nur der Judge. Das Kaliber existiert im Katalog ausschließlich für diese eine Waffe – die Entscheidung läuft deshalb über die Waffe, nicht über die Patrone.
 
 ## wardogs-munition-50-ae
-**{kaliber}** ist die Patrone der [Deagle](/datenbank/wardogs-deagle/): viel Schaden pro Treffer, wenige Schuss, starker Rückstoß.
+**{kaliber}** ist die Patrone der [Deagle](/datenbank/wardogs-deagle/): viel Schaden pro Treffer, wenige Schuss, starker Rückstoß. Eine Schachtel kostet {preis}.
 
 Das ist eine Zweitwaffe, die den ersten Treffer belohnt und den zweiten teuer macht. Als Reserve für den Moment, in dem das Gewehr leer ist, ist sie teurer und unberechenbarer als [9 × 19 mm](/datenbank/wardogs-munition-9x19/) – dafür beendet ein Treffer die Lage, statt sie zu verlängern.
 
@@ -111,7 +111,7 @@ Bei der Munitionssorte gilt dasselbe wie bei allen Großkalibern: Der Vorteil vo
 Wenn du den ersten Schuss zuverlässig setzt. .50 AE liefert viel Schaden pro Treffer bei wenigen Schuss und starkem Rückstoß – wer mehrere Treffer braucht, fährt mit 9 × 19 mm besser.
 
 ## wardogs-munition-50-bmg
-**{kaliber}** ist das größte Handfeuerwaffen-Kaliber in Wardogs, verschossen aus der [AMR 50](/datenbank/wardogs-amr-50/). Die Community-Angaben nennen 107 Grundschaden und rund 2.000 Meter Wirkungsbereich.
+**{kaliber}** ist das größte Handfeuerwaffen-Kaliber in Wardogs, verschossen aus der [AMR 50](/datenbank/wardogs-amr-50/). Die Community-Angaben nennen 107 Grundschaden und rund 2.000 Meter Wirkungsbereich. Eine Schachtel kostet {preis} – mit Abstand die teuerste Munition im Spiel, das Fünfundzwanzigfache von 9 × 19 mm.
 
 Gedacht ist es gegen Material und leichte Fahrzeuge, nicht als besseres Scharfschützengewehr. Wer es gegen Infanterie einsetzt, zahlt für Durchschlag, den er gegen einen Körper nicht braucht – und trägt dafür das schwerste Magazin im Spiel.
 
@@ -123,7 +123,7 @@ Für Panzer reicht es trotzdem nicht – dafür gibt es [Panzerabwehr](/datenban
 Gegen Material und leichte Fahrzeuge auf große Entfernung – rund 2.000 Meter Wirkungsbereich bei 107 Grundschaden. Gegen Infanterie ist sie überdimensioniert, gegen Panzer zu schwach.
 
 ## wardogs-munition-12-gauge
-**{kaliber}** ist das Schrotkaliber in Wardogs – für [MP43](/datenbank/wardogs-mp43/), [M500](/datenbank/wardogs-m500/) und [M12G](/datenbank/wardogs-m12g/) und damit die billigste Art, auf kurze Distanz etwas auszurichten.
+**{kaliber}** ist das Schrotkaliber in Wardogs – für [MP43](/datenbank/wardogs-mp43/), [M500](/datenbank/wardogs-m500/) und [M12G](/datenbank/wardogs-m12g/) und damit die billigste Art, auf kurze Distanz etwas auszurichten. Das Kaliber selbst hat keinen Preis; die Sorten schon — 7 mm Buckshot $60, Rifled Slug $200 je Schachtel.
 
 Die Munitionssorten funktionieren hier anders als bei Gewehrkalibern, weil mehrere Projektile gleichzeitig fliegen. Ein Schuss verteilt sich auf getroffene und nicht getroffene Körperteile, und was auf einen ungeschützten Arm trifft, rechnet anders als das, was die Weste erwischt. Die üblichen Multiplikatoren für Flesh Damage und Armor Piercing sind damit nur eine grobe Richtung.
 

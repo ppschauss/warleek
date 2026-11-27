@@ -1822,5 +1822,95 @@
         "alt": "Montage aus Minigun-Lakota, Minigun-Littlebird und großem Hammer vor einem Hubschrauber im Tiefflug",
         "use": "guide-s4-leak",
         "size": 14114
+    },
+    "item-wardogs-helm-panzer.webp": {
+        "alt": "Panzerhaube aus WARDOGS mit Kopfhörern, freigestellt",
+        "use": "item-wardogs-helm-panzer",
+        "size": 9752,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-helm-pilot.webp": {
+        "alt": "Pilotenhelm aus WARDOGS mit dunklem Visier und Kehlkopfmikrofon, freigestellt",
+        "use": "item-wardogs-helm-pilot",
+        "size": 8140,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-12-gauge.webp": {
+        "alt": "Schachtel Schrotpatronen im Kaliber 12 Gauge aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-12-gauge",
+        "size": 31152,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-308-winchester.webp": {
+        "alt": "Munitionsschachtel .308 Winchester aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-308-winchester",
+        "size": 13032,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-45-acp.webp": {
+        "alt": "Munitionsschachtel .45 ACP aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-45-acp",
+        "size": 30192,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-45-colt.webp": {
+        "alt": "Munitionsschachtel .45 Colt aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-45-colt",
+        "size": 33288,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-50-ae.webp": {
+        "alt": "Munitionsschachtel .50 AE aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-50-ae",
+        "size": 31410,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-50-bmg.webp": {
+        "alt": "Munitionsschachtel .50 BMG aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-50-bmg",
+        "size": 35844,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-5-45x39.webp": {
+        "alt": "Munitionsschachtel 5,45 × 39 mm aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-5-45x39",
+        "size": 22920,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-5-56x45.webp": {
+        "alt": "Munitionsschachtel 5,56 × 45 mm aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-5-56x45",
+        "size": 23066,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-7-62x39.webp": {
+        "alt": "Munitionsschachtel 7,62 × 39 mm aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-7-62x39",
+        "size": 22004,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-7-62x54.webp": {
+        "alt": "Munitionsschachtel 7,62 × 54 mm R aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-7-62x54",
+        "size": 16846,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-munition-9x19.webp": {
+        "alt": "Munitionsschachtel 9 × 19 mm aus WARDOGS, freigestellt",
+        "use": "item-wardogs-munition-9x19",
+        "size": 23424,
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "item-wardogs-z20-lakota-miniguns.webp": {
+        "alt": "Z20 Lakota [Miniguns] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-z20-lakota-miniguns",
+        "size": 10298,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "item-wardogs-z20-lakota.webp": {
+        "alt": "Z20 Lakota aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "use": "item-wardogs-z20-lakota",
+        "size": 9686,
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
     }
 }

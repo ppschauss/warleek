@@ -105,3 +105,27 @@ Belegen können wir das nicht. Weder zum Unterschied gegenüber den Stufenwesten
 
 ### Was bringt die Flak-Jacke in Wardogs?
 Nach der Bezeichnung Schutz gegen Splitter und Explosionen statt gegen Gewehrfeuer. Belastbare Zahlen zu Wirkung, Gewicht und Preis liegen uns nicht vor.
+
+## wardogs-helm-pilot
+Der **Pilotenhelm** kostet in Wardogs rund {preis} und belegt den Helm-Platz, Inventarfläche 2×2. Eine Freischaltstufe nennt keine uns bekannte Quelle.
+
+Bemerkenswert ist der Preis: Mit {preis} liegt er über dem [Helm Stufe 4](/datenbank/wardogs-helm-4/) für {preis:wardogs-helm-4}, dem teuersten regulären Kopfschutz. Das legt nahe, dass er etwas kann, was die Stufenhelme nicht können – **belegen können wir das nicht.**
+
+Was sich sagen lässt: Er belegt denselben Platz wie ein Stufenhelm, du trägst also entweder ihn oder Schutz. Für einen Piloten, der in der Kabine sitzt und selten beschossen wird, ist das eine andere Rechnung als für Infanterie – und ein Absturz mit {preis} am Kopf zusätzlich zur Maschine ist ein teurer Abend.
+
+Ob er gegen Kugeln schützt, Funk verbessert oder das Sichtfeld im Cockpit verändert, steht in keiner Quelle, die wir kennen. Wer ihn im Spiel getragen hat und den Unterschied benennen kann, schreibt uns.
+
+### Was bringt der Pilotenhelm in Wardogs?
+Das ist nicht belegt. Er kostet rund {preis}, belegt den Helm-Platz mit 2×2 Inventarfläche und ist damit teurer als der Helm Stufe 4 – zur Wirkung geben die uns bekannten Quellen nichts her.
+
+## wardogs-helm-panzer
+Die **Panzerhaube** kostet rund {preis} und belegt den Helm-Platz, Inventarfläche 2×2. Eine Freischaltstufe ist nicht belegt.
+
+Sie liegt preislich zwischen [Helm Stufe 4](/datenbank/wardogs-helm-4/) für {preis:wardogs-helm-4} und dem [Pilotenhelm](/datenbank/wardogs-helm-pilot/) für {preis:wardogs-helm-pilot} – und wie bei diesem fehlt uns die Wirkung.
+
+Der naheliegende Zweck ist die Fahrzeugbesatzung: Eine Panzerhaube mit Kopfhörern gehört in einen [L2A6](/datenbank/wardogs-l2a6/) oder [T-72B3](/datenbank/wardogs-t-72/), nicht auf eine Patrouille zu Fuß. Ob das im Spiel einen Unterschied macht – Funk, Geräuschdämpfung, Schutz –, ist nicht dokumentiert.
+
+Praktisch heißt das bis auf Weiteres: Wer vorn steht, nimmt einen Stufenhelm, dessen Schadensreduktion belegt ist. Wer einen Panzer fährt und ausprobieren will, hat hier etwas zum Ausprobieren.
+
+### Wofür ist die Panzerhaube in Wardogs gut?
+Vermutlich für Fahrzeugbesatzungen – belegt ist das nicht. Sie kostet rund {preis} und belegt den Helm-Platz; zur Wirkung nennen die uns bekannten Quellen nichts.

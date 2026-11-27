@@ -323,14 +323,6 @@
         "alt": "Vanguard CIWS aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
         "credit": "Spiel-Asset · © BULKHEAD / Team17"
     },
-    "wardogs-uh-1y-miniguns": {
-        "alt": "UH-1Y [Miniguns] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-        "credit": "Spiel-Asset · © BULKHEAD / Team17"
-    },
-    "wardogs-uh-1y": {
-        "alt": "UH-1Y aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
-        "credit": "Spiel-Asset · © BULKHEAD / Team17"
-    },
     "wardogs-2a42-autocannon": {
         "alt": "2A42 Autocannon aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
         "credit": "Spiel-Asset · © BULKHEAD / Team17"
@@ -734,5 +726,65 @@
     "wardogs-mg-nest": {
         "alt": "WARDOGS: MG-Nest aus Sandsäcken mit montiertem M2 Browning auf einer Holzplattform",
         "credit": "Offizielles Bildmaterial aus der Season-02-Ankündigung · © BULKHEAD / Team17"
+    },
+    "wardogs-munition-5-56x45": {
+        "alt": "Munitionsschachtel 5,56 × 45 mm aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-munition-5-45x39": {
+        "alt": "Munitionsschachtel 5,45 × 39 mm aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-munition-7-62x39": {
+        "alt": "Munitionsschachtel 7,62 × 39 mm aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-munition-7-62x54": {
+        "alt": "Munitionsschachtel 7,62 × 54 mm R aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-munition-308-winchester": {
+        "alt": "Munitionsschachtel .308 Winchester aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-munition-9x19": {
+        "alt": "Munitionsschachtel 9 × 19 mm aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-munition-45-acp": {
+        "alt": "Munitionsschachtel .45 ACP aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-munition-45-colt": {
+        "alt": "Munitionsschachtel .45 Colt aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-munition-50-ae": {
+        "alt": "Munitionsschachtel .50 AE aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-munition-50-bmg": {
+        "alt": "Munitionsschachtel .50 BMG aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-munition-12-gauge": {
+        "alt": "Schachtel Schrotpatronen im Kaliber 12 Gauge aus WARDOGS, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-helm-pilot": {
+        "alt": "Pilotenhelm aus WARDOGS mit dunklem Visier und Kehlkopfmikrofon, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-helm-panzer": {
+        "alt": "Panzerhaube aus WARDOGS mit Kopfhörern, freigestellt",
+        "credit": "Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber"
+    },
+    "wardogs-z20-lakota": {
+        "alt": "Z20 Lakota aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
+    },
+    "wardogs-z20-lakota-miniguns": {
+        "alt": "Z20 Lakota [Miniguns] aus WARDOGS – Symbol aus dem Spiel vor einer Spielszene",
+        "credit": "Spiel-Asset · © BULKHEAD / Team17"
     }
 }

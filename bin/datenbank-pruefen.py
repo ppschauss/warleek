@@ -268,7 +268,13 @@ def main():
                         einig.append("gebuehr")
                 abgleich.append((titel, i["slug"], punkte, einig, h))
 
-        fehlt = [p for p in PFLICHT.get(i.get("typ"), []) if not str(felder.get(p, "")).strip()]
+        # Startausrüstung ohne Preis ist kostenlos, keine Lücke. wardogshub.uk
+        # führt Bushmaster M17S, A-91 und KH-2002 mit $0 – das deckt sich mit
+        # unserem „Startwaffe, keine Gebühr" und ist damit vollständig.
+        pflicht = list(PFLICHT.get(i.get("typ"), []))
+        if i.get("start") and "preis" in pflicht:
+            pflicht.remove("preis")
+        fehlt = [p for p in pflicht if not str(felder.get(p, "")).strip()]
         if fehlt or not (i.get("text") or "").strip():
             luecken.append((titel, i["slug"], fehlt, bool((i.get("text") or "").strip())))
 
@@ -399,8 +405,11 @@ def main():
             if feld == "gebuehr":
                 ist  = "$" + format(ist, ",d").replace(",", ".")
                 soll = "$" + format(soll, ",d").replace(",", ".")
-                marke = BELEGTE_AENDERUNGEN.get(_slug, "")
-            marke = "belegt: " + marke if marke else ("**zwei gegen uns**" if feld in einig else "")
+            # Belegte Verschiebung schlägt den Zwei-Quellen-Verdacht: Wenn ein
+            # Patch den Wert bewegt hat, sind die älteren Quellen im Rückstand.
+            belegt_hier = BELEGTE_AENDERUNGEN.get(_slug, "")
+            marke = ("belegt: " + belegt_hier) if belegt_hier else (
+                "**zwei gegen uns**" if feld in einig else "")
             e(f"| {t} | {'Gebühr' if feld=='gebuehr' else 'Stufe'} | {ist} | {soll} | {dritt} | {marke} |")
 
     e(f"\n## 5. Preise aus den Season-03-Patch-Notes ({len(preis_s3)} Abweichungen)\n")

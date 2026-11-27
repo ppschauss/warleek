@@ -7,6 +7,24 @@ gegen die die Herkunftsangabe gebaut wurde.
 
 ## Zulässige Quellen
 
+3. **Bilddateien von wardogshub.uk**, der englischsprachigen Community-Datenbank.
+   Die Betreiber haben der Nutzung zugestimmt, solange wir die Seite nicht 1:1
+   nachbauen – zugesagt gegenüber Patrick Schauß beim Aufbau unserer Datenbank,
+   bestätigt am 27.11.2026. Übernommen werden einzelne freigestellte
+   Spielsymbole, nicht Aufbau oder Texte.
+
+   Die Credit-Zeile lautet: *Spielinterne Darstellung · © BULKHEAD / Team17 ·
+   Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber.* Das zugrunde
+   liegende Material gehört BULKHEAD/Team17; wardogshub hat es aufbereitet.
+
+   Deren eigene Regel (`/en/image-credits/`) lautet: „We do not use anyone
+   else's processed renders and we do not remove watermarks." Daran halten wir
+   uns umgekehrt genauso – ohne diese Zusage würden wir dort nichts nehmen.
+
+   Format bringt `python3 bin/item-bild-einpassen.py <datei.png> <slug>`:
+   freigestelltes Symbol mittig auf 1024×576 in der Flächenfarbe des Themes.
+
+
 1. **Eigene Aufnahmen aus dem Spiel.** Der sauberste Weg: Screenshot im Händler-
    oder Ausrüstungsmenü, zugeschnitten auf den Gegenstand. Wer das Spiel besitzt,
    darf davon Bildschirmfotos für redaktionelle Zwecke verwenden; wir nennen die

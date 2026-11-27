@@ -1,5 +1,5 @@
 titel: Wardogs Panzerung und Helme: welche Stufe lohnt sich wirklich?
-beschreibung: Vier Westen, vier Helme und die Flak-Jacke – warum Season 2 die hohen Stufen schlechter gemacht hat und wo die Rechnung kippt.
+beschreibung: Vier Westen, sechs Kopfbedeckungen und die Flak-Jacke – warum Season 2 die hohen Stufen schlechter gemacht hat und wo die Rechnung kippt.
 
 ## Die kurze Antwort
 
@@ -29,6 +29,12 @@ Dazu kommt die [Gewichtsklasse](/guides/wardogs-gewichtsklassen/): In der schwer
 Panzerung kostet pro Leben. Stufe 4 mit Helm sind {preis:wardogs-panzerung-4} plus {preis:wardogs-helm-4}, bevor eine Waffe im Spiel ist. Bei zehn Toden am Abend ist das eine fünfstellige Summe – Geld, das bei Waffen und Fahrzeugen fehlt.
 
 Die ehrliche Prüffrage: Wie oft stirbst du pro Stunde? Darunter liegt die Antwort, nicht in der Prozentzahl.
+
+## Zwei Sonderhelme ohne belegte Wirkung
+
+Neben den vier Stufen gibt es den [Pilotenhelm](/datenbank/wardogs-helm-pilot/) für {preis:wardogs-helm-pilot} und die [Panzerhaube](/datenbank/wardogs-helm-panzer/) für {preis:wardogs-helm-panzer}. Beide belegen denselben Platz wie ein Stufenhelm, beide sind teurer als [Stufe 4](/datenbank/wardogs-helm-4/) beziehungsweise ähnlich teuer – und zu beiden nennt keine uns bekannte Quelle eine Schadensreduktion oder Freischaltstufe.
+
+Wer vorn steht, nimmt deshalb weiter einen Stufenhelm: Dessen Wirkung ist beziffert.
 
 ## Wo wir nichts wissen
 

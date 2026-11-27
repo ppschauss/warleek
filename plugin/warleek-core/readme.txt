@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.43.0
+Stable tag: 2.44.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,14 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.44.0 =
+* **13 neue Bilder, 11 davon für die Munition.** Freigestellte Spielsymbole – Munitionsschachteln für alle elf Kaliber, dazu Pilotenhelm und Panzerhaube. Damit sinkt die Zahl der Einträge ohne Bild von 27 auf 16; für die restlichen 16 hat auch keine uns bekannte Quelle eines.
+* Die Bilddateien stammen von wardogshub.uk, deren Betreiber der Nutzung zugestimmt haben, solange wir die Seite nicht nachbauen. Credit-Zeile: „Spielinterne Darstellung · © BULKHEAD / Team17 · Bilddatei von wardogshub.uk, mit Erlaubnis der Betreiber." Neues Werkzeug `bin/item-bild-einpassen.py` bringt freigestellte Symbole ins Hausformat (1024×576 auf der Flächenfarbe des Themes).
+* Die Bilder der UH-1Y heißen jetzt nach dem Z20 Lakota – sonst hätten die beiden umbenannten Einträge dauerhaft nur das Gruppenbild bekommen.
+* **Alle elf Munitionskaliber haben jetzt einen Preis** (je Schachtel, $10 bis $250). Bei 12 Gauge trägt nicht das Kaliber den Preis, sondern die Sorten: Buckshot $60, Rifled Slug $200.
+* **Zwei Einträge, die uns gefehlt haben:** Pilotenhelm ($6.400) und Panzerhaube ($5.000). Beide belegen den Helm-Platz, beide ohne belegte Schutzwirkung – das steht so auch in ihren Texten.
+* **Preisabgleich gegen wardogshub.uk: 125 Einträge zugeordnet, null Abweichungen.** Die Preise dieser Datenbank sind damit unabhängig bestätigt. Offene Freischaltwerte: 10 statt 22; offene Pflichtfelder: 1 statt 5. Startausrüstung ohne Preis gilt nicht mehr als Lücke – sie ist kostenlos, und wardogshub führt sie mit $0.
 
 = 2.43.0 =
 * **Das Kategoriebild ist keine Rückfallebene mehr.** Die `item-typ-*`-Bilder sind Stimmungsbilder: `item-typ-munition` zeigt ein gurtgefüttertes Maschinengewehr und stand damit auf allen elf Kalibern, auch auf `.45 Colt` – einer Revolverpatrone. `item-typ-wurfwaffe` zeigt eine aufgerissene Gebäudefassade und stand auf der Blendgranate, die nichts aufreißt. Betroffen waren 27 Einträge.

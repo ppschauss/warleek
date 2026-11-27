@@ -80,6 +80,9 @@ ZUORDNUNG = {
                          "HESCO-Wand", "Hedgehog", "Sandsäcke", "Stacheldraht"],
     "bunker":           ["Bunker", "Bunkerboden", "Bunkerdach", "Large Shelter", "Tor",
                          "Tür", "Wooden Step"],
+    "panzerung":        ["Flak-Jacke", "Helm Stufe 1", "Helm Stufe 2", "Helm Stufe 3",
+                         "Helm Stufe 4", "Panzerhaube", "Panzerung Stufe 1", "Panzerung Stufe 2",
+                         "Panzerung Stufe 3", "Panzerung Stufe 4", "Pilotenhelm"],
 }
 
 # Nur zur Anzeige und für die späteren Vergleichsseiten.
