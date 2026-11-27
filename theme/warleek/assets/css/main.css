@@ -270,6 +270,10 @@ html.wl-js .site-nav .wp-block-navigation__responsive-container.is-menu-open .wp
 .wl-autorguides { padding-left: 1.2rem; }
 
 .wl-stand { font-family: var(--wp--preset--font-family--mono); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--wp--preset--color--steel); text-transform: uppercase; }
+/* Siegel am Stand-Hinweis: erscheint, sobald ein Wert des Eintrags korrigiert
+   wurde. Quelle ist der Aenderungsverlauf, nicht post_modified - ein
+   Tippfehler im Text soll den Eintrag nicht als aktualisiert ausweisen. */
+.wl-stand__neu { display: inline-block; margin-left: 0.5em; padding: 0.1em 0.5em; border-radius: var(--wl-radius); background: var(--wp--preset--color--sand); color: var(--wp--preset--color--base); letter-spacing: 0.06em; }
 .wp-block-table { overflow-x: auto; }
 .wl-page-title { margin-top: var(--wp--preset--spacing--60); }
 .wl-article { padding-top: var(--wp--preset--spacing--50); }

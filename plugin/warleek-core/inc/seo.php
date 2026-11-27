@@ -192,7 +192,11 @@ function warleek_seo_kuerzen( $text, $max = 158 ) {
  */
 function warleek_seo_aeo_ausgeben( $post ) {
 	if ( ! function_exists( 'warleek_aeo_extract' ) ) { return array( 'frage' => '', 'antwort' => '', 'faq' => array() ); }
-	$aeo = warleek_aeo_extract( (string) get_post_field( 'post_content', $post, 'raw' ) );
+	/* Platzhalter zuerst auflösen: Aus diesem Text entstehen Meta-Description
+	   und FAQPage. Ein `{preis}` in der Suchergebnis-Beschreibung wäre eine
+	   Blamage, und das JSON-LD wäre schlicht falsch. */
+	$roh = warleek_werte_einsetzen( (string) get_post_field( 'post_content', $post, 'raw' ), is_object( $post ) ? (int) $post->ID : (int) $post );
+	$aeo = warleek_aeo_extract( $roh );
 	$faq = warleek_aeo_faq_ld( $aeo, get_permalink( $post ) );
 	if ( $faq ) {
 		echo '<script type="application/ld+json">' . wp_json_encode( $faq, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";

@@ -49,7 +49,7 @@ if ( ! $warleek_legacy && ! defined( 'WARLEEK_VERSION' ) ) { define( 'WARLEEK_VE
 
 $warleek_modules = $warleek_legacy
 	? array( 'layout', 'markdown', 'import-guides', 'updater', 'installer' )                                                                          // Funktionen kommen aus dem alten Theme
-	: array( 'options', 'bbcode', 'cpt-guide', 'cpt-patchnote', 'cpt-partner', 'cpt-autor', 'steam-sync', 'translate', 'builders', 'blocks', 'aeo', 'reddit', 'seo', 'privacy', 'consent', 'ads', 'appearance', 'cpt-item', 'autolink', 'herkunft', 'llms', 'layout', 'markdown', 'import-guides', 'updater', 'installer', 'cli' );
+	: array( 'options', 'bbcode', 'cpt-guide', 'cpt-patchnote', 'cpt-partner', 'cpt-autor', 'steam-sync', 'translate', 'builders', 'blocks', 'aeo', 'reddit', 'seo', 'privacy', 'consent', 'ads', 'appearance', 'cpt-item', 'item-werte', 'autolink', 'herkunft', 'llms', 'layout', 'markdown', 'import-guides', 'updater', 'installer', 'cli' );
 
 foreach ( $warleek_modules as $warleek_module ) {
 	$warleek_path = WARLEEK_CORE_DIR . 'inc/' . $warleek_module . '.php';

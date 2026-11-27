@@ -15,7 +15,14 @@ Aufbau einer Datei:
     ### Lohnt sich der Aufpreis zum Field-Rucksack?
     Antwort in einem Absatz.
 
-`##` ist der Slug eines Eintrags, `###` eine eigene Frage. Der Text landet im
+`##` ist der Slug eines Eintrags, `###` eine eigene Frage.
+
+**Zahlen gehören nicht in den Text.** Preise, Stufen und Gebühren stehen als
+Platzhalter da und werden beim Ausliefern aus der Datenbank gelesen:
+`{preis}` für den eigenen Eintrag, `{preis:wardogs-field-backpack}` für einen
+anderen, `{aufpreis:wardogs-field-backpack}` für die Differenz. Dieses Werkzeug
+prüft jeden Platzhalter gegen items.json und bricht ab, wenn einer ins Leere
+zeigt – ein `–` mitten im Satz fällt sonst erst auf der Seite auf. Der Text landet im
 Feld `text`, die Fragen in `fragen` – von dort hängt sie der Installer hinten
 an die drei Fragen, die ohnehin aus den Feldern entstehen.
 
@@ -58,6 +65,34 @@ def lies(datei):
     return {s: d for s, d in raus.items() if d["text"] or d["fragen"]}
 
 
+FELDER = ("preis", "freischaltung", "freischaltkosten", "kaliber", "sitze",
+          "tempo", "baukosten", "rolle", "hinweis", "titel", "aufpreis")
+PLATZHALTER = re.compile(r"\{(" + "|".join(FELDER) + r")(?::([a-z0-9][a-z0-9-]*))?\}")
+
+
+def platzhalter_pruefen(slug, text, items):
+    """Zeigt jeder Platzhalter auf einen Wert, den es gibt?"""
+    fehler = []
+    eigen  = items.get(slug, {})
+    for feld, ziel in PLATZHALTER.findall(text):
+        if ziel and ziel not in items:
+            fehler.append(f"{{{feld}:{ziel}}} – diesen Eintrag gibt es nicht")
+            continue
+        quelle = items.get(ziel) if ziel else eigen
+        if feld == "titel":
+            continue
+        if feld == "aufpreis":
+            if not ziel:
+                fehler.append("{aufpreis} braucht einen Slug")
+            elif not (eigen.get("felder") or {}).get("preis") or not (quelle.get("felder") or {}).get("preis"):
+                fehler.append(f"{{aufpreis:{ziel}}} – einer der beiden Einträge hat keinen Preis")
+            continue
+        if not str((quelle.get("felder") or {}).get(feld, "")).strip():
+            wo = ziel or slug
+            fehler.append(f"{{{feld}{':' + ziel if ziel else ''}}} – {wo} hat kein Feld „{feld}“")
+    return fehler
+
+
 def woerter(t):
     t = re.sub(r"\s+", " ", t).strip()
     return len(t.split()) if t else 0
@@ -75,13 +110,16 @@ def main():
 
     items     = json.loads(ITEMS.read_text(encoding="utf-8"))
     nach_slug = {i["slug"]: i for i in items}
-    unbekannt, geschrieben = [], []
+    unbekannt, geschrieben, kaputt = [], [], []
 
     for datei in dateien:
         for slug, d in lies(datei).items():
             if slug not in nach_slug:
                 unbekannt.append((datei.name, slug))
                 continue
+            alles = "\n".join([d["text"]] + [f["antwort"] for f in d["fragen"]])
+            for fehler in platzhalter_pruefen(slug, alles, nach_slug):
+                kaputt.append((slug, fehler))
             i = nach_slug[slug]
             if d["text"]:
                 i["text"] = d["text"]
@@ -96,6 +134,12 @@ def main():
         print("FEHLER: Slug gibt es nicht in items.json:", file=sys.stderr)
         for datei, slug in unbekannt:
             print(f"  {datei}: {slug}", file=sys.stderr)
+        return 1
+
+    if kaputt:
+        print("FEHLER: Platzhalter zeigt ins Leere:", file=sys.stderr)
+        for slug, fehler in kaputt:
+            print(f"  {slug}: {fehler}", file=sys.stderr)
         return 1
 
     print(f"{len(geschrieben)} Einträge aus {len(dateien)} Datei(en)\n")

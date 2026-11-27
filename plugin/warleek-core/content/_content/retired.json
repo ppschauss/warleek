@@ -28,5 +28,98 @@
   "parent": null,
   "redirect": "/community/",
   "note": "Eigene Discord-Seite entfällt; Discord-Aufruf steht auf der Partner-Seite."
+ },
+ {
+  "slug": "wardogs-uh-1y",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-z20-lakota/",
+  "note": "Das Spiel hat die UH-1Y in Z20 Lakota umbenannt; der Eintrag wanderte mit."
+ },
+ {
+  "slug": "wardogs-uh-1y-miniguns",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-z20-lakota-miniguns/",
+  "note": "Wie oben, bewaffnete Fassung."
+ },
+ {
+  "slug": "wardogs-evo-3-ultra-2",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-evo-3-ultra/",
+  "note": "Zweitfassung desselben Eintrags – entstanden, weil die Adresse schon belegt war."
+ },
+ {
+  "slug": "wardogs-large-shelter-2",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-large-shelter/",
+  "note": "Zweitfassung desselben Eintrags – entstanden, weil die Adresse schon belegt war."
+ },
+ {
+  "slug": "wardogs-m14-2",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-m14/",
+  "note": "Zweitfassung desselben Eintrags – entstanden, weil die Adresse schon belegt war."
+ },
+ {
+  "slug": "wardogs-pp-19-bizon-2",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-pp-19-bizon/",
+  "note": "Zweitfassung desselben Eintrags – entstanden, weil die Adresse schon belegt war."
+ },
+ {
+  "slug": "wardogs-t-72-2",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-t-72/",
+  "note": "Zweitfassung desselben Eintrags – entstanden, weil die Adresse schon belegt war."
+ },
+ {
+  "slug": "wardogs-tcx-spear-2",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-tcx-spear/",
+  "note": "Zweitfassung desselben Eintrags – entstanden, weil die Adresse schon belegt war."
+ },
+ {
+  "slug": "wardogs-wolf-110-2",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-wolf-110/",
+  "note": "Zweitfassung desselben Eintrags – entstanden, weil die Adresse schon belegt war."
+ },
+ {
+  "slug": "wardogs-wolf-110-assault-2",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-wolf-110-assault/",
+  "note": "Zweitfassung desselben Eintrags – entstanden, weil die Adresse schon belegt war."
+ },
+ {
+  "slug": "wardogs-wooden-step-2",
+  "typ": "item",
+  "parent": null,
+  "redirect": "/datenbank/wardogs-wooden-step/",
+  "note": "Zweitfassung desselben Eintrags – entstanden, weil die Adresse schon belegt war."
+ },
+ {
+  "slug": "wardogs-z20-lakota",
+  "typ": "item",
+  "parent": null,
+  "loeschen": true,
+  "redirect": "/datenbank/wardogs-z20-lakota/",
+  "note": "Im Backend angelegter Z20 Lakota ohne Seed-Marke – wird gelöscht und aus items.json neu angelegt."
+ },
+ {
+  "slug": "wardogs-z20-lakota-miniguns",
+  "typ": "item",
+  "parent": null,
+  "loeschen": true,
+  "redirect": "/datenbank/wardogs-z20-lakota-miniguns/",
+  "note": "Im Backend angelegter Z20 Lakota [Miniguns] ohne Seed-Marke – wird gelöscht und aus items.json neu angelegt."
  }
 ]

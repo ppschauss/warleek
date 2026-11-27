@@ -324,7 +324,7 @@ function warleek_reddit_text( $post ) {
 
 	$ist_item = 'item' === $post->post_type;
 	$aeo      = function_exists( 'warleek_aeo_extract' )
-		? warleek_aeo_extract( (string) get_post_field( 'post_content', $post, 'raw' ) )
+		? warleek_aeo_extract( warleek_werte_einsetzen( (string) get_post_field( 'post_content', $post, 'raw' ), $post->ID ) )
 		: array( 'frage' => '', 'antwort' => '', 'faq' => array() );
 
 	$werte = $ist_item ? warleek_reddit_item_werte( $post->ID ) : array();

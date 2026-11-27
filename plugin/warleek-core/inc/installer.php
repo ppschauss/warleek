@@ -612,8 +612,17 @@ function warleek_item_sofort( array $e ) {
 function warleek_item_aeo( array $e ) {
 	$name = (string) $e['title'];
 	$f    = (array) ( $e['felder'] ?? array() );
+	/*
+	 * Gibt einen **Platzhalter** zurück, keinen Wert – aber nur, wenn das Feld
+	 * belegt ist. Damit greifen alle Fallunterscheidungen weiter unten
+	 * unverändert („gibt es einen Preis?“), und im gespeicherten Beitrag steht
+	 * trotzdem `{preis}` statt `$1.200`. Aufgelöst wird beim Ausliefern, siehe
+	 * `inc/item-werte.php`. Vorher stand der Preis hier ausgeschrieben und lief
+	 * nach jedem Patch dem Datenblatt zwei Absätze weiter unten hinterher.
+	 */
 	$w    = function ( $key ) use ( $f ) {
-		return isset( $f[ $key ] ) ? warleek_item_wert( $key, $f[ $key ] ) : '';
+		$roh = isset( $f[ $key ] ) ? trim( (string) $f[ $key ] ) : '';
+		return '' === $roh ? '' : '{' . $key . '}';
 	};
 
 	$rolle   = $w( 'rolle' );
@@ -743,7 +752,7 @@ function warleek_item_inhalt( array $e ) {
 	$aeo = warleek_item_aeo( $e );
 
 	return "\n" . $aeo['block'] . "\n" . $satz . "\n"
-		. '<p class="wl-stand">Stand: ' . warleek_item_stand( $e ) . ' · Early Access – Werte ändern sich mit Patches.</p>' . "\n"
+		. '[warleek_item_stand]' . "\n"
 		. '[warleek_datenblatt]' . "\n"
 		. ( $aeo['faq'] ? $aeo['faq'] . "\n" : '' )
 		. ( $links ? '<h2>Dazu passend</h2><ul>' . $links . '</ul>' . "\n" : '' )
@@ -835,6 +844,22 @@ function warleek_item_verlauf_merken( $id, array $alt, array $neu ) {
 	// Nur die jüngsten Einträge behalten – eine Seite ist kein Archiv.
 	if ( count( $verlauf ) > 20 ) { $verlauf = array_slice( $verlauf, -20 ); }
 	update_post_meta( $id, '_warleek_verlauf', $verlauf );
+
+	/*
+	 * Geänderte Werte sind eine Änderung am Beitrag – auch wenn kein Zeichen im
+	 * Text anders ist, weil dort nur Platzhalter stehen. Werte liegen als
+	 * Meta-Felder, und `update_post_meta()` rührt `post_modified` nicht an.
+	 * Ohne diesen Stups zeigten `dateModified`, `article:modified_time` und der
+	 * Herkunftsnachweis weiter auf den Tag, an dem der Text entstand – und ein
+	 * Preis von gestern sähe für Google ein Jahr alt aus.
+	 */
+	$jetzt = current_time( 'mysql' );
+	wp_update_post( array(
+		'ID'                => $id,
+		'post_modified'     => $jetzt,
+		'post_modified_gmt' => get_gmt_from_date( $jetzt ),
+	) );
+
 	warleek_log( sprintf( '%d Wertänderung(en) protokolliert: %s', count( $aenderungen ), get_post_field( 'post_name', $id ) ) );
 	return count( $aenderungen );
 }
@@ -1233,14 +1258,43 @@ function warleek_step_retire( $force = false ) {
 		$slug   = sanitize_title( $r['slug'] ?? '' );
 		if ( ! $slug ) { continue; }
 		$target = $r['redirect'] ?? '/';
+		/*
+		 * Zurückziehen gilt nicht nur für Seiten. Als das Spiel die UH-1Y in
+		 * Z20 Lakota umbenannte, entstand ein zweiter Datenbank-Eintrag statt
+		 * einer Umbenennung – derselbe Helikopter stand zweimal drin. Der alte
+		 * gehört in den Papierkorb und seine Adresse auf den neuen Eintrag.
+		 */
+		$typ    = sanitize_key( $r['typ'] ?? 'page' );
 		$parent = 0;
 		if ( ! empty( $r['parent'] ) ) {
 			$pp = get_posts( array( 'post_type' => 'page', 'name' => sanitize_title( $r['parent'] ), 'post_status' => 'any', 'posts_per_page' => 1 ) );
 			if ( $pp ) { $parent = (int) $pp[0]->ID; }
 		}
-		$found = get_posts( array( 'post_type' => 'page', 'name' => $slug, 'post_parent' => $parent, 'post_status' => 'any', 'posts_per_page' => 1 ) );
+		$suche = array( 'post_type' => $typ, 'name' => $slug, 'post_status' => 'any', 'posts_per_page' => 1 );
+		if ( 'page' === $typ ) { $suche['post_parent'] = $parent; }
+		$found = get_posts( $suche );
 		if ( $found ) {
 			$post = $found[0];
+
+			/*
+			 * `"loeschen": true` – endgültig statt Papierkorb, **ohne** Umleitung.
+			 *
+			 * Gedacht für den Fall, dass dieselbe Adresse gleich wieder gebraucht
+			 * wird: Ein Eintrag, der im Backend von Hand angelegt wurde, trägt
+			 * keine Seed-Marke und gilt dem Installer deshalb als bearbeitet –
+			 * er würde ihn nie überschreiben. Im Papierkorb blockiert er die
+			 * Adresse weiter, und der neue Beitrag bekäme eine `-2`. Genau so
+			 * sind die neun Dubletten in der Datenbank entstanden. Die
+			 * Umleitung bleibt hier aus: Der Schritt `items` legt die Adresse
+			 * gleich danach neu an, eine Umleitung zeigte auf sich selbst.
+			 */
+			if ( ! empty( $r['loeschen'] ) ) {
+				wp_delete_post( $post->ID, true );
+				$trashed++;
+				warleek_log( 'endgültig gelöscht: ' . $slug );
+				continue;
+			}
+
 			$map[ trailingslashit( wp_make_link_relative( get_permalink( $post ) ) ) ] = $target;
 			if ( 'trash' !== $post->post_status ) { wp_trash_post( $post->ID ); $trashed++; warleek_log( 'zurückgezogen: ' . $slug ); }
 		}

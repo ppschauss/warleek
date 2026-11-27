@@ -44,7 +44,7 @@ Das ist der Teil, den man tatsächlich prüfen kann. Ein Leak nennt immer zwei Z
 | Gegenstand | Unser Eintrag (Stand Season 3) | Leak sagt „von“ | stimmt? |
 |---|---|---|---|
 | [Großer Hammer](/datenbank/wardogs-grosser-hammer/) | Support 14 | 14 | ja |
-| [Minigun-Lakota](/datenbank/wardogs-uh-1y-miniguns/) | Pilot 25 | 25 | ja |
+| [Minigun-Lakota](/datenbank/wardogs-z20-lakota-miniguns/) | Pilot 25 | 25 | ja |
 | [Minigun-Littlebird](/datenbank/wardogs-ah-6m-miniguns/) | Pilot 8 | 8 | ja |
 
 Drei von drei. Und beim Hammer ist es besonders deutlich: Der stand bis Season 3 auf **Support 8** und wurde erst mit den Patch Notes vom 11. November auf **14** verschoben. Wer „14 → 10“ schreibt, kennt also den Stand von vor fünf Tagen, nicht den aus einem alten Wiki.
@@ -99,7 +99,7 @@ Der eigentliche Effekt liegt aber woanders: Die Flugabwehr bleibt, wo sie ist. W
 
 Die Lakota ist ein Transporter mit 13 Plätzen, 445 km/h und zwei Miniguns an den Türen. Der Pilot schießt nicht selbst — die Waffen bedienen Mitspieler. Genau deshalb passt die Begründung „frühes Teamplay“ inhaltlich: Eine Lakota, die früh verfügbar ist, belohnt eine Gruppe, keinen Einzelnen.
 
-Nur hängt an dieser Freischaltung eben auch die Gebühr von $85.000. Ohne eine Senkung ist der Tausch auf dem Papier größer als im Spiel. Wer das prüfen will, sobald Season 4 da ist: Die Gebühr steht im Eintrag zur [Minigun-Lakota](/datenbank/wardogs-uh-1y-miniguns/), und wir führen jede Änderung dort mit altem und neuem Wert.
+Nur hängt an dieser Freischaltung eben auch die Gebühr von $85.000. Ohne eine Senkung ist der Tausch auf dem Papier größer als im Spiel. Wer das prüfen will, sobald Season 4 da ist: Die Gebühr steht im Eintrag zur [Minigun-Lakota](/datenbank/wardogs-z20-lakota-miniguns/), und wir führen jede Änderung dort mit altem und neuem Wert.
 
 ### Das Magazin für die Minigun
 
