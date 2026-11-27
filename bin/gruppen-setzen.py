@@ -1,7 +1,22 @@
 #!/usr/bin/env python3
-"""Jedem Datenbank-Eintrag eine Gruppe geben.
+"""Jedem Datenbank-Eintrag eine Gruppe geben und die Vergleichsseiten bauen.
 
     python3 bin/gruppen-setzen.py [--trocken]
+
+Schreibt zwei Dateien: die Gruppe an jedem Eintrag in `items.json` und – aus
+`content-src/items/gruppen/<slug>.md` – die Vergleichsseiten nach
+`content/_content/gruppen.json`. Aus jeder Gruppe wird ein Begriff der
+Taxonomie `item-gruppe` mit eigener Seite unter `/datenbank-gruppe/<slug>/`.
+
+Aufbau einer Gruppendatei:
+
+    titel: Wardogs Rucksäcke im Vergleich
+    beschreibung: Neun Rucksäcke von … – welcher sich wofür lohnt.
+
+    Fließtext in Markdown.
+
+`titel` wird die Überschrift der Seite, `beschreibung` die Kurzfassung für
+Suchergebnisse, der Rest der geschriebene Teil unter der Tabelle.
 
 Die Gruppe ist die Achse, auf der später die Vergleichsseiten stehen: „Wardogs
 Pistolen im Vergleich“ ist eine Seite, die fünf dünne Einzelseiten ersetzt.
@@ -20,11 +35,14 @@ Umgezogen gegenüber dem alten Stand:
   `sprengstoff` behält, was gelegt und gezündet wird.
 * Rauch- und Signalgranaten werden eine Gruppe – es ist dieselbe M18.
 """
-import json, sys
+import json, re, sys
 from pathlib import Path
 from collections import Counter
 
-DATEI = Path(__file__).resolve().parent.parent / "plugin/warleek-core/content/_content/items.json"
+WURZEL   = Path(__file__).resolve().parent.parent
+DATEI    = WURZEL / "plugin/warleek-core/content/_content/items.json"
+GRUPPEN  = WURZEL / "plugin/warleek-core/content/_content/gruppen.json"
+TEXTE    = WURZEL / "content-src/items/gruppen"
 
 # Gruppe -> Titel. Was hier nicht steht, behält seine bisherige Gruppe.
 ZUORDNUNG = {
@@ -82,6 +100,79 @@ NAMEN = {
 }
 
 
+def gruppentexte(zaehler):
+    """Die Vergleichsseiten aus content-src/items/gruppen/ einlesen."""
+    raus, fehlend = [], []
+    for gruppe in sorted(zaehler):
+        datei = TEXTE / f"{gruppe}.md"
+        if not datei.exists():
+            fehlend.append(gruppe)
+            continue
+        roh = datei.read_text(encoding="utf-8")
+        kopf, _, rumpf = roh.partition("\n\n")
+        felder = {}
+        for zeile in kopf.splitlines():
+            if ":" in zeile:
+                k, _, v = zeile.partition(":")
+                felder[k.strip()] = v.strip()
+        raus.append({
+            "slug":         gruppe,
+            "name":         NAMEN.get(gruppe, gruppe),
+            "titel":        felder.get("titel", f"Wardogs {NAMEN.get(gruppe, gruppe)}"),
+            "beschreibung": felder.get("beschreibung", ""),
+            "text":         rumpf.strip(),
+        })
+    return raus, fehlend
+
+
+FELDER = ("preis", "freischaltung", "freischaltkosten", "kaliber", "sitze",
+          "tempo", "baukosten", "rolle", "hinweis", "titel", "aufpreis")
+PLATZHALTER = re.compile(r"\{(" + "|".join(FELDER) + r")(?::([a-z0-9][a-z0-9-]*))?\}")
+VERDAECHTIG = re.compile(r"\{[^{}\n]{1,60}\}")
+DB_LINK     = re.compile(r"\]\(/datenbank/([a-z0-9-]+)/\)")
+GRUPPE_LINK = re.compile(r"\]\(/datenbank-gruppe/([a-z0-9-]+)/\)")
+GUIDE_LINK  = re.compile(r"\]\(/guides/([a-z0-9-]+)/\)")
+
+
+def seiten_pruefen(seiten, items, gruppen, guides):
+    """Platzhalter und Querverweise der Vergleichsseiten prüfen.
+
+    Ein Platzhalter ohne Slug hätte hier keinen Bezug – eine Vergleichsseite
+    gehört zu keinem einzelnen Eintrag. Deshalb ist er auf diesen Seiten immer
+    ein Fehler, anders als im Text eines Eintrags.
+    """
+    fehler = []
+    for s in seiten:
+        text = s["titel"] + "\n" + s["beschreibung"] + "\n" + s["text"]
+        for treffer in VERDAECHTIG.findall(text):
+            if not PLATZHALTER.fullmatch(treffer):
+                fehler.append((s["slug"], f"{treffer} – kein gültiger Platzhalter"))
+        for feld, ziel in PLATZHALTER.findall(text):
+            if not ziel:
+                fehler.append((s["slug"], f"{{{feld}}} ohne Slug – hier gibt es keinen eigenen Eintrag"))
+            elif ziel not in items:
+                fehler.append((s["slug"], f"{{{feld}:{ziel}}} – diesen Eintrag gibt es nicht"))
+            elif feld not in ("titel", "aufpreis") and not str((items[ziel].get("felder") or {}).get(feld, "")).strip():
+                fehler.append((s["slug"], f"{{{feld}:{ziel}}} – {ziel} hat kein Feld „{feld}“"))
+        for ziel in DB_LINK.findall(text):
+            if ziel not in items:
+                fehler.append((s["slug"], f"/datenbank/{ziel}/ – diesen Eintrag gibt es nicht"))
+        for ziel in GRUPPE_LINK.findall(text):
+            if ziel not in gruppen:
+                fehler.append((s["slug"], f"/datenbank-gruppe/{ziel}/ – diese Gruppe gibt es nicht"))
+        for ziel in GUIDE_LINK.findall(text):
+            if guides and ziel not in guides:
+                fehler.append((s["slug"], f"/guides/{ziel}/ – diesen Guide gibt es nicht"))
+    return fehler
+
+
+def guide_slugs():
+    datei = WURZEL / "plugin/warleek-core/content/_content/guides.json"
+    if not datei.exists():
+        return set()
+    return {g.get("slug") for g in json.loads(datei.read_text(encoding="utf-8"))}
+
+
 def main():
     trocken = "--trocken" in sys.argv
     roh   = DATEI.read_text(encoding="utf-8")
@@ -124,10 +215,28 @@ def main():
     for g, n in sorted(zaehler.items()):
         print(f"  {n:3}  {g:18} {NAMEN.get(g, '(ohne Namen)')}")
 
+    seiten, fehlend = gruppentexte(zaehler)
+    print(f"\n{len(seiten)} Vergleichsseiten mit Text"
+          + (f", {len(fehlend)} ohne: {', '.join(fehlend)}" if fehlend else ""))
+    for s in seiten:
+        w = len(re.sub(r"\s+", " ", s["text"]).split())
+        print(f"  {s['slug']:18} {w:4} Wörter  {s['titel']}")
+
+    kaputt = seiten_pruefen(seiten, {i["slug"]: i for i in items},
+                            set(zaehler), guide_slugs())
+    if kaputt:
+        print("\nFEHLER: Platzhalter oder Link zeigt ins Leere:", file=sys.stderr)
+        for slug, f in kaputt:
+            print(f"  {slug}: {f}", file=sys.stderr)
+        return 1
+
     if not trocken and not ohne:
         DATEI.write_text(json.dumps(items, ensure_ascii=False, indent=4) + "\n",
                          encoding="utf-8")
+        GRUPPEN.write_text(json.dumps(seiten, ensure_ascii=False, indent=1) + "\n",
+                           encoding="utf-8")
         print("\ngeschrieben:", DATEI)
+        print("geschrieben:", GRUPPEN)
     return 0
 
 

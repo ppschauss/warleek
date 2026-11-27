@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.40.0
+Stable tag: 2.41.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,14 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.41.0 =
+* **33 Vergleichsseiten, eine je Gruppe.** Neue Taxonomie `item-gruppe` mit eigener Seite unter `/datenbank-gruppe/<slug>/`: oben die Tabelle aller Einträge der Gruppe, darunter 223 bis 330 Wörter geschriebener Vergleich mit Empfehlung. „Wardogs Pistolen im Vergleich“ ist damit eine Seite statt fünf dünner.
+* Jede Seite beginnt mit einer kurzen Antwort und sagt, **wofür man mehr bezahlt**: bei Scharfschützengewehren für Reichweite und Fehlertoleranz, nicht für Wirkung; bei Rucksäcken für Platz, den man mit Gewicht bezahlt; bei Pistolen für Wucht, die in der einen Sekunde, um die es geht, weniger zählt als die Zahl der Versuche.
+* Unter jedem Datenbank-Eintrag steht jetzt „Alle X im Vergleich“ (`[warleek_item_gruppe]`), auf `/datenbank/` eine Kachelleiste aller Gruppen.
+* Die Gruppentexte liegen als `content-src/items/gruppen/<slug>.md` und werden von `bin/gruppen-setzen.py` nach `content/_content/gruppen.json` gebaut – mit Prüfung jedes Platzhalters und jedes Querverweises.
+* Der lange Text steht in der Term-Meta, nicht in der Term-Beschreibung: Die filtert WordPress je nach Benutzerrecht durch `wp_filter_kses` und macht aus einer Tabelle einen Absatz. Die Beschreibung trägt die Kurzfassung für Suchergebnisse.
+* Theme auf 2.40.0 – neues Template `taxonomy-item-gruppe.html` und Stile für Kachelleiste und Hinweis.
 
 = 2.40.0 =
 * **Alle 198 Datenbank-Einträge haben einen geschriebenen Text und eigene Fragen.** Vorher waren es im Median 44 Wörter aus der Vorlage, jetzt 108 bis 238 Wörter je Eintrag plus mindestens eine eigene Frage hinter den drei, die aus den Feldern entstehen. Auf der Seite stehen damit rund 250 bis 400 Wörter statt 178.

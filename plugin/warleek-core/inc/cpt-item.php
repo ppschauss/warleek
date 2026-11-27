@@ -57,6 +57,24 @@ function warleek_register_item() {
 		'rewrite'           => array( 'slug' => 'datenbank-kategorie', 'with_front' => false ),
 	) );
 
+	/*
+	 * Zweite Achse neben der Kategorie: die **Gruppe**.
+	 *
+	 * `item-typ` beantwortet „was ist das" (Waffe, Fahrzeug, Bauwerk) und taugt
+	 * zum Blättern. Verglichen wird aber feiner: Wer eine Pistole kauft, hält
+	 * sie nicht gegen eine AMR 50, sondern gegen vier andere Pistolen. Genau
+	 * dafür sind die 33 Gruppen geschnitten – und aus jeder wird eine
+	 * Vergleichsseite, die ihre Mitglieder nebeneinanderstellt.
+	 */
+	register_taxonomy( 'item-gruppe', 'item', array(
+		'labels'            => array( 'name' => 'Gruppen', 'singular_name' => 'Gruppe' ),
+		'public'            => true,
+		'hierarchical'      => false,
+		'show_in_rest'      => true,
+		'show_admin_column' => true,
+		'rewrite'           => array( 'slug' => 'datenbank-gruppe', 'with_front' => false ),
+	) );
+
 	foreach ( array_keys( warleek_item_felder() ) as $key ) {
 		register_post_meta( 'item', 'item_' . $key, array(
 			'type' => 'string', 'single' => true, 'show_in_rest' => true,
@@ -513,8 +531,13 @@ function warleek_render_item_tabelle( $attrs = array() ) {
 	if ( is_tax( 'item-typ' ) ) { $t = get_queried_object(); $typ = $t->slug ?? ''; }
 	if ( ! empty( $attrs['typ'] ) ) { $typ = sanitize_title( $attrs['typ'] ); }
 
+	$gruppe = '';
+	if ( is_tax( 'item-gruppe' ) ) { $g = get_queried_object(); $gruppe = $g->slug ?? ''; }
+	if ( ! empty( $attrs['gruppe'] ) ) { $gruppe = sanitize_title( $attrs['gruppe'] ); }
+
 	$args = array( 'post_type' => 'item', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC', 'post_status' => 'publish' );
 	if ( $typ ) { $args['tax_query'] = array( array( 'taxonomy' => 'item-typ', 'field' => 'slug', 'terms' => $typ ) ); }
+	if ( $gruppe ) { $args['tax_query'] = array( array( 'taxonomy' => 'item-gruppe', 'field' => 'slug', 'terms' => $gruppe ) ); }
 	$q = new WP_Query( $args );
 	if ( ! $q->posts ) {
 		return '<p class="wl-empty">Hier ist noch nichts veröffentlicht. Die Datenbank wächst täglich – schau morgen wieder vorbei.</p>';
@@ -624,11 +647,94 @@ function warleek_render_item_liste( $attrs = array() ) {
 	return $out . '</ul>';
 }
 
+/* ------------------------------------------------- Gruppen (Vergleichsseiten) */
+/**
+ * Der geschriebene Teil einer Vergleichsseite.
+ *
+ * Steht als Markdown in der Term-Meta `_warleek_gruppe_text`, nicht in der
+ * Term-Beschreibung: Die filtert WordPress je nach Benutzerrecht durch
+ * `wp_filter_kses` und macht aus einer Tabelle einen Absatz. Die Beschreibung
+ * trägt stattdessen die kurze Fassung für Suchergebnisse.
+ */
+function warleek_render_gruppe_text() {
+	if ( ! is_tax( 'item-gruppe' ) ) { return ''; }
+	$term = get_queried_object();
+	$md   = (string) get_term_meta( $term->term_id ?? 0, '_warleek_gruppe_text', true );
+	if ( '' === $md || ! function_exists( 'warleek_md_to_html' ) ) { return ''; }
+	return '<div class="wl-prose wl-gruppe-text">' . warleek_md_to_html( $md, false ) . '</div>';
+}
+
+/**
+ * Überschrift einer Vergleichsseite.
+ *
+ * „Rucksäcke" als H1 wäre für eine Seite, die neun Rucksäcke vergleicht, zu
+ * wenig. Der Titel steht deshalb als eigene Term-Meta und lautet etwa
+ * „Wardogs Rucksäcke im Vergleich" – so, wie danach gesucht wird.
+ */
+function warleek_render_gruppe_titel() {
+	if ( ! is_tax( 'item-gruppe' ) ) { return ''; }
+	$term  = get_queried_object();
+	$titel = (string) get_term_meta( $term->term_id ?? 0, '_warleek_gruppe_titel', true );
+	if ( '' === $titel ) { $titel = 'Wardogs ' . ( $term->name ?? '' ); }
+	return '<h1 class="wp-block-heading">' . esc_html( $titel ) . '</h1>';
+}
+
+/**
+ * Alle Gruppen als Kacheln – für die Datenbank-Übersicht.
+ *
+ * Nach Kategorie sortiert, damit Waffen bei Waffen stehen. Die Zahl dahinter
+ * ist die Zahl der Einträge: Sie sagt dem Leser, ob sich der Klick lohnt.
+ */
+function warleek_render_gruppen_liste() {
+	$terms = get_terms( array( 'taxonomy' => 'item-gruppe', 'hide_empty' => true, 'orderby' => 'name' ) );
+	if ( is_wp_error( $terms ) || ! $terms ) { return ''; }
+	$out = '<nav class="wl-chips wl-gruppen" aria-label="Vergleichsseiten der Datenbank">';
+	foreach ( $terms as $t ) {
+		$out .= '<a class="wl-chip" href="' . esc_url( get_term_link( $t ) ) . '" title="'
+			. esc_attr( 'Wardogs ' . $t->name . ' im Vergleich' ) . '">'
+			. esc_html( $t->name ) . ' <span>' . (int) $t->count . '</span></a>';
+	}
+	return $out . '</nav>';
+}
+
+/**
+ * Hinweis auf die Vergleichsseite, unter einem Eintrag.
+ *
+ * Als Shortcode und nicht als ausgeschriebener Satz im gespeicherten Inhalt:
+ * Ein Eintrag kann die Gruppe wechseln, und dann soll der Link mitwandern.
+ */
+function warleek_render_item_gruppe_link( $id = 0 ) {
+	$id = $id ?: (int) get_the_ID();
+	$terms = get_the_terms( $id, 'item-gruppe' );
+	if ( ! $terms || is_wp_error( $terms ) ) { return ''; }
+	$t = $terms[0];
+	if ( (int) $t->count < 2 ) { return ''; }   // allein vergleicht sich schlecht
+	return '<p class="wl-gruppe-hinweis"><a href="' . esc_url( get_term_link( $t ) ) . '">Alle '
+		. esc_html( $t->name ) . ' im Vergleich</a> – ' . (int) $t->count
+		. ' Einträge nebeneinander, mit Preis, Freischaltung und Empfehlung.</p>';
+}
+add_shortcode( 'warleek_item_gruppe', function () { return warleek_render_item_gruppe_link(); } );
+
 add_action( 'init', function () {
 	register_block_type( 'warleek/item-tabelle', array(
 		'api_version' => 3, 'title' => 'Datenbank-Tabelle', 'category' => 'warleek', 'icon' => 'editor-table',
 		'render_callback' => 'warleek_render_item_tabelle',
-		'attributes' => array( 'typ' => array( 'type' => 'string', 'default' => '' ) ),
+		'attributes' => array(
+			'typ'    => array( 'type' => 'string', 'default' => '' ),
+			'gruppe' => array( 'type' => 'string', 'default' => '' ),
+		),
+	) );
+	register_block_type( 'warleek/gruppe-text', array(
+		'api_version' => 3, 'title' => 'Gruppentext', 'category' => 'warleek', 'icon' => 'text',
+		'render_callback' => 'warleek_render_gruppe_text',
+	) );
+	register_block_type( 'warleek/gruppe-titel', array(
+		'api_version' => 3, 'title' => 'Gruppen-Überschrift', 'category' => 'warleek', 'icon' => 'heading',
+		'render_callback' => 'warleek_render_gruppe_titel',
+	) );
+	register_block_type( 'warleek/gruppen-liste', array(
+		'api_version' => 3, 'title' => 'Gruppen der Datenbank', 'category' => 'warleek', 'icon' => 'grid-view',
+		'render_callback' => 'warleek_render_gruppen_liste',
 	) );
 	register_block_type( 'warleek/item-filter', array(
 		'api_version' => 3, 'title' => 'Datenbank-Filter', 'category' => 'warleek', 'icon' => 'filter',

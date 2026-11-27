@@ -754,6 +754,7 @@ function warleek_item_inhalt( array $e ) {
 	return "\n" . $aeo['block'] . "\n" . $satz . "\n"
 		. '[warleek_item_stand]' . "\n"
 		. '[warleek_datenblatt]' . "\n"
+		. '[warleek_item_gruppe]' . "\n"
 		. ( $aeo['faq'] ? $aeo['faq'] . "\n" : '' )
 		. ( $links ? '<h2>Dazu passend</h2><ul>' . $links . '</ul>' . "\n" : '' )
 		. '[warleek_item_verlauf]' . "\n"
@@ -864,6 +865,65 @@ function warleek_item_verlauf_merken( $id, array $alt, array $neu ) {
 	return count( $aenderungen );
 }
 
+/**
+ * Die Vergleichsseiten anlegen: ein Begriff je Gruppe, mit geschriebenem Text.
+ *
+ * Quelle ist `content/_content/gruppen.json`. Der lange Text steht als
+ * Markdown in der Term-Meta und nicht in der Term-Beschreibung – WordPress
+ * filtert die je nach Benutzerrecht durch `wp_filter_kses` und macht aus einer
+ * Tabelle einen Absatz. Die Beschreibung trägt die kurze Fassung, die in
+ * Suchergebnissen landet.
+ *
+ * Wie bei Guides und Seiten gilt der Seed-Schutz: Was im Backend geändert
+ * wurde, bleibt. Erkannt wird das an einem Fingerabdruck des zuletzt
+ * eingespielten Textes.
+ *
+ * @param bool $force Auch überschreiben, was im Backend geändert wurde.
+ * @return int Zahl der angelegten oder aktualisierten Gruppen.
+ */
+function warleek_seed_gruppen( $force = false ) {
+	$gruppen = warleek_content_json( 'gruppen' );
+	if ( ! $gruppen ) { return 0; }
+
+	$anzahl = 0;
+	foreach ( $gruppen as $g ) {
+		$slug = sanitize_title( $g['slug'] ?? '' );
+		$name = trim( (string) ( $g['name'] ?? '' ) );
+		if ( '' === $slug || '' === $name ) { continue; }
+
+		$vorhanden = term_exists( $slug, 'item-gruppe' );
+		if ( $vorhanden ) {
+			$term_id = (int) $vorhanden['term_id'];
+		} else {
+			$neu = wp_insert_term( $name, 'item-gruppe', array( 'slug' => $slug ) );
+			if ( is_wp_error( $neu ) ) { continue; }
+			$term_id = (int) $neu['term_id'];
+		}
+
+		$text  = (string) ( $g['text'] ?? '' );
+		$marke = md5( $text . "\n" . (string) ( $g['beschreibung'] ?? '' ) . "\n" . (string) ( $g['titel'] ?? '' ) );
+		$alt   = (string) get_term_meta( $term_id, '_warleek_gruppe_seed', true );
+		$ist   = (string) get_term_meta( $term_id, '_warleek_gruppe_text', true );
+
+		// Unberührt, wenn jemand den Text im Backend angefasst hat: Dann weicht
+		// er vom zuletzt eingespielten ab, und der fremde Stand gewinnt.
+		$bearbeitet = ( '' !== $ist && '' !== $alt && md5( $ist ) !== $alt );
+		if ( $bearbeitet && ! $force ) { continue; }
+
+		wp_update_term( $term_id, 'item-gruppe', array(
+			'name'        => $name,
+			'description' => wp_strip_all_tags( (string) ( $g['beschreibung'] ?? '' ) ),
+		) );
+		update_term_meta( $term_id, '_warleek_gruppe_text', $text );
+		update_term_meta( $term_id, '_warleek_gruppe_titel', (string) ( $g['titel'] ?? '' ) );
+		update_term_meta( $term_id, '_warleek_gruppe_seed', md5( $text ) );
+		unset( $marke );
+		$anzahl++;
+	}
+	warleek_log( sprintf( '%d Gruppen angelegt bzw. aktualisiert.', $anzahl ) );
+	return $anzahl;
+}
+
 function warleek_step_items( $force = false ) {
 	$items = warleek_content_json( 'items' );
 	$media = (array) get_option( 'warleek_media_map', array() );
@@ -900,6 +960,8 @@ function warleek_step_items( $force = false ) {
 	foreach ( $namen as $slug => $name ) {
 		if ( ! term_exists( $slug, 'item-typ' ) ) { wp_insert_term( $name, 'item-typ', array( 'slug' => $slug ) ); }
 	}
+
+	warleek_seed_gruppen( (bool) $force );
 
 	$reihen = warleek_item_reihenfolge( $items );
 
@@ -997,6 +1059,7 @@ function warleek_step_items( $force = false ) {
 		}
 
 		wp_set_object_terms( $id, $e['typ'], 'item-typ' );
+		if ( ! empty( $e['gruppe'] ) ) { wp_set_object_terms( $id, $e['gruppe'], 'item-gruppe' ); }
 
 		// Bild in drei Stufen: ein eigenes (`item-<slug>`), sonst das Bild der
 		// Gruppe (`item-gruppe-<gruppe>`, etwa alle Scharfschützengewehre), sonst
