@@ -24,7 +24,3 @@ Ein beschädigter Panzer sollte nie stumm stehen bleiben.
 Der [SPH-2](/datenbank/wardogs-sph-2/) ist Artillerie auf Rädern – das mobile Gegenstück zum [L81 Mörser](/datenbank/wardogs-l81-moerser/). Dieselbe Bedingung gilt: Ohne jemanden, der Ziele mit [Entfernungsmesser](/datenbank/wardogs-entfernungsmesser/) meldet, ist er ein teures Rohr. Season 2 hat ihn vom WARDOG-Track auf Level 90 in den Driver-Track geholt.
 
 Der [Flakpanzer Gepard](/datenbank/wardogs-flakpanzer-gepard/) ist mobile [Flugabwehr](/datenbank-gruppe/flugabwehr/): Er steht dort, wo die Hubschrauber gerade fliegen, nicht dort, wo vor zwanzig Minuten jemand gebaut hat. Gegen Bodenziele richtet er wenig aus.
-
-## Hinweis zur Prüfung
-
-Freischaltstufen und Gebühren von L2A6 und SPH-2 stehen auf unserer Prüfliste.

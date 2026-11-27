@@ -69,7 +69,6 @@ Sie ist eine Alternative im oberen Recon-Bereich – und steht damit in direkter
 
 Was sich sagen lässt: Beide verschießen [.308 Winchester](/datenbank/wardogs-munition-308-winchester/), beide kosten über {preis} pro Leben, und beide verlangen eine Freischaltgebühr im sechsstelligen Bereich. Wer in dieser Preisklasse einkauft, sollte sich vorher sicher sein, dass er die Entfernung auch nutzt.
 
-> **Hinweis:** Die Freischaltstufe steht auf unserer Prüfliste.
 
 ### Was ist besser in Wardogs, BMR-308 oder MK22?
 Belastbare Vergleichswerte haben wir nicht. Beide verschießen .308 Winchester; die MK22 ist mit rund 1.000 Metern Reichweite angegeben und kostet {preis:wardogs-mk22} pro Leben.
@@ -83,7 +82,6 @@ Der Aufpreis von {aufpreis:wardogs-mosin-nagant} pro Leben plus {freischaltkoste
 
 Darüber kommt nur noch die [AMR 50](/datenbank/wardogs-amr-50/) – und die ist mit {kaliber:wardogs-amr-50} eine Waffe gegen Material, kein besseres Scharfschützengewehr.
 
-> **Hinweis:** Die Freischaltstufe steht auf unserer Prüfliste.
 
 ### Wie weit schießt die MK22 in Wardogs?
 Nach Community-Werten rund 1.000 Meter wirksam, bei 60 Grundschaden. Sie kostet {preis} pro Leben – auf mittlere Distanz ist die Mosin Nagant die wirtschaftlichere Waffe.
@@ -109,7 +107,6 @@ Zum Vergleich: Die [MK22](/datenbank/wardogs-mk22/) kostet {preis:wardogs-mk22} 
 
 Gegen Kampfpanzer reicht auch sie nicht. Sie liegt in der Lücke: zu groß für Infanterie, zu klein für [L2A6](/datenbank/wardogs-l2a6/) und [T-72B3](/datenbank/wardogs-t-72/).
 
-> **Hinweis:** Die Freischaltstufe steht auf unserer Prüfliste.
 
 ### Wofür braucht man in Wardogs die AMR 50?
 Gegen Material und leichte Fahrzeuge auf große Entfernung – rund 2.000 Meter bei 107 Grundschaden. Gegen Infanterie ist sie bei {preis} pro Leben Verschwendung, gegen Kampfpanzer zu schwach.

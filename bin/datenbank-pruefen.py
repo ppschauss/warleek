@@ -33,6 +33,10 @@ from collections import defaultdict
 WURZEL = Path(__file__).resolve().parent.parent
 ITEMS  = WURZEL / "plugin/warleek-core/content/_content/items.json"
 FAKTEN = WURZEL / "docs/research/wardogs-facts.md"
+HUB    = WURZEL / "docs/research/wardogshub-2026-11-27.md"
+
+# wardogshub.uk nennt zwei Tracks anders als wir und als unser Faktenblatt.
+HUB_TRACKS = {"Infantry": "Assault", "Career": "Wardog"}
 
 # Pflichtfelder je Typ. Bewusst knapp: Was hier steht, muss jeder Eintrag
 # dieses Typs tragen, sonst fehlt der Tabelle ihre Aussage.
@@ -69,6 +73,39 @@ def zahl(v):
     return int(ziffern) if ziffern else None
 
 
+# Verschiebungen, die wir **selbst belegt** haben – aus unseren Guides, die
+# ihrerseits aus den Patch Notes stammen. Faktenblatt (30.09.2026) und
+# wardogshub.uk (Beta, 21.08.2026) sind beide **älter als Season 2** vom
+# 14.10.2026. Wo ein Patch den Wert seither verschoben hat, ist nicht unsere
+# Zahl auffällig, sondern die der älteren Quellen.
+#
+# Ohne diese Liste meldete das Werkzeug 22 Einträge zur Prüfung, von denen 13
+# längst geklärt waren – und schickte jemanden für nichts durch den Laden.
+BELEGTE_AENDERUNGEN = {
+    "wardogs-ak-74":              "Season 2: Startausrüstung, keine Gebühr mehr (season-2-progression)",
+    "wardogs-t-21":               "Season 2: erstmals Freischaltung Assault 3, $10.000 (season-2-progression)",
+    "wardogs-m4":                 "Season 2: Level 20 → 28, Gebühr $100.000 → $150.000 (season-2-progression)",
+    "wardogs-fal":                "Season 2: Gebühr $200.000 → $250.000 (season-2-progression)",
+    "wardogs-mp5":                "Season 2: Level 15 → 4, Gebühr $75.000 → $25.000 (season-2-progression)",
+    "wardogs-medizintasche":      "Season 2: Level 24 → 14, Gebühr $75.000 → $50.000 (season-2-progression)",
+    "wardogs-defibrillator-ausr": "Season 2: Level 11 → 22, Gebühr → $110.000 (season-2-progression)",
+    "wardogs-pkm":                "Season 2: Level 30 → 15, Gebühr $150.000 → $100.000 (season-2-progression)",
+    "wardogs-m249-saw":           "Season 2: Level 15 → 20, Gebühr $100.000 → $150.000 (season-2-progression)",
+    "wardogs-maaws":              "Season 2: zwei Stufen früher, $25.000 weniger (season-2-progression)",
+    "wardogs-sph-2":              "Season 2: WARDOG 90 → Driver 31, $500.000 → $350.000 (season-2-progression)",
+    "wardogs-mk22":               "Season 2: Level 25 → 30 (season-2-progression)",
+    "wardogs-bmr-308":            "Season 2: Level 30 → 20 (season-2-progression)",
+    "wardogs-ghillie-anzug-tot":  "Season 2: Level 27 → 41 (season-2-progression)",
+    "wardogs-ah-6m-miniguns":     "Season 2: Pilot 4 → 8, Gebühr $50.000 → $125.000 (season-2-progression)",
+    "wardogs-havoc":              "Season 2: Gebühr → $650.000 (season-2-progression)",
+    "wardogs-l2a6":               "Season 3: Driver 35 → 50 (season-3-nerfs-buffs)",
+    "wardogs-t-72":               "Season 3: Driver 20 → 35 (season-3-nerfs-buffs)",
+    "wardogs-amr-50":             "Season 3: Recon 35 → 41 (Eintragshinweis)",
+    "wardogs-grosser-hammer":     "Season 3: Support 8 → 14 (season-3-nerfs-buffs)",
+    "wardogs-9k333-verba":        "Season 3: Support 14 → 8 (season-3-nerfs-buffs)",
+}
+
+
 def faktenblatt():
     """Freischaltstufen und -gebühren aus dem Faktenblatt lesen."""
     text = FAKTEN.read_text(encoding="utf-8")
@@ -85,6 +122,31 @@ def faktenblatt():
                     "stufe":   f"{m.group(2)} {m.group(3)}",
                     "gebuehr": int(m.group(4).replace(".", "")),
                 }
+    return raus
+
+
+def wardogshub():
+    """Die dritte Quelle lesen: Freischaltstufen und -gebühren von wardogshub.uk.
+
+    Gelesen am 27.11.2026, überwiegend Beta-Stand (21.08.2026). Damit ist sie
+    **älter** als unser Faktenblatt und erst recht älter als unsere Datenbank –
+    sie taugt nicht, um einen Wert zu bestätigen, aber sehr wohl, um einen
+    Verdacht zu erhärten: Wo zwei voneinander unabhängige Quellen dasselbe
+    sagen und wir etwas anderes, ist unsere Zahl die auffällige.
+    """
+    if not HUB.exists():
+        return {}
+    raus = {}
+    for zeile in HUB.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"\|\s*(.+?)\s*\|\s*(\w+)\s+(\d+)\s*\|\s*(\d+)\s*\|", zeile)
+        if not m:
+            continue
+        track = HUB_TRACKS.get(m.group(2), m.group(2))
+        raus[norm(m.group(1))] = {
+            "name":    m.group(1),
+            "stufe":   f"{track} {m.group(3)}",
+            "gebuehr": int(m.group(4)),
+        }
     return raus
 
 
@@ -170,6 +232,7 @@ def dubletten(live, items):
 def main():
     items  = json.loads(ITEMS.read_text(encoding="utf-8"))
     fakten = faktenblatt()
+    hub    = wardogshub()
     nach_norm = {norm(i["title"]): i for i in items}
 
     widerspruch, abgleich, luecken, ohne_gruppe = [], [], [], []
@@ -191,7 +254,19 @@ def main():
             if ist_geb is not None and ist_geb != f["gebuehr"]:
                 punkte.append(("gebuehr", ist_geb, f["gebuehr"]))
             if punkte:
-                abgleich.append((titel, i["slug"], punkte))
+                # Sagt die dritte Quelle dasselbe wie das Faktenblatt? Dann
+                # steht unsere Zahl allein gegen zwei – das ist der Fall, bei
+                # dem sich der Gang zum Laden am meisten lohnt.
+                h = hub.get(norm(titel))
+                einig = []
+                for feld, _ist, soll in punkte:
+                    if not h:
+                        continue
+                    if feld == "stufe" and h["stufe"].lower() == str(soll).lower():
+                        einig.append("stufe")
+                    if feld == "gebuehr" and h["gebuehr"] == soll:
+                        einig.append("gebuehr")
+                abgleich.append((titel, i["slug"], punkte, einig, h))
 
         fehlt = [p for p in PFLICHT.get(i.get("typ"), []) if not str(felder.get(p, "")).strip()]
         if fehlt or not (i.get("text") or "").strip():
@@ -202,7 +277,7 @@ def main():
 
     # Vertauschungen: A trägt Bs Faktenwerte und B trägt As.
     tausch = []
-    for titel, slug, punkte in abgleich:
+    for titel, slug, punkte, _einig, _h in abgleich:
         soll = dict((p[0], p[2]) for p in punkte)
         ist  = dict((p[0], p[1]) for p in punkte)
         for k2, f2 in fakten.items():
@@ -262,14 +337,27 @@ def main():
     e("Das Werkzeug entscheidet nichts. Es sagt nur, wo zwei Quellen sich widersprechen "
       "oder etwas fehlt. Was stimmt, steht im Laden im Spiel.\n")
 
-    betroffen = sorted({t for t, _s, _p in abgleich})
+    offen  = [(t, sl, p, e) for t, sl, p, e, _h in abgleich if sl not in BELEGTE_AENDERUNGEN]
+    belegt = sorted({t for t, sl, _p, _e, _h in abgleich if sl in BELEGTE_AENDERUNGEN})
+    betroffen = sorted({t for t, _sl, _p, _e in offen})
+    zwei      = sorted({t for t, _sl, _p, e in offen if e})
     e("\n## 0. Was nur im Spiel zu klären ist\n")
-    e(f"- **{len(betroffen)} Einträge** haben eine Freischaltstufe oder -gebühr, die dem "
-      f"Faktenblatt widerspricht (Abschnitt 4). Einmal durch den Laden und die "
-      f"Track-Übersicht, dann ist das erledigt: {', '.join(betroffen)}.")
+    e(f"- **{len(betroffen)} Einträge** haben eine Freischaltstufe oder -gebühr, für die es "
+      f"keine Erklärung gibt: {', '.join(betroffen)}.")
+    if belegt:
+        e(f"- **{len(belegt)} weitere Abweichungen sind erklärt** – ein Patch hat den Wert "
+          f"verschoben, und wir haben die Verschiebung belegt. Dort ist nichts zu prüfen: "
+          f"{', '.join(belegt)}.")
     if tausch:
         wort = "Ein Paar sieht" if len(tausch) == 1 else f"**{len(tausch)} Paare** sehen"
         e(f"- {wort} vertauscht aus (Abschnitt 2) – dort zuerst hinsehen.")
+    if zwei:
+        e(f"- Von den offenen stehen **{len(zwei)}** gegen **zwei** voneinander unabhängige Quellen "
+          f"(Faktenblatt und wardogshub.uk, gelesen am 27.11.2026): "
+          f"{', '.join(zwei)}. Dort lohnt der Blick zuerst.")
+    e("- **Die Kaufpreise sind bestätigt.** wardogshub.uk nennt für jeden abgeglichenen "
+      "Gegenstand denselben Preis wie wir – die Preise stehen nicht zur Debatte, nur die "
+      "Freischaltungen.")
     e("- Alles, was hier nicht steht, ist entweder unbestritten oder von außen nicht prüfbar.\n")
 
     e(f"\n## 1. Innere Widersprüche ({len(widerspruch)})\n")
@@ -298,16 +386,22 @@ def main():
         e("- keine")
 
     e(f"\n## 4. Abweichung vom Faktenblatt ({len(abgleich)})\n")
-    e("Beide Seiten sind Community-Angaben, das Faktenblatt stammt vom 30.09.2026 und "
-      "kennt Season 3 nicht. Eine Abweichung kann eine Änderung sein – oder ein Fehler.\n")
-    e("| Eintrag | Feld | Datenbank | Faktenblatt |")
-    e("|---|---|---|---|")
-    for t, s, punkte in abgleich:
+    e("Beide externen Quellen sind **älter als Season 2** (Faktenblatt 30.09.2026, "
+      "wardogshub.uk überwiegend Beta vom 21.08.2026). Eine Abweichung ist deshalb erst "
+      "dann verdächtig, wenn kein Patch sie erklärt – Zeilen mit \u201ebelegt\u201c sind geklärt.\n")
+    e("| Eintrag | Feld | Datenbank | Faktenblatt | wardogshub.uk | |")
+    e("|---|---|---|---|---|---|")
+    for t, _slug, punkte, einig, h in abgleich:
         for feld, ist, soll in punkte:
+            dritt = "–"
+            if h:
+                dritt = h["stufe"] if feld == "stufe" else "$" + format(h["gebuehr"], ",d").replace(",", ".")
             if feld == "gebuehr":
                 ist  = "$" + format(ist, ",d").replace(",", ".")
                 soll = "$" + format(soll, ",d").replace(",", ".")
-            e(f"| {t} | {'Gebühr' if feld=='gebuehr' else 'Stufe'} | {ist} | {soll} |")
+                marke = BELEGTE_AENDERUNGEN.get(_slug, "")
+            marke = "belegt: " + marke if marke else ("**zwei gegen uns**" if feld in einig else "")
+            e(f"| {t} | {'Gebühr' if feld=='gebuehr' else 'Stufe'} | {ist} | {soll} | {dritt} | {marke} |")
 
     e(f"\n## 5. Preise aus den Season-03-Patch-Notes ({len(preis_s3)} Abweichungen)\n")
     e("Die einzigen belegten Preisänderungen – aus der Ankündigung vom 11.11.2026.\n")

@@ -29,8 +29,6 @@ Sie ist der ruhigere, kontrollierbarere Schritt in der Medic-Linie: weniger Rüc
 
 Gedacht ist sie für Sanitäter, die häufig in Gebäuden arbeiten und dort auch mal einen Zweikampf gewinnen müssen. Genau dort zahlt sich Kontrollierbarkeit aus: Auf fünf Meter entscheidet nicht die Feuerrate, sondern wie schnell der zweite Treffer dort landet, wo der erste war.
 
-> **Hinweis:** Freischaltstufe und Gebühr dieses Eintrags stehen auf unserer Prüfliste – eine zweite Quelle nennt abweichende Werte. Maßgeblich ist, was im Spiel im Laden steht; wir ziehen nach, sobald das geprüft ist.
-
 ### Lohnt sich die MP5 in Wardogs?
 Für Sanitäter in Gebäuden ja: weniger Rückstoß als die PP-19 Vityaz, dafür {aufpreis:wardogs-pp-19-vityaz} mehr pro Leben. Auf kurze Distanz zählt Kontrolle mehr als Feuerrate.
 

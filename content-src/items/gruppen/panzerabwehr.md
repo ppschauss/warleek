@@ -26,7 +26,3 @@ Deshalb ist die RPG-7 für den Preis die bessere Anschaffung als das Warten auf 
 Mehrschüssiger Granatwerfer für {preis:wardogs-mgl-40} pro Leben, gedacht gegen **Infanterie in Deckung** und gegen Gruppen hinter Mauern. Dort, wo ein Gewehr nur die Deckung trifft, kommt eine Granate darüber.
 
 Beim Angriff auf befestigte Stellungen ist er stark. Als Panzerabwehr ist er die falsche Wahl.
-
-## Hinweis zur Prüfung
-
-Stufe und Gebühr der MAAWS stehen auf unserer Prüfliste.

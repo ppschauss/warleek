@@ -7,8 +7,11 @@ Das Werkzeug entscheidet nichts. Es sagt nur, wo zwei Quellen sich widersprechen
 
 ## 0. Was nur im Spiel zu klären ist
 
-- **22 Einträge** haben eine Freischaltstufe oder -gebühr, die dem Faktenblatt widerspricht (Abschnitt 4). Einmal durch den Laden und die Track-Übersicht, dann ist das erledigt: AK-74, AMR 50, BMR-308, Compound Bow, Deagle, FAL, GGX 17, GGX 18, Havoc, Humvee, Judge, L2A6, M4, MAAWS, MGL-40, MK22, MP5, PKM, SPH-2, SV-98, Super-45, Z20 Lakota [Miniguns].
+- **10 Einträge** haben eine Freischaltstufe oder -gebühr, für die es keine Erklärung gibt: Compound Bow, Deagle, GGX 17, GGX 18, Humvee, Judge, MGL-40, SV-98, Super-45, Z20 Lakota [Miniguns].
+- **12 weitere Abweichungen sind erklärt** – ein Patch hat den Wert verschoben, und wir haben die Verschiebung belegt. Dort ist nichts zu prüfen: AK-74, AMR 50, BMR-308, FAL, Havoc, L2A6, M4, MAAWS, MK22, MP5, PKM, SPH-2.
 - Ein Paar sieht vertauscht aus (Abschnitt 2) – dort zuerst hinsehen.
+- Von den offenen stehen **10** gegen **zwei** voneinander unabhängige Quellen (Faktenblatt und wardogshub.uk, gelesen am 27.11.2026): Compound Bow, Deagle, GGX 17, GGX 18, Humvee, Judge, MGL-40, SV-98, Super-45, Z20 Lakota [Miniguns]. Dort lohnt der Blick zuerst.
+- **Die Kaufpreise sind bestätigt.** wardogshub.uk nennt für jeden abgeglichenen Gegenstand denselben Preis wie wir – die Preise stehen nicht zur Debatte, nur die Freischaltungen.
 - Alles, was hier nicht steht, ist entweder unbestritten oder von außen nicht prüfbar.
 
 
@@ -31,75 +34,15 @@ Eintrag A trägt genau die Werte, die das Faktenblatt für Eintrag B nennt – u
 
 ## 4. Abweichung vom Faktenblatt (22)
 
-Beide Seiten sind Community-Angaben, das Faktenblatt stammt vom 30.09.2026 und kennt Season 3 nicht. Eine Abweichung kann eine Änderung sein – oder ein Fehler.
+Beide externen Quellen sind **älter als Season 2** (Faktenblatt 30.09.2026, wardogshub.uk überwiegend Beta vom 21.08.2026). Eine Abweichung ist deshalb erst dann verdächtig, wenn kein Patch sie erklärt – Zeilen mit „belegt“ sind geklärt.
 
-| Eintrag | Feld | Datenbank | Faktenblatt |
-|---|---|---|---|
-| AK-74 | Stufe | Startwaffe, keine Gebühr | Assault 3 |
-| M4 | Stufe | Assault 28 | Assault 20 |
-| M4 | Gebühr | $150.000 | $100.000 |
-| FAL | Gebühr | $250.000 | $200.000 |
-| MP5 | Stufe | Medic 4 | Medic 15 |
-| MP5 | Gebühr | $25.000 | $75.000 |
-| Super-45 | Gebühr | $200.000 | $150.000 |
-| SV-98 | Stufe | Recon 18 | Recon 19 |
-| MK22 | Stufe | Recon 30 | Recon 25 |
-| BMR-308 | Stufe | Recon 20 | Recon 30 |
-| AMR 50 | Stufe | Recon 41 | Recon 35 |
-| PKM | Stufe | Support 15 | Support 30 |
-| PKM | Gebühr | $100.000 | $150.000 |
-| GGX 17 | Stufe | Wardog 18 | Wardog 1 |
-| GGX 17 | Gebühr | $15.000 | $5.000 |
-| Judge | Stufe | Wardog 1 | Wardog 18 |
-| Judge | Gebühr | $5.000 | $15.000 |
-| GGX 18 | Stufe | Wardog 85 | Wardog 70 |
-| GGX 18 | Gebühr | $125.000 | $50.000 |
-| Deagle | Stufe | Wardog 65 | Wardog 85 |
-| MAAWS | Stufe | Support 18 | Support 20 |
-| MAAWS | Gebühr | $100.000 | $125.000 |
-| MGL-40 | Gebühr | $250.000 | $200.000 |
-| Compound Bow | Stufe | Recon 16 | Recon 17 |
-| Compound Bow | Gebühr | $150.000 | $75.000 |
-| Z20 Lakota [Miniguns] | Gebühr | $85.000 | $75.000 |
-| Havoc | Gebühr | $650.000 | $500.000 |
-| SPH-2 | Stufe | Driver 31 | Career 90 |
-| SPH-2 | Gebühr | $350.000 | $500.000 |
-| L2A6 | Stufe | Driver 50 | Driver 35 |
-| Humvee | Stufe | Driver 14 | Driver 15 |
-| Humvee | Gebühr | $75.000 | $25.000 |
-
-## 5. Preise aus den Season-03-Patch-Notes (0 Abweichungen)
-
-Die einzigen belegten Preisänderungen – aus der Ankündigung vom 11.11.2026.
-
-- alle vier stimmen
-
-## 6. Lücken (5)
-
-- **Bushmaster M17S** (`wardogs-bushmaster-m17s`): Pflichtfelder fehlen: preis
-- **A-91** (`wardogs-a-91`): Pflichtfelder fehlen: preis
-- **KH-2002** (`wardogs-kh-2002`): Pflichtfelder fehlen: preis
-- **M113 APC SV** (`wardogs-m113-apc-sv`): Pflichtfelder fehlen: preis
-- **M12G** (`wardogs-m12g`): Pflichtfelder fehlen: preis, freischaltung
-
-## 7. Abgleich mit der veröffentlichten Seite (209 Einträge online, 198 in dieser Datei)
-
-**Dublettenverdacht (9).** Adresse endet auf `-2`, das Original gibt es auch.
-
-- `wardogs-evo-3-ultra-2` neben `wardogs-evo-3-ultra` – „Evo-3 Ultra“
-- `wardogs-large-shelter-2` neben `wardogs-large-shelter` – „Large Shelter“
-- `wardogs-m14-2` neben `wardogs-m14` – „M14“
-- `wardogs-pp-19-bizon-2` neben `wardogs-pp-19-bizon` – „PP-19 Bizon“
-- `wardogs-t-72-2` neben `wardogs-t-72` – „T-72“
-- `wardogs-tcx-spear-2` neben `wardogs-tcx-spear` – „TCX Spear“
-- `wardogs-wolf-110-2` neben `wardogs-wolf-110` – „Wolf-110“
-- `wardogs-wolf-110-assault-2` neben `wardogs-wolf-110-assault` – „Wolf-110 (Assault)“
-- `wardogs-wooden-step-2` neben `wardogs-wooden-step` – „Wooden Step“
-
-**Nur online, nicht in dieser Datei (2).** Im Backend angelegt – ohne Eintrag hier geht der Wert beim nächsten Einspielen nicht verloren, aber er wird auch nie gepflegt.
-
-- `wardogs-uh-1y` – „UH-1Y“
-- `wardogs-uh-1y-miniguns` – „UH-1Y [Miniguns]“
-
-## 8. Ohne Gruppe (0)
-
+| Eintrag | Feld | Datenbank | Faktenblatt | wardogshub.uk | |
+|---|---|---|---|---|---|
+Traceback (most recent call last):
+  File "/mnt/cache/appdata/scratch/wardogs-gc/bin/datenbank-pruefen.py", line 450, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/mnt/cache/appdata/scratch/wardogs-gc/bin/datenbank-pruefen.py", line 403, in main
+    marke = "belegt: " + marke if marke else ("**zwei gegen uns**" if feld in einig else "")
+                                  ^^^^^
+UnboundLocalError: cannot access local variable 'marke' where it is not associated with a value

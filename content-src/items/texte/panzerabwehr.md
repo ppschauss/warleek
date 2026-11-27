@@ -17,7 +17,6 @@ Sie ist die eigentliche Panzerabwehrwaffe im Spiel – die Waffe für den Fall, 
 
 Was sie nicht ändert: **Einer allein knackt keinen Panzer.** Season 3 hat sowohl [L2A6](/datenbank/wardogs-l2a6/) als auch [T-72B3](/datenbank/wardogs-t-72/) robuster gegen Granaten gemacht. Die konkreten Werte für den Granatwerfer beim T-72B3 – 3 Treffer für die Ketten, 5 bis 6 für den Heckmotor – zeigen die Größenordnung.
 
-> **Hinweis:** Freischaltstufe und Gebühr stehen auf unserer Prüfliste.
 
 ### Was ist besser in Wardogs, RPG-7 oder MAAWS?
 Die MAAWS trifft härter und kostet {aufpreis:wardogs-rpg-7} mehr pro Leben sowie {freischaltkosten} statt {freischaltkosten:wardogs-rpg-7} Gebühr. Für den Einstieg reicht die RPG-7; gegen Kampfpanzer braucht es ohnehin mehrere Schützen.

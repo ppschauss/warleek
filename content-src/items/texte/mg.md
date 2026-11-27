@@ -17,8 +17,6 @@ Das **PKM** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkost
 
 Der Aufpreis gegenüber der M249 beträgt {aufpreis:wardogs-m249-saw} pro Leben. Wer eine Stellung über eine lange Runde hält, bekommt dafür spürbar mehr Durchschlag; wer sich bewegt, bezahlt mit Gewicht und Rückstoß.
 
-> **Hinweis:** Freischaltstufe und Gebühr stehen auf unserer Prüfliste – eine zweite Quelle nennt abweichende Werte.
-
 ### Was ist besser in Wardogs, M249 oder PKM?
 Das PKM trifft im Kaliber {kaliber} härter und kostet {aufpreis:wardogs-m249-saw} mehr pro Leben, bei mehr Rückstoß und Gewicht. Für bewegliche Rollen bleibt die M249 die handlichere Waffe.
 
