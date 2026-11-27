@@ -162,7 +162,8 @@
             "kaliber": "12 Gauge",
             "rolle": "Schrotflinte"
         },
-        "start": true
+        "start": true,
+        "gruppe": "schrotflinte"
     },
     {
         "slug": "wardogs-amp-9",
@@ -183,7 +184,8 @@
             "freischaltkosten": "75000",
             "hinweis": "Season 3: das 20-Schuss-Magazin wiegt 0,3 statt 1 kg"
         },
-        "sofort": true
+        "sofort": true,
+        "gruppe": "maschinenpistole"
     },
     {
         "slug": "wardogs-pp-19-vityaz",
@@ -201,7 +203,8 @@
             "freischaltkosten": "50000",
             "kaliber": "9 × 19 mm",
             "rolle": "Maschinenpistole"
-        }
+        },
+        "gruppe": "maschinenpistole"
     },
     {
         "slug": "wardogs-m500",
@@ -218,7 +221,8 @@
             "freischaltkosten": "50000",
             "kaliber": "12 Gauge",
             "rolle": "Schrotflinte"
-        }
+        },
+        "gruppe": "schrotflinte"
     },
     {
         "slug": "wardogs-mp5",
@@ -236,7 +240,8 @@
             "freischaltkosten": "25000",
             "kaliber": "9 × 19 mm",
             "rolle": "Maschinenpistole"
-        }
+        },
+        "gruppe": "maschinenpistole"
     },
     {
         "slug": "wardogs-super-45",
@@ -254,7 +259,8 @@
             "freischaltkosten": "200000",
             "kaliber": ".45 ACP",
             "rolle": "Maschinenpistole"
-        }
+        },
+        "gruppe": "maschinenpistole"
     },
     {
         "slug": "wardogs-scout-rifle-td",
@@ -468,7 +474,8 @@
             "kaliber": "9 × 19 mm",
             "rolle": "Pistole"
         },
-        "sofort": true
+        "sofort": true,
+        "gruppe": "pistole"
     },
     {
         "slug": "wardogs-judge",
@@ -486,7 +493,8 @@
             "freischaltkosten": "5000",
             "kaliber": ".45 Colt",
             "rolle": "Pistole"
-        }
+        },
+        "gruppe": "pistole"
     },
     {
         "slug": "wardogs-m1911",
@@ -503,7 +511,8 @@
             "freischaltkosten": "25000",
             "kaliber": ".45 ACP",
             "rolle": "Pistole"
-        }
+        },
+        "gruppe": "pistole"
     },
     {
         "slug": "wardogs-ggx-18",
@@ -521,7 +530,8 @@
             "freischaltkosten": "125000",
             "kaliber": "9 × 19 mm",
             "rolle": "Pistole"
-        }
+        },
+        "gruppe": "pistole"
     },
     {
         "slug": "wardogs-deagle",
@@ -539,7 +549,8 @@
             "freischaltkosten": "75000",
             "kaliber": ".50 AE",
             "rolle": "Pistole"
-        }
+        },
+        "gruppe": "pistole"
     },
     {
         "slug": "wardogs-rpg-7",
@@ -616,7 +627,8 @@
             "kaliber": "Pfeile",
             "rolle": "Lautlose Waffe",
             "hinweis": "Season 3: Pfeilgeschwindigkeit um 50 % erhöht; neue Tarnung Digital Wood im Gold Market"
-        }
+        },
+        "gruppe": "scharfschuetze"
     },
     {
         "slug": "wardogs-mh-6",
@@ -815,7 +827,8 @@
             "freischaltung": "ab ca. 20 Teampunkten im Hauptlager",
             "rolle": "Spawn-Fahrzeug"
         },
-        "start": true
+        "start": true,
+        "gruppe": "transporter"
     },
     {
         "slug": "wardogs-bobcat",
@@ -835,7 +848,8 @@
             "rolle": "Leichtes Fahrzeug, keine Fracht",
             "hinweis": "Season 3: Rückwärtsgang 16 → rund 25 km/h; als einziges Fahrzeug kann er keine Buchsbaumhecken überfahren"
         },
-        "start": true
+        "start": true,
+        "gruppe": "transporter"
     },
     {
         "slug": "wardogs-dune-buggy",
@@ -855,7 +869,8 @@
             "tempo": "130",
             "rolle": "Leichtes Fahrzeug, keine Fracht",
             "hinweis": "Season 3: Rückwärtsgang 43 → rund 50 km/h"
-        }
+        },
+        "gruppe": "transporter"
     },
     {
         "slug": "wardogs-kodiak",
@@ -875,7 +890,8 @@
             "rolle": "Transporter für Kisten",
             "hinweis": "Season 3: Rückwärtsgang 33 → rund 57 km/h"
         },
-        "start": true
+        "start": true,
+        "gruppe": "transporter"
     },
     {
         "slug": "wardogs-kodiak-m249",
@@ -895,7 +911,8 @@
             "tempo": "154",
             "rolle": "Transporter mit Bewaffnung",
             "hinweis": "Season 3: Preis von $6.750 gesenkt; Rückwärtsgang 33 → rund 57 km/h"
-        }
+        },
+        "gruppe": "transporter"
     },
     {
         "slug": "wardogs-kodiak-pickup",
@@ -912,7 +929,8 @@
             "sitze": "6",
             "tempo": "154",
             "rolle": "Transporter für Kisten"
-        }
+        },
+        "gruppe": "transporter"
     },
     {
         "slug": "wardogs-humvee",
@@ -933,7 +951,8 @@
             "tempo": "113",
             "rolle": "Transporter für Kisten",
             "hinweis": "Season 3: Rückwärtsgang 35 → rund 57 km/h, mehr Traktion an der Hinterachse"
-        }
+        },
+        "gruppe": "transporter"
     },
     {
         "slug": "wardogs-humvee-m249",
@@ -951,7 +970,8 @@
             "sitze": "5",
             "tempo": "113",
             "rolle": "Transporter mit Bewaffnung"
-        }
+        },
+        "gruppe": "transporter"
     },
     {
         "slug": "wardogs-humvee-minigun",
@@ -969,7 +989,8 @@
             "sitze": "5",
             "tempo": "113",
             "rolle": "Transporter mit Bewaffnung"
-        }
+        },
+        "gruppe": "transporter"
     },
     {
         "slug": "wardogs-ural",
@@ -1048,7 +1069,8 @@
             "freischaltung": "Support 14 (großer Hammer)",
             "rolle": "Indirektes Feuer, braucht Markierung",
             "hinweis": "Season 3: zerstört bringt er dem Gegner $1.300 statt $650"
-        }
+        },
+        "gruppe": "stellung"
     },
     {
         "slug": "wardogs-stingray",
@@ -1066,7 +1088,8 @@
             "freischaltung": "Support 14 (großer Hammer)",
             "rolle": "Gegen Fahrzeuge",
             "hinweis": "Season 3: zerstört bringt er dem Gegner $1.300 statt $650"
-        }
+        },
+        "gruppe": "stellung"
     },
     {
         "slug": "wardogs-talon-9k-sam",
@@ -1084,7 +1107,8 @@
             "freischaltung": "Support 14 (großer Hammer)",
             "rolle": "Wärmesuchende Flugabwehr, nachladbar",
             "hinweis": "Season 3: zerstört bringt sie dem Gegner $1.300 statt $650"
-        }
+        },
+        "gruppe": "flugabwehr"
     },
     {
         "slug": "wardogs-vanguard-ciws",
@@ -1102,7 +1126,8 @@
             "freischaltung": "Support 14 (großer Hammer)",
             "rolle": "Manuell bediente Flugabwehrkanone",
             "hinweis": "Season 3: maximaler Anstellwinkel 65° → 60°, der tote Winkel darüber wächst; 20×102-mm-Geschosse zählen je Fahrzeugsektion nur noch einmal; zerstört bringt sie dem Gegner $2.400 statt $1.200"
-        }
+        },
+        "gruppe": "flugabwehr"
     },
     {
         "slug": "wardogs-loudspeaker",
@@ -1116,7 +1141,8 @@
         "felder": {
             "freischaltung": "Support",
             "rolle": "Lautsprecher"
-        }
+        },
+        "gruppe": "stellung"
     },
     {
         "slug": "wardogs-recon-zelt",
@@ -1132,7 +1158,8 @@
             "freischaltung": "kleiner Hammer",
             "rolle": "Bauwerk"
         },
-        "start": true
+        "start": true,
+        "gruppe": "fob-anlage"
     },
     {
         "slug": "wardogs-stacheldraht",
@@ -1148,7 +1175,8 @@
             "freischaltung": "kleiner Hammer",
             "rolle": "Bauwerk"
         },
-        "start": true
+        "start": true,
+        "gruppe": "befestigung"
     },
     {
         "slug": "wardogs-sandsaecke",
@@ -1164,7 +1192,8 @@
             "freischaltung": "kleiner Hammer",
             "rolle": "Bauwerk"
         },
-        "start": true
+        "start": true,
+        "gruppe": "befestigung"
     },
     {
         "slug": "wardogs-hedgehog",
@@ -1180,7 +1209,8 @@
             "freischaltung": "kleiner Hammer",
             "rolle": "Bauwerk"
         },
-        "start": true
+        "start": true,
+        "gruppe": "befestigung"
     },
     {
         "slug": "wardogs-bremer-wall",
@@ -1196,7 +1226,8 @@
             "baukosten": "32",
             "freischaltung": "mittlerer Hammer",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "befestigung"
     },
     {
         "slug": "wardogs-hesco-block",
@@ -1211,7 +1242,8 @@
             "baukosten": "12",
             "freischaltung": "mittlerer Hammer",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "befestigung"
     },
     {
         "slug": "wardogs-tuer",
@@ -1227,7 +1259,8 @@
             "baukosten": "80",
             "freischaltung": "mittlerer Hammer",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "bunker"
     },
     {
         "slug": "wardogs-hesco-wand",
@@ -1242,7 +1275,8 @@
             "baukosten": "46",
             "freischaltung": "mittlerer Hammer",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "befestigung"
     },
     {
         "slug": "wardogs-tor",
@@ -1258,7 +1292,8 @@
             "baukosten": "200",
             "freischaltung": "großer Hammer (Support 8)",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "bunker"
     },
     {
         "slug": "wardogs-bunker",
@@ -1274,7 +1309,8 @@
             "baukosten": "200",
             "freischaltung": "großer Hammer (Support 8)",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "bunker"
     },
     {
         "slug": "wardogs-recon-turm",
@@ -1290,7 +1326,8 @@
             "baukosten": "200",
             "freischaltung": "großer Hammer (Support 8)",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "fob-anlage"
     },
     {
         "slug": "wardogs-tankstation",
@@ -1305,7 +1342,8 @@
             "baukosten": "121",
             "freischaltung": "großer Hammer (Support 8)",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "fob-anlage"
     },
     {
         "slug": "wardogs-reparaturstation",
@@ -1321,7 +1359,8 @@
             "baukosten": "121",
             "freischaltung": "großer Hammer (Support 8)",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "fob-anlage"
     },
     {
         "slug": "wardogs-drill-rig",
@@ -1339,7 +1378,8 @@
             "freischaltung": "großer Hammer (Support 8)",
             "rolle": "Zieht die Hot Zone zur FOB",
             "hinweis": "Braucht Fuel: ab ca. 1.200 für einen Durchlauf, bis ca. 6.000"
-        }
+        },
+        "gruppe": "fob-anlage"
     },
     {
         "slug": "wardogs-9k333-verba",
@@ -1358,7 +1398,8 @@
             "rolle": "Schulterluftabwehr",
             "hinweis": "Inventarfläche 7×2, 17,25 kg · Season 3: von Support 14 auf 8 vorgezogen, als Ausgleich für den später kommenden großen Hammer",
             "freischaltung": "Support 8"
-        }
+        },
+        "gruppe": "flugabwehr"
     },
     {
         "slug": "wardogs-m12g",
@@ -1373,7 +1414,8 @@
             "kaliber": "12 Gauge",
             "rolle": "Schrotflinte",
             "hinweis": "Inventarfläche 1×1; Preis in der Quelle nicht angegeben"
-        }
+        },
+        "gruppe": "schrotflinte"
     },
     {
         "slug": "wardogs-l55a1-kanone",
@@ -1387,7 +1429,8 @@
         "felder": {
             "rolle": "Fahrzeugkanone",
             "hinweis": "Nicht einzeln kaufbar"
-        }
+        },
+        "gruppe": "fahrzeugwaffe"
     },
     {
         "slug": "wardogs-l52-kanone",
@@ -1401,7 +1444,8 @@
         "felder": {
             "rolle": "Fahrzeugkanone",
             "hinweis": "Nicht einzeln kaufbar"
-        }
+        },
+        "gruppe": "fahrzeugwaffe"
     },
     {
         "slug": "wardogs-2a42-autocannon",
@@ -1415,7 +1459,8 @@
         "felder": {
             "rolle": "Maschinenkanone am Fahrzeug",
             "hinweis": "Nicht einzeln kaufbar"
-        }
+        },
+        "gruppe": "fahrzeugwaffe"
     },
     {
         "slug": "wardogs-oerlikon-gdf",
@@ -1430,7 +1475,8 @@
             "kaliber": "35 mm",
             "rolle": "Doppelte Flugabwehrkanone am Fahrzeug",
             "hinweis": "Nicht einzeln kaufbar"
-        }
+        },
+        "gruppe": "flugabwehr"
     },
     {
         "slug": "wardogs-mg3a1-koaxial",
@@ -1444,7 +1490,8 @@
         "felder": {
             "rolle": "Koaxiales Maschinengewehr",
             "hinweis": "Nicht einzeln kaufbar"
-        }
+        },
+        "gruppe": "fahrzeugwaffe"
     },
     {
         "slug": "wardogs-m134d-minigun",
@@ -1458,7 +1505,8 @@
         "felder": {
             "rolle": "Rotationsmaschinengewehr am Fahrzeug",
             "hinweis": "Nicht einzeln kaufbar"
-        }
+        },
+        "gruppe": "fahrzeugwaffe"
     },
     {
         "slug": "wardogs-b13-rocket-pods",
@@ -1472,7 +1520,8 @@
         "felder": {
             "rolle": "Raketenbehälter am Hubschrauber",
             "hinweis": "Nicht einzeln kaufbar"
-        }
+        },
+        "gruppe": "fahrzeugwaffe"
     },
     {
         "slug": "wardogs-m249-mg",
@@ -1487,7 +1536,8 @@
             "kaliber": "5,56 × 45 mm",
             "rolle": "Maschinengewehr am Fahrzeug",
             "hinweis": "Nicht einzeln kaufbar"
-        }
+        },
+        "gruppe": "fahrzeugwaffe"
     },
     {
         "slug": "wardogs-kleiner-hammer",
@@ -1502,7 +1552,8 @@
             "preis": "100",
             "rolle": "Bauwerkzeug, Grundstufe",
             "hinweis": "Inventarfläche 2×1, 0,32 kg, Spezialisten-Platz"
-        }
+        },
+        "gruppe": "bauwerkzeug"
     },
     {
         "slug": "wardogs-mittlerer-hammer",
@@ -1517,7 +1568,8 @@
             "preis": "800",
             "rolle": "Bauwerkzeug, Mittelstufe",
             "hinweis": "Inventarfläche 2×3, 1,23 kg, Spezialisten-Platz"
-        }
+        },
+        "gruppe": "bauwerkzeug"
     },
     {
         "slug": "wardogs-grosser-hammer",
@@ -1534,7 +1586,8 @@
             "freischaltung": "Support 14",
             "rolle": "Bauwerkzeug, Vollstufe",
             "hinweis": "Inventarfläche 4×2, 3,18 kg, Spezialisten-Platz · Season 3: von Support 8 auf 14 verschoben – Mega-Basen in der ersten Woche sollen schwerer werden"
-        }
+        },
+        "gruppe": "bauwerkzeug"
     },
     {
         "slug": "wardogs-schraubenschluessel",
@@ -1549,7 +1602,8 @@
         "felder": {
             "rolle": "Reparaturwerkzeug",
             "hinweis": "Inventarfläche 1×1; Preis in der Quelle nicht angegeben"
-        }
+        },
+        "gruppe": "werkzeug"
     },
     {
         "slug": "wardogs-brechstange",
@@ -1566,7 +1620,8 @@
             "preis": "885",
             "rolle": "Brechwerkzeug",
             "hinweis": "Inventarfläche 3×1, 2,8 kg, Spezialisten-Platz · Season 3: öffnet gegnerische Nachschubkisten, dabei fällt ein zufälliger Gegenstand heraus"
-        }
+        },
+        "gruppe": "werkzeug"
     },
     {
         "slug": "wardogs-munitionskiste",
@@ -1580,7 +1635,8 @@
         "felder": {
             "rolle": "Nachschub für das Team",
             "hinweis": "Inventarfläche 2×2; Preis in der Quelle nicht angegeben"
-        }
+        },
+        "gruppe": "fob-anlage"
     },
     {
         "slug": "wardogs-at-mine",
@@ -1595,7 +1651,8 @@
             "preis": "650",
             "rolle": "Panzerabwehrmine",
             "hinweis": "Inventarfläche 2×1, 8,6 kg"
-        }
+        },
+        "gruppe": "sprengstoff"
     },
     {
         "slug": "wardogs-claymore",
@@ -1613,7 +1670,8 @@
             "hinweis": "Inventarfläche 2×1, 1,6 kg",
             "freischaltung": "Recon 23",
             "freischaltkosten": "90000"
-        }
+        },
+        "gruppe": "sprengstoff"
     },
     {
         "slug": "wardogs-fob",
@@ -1629,7 +1687,8 @@
             "baukosten": "30",
             "rolle": "Vorgeschobene Basis",
             "hinweis": "Kaufpreis rund $7.500, Aufbau rund 30 Build-Supplies"
-        }
+        },
+        "gruppe": "fob-anlage"
     },
     {
         "slug": "wardogs-bauradio",
@@ -1643,7 +1702,8 @@
         "felder": {
             "baukosten": "20",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "fob-anlage"
     },
     {
         "slug": "wardogs-hblock",
@@ -1657,7 +1717,8 @@
         "felder": {
             "rolle": "Bauwerk",
             "hinweis": "Baukosten in der Quelle nicht angegeben"
-        }
+        },
+        "gruppe": "befestigung"
     },
     {
         "slug": "wardogs-hesco-block-gross",
@@ -1671,7 +1732,8 @@
         "felder": {
             "baukosten": "22",
             "rolle": "Bauwerk"
-        }
+        },
+        "gruppe": "befestigung"
     },
     {
         "slug": "wardogs-bunker-boden",
@@ -1685,7 +1747,8 @@
         "felder": {
             "baukosten": "10",
             "rolle": "Bunker-Bauteil"
-        }
+        },
+        "gruppe": "bunker"
     },
     {
         "slug": "wardogs-bunker-dach",
@@ -1699,7 +1762,8 @@
         "felder": {
             "baukosten": "10",
             "rolle": "Bunker-Bauteil"
-        }
+        },
+        "gruppe": "bunker"
     },
     {
         "slug": "wardogs-moerser-unterstand",
@@ -1714,7 +1778,8 @@
         "felder": {
             "baukosten": "100",
             "rolle": "Geschützte Stellung für indirektes Feuer"
-        }
+        },
+        "gruppe": "fob-anlage"
     },
     {
         "slug": "wardogs-m18-rauch-weiss",
@@ -1729,7 +1794,7 @@
             "preis": "100",
             "rolle": "Sichtschutz"
         },
-        "gruppe": "rauch"
+        "gruppe": "signal"
     },
     {
         "slug": "wardogs-m18-rauch-schwarz",
@@ -1746,7 +1811,7 @@
             "rolle": "Sichtschutz",
             "freischaltung": "Medic 23"
         },
-        "gruppe": "rauch"
+        "gruppe": "signal"
     },
     {
         "slug": "wardogs-m18-signal-feind",
@@ -1851,7 +1916,7 @@
             "preis": "200",
             "rolle": "Splitterwirkung"
         },
-        "gruppe": "sprengstoff"
+        "gruppe": "wurfwaffe"
     },
     {
         "slug": "wardogs-he-granate",
@@ -1866,7 +1931,7 @@
             "rolle": "Sprengwirkung",
             "hinweis": "Preis in der Quelle nicht angegeben"
         },
-        "gruppe": "sprengstoff"
+        "gruppe": "wurfwaffe"
     },
     {
         "slug": "wardogs-blendgranate",
@@ -1881,7 +1946,7 @@
             "rolle": "Blendwirkung",
             "hinweis": "Preis in der Quelle nicht angegeben"
         },
-        "gruppe": "sprengstoff"
+        "gruppe": "wurfwaffe"
     },
     {
         "slug": "wardogs-c4",
@@ -1950,7 +2015,7 @@
             "rolle": "Splitterwirkung (Sonderausführung)",
             "hinweis": "Preis und Freischaltung in der Quelle nicht angegeben"
         },
-        "gruppe": "sprengstoff"
+        "gruppe": "wurfwaffe"
     },
     {
         "slug": "wardogs-verband",
@@ -3255,7 +3320,7 @@
             "freischaltung": "Medic – von Anfang an freigeschaltet",
             "kaliber": "9 × 19 mm"
         },
-        "gruppe": "sturmgewehr",
+        "gruppe": "maschinenpistole",
         "start": true
     },
     {
@@ -3379,7 +3444,7 @@
             "baukosten": "650",
             "freischaltung": "großer Hammer (Support 14)"
         },
-        "gruppe": "mg",
+        "gruppe": "stellung",
         "sofort": true
     },
     {
@@ -3398,7 +3463,7 @@
             "baukosten": "250",
             "freischaltung": "mittlerer Hammer"
         },
-        "gruppe": "bauwerk",
+        "gruppe": "bunker",
         "sofort": true
     },
     {
@@ -3416,7 +3481,7 @@
             "hinweis": "Build-Supply-Kosten in den Patch Notes nicht eindeutig benannt",
             "freischaltung": "kleiner Hammer"
         },
-        "gruppe": "bauwerk",
+        "gruppe": "bunker",
         "sofort": true
     }
 ]
