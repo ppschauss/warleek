@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.42.0
+Stable tag: 2.43.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.43.0 =
+* **Das Kategoriebild ist keine Rückfallebene mehr.** Die `item-typ-*`-Bilder sind Stimmungsbilder: `item-typ-munition` zeigt ein gurtgefüttertes Maschinengewehr und stand damit auf allen elf Kalibern, auch auf `.45 Colt` – einer Revolverpatrone. `item-typ-wurfwaffe` zeigt eine aufgerissene Gebäudefassade und stand auf der Blendgranate, die nichts aufreißt. Betroffen waren 27 Einträge.
+* Wo kein eigenes und kein Gruppenbild da ist, zeigt die Karte jetzt einen schlichten Platzhalter mit der Kategorie. Ein zuvor gesetztes Kategoriebild wird beim Einspielen entfernt – ein von Hand gewähltes bleibt. Die sieben Gruppenbilder bleiben ebenfalls: Sie zeigen die Klasse tatsächlich.
+* **Einträge, die einen zurückgezogenen ersetzen, erscheinen sofort.** Beim Z20 Lakota hat die Weiterleitung von der alten UH-1Y-Adresse tagelang auf einen 404 gezeigt: Der neue Eintrag war für den Installer ein neuer Inhalt und landete im Veröffentlichungsplan. Wer per `retired.json` ein Weiterleitungsziel ist, überspringt die Warteschlange.
+* Theme auf 2.42.0 – Stil für den Bildplatzhalter.
 
 = 2.42.0 =
 * **Der Blog ist da, mit zwölf Beiträgen bis zum 12. Januar.** Gewöhnliche WordPress-Beiträge unter `/blog/`, kein vierter Beitragstyp – datierte Texte in Kategorien sind genau das, wofür `post` gedacht ist. Der erste Beitrag erscheint sofort, die übrigen elf sind auf Dienstag und Freitag terminiert und veröffentlichen sich selbst.

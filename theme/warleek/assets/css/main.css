@@ -638,6 +638,22 @@ html.has-modal-open .wl-consent { display: none; }
 	color: var(--wp--preset--color--text);
 	transition: border-color 180ms cubic-bezier(0.22, 1, 0.36, 1), background-color 180ms cubic-bezier(0.22, 1, 0.36, 1);
 }
+/* Platzhalter statt Stimmungsbild: 27 der 198 Eintraege haben noch keine
+   eigene Aufnahme. Ein Kategoriebild zeigt dort nicht den Gegenstand – lieber
+   ein ruhiges Feld mit der Kategorie, das ehrlich aussieht. */
+.wl-itemkarte__bild--leer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 0.7rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--steel);
+	background:
+		repeating-linear-gradient(135deg, transparent 0 7px, rgba(255, 255, 255, 0.025) 7px 14px),
+		var(--wp--preset--color--surface-2);
+}
 .wl-itemkarte__bild {
 	display: block;
 	aspect-ratio: 16 / 9;

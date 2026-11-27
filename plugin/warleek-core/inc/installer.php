@@ -697,7 +697,36 @@ function warleek_item_reihenfolge( array $items ) {
  * @return bool
  */
 function warleek_item_sofort( array $e ) {
-	return ! empty( $e['start'] ) || ! empty( $e['sofort'] );
+	return ! empty( $e['start'] )
+		|| ! empty( $e['sofort'] )
+		|| warleek_item_ersetzt_zurueckgezogenen( (string) $e['slug'] );
+}
+
+/**
+ * Ersetzt dieser Eintrag einen zurückgezogenen?
+ *
+ * **Warum das die Warteschlange überspringt.** Als das Spiel die UH-1Y in Z20
+ * Lakota umbenannte, zog `retired.json` die alte Adresse zurück und leitete
+ * auf die neue um. Die neue war aber ein *neuer* Eintrag und landete damit im
+ * Veröffentlichungsplan – fünf bis zehn Einträge pro Tag. Ergebnis: Die
+ * Weiterleitung funktionierte und zeigte auf einen 404, tagelang.
+ *
+ * Ein Eintrag, auf den eine Weiterleitung zeigt, ist kein neuer Inhalt,
+ * sondern der Ersatz für einen, der schon draußen war. Er erscheint sofort.
+ *
+ * @param string $slug Slug des Eintrags.
+ * @return bool
+ */
+function warleek_item_ersetzt_zurueckgezogenen( $slug ) {
+	static $ziele = null;
+	if ( null === $ziele ) {
+		$ziele = array();
+		foreach ( (array) warleek_content_json( 'retired' ) as $r ) {
+			$ziel = trim( (string) ( $r['redirect'] ?? '' ), '/' );
+			if ( str_starts_with( $ziel, 'datenbank/' ) ) { $ziele[ substr( $ziel, 10 ) ] = true; }
+		}
+	}
+	return isset( $ziele[ $slug ] );
 }
 
 /**
@@ -1177,14 +1206,46 @@ function warleek_step_items( $force = false ) {
 		// Gruppe (`item-gruppe-<gruppe>`, etwa alle Scharfschützengewehre), sonst
 		// das der Kategorie. Alles optional – ohne Datei bleibt der Eintrag bildlos,
 		// was besser ist als ein erfundenes Bild, das den Gegenstand nicht zeigt.
+		/*
+		 * **Kein Kategoriebild mehr als Rückfallebene.**
+		 *
+		 * Die `item-typ-*`-Bilder sind Stimmungsbilder, keine
+		 * Gegenstandsbilder: `item-typ-munition` zeigt ein gurtgefüttertes
+		 * Maschinengewehr und stand damit auf allen elf Kalibern, auch auf
+		 * `.45 Colt` – einer Revolverpatrone. `item-typ-wurfwaffe` zeigt eine
+		 * aufgerissene Gebäudefassade und stand auf der Blendgranate, die
+		 * nichts aufreißt.
+		 *
+		 * Das ist dieselbe Sorte kleiner Unwahrheit wie ein erfundener Wert:
+		 * Die Seite behauptet, das sei der Gegenstand, und es stimmt nicht.
+		 * Lieber kein Bild – die Karte zeigt dann einen schlichten Platzhalter
+		 * mit der Kategorie, und man sieht auf einen Blick, dass noch eine
+		 * Aufnahme fehlt.
+		 *
+		 * Die Gruppenbilder bleiben: Sie zeigen tatsächlich die Klasse
+		 * (Helikopter, LKW, MG, Panzer, Panzerabwehr, Scharfschützengewehre,
+		 * Sturmgewehre). Wer das Kategoriebild zurückhaben will, hängt sich an
+		 * `warleek_item_bildsuche`.
+		 */
 		$bildsuche = array( 'item-' . $e['slug'] );
 		if ( ! empty( $e['gruppe'] ) ) { $bildsuche[] = 'item-gruppe-' . $e['gruppe']; }
-		$bildsuche[] = 'item-typ-' . $e['typ'];
+		$bildsuche = (array) apply_filters( 'warleek_item_bildsuche', $bildsuche, $e );
 		$gesetzt = false;
 		foreach ( $bildsuche as $schluessel ) {
 			if ( ! empty( $media[ $schluessel ] ) ) { set_post_thumbnail( $id, (int) $media[ $schluessel ] ); $gesetzt = true; break; }
 		}
-		if ( ! $gesetzt ) { $ohne_bild++; }
+		if ( ! $gesetzt ) {
+			// Ein zuvor gesetztes **Kategoriebild** muss weg, sonst bliebe das
+			// falsche Bild genau dort stehen, wo es schon hing. Nur das: Ein
+			// von Hand gewähltes Bild wird nicht angefasst.
+			$hing = (int) get_post_thumbnail_id( $id );
+			$typbilder = array();
+			foreach ( $media as $schluessel => $anhang ) {
+				if ( str_starts_with( (string) $schluessel, 'item-typ-' ) ) { $typbilder[] = (int) $anhang; }
+			}
+			if ( $hing && in_array( $hing, $typbilder, true ) ) { delete_post_thumbnail( $id ); }
+			$ohne_bild++;
+		}
 		// Datenblatt: im Backend korrigierte Werte behalten. Wer einen Preis von
 		// Hand richtigstellt, soll ihn nicht beim nächsten Update zurückbekommen.
 		$ist = array();
