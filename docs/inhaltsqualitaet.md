@@ -48,7 +48,20 @@ Dritter Fund: `/thema/gameplay/` (135 Wörter, automatisches Archiv) stand neben
 „Alle Einträge“ klickt, sieht trotzdem 198 dünne Seiten. Wer die Wiederprüfung jetzt
 beantragt, setzt darauf, dass die automatische Bewertung auf den Index schaut.
 
-## Phase 2 — Vergleichsseiten statt Einzelseiten
+## Phase 2 — erledigt am 27.11.2026 (Version 2.40.0)
+
+Statt die Einzelseiten abzuschaffen, haben sie Inhalt bekommen. Alle 198
+Einträge tragen jetzt 108 bis 238 Wörter eigenen Text plus mindestens eine
+eigene Frage; gerendert sind das rund 250 bis 400 Wörter je Seite statt 178.
+Das `noindex` hängt seitdem an der Länge (220 Wörter), nicht am Beitragstyp –
+die Einträge sind damit von selbst in den Index zurückgekommen.
+
+Werte stehen nicht mehr im Text, sondern als Platzhalter, die beim Ausliefern
+aus dem Datenblatt gelesen werden. Eine Preisänderung im Backend macht damit
+jeden Satz auf jeder Seite gleichzeitig richtig – und setzt das Siegel
+„Zuletzt korrigiert am …" unter den Stand-Hinweis.
+
+## Phase 3 — Vergleichsseiten je Gruppe
 
 198 Einträge verteilen sich auf acht Typen (`ausruestung` 59, `waffe` 39, `bauwerk` 31,
 `fahrzeug` 24, `wurfwaffe` 16, `emplacement` 14, `munition` 11, `anbauteil` 4) und

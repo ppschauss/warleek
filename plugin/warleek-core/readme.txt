@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.39.0
+Stable tag: 2.40.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,17 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.40.0 =
+* **Alle 198 Datenbank-Einträge haben einen geschriebenen Text und eigene Fragen.** Vorher waren es im Median 44 Wörter aus der Vorlage, jetzt 108 bis 238 Wörter je Eintrag plus mindestens eine eigene Frage hinter den drei, die aus den Feldern entstehen. Auf der Seite stehen damit rund 250 bis 400 Wörter statt 178.
+* Jeder Text beantwortet eine andere Frage. Beim Operator-Rucksack steht, dass wir den Aufpreis nicht rechtfertigen können, weil keine Quelle die Fächerzahl nennt; bei Enox, Amphetamin und dem Bauradio, dass die Wirkung nicht belegt ist. Lücken mit Begründung sind mehr wert als erfundene Zahlen.
+* **Preise stehen nicht mehr im Text.** `{preis}`, `{preis:slug}`, `{aufpreis:slug}` und `{titel:slug}` werden beim Ausliefern aus dem Datenblatt gelesen – ändert sich ein Wert im Backend, stimmt jeder Satz auf jeder Seite sofort. Historische Angaben („in Season 1 waren es $75“) bleiben ausgeschrieben, weil sie sich nicht mehr ändern.
+* **Das `noindex` hängt an der Länge, nicht am Beitragstyp** (220 Wörter). Die Einträge kommen damit von selbst zurück in den Index, sobald sie geschrieben sind.
+* **Unter dem Stand-Hinweis steht „Zuletzt korrigiert am …“**, sobald sich ein Wert geändert hat. Quelle ist der Änderungsverlauf, nicht `post_modified` – ein Tippfehler im Text ist keine Korrektur am Wert. Geänderte Werte stupsen jetzt zusätzlich `post_modified` an, damit `dateModified` und `article:modified_time` mitziehen.
+* **Z20 Lakota statt UH-1Y**, die alten Adressen leiten weiter. Der Rückzug kennt dafür `typ` und `loeschen`; damit räumt er auch die neun `-2`-Dubletten weg, die in der Datenbank standen.
+* Belegte Korrekturen: sechs Bauwerke nannten weiter „großer Hammer (Support 8)“ statt 14, der Wolf-110 [M2 Browning] stand mit $7.800 statt $6.800, und der im Backend angelegte Z20 Lakota [Miniguns] trug die Season-1-Werte.
+* Neue Werkzeuge: `bin/item-texte-bauen.py` (Texte je Gruppe, prüft Platzhalter und Querverweise), `bin/gruppen-setzen.py` (33 Gruppen), `bin/datenbank-pruefen.py` (Prüfliste, auch gegen die veröffentlichte Seite).
+* Theme auf 2.39.0 – das Siegel am Stand-Hinweis braucht das Stylesheet.
 
 = 2.39.0 =
 * **Antwort auf die AdSense-Ablehnung vom 24.11.2026 („minderwertige Inhalte“).** Der Befund war nachrechenbar: 210 der 299 Adressen in der Sitemap waren Datenbank-Einträge mit im Median 288 Wörtern, davon rund 44 Wörter eigener Text; der Rest war Werte-Tabelle und auf jeder Seite derselbe Rahmen.

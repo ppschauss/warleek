@@ -89,13 +89,22 @@ def faktenblatt():
 
 
 def innere_widersprueche(i):
-    """Zahlen im Fließtext gegen das Datenblatt desselben Eintrags."""
+    """Zahlen im Fließtext gegen das Datenblatt desselben Eintrags.
+
+    **Platzhalter heben die Prüfung auf.** Steht `{preis}` im Text, kommt der
+    aktuelle Preis beim Ausliefern aus dem Datenblatt – ein ausgeschriebener
+    Betrag daneben ist dann keine konkurrierende Angabe, sondern eine
+    historische („in Season 1 waren es $75") oder eine, die gar nicht im
+    Datenblatt steht (Abschussprämien, Summen über mehrere Einträge). Ohne
+    diese Ausnahme meldete das Werkzeug 29 Widersprüche, von denen keiner
+    einer war.
+    """
     text   = i.get("text") or ""
     felder = i.get("felder") or {}
     funde  = []
 
     preis = zahl(felder.get("preis"))
-    if preis:
+    if preis and "{preis}" not in text:
         # Beträge im Text, die wie ein Stückpreis aussehen (nicht die Gebühr).
         betraege = {int(b.replace(".", "").replace(",", ""))
                     for b in re.findall(r"\$\s?([\d.,]+)", text)}
@@ -106,7 +115,7 @@ def innere_widersprueche(i):
                          f"das Datenblatt $" + format(preis, ",d").replace(",", "."))
 
     stufe = (felder.get("freischaltung") or "").strip()
-    if stufe:
+    if stufe and "{freischaltung}" not in text:
         m = re.match(r"(Assault|Medic|Recon|Support|Driver|Pilot|Wardog|Career)\s+(\d+)", stufe)
         if m:
             im_text = re.findall(rf"{m.group(1)}\s+(\d+)", text)

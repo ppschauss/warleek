@@ -8,14 +8,20 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Eines von drei Sturmgewehren, die von Anfang an ohne Freischaltung und ohne Kosten bereitstehen. Die drei Startgewehre sind praktisch gleichwertig: gleiche Klasse, gleiches Kaliber, kaum spürbare Unterschiede.\nAnwendung: die ersten Runden – und seit Season 2 nur noch diese. Die AK-74 kostet jetzt ebenfalls keine Freischaltung und rund $800 pro Leben; wer sie sich leisten kann, hat keinen Grund mehr, bei einem Startgewehr zu bleiben.",
+        "text": "Die **Bushmaster M17S** ist eines von drei Sturmgewehren in Wardogs, die {freischaltung} bereitstehen – ohne Freischaltung und ohne Kaufpreis. Kaliber {kaliber}.\n\nDie drei Startgewehre sind praktisch gleichwertig: gleiche Klasse, gleiches Kaliber, kaum spürbare Unterschiede. Wer zwischen ihnen hin- und herprobiert, merkt vor allem Unterschiede im Anblick und in der Bauform, nicht in der Wirkung.\n\nDas ist eine gute Nachricht: **Du musst in der ersten Stunde keine Waffenentscheidung treffen.** Nimm eine, gewöhne dich an den Rückstoß, und stecke das Geld in [Panzerung](/datenbank/wardogs-panzerung-1/), einen [Helm](/datenbank/wardogs-helm-1/) und ein [Fernglas](/datenbank/wardogs-fernglas/) – das bringt in den ersten Runden mehr als jedes Gewehr.\n\nDer erste lohnende Schritt weg von den Startgewehren ist die [AK-74](/datenbank/wardogs-ak-74/) für {preis:wardogs-ak-74} pro Leben, ebenfalls ohne Gebühr. Der Weg dahin steht in [Welche Waffe wann kaufen](/guides/wardogs-waffen-kaufen/).",
         "felder": {
             "freischaltung": "Startwaffe, keine Gebühr",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         },
         "start": true,
-        "gruppe": "sturmgewehr"
+        "gruppe": "sturmgewehr",
+        "fragen": [
+            {
+                "frage": "Welches Startgewehr ist in Wardogs das beste?",
+                "antwort": "Keines – Bushmaster M17S, A-91 und KH-2002 sind praktisch gleichwertig. Nimm eine und investiere das Geld in Panzerung, Helm und Fernglas."
+            }
+        ]
     },
     {
         "slug": "wardogs-a-91",
@@ -25,14 +31,20 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Bullpup-Startgewehr, wie die beiden anderen Startwaffen ohne Freischaltung und ohne Kaufpreis. Kürzer gebaut, was in Gebäuden angenehm ist, sonst ohne nennenswerten Unterschied zur M17S.\nAnwendung: Einstieg. Nimm sie, probier die anderen beiden aus, und leg dein erstes Geld in Munition und Verbandszeug statt in eine teurere Waffe.",
+        "text": "Die **A-91** ist ein Bullpup-Startgewehr in Wardogs: {freischaltung}, ohne Kaufpreis, Kaliber {kaliber}.\n\nBullpup heißt, dass das Magazin hinter dem Abzug sitzt. Die Waffe ist dadurch kürzer gebaut, was in Gebäuden angenehm ist – ein Vorteil, der sich beim Ecken-Umrunden und am Fenster bemerkbar macht und sonst nirgends.\n\nDavon abgesehen ist sie den beiden anderen Startgewehren, [Bushmaster M17S](/datenbank/wardogs-bushmaster-m17s/) und [KH-2002](/datenbank/wardogs-kh-2002/), gleichwertig. Gleiche Klasse, gleiches Kaliber, kaum spürbare Unterschiede in der Wirkung.\n\nWer überwiegend in bebautem Gelände kämpft – auf der Stadtkarte SABATULO etwa –, kann hier anfangen. Alle anderen greifen zur Waffe, deren Visierbild ihnen liegt. Die eigentliche Entscheidung kommt später: bei der [AK-74](/datenbank/wardogs-ak-74/) für {preis:wardogs-ak-74} und darüber.",
         "felder": {
             "freischaltung": "Startwaffe, keine Gebühr",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         },
         "start": true,
-        "gruppe": "sturmgewehr"
+        "gruppe": "sturmgewehr",
+        "fragen": [
+            {
+                "frage": "Was bedeutet Bullpup in Wardogs?",
+                "antwort": "Das Magazin sitzt hinter dem Abzug, die Waffe baut dadurch kürzer. In Gebäuden ist das angenehm; auf die Wirkung hat es keinen messbaren Einfluss."
+            }
+        ]
     },
     {
         "slug": "wardogs-kh-2002",
@@ -42,14 +54,20 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Das dritte Startgewehr, ebenfalls Bullpup und ebenfalls kostenlos. Wer zwischen den dreien hin- und herprobiert, merkt vor allem Unterschiede im Anblick, nicht in der Wirkung.\nAnwendung: dieselbe wie bei den anderen Startwaffen – die Zeit überbrücken, bis das Konto eine bessere Waffe pro Leben trägt.",
+        "text": "Die **KH-2002** ist das dritte Startgewehr in Wardogs: {freischaltung}, ebenfalls Bullpup, ebenfalls kostenlos. Kaliber {kaliber}.\n\nWer zwischen den dreien hin- und herprobiert, merkt vor allem Unterschiede im Anblick, nicht in der Wirkung. Das ist bewusst so gebaut: Die Startausrüstung soll niemanden benachteiligen, der die „falsche\" genommen hat.\n\nWas dich in den ersten Stunden wirklich weiterbringt, sind nicht Gewehre, sondern Gewohnheiten – kurze Feuerstöße statt Dauerfeuer, Deckung vor Sichtlinie, und das [Fernglas](/datenbank/wardogs-fernglas/) für {preis:wardogs-fernglas}, mit dem du Geld verdienst, ohne zu schießen.\n\nDie erste Waffe, die spürbar besser ist, ist die [Galil](/datenbank/wardogs-galil/) für {preis:wardogs-galil} pro Leben – nach Community-Werten rund 329 Brust-DPS gegenüber rund 305 bei der AK-74.",
         "felder": {
             "freischaltung": "Startwaffe, keine Gebühr",
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         },
         "start": true,
-        "gruppe": "sturmgewehr"
+        "gruppe": "sturmgewehr",
+        "fragen": [
+            {
+                "frage": "Lohnt sich in Wardogs der Wechsel zwischen den Startgewehren?",
+                "antwort": "Nein. Bushmaster M17S, A-91 und KH-2002 unterscheiden sich kaum. Lohnend wird der Wechsel erst bei AK-74 oder Galil."
+            }
+        ]
     },
     {
         "slug": "wardogs-t-21",
@@ -60,7 +78,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Assault 3, einmalig rund $10.000, danach rund $1.200 pro Leben. Mit Season 2 ist sie von der frei kaufbaren Einsteigerwaffe zur ersten Freischaltung der Assault-Linie geworden – und doppelt so teuer pro Leben wie vorher. Das 30-Schuss-STANAG-Magazin liegt jetzt bei.\nAnwendung: Die AK-74 kostet seit Season 2 keine Freischaltung mehr und mit rund $800 pro Leben weniger als die T-21. Wer rechnet, geht direkt zur AK-74 und nimmt die T-21 nur, wenn ihr 5,56-Kaliber in die Munitionsplanung des Squads passt.",
+        "text": "Die **T-21** kostet einmalig {freischaltkosten}, danach rund {preis} pro Leben, und wird {freischaltung} freigeschaltet. Kaliber {kaliber}.\n\nMit Season 2 hat sie die Rolle gewechselt: von der frei kaufbaren Einsteigerwaffe zur ersten Freischaltung der Assault-Linie. Das ist genau der Platz, den vorher die [AK-74](/datenbank/wardogs-ak-74/) hatte – die beiden haben getauscht.\n\nPraktisch heißt das: Die T-21 ist die erste Waffe, für die du bewusst Geld ausgibst. {freischaltkosten} Gebühr sind früh im Track eine Menge, und die Frage ist, ob sie gegenüber der kostenlos freigeschalteten AK-74 für {preis:wardogs-ak-74} pro Leben den Unterschied macht.\n\nUnsere Antwort: nur, wenn dir das Visierbild und die Handhabung liegen. Die nächste Stufe, die wirklich mehr Wirkung bringt, ist die [Galil](/datenbank/wardogs-galil/).",
         "felder": {
             "preis": "1200",
             "freischaltung": "Assault 3",
@@ -69,7 +87,13 @@
             "freischaltkosten": "10000"
         },
         "gruppe": "sturmgewehr",
-        "sofort": true
+        "sofort": true,
+        "fragen": [
+            {
+                "frage": "Lohnt sich die T-21 in Wardogs?",
+                "antwort": "Nur bedingt. Sie kostet {freischaltkosten} Gebühr und {preis} pro Leben, während die AK-74 ohne Gebühr auskommt. Der spürbare Sprung kommt erst mit der Galil."
+            }
+        ]
     },
     {
         "slug": "wardogs-ak-74",
@@ -80,7 +104,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Das Arbeitstier der Assault-Linie – und seit Season 2 von Anfang an freigeschaltet, ohne Gebühr, für rund $800 pro Leben. Vorher kostete sie Assault 3 und rund $10.000 einmalig, der Kaufpreis lag bei $1.600. Community-Werte nennen etwa 305 Brust-DPS, rund 500 m wirksame Reichweite und mit 3 kg ein geringeres Gewicht als die Galil – dafür trägt sie insgesamt mehr Munition.\nAnwendung: die Waffe, mit der die meisten am längsten fahren, und seit Season 2 die erste Wahl ab Runde eins. Zuverlässig, berechenbar im Rückstoß und billig genug, um sie an einem Abend zehnmal zu verlieren.",
+        "text": "Die **AK-74** ist das Arbeitstier der Assault-Linie in Wardogs – und seit Season 2 {freischaltung}, für rund {preis} pro Leben. Kaliber {kaliber}.\n\nVorher kostete sie Assault 3 und eine Gebühr. Dass sie jetzt frei ist, verändert den Einstieg deutlich: Jeder Spieler hat vom ersten Moment an Zugriff auf ein Gewehr, das spürbar besser ist als die drei kostenlosen Startgewehre – er muss nur {preis} pro Leben dafür zahlen.\n\nCommunity-Werte nennen rund 305 Brust-DPS, etwa 28,6 Schaden, 3 kg und rund 500 Meter wirksame Reichweite. Die [Galil](/datenbank/wardogs-galil/) für {preis:wardogs-galil} liegt mit rund 329 DPS etwa acht Prozent darüber – und kostet {freischaltkosten:wardogs-galil} Gebühr.\n\nFür die meisten Spieler ist die AK-74 deshalb die richtige Waffe für die ersten Stunden und oft darüber hinaus.",
         "felder": {
             "preis": "800",
             "freischaltung": "Startwaffe, keine Gebühr",
@@ -88,7 +112,13 @@
             "rolle": "Sturmgewehr"
         },
         "gruppe": "sturmgewehr",
-        "start": true
+        "start": true,
+        "fragen": [
+            {
+                "frage": "Ist die AK-74 in Wardogs kostenlos?",
+                "antwort": "Die Freischaltung ja – seit Season 2 ist sie {freischaltung}, ohne Gebühr. Pro Leben kostet sie rund {preis}."
+            }
+        ]
     },
     {
         "slug": "wardogs-galil",
@@ -99,7 +129,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Freigeschaltet mit Assault 10 gegen rund $35.000, Kaufpreis rund $2.000 pro Leben. Sie trifft härter als die AK-74 – Community-Werte nennen etwa 329 Brust-DPS und 30,8 Schaden pro Treffer, also rund 8 % mehr – kostet dafür Gewicht (3,95 kg), Magazininhalt und Reichweite (etwa 400 m statt 500 m).\nAnwendung: wenn dir Wirkung pro Treffer wichtiger ist als Nachschubreichweite und du auf mittlere Entfernung kämpfst. Wer berechenbaren Rückstoß und volle Taschen will, bleibt bei der AK-74.",
+        "text": "Die **Galil** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nSie trifft härter als die [AK-74](/datenbank/wardogs-ak-74/) – Community-Werte nennen etwa 329 Brust-DPS gegenüber rund 305, dazu etwa 30,8 Schaden pro Treffer bei 3,95 kg und rund 400 Metern wirksamer Reichweite. Das sind rund acht Prozent mehr Wirkung bei etwas kürzerer Reichweite und knapp einem Kilo mehr Gewicht.\n\nOb das den Aufpreis von {aufpreis:wardogs-ak-74} pro Leben plus {freischaltkosten} Gebühr wert ist, hängt an deiner Trefferquote: Acht Prozent mehr Schaden wirken nur, wenn du triffst. Wer regelmäßig den ersten Feuerstoß setzt, merkt den Unterschied; wer sprüht, nicht.\n\nDie nächste spürbare Stufe ist die [M4](/datenbank/wardogs-m4/) für {preis:wardogs-m4} pro Leben.",
         "felder": {
             "preis": "2000",
             "freischaltung": "Assault 10",
@@ -107,7 +137,13 @@
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         },
-        "gruppe": "sturmgewehr"
+        "gruppe": "sturmgewehr",
+        "fragen": [
+            {
+                "frage": "Ist die Galil in Wardogs besser als die AK-74?",
+                "antwort": "Nach Community-Werten um rund acht Prozent beim Brust-DPS, bei etwas kürzerer Reichweite und knapp einem Kilo mehr Gewicht. Sie kostet {freischaltkosten} Gebühr und {preis} statt {preis:wardogs-ak-74} pro Leben."
+            }
+        ]
     },
     {
         "slug": "wardogs-m4",
@@ -118,7 +154,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Assault 28, einmalig rund $150.000, danach rund $2.800 pro Leben. Ab hier wird die Sturmgewehr-Linie spürbar besser, ohne dass das Konto gleich bluten muss.\nAnwendung: der solide Schritt vor der FAL. Wenn du die $150.000 für die Freischaltung übrig hast und dein durchschnittliches Leben mehr einbringt als $2.800, lohnt sie sich; sonst wartest du.",
+        "text": "Die **M4** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nAb hier wird die Sturmgewehr-Linie spürbar besser, ohne dass das Konto gleich blutet. {preis} pro Leben sind verkraftbar, solange du nicht zehnmal pro Abend stirbst – und wer bis {freischaltung} gekommen ist, stirbt in der Regel seltener.\n\nDer eigentliche Posten ist die Gebühr von {freischaltkosten}. Das ist mehr als das Vierfache dessen, was die [Galil](/datenbank/wardogs-galil/) kostet ({freischaltkosten:wardogs-galil}) – ein Betrag, für den du auch zwei Runden lang [Fahrzeuge](/datenbank/wardogs-kodiak/) fahren könntest.\n\nDarüber kommt nur noch die [FAL](/datenbank/wardogs-fal/) für {preis:wardogs-fal} pro Leben – deutlich stärker, deutlich teurer.",
         "felder": {
             "preis": "2800",
             "freischaltung": "Assault 28",
@@ -126,7 +162,13 @@
             "kaliber": "5,56 × 45 mm",
             "rolle": "Sturmgewehr"
         },
-        "gruppe": "sturmgewehr"
+        "gruppe": "sturmgewehr",
+        "fragen": [
+            {
+                "frage": "Lohnt sich die M4 in Wardogs?",
+                "antwort": "Ja, wenn du selten stirbst. Sie kostet {preis} pro Leben nach {freischaltkosten} Gebühr und ist der erste spürbare Sprung nach der Galil."
+            }
+        ]
     },
     {
         "slug": "wardogs-fal",
@@ -137,7 +179,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Das Ende der Assault-Linie: Assault 35, einmalig rund $250.000, danach rund $6.000 pro Leben. Mit 60 Schaden pro Treffer und Vollautomatik das schnellste Sturmgewehr im Spiel. Anfangs gibt es sie nur mit 10er- und 20er-Magazinen; das 30er kommt erst mit weiterem Fortschritt.\nAnwendung: erst, wenn dein Konto zehn Tode am Stück verträgt. $6.000 pro Leben sind bei einem schlechten Abend schnell $50.000 – rechne vorher nach, was ein durchschnittliches Leben bei dir einbringt.",
+        "text": "Die **FAL** ist das Ende der Assault-Linie in Wardogs: {freischaltung}, einmalig {freischaltkosten}, danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nMit **60 Schaden pro Treffer und Vollautomatik** ist sie das schnellste Mittel, einen Gegner umzuwerfen, das Infanterie im Katalog hat. Community-Angaben nennen anfangs nur 10er- und 20er-Magazine, das 30er kommt später.\n\nDie Kehrseite steht im Preis. {preis} pro Leben sind mehr als das Doppelte der [M4](/datenbank/wardogs-m4/) mit {preis:wardogs-m4}, dazu {freischaltkosten} Gebühr. Wer damit fünfmal pro Abend stirbt, hat {preis} mal fünf verbrannt – das Geld fehlt dann bei Panzerung und Fahrzeugen.\n\nSie lohnt deshalb für Spieler, die vorn stehen und selten fallen. Für alle anderen bleibt die M4 die wirtschaftlichere Waffe.",
         "felder": {
             "preis": "6000",
             "freischaltung": "Assault 35",
@@ -145,7 +187,13 @@
             "kaliber": ".308 Winchester",
             "rolle": "Sturmgewehr"
         },
-        "gruppe": "sturmgewehr"
+        "gruppe": "sturmgewehr",
+        "fragen": [
+            {
+                "frage": "Was ist die beste Waffe in Wardogs?",
+                "antwort": "Für Schaden pro Treffer die FAL: 60 Schaden, vollautomatisch, im Kaliber {kaliber}. Sie kostet {preis} pro Leben und {freischaltkosten} Gebühr – wirtschaftlich ist sie nur, wenn du selten stirbst."
+            }
+        ]
     },
     {
         "slug": "wardogs-mp43",
@@ -155,7 +203,7 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Schrotflinte für rund $400 pro Leben, ohne Freischaltung. Die billigste Waffe im Katalog, die auf kurze Distanz etwas ausrichtet.\nAnwendung: Gebäude, Bunker, Grabenkämpfe – überall dort, wo man den Gegner ohnehin erst auf zehn Metern sieht. Auf offenem Gelände trägt sie nichts bei.",
+        "text": "Die **MP43** kostet rund {preis} pro Leben, ist {freischaltung} und verschießt {kaliber}. Sie ist die billigste Waffe im Katalog, die auf kurze Distanz wirklich etwas ausrichtet.\n\nDamit ist sie eine der wenigen echten Nischenwaffen in Wardogs: Gebäudekampf, enge Zugänge, Bunker. Auf offener Fläche ist sie chancenlos gegen jedes Sturmgewehr – wer mit ihr antritt, trifft eine Entscheidung über das Gelände, nicht über die Waffe.\n\nFür {preis} ist das Experiment billig. Zum Vergleich: Die [M500](/datenbank/wardogs-m500/) der Support-Linie kostet {preis:wardogs-m500} pro Leben plus {freischaltkosten:wardogs-m500} Gebühr.\n\nZur Munition: Die drei Sorten wirken bei [12 Gauge](/datenbank/wardogs-munition-12-gauge/) anders als bei Gewehrkalibern, weil mehrere Projektile gleichzeitig fliegen – belastbare Messungen dazu gibt es nicht.",
         "felder": {
             "preis": "400",
             "freischaltung": "ohne Stufe kaufbar",
@@ -163,7 +211,13 @@
             "rolle": "Schrotflinte"
         },
         "start": true,
-        "gruppe": "schrotflinte"
+        "gruppe": "schrotflinte",
+        "fragen": [
+            {
+                "frage": "Lohnt sich die MP43 in Wardogs?",
+                "antwort": "In Gebäuden und engen Zugängen ja, für rund {preis} ohne Freischaltung. Auf offener Fläche ist sie gegen Sturmgewehre chancenlos."
+            }
+        ]
     },
     {
         "slug": "wardogs-amp-9",
@@ -175,7 +229,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Medic 20, einmalig rund $75.000, danach rund $1.375 pro Leben. In Season 1 war sie ohne Freischaltung für rund $900 zu haben; mit Season 2 wandert sie hinter eine Stufe und wird teurer. Leicht, schnell im Anschlag, dafür auf Entfernung wirkungslos.\nAnwendung: An ihre Stelle als freie Maschinenpistole des Medic ist die PP-19 Bizon getreten – die kostet nichts an Freischaltung und rund $1.000 pro Leben. Die AMP-9 lohnt erst, wenn du ihren Anschlag gewohnt bist.",
+        "text": "Die **AMP-9** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nIn Season 1 war sie ohne Freischaltung für rund $900 zu haben; mit Season 2 ist sie hinter eine Stufe gewandert, und die [PP-19 Bizon](/datenbank/wardogs-pp-19-bizon/) hat ihren Platz als freie Medic-Waffe übernommen.\n\n**Season 3 hat einen interessanten Detailwert geliefert:** Das 20-Schuss-Magazin wiegt 0,3 statt 0,45 kg. Das klingt nach nichts und ist für einen Medic genau das Gegenteil – wer fünf Magazine und dazu Verbände, Erste-Hilfe-Sets und ein Wiederbelebungsgerät trägt, kämpft um jedes Zehntelkilo an der [Gewichtsklasse](/guides/wardogs-gewichtsklassen/).\n\nDamit ist sie die MP für Sanitäter, die wirklich schwer tragen.",
         "felder": {
             "preis": "1375",
             "freischaltung": "Medic 20",
@@ -185,7 +239,13 @@
             "hinweis": "Season 3: das 20-Schuss-Magazin wiegt 0,3 statt 1 kg"
         },
         "sofort": true,
-        "gruppe": "maschinenpistole"
+        "gruppe": "maschinenpistole",
+        "fragen": [
+            {
+                "frage": "Was hat sich bei der AMP-9 in Wardogs geändert?",
+                "antwort": "Season 2 hat sie hinter eine Freischaltung gestellt ({freischaltung}, {freischaltkosten} Gebühr), Season 3 das Gewicht des 20-Schuss-Magazins von 0,45 auf 0,3 kg gesenkt."
+            }
+        ]
     },
     {
         "slug": "wardogs-pp-19-vityaz",
@@ -196,7 +256,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Erste Maschinenpistole der Medic-Linie: Medic 15, einmalig rund $50.000, danach rund $1.200 pro Leben. Die Medic-Stufen steigen durch Heilen und Wiederbeleben, nicht durch Kills – sie kommt also nebenbei.\nAnwendung: die Standardwaffe für Sanitäter. Kurz genug, um beim Aufstellen eines Gefallenen nicht im Weg zu sein, und billig genug, um sie im Gefecht nicht zu vermissen.",
+        "text": "Die **PP-19 Vityaz** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nDie Medic-Stufen steigen durch Heilen und Wiederbeleben, nicht durch Abschüsse – das ist der Grund, warum diese Linie anders gespielt wird als die Assault-Linie. Wer eine Vityaz tragen will, hat vorher Leute aufgestellt.\n\nGegenüber der freien [PP-19 Bizon](/datenbank/wardogs-pp-19-bizon/) für {preis:wardogs-pp-19-bizon} kostet sie {aufpreis:wardogs-pp-19-bizon} mehr pro Leben, dazu die Gebühr. Der Unterschied liegt in Handhabung und Rückstoßverhalten – belastbare Vergleichswerte dazu haben wir nicht.\n\nDie ruhigere Alternative ist die [MP5](/datenbank/wardogs-mp5/) für {preis:wardogs-mp5} pro Leben.",
         "felder": {
             "preis": "1200",
             "freischaltung": "Medic 15",
@@ -204,7 +264,13 @@
             "kaliber": "9 × 19 mm",
             "rolle": "Maschinenpistole"
         },
-        "gruppe": "maschinenpistole"
+        "gruppe": "maschinenpistole",
+        "fragen": [
+            {
+                "frage": "Wie steigt man in Wardogs im Medic-Track auf?",
+                "antwort": "Durch Heilen und Wiederbeleben, nicht durch Abschüsse. Die PP-19 Vityaz ab {freischaltung} kostet {freischaltkosten} Gebühr und {preis} pro Leben."
+            }
+        ]
     },
     {
         "slug": "wardogs-m500",
@@ -214,7 +280,7 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Schrotflinte der Support-Linie: Support 10, einmalig rund $50.000, danach rund $1.200 pro Leben. Support steigt durch Bauen, Reparieren und schwere Waffen.\nAnwendung: für alle, die eine Stellung halten und Zugänge decken. In einem Bunker oder hinter einer Tür ist sie jeder Präzisionswaffe überlegen.",
+        "text": "Die **M500** ist die Schrotflinte der Support-Linie: {freischaltung}, einmalig {freischaltkosten}, danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nSupport steigt durch Bauen, Reparieren und schwere Waffen – wer hier ankommt, hat gebaut, nicht geschossen. Die M500 ist entsprechend eine Waffe für Leute, die ohnehin an einer FOB arbeiten und einen Zugang verteidigen müssen.\n\nGegenüber der freien [MP43](/datenbank/wardogs-mp43/) für {preis:wardogs-mp43} kostet sie {aufpreis:wardogs-mp43} mehr pro Leben, dazu {freischaltkosten} Gebühr. Belastbare Vergleichswerte zu Streuung und Schaden liegen uns nicht vor – was sich sagen lässt, ist, dass beide dieselbe Reichweitengrenze haben.\n\nIn einem [Bunker](/datenbank/wardogs-bunker/) oder hinter einer [Tür](/datenbank/wardogs-tuer/) ist eine Schrotflinte das passende Werkzeug. Auf dem Weg dorthin nicht.",
         "felder": {
             "preis": "1200",
             "freischaltung": "Support 10",
@@ -222,7 +288,13 @@
             "kaliber": "12 Gauge",
             "rolle": "Schrotflinte"
         },
-        "gruppe": "schrotflinte"
+        "gruppe": "schrotflinte",
+        "fragen": [
+            {
+                "frage": "Wann lohnt sich in Wardogs eine Schrotflinte?",
+                "antwort": "Beim Verteidigen enger Zugänge – Bunker, Türen, Gebäude. Die M500 kostet {preis} pro Leben nach {freischaltkosten} Gebühr, die MP43 ohne Freischaltung {preis:wardogs-mp43}."
+            }
+        ]
     },
     {
         "slug": "wardogs-mp5",
@@ -233,7 +305,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Medic 4, einmalig rund $25.000, danach rund $1.800 pro Leben. Der ruhigere, kontrollierbarere Schritt nach der PP-19.\nAnwendung: Sanitäter, die häufig in Gebäuden arbeiten und dort auch mal einen Zweikampf gewinnen müssen. Der Aufpreis gegenüber der PP-19 ist gering, der Unterschied im Rückstoß spürbar.",
+        "text": "Die **MP5** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nSie ist der ruhigere, kontrollierbarere Schritt in der Medic-Linie: weniger Rückstoß als die [PP-19 Vityaz](/datenbank/wardogs-pp-19-vityaz/), dafür {aufpreis:wardogs-pp-19-vityaz} mehr pro Leben.\n\nGedacht ist sie für Sanitäter, die häufig in Gebäuden arbeiten und dort auch mal einen Zweikampf gewinnen müssen. Genau dort zahlt sich Kontrollierbarkeit aus: Auf fünf Meter entscheidet nicht die Feuerrate, sondern wie schnell der zweite Treffer dort landet, wo der erste war.\n\n> **Hinweis:** Freischaltstufe und Gebühr dieses Eintrags stehen auf unserer Prüfliste – eine zweite Quelle nennt abweichende Werte. Maßgeblich ist, was im Spiel im Laden steht; wir ziehen nach, sobald das geprüft ist.",
         "felder": {
             "preis": "1800",
             "freischaltung": "Medic 4",
@@ -241,7 +313,13 @@
             "kaliber": "9 × 19 mm",
             "rolle": "Maschinenpistole"
         },
-        "gruppe": "maschinenpistole"
+        "gruppe": "maschinenpistole",
+        "fragen": [
+            {
+                "frage": "Lohnt sich die MP5 in Wardogs?",
+                "antwort": "Für Sanitäter in Gebäuden ja: weniger Rückstoß als die PP-19 Vityaz, dafür {aufpreis:wardogs-pp-19-vityaz} mehr pro Leben. Auf kurze Distanz zählt Kontrolle mehr als Feuerrate."
+            }
+        ]
     },
     {
         "slug": "wardogs-super-45",
@@ -252,7 +330,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Ende der Medic-Linie: Medic 35, einmalig rund $200.000, danach rund $5.600 pro Leben. Größeres Kaliber, entsprechend mehr Wirkung pro Treffer.\nAnwendung: für Sanitäter, die weit vorne arbeiten und dort regelmäßig selbst kämpfen. Wer hinter der Deckung bleibt, wo ein Sanitäter hingehört, braucht sie nicht.",
+        "text": "Die **Super-45** ist das Ende der Medic-Linie in Wardogs: {freischaltung}, einmalig {freischaltkosten}, danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nDas größere Kaliber bedeutet mehr Wirkung pro Treffer – [.45 ACP](/datenbank/wardogs-munition-45-acp/) trägt mehr Masse als die {kaliber:wardogs-mp5} der übrigen Medic-Waffen, ist dafür langsamer und auf Entfernung berechenbarer schlecht.\n\nDer Preis ist der eigentliche Punkt. {preis} pro Leben sind mehr als das Dreifache der [MP5](/datenbank/wardogs-mp5/) mit {preis:wardogs-mp5} – für eine Waffe, die immer noch nur auf kurze Distanz arbeitet. Ein Medic, der stirbt, verliert hier spürbar Geld.\n\nSie lohnt für Sanitäter, die regelmäßig in Gebäudekämpfe geraten und sie gewinnen wollen. Für alle anderen ist die MP5 die wirtschaftlichere Waffe.",
         "felder": {
             "preis": "5600",
             "freischaltung": "Medic 35",
@@ -260,7 +338,13 @@
             "kaliber": ".45 ACP",
             "rolle": "Maschinenpistole"
         },
-        "gruppe": "maschinenpistole"
+        "gruppe": "maschinenpistole",
+        "fragen": [
+            {
+                "frage": "Lohnt sich die Super-45 in Wardogs?",
+                "antwort": "Nur bei vielen Nahkämpfen. Sie kostet {preis} pro Leben – mehr als das Dreifache der MP5 – und bleibt trotz größerem Kaliber eine Waffe für unter 50 Meter."
+            }
+        ]
     },
     {
         "slug": "wardogs-scout-rifle-td",
@@ -271,7 +355,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Das Einsteiger-Präzisionsgewehr: rund $1.200 pro Leben, keine Freischaltung nötig.\nAnwendung: um Ballistik zu lernen, ohne Geld zu verbrennen. Kugelfall und Flugzeit sind dieselben wie bei den teuren Gewehren – wer damit nicht trifft, trifft mit einer Mosin auch nicht.",
+        "text": "Das **Scout Rifle TD** kostet rund {preis} pro Leben, ist {freischaltung} und verschießt {kaliber}. Es ist das Einsteiger-Präzisionsgewehr in Wardogs.\n\nSein Zweck: Ballistik lernen, ohne Geld zu verbrennen. Kugeln fallen in Wardogs, und wer das auf 300 Metern zum ersten Mal merkt, braucht ein paar Dutzend Schuss, bis das Gefühl sitzt. Mit {preis} pro Leben kosten diese Versuche wenig – mit einer [MK22](/datenbank/wardogs-mk22/) für {preis:wardogs-mk22} wären sie teuer.\n\nOhne Freischaltung bedeutet außerdem: Du kannst in der ersten Runde ausprobieren, ob dir diese Spielweise überhaupt liegt, bevor du {freischaltkosten:wardogs-sks} in die [SKS](/datenbank/wardogs-sks/) steckst.\n\nDas Zusammenspiel von Entfernung, Zeroing und Fallkurve steht im Guide [Zeroing und Ballistik](/guides/wardogs-zeroing/).",
         "felder": {
             "preis": "1200",
             "freischaltung": "ohne Stufe kaufbar",
@@ -279,7 +363,13 @@
             "rolle": "Marksman-Gewehr"
         },
         "start": true,
-        "gruppe": "scharfschuetze"
+        "gruppe": "scharfschuetze",
+        "fragen": [
+            {
+                "frage": "Womit fängt man in Wardogs als Scharfschütze an?",
+                "antwort": "Mit dem Scout Rifle TD für rund {preis} pro Leben, ohne Freischaltung. Erst wenn Ballistik und Zeroing sitzen, lohnt der Schritt zur SKS oder Mosin Nagant."
+            }
+        ]
     },
     {
         "slug": "wardogs-sks",
@@ -290,7 +380,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Recon 5, einmalig rund $25.000, danach rund $2.400 pro Leben. Halbautomatisch, also schnellere Folgeschüsse als jeder Repetierer.\nAnwendung: der Übergang vom Scout Rifle zum richtigen Präzisionsgewehr. Gut für mittlere Entfernungen, auf denen ein zweiter Schuss wichtiger ist als der perfekte erste.",
+        "text": "Die **SKS** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}, halbautomatisch.\n\nHalbautomatisch heißt schnellere Folgeschüsse als bei jedem Repetierer – und das ist für den Übergang vom Sturmgewehr zur Präzisionswaffe genau richtig. Wer den ersten Schuss verzieht, bekommt sofort einen zweiten, statt zu repetieren und das Ziel aus dem Bild zu verlieren.\n\n**Season 3 hat sie deutlich gestärkt:** Sie tötet ungepanzert mit 2 statt 3 Körpertreffern. Das verändert jedes Duell auf mittlere Entfernung.\n\nDer nächste Schritt ist die [Mosin Nagant](/datenbank/wardogs-mosin-nagant/) für {preis:wardogs-mosin-nagant} pro Leben – nach Community-Werten ein Zwei-Schuss-Kill auf den Rumpf wie bei den teureren Gewehren, aber deutlich günstiger.",
         "felder": {
             "preis": "2400",
             "freischaltung": "Recon 5",
@@ -299,7 +389,13 @@
             "rolle": "Marksman-Gewehr",
             "hinweis": "Season 3: tötet ungepanzert mit 2 statt 3 Körpertreffern und ohne Helm mit 1 Kopftreffer; gegen Panzerung Stufe 2 und 4 ein Treffer weniger"
         },
-        "gruppe": "scharfschuetze"
+        "gruppe": "scharfschuetze",
+        "fragen": [
+            {
+                "frage": "Lohnt sich die SKS in Wardogs?",
+                "antwort": "Als Übergang zur Präzisionsrolle ja. Halbautomatisch, {preis} pro Leben, und seit Season 3 tötet sie ungepanzert mit 2 statt 3 Körpertreffern."
+            }
+        ]
     },
     {
         "slug": "wardogs-mosin-nagant",
@@ -309,7 +405,7 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Recon 10, einmalig rund $50.000, danach rund $4.500 pro Leben. Nach Community-Werten braucht sie für einen Rumpftreffer-Kill genauso zwei Schüsse wie die deutlich teureren MK22 und SV-98 – für erheblich weniger Geld.\nAnwendung: das beste Preis-Wirkungs-Verhältnis unter den Repetierern. Für geduldige Schützen, die auf eine Sichtlinie warten, statt Ziele zu jagen.",
+        "text": "Die **Mosin Nagant** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nNach Community-Werten braucht sie für einen Rumpftreffer-Kill genauso zwei Schüsse wie [MK22](/datenbank/wardogs-mk22/) und [SV-98](/datenbank/wardogs-sv-98/) – bei einem Bruchteil der Kosten. Das macht sie zur wirtschaftlich besten Scharfschützenwaffe im Spiel: {preis} pro Leben gegenüber {preis:wardogs-mk22} bei der MK22.\n\nWas du nicht bekommst, ist Reichweite. Die SV-98 hat nach denselben Angaben etwa die doppelte nutzbare Reichweite. Wer auf 800 Metern arbeitet, braucht sie; wer auf 300 bis 400 Metern schießt, nicht.\n\nFür Recon-Spieler, die ihr Geld mit [Spotting](/datenbank/wardogs-fernglas/) verdienen und nebenbei schießen, ist die Mosin oft die richtige Wahl für die ganze Season.",
         "felder": {
             "preis": "4500",
             "freischaltung": "Recon 10",
@@ -317,7 +413,13 @@
             "kaliber": "7,62 × 54 mm",
             "rolle": "Scharfschützengewehr"
         },
-        "gruppe": "scharfschuetze"
+        "gruppe": "scharfschuetze",
+        "fragen": [
+            {
+                "frage": "Welches Scharfschützengewehr lohnt sich in Wardogs am meisten?",
+                "antwort": "Die Mosin Nagant: zwei Rumpftreffer wie bei den teuren Gewehren, für {preis} pro Leben statt {preis:wardogs-mk22}. Ihre Grenze ist die Reichweite, nicht die Wirkung."
+            }
+        ]
     },
     {
         "slug": "wardogs-svd",
@@ -328,7 +430,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Recon 12, einmalig rund $50.000, danach rund $4.800 pro Leben. Halbautomatisch mit rund 480 Schuss pro Minute, 55 Schaden, 1,3-fachem Rumpf-Faktor und 10-Schuss-Magazin – verzeihender als jeder Repetierer.\nAnwendung: wenn du auf mittlere Entfernung in einem laufenden Gefecht arbeitest und der zweite Schuss sofort sitzen muss. Für viele der beste Kompromiss aus Reichweite, Nachschussgeschwindigkeit und Fehlertoleranz.",
+        "text": "Die **SVD** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nCommunity-Werte nennen 55 Schaden, rund 480 Schuss pro Minute halbautomatisch, 1,3-fachen Rumpf-Faktor und ein 10-Schuss-Magazin. Das macht sie **verzeihender als jeden Repetierer**: Wer danebenschießt, korrigiert sofort, statt zu repetieren.\n\n**Season 3 hat sie zusätzlich gestärkt:** Sie tötet ungepanzert mit 2 statt 3 Körpertreffern.\n\nDer Aufpreis gegenüber der [Mosin Nagant](/datenbank/wardogs-mosin-nagant/) beträgt {aufpreis:wardogs-mosin-nagant} pro Leben – dafür bekommst du zehn Schuss im Magazin statt eines Repetierers. Für bewegliche Ziele und für Spieler, die noch an ihrer Treffsicherheit arbeiten, ist das die bessere Waffe.",
         "felder": {
             "preis": "4800",
             "freischaltung": "Recon 12",
@@ -337,7 +439,13 @@
             "rolle": "Scharfschützengewehr",
             "hinweis": "Season 3: tötet ungepanzert mit 2 statt 3 Körpertreffern und ohne Helm mit 1 Kopftreffer; gegen Panzerung 1–2 Treffer weniger, durch einen Stufe-3-Helm 2 statt 3 Kopftreffer"
         },
-        "gruppe": "scharfschuetze"
+        "gruppe": "scharfschuetze",
+        "fragen": [
+            {
+                "frage": "Was ist besser in Wardogs, Mosin Nagant oder SVD?",
+                "antwort": "Die SVD ist halbautomatisch mit 10-Schuss-Magazin und verzeiht Fehlschüsse, kostet aber {aufpreis:wardogs-mosin-nagant} mehr pro Leben. Die Mosin ist günstiger und auf den ersten Treffer angewiesen."
+            }
+        ]
     },
     {
         "slug": "wardogs-sv-98",
@@ -348,7 +456,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Recon 18, einmalig rund $100.000, danach rund $5.200 pro Leben. Nach Community-Werten tötet ein Kopftreffer sofort, ein Rumpftreffer zweimal auch durch Panzerung der Stufe 2 – bei etwa doppelter nutzbarer Reichweite gegenüber der Mosin.\nAnwendung: das Allrounder-Scharfschützengewehr. Die $700 Aufpreis zur Mosin zahlen sich aus, sobald du regelmäßig über 400 m schießt.",
+        "text": "Die **SV-98** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nNach Community-Werten tötet ein Kopftreffer sofort, ein Rumpftreffer zweimal auch durch Panzerung der Stufe 2 – und sie hat etwa die **doppelte nutzbare Reichweite** der [Mosin Nagant](/datenbank/wardogs-mosin-nagant/).\n\nDas ist der Grund, sie zu kaufen, und der einzige. Auf 300 Metern leistet die Mosin für {preis:wardogs-mosin-nagant} dasselbe; auf 700 Metern leistet sie es nicht mehr. Der Aufpreis von {aufpreis:wardogs-mosin-nagant} pro Leben plus {freischaltkosten} Gebühr kauft Entfernung, nicht Wirkung.\n\nWer auf Karten mit langen Sichtlinien spielt, braucht sie. Wer in bebautem Gelände wie SABATULO unterwegs ist, kommt mit weniger aus.\n\n> **Hinweis:** Die Freischaltstufe steht auf unserer Prüfliste.",
         "felder": {
             "preis": "5200",
             "freischaltung": "Recon 18",
@@ -356,7 +464,13 @@
             "kaliber": "7,62 × 54 mm",
             "rolle": "Scharfschützengewehr"
         },
-        "gruppe": "scharfschuetze"
+        "gruppe": "scharfschuetze",
+        "fragen": [
+            {
+                "frage": "Wann lohnt sich die SV-98 in Wardogs?",
+                "antwort": "Auf großen Entfernungen – sie hat etwa die doppelte nutzbare Reichweite der Mosin Nagant. Auf mittlere Distanz leistet die Mosin für {preis:wardogs-mosin-nagant} dasselbe."
+            }
+        ]
     },
     {
         "slug": "wardogs-mk22",
@@ -367,7 +481,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Recon 30, einmalig rund $150.000, danach rund $6.400 pro Leben. 60 Grundschaden und rund 1.000 m wirksame Reichweite.\nAnwendung: für Positionen, von denen aus man ein ganzes Tal einsieht. Auf kürzeren Distanzen holt die günstigere SV-98 dasselbe Ergebnis.",
+        "text": "Die **MK22** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}, nach Community-Werten 60 Grundschaden und rund 1.000 Meter wirksame Reichweite.\n\nSie ist für Positionen gedacht, von denen aus man die halbe Karte einsieht – und nur dafür. Auf 400 Metern leistet die [Mosin Nagant](/datenbank/wardogs-mosin-nagant/) für {preis:wardogs-mosin-nagant} dasselbe, zu einem Bruchteil des Preises.\n\nDer Aufpreis von {aufpreis:wardogs-mosin-nagant} pro Leben plus {freischaltkosten} Gebühr ist damit eine Wette darauf, dass du die Entfernung wirklich nutzt. Wer sie nicht nutzt, zahlt für Reichweite, die auf seiner Karte nicht existiert.\n\nDarüber kommt nur noch die [AMR 50](/datenbank/wardogs-amr-50/) – und die ist mit {kaliber:wardogs-amr-50} eine Waffe gegen Material, kein besseres Scharfschützengewehr.\n\n> **Hinweis:** Die Freischaltstufe steht auf unserer Prüfliste.",
         "felder": {
             "preis": "6400",
             "freischaltung": "Recon 30",
@@ -375,7 +489,13 @@
             "kaliber": ".308 Winchester",
             "rolle": "Scharfschützengewehr"
         },
-        "gruppe": "scharfschuetze"
+        "gruppe": "scharfschuetze",
+        "fragen": [
+            {
+                "frage": "Wie weit schießt die MK22 in Wardogs?",
+                "antwort": "Nach Community-Werten rund 1.000 Meter wirksam, bei 60 Grundschaden. Sie kostet {preis} pro Leben – auf mittlere Distanz ist die Mosin Nagant die wirtschaftlichere Waffe."
+            }
+        ]
     },
     {
         "slug": "wardogs-bmr-308",
@@ -387,7 +507,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Recon 20, einmalig rund $125.000, danach rund $6.250 pro Leben. Präzisionsgewehr im .308-Kaliber.\nAnwendung: eine Alternative im oberen Recon-Bereich. Ob sie sich gegenüber MK22 und SV-98 lohnt, hängt an Werten, die wir nicht selbst nachgemessen haben – hier lohnt eigenes Ausprobieren besonders.",
+        "text": "Die **BMR-308** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Präzisionsgewehr im Kaliber {kaliber}.\n\n**Season 3 hat sie gestärkt:** Sie tötet ungepanzert mit 2 statt 3 Körpertreffern.\n\nSie ist eine Alternative im oberen Recon-Bereich – und steht damit in direkter Konkurrenz zur [MK22](/datenbank/wardogs-mk22/) für {preis:wardogs-mk22} pro Leben, die mit rund 1.000 Metern wirksamer Reichweite angegeben ist. Belastbare Vergleichswerte zwischen den beiden liegen uns nicht vor.\n\nWas sich sagen lässt: Beide verschießen [.308 Winchester](/datenbank/wardogs-munition-308-winchester/), beide kosten über {preis} pro Leben, und beide verlangen eine Freischaltgebühr im sechsstelligen Bereich. Wer in dieser Preisklasse einkauft, sollte sich vorher sicher sein, dass er die Entfernung auch nutzt.\n\n> **Hinweis:** Die Freischaltstufe steht auf unserer Prüfliste.",
         "felder": {
             "preis": "6250",
             "freischaltung": "Recon 20",
@@ -396,7 +516,13 @@
             "rolle": "Scharfschützengewehr",
             "hinweis": "Season 3: tötet ungepanzert mit 2 statt 3 Körpertreffern und ohne Helm mit 1 Kopftreffer; gegen Panzerung 1–2 Treffer weniger, durch einen Stufe-3-Helm 2 statt 3 Kopftreffer"
         },
-        "gruppe": "scharfschuetze"
+        "gruppe": "scharfschuetze",
+        "fragen": [
+            {
+                "frage": "Was ist besser in Wardogs, BMR-308 oder MK22?",
+                "antwort": "Belastbare Vergleichswerte haben wir nicht. Beide verschießen .308 Winchester; die MK22 ist mit rund 1.000 Metern Reichweite angegeben und kostet {preis:wardogs-mk22} pro Leben."
+            }
+        ]
     },
     {
         "slug": "wardogs-amr-50",
@@ -408,7 +534,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Das Ende der Recon-Linie: Recon 41, einmalig rund $200.000, danach rund $14.800 pro Leben. Mit .50 BMG, rund 107 Grundschaden und etwa 2.000 m wirksamer Reichweite die einzige echte Anti-Materiel-Waffe.\nAnwendung: gegen Material statt gegen Infanterie – Stellungen, leichte Fahrzeuge, Ausrüstung auf große Entfernung. Als reine Scharfschützenwaffe gegen Personen ist sie für ihren Preis überdimensioniert.",
+        "text": "Die **AMR 50** ist das Ende der Recon-Linie in Wardogs: {freischaltung}, einmalig {freischaltkosten}, danach rund {preis} pro Leben. Kaliber {kaliber}, nach Community-Werten rund 107 Grundschaden und etwa 2.000 Meter wirksame Reichweite. **Season 3 hat sie von Recon 35 nach hinten verschoben.**\n\nSie ist die einzige echte Anti-Materiel-Option für Infanterie – gedacht gegen Material und leichte Fahrzeuge, **nicht als besseres Scharfschützengewehr**. Wer sie gegen Infanterie einsetzt, zahlt {preis} pro Leben für Durchschlag, den ein Körper nicht braucht.\n\nZum Vergleich: Die [MK22](/datenbank/wardogs-mk22/) kostet {preis:wardogs-mk22} pro Leben und tötet Menschen genauso tot.\n\nGegen Kampfpanzer reicht auch sie nicht. Sie liegt in der Lücke: zu groß für Infanterie, zu klein für [L2A6](/datenbank/wardogs-l2a6/) und [T-72B3](/datenbank/wardogs-t-72/).\n\n> **Hinweis:** Die Freischaltstufe steht auf unserer Prüfliste.",
         "felder": {
             "preis": "14800",
             "freischaltung": "Recon 41",
@@ -417,7 +543,13 @@
             "rolle": "Anti-Materiel-Gewehr",
             "hinweis": "Season 3: von Recon 35 auf 41 verschoben"
         },
-        "gruppe": "scharfschuetze"
+        "gruppe": "scharfschuetze",
+        "fragen": [
+            {
+                "frage": "Wofür braucht man in Wardogs die AMR 50?",
+                "antwort": "Gegen Material und leichte Fahrzeuge auf große Entfernung – rund 2.000 Meter bei 107 Grundschaden. Gegen Infanterie ist sie bei {preis} pro Leben Verschwendung, gegen Kampfpanzer zu schwach."
+            }
+        ]
     },
     {
         "slug": "wardogs-m249-saw",
@@ -428,7 +560,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Support 20, einmalig rund $150.000, danach rund $3.200 pro Leben. Gurtgefüttertes leichtes Maschinengewehr.\nAnwendung: eine Sichtlinie zuhalten, während andere vorrücken. Auf einem Zweibein oder einer Mauerkante aufgelegt sinkt der Rückstoß deutlich – freihändig verschwendet man nur Munition.",
+        "text": "Die **M249 SAW** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Gurtgefüttertes leichtes Maschinengewehr im Kaliber {kaliber}.\n\nIhre Aufgabe ist, eine Sichtlinie zuzuhalten, während andere sich bewegen. Ein MG tötet selten viele – es verhindert, dass der Gegner überhaupt losläuft. Das ist der Unterschied zwischen einem Abschuss und einem gewonnenen Vorstoß.\n\nDamit das funktioniert, braucht es Nachschub. Der [Gunner-Rucksack](/datenbank/wardogs-gunner-backpack/) für {preis:wardogs-gunner-backpack} ist praktisch Pflicht: Ein MG mit zwei Gurten ist nach einer Minute eine schwere, teure Waffe, die nichts mehr tut.\n\nDas größere Kaliber hat das [PKM](/datenbank/wardogs-pkm/) für {preis:wardogs-pkm} pro Leben – mehr Wirkung, mehr Rückstoß.",
         "felder": {
             "preis": "3200",
             "freischaltung": "Support 20",
@@ -436,7 +568,13 @@
             "kaliber": "5,56 × 45 mm",
             "rolle": "Leichtes Maschinengewehr"
         },
-        "gruppe": "mg"
+        "gruppe": "mg",
+        "fragen": [
+            {
+                "frage": "Wofür braucht man in Wardogs ein MG?",
+                "antwort": "Um eine Sichtlinie zuzuhalten, während das Team sich bewegt. Die M249 SAW kostet {preis} pro Leben nach {freischaltkosten} Gebühr – und einen Rucksack, der genug Gurte fasst."
+            }
+        ]
     },
     {
         "slug": "wardogs-pkm",
@@ -447,7 +585,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Support 15, einmalig rund $100.000, danach rund $4.100 pro Leben. Größeres Kaliber als die M249, entsprechend mehr Wirkung und mehr Rückstoß.\nAnwendung: feste Stellungen und Zufahrten. Wer damit in Bewegung kämpft, zahlt Gewicht und Rückstoß, ohne den Vorteil zu nutzen.",
+        "text": "Das **PKM** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber} – größer als bei der [M249 SAW](/datenbank/wardogs-m249-saw/), entsprechend mehr Wirkung und mehr Rückstoß.\n\n{kaliber} ist dasselbe Kaliber, das [Mosin Nagant](/datenbank/wardogs-mosin-nagant/), [SVD](/datenbank/wardogs-svd/) und [SV-98](/datenbank/wardogs-sv-98/) verschießen. Ein MG, das Scharfschützenmunition verfeuert, trifft auf Entfernung härter als eines im 5-mm-Kaliber – und wiegt pro Gurt mehr.\n\nDer Aufpreis gegenüber der M249 beträgt {aufpreis:wardogs-m249-saw} pro Leben. Wer eine Stellung über eine lange Runde hält, bekommt dafür spürbar mehr Durchschlag; wer sich bewegt, bezahlt mit Gewicht und Rückstoß.\n\n> **Hinweis:** Freischaltstufe und Gebühr stehen auf unserer Prüfliste – eine zweite Quelle nennt abweichende Werte.",
         "felder": {
             "preis": "4100",
             "freischaltung": "Support 15",
@@ -455,7 +593,13 @@
             "kaliber": "7,62 × 54 mm",
             "rolle": "Leichtes Maschinengewehr"
         },
-        "gruppe": "mg"
+        "gruppe": "mg",
+        "fragen": [
+            {
+                "frage": "Was ist besser in Wardogs, M249 oder PKM?",
+                "antwort": "Das PKM trifft im Kaliber {kaliber} härter und kostet {aufpreis:wardogs-m249-saw} mehr pro Leben, bei mehr Rückstoß und Gewicht. Für bewegliche Rollen bleibt die M249 die handlichere Waffe."
+            }
+        ]
     },
     {
         "slug": "wardogs-ggx-17",
@@ -466,7 +610,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Wardog 18 gegen rund $15.000, danach rund $200 pro Leben – die billigste Zweitwaffe im Spiel. Mit Season 2 hat sie ihren Platz mit der Judge getauscht: Die stand vorher auf Stufe 18, die GGX 17 auf Stufe 1.\nAnwendung: für den Moment, in dem das Gewehr leer ist und Nachladen zu lange dauert. Wer neu anfängt, bekommt jetzt zuerst die Judge – die GGX 17 kommt später, bleibt aber die günstigste im Unterhalt.",
+        "text": "Die **GGX 17** kostet {freischaltkosten} Gebühr und danach rund {preis} pro Leben, freigeschaltet {freischaltung}. Kaliber {kaliber} – die billigste Zweitwaffe im Spiel.\n\nMit Season 2 hat sie ihren Platz mit dem [Judge](/datenbank/wardogs-judge/) getauscht und steht jetzt später im WARDOG-Track.\n\nIhr Vorteil gegenüber dem Revolver ist das Magazin: mehr Schuss, schnelleres Nachladen, berechenbarer Rückstoß. In der Rolle, die eine Zweitwaffe wirklich hat – das Gewehr ist leer, jemand steht vor dir –, zählt die Zahl der Versuche mehr als die Wucht des einzelnen Treffers.\n\nBei {preis} pro Leben kostet sie praktisch nichts. Wer eine Zweitwaffe will und nicht über sie nachdenken möchte, nimmt diese.\n\n> **Hinweis:** Stufe und Gebühr stehen auf unserer Prüfliste – siehe Judge.",
         "felder": {
             "preis": "200",
             "freischaltung": "Wardog 18",
@@ -475,7 +619,13 @@
             "rolle": "Pistole"
         },
         "sofort": true,
-        "gruppe": "pistole"
+        "gruppe": "pistole",
+        "fragen": [
+            {
+                "frage": "Welche ist in Wardogs die günstigste Pistole?",
+                "antwort": "Die GGX 17 mit rund {preis} pro Leben. Gegenüber dem Judge bietet sie mehr Schuss und schnelleres Nachladen, dafür weniger Wirkung pro Treffer."
+            }
+        ]
     },
     {
         "slug": "wardogs-judge",
@@ -486,7 +636,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Revolver mit großem Kaliber, seit Season 2 die **erste Pistole** im WARDOG-Track: Wardog 1 gegen rund $5.000, danach rund $250 pro Leben. Vorher lag sie auf Stufe 18 und kostete $15.000 Gebühr.\nAnwendung: auf sehr kurze Distanz wirkungsvoller als die GGX 17, dafür mit wenigen Schuss. Seit Season 2 ist sie die Zweitwaffe, mit der fast jeder anfängt.",
+        "text": "Der **Judge** ist ein Revolver mit großem Kaliber und seit Season 2 die **erste Pistole** im WARDOG-Track: {freischaltung} gegen {freischaltkosten}, danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nVorher lag er deutlich weiter hinten – Season 2 hat ihn mit der [GGX 17](/datenbank/wardogs-ggx-17/) getauscht. Für neue Spieler heißt das: Die erste Zweitwaffe ist jetzt ein Revolver, keine Selbstladepistole.\n\n[.45 Colt](/datenbank/wardogs-munition-45-colt/) gibt es ausschließlich für diese Waffe. Viel Masse pro Treffer, wenige Schuss – wer die Trommel leer hat, lädt lange nach. Als Notlösung für den Moment, in dem das Gewehr leer ist, ist das eine Wette auf den ersten Treffer.\n\n> **Hinweis:** Freischaltstufe und Gebühr stehen auf unserer Prüfliste – Judge und GGX 17 tragen in unseren Quellen paarweise die Werte des jeweils anderen. Maßgeblich ist der Laden im Spiel.",
         "felder": {
             "preis": "250",
             "freischaltung": "Wardog 1",
@@ -494,7 +644,13 @@
             "kaliber": ".45 Colt",
             "rolle": "Pistole"
         },
-        "gruppe": "pistole"
+        "gruppe": "pistole",
+        "fragen": [
+            {
+                "frage": "Welche Pistole bekommt man in Wardogs zuerst?",
+                "antwort": "Seit Season 2 den Judge: {freischaltung}, {freischaltkosten} Gebühr, {preis} pro Leben. Davor war es die GGX 17 – die beiden haben die Plätze getauscht."
+            }
+        ]
     },
     {
         "slug": "wardogs-m1911",
@@ -504,7 +660,7 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Klassische Selbstladepistole, Wardog 40 gegen rund $25.000, danach rund $300 pro Leben.\nAnwendung: die solide Mitte zwischen GGX 17 und Deagle. Mehr Wirkung pro Treffer als die 9-mm-Pistolen, ohne deren Magazingröße völlig aufzugeben.",
+        "text": "Die **M1911** ist eine klassische Selbstladepistole: {freischaltung} gegen {freischaltkosten}, danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nSie ist die solide Mitte zwischen [GGX 17](/datenbank/wardogs-ggx-17/) und [Deagle](/datenbank/wardogs-deagle/): mehr Wirkung pro Treffer als die kleine 9-mm-Pistole, deutlich handlicher als das Großkaliber. [.45 ACP](/datenbank/wardogs-munition-45-acp/) trägt mehr Masse als {kaliber:wardogs-ggx-17}, bleibt aber kontrollierbar.\n\nDer Aufpreis gegenüber der GGX 17 beträgt {aufpreis:wardogs-ggx-17} pro Leben – wenig genug, dass die Entscheidung eher an der Freischaltung hängt als am Preis.\n\nEhrlich betrachtet ist die Zweitwaffe in Wardogs selten entscheidend. Wer regelmäßig in die Lage kommt, sie zu brauchen, hat meist ein anderes Problem: zu wenig Munition, zu späte Deckung oder die falsche Entfernung.",
         "felder": {
             "preis": "300",
             "freischaltung": "Wardog 40",
@@ -512,7 +668,13 @@
             "kaliber": ".45 ACP",
             "rolle": "Pistole"
         },
-        "gruppe": "pistole"
+        "gruppe": "pistole",
+        "fragen": [
+            {
+                "frage": "Lohnt sich die M1911 in Wardogs?",
+                "antwort": "Als Mittelweg ja: mehr Wirkung als die GGX 17, handlicher als die Deagle, für {preis} pro Leben. Entscheidend für eine Runde ist die Zweitwaffe allerdings selten."
+            }
+        ]
     },
     {
         "slug": "wardogs-ggx-18",
@@ -523,7 +685,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Wardog 85 gegen rund $125.000, danach rund $1.000 pro Leben. Season 2 hat sie von Stufe 70 auf 85 verschoben und die Gebühr von $50.000 auf $125.000 angehoben – sie ist jetzt die letzte und teuerste Pistole im Spiel. Schnellfeuerpistole mit hoher Kadenz.\nAnwendung: als Notfallwaffe auf kürzeste Distanz. Für den Preis von fünf GGX 17 muss man den Unterschied allerdings wollen.",
+        "text": "Die **GGX 18** kostet {freischaltkosten} Gebühr und danach rund {preis} pro Leben, freigeschaltet {freischaltung}. Kaliber {kaliber}. **Season 2 hat sie von Stufe 70 auf {freischaltung} verschoben und die Gebühr von $50.000 angehoben.**\n\nDamit ist sie die teuerste Pistole im Spiel – und die am schwersten zu rechtfertigende. {preis} pro Leben für eine Zweitwaffe sind mehr, als die [AK-74](/datenbank/wardogs-ak-74/) als Primärwaffe kostet ({preis:wardogs-ak-74}).\n\nWas sie dafür bietet, lässt sich aus den Quellen nicht belegen: Dass sie besser ist als die [GGX 17](/datenbank/wardogs-ggx-17/) für {preis:wardogs-ggx-17}, ist plausibel, aber nicht beziffert.\n\nBei {freischaltung} ist sie ohnehin eine Frage für Spieler, die alles andere schon haben. Als Kaufentscheidung ist sie keine – als Abschluss des WARDOG-Tracks schon.",
         "felder": {
             "preis": "1000",
             "freischaltung": "Wardog 85",
@@ -531,7 +693,13 @@
             "kaliber": "9 × 19 mm",
             "rolle": "Pistole"
         },
-        "gruppe": "pistole"
+        "gruppe": "pistole",
+        "fragen": [
+            {
+                "frage": "Lohnt sich die GGX 18 in Wardogs?",
+                "antwort": "Rechnerisch kaum: {preis} pro Leben für eine Zweitwaffe sind mehr als ein Sturmgewehr kostet. Sie ist der Abschluss des WARDOG-Tracks, keine wirtschaftliche Entscheidung."
+            }
+        ]
     },
     {
         "slug": "wardogs-deagle",
@@ -542,7 +710,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Wardog 65 gegen rund $75.000, danach rund $750 pro Leben. Mit Season 2 zwanzig Stufen früher freigeschaltet und im Kaufpreis gesenkt – die teuerste Pistole ist sie damit nicht mehr, das ist jetzt die GGX 18 für rund $1.000.\nAnwendung: schwere Wirkung aus der Zweitwaffe. Sinnvoll vor allem für Leute, die viel mit Präzisionsgewehren arbeiten und im Nahbereich etwas brauchen, das sofort wirkt.",
+        "text": "Die **Deagle** kostet {freischaltkosten} Gebühr und danach rund {preis} pro Leben, freigeschaltet {freischaltung}. Kaliber {kaliber}.\n\nMit Season 2 wurde sie deutlich früher freigeschaltet und im Kaufpreis gesenkt – aus einer Trophäe am Ende des Tracks ist eine benutzbare Waffe geworden.\n\nSie liefert viel Schaden pro Treffer bei wenigen Schuss und starkem Rückstoß. Die Frage vor dem Kauf ist deshalb eine an dich selbst: Wie oft setzt du den ersten Schuss aus der Hüfte auf fünf Meter? Wer das zuverlässig kann, beendet damit Lagen, die eine [GGX 17](/datenbank/wardogs-ggx-17/) nur verlängert. Wer dreimal drückt, bis es sitzt, hat mit der kleinen Pistole die höhere Trefferwahrscheinlichkeit.\n\nBei {preis} pro Leben ist sie außerdem kein Beiwerk mehr – das ist mehr als ein [Startgewehr](/datenbank/wardogs-ak-74/) kostet.",
         "felder": {
             "preis": "750",
             "freischaltung": "Wardog 65",
@@ -550,7 +718,13 @@
             "kaliber": ".50 AE",
             "rolle": "Pistole"
         },
-        "gruppe": "pistole"
+        "gruppe": "pistole",
+        "fragen": [
+            {
+                "frage": "Lohnt sich die Deagle in Wardogs?",
+                "antwort": "Wenn du den ersten Schuss zuverlässig setzt. {kaliber} liefert viel Schaden bei wenigen Schuss; bei {preis} pro Leben ist sie teurer als manche Primärwaffe."
+            }
+        ]
     },
     {
         "slug": "wardogs-rpg-7",
@@ -561,7 +735,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Support 5, einmalig rund $30.000, danach rund $1.800 pro Leben. Die günstige Panzerabwehr und für viele Teams die wichtigste frühe Anschaffung überhaupt.\nAnwendung: gegen leichte und mittlere Fahrzeuge, gegen Stellungen und gegen Flugabwehr aus der Distanz. Entscheidend ist nicht die Waffe, sondern die Trefferzone – ins Heck wirkt jeder Werfer ein Vielfaches dessen, was er von vorn schafft.",
+        "text": "Die **RPG-7** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nSie ist die günstige Panzerabwehr und für viele Teams die wichtigste frühe Anschaffung überhaupt. Der Grund ist einfach: Ohne Panzerabwehr ist jedes gegnerische Fahrzeug eine unlösbare Aufgabe, und Fahrzeuge kommen früh.\n\nMit {freischaltkosten} Gebühr bei {freischaltung} ist sie zudem das günstigste Tor im Support-Track. Zum Vergleich: Die [MAAWS](/datenbank/wardogs-maaws/) kostet {freischaltkosten:wardogs-maaws}.\n\nGegen einen [T-72B3](/datenbank/wardogs-t-72/) oder [L2A6](/datenbank/wardogs-l2a6/) reicht sie allein nicht – dafür braucht es mehrere Treffer oder mehrere Schützen. Gegen alles Leichtere reicht sie. Wie das geht, steht in [Panzer knacken](/guides/wardogs-panzer-knacken/).",
         "felder": {
             "preis": "1800",
             "freischaltung": "Support 5",
@@ -569,7 +743,13 @@
             "kaliber": "93 mm Rakete",
             "rolle": "Panzerabwehr"
         },
-        "gruppe": "panzerabwehr"
+        "gruppe": "panzerabwehr",
+        "fragen": [
+            {
+                "frage": "Lohnt sich die RPG-7 in Wardogs?",
+                "antwort": "Ja, früh. Für {freischaltkosten} Gebühr und {preis} pro Leben ist sie die billigste Antwort auf gegnerische Fahrzeuge – und ohne eine solche Antwort verliert ein Team gegen jedes Fahrzeug."
+            }
+        ]
     },
     {
         "slug": "wardogs-maaws",
@@ -580,7 +760,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Support 18, einmalig rund $100.000, danach rund $2.400 pro Leben. Die eigentliche Panzerabwehrwaffe im Spiel.\nAnwendung: gegen Kampfpanzer, wenn du flankieren kannst. Nach Community-Messungen fällt ein Panzer bei Treffern ins Motordeck in etwa elf Sekunden, von der Seite in rund zweiundzwanzig und von vorn erst in gut dreiunddreißig.",
+        "text": "Die **MAAWS** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Kaliber {kaliber}.\n\nSie ist die eigentliche Panzerabwehrwaffe im Spiel – die Waffe für den Fall, dass ein Kampfpanzer in der Zone steht und niemand sonst etwas ausrichtet. Gegenüber der [RPG-7](/datenbank/wardogs-rpg-7/) für {preis:wardogs-rpg-7} kostet sie {aufpreis:wardogs-rpg-7} mehr pro Leben.\n\nWas sie nicht ändert: **Einer allein knackt keinen Panzer.** Season 3 hat sowohl [L2A6](/datenbank/wardogs-l2a6/) als auch [T-72B3](/datenbank/wardogs-t-72/) robuster gegen Granaten gemacht. Die konkreten Werte für den Granatwerfer beim T-72B3 – 3 Treffer für die Ketten, 5 bis 6 für den Heckmotor – zeigen die Größenordnung.\n\n> **Hinweis:** Freischaltstufe und Gebühr stehen auf unserer Prüfliste.",
         "felder": {
             "preis": "2400",
             "freischaltung": "Support 18",
@@ -588,7 +768,13 @@
             "kaliber": "84 mm",
             "rolle": "Panzerabwehr"
         },
-        "gruppe": "panzerabwehr"
+        "gruppe": "panzerabwehr",
+        "fragen": [
+            {
+                "frage": "Was ist besser in Wardogs, RPG-7 oder MAAWS?",
+                "antwort": "Die MAAWS trifft härter und kostet {aufpreis:wardogs-rpg-7} mehr pro Leben sowie {freischaltkosten} statt {freischaltkosten:wardogs-rpg-7} Gebühr. Für den Einstieg reicht die RPG-7; gegen Kampfpanzer braucht es ohnehin mehrere Schützen."
+            }
+        ]
     },
     {
         "slug": "wardogs-mgl-40",
@@ -599,7 +785,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Support 35, einmalig rund $250.000, danach rund $7.500 pro Leben. Mehrschüssiger Granatwerfer.\nAnwendung: gegen Infanterie in Deckung und gegen Gruppen in engen Stellungen. Teuer genug, dass man ihn gezielt für eine bestimmte Lage kauft, nicht als Standardausrüstung.",
+        "text": "Der **MGL-40** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Mehrschüssiger Granatwerfer im Kaliber {kaliber}.\n\nEr ist keine Panzerabwehr im eigentlichen Sinn, auch wenn er in derselben Ecke des Tracks steht. Seine Stärke ist Fläche: gegen Infanterie in Deckung und gegen Gruppen, die sich hinter einer Mauer sammeln. Dort, wo ein Gewehr nur die Deckung trifft, kommt eine Granate darüber.\n\nDer Preis macht ihn zur Spezialwaffe. {preis} pro Leben sind mehr als jedes Sturmgewehr – und was er trifft, muss er auch wirklich treffen, sonst sind die Granaten verschwendet.\n\nSinnvoll ist er beim Angriff auf befestigte Stellungen, zusammen mit jemandem, der [HESCO-Wände](/datenbank/wardogs-hesco-wand/) und [Bunker](/datenbank/wardogs-bunker/) auf der anderen Seite kennt.",
         "felder": {
             "preis": "7500",
             "freischaltung": "Support 35",
@@ -607,7 +793,13 @@
             "kaliber": "40 mm",
             "rolle": "Granatwerfer"
         },
-        "gruppe": "panzerabwehr"
+        "gruppe": "panzerabwehr",
+        "fragen": [
+            {
+                "frage": "Wofür braucht man in Wardogs den MGL-40?",
+                "antwort": "Gegen Infanterie in Deckung und gegen Gruppen hinter Mauern – Flächenwirkung, keine Panzerabwehr. Er kostet {preis} pro Leben nach {freischaltkosten} Gebühr."
+            }
+        ]
     },
     {
         "slug": "wardogs-compound-bow",
@@ -619,7 +811,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Recon 16, einmalig rund $150.000, danach rund $1.350 pro Leben. Lautlos, ohne Mündungsfeuer.\nAnwendung: für Späher, die nicht entdeckt werden wollen. In einem Spiel, in dem ein Schuss die eigene Position verrät, ist Lautlosigkeit ein echter Vorteil – die Flugbahn verlangt allerdings Übung.",
+        "text": "Der **Compound Bow** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Lautlos, ohne Mündungsfeuer.\n\nEr ist für Späher gedacht, die nicht entdeckt werden wollen – und das ist in einem Spiel, in dem Mündungsfeuer eine Stellung über große Entfernung verrät, eine echte Eigenschaft und keine Spielerei.\n\n**Season 3 hat ihn spürbar verbessert:** Die Pfeilgeschwindigkeit ist um 50 Prozent gestiegen. Damit fällt weniger Vorhalt an, und Treffer auf bewegliche Ziele werden realistisch.\n\nDie Gebühr von {freischaltkosten} ist der Haken: Das ist mehr, als manche Scharfschützenwaffe kostet, für eine Waffe mit einer sehr engen Rolle. Wer sie spielt, spielt sie bewusst – als Aufklärer, der eine Position über eine ganze Runde hält und nicht gefunden werden will.",
         "felder": {
             "preis": "1350",
             "freischaltung": "Recon 16",
@@ -628,7 +820,13 @@
             "rolle": "Lautlose Waffe",
             "hinweis": "Season 3: Pfeilgeschwindigkeit um 50 % erhöht; neue Tarnung Digital Wood im Gold Market"
         },
-        "gruppe": "scharfschuetze"
+        "gruppe": "scharfschuetze",
+        "fragen": [
+            {
+                "frage": "Lohnt sich der Compound Bow in Wardogs?",
+                "antwort": "Für Aufklärer, die unentdeckt bleiben müssen. Lautlos und ohne Mündungsfeuer, seit Season 3 mit 50 Prozent höherer Pfeilgeschwindigkeit – die Gebühr von {freischaltkosten} ist allerdings hoch für eine Nischenwaffe."
+            }
+        ]
     },
     {
         "slug": "wardogs-mh-6",
@@ -1006,7 +1204,7 @@
             "Öffentliche Community-Datenbanken und Wikis zu WARDOGS (Stand September 2026)"
         ],
         "geprueft": "ja – Werte von Patrick Schauß (Warleek) im Spiel abgeglichen, Oktober 2026",
-        "text": "Der **Kodiak [Pickup]** kostet rund {preis} pro Stück und wird {freischaltung} freigeschaltet. Sechs Plätze, rund {tempo}.\n\nEr ist das **günstigste Fahrzeug pro Sitzplatz** im Spiel: ein ganzes Squad für rund $500 je Person, und das mit dem schnellsten Radfahrwerk. Wer regelmäßig zu sechst spielt, findet hier die wirtschaftlichste Lösung des Transportproblems.\n\nDer Aufpreis gegenüber dem normalen [Kodiak](/datenbank/wardogs-kodiak/) beträgt {aufpreis:wardogs-kodiak} – für zwei Sitze mehr. Gegen den [Z20 Lakota](/datenbank/wardogs-z20-lakota/) mit dreizehn Plätzen für {preis:wardogs-z20-lakota} gerechnet, ist der Pickup bei kleinen Gruppen klar vorn; ab zehn Leuten dreht sich das.\n\nEin Punkt gegen ihn: Sechs Leute in einem Fahrzeug sind sechs Leute, die eine einzige [AT-Mine](/datenbank/wardogs-at-mine/) erwischt.",
+        "text": "Der **Kodiak [Pickup]** kostet rund {preis} pro Stück und wird {freischaltung} freigeschaltet. Sechs Plätze, rund {tempo}.\n\nEr ist das **günstigste Fahrzeug pro Sitzplatz** im Spiel: sechs Leute zum Preis von gut zwei [Bobcats](/datenbank/wardogs-bobcat/), und das mit dem schnellsten Radfahrwerk. Wer regelmäßig zu sechst spielt, findet hier die wirtschaftlichste Lösung des Transportproblems.\n\nDer Aufpreis gegenüber dem normalen [Kodiak](/datenbank/wardogs-kodiak/) beträgt {aufpreis:wardogs-kodiak} – für zwei Sitze mehr. Gegen den [Z20 Lakota](/datenbank/wardogs-z20-lakota/) mit dreizehn Plätzen für {preis:wardogs-z20-lakota} gerechnet, ist der Pickup bei kleinen Gruppen klar vorn; ab zehn Leuten dreht sich das.\n\nEin Punkt gegen ihn: Sechs Leute in einem Fahrzeug sind sechs Leute, die eine einzige [AT-Mine](/datenbank/wardogs-at-mine/) erwischt.",
         "felder": {
             "preis": "3000",
             "freischaltung": "Driver 10",
@@ -1655,13 +1853,19 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Schrotflinte im Kaliber 12 Gauge. Zur Freischaltung und zum Preis liegen uns keine belastbaren Zahlen vor – die Quelle führt den Eintrag ohne Preisangabe.\nAnwendung: wie bei der MP43 kurze Distanz, Gebäude, Gräben. Solange die Zahlen fehlen, ist die MP43 für $400 die Flinte, über die man sicher etwas sagen kann.",
+        "text": "Die **M12G** ist eine Schrotflinte im Kaliber {kaliber} mit Inventarfläche 1×1. **Zur Freischaltung und zum Preis liegen uns keine belastbaren Zahlen vor** – die Quelle führt den Eintrag ohne Preisangabe.\n\nBemerkenswert ist die Inventarfläche: 1×1 ist winzig für eine Langwaffe. Wenn das stimmt, wäre sie die einzige Schrotflinte, die sich als Zweitwaffe tragen lässt, ohne den halben Rucksack zu belegen – und damit eine echte Ergänzung zu einem Sturmgewehr, statt ein Ersatz dafür.\n\nBelegen können wir das nicht. Ohne Preis und Freischaltstufe lässt sich auch nicht sagen, ob sie gegenüber der [MP43](/datenbank/wardogs-mp43/) für {preis:wardogs-mp43} oder der [M500](/datenbank/wardogs-m500/) für {preis:wardogs-m500} eine Überlegung wert ist.\n\nWer sie im Händler findet, schreibt uns Preis und Stufe – das ist eine der Lücken, die sich mit einem Blick schließen lässt.",
         "felder": {
             "kaliber": "12 Gauge",
             "rolle": "Schrotflinte",
             "hinweis": "Inventarfläche 1×1; Preis in der Quelle nicht angegeben"
         },
-        "gruppe": "schrotflinte"
+        "gruppe": "schrotflinte",
+        "fragen": [
+            {
+                "frage": "Was kostet die M12G in Wardogs?",
+                "antwort": "Das ist nicht belegt. Keine uns bekannte Quelle nennt Preis oder Freischaltstufe; bekannt ist nur das Kaliber {kaliber} und die Inventarfläche 1×1."
+            }
+        ]
     },
     {
         "slug": "wardogs-l55a1-kanone",
@@ -1976,13 +2180,19 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Panzerabwehrmine für rund $650, mit 8,6 kg kein leichtes Gepäck.\nAnwendung: Zufahrten sperren, ohne jemanden hinstellen zu müssen. Eine Mine an der einzigen Brücke erledigt mehr als ein RPG-Schütze, der warten muss – aber nur, wenn sie dort liegt, wo der Gegner tatsächlich fährt.",
+        "text": "Die **AT-Mine** kostet rund {preis} pro Stück und wiegt mit 8,6 kg bei 2×1 Inventarfläche kein leichtes Gepäck.\n\nSie sperrt Zufahrten, ohne dass jemand dort stehen muss – ein Posten, der nicht schläft. Gegen Fahrzeuge ist das die wirtschaftlichste Waffe im Spiel: {preis} gegen einen [Humvee](/datenbank/wardogs-humvee/) für {preis:wardogs-humvee} oder einen [T-72B3](/datenbank/wardogs-t-72/) für {preis:wardogs-t-72}.\n\nDer Preis steht im Gewicht. 8,6 kg sind mehr als jedes Magazin, und wer zwei Minen trägt, trägt sie statt Panzerung oder Munition.\n\nRichtig gelegt wird sie nicht auf die Straße, sondern **hinter die Kurve** – dort, wo ein Fahrer sie nicht mehr sieht, wenn er sie sieht. Zusammen mit einem [Hedgehog](/datenbank/wardogs-hedgehog/) für {baukosten:wardogs-hedgehog}, der zum Ausweichen zwingt, wird daraus eine Falle.",
         "felder": {
             "preis": "650",
             "rolle": "Panzerabwehrmine",
             "hinweis": "Inventarfläche 2×1, 8,6 kg"
         },
-        "gruppe": "sprengstoff"
+        "gruppe": "sprengstoff",
+        "fragen": [
+            {
+                "frage": "Wie legt man in Wardogs AT-Minen richtig?",
+                "antwort": "Nicht offen auf die Fahrbahn, sondern hinter Kurven und an Ausweichstellen – idealerweise kombiniert mit einer Sperre, die Fahrzeuge dorthin zwingt. Eine Mine kostet {preis}."
+            }
+        ]
     },
     {
         "slug": "wardogs-claymore",
@@ -1993,7 +2203,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Recon 23, einmalig rund $90.000, danach rund $900 pro Stück, 1,6 kg. Season 2 hat die Stufe um eine nach hinten gesetzt und die Gebühr von $50.000 auf $90.000 angehoben.\nAnwendung: den Rücken einer Stellung sichern. In einem Treppenhaus oder an der Rückseite einer FOB ersetzt sie den Mann, der sonst dort stehen müsste – und sie schläft nicht ein.",
+        "text": "Die **Claymore** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Stück bei 1,6 kg. Season 2 hat die Stufe nach hinten gesetzt und die Gebühr von $50.000 angehoben.\n\nSie ist die Richtmine gegen Infanterie – das Gegenstück zur [AT-Mine](/datenbank/wardogs-at-mine/), die auf Fahrzeuge wartet. Mit 1,6 kg wiegt sie deutlich weniger als deren 8,6 kg und lässt sich damit eher nebenbei mitnehmen.\n\nRichtungswirkung heißt: Sie muss **stimmen**. Eine Claymore, die in die falsche Richtung zeigt, ist {preis} für nichts. Gute Plätze sind Türen von innen, Treppenaufgänge und der eigene Rücken, wenn man eine Stellung über längere Zeit hält.\n\nFür Recon-Spieler in einer festen Position ist sie die Versicherung gegen den, der sich anschleicht, während man durch das Zielfernrohr sieht.",
         "felder": {
             "preis": "900",
             "rolle": "Richtmine gegen Infanterie",
@@ -2001,7 +2211,13 @@
             "freischaltung": "Recon 23",
             "freischaltkosten": "90000"
         },
-        "gruppe": "sprengstoff"
+        "gruppe": "sprengstoff",
+        "fragen": [
+            {
+                "frage": "Wofür braucht man in Wardogs eine Claymore?",
+                "antwort": "Zur Sicherung des eigenen Rückens und enger Zugänge gegen Infanterie. Sie wirkt gerichtet – die Ausrichtung entscheidet. {preis} pro Stück nach {freischaltkosten} Gebühr ab {freischaltung}."
+            }
+        ]
     },
     {
         "slug": "wardogs-fob",
@@ -2161,12 +2377,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Weiße Rauchgranate für rund $100 – das billigste Werkzeug im Spiel, gemessen an dem, was es rettet.\nAnwendung: Sichtlinien brechen. Zwischen Schützen und Ziel werfen, nicht auf das Ziel. Eine Granate deckt einen kompletten Rettungsvorgang ab: aufstellen und anschließend heilen.",
+        "text": "Die **M18 Rauchgranate: Weiß** kostet rund {preis} und ist – gemessen an dem, was sie rettet – das billigste Werkzeug in Wardogs.\n\nIhre Aufgabe ist, Sichtlinien zu brechen. Zwischen einem Schützen und dir eine Wand aus Rauch zu stellen, kostet {preis}; die Alternative kostet ein Leben samt Loadout, und das sind schnell mehrere tausend Dollar.\n\nDrei Standardsituationen: eine offene Fläche überqueren, einen Verwundeten herausziehen, eine Stellung aufgeben. In allen drei Fällen wirft man den Rauch **nicht auf sich selbst**, sondern zwischen sich und die Richtung, aus der geschossen wird.\n\nDie Gegenmaßnahme heißt Wärmesicht. Die [IR-Brille](/datenbank/wardogs-ir-brille/) und der [Infrarot-Entfernungsmesser](/datenbank/wardogs-ir-entfernungsmesser/) sehen durch Rauch – wobei Letzterer mit Season 3 aus dem Händler genommen wurde.",
         "felder": {
             "preis": "100",
             "rolle": "Sichtschutz"
         },
-        "gruppe": "signal"
+        "gruppe": "signal",
+        "fragen": [
+            {
+                "frage": "Wie benutzt man Rauchgranaten in Wardogs richtig?",
+                "antwort": "Zwischen sich und den Schützen werfen, nicht auf die eigene Position. Für {preis} bricht das eine Sichtlinie – die billigste Lebensversicherung im Spiel."
+            }
+        ]
     },
     {
         "slug": "wardogs-m18-rauch-schwarz",
@@ -2177,13 +2399,19 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Schwarzer Rauch ab Medic 23 für rund $100. Season 2 hat ihn von Stufe 21 nach hinten verschoben. Deckt wie der weiße, fällt in hellem Gelände stärker auf und in dunkler Umgebung weniger.\nAnwendung: dieselbe wie beim weißen Rauch – die Farbe ist eine Frage des Untergrunds, nicht der Wirkung.",
+        "text": "Die **M18 Rauchgranate: Schwarz** kostet rund {preis} und wird {freischaltung} freigeschaltet – Season 2 hat sie von Stufe 21 nach hinten verschoben.\n\nSie deckt wie die [weiße Variante](/datenbank/wardogs-m18-rauch-weiss/) und unterscheidet sich nur in einem Punkt: Sie **fällt in hellem Gelände stärker auf**. Das ist kein Nachteil, sondern eine Entscheidung – schwarzer Rauch sagt jedem im Umkreis, dass hier etwas passiert.\n\nTaktisch lässt sich das nutzen. Wer eine Flanke vortäuschen will, wirft schwarz; wer unauffällig herauskommen will, wirft weiß. Zwei Werkzeuge mit derselben Mechanik und entgegengesetzter Wirkung auf die Aufmerksamkeit.\n\nDass sie im Medic-Track liegt, passt dazu: Ein Sanitäter, der einen Verwundeten herauszieht, will manchmal gesehen werden – von den eigenen Leuten.",
         "felder": {
             "preis": "100",
             "rolle": "Sichtschutz",
             "freischaltung": "Medic 23"
         },
-        "gruppe": "signal"
+        "gruppe": "signal",
+        "fragen": [
+            {
+                "frage": "Was ist der Unterschied zwischen weißem und schwarzem Rauch in Wardogs?",
+                "antwort": "Beide decken gleich. Schwarzer Rauch fällt in hellem Gelände stärker auf – nützlich zum Täuschen, hinderlich beim unauffälligen Rückzug. Er kostet {preis} ab {freischaltung}."
+            }
+        ]
     },
     {
         "slug": "wardogs-m18-signal-feind",
@@ -2193,12 +2421,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Signalrauch für rund $50, der dem Team „hier sind Gegner“ sagt.\nAnwendung: Eine geworfene Markierung sieht jeder, auch ohne Funk. Günstiger und schneller als eine Beschreibung über Sprache, besonders wenn mehrere Squads auf derselben Seite kämpfen.",
+        "text": "Die **M18 Signalgranate: Feind** kostet rund {preis} und sagt dem Team „hier sind Gegner\".\n\nEine geworfene Markierung sieht jeder – auch ohne Funk, auch ohne Sprachkanal, auch der Mitspieler, der gerade nicht zuhört. Das ist der Punkt: In einem Spiel mit großen Teams ist Kommunikation das Nadelöhr, und ein farbiger Rauch löst es ohne ein Wort.\n\nGünstiger und schneller als jede Erklärung über Sprache. Zum Vergleich: Das [Fernglas](/datenbank/wardogs-fernglas/) für {preis:wardogs-fernglas} markiert einzelne Gegner präzise und bringt Geld – die Signalgranate markiert einen **Ort** und erreicht jeden, der hinsieht.\n\nBeides zusammen ist stark: Fernglas für den Einzelnen, Signalrauch für die Richtung, aus der sie kommen.",
         "felder": {
             "preis": "50",
             "rolle": "Markierung fürs Team"
         },
-        "gruppe": "signal"
+        "gruppe": "signal",
+        "fragen": [
+            {
+                "frage": "Wie markiert man in Wardogs Gegner für das Team?",
+                "antwort": "Mit dem Fernglas einzelne Gegner – das bringt zusätzlich Geld – oder mit der Signalgranate „Feind\" für {preis} einen ganzen Bereich, den jeder ohne Funk sieht."
+            }
+        ]
     },
     {
         "slug": "wardogs-m18-signal-freund",
@@ -2208,12 +2442,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Signalrauch für rund $50 zur Kennzeichnung eigener Stellungen.\nAnwendung: gegen Beschuss aus den eigenen Reihen. Wer eine Position hält, die von hinten wie eine gegnerische aussieht, wirft diese Granate, bevor es jemand anders klärt.",
+        "text": "Die **M18 Signalgranate: Freund** kostet rund {preis} und kennzeichnet eigene Stellungen.\n\nSie ist das Mittel gegen Beschuss aus den eigenen Reihen – und das ist in Wardogs ein reales Problem, nicht ein theoretisches. Wer eine Position hält, die von hinten angelaufen wird, hat zwei Möglichkeiten: hoffen oder markieren.\n\nBesonders wichtig ist sie für Rollen, die dort stehen, wo eigentlich keine eigenen Leute sein sollten: ein Aufklärer weit vorn, ein Trupp, der eine Flanke genommen hat, ein Fahrzeug, das aus ungewohnter Richtung kommt. Genau dort entstehen Teamkills.\n\nZum Thema gehört der Guide [Fahren und fliegen ohne Teamkill](/guides/fahrzeuge-ohne-teamkill/) – die meisten Vorfälle passieren mit Fahrzeugen, nicht mit Gewehren.",
         "felder": {
             "preis": "50",
             "rolle": "Markierung fürs Team"
         },
-        "gruppe": "signal"
+        "gruppe": "signal",
+        "fragen": [
+            {
+                "frage": "Wie verhindert man in Wardogs Teamkills?",
+                "antwort": "Eigene Stellungen markieren, vor allem weit vorn und auf Flanken. Die Signalgranate „Freund\" kostet {preis} – weniger, als ein Mitspieler kostet, den dein eigenes Team erschießt."
+            }
+        ]
     },
     {
         "slug": "wardogs-m18-signal-landezone",
@@ -2223,12 +2463,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Signalrauch für rund $50, der eine Landezone kennzeichnet.\nAnwendung: Dem Piloten sagen, wo er aufsetzen soll, ohne ihn durch Beschreibungen zu lotsen. Wirf früh genug – ein Helikopter braucht den Anflug, nicht den Endpunkt.",
+        "text": "Die **M18 Signalgranate: Landezone** kostet rund {preis} und kennzeichnet, wo ein Hubschrauber aufsetzen soll.\n\nDamit erspart sie dem Piloten die Beschreibung. „Hinter dem Hügel, links vom Baum\" ist aus der Luft unbrauchbar; eine Rauchsäule nicht. Für einen [Z20 Lakota](/datenbank/wardogs-z20-lakota/) mit dreizehn Leuten an Bord entscheidet das darüber, ob die Ladung in Deckung oder im Feuer landet.\n\nDer zweite, seltener genutzte Zweck: Sie zeigt dem Piloten den **Wind** nicht, aber die Lage – wer den Rauch aus der Luft sieht, sieht auch, wie groß die freie Fläche ist.\n\nEin Hinweis aus der Praxis: Nicht in die Landezone werfen, sondern daneben. Ein Helikopter, der in eine Rauchsäule sinkt, sieht nichts mehr.",
         "felder": {
             "preis": "50",
             "rolle": "Markierung fürs Team"
         },
-        "gruppe": "signal"
+        "gruppe": "signal",
+        "fragen": [
+            {
+                "frage": "Wie markiert man in Wardogs eine Landezone?",
+                "antwort": "Mit der Signalgranate „Landezone\" für {preis} – und zwar neben die Fläche, nicht mitten hinein. Ein Pilot, der in den eigenen Rauch sinkt, sieht den Boden nicht."
+            }
+        ]
     },
     {
         "slug": "wardogs-m18-signal-nachschub",
@@ -2238,12 +2484,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Signalrauch für rund $50 mit der Bedeutung „hier wird Nachschub gebraucht“.\nAnwendung: Der Logistiker sieht die Markierung aus der Entfernung und muss nicht nachfragen. Besonders nützlich, wenn eine FOB gerade ausgebaut wird und niemand Zeit zum Tippen hat.",
+        "text": "Die **M18 Signalgranate: Nachschub** kostet rund {preis} und bedeutet „hier wird Nachschub gebraucht\".\n\nDer Logistiker sieht die Markierung aus der Entfernung und muss nicht erst fragen, wo er hinfahren soll. Das klingt nach einer Kleinigkeit und ist in der Praxis der Unterschied zwischen einem Nachschubsystem, das funktioniert, und einem, bei dem alle schreiben „brauche Ammo\" und niemand weiß, wo.\n\nDazu gehört eine Rechnung: Eine [Palette Build-Supplies](/datenbank/wardogs-palette-build/) kostet {preis:wardogs-palette-build} im Einkauf und bringt bei der Abgabe rund $1.250. Wer Logistik spielt, verdient daran – und eine Markierung für {preis} spart ihm die Suche.\n\nBesonders sinnvoll an [Mörsern](/datenbank/wardogs-l81-moerser/) und Flugabwehr, die ohne [Ammo-Paletten](/datenbank/wardogs-palette-ammo/) stillstehen.",
         "felder": {
             "preis": "50",
             "rolle": "Markierung fürs Team"
         },
-        "gruppe": "signal"
+        "gruppe": "signal",
+        "fragen": [
+            {
+                "frage": "Wie fordert man in Wardogs Nachschub an?",
+                "antwort": "Mit der Signalgranate „Nachschub\" für {preis}. Sie zeigt dem Logistiker die Stelle, statt ihn suchen zu lassen – besonders wichtig an Mörsern und Flugabwehr."
+            }
+        ]
     },
     {
         "slug": "wardogs-m18-signal-fahrzeug",
@@ -2253,12 +2505,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Signalrauch für rund $50 für ein beschädigtes Fahrzeug.\nAnwendung: Ruft jemanden mit Schraubenschlüssel oder zur Reparaturstation. Ein geretteter Panzer entspricht einem fünfstelligen Betrag – die $50 sind die beste Versicherung im Katalog.",
+        "text": "Die **M18 Signalgranate: Fahrzeug beschädigt** kostet rund {preis} und ruft jemanden mit [Schraubenschlüssel](/datenbank/wardogs-schraubenschluessel/) oder weist den Weg zur [Reparaturstation](/datenbank/wardogs-reparaturstation/).\n\nDie Rechnung dahinter ist die deutlichste aller Signalgranaten. Ein geretteter [L2A6](/datenbank/wardogs-l2a6/) entspricht {preis:wardogs-l2a6}, ein geretteter [T-72B3](/datenbank/wardogs-t-72/) {preis:wardogs-t-72}. Die Markierung kostet {preis}.\n\nPraktisch heißt das: Ein beschädigter Panzer sollte nie stumm stehen bleiben. Entweder er kommt zur Station, oder die Station kommt in Form eines Mannes mit [Wrench](/datenbank/wardogs-wrench/) zu ihm – und das passiert nur, wenn jemand weiß, dass er da ist.\n\nFür Fahrzeugbesatzungen gehört diese Granate deshalb ins Standardgepäck, direkt neben das Reparaturwerkzeug.",
         "felder": {
             "preis": "50",
             "rolle": "Markierung fürs Team"
         },
-        "gruppe": "signal"
+        "gruppe": "signal",
+        "fragen": [
+            {
+                "frage": "Was tun, wenn in Wardogs das Fahrzeug beschädigt ist?",
+                "antwort": "Markieren statt warten. Die Signalgranate „Fahrzeug beschädigt\" kostet {preis} – ein geretteter Kampfpanzer ist {preis:wardogs-t-72} wert."
+            }
+        ]
     },
     {
         "slug": "wardogs-m18-signal-alarm",
@@ -2268,12 +2526,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Allgemeiner Alarmrauch für rund $50.\nAnwendung: wenn etwas passiert, wofür es keine eigene Signalfarbe gibt. Taugt als Sammelpunkt oder als „kommt hierher, sofort“.",
+        "text": "Die **M18 Signalgranate: Alarm** kostet rund {preis} und ist der allgemeine Alarmrauch – für alles, wofür es keine eigene Signalfarbe gibt.\n\nGenau das macht sie nützlich und zugleich schwierig. Sie taugt als Sammelpunkt, als „kommt hierher\", als „hier passiert gleich etwas\". Was sie bedeutet, muss das Team vorher abgesprochen haben – ein Signal ohne vereinbarte Bedeutung ist nur Rauch.\n\nDie anderen fünf Signalgranaten sind eindeutig: [Feind](/datenbank/wardogs-m18-signal-feind/), [Freund](/datenbank/wardogs-m18-signal-freund/), [Landezone](/datenbank/wardogs-m18-signal-landezone/), [Nachschub](/datenbank/wardogs-m18-signal-nachschub/) und [Fahrzeug beschädigt](/datenbank/wardogs-m18-signal-fahrzeug/). Diese hier ist die Reserve für den Rest.\n\nFür eingespielte Gruppen ist sie dadurch die wertvollste: Was sie heißt, legt ihr fest. Für zufällige Teams ist sie die nutzloseste.",
         "felder": {
             "preis": "50",
             "rolle": "Markierung fürs Team"
         },
-        "gruppe": "signal"
+        "gruppe": "signal",
+        "fragen": [
+            {
+                "frage": "Wofür ist in Wardogs die Alarm-Signalgranate gut?",
+                "antwort": "Für alles, was keine eigene Farbe hat – Sammelpunkt, Warnung, Treffpunkt. Für {preis} nützlich, aber nur in einem Team, das ihre Bedeutung vorher vereinbart hat."
+            }
+        ]
     },
     {
         "slug": "wardogs-m67-splittergranate",
@@ -2283,12 +2547,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Die Standard-Handgranate für rund $200.\nAnwendung: Gegner aus Deckung und aus Räumen holen. In Gebäuden und Gräben wirksamer als jede Waffe, weil sie um Ecken wirkt – genau dort, wo deine Kugeln es nicht tun.",
+        "text": "Die **M67 Splittergranate** ist die Standard-Handgranate in Wardogs und kostet rund {preis}.\n\nSie holt Gegner aus Deckung und aus Räumen – in Gebäuden und Gräben wirksamer als jede Waffe, weil sie um Ecken wirkt. Das ist der Punkt: Eine Granate braucht keine Sichtlinie, und Sichtlinien sind genau das, was ein Verteidiger kontrolliert.\n\nBei {preis} gehört sie in jedes Loadout, das in bebautes Gelände geht. Zum Vergleich: Eine [Weiße Rauchgranate](/datenbank/wardogs-m18-rauch-weiss/) kostet {preis:wardogs-m18-rauch-weiss}, eine [Claymore](/datenbank/wardogs-claymore/) {preis:wardogs-claymore}.\n\nWer einen Raum nicht sprengen, sondern nur betreten will, nimmt die [Blendgranate](/datenbank/wardogs-blendgranate/) – sie wirkt ohne Splitter und damit auch dann, wenn eigene Leute schon drin sind.",
         "felder": {
             "preis": "200",
             "rolle": "Splitterwirkung"
         },
-        "gruppe": "wurfwaffe"
+        "gruppe": "wurfwaffe",
+        "fragen": [
+            {
+                "frage": "Wie viele Granaten sollte man in Wardogs mitnehmen?",
+                "antwort": "So viele, wie der Rucksack verträgt – bei {preis} pro Stück ist der Preis nicht das Argument, sondern das Gewicht. In Gebäudekämpfen sind zwei bis drei realistisch."
+            }
+        ]
     },
     {
         "slug": "wardogs-he-granate",
@@ -2298,12 +2568,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Sprenggranate mit Druckwirkung statt Splitterbild. Die Quelle führt sie ohne Preisangabe.\nAnwendung: gegen Material und leichte Befestigungen. Wo die M67 gegen Personen wirkt, zielt diese auf das, was dahinter steht.",
+        "text": "Die **HE-Granate** arbeitet mit Druckwirkung statt Splitterbild. Die Quelle führt sie **ohne Preisangabe**.\n\nDer Unterschied zur [M67 Splittergranate](/datenbank/wardogs-m67-splittergranate/) für {preis:wardogs-m67-splittergranate} ist das Wirkprinzip: Splitter wirken gegen ungeschützte Menschen, Druck wirkt gegen Material und leichte Befestigungen. Wo die M67 jemanden hinter [Sandsäcken](/datenbank/wardogs-sandsaecke/) nicht erreicht, kann eine Sprengwirkung die Sandsäcke selbst treffen.\n\nBelegen lässt sich das nicht. Ohne Preis und ohne Schadenswerte bleibt es bei der Richtung, die der Name vorgibt.\n\nWas dagegen belegt ist: Gegen Fahrzeuge und Kampfpanzer reicht keine Handgranate. Dafür gibt es [C4](/datenbank/wardogs-c4/) für {preis:wardogs-c4} und [Panzerabwehr](/datenbank/wardogs-rpg-7/).",
         "felder": {
             "rolle": "Sprengwirkung",
             "hinweis": "Preis in der Quelle nicht angegeben"
         },
-        "gruppe": "wurfwaffe"
+        "gruppe": "wurfwaffe",
+        "fragen": [
+            {
+                "frage": "Was ist der Unterschied zwischen HE-Granate und Splittergranate in Wardogs?",
+                "antwort": "Die HE-Granate wirkt über Druck, die M67 über Splitter. Druck trifft eher Material und Befestigungen, Splitter eher ungeschützte Gegner. Einen Preis nennt keine uns bekannte Quelle."
+            }
+        ]
     },
     {
         "slug": "wardogs-blendgranate",
@@ -2313,12 +2589,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Blendgranate ohne Splitterwirkung. Preis ist in der Quelle nicht angegeben.\nAnwendung: einen Raum betreten, ohne ihn vorher zu sprengen. Der Vorteil gegenüber der Splittergranate ist, dass Geiseln der eigenen Sorte – also Teamkollegen – sie überleben.",
+        "text": "Die **Blendgranate** wirkt ohne Splitter. Die Quelle nennt **keinen Preis**.\n\nIhr Vorteil liegt genau in dem, was sie nicht tut: Sie verletzt niemanden. Damit lässt sich ein Raum betreten, in dem schon eigene Leute stehen, oder ein Gebäude stürmen, in dem Geiseln der eigenen Seite – also Kameraden am Boden – liegen. Eine [M67](/datenbank/wardogs-m67-splittergranate/) für {preis:wardogs-m67-splittergranate} erledigt in derselben Lage beide Seiten.\n\nDer zweite Einsatz ist defensiv: Wer aus einer Stellung heraus muss, blendet den Zugang und läuft. Das kostet keinen Schaden und kauft Sekunden.\n\nOhne Zahlen zu Wirkdauer und Radius bleibt die Einschätzung grob. Dass sie keine Splitter macht, ist dabei die wichtigere Eigenschaft – und die steht fest.",
         "felder": {
             "rolle": "Blendwirkung",
             "hinweis": "Preis in der Quelle nicht angegeben"
         },
-        "gruppe": "wurfwaffe"
+        "gruppe": "wurfwaffe",
+        "fragen": [
+            {
+                "frage": "Wann nimmt man in Wardogs eine Blendgranate statt einer Splittergranate?",
+                "antwort": "Wenn eigene Leute im Raum sind oder sein könnten. Sie blendet, ohne zu verletzen – eine M67 würde in derselben Lage beide Seiten treffen."
+            }
+        ]
     },
     {
         "slug": "wardogs-c4",
@@ -2329,14 +2611,20 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Platzierbarer Sprengstoff für rund $250, gezündet über den Fernzünder.\nAnwendung: Fahrzeuge aus dem Hinterhalt, Mauern öffnen, eigene Bauwerke sprengen. Anders als eine Granate wartet C4, bis du bereit bist – das ist der ganze Unterschied.",
+        "text": "Die **C4-Ladung** kostet rund {preis} pro Stück und wird {freischaltung} freigeschaltet. **Season 3 hat sie von Assault 4 auf {freischaltung} verschoben**, um Platz für die Multi-Track-Freischaltungen zu schaffen.\n\nSie wird platziert und über den [Fernzünder](/datenbank/wardogs-fernzuender/) für {preis:wardogs-fernzuender} gezündet – beides zusammen ist ein System, einzeln nützt keines etwas.\n\nDrei Einsätze: Fahrzeuge aus dem Hinterhalt, Mauern öffnen, eigene Bauwerke sprengen. Der dritte wird unterschätzt – eine eigene [HESCO-Wand](/datenbank/wardogs-hesco-wand/), die im Weg steht, ist mit C4 schneller weg als mit Abbauen.\n\nBei {preis} pro Ladung ist sie günstig genug, um sie als Werkzeug zu behandeln und nicht als Waffe. Gegen einen fahrenden Panzer ist sie allerdings schwer anzubringen – dafür gibt es die [AT-Mine](/datenbank/wardogs-at-mine/).",
         "felder": {
             "preis": "250",
             "rolle": "Platzierter Sprengstoff",
             "freischaltung": "Assault 5",
             "hinweis": "Season 3: von Assault 4 auf 5 verschoben, um Platz für die Multi-Track-Freischaltungen zu schaffen"
         },
-        "gruppe": "sprengstoff"
+        "gruppe": "sprengstoff",
+        "fragen": [
+            {
+                "frage": "Wie benutzt man C4 in Wardogs?",
+                "antwort": "Platzieren und mit dem Fernzünder auslösen – beides braucht man zusammen. C4 kostet {preis} pro Ladung ab {freischaltung}, der Zünder {preis:wardogs-fernzuender}."
+            }
+        ]
     },
     {
         "slug": "wardogs-fernzuender",
@@ -2348,14 +2636,20 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Assault 4, rund $650. Mit Season 2 sind Fernzünder und C4 vom Support- in den Assault-Track gewandert (vorher Support 2), und der Zünder ist von $550 auf $650 gestiegen. Ohne ihn liegt das C4 nur herum.\nAnwendung: Pflichtkauf, sobald du C4 mitnimmst. Rechne ihn beim Loadout mit ein – wer nur den Sprengstoff kauft, hat $250 für Dekoration ausgegeben. Die XP dafür fließen jetzt in den Assault-Track.",
+        "text": "Der **Fernzünder** kostet rund {preis} und wird {freischaltung} freigeschaltet. Mit Season 2 sind Fernzünder und [C4](/datenbank/wardogs-c4/) vom Support- in den Assault-Track gewandert (vorher Support 2).\n\n**Season 3 hat sein Gewicht von 1,5 auf 0,2 kg korrigiert** – eine Korrektur, kein Buff, aber eine spürbare: 1,3 kg sind in einem engen Loadout eine Granate.\n\nEr zündet C4 und Sprengfallen. Ohne ihn liegt die Ladung nur herum; mit ihm wird aus einer platzierten Ladung ein Hinterhalt, der genau dann ausgelöst wird, wenn das richtige Ziel darübersteht.\n\nDas ist der entscheidende Unterschied zur [AT-Mine](/datenbank/wardogs-at-mine/) für {preis:wardogs-at-mine}: Die Mine entscheidet selbst und erwischt das erste Fahrzeug. C4 mit Zünder wartet auf den Panzer und lässt den Kodiak durch.",
         "felder": {
             "preis": "650",
             "rolle": "Zündet C4 und Sprengfallen",
             "freischaltung": "Assault 4",
             "hinweis": "Season 3: Gewicht von 1,5 auf 0,2 kg korrigiert"
         },
-        "gruppe": "sprengstoff"
+        "gruppe": "sprengstoff",
+        "fragen": [
+            {
+                "frage": "Wozu braucht man in Wardogs den Fernzünder?",
+                "antwort": "Zum Auslösen von C4 und Sprengfallen. Er kostet {preis} ab {freischaltung} und macht aus einer platzierten Ladung einen gezielten Hinterhalt – anders als eine Mine, die das erste Fahrzeug nimmt."
+            }
+        ]
     },
     {
         "slug": "wardogs-ied",
@@ -2366,13 +2660,19 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Sprengfalle für rund $300.\nAnwendung: Zufahrten und Engstellen sichern, ohne jemanden hinzustellen. Wie die AT-Mine ein Posten, der nicht schläft – nur eben gegen alles, was vorbeikommt.",
+        "text": "Die **Unkonventionelle Sprengvorrichtung** kostet rund {preis} pro Stück. **Season 3 hat ihr Gewicht von 1,5 auf 2,7 kg korrigiert** – sie ist also schwerer geworden, nicht leichter.\n\nSie sichert Zufahrten und Engstellen, ohne dass jemand dort stehen muss. Wie die [AT-Mine](/datenbank/wardogs-at-mine/) ist sie ein Posten, der nicht schläft – nur deutlich billiger: {preis} gegenüber {preis:wardogs-at-mine}.\n\nDer Unterschied liegt im Ziel. Eine AT-Mine wartet auf Fahrzeuge und wiegt 8,6 kg; diese hier ist leichter und gegen das gedacht, was zu Fuß kommt.\n\nPraktisch gehört sie an Stellen, die ein Angreifer nehmen **muss** – ein Treppenhaus, eine Brücke, der einzige Durchlass in einer Mauer. An einer Stelle, die man umgehen kann, wird sie umgangen.",
         "felder": {
             "preis": "300",
             "rolle": "Sprengfalle",
             "hinweis": "Season 3: Gewicht von 1,5 auf 2,7 kg korrigiert"
         },
-        "gruppe": "sprengstoff"
+        "gruppe": "sprengstoff",
+        "fragen": [
+            {
+                "frage": "Was ist der Unterschied zwischen IED und AT-Mine in Wardogs?",
+                "antwort": "Die AT-Mine für {preis:wardogs-at-mine} wartet auf Fahrzeuge und wiegt 8,6 kg, die Sprengvorrichtung für {preis} ist leichter und gegen Infanterie an Engstellen gedacht."
+            }
+        ]
     },
     {
         "slug": "wardogs-gold-splittergranate",
@@ -2382,12 +2682,18 @@
             "Datenbank von wardogshub.uk (Stand Oktober 2026)"
         ],
         "geprueft": "noch nicht – übernommen aus der Datenbank von wardogshub.uk, Stand Oktober 2026",
-        "text": "Sonderausführung der Splittergranate. Zu Preis, Freischaltung und Unterschieden gegenüber der M67 liegen uns keine belastbaren Angaben vor.\nAnwendung: vermutlich dieselbe wie bei der M67. Solange die Zahlen fehlen, ist die normale Granate die, über die man etwas sagen kann.",
+        "text": "Die **Goldene Splittergranate** ist eine Sonderausführung der Splittergranate. **Zu Preis, Freischaltung und Unterschieden gegenüber der [M67](/datenbank/wardogs-m67-splittergranate/) liegen uns keine belastbaren Angaben vor.**\n\nDas ist die ehrliche Auskunft, und sie ist bei diesem Eintrag besonders wichtig: Sonderausführungen in Spielen sind oft rein kosmetisch – gleiche Wirkung, anderes Aussehen. Ob das hier zutrifft oder ob sie tatsächlich anders wirkt, können wir nicht sagen.\n\nSolange das offen ist, gilt die M67 für {preis:wardogs-m67-splittergranate} als die Granate, mit der sich planen lässt. Eine Waffe, deren Wirkung man nicht kennt, gehört nicht in ein Loadout, auf das man sich verlässt.\n\nWer beide im Spiel nebeneinander geworfen hat und einen Unterschied benennen kann, schreibt uns.",
         "felder": {
             "rolle": "Splitterwirkung (Sonderausführung)",
             "hinweis": "Preis und Freischaltung in der Quelle nicht angegeben"
         },
-        "gruppe": "wurfwaffe"
+        "gruppe": "wurfwaffe",
+        "fragen": [
+            {
+                "frage": "Ist die Goldene Splittergranate in Wardogs besser als die M67?",
+                "antwort": "Das ist nicht belegt. Zu Preis, Freischaltung und Wirkung liegen uns keine Angaben vor – möglicherweise ist es eine rein kosmetische Ausführung."
+            }
+        ]
     },
     {
         "slug": "wardogs-verband",
@@ -4093,7 +4399,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Assault 20, einmalig rund $100.000, danach rund $3.200 pro Leben. Das einzige neue Sturmgewehr der Season 2, im Kaliber 7,62 × 39 mm, und es nimmt im Assault-Track den Platz ein, auf dem vorher die M4 stand – die ist auf Stufe 28 gewandert. Das 28-Schuss-Magazin kommt mit.\nAnwendung: der neue Mittelweg der Assault-Linie. Achtung bei der Rechnung: Season 2 hat den Grundschaden von 7,62 × 39 mm um 19 % gesenkt, die TCX-SPR trifft also weniger hart als dieselbe Munition in Season 1. Dafür liegt sie laut Entwickler näher an M4 und FAL als vorher.",
+        "text": "Die **TCX-SPR** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Das einzige neue Sturmgewehr der Season 2, im Kaliber {kaliber}.\n\n**Season 3 hat sie spürbar verbessert:** weniger Rückstoß, weniger seitliche Drift im Dauerfeuer, und der Fehler, der im Liegen den Rückstoß erhöhte statt ihn zu senken, ist behoben. Der letzte Punkt ist der wichtigste – eine Waffe, die im Liegen schlechter wurde, war für jede Stellung die falsche Wahl.\n\nMit {kaliber} nimmt sie im Katalog eine Sonderstellung ein: mehr Masse pro Schuss als die 5-mm-Gewehre, dafür mehr Rückstoß und weniger Schuss pro Kilogramm.\n\nNach den Season-3-Änderungen ist sie für Spieler interessant, die aus Stellungen heraus arbeiten und den härteren Einzeltreffer suchen.",
         "felder": {
             "rolle": "Sturmgewehr",
             "hinweis": "Neu in Season 2 · Season 3: weniger Rückstoß und weniger seitliche Drift im Dauerfeuer; der Fehler, der im Liegen den Rückstoß aus dem Stand benutzte, ist behoben",
@@ -4103,7 +4409,13 @@
             "kaliber": "7,62 × 39 mm"
         },
         "gruppe": "sturmgewehr",
-        "sofort": true
+        "sofort": true,
+        "fragen": [
+            {
+                "frage": "Ist die TCX-SPR in Wardogs nach Season 3 besser geworden?",
+                "antwort": "Ja. Weniger Rückstoß, weniger seitliche Drift im Dauerfeuer, und der Fehler, der den Rückstoß im Liegen erhöhte, ist behoben."
+            }
+        ]
     },
     {
         "slug": "wardogs-m14",
@@ -4115,7 +4427,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Recon 25, einmalig rund $100.000, danach rund $7.400 pro Leben. Ein Selbstladegewehr mit Holzschaft im Kaliber .308 Winchester – die Lücke zwischen Sturmgewehr und Scharfschützengewehr.\nAnwendung: für Recon-Spieler die interessanteste der vier neuen Waffen: Ein DMR verlangt kein Ausharren auf einer Sichtlinie, sondern erlaubt Treffer auf Entfernung in Bewegung. Rechne den Schadens-Rework mit: .308 verliert in Season 2 25 % Grundschaden, und bei DMRs sind Kopf- und Oberkörpertreffer ausdrücklich schwächer als vorher. Sie schlägt härter zu als ein Sturmgewehr, ist aber kein schneller feuerndes Scharfschützengewehr.",
+        "text": "Die **M14** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Ein Selbstladegewehr mit Holzschaft im Kaliber {kaliber}, neu mit Season 2.\n\nSie schließt die Lücke zwischen Sturmgewehr und Scharfschützengewehr: halbautomatisch wie die [SVD](/datenbank/wardogs-svd/), im westlichen Präzisionskaliber wie die [BMR-308](/datenbank/wardogs-bmr-308/).\n\n**Season 3 hat sie deutlich gestärkt:** Sie tötet ungepanzert mit 2 statt 3 Körpertreffern und ohne Helm mit einem Kopftreffer. Gegen Panzerung bleibt sie dagegen auf mehrere Treffer angewiesen – das ist die Stelle, an der [AP-Munition](/datenbank/wardogs-munition-308-winchester/) den Unterschied macht.\n\nBei {preis} pro Leben ist sie kein Gelegenheitskauf. Für Spieler, die auf mittlerer Entfernung arbeiten und schnelle Folgeschüsse brauchen, ist sie trotzdem eine der besseren Waffen im Katalog.",
         "felder": {
             "rolle": "Marksman Rifle",
             "hinweis": "Neu in Season 2 · Season 3: tötet ungepanzert mit 2 statt 3 Körpertreffern und ohne Helm mit 1 Kopftreffer; gegen Panzerung 1–2 Treffer weniger, durch einen Stufe-3-Helm 2 statt 3 Kopftreffer",
@@ -4125,7 +4437,13 @@
             "kaliber": ".308 Winchester"
         },
         "gruppe": "scharfschuetze",
-        "sofort": true
+        "sofort": true,
+        "fragen": [
+            {
+                "frage": "Was kann die M14 in Wardogs?",
+                "antwort": "Halbautomatische Präzision auf mittlere Entfernung. Seit Season 3 tötet sie ungepanzert mit 2 Körpertreffern oder einem Kopftreffer ohne Helm; gegen Panzerung braucht sie mehrere Treffer."
+            }
+        ]
     },
     {
         "slug": "wardogs-pp-19-bizon",
@@ -4136,7 +4454,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Von Anfang an freigeschaltet, rund $1.000 pro Leben – die neue freie Maschinenpistole des Medic. Sie übernimmt den Platz der AMP-9, die seit Season 2 Medic 20 und rund $75.000 Gebühr kostet. Das 53-Schuss-Magazin liegt bei.\nAnwendung: die Standardwaffe für Sanitäter ab Runde eins, und mit 53 Schuss im Magazin die mit der längsten Feuerdauer in dieser Klasse. Kurz genug, um beim Aufstellen eines Gefallenen nicht im Weg zu sein, und billig genug, um sie nicht zu vermissen.",
+        "text": "Die **PP-19 Bizon** ist {freischaltung} und kostet rund {preis} pro Leben – die freie Maschinenpistole des Medic, neu mit Season 2. Kaliber {kaliber}.\n\nSie übernimmt den Platz, den vorher die [AMP-9](/datenbank/wardogs-amp-9/) hatte, die seit Season 2 hinter eine Freischaltung gewandert ist. Für Sanitäter heißt das: Du beginnst nicht mehr mit einem Gewehr, das Platz im Rucksack frisst, sondern mit einer MP, die dir Raum für Material lässt.\n\nGenau darin liegt ihr Wert. Eine Maschinenpistole ist auf unter 50 Meter brauchbar und darüber hinaus nicht – für einen Medic, der hinter der Linie arbeitet, ist das die richtige Reichweite. Wer weiter schießen will, spielt keinen Sanitäter.\n\nDer nächste Schritt ist die [PP-19 Vityaz](/datenbank/wardogs-pp-19-vityaz/) für {preis:wardogs-pp-19-vityaz} pro Leben plus {freischaltkosten:wardogs-pp-19-vityaz} Gebühr.",
         "felder": {
             "rolle": "Maschinenpistole",
             "hinweis": "Neu in Season 2",
@@ -4145,7 +4463,13 @@
             "kaliber": "9 × 19 mm"
         },
         "gruppe": "maschinenpistole",
-        "start": true
+        "start": true,
+        "fragen": [
+            {
+                "frage": "Welche Waffe für Medic in Wardogs?",
+                "antwort": "Die PP-19 Bizon: {freischaltung}, rund {preis} pro Leben, kompakt genug, um Platz für medizinisches Material zu lassen."
+            }
+        ]
     },
     {
         "slug": "wardogs-evo-3-ultra",
@@ -4156,7 +4480,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 02 Patch Notes“ von BULKHEAD, 14.10.2026"
         ],
         "geprueft": "nein – Werte aus den Season-2-Patch-Notes vom 14.10.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Support 30, einmalig rund $200.000, danach rund $7.250 pro Leben. Ein gurtgefüttertes leichtes Maschinengewehr im Kaliber .308 Winchester, mit 50-Schuss-Box.\nAnwendung: Mit rund $7.250 pro Leben das teuerste MG im Spiel – und das in einer Season, die LMGs ausdrücklich zurückgenommen hat: .308 verliert 25 % Grundschaden, und der Körperschaden von LMGs entspricht jetzt dem von Sturmgewehren. Der Vorteil liegt in Dauerfeuer und Magazingröße, nicht mehr im Schaden pro Treffer. Wer eine Stellung hält, bekommt dafür die ruhigste Feuerplattform im Spiel.",
+        "text": "Das **Evo-3 Ultra** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Leben. Gurtgefüttertes leichtes Maschinengewehr im Kaliber {kaliber}, neu mit Season 2.\n\nMit {kaliber} liegt es zwischen [M249 SAW](/datenbank/wardogs-m249-saw/) und [PKM](/datenbank/wardogs-pkm/) – demselben Kaliber, das [FAL](/datenbank/wardogs-fal/), [MK22](/datenbank/wardogs-mk22/) und [BMR-308](/datenbank/wardogs-bmr-308/) verschießen.\n\nDer Preis macht es zur Entscheidung für Spieler, die den Support-Track zu Ende gehen: {preis} pro Leben sind {aufpreis:wardogs-pkm} mehr als das PKM, dazu {freischaltkosten} Gebühr. Wer ein MG dreimal pro Abend verliert, zahlt dafür mehr als für einen [Kodiak](/datenbank/wardogs-kodiak/).\n\nEs gehört in Hände, die eine Stellung halten – mit [Gunner-Rucksack](/datenbank/wardogs-gunner-backpack/), [Munitionskiste](/datenbank/wardogs-munitionskiste/) in der Nähe und einer Sichtlinie, die sich lohnt.",
         "felder": {
             "kaliber": ".308 Winchester",
             "rolle": "Leichtes Maschinengewehr",
@@ -4166,7 +4490,13 @@
             "freischaltkosten": "200000"
         },
         "gruppe": "mg",
-        "sofort": true
+        "sofort": true,
+        "fragen": [
+            {
+                "frage": "Lohnt sich das Evo-3 Ultra in Wardogs?",
+                "antwort": "Am Ende des Support-Tracks und nur beim Halten von Stellungen. {preis} pro Leben plus {freischaltkosten} Gebühr sind die teuerste Art, eine Sichtlinie zuzuhalten."
+            }
+        ]
     },
     {
         "slug": "wardogs-molotov",
@@ -4178,7 +4508,7 @@
             "Steam-Patch-Notes „WARDOGS | Season 03 Patch Notes“ von BULKHEAD, 11.11.2026"
         ],
         "geprueft": "nein – Werte aus den Season-3-Patch-Notes vom 11.11.2026, von uns nicht im Spiel nachgeprüft",
-        "text": "Assault 8, einmalig rund $12.500, danach rund $340 pro Stück. Ein geworfener Brandsatz, der beim Aufprall Feuer verspritzt und jeden verbrennt, der darin steht. Über- und Unterhandwurf sind möglich.\nAnwendung: Er verursacht Aufprallschaden, und die Flammen wirken über Zeit. Zwei Eigenheiten machen ihn interessant: Er entzündet zerstörbares Laub, und **Regen schwächt sein Feuer** – im neuen Regenwetter ist er also die schlechtere Wahl. Für $340 das billigste Mittel, um eine Stellung oder ein Treppenhaus für einige Sekunden unbenutzbar zu machen.",
+        "text": "Der **Molotov** wird {freischaltung} freigeschaltet, kostet einmalig {freischaltkosten} und danach rund {preis} pro Stück. Neu mit Season 2.\n\nEin geworfener Brandsatz, der beim Aufprall Feuer verspritzt und jeden verbrennt, der darin steht. **Season 3 hat ihn deutlich verstärkt:** Er setzt Getroffene in Brand und **zwingt sie, den gehaltenen Gegenstand fallen zu lassen** – dazu wurde die Freischaltgebühr gesenkt.\n\nDer zweite Teil ist der wichtigere. Jemanden zu zwingen, seine Waffe fallen zu lassen, ist in einem Spiel ohne Zweitwaffen-Automatik eine brutale Unterbrechung: Der Getroffene ist für Sekunden wehrlos, auch wenn er überlebt.\n\nDamit ist der Molotov das Mittel gegen Stellungen, die man nicht stürmen will – ein Bunkereingang, ein Treppenhaus, eine Gruppe hinter einer Mauer. Bei {preis} pro Stück ist er dafür billig.",
         "felder": {
             "rolle": "Brandsatz",
             "hinweis": "Neu in Season 2 · Season 3: setzt Getroffene in Brand und zwingt sie, den gehaltenen Gegenstand fallen zu lassen; Freischaltgebühr von $25.000 halbiert; schwächer gegen gepanzerte Fahrzeuge und schwere Panzerung",
@@ -4187,7 +4517,13 @@
             "freischaltkosten": 12500
         },
         "gruppe": "wurfwaffe",
-        "sofort": true
+        "sofort": true,
+        "fragen": [
+            {
+                "frage": "Was macht der Molotov in Wardogs seit Season 3?",
+                "antwort": "Er setzt Getroffene in Brand und zwingt sie, den gehaltenen Gegenstand fallen zu lassen. Dazu wurde die Freischaltgebühr gesenkt – er kostet {freischaltkosten} einmalig und {preis} pro Stück ab {freischaltung}."
+            }
+        ]
     },
     {
         "slug": "wardogs-wolf-110",

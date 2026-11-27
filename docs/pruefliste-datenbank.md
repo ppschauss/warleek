@@ -7,7 +7,7 @@ Das Werkzeug entscheidet nichts. Es sagt nur, wo zwei Quellen sich widersprechen
 
 ## 0. Was nur im Spiel zu klären ist
 
-- **21 Einträge** haben eine Freischaltstufe oder -gebühr, die dem Faktenblatt widerspricht (Abschnitt 4). Einmal durch den Laden und die Track-Übersicht, dann ist das erledigt: AK-74, AMR 50, BMR-308, Compound Bow, Deagle, FAL, GGX 17, GGX 18, Havoc, Humvee, Judge, L2A6, M4, MAAWS, MGL-40, MK22, MP5, PKM, SPH-2, SV-98, Super-45.
+- **22 Einträge** haben eine Freischaltstufe oder -gebühr, die dem Faktenblatt widerspricht (Abschnitt 4). Einmal durch den Laden und die Track-Übersicht, dann ist das erledigt: AK-74, AMR 50, BMR-308, Compound Bow, Deagle, FAL, GGX 17, GGX 18, Havoc, Humvee, Judge, L2A6, M4, MAAWS, MGL-40, MK22, MP5, PKM, SPH-2, SV-98, Super-45, Z20 Lakota [Miniguns].
 - Ein Paar sieht vertauscht aus (Abschnitt 2) – dort zuerst hinsehen.
 - Alles, was hier nicht steht, ist entweder unbestritten oder von außen nicht prüfbar.
 
@@ -24,13 +24,12 @@ Eintrag A trägt genau die Werte, die das Faktenblatt für Eintrag B nennt – u
 
 - **GGX 17** ↔ **Judge**
 
-## 3. Im Faktenblatt genannt, in der Datenbank nicht eindeutig (3)
+## 3. Im Faktenblatt genannt, in der Datenbank nicht eindeutig (2)
 
 - **M249** – mehrdeutig, in Frage kommen: Humvee [M249], Kodiak [M249], M249 Machine Gun, M249 SAW, Ural Defender [M249]
 - **PP-19** – mehrdeutig, in Frage kommen: PP-19 Bizon, PP-19 Vityaz
-- **Z20 Lakota [Miniguns]** – kein Eintrag
 
-## 4. Abweichung vom Faktenblatt (21)
+## 4. Abweichung vom Faktenblatt (22)
 
 Beide Seiten sind Community-Angaben, das Faktenblatt stammt vom 30.09.2026 und kennt Season 3 nicht. Eine Abweichung kann eine Änderung sein – oder ein Fehler.
 
@@ -61,6 +60,7 @@ Beide Seiten sind Community-Angaben, das Faktenblatt stammt vom 30.09.2026 und k
 | MGL-40 | Gebühr | $250.000 | $200.000 |
 | Compound Bow | Stufe | Recon 16 | Recon 17 |
 | Compound Bow | Gebühr | $150.000 | $75.000 |
+| Z20 Lakota [Miniguns] | Gebühr | $85.000 | $75.000 |
 | Havoc | Gebühr | $650.000 | $500.000 |
 | SPH-2 | Stufe | Driver 31 | Career 90 |
 | SPH-2 | Gebühr | $350.000 | $500.000 |
@@ -68,11 +68,11 @@ Beide Seiten sind Community-Angaben, das Faktenblatt stammt vom 30.09.2026 und k
 | Humvee | Stufe | Driver 14 | Driver 15 |
 | Humvee | Gebühr | $75.000 | $25.000 |
 
-## 5. Preise aus den Season-03-Patch-Notes (1 Abweichungen)
+## 5. Preise aus den Season-03-Patch-Notes (0 Abweichungen)
 
 Die einzigen belegten Preisänderungen – aus der Ankündigung vom 11.11.2026.
 
-- **Wolf-110 [M2 Browning]**: Datenbank $7.800, Patch Notes $6.800 (weicht ab)
+- alle vier stimmen
 
 ## 6. Lücken (5)
 
@@ -98,8 +98,8 @@ Die einzigen belegten Preisänderungen – aus der Ankündigung vom 11.11.2026.
 
 **Nur online, nicht in dieser Datei (2).** Im Backend angelegt – ohne Eintrag hier geht der Wert beim nächsten Einspielen nicht verloren, aber er wird auch nie gepflegt.
 
-- `wardogs-z20-lakota` – „Z20 Lakota“
-- `wardogs-z20-lakota-miniguns` – „Z20 Lakota [Miniguns]“
+- `wardogs-uh-1y` – „UH-1Y“
+- `wardogs-uh-1y-miniguns` – „UH-1Y [Miniguns]“
 
 ## 8. Ohne Gruppe (0)
 

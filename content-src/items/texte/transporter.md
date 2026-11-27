@@ -61,7 +61,7 @@ Nur, wenn der Weg umkämpft ist. Die Bewaffnung kostet {aufpreis:wardogs-kodiak}
 ## wardogs-kodiak-pickup
 Der **Kodiak [Pickup]** kostet rund {preis} pro Stück und wird {freischaltung} freigeschaltet. Sechs Plätze, rund {tempo}.
 
-Er ist das **günstigste Fahrzeug pro Sitzplatz** im Spiel: ein ganzes Squad für rund $500 je Person, und das mit dem schnellsten Radfahrwerk. Wer regelmäßig zu sechst spielt, findet hier die wirtschaftlichste Lösung des Transportproblems.
+Er ist das **günstigste Fahrzeug pro Sitzplatz** im Spiel: sechs Leute zum Preis von gut zwei [Bobcats](/datenbank/wardogs-bobcat/), und das mit dem schnellsten Radfahrwerk. Wer regelmäßig zu sechst spielt, findet hier die wirtschaftlichste Lösung des Transportproblems.
 
 Der Aufpreis gegenüber dem normalen [Kodiak](/datenbank/wardogs-kodiak/) beträgt {aufpreis:wardogs-kodiak} – für zwei Sitze mehr. Gegen den [Z20 Lakota](/datenbank/wardogs-z20-lakota/) mit dreizehn Plätzen für {preis:wardogs-z20-lakota} gerechnet, ist der Pickup bei kleinen Gruppen klar vorn; ab zehn Leuten dreht sich das.
 
