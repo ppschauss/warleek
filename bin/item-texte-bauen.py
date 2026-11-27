@@ -70,9 +70,18 @@ FELDER = ("preis", "freischaltung", "freischaltkosten", "kaliber", "sitze",
 PLATZHALTER = re.compile(r"\{(" + "|".join(FELDER) + r")(?::([a-z0-9][a-z0-9-]*))?\}")
 
 
+VERDAECHTIG = re.compile(r"\{[^{}\n]{1,60}\}")
+
+
 def platzhalter_pruefen(slug, text, items):
     """Zeigt jeder Platzhalter auf einen Wert, den es gibt?"""
     fehler = []
+    # Geschweifte Klammern, die kein gueltiger Platzhalter sind, bleiben beim
+    # Ausliefern woertlich stehen - ein `{preis:wardogs-havoc/}` mit
+    # Schraegstrich faellt sonst erst auf der fertigen Seite auf.
+    for treffer in VERDAECHTIG.findall(text):
+        if not PLATZHALTER.fullmatch(treffer):
+            fehler.append(f"{treffer} – kein gültiger Platzhalter")
     eigen  = items.get(slug, {})
     for feld, ziel in PLATZHALTER.findall(text):
         if ziel and ziel not in items:
@@ -82,15 +91,49 @@ def platzhalter_pruefen(slug, text, items):
         if feld == "titel":
             continue
         if feld == "aufpreis":
+            # Dollar gegen Dollar oder Build-Supplies gegen Build-Supplies –
+            # eine Differenz aus beidem wäre eine Zahl ohne Bedeutung.
             if not ziel:
                 fehler.append("{aufpreis} braucht einen Slug")
-            elif not (eigen.get("felder") or {}).get("preis") or not (quelle.get("felder") or {}).get("preis"):
-                fehler.append(f"{{aufpreis:{ziel}}} – einer der beiden Einträge hat keinen Preis")
+            else:
+                a, b = (eigen.get("felder") or {}), (quelle.get("felder") or {})
+                passt = any(a.get(art) and b.get(art) for art in ("preis", "baukosten"))
+                if not passt:
+                    fehler.append(f"{{aufpreis:{ziel}}} – kein gemeinsamer Wert "
+                                  f"(beide brauchen Preis oder beide Baukosten)")
             continue
         if not str((quelle.get("felder") or {}).get(feld, "")).strip():
             wo = ziel or slug
             fehler.append(f"{{{feld}{':' + ziel if ziel else ''}}} – {wo} hat kein Feld „{feld}“")
     return fehler
+
+
+DB_LINK = re.compile(r"\]\(/datenbank/([a-z0-9-]+)/\)")
+GUIDE_LINK = re.compile(r"\]\(/guides/([a-z0-9-]+)/\)")
+
+
+def links_pruefen(text, items, guides):
+    """Zeigt jeder Querverweis auf etwas, das es gibt?
+
+    Die Texte verlinken sich kreuz und quer – das ist der Sinn der Sache, aber
+    ein Tippfehler im Slug faellt sonst erst auf der Seite auf, und zwar als
+    404. Guides werden gegen guides.json geprueft, Eintraege gegen items.json.
+    """
+    fehler = []
+    for ziel in DB_LINK.findall(text):
+        if ziel not in items:
+            fehler.append(f"/datenbank/{ziel}/ – diesen Eintrag gibt es nicht")
+    for ziel in GUIDE_LINK.findall(text):
+        if guides and ziel not in guides:
+            fehler.append(f"/guides/{ziel}/ – diesen Guide gibt es nicht")
+    return fehler
+
+
+def guide_slugs():
+    datei = WURZEL / "plugin/warleek-core/content/_content/guides.json"
+    if not datei.exists():
+        return set()
+    return {g.get("slug") for g in json.loads(datei.read_text(encoding="utf-8"))}
 
 
 def woerter(t):
@@ -110,6 +153,7 @@ def main():
 
     items     = json.loads(ITEMS.read_text(encoding="utf-8"))
     nach_slug = {i["slug"]: i for i in items}
+    guides    = guide_slugs()
     unbekannt, geschrieben, kaputt = [], [], []
 
     for datei in dateien:
@@ -119,6 +163,8 @@ def main():
                 continue
             alles = "\n".join([d["text"]] + [f["antwort"] for f in d["fragen"]])
             for fehler in platzhalter_pruefen(slug, alles, nach_slug):
+                kaputt.append((slug, fehler))
+            for fehler in links_pruefen(alles, nach_slug, guides):
                 kaputt.append((slug, fehler))
             i = nach_slug[slug]
             if d["text"]:
@@ -137,7 +183,7 @@ def main():
         return 1
 
     if kaputt:
-        print("FEHLER: Platzhalter zeigt ins Leere:", file=sys.stderr)
+        print("FEHLER: Platzhalter oder Link zeigt ins Leere:", file=sys.stderr)
         for slug, fehler in kaputt:
             print(f"  {slug}: {fehler}", file=sys.stderr)
         return 1

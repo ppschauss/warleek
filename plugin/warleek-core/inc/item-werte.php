@@ -90,10 +90,21 @@ function warleek_werte_einsetzen( $text, $post_id = 0 ) {
 			 */
 			if ( 'aufpreis' === $feld ) {
 				$eigen = $post_id ?: (int) get_the_ID();
-				$hier  = (float) get_post_meta( $eigen, 'item_preis', true );
-				$dort  = (float) get_post_meta( $id, 'item_preis', true );
-				if ( ! $hier || ! $dort ) { return '–'; }
-				return warleek_item_wert( 'preis', (string) abs( $dort - $hier ) );
+				/*
+				 * Bauwerke haben keinen Preis, sondern Baukosten in
+				 * Build-Supplies. Beide Seiten müssen dieselbe Einheit tragen –
+				 * eine Differenz aus Dollar und Supplies wäre eine Zahl ohne
+				 * Bedeutung. Deshalb erst Preis gegen Preis, sonst Baukosten
+				 * gegen Baukosten, sonst nichts.
+				 */
+				foreach ( array( 'preis', 'baukosten' ) as $art ) {
+					$hier = (float) get_post_meta( $eigen, 'item_' . $art, true );
+					$dort = (float) get_post_meta( $id, 'item_' . $art, true );
+					if ( $hier && $dort ) {
+						return warleek_item_wert( $art, (string) abs( $dort - $hier ) );
+					}
+				}
+				return '–';
 			}
 
 			$wert = warleek_item_wert( $feld, get_post_meta( $id, 'item_' . $feld, true ) );

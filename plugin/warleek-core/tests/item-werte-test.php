@@ -15,13 +15,17 @@ $GLOBALS['wl_meta'] = array(
 	5 => array( 'item_preis' => '350', 'item_rolle' => 'Kleiner Rucksack' ),
 	7 => array( 'item_preis' => '650', 'item_rolle' => 'Mittlerer Rucksack' ),
 	9 => array( 'item_preis' => '',    'item_rolle' => 'Ohne Preis' ),
+	11 => array( 'item_baukosten' => '600', 'item_rolle' => 'Bauwerk' ),
+	12 => array( 'item_baukosten' => '100', 'item_rolle' => 'Bauwerk' ),
 );
 $GLOBALS['wl_slugs'] = array(
 	'wardogs-scout-backpack' => 5,
 	'wardogs-field-backpack' => 7,
 	'wardogs-ohne-preis'     => 9,
+	'wardogs-moerser'        => 11,
+	'wardogs-unterstand'     => 12,
 );
-$GLOBALS['wl_titel'] = array( 5 => 'Scout-Rucksack', 7 => 'Field-Rucksack', 9 => 'Namenlos' );
+$GLOBALS['wl_titel'] = array( 5 => 'Scout-Rucksack', 7 => 'Field-Rucksack', 9 => 'Namenlos', 11 => 'Mörser', 12 => 'Unterstand' );
 $GLOBALS['wl_hier']  = 5;
 $GLOBALS['wl_typ']   = 'item';
 
@@ -78,6 +82,12 @@ chk( 'leeres Feld wird zum Strich', warleek_werte_einsetzen( '{kaliber}' ), '–
 chk( 'unbekannter Platzhalter bleibt stehen', warleek_werte_einsetzen( '{foo}' ), '{foo}' );
 chk( 'unbekannter Eintrag bleibt stehen',
      warleek_werte_einsetzen( '{preis:gibt-es-nicht}' ), '{preis:gibt-es-nicht}' );
+/* Bauwerke rechnen in Build-Supplies, nicht in Dollar – und nie gemischt. */
+chk( 'Differenz zweier Bauwerke in Build-Supplies',
+     warleek_werte_einsetzen( '{aufpreis:wardogs-moerser}', 12 ), '500 Build-Supplies' );
+chk( 'keine Differenz zwischen Dollar und Build-Supplies',
+     warleek_werte_einsetzen( '{aufpreis:wardogs-moerser}', 5 ), '–' );
+
 chk( 'Differenz ohne Preis auf einer Seite',
      warleek_werte_einsetzen( '{aufpreis:wardogs-ohne-preis}' ), '–' );
 chk( 'Text ohne Klammern bleibt unberührt',
