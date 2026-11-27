@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.38.0
+Stable tag: 2.39.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,18 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.39.0 =
+* **Antwort auf die AdSense-Ablehnung vom 24.11.2026 („minderwertige Inhalte“).** Der Befund war nachrechenbar: 210 der 299 Adressen in der Sitemap waren Datenbank-Einträge mit im Median 288 Wörtern, davon rund 44 Wörter eigener Text; der Rest war Werte-Tabelle und auf jeder Seite derselbe Rahmen.
+* **Datenbank-Einträge und Themen-Archive stehen auf `noindex, follow`** und fallen aus der Sitemap. Sie bleiben erreichbar und verlinkt – als Nachschlagewerk, nicht als eigenständige Lesestücke. Die Hub-Seite `/datenbank/` bleibt ausdrücklich im Index. Abschaltbar über den Filter `warleek_noindex_objekt`.
+* Die sechs Themen-Archive (`/thema/gameplay/` …) haben je eine kuratierte Seite gedoppelt (`/wardogs/gameplay/`, 135 gegen 879 Wörter). Jetzt gewinnt die kuratierte.
+* **`/datenbank/` bekommt 650 Wörter eigenen Text:** was Freischaltung, Freischaltgebühr und Preis unterscheidet, was die drei Stufen im Prüfstand bedeuten, was die Werte nicht sagen, und der Stand nach Season 3.
+* **Patch Notes zeigen eine Kurzfassung statt der vollständigen Übersetzung.** Ab 500 Wörtern bleiben: unsere Zusammenfassung, die Abschnitte der Ankündigung, unsere Guides aus den sechs Wochen danach und der Link zur Quelle. Die Season-03-Notes standen hier mit 12.349 Wörtern. Der übersetzte Wortlaut bleibt in der Datenbank, er wird nur nicht mehr veröffentlicht; eine eigene Einordnung in `_warleek_kurzfassung` ersetzt die Gliederung.
+* Der Aufklapper mit dem **englischen Original** steht nicht mehr im Template – er hat denselben fremden Text ein zweites Mal auf die Seite gebracht. `<details>` verbirgt ihn vor Lesern, nicht vor einem Crawler.
+* **`/ads.txt` wird wieder ausgeliefert**, diesmal über Rewrite-Regel und `template_redirect` wie `/herkunft.json`, nicht über einen `init`-Hook auf `REQUEST_URI`. Die Kennung steht fest im Quelltext, nicht hinter einer Option.
+* Nach einem Update werden die Rewrite-Regeln einmal pro Version neu geschrieben. Ein Update über „Plugin hochladen“ führt den Aktivierungs-Hook nicht aus; neue Adressen liefen sonst bis zum nächsten Speichern der Permalinks in den 404.
+* Impressum: „nicht-kommerzielles Fan-Projekt“ ist raus, dafür ein Abschnitt zur Werbefinanzierung. Der Satz zu den Patch Notes nennt jetzt Zusammenfassung statt Volltext-Übersetzung.
+* Theme auf 2.38.0 – `archive-item.html` und `single-patchnote.html` haben sich geändert, beide Pakete gehören zusammen.
 
 = 2.38.0 =
 * **Neuer Guide „Wardogs Season 4" (`wardogs-season-4`)** zum unbestätigten Leak aus r/WarDogs: Freischaltstufen für Minigun-Littlebird (Pilot 8 → 15), Minigun-Lakota (25 → 8) und großen Hammer (Support 14 → 10) sowie ein 300-Schuss-Magazin für die Helikopter-Minigun.

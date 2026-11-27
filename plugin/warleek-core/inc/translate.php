@@ -565,7 +565,15 @@ function warleek_render_patchnote_summary( $attrs = array() ) {
 }
 add_shortcode( 'warleek_summary', 'warleek_render_patchnote_summary' );
 
-/** Englisches Original zum Aufklappen unter dem Beitrag. */
+/**
+ * Englisches Original zum Aufklappen unter dem Beitrag.
+ *
+ * **Steht seit 2.39.0 nicht mehr im Template.** Der Aufklapper hat den
+ * vollständigen fremden Text ein zweites Mal auf dieselbe Seite gebracht –
+ * einmal übersetzt, einmal im Original. `<details>` verbirgt ihn für Leser,
+ * nicht für einen Crawler. Die Funktion bleibt für den Fall stehen, dass eine
+ * einzelne Seite ihn wieder braucht; wer sie einsetzt, sollte wissen, was er
+ * damit auf die Seite holt.
 function warleek_render_patchnote_original( $attrs = array() ) {
 	if ( ! is_singular( 'patchnote' ) ) { return ''; }
 	$src = get_post_meta( get_the_ID(), '_warleek_src_html', true );
@@ -577,5 +585,123 @@ add_shortcode( 'warleek_original', 'warleek_render_patchnote_original' );
 /** Hinweis auf die maschinelle Übersetzung – Transparenz gehört dazu. */
 function warleek_translation_note( $post_id ) {
 	if ( ! get_post_meta( $post_id, '_warleek_tr_hash', true ) ) { return ''; }
-	return '<p class="wl-source">Diese Patch Note wurde maschinell ins Deutsche übersetzt (Claude). Im Zweifel gilt das englische Original.</p>';
+	return '<p class="wl-source">Zusammenfassung und Gliederung dieser Seite entstehen aus einer maschinellen Übersetzung der Ankündigung (Claude). Verbindlich ist das englische Original.</p>';
 }
+
+/* --------------------------------------------- Patch Notes als Kurzfassung */
+/**
+ * Ab wie vielen Wörtern eine Patch Note gekürzt wird.
+ *
+ * Kurze Ankündigungen („Server-Wartung heute 14 Uhr") sind keine
+ * Übernahme fremder Inhalte, sondern eine Meldung. Erst der durchübersetzte
+ * Volltext ist das Problem: Die Season-03-Notes standen hier mit 12.349
+ * Wörtern und 127 Überschriften – eine vollständige deutsche Zweitfassung
+ * einer fremden Ankündigung, dazu im Aufklapper noch das englische Original.
+ * Google nennt das „copied content with little added value", und am
+ * 24.11.2026 war das mit ein Grund für die AdSense-Ablehnung.
+ */
+const WARLEEK_PATCHNOTE_KURZ_AB = 500;
+
+/**
+ * Wörter im gerenderten HTML.
+ *
+ * Bewusst nicht `str_word_count()`: Die Funktion arbeitet byteweise und zählt
+ * „Rückstoß" als zwei Wörter. Ein Split an Leerraum reicht hier und zählt in
+ * jeder Sprache gleich.
+ */
+function warleek_patchnote_wortzahl( $html ) {
+	$text = trim( preg_replace( '/\s+/u', ' ', wp_strip_all_tags( (string) $html ) ) );
+	return '' === $text ? 0 : count( explode( ' ', $text ) );
+}
+
+/**
+ * Die Abschnitte der Ankündigung als Liste.
+ *
+ * Nur die oberste Ebene. Überschriften sind Etiketten, keine Prosa – sie
+ * sagen dem Leser, was in der Ankündigung steht, ohne sie nachzuerzählen.
+ * Mit den Unterüberschriften kamen aus den Season-03-Notes 63 Zeilen
+ * zusammen, überwiegend in englischer Schreibweise: Das wäre wieder die
+ * Ankündigung gewesen, nur in Listenform. Zwölf Abschnittsnamen reichen.
+ */
+function warleek_patchnote_abschnitte( $html ) {
+	if ( ! preg_match_all( '#<h2[^>]*>(.*?)</h2>#is', (string) $html, $treffer ) ) { return ''; }
+	$zeilen = array();
+	foreach ( $treffer[1] as $roh ) {
+		$titel = trim( html_entity_decode( wp_strip_all_tags( $roh ), ENT_QUOTES, 'UTF-8' ) );
+		$titel = trim( preg_replace( '#^/+\s*#', '', $titel ) );
+		if ( '' === $titel || isset( $zeilen[ $titel ] ) ) { continue; }
+		$zeilen[ $titel ] = '<li>' . esc_html( $titel ) . '</li>';
+	}
+	return $zeilen ? '<ul class="wl-patchnote-gliederung">' . implode( '', $zeilen ) . '</ul>' : '';
+}
+
+/**
+ * Unsere Guides zu diesem Patch.
+ *
+ * Automatisch statt gepflegt: alles, was in den sechs Wochen nach der
+ * Ankündigung erschienen ist. Das trifft, wie wir arbeiten – zu jedem Patch
+ * entstehen die Guides in den Tagen danach – und veraltet nicht, weil niemand
+ * eine Zuordnungstabelle nachpflegen muss.
+ */
+function warleek_patchnote_guides( $post_id ) {
+	$start = get_post_time( 'Y-m-d', true, $post_id );
+	if ( ! $start ) { return ''; }
+	$q = new WP_Query( array(
+		'post_type'           => 'guide',
+		'post_status'         => 'publish',
+		'posts_per_page'      => 4,
+		'ignore_sticky_posts' => true,
+		'no_found_rows'       => true,
+		'orderby'             => 'date',
+		'order'               => 'ASC',
+		'date_query'          => array(
+			array( 'after' => $start, 'before' => gmdate( 'Y-m-d', strtotime( $start . ' +42 days' ) ), 'inclusive' => true ),
+		),
+	) );
+	if ( ! $q->posts ) { return ''; }
+	/* Bewusst zurückhaltend überschrieben: Die Auswahl ist zeitlich, nicht
+	   thematisch. „Was wir dazu geschrieben haben“ würde bei einem Hotfix
+	   eine Verbindung behaupten, die der Filter nicht prüft. */
+	$out = '<h2>Was in den Wochen danach bei uns erschienen ist</h2><ul>';
+	foreach ( $q->posts as $g ) {
+		$out .= '<li><a href="' . esc_url( get_permalink( $g ) ) . '">' . esc_html( get_the_title( $g ) ) . '</a></li>';
+	}
+	return $out . '</ul>';
+}
+
+/**
+ * Kurzfassung statt Volltext.
+ *
+ * Was bleibt: unsere eigene Zusammenfassung (steht als eigener Kasten über dem
+ * Beitrag), die Gliederung der Ankündigung, unsere Guides dazu und der Link
+ * zur Quelle. Was geht: die vollständige Zweitfassung eines fremden Textes.
+ *
+ * Gefiltert wird beim **Ausliefern**, nicht beim Einspielen – der übersetzte
+ * Wortlaut bleibt in `post_content` stehen. Wir arbeiten damit weiter, wenn
+ * Guides entstehen, und er ist die Grundlage von Zusammenfassung und
+ * Prüfstand. Er wird nur nicht mehr veröffentlicht.
+ *
+ * Wer eine eigene Einordnung schreibt, hinterlegt sie als `_warleek_kurzfassung`;
+ * sie ersetzt dann die automatische Gliederung.
+ */
+function warleek_patchnote_inhalt_kuerzen( $content ) {
+	if ( ! is_singular( 'patchnote' ) || ! in_the_loop() || ! is_main_query() ) { return $content; }
+	if ( warleek_patchnote_wortzahl( $content ) < WARLEEK_PATCHNOTE_KURZ_AB ) { return $content; }
+
+	$id    = get_the_ID();
+	$datum = get_the_date( 'j. F Y', $id );
+	$eigen = trim( (string) get_post_meta( $id, '_warleek_kurzfassung', true ) );
+
+	$out  = '<p>Diese Seite fasst die Ankündigung von BULKHEAD vom ' . esc_html( $datum ) . ' zusammen. ';
+	$out .= 'Den vollständigen Wortlaut veröffentlicht BULKHEAD selbst – der Link steht unten. ';
+	$out .= 'Was die Änderungen im Spiel bedeuten, steht in unseren Guides.</p>';
+	if ( $eigen ) {
+		$out .= wp_kses_post( wpautop( $eigen ) );
+	} else {
+		$gliederung = warleek_patchnote_abschnitte( $content );
+		if ( $gliederung ) { $out .= '<h2>Die Abschnitte der Ankündigung</h2>' . $gliederung; }
+	}
+	$out .= warleek_patchnote_guides( $id );
+	return $out;
+}
+add_filter( 'the_content', 'warleek_patchnote_inhalt_kuerzen', 5 );

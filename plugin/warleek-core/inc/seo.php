@@ -445,6 +445,7 @@ function warleek_seo_head() {
 	if ( warleek_seo_plugin_active() ) { return; }
 
 	$noindex = is_singular() && get_post_meta( get_queried_object_id(), '_warleek_noindex', true );
+	if ( warleek_duenne_seite() ) { $noindex = true; }
 	if ( $noindex || is_search() || is_404() ) { echo '<meta name="robots" content="noindex,follow">' . "\n"; }
 	if ( $desc ) { echo '<meta name="description" content="' . esc_attr( $desc ) . '">' . "\n"; }
 
@@ -651,3 +652,71 @@ add_action( 'wp_head', 'warleek_seo_head', 5 );
 
 /** Sprache/Region explizit. */
 add_filter( 'language_attributes', function ( $attr ) { return str_contains( $attr, 'lang=' ) ? $attr : $attr . ' lang="de-DE"'; } );
+
+/* ------------------------------------------- Dünne Seiten aus dem Index */
+/**
+ * Seiten, die nicht als eigenständiger Inhalt angeboten werden.
+ *
+ * **Anlass.** Google hat warleek.de am 24.11.2026 für AdSense abgelehnt,
+ * Begründung „minderwertige Inhalte". Der Befund ist nachrechenbar: Von 299
+ * Adressen in der Sitemap waren 210 Datenbank-Einträge mit im Median 288
+ * Wörtern – davon rund 44 Wörter eigener Text, der Rest Werte-Tabelle und auf
+ * jeder Seite derselbe Rahmen aus Quellen, Prüfstand und Nachbarschaft. Dazu
+ * sechs Themen-Archive, die je eine kuratierte Hub-Seite doppeln
+ * (`/thema/gameplay/` neben `/wardogs/gameplay/`, 135 gegen 879 Wörter).
+ *
+ * **Was das hier tut und was nicht.** Die Einträge bleiben erreichbar,
+ * verlinkt und durchsuchbar – sie sind ein Nachschlagewerk, und als solches
+ * sind sie gut. Sie werden nur nicht mehr als eigenständige Lesestücke in den
+ * Index gestellt: `noindex, follow`, und raus aus der Sitemap. Die Links auf
+ * ihnen zählen weiter, die Hub-Seite `/datenbank/` bleibt drin.
+ *
+ * **Das ist die halbe Miete, nicht die ganze.** Ein `noindex` räumt den Index
+ * auf; ein Prüfer, der auf „Alle Einträge" klickt, sieht trotzdem 198 dünne
+ * Seiten. Die eigentliche Lösung sind Vergleichsseiten je Kategorie, die die
+ * Einzelseiten ersetzen. Bis dahin ist das hier die Zwischenstufe.
+ *
+ * Über den Filter `warleek_noindex_objekt` lässt sich die Regel abschalten
+ * oder erweitern, ohne diese Datei anzufassen.
+ */
+function warleek_duenne_seite() {
+	$duenn = is_singular( 'item' ) || is_tax( 'guide-thema' );
+	return (bool) apply_filters( 'warleek_noindex_objekt', $duenn );
+}
+
+/**
+ * Rank Math schreibt die Robots-Angabe, sobald es konfiguriert ist – unsere
+ * eigene Ausgabe hält sich dann zurück (siehe `warleek_seo_plugin_active()`).
+ * Priorität 99, damit der Wert hinter allen Einstellungen aus „Titel & Meta"
+ * steht und nicht davon überschrieben wird.
+ */
+add_filter( 'rank_math/frontend/robots', function ( $robots ) {
+	if ( warleek_duenne_seite() ) {
+		$robots['index']  = 'noindex';
+		$robots['follow'] = 'follow';
+	}
+	return $robots;
+}, 99 );
+
+/**
+ * Dieselben Adressen aus der Sitemap nehmen.
+ *
+ * Ein `noindex` allein genügt Rank Math nicht in jeder Fassung – gemeldet
+ * wird, was in der Sitemap steht. Die Archiv-Adresse `/datenbank/` bleibt
+ * ausdrücklich drin: Sie ist die Seite, die die Datenbank vertreten soll.
+ *
+ * Rank Math reicht als zweites Argument je nach Fassung den Beitragstyp
+ * („item"), den Taxonomie-Namen oder schlicht „post" bzw. „term" durch.
+ * Deshalb prüfen wir beides – das Argument und das Objekt.
+ */
+add_filter( 'rank_math/sitemap/entry', function ( $url, $typ, $objekt ) {
+	$archiv = get_post_type_archive_link( 'item' );
+	if ( $archiv && isset( $url['loc'] ) && untrailingslashit( (string) $url['loc'] ) === untrailingslashit( $archiv ) ) {
+		return $url;
+	}
+	$post_typ = is_object( $objekt ) && isset( $objekt->post_type ) ? $objekt->post_type : '';
+	$tax      = is_object( $objekt ) && isset( $objekt->taxonomy ) ? $objekt->taxonomy : '';
+	if ( 'item' === $typ || 'item' === $post_typ ) { return false; }
+	if ( 'guide-thema' === $typ || 'guide-thema' === $tax ) { return false; }
+	return $url;
+}, 10, 3 );

@@ -3,7 +3,7 @@
  * Plugin Name:       Warleek Core
  * Plugin URI:        https://warleek.de
  * Description:       Funktionskern und Installer der Warleek-Website: Guides & Patch Notes (automatisch von Steam), Chat-Optionen, eigene Blöcke, SEO-Metas – plus ein Klick-Installer für alle Inhalte, Bilder und das benötigte SEO-Plugin.
- * Version:           2.38.0
+ * Version:           2.39.0
  * Requires at least: 6.6
  * Requires PHP:      8.1
  * Author:            Warleek
@@ -18,7 +18,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'WARLEEK_CORE_VERSION', '2.38.0' );
+define( 'WARLEEK_CORE_VERSION', '2.39.0' );
 define( 'WARLEEK_CORE_FILE', __FILE__ );
 define( 'WARLEEK_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WARLEEK_CORE_URI', plugin_dir_url( __FILE__ ) );
@@ -90,6 +90,23 @@ function warleek_core_deactivate() {
 	flush_rewrite_rules();
 }
 register_deactivation_hook( __FILE__, 'warleek_core_deactivate' );
+
+/**
+ * Neue Adressen nach einem Update bekanntmachen.
+ *
+ * Ein Plugin-Update über „Plugin hochladen" führt den Aktivierungs-Hook
+ * **nicht** erneut aus. Wer eine `add_rewrite_rule()` dazunimmt, meldet sie
+ * damit zwar bei jedem Aufruf an, aber WordPress vergleicht Anfragen gegen die
+ * gespeicherten Regeln in der Option `rewrite_rules` – und die bleiben bis zum
+ * nächsten Speichern der Permalinks unverändert. Die neue Adresse läuft so
+ * lange in den 404. Diese Prüfung räumt das einmal pro Version weg.
+ */
+function warleek_core_rewrite_pruefen() {
+	if ( get_option( 'warleek_rewrite_version' ) === WARLEEK_CORE_VERSION ) { return; }
+	flush_rewrite_rules( false );
+	update_option( 'warleek_rewrite_version', WARLEEK_CORE_VERSION, false );
+}
+add_action( 'admin_init', 'warleek_core_rewrite_pruefen' );
 
 /** Nach dem Aktivieren direkt auf die Installationsseite. */
 function warleek_core_activation_redirect() {

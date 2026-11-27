@@ -118,5 +118,22 @@ $pa   = warleek_ads_punkte( $weit );
 chk( 'zwei Plätze bei weitem Abstand', count( $pa ), 2 );
 chk( 'FAQ-Überschrift mit Attributen erkannt', substr( $weit, $pa[1], 8 ), '<h2 id="' );
 
+/*
+ * ads.txt
+ *
+ * Die Zeile haengt an der fest verdrahteten Kennung, nicht am Schalter: Google
+ * liest die Datei auch, solange `ads_enabled` aus ist, und meldet sonst
+ * „Nicht gefunden". Genau dieser Fehler steckte in der ersten Fassung.
+ */
+$GLOBALS['wl_opt']['ads_enabled'] = '0';
+chk( 'ads.txt steht auch bei abgeschalteten Anzeigen', warleek_ads_txt_inhalt(), "google.com, pub-5566154579483105, DIRECT, f08c47fec0942fa0\n" );
+
+$GLOBALS['wl_opt']['ads_client'] = 'ca-pub-0000000000000000';
+chk( 'ads.txt folgt keinem Optionswert', warleek_ads_txt_inhalt(), "google.com, pub-5566154579483105, DIRECT, f08c47fec0942fa0\n" );
+unset( $GLOBALS['wl_opt']['ads_client'] );
+
+chk( 'Kennung ohne ca-Praefix', str_contains( warleek_ads_txt_inhalt(), 'ca-pub-' ), false );
+chk( 'genau eine Zeile', substr_count( warleek_ads_txt_inhalt(), "\n" ), 1 );
+
 echo $fail ? "$fail FAILED\n" : "OK\n";
 exit( $fail ? 1 : 0 );

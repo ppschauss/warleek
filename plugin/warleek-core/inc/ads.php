@@ -181,3 +181,71 @@ function warleek_ads_in_inhalt( $content ) {
 	return $content;
 }
 add_filter( 'the_content', 'warleek_ads_in_inhalt', 20 );
+
+/* ------------------------------------------------------------------ ads.txt */
+/**
+ * Kennung für die `/ads.txt` – fest verdrahtet, aus demselben Grund wie das
+ * Bestätigungs-Tag im Theme: Google liest diese Datei fortlaufend, und eine
+ * Kennung, die von Optionswert, Schalter und Vorrangregel abhängt, kann
+ * unbemerkt verschwinden. Verschwindet sie, meldet AdSense „Nicht gefunden"
+ * und Werbeplätze verlieren an Wert. Eine Zeichenkette im Quelltext kann das
+ * nicht. Ändert sich das Konto, ändert sich hier und im Theme je eine Zeile.
+ */
+const WARLEEK_ADS_PUB = 'pub-5566154579483105';
+
+/**
+ * Inhalt der `/ads.txt`.
+ *
+ * Eine Zeile nach IAB-Spezifikation: Werbesystem, Konto-Kennung ohne das
+ * `ca-`-Präfix, Direktvermarktung, Zertifizierungs-ID von Google. Die ID
+ * `f08c47fec0942fa0` ist Googles eigene und in jeder AdSense-`ads.txt`
+ * dieselbe – sie bezeichnet nicht uns, sondern Google.
+ */
+function warleek_ads_txt_inhalt() {
+	return 'google.com, ' . WARLEEK_ADS_PUB . ', DIRECT, f08c47fec0942fa0' . "\n";
+}
+
+/**
+ * Eigene Adresse anmelden.
+ *
+ * **Warum eine Rewrite-Regel und kein `init`-Hook auf `REQUEST_URI`.** Die
+ * erste Fassung (bis 2.37.1) prüfte in `init` den angefragten Pfad und gab den
+ * Text direkt aus. Auf All-Inkl landete der Aufruf trotzdem im WordPress-404.
+ * `/herkunft.json` wird seit Monaten verlässlich ausgeliefert, und zwar über
+ * Rewrite-Regel, Query-Var und `template_redirect`. Dieser Weg ist erprobt,
+ * also nehmen wir ihn auch hier, statt den alten zu reparieren.
+ *
+ * Eine echte Datei im Web-Verzeichnis käme ohnehin zuerst – der Webserver
+ * reicht die Anfrage dann gar nicht erst an WordPress weiter.
+ */
+function warleek_ads_txt_rewrite() {
+	add_rewrite_rule( '^ads\.txt$', 'index.php?warleek_ads_txt=1', 'top' );
+}
+add_action( 'init', 'warleek_ads_txt_rewrite' );
+
+add_filter( 'query_vars', function ( $vars ) {
+	$vars[] = 'warleek_ads_txt';
+	return $vars;
+} );
+
+/**
+ * Kein Schrägstrich ans Ende.
+ *
+ * WordPress hängt Adressen ohne Dateiendung einen Schrägstrich an und leitet
+ * dafür um. Bei `/ads.txt` wäre das falsch: Googles Prüfer folgt zwar
+ * Weiterleitungen, aber `/ads.txt/` ist keine gültige Adresse mehr.
+ */
+add_filter( 'redirect_canonical', function ( $ziel ) {
+	return get_query_var( 'warleek_ads_txt' ) ? false : $ziel;
+} );
+
+/** Ausliefern. */
+function warleek_ads_txt_ausliefern() {
+	if ( ! get_query_var( 'warleek_ads_txt' ) ) { return; }
+	nocache_headers();
+	status_header( 200 );
+	header( 'Content-Type: text/plain; charset=utf-8' );
+	echo warleek_ads_txt_inhalt();
+	exit;
+}
+add_action( 'template_redirect', 'warleek_ads_txt_ausliefern' );
