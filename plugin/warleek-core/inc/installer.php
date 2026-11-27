@@ -9,6 +9,9 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
+/** Adressform gewöhnlicher Beiträge – der Blog. Eigene Beitragstypen haben ihre eigene. */
+const WARLEEK_PERMALINKS = '/blog/%postname%/';
+
 /**
  * Fortschrittsmeldung. Unter WP-CLI direkt ausgegeben, sonst gesammelt –
  * niemals per echo, weil das die JSON-Antwort des Installers zerstören würde.
@@ -455,6 +458,115 @@ function warleek_seed_guides( array $guides, array $media, array $site, $force =
 		update_post_meta( $id, '_warleek_geprueft', (string) ( $g['geprueft'] ?? '' ) );
 		warleek_set_seo( $id, $g['seo'] ?? array(), false, $force );
 	}
+}
+
+/* ----------------------------------------------------------------- Blog */
+/**
+ * Blogbeiträge anlegen – gewöhnliche WordPress-Beiträge, kein eigener Typ.
+ *
+ * **Warum `post` und kein CPT.** Guides, Patch Notes und Datenbank sind eigene
+ * Typen, weil sie eigene Felder, eigene Archive und eigene Regeln haben. Ein
+ * Blog hat das alles nicht – er ist genau das, wofür WordPress `post`
+ * mitbringt: datierte Beiträge in Kategorien, mit Feed und Archiv. Ein
+ * vierter Typ wäre Arbeit ohne Gegenwert.
+ *
+ * **Was den Blog von den Guides unterscheidet.** Ein Guide beantwortet eine
+ * Frage dauerhaft und wird gepflegt, bis die Antwort nicht mehr stimmt. Ein
+ * Beitrag ist ein Standpunkt zu einem Zeitpunkt: Einordnung, Rechnung,
+ * Beobachtung. Er wird nicht nachgezogen, sondern bleibt stehen, wie er war.
+ *
+ * Termine funktionieren wie bei Guides: Ein Datum in der Zukunft heißt
+ * `future`, veröffentlicht wird dann von WordPress selbst.
+ *
+ * @param array $beitraege Aus `content/_content/blog.json`.
+ * @param array $media     Medien-Karte (Schlüssel => Anhang-ID).
+ * @param bool  $force     Auch überschreiben, was im Backend geändert wurde.
+ * @return int Zahl der angelegten oder aktualisierten Beiträge.
+ */
+function warleek_seed_blog( array $beitraege, array $media, $force = false ) {
+	$anzahl = 0;
+	foreach ( $beitraege as $b ) {
+		$content = warleek_html_to_blocks( warleek_resolve_asset_src( $b['html'] . warleek_guide_herkunft( $b ), $media ) );
+		$daten   = array(
+			'post_title'   => $b['title'],
+			'post_name'    => $b['slug'],
+			'post_content' => $content,
+			'post_excerpt' => $b['excerpt'],
+		);
+
+		$termin = warleek_guide_termin( $b['datum'] ?? '' );
+		if ( $termin ) {
+			$da = get_posts( array( 'post_type' => 'post', 'name' => $b['slug'], 'post_status' => array( 'publish', 'future', 'draft' ), 'posts_per_page' => 1, 'fields' => 'ids' ) );
+			if ( ! $da || 'publish' !== get_post_status( (int) $da[0] ) ) {
+				$daten['post_status']   = 'future';
+				$daten['post_date']     = $termin;
+				$daten['post_date_gmt'] = get_gmt_from_date( $termin );
+			}
+		}
+
+		$id = warleek_upsert_post( $daten, 'post', 0, $force );
+		if ( ! $id ) { continue; }
+
+		// Kategorie aus dem Kopfblock. `category` ist hierarchisch, deshalb
+		// wird der Begriff bei Bedarf angelegt – anders als bei Tags würde
+		// wp_set_object_terms() ihn sonst nicht finden.
+		$kat = sanitize_title( (string) ( $b['thema'] ?? 'blog' ) );
+		if ( $kat ) {
+			$term = term_exists( $kat, 'category' );
+			if ( ! $term ) { $term = wp_insert_term( ucfirst( str_replace( '-', ' ', $kat ) ), 'category', array( 'slug' => $kat ) ); }
+			if ( ! is_wp_error( $term ) ) { wp_set_object_terms( $id, (int) $term['term_id'], 'category' ); }
+		}
+
+		if ( ! empty( $b['image'] ) && ! empty( $media[ $b['image'] ] ) ) { set_post_thumbnail( $id, $media[ $b['image'] ] ); }
+		if ( ! empty( $b['autor'] ) ) { update_post_meta( $id, '_warleek_autor', sanitize_title( $b['autor'] ) ); }
+		update_post_meta( $id, '_warleek_quellen', array_values( array_filter( (array) ( $b['quellen'] ?? array() ) ) ) );
+		update_post_meta( $id, '_warleek_geprueft', (string) ( $b['geprueft'] ?? '' ) );
+		warleek_set_seo( $id, $b['seo'] ?? array(), false, $force );
+		$anzahl++;
+	}
+	return $anzahl;
+}
+
+/**
+ * Die Seite, unter der die Beiträge erscheinen.
+ *
+ * WordPress zeigt Beiträge standardmäßig auf der Startseite. Hier ist die
+ * Startseite aber eine gebaute Seite, also braucht der Blog eine eigene –
+ * `page_for_posts`. Sie bleibt absichtlich **leer**: Ihr Inhalt würde nie
+ * angezeigt, und ein Text, den niemand sieht, verwirrt nur den, der ihn im
+ * Backend findet.
+ */
+function warleek_blog_seite() {
+	$da = get_posts( array( 'post_type' => 'page', 'name' => 'blog', 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) );
+	$id = $da ? (int) $da[0] : (int) wp_insert_post( array(
+		'post_type'    => 'page',
+		'post_status'  => 'publish',
+		'post_title'   => 'Blog',
+		'post_name'    => 'blog',
+		'post_content' => '',
+	) );
+	if ( $id ) {
+		update_option( 'page_for_posts', $id );
+		if ( 'page' !== get_option( 'show_on_front' ) ) { update_option( 'show_on_front', 'page' ); }
+	}
+	return $id;
+}
+
+function warleek_step_blog( $force = false ) {
+	$media = (array) get_option( 'warleek_media_map', array() );
+	if ( ! $media ) { $media = warleek_seed_media(); update_option( 'warleek_media_map', $media, false ); }
+	$beitraege = warleek_content_json( 'blog' );
+	if ( ! $beitraege ) { return array( 'ok' => true, 'msg' => 'Keine Beiträge gefunden (content/_content/blog.json fehlt) – übersprungen.' ); }
+
+	$seite  = warleek_blog_seite();
+	$anzahl = warleek_seed_blog( $beitraege, $media, (bool) $force );
+
+	$geplant = count( get_posts( array( 'post_type' => 'post', 'post_status' => 'future', 'posts_per_page' => -1, 'fields' => 'ids' ) ) );
+	return array(
+		'ok'  => true,
+		'msg' => sprintf( '%d Beiträge angelegt bzw. aktualisiert, davon %d terminiert. Blog-Seite: %s',
+			$anzahl, $geplant, $seite ? get_permalink( $seite ) : '–' ),
+	);
 }
 
 /* ------------------------------------------------------------ Navigation */
@@ -1227,6 +1339,12 @@ function warleek_install_steps() {
 			'description' => 'Haupt- und Footer-Menü, Startseite, Website-Logo, Favicon, Permalinks.',
 			'callback'    => 'warleek_step_nav',
 		),
+		'blog' => array(
+			'label'       => 'Blog anlegen',
+			'description' => 'Legt die Blogbeiträge an und richtet die Blog-Seite ein. Beiträge mit künftigem Datum erscheinen von selbst.',
+			'callback'    => 'warleek_step_blog',
+			'force'       => 'Schreibt alle Beiträge neu. Veröffentlichungstermine und bereits veröffentlichte Beiträge bleiben.',
+		),
 		'patchnotes' => array(
 			'label'       => 'Patch Notes von Steam holen',
 			'description' => 'Erster Sync der offiziellen WARDOGS-Updates; danach stündlich automatisch.',
@@ -1437,8 +1555,21 @@ function warleek_step_nav( $force = false ) {
 	if ( ! empty( $media['logo-icon-png'] ) ) { update_option( 'site_logo', $media['logo-icon-png'] ); set_theme_mod( 'custom_logo', $media['logo-icon-png'] ); }
 	if ( ! empty( $media['favicon'] ) ) { update_option( 'site_icon', $media['favicon'] ); }
 	if ( ! empty( $media['og-default'] ) ) { update_option( 'warleek_og_default_id', $media['og-default'] ); }
-	if ( ! get_option( 'permalink_structure' ) || '/%postname%/' !== get_option( 'permalink_structure' ) ) {
-		update_option( 'permalink_structure', '/%postname%/' );
+	/*
+	 * Blogbeiträge bekommen ein Präfix, Guides und Datenbank nicht.
+	 *
+	 * `permalink_structure` gilt nur für gewöhnliche Beiträge – die eigenen
+	 * Beitragstypen tragen ihr eigenes `rewrite['slug']` (guides, datenbank,
+	 * patch-notes) und sind davon unberührt. Ohne Präfix lägen Beiträge auf
+	 * der obersten Ebene und könnten mit Seiten kollidieren: Ein Beitrag mit
+	 * dem Slug „community" würde die Seite gleichen Namens verdrängen.
+	 *
+	 * Nebeneffekt, der uns entgegenkommt: Mit einem festen Präfix baut
+	 * WordPress die Rewrite-Regeln nicht mehr „verbose" – Seiten werden
+	 * zuerst aufgelöst, und die Mehrdeutigkeit entfällt ganz.
+	 */
+	if ( WARLEEK_PERMALINKS !== get_option( 'permalink_structure' ) ) {
+		update_option( 'permalink_structure', WARLEEK_PERMALINKS );
 	}
 	update_option( 'timezone_string', get_option( 'timezone_string' ) ?: 'Europe/Berlin' );
 	flush_rewrite_rules( false );
@@ -1550,7 +1681,7 @@ function warleek_install_status() {
 		array( 'label' => 'Patch Notes', 'ok' => (int) $notes->publish > 0, 'detail' => (int) $notes->publish . ' importiert' . ( $sync ? ', zuletzt ' . wp_date( 'd.m.Y H:i', $sync ) : '' ) ),
 		array( 'label' => 'Übersetzung', 'ok' => function_exists( 'warleek_translate_enabled' ) && warleek_translate_enabled(), 'detail' => warleek_translated_count() ),
 		array( 'label' => 'Startseite & Logo', 'ok' => $front && $logo, 'detail' => $front ? ( $logo ? 'gesetzt' : 'Logo fehlt' ) : 'Startseite fehlt' ),
-		array( 'label' => 'Permalinks', 'ok' => '/%postname%/' === get_option( 'permalink_structure' ), 'detail' => get_option( 'permalink_structure' ) ?: 'Standard (Zahlen)' ),
+		array( 'label' => 'Permalinks', 'ok' => WARLEEK_PERMALINKS === get_option( 'permalink_structure' ), 'detail' => get_option( 'permalink_structure' ) ?: 'Standard (Zahlen)' ),
 		array( 'label' => 'Chat-Links', 'ok' => count( $links ) > 0, 'detail' => count( $links ) . ' von 3 gesetzt' ),
 	);
 }

@@ -47,6 +47,10 @@
             "url": "/patch-notes/"
         },
         {
+            "label": "Blog",
+            "url": "/blog/"
+        },
+        {
             "label": "Community",
             "url": "/community/"
         },
@@ -78,6 +82,10 @@
         {
             "label": "Patch Notes",
             "url": "/patch-notes/"
+        },
+        {
+            "label": "Blog",
+            "url": "/blog/"
         },
         {
             "label": "Community",

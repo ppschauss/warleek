@@ -1,0 +1,32 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"div"} /-->
+<!-- wp:group {"tagName":"main","className":"wl-main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group wl-main">
+	<!-- wp:group {"className":"wl-archive-head","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group wl-archive-head">
+		<!-- wp:paragraph {"className":"wl-eyebrow"} --><p class="wl-eyebrow">Blog</p><!-- /wp:paragraph -->
+		<!-- wp:heading {"level":1} --><h1 class="wp-block-heading">Wardogs auf Deutsch: Einordnung, Rechnungen, Beobachtungen</h1><!-- /wp:heading -->
+		<!-- wp:paragraph {"className":"wl-lead"} --><p class="wl-lead">Die <a href="/guides/">Guides</a> beantworten Fragen dauerhaft, die <a href="/datenbank/">Datenbank</a> hält die Zahlen. Hier steht, was dazwischen passiert: was ein Patch wirklich verändert, ob sich eine Anschaffung rechnet und worüber die Community gerade streitet.</p><!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+	<!-- wp:query {"queryId":20,"query":{"inherit":true,"perPage":10},"align":"wide"} -->
+	<div class="wp-block-query alignwide">
+		<!-- wp:post-template {"className":"wl-archive-list","layout":{"type":"default"}} -->
+			<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"3/2"} /-->
+			<!-- wp:post-terms {"term":"category"} /-->
+			<!-- wp:post-date {"format":"d.m.Y"} /-->
+			<!-- wp:post-title {"isLink":true,"level":2} /-->
+			<!-- wp:post-excerpt {"moreText":"Weiterlesen →","excerptLength":28} /-->
+		<!-- /wp:post-template -->
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph --><p>Hier erscheint in Kürze der erste Beitrag.</p><!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"div"} /-->

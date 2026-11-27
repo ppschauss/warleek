@@ -4,7 +4,7 @@ Tags: guides, gaming, steam, patch notes
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.41.0
+Stable tag: 2.42.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,16 @@ Bestehende Patch Notes bleiben unverändert, im Backend erscheint ein Hinweis, u
 Nein. Ohne SEO-Plugin liefert Warleek Core Titles, Descriptions, Open Graph und Dublin Core selbst.
 
 == Changelog ==
+
+= 2.42.0 =
+* **Der Blog ist da, mit zwölf Beiträgen bis zum 12. Januar.** Gewöhnliche WordPress-Beiträge unter `/blog/`, kein vierter Beitragstyp – datierte Texte in Kategorien sind genau das, wofür `post` gedacht ist. Der erste Beitrag erscheint sofort, die übrigen elf sind auf Dienstag und Freitag terminiert und veröffentlichen sich selbst.
+* Fünf Kategorien: Einordnung, Rechnung, Community, Taktik und Hinter den Kulissen. Die Themen kommen aus Steam-Rezensionen, aus den Patch Notes und aus unserer eigenen Prüfliste – darunter „Zehn Zahlen, die niemand nachprüft“ und „Warum wir die Patch Notes nicht mehr vollständig übersetzen“.
+* **Was den Blog von den Guides unterscheidet:** Ein Guide beantwortet eine Frage dauerhaft und wird gepflegt. Ein Beitrag ist ein Standpunkt zu einem Zeitpunkt – er bleibt stehen, wie er war.
+* Beiträge liegen unter `/blog/<slug>/`. Ohne dieses Präfix lägen sie auf der obersten Ebene und könnten Seiten verdrängen; die eigenen Beitragstypen sind davon unberührt, sie tragen ihr eigenes Rewrite.
+* `bin/guides-build.php --blog` baut sie aus `content-src/blog/*.md` – dieselbe Maschinerie wie bei den Guides, mit denselben Prüfungen.
+* **Neu für alle Texte:** Der Build prüft jetzt Querverweise auf die Datenbank und jeden Werte-Platzhalter. Ein `/datenbank/<slug>/` mit Tippfehler wird sonst zum 404, ein `{preis:…}` auf einen Eintrag, den es nicht gibt, bleibt wörtlich auf der Seite stehen.
+* Dritte Quelle abgeglichen (wardogshub.uk): Die Kaufpreise sind damit unabhängig bestätigt. Bei den Freischaltungen bleiben von 22 strittigen Werten zehn – zwölf Abweichungen erklären sich aus Season-2- und Season-3-Verschiebungen, die wir selbst belegt haben.
+* Theme auf 2.41.0 – neue Templates `home.html` und `single-post.html`.
 
 = 2.41.0 =
 * **33 Vergleichsseiten, eine je Gruppe.** Neue Taxonomie `item-gruppe` mit eigener Seite unter `/datenbank-gruppe/<slug>/`: oben die Tabelle aller Einträge der Gruppe, darunter 223 bis 330 Wörter geschriebener Vergleich mit Empfehlung. „Wardogs Pistolen im Vergleich“ ist damit eine Seite statt fünf dünner.

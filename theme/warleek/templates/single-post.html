@@ -1,0 +1,34 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"div"} /-->
+<!-- wp:group {"tagName":"main","className":"wl-main wl-article","layout":{"type":"constrained"}} -->
+<main class="wp-block-group wl-main wl-article">
+	<!-- wp:group {"className":"wl-article__meta","layout":{"type":"flex"}} -->
+	<div class="wp-block-group wl-article__meta">
+		<!-- wp:paragraph {"className":"wl-eyebrow"} --><p class="wl-eyebrow">Blog</p><!-- /wp:paragraph -->
+		<!-- wp:post-terms {"term":"category","className":"wl-tag"} /-->
+		<!-- wp:post-date {"format":"d.m.Y","className":"wl-tag wl-tag--sand"} /-->
+		<!-- wp:shortcode -->[warleek_lesezeit]<!-- /wp:shortcode -->
+	</div>
+	<!-- /wp:group -->
+	<!-- wp:post-title {"level":1} /-->
+	<!-- wp:post-excerpt {"className":"wl-lead","moreText":""} /-->
+	<!-- wp:shortcode -->[warleek_autor]<!-- /wp:shortcode -->
+	<!-- wp:post-featured-image {"align":"wide","aspectRatio":"16/9"} /-->
+	<!-- wp:post-content {"className":"wl-prose","layout":{"type":"constrained"}} /-->
+	<!-- wp:group {"className":"wl-section wl-section--tight","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group wl-section wl-section--tight">
+		<!-- wp:heading --><h2 class="wp-block-heading">Weitere Beiträge</h2><!-- /wp:heading -->
+		<!-- wp:query {"queryId":21,"query":{"postType":"post","perPage":4,"offset":0,"exclude":[],"order":"desc","orderBy":"date"},"align":"wide"} -->
+		<div class="wp-block-query alignwide">
+			<!-- wp:post-template {"className":"wl-archive-list","layout":{"type":"default"}} -->
+				<!-- wp:post-date {"format":"d.m.Y"} /-->
+				<!-- wp:post-title {"isLink":true,"level":3} /-->
+				<!-- wp:post-excerpt {"excerptLength":22} /-->
+			<!-- /wp:post-template -->
+		</div>
+		<!-- /wp:query -->
+		<!-- wp:paragraph --><p><a class="wl-more" href="/blog/">Alle Beiträge →</a></p><!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"div"} /-->

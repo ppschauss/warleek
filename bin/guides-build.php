@@ -10,7 +10,13 @@
  * Bilder: Steht im Kopfblock `image:` und liegt `content/img/<image>.webp`, wird
  * daraus ein Eintrag in `content/MANIFEST.json` mit dem Alt-Text aus `image_alt:`.
  *
- * Aufruf:  php bin/guides-build.php [--dry-run]
+ * Mit `--blog` liest dasselbe Skript `content-src/blog/*.md` und schreibt nach
+ * `content/_content/blog.json`. Die Prüfungen sind dieselben – SEO-Längen,
+ * Direktantwort, FAQ, Bilder –, denn ein Blogbeitrag ist kein schlechterer Text
+ * als ein Guide. Nur die Pflichtfelder unterscheiden sich: ein Guide gehört zu
+ * einem Thema und hat eine Ordnung, ein Beitrag hat ein Datum.
+ *
+ * Aufruf:  php bin/guides-build.php [--blog] [--dry-run]
  * Danach:  ./manage.sh seed   (spielt die Inhalte in die Dev-Instanz)
  */
 
@@ -19,18 +25,29 @@ require $root . '/plugin/warleek-core/inc/markdown.php';
 require $root . '/plugin/warleek-core/inc/aeo.php';
 
 $dry      = in_array( '--dry-run', $argv, true );
-$src      = $root . '/content-src/guides';
-$json     = $root . '/plugin/warleek-core/content/_content/guides.json';
+$blog     = in_array( '--blog', $argv, true );
+$art      = $blog ? 'blog' : 'guides';
+$src      = $root . '/content-src/' . $art;
+$json     = $root . '/plugin/warleek-core/content/_content/' . $art . '.json';
 $manifest = $root . '/plugin/warleek-core/content/MANIFEST.json';
 $imgdir   = $root . '/plugin/warleek-core/content/img';
 
-$existing = json_decode( (string) file_get_contents( $json ), true );
-if ( ! is_array( $existing ) ) { fwrite( STDERR, "guides.json nicht lesbar\n" ); exit( 1 ); }
+$existing = file_exists( $json ) ? json_decode( (string) file_get_contents( $json ), true ) : array();
+if ( ! is_array( $existing ) ) { fwrite( STDERR, basename( $json ) . " nicht lesbar\n" ); exit( 1 ); }
 $mani = json_decode( (string) file_get_contents( $manifest ), true );
 if ( ! is_array( $mani ) ) { fwrite( STDERR, "MANIFEST.json nicht lesbar\n" ); exit( 1 ); }
 
 $by_slug = array();
 foreach ( $existing as $g ) { $by_slug[ $g['slug'] ] = $g; }
+
+// Slugs und Felder der Datenbank, um Querverweise und Platzhalter zu prüfen.
+$items_slugs = array();
+$items_datei = $root . '/plugin/warleek-core/content/_content/items.json';
+if ( file_exists( $items_datei ) ) {
+	foreach ( (array) json_decode( (string) file_get_contents( $items_datei ), true ) as $e ) {
+		if ( ! empty( $e['slug'] ) ) { $items_slugs[ $e['slug'] ] = (array) ( $e['felder'] ?? array() ); }
+	}
+}
 
 $files = glob( $src . '/*.md' );
 sort( $files );
@@ -45,7 +62,7 @@ foreach ( $files as $file ) {
 	$guide = array(
 		'slug'    => $slug,
 		'title'   => (string) ( $meta['title'] ?? '' ),
-		'thema'   => (string) ( $meta['thema'] ?? 'einsteiger' ),
+		'thema'   => (string) ( $meta['thema'] ?? ( $blog ? 'blog' : 'einsteiger' ) ),
 		'image'   => (string) ( $meta['image'] ?? '' ),
 		// Optionales Veröffentlichungsdatum (Y-m-d oder Y-m-d H:i). Liegt es in der
 		// Zukunft, legt der Installer den Guide terminiert an statt sofort sichtbar.
@@ -118,6 +135,33 @@ foreach ( $files as $file ) {
 		}
 	}
 
+	// Querverweise und Werte-Platzhalter prüfen. Beides zeigt gern ins Leere:
+	// ein Slug mit Tippfehler wird zum 404, ein `{preis:…}` auf einen Eintrag,
+	// den es nicht gibt, bleibt wörtlich auf der Seite stehen.
+	if ( $items_slugs ) {
+		if ( preg_match_all( '#href="/datenbank/([a-z0-9-]+)/"#', $guide['html'], $db, PREG_SET_ORDER ) ) {
+			foreach ( $db as $hit ) {
+				if ( ! isset( $items_slugs[ $hit[1] ] ) ) {
+					fwrite( STDERR, "! $slug: /datenbank/{$hit[1]}/ gibt es nicht\n" ); $warn++;
+				}
+			}
+		}
+		if ( preg_match_all( '#\{(preis|freischaltung|freischaltkosten|kaliber|sitze|tempo|baukosten|rolle|hinweis|titel|aufpreis):([a-z0-9-]+)\}#', $guide['html'], $ph, PREG_SET_ORDER ) ) {
+			foreach ( $ph as $hit ) {
+				if ( ! isset( $items_slugs[ $hit[2] ] ) ) {
+					fwrite( STDERR, "! $slug: Platzhalter {$hit[0]} – diesen Eintrag gibt es nicht\n" ); $warn++;
+				} elseif ( ! in_array( $hit[1], array( 'titel', 'aufpreis' ), true )
+					&& '' === trim( (string) ( $items_slugs[ $hit[2] ][ $hit[1] ] ?? '' ) ) ) {
+					fwrite( STDERR, "! $slug: Platzhalter {$hit[0]} – Feld ist leer\n" ); $warn++;
+				}
+			}
+		}
+		// Ein nackter `{preis}` hat außerhalb eines Datenbank-Eintrags keinen Bezug.
+		if ( preg_match( '#\{(preis|freischaltung|freischaltkosten|baukosten)\}#', $guide['html'], $nackt ) ) {
+			fwrite( STDERR, "! $slug: {$nackt[0]} ohne Slug – hier gibt es keinen eigenen Eintrag\n" ); $warn++;
+		}
+	}
+
 	// Bilder aus dem Fließtext: `![Alt](schluessel)` – Datei muss in content-src/guides/img/ liegen.
 	if ( preg_match_all( '#<img src="([^"/:.]+)" alt="([^"]*)">#', $guide['html'], $inline, PREG_SET_ORDER ) ) {
 		foreach ( $inline as $hit ) {
@@ -151,20 +195,29 @@ foreach ( $files as $file ) {
 
 	if ( isset( $by_slug[ $slug ] ) ) { $upd++; } else { $neu++; }
 	$by_slug[ $slug ] = $guide;
-	printf( "%-34s %-11s order %-3d %s\n", $slug, $guide['thema'], $guide['order'], basename( $file ) );
+	if ( $blog ) {
+		$termin = $guide['datum'] ?: 'sofort';
+		printf( "%-34s %-11s %-16s %s\n", $slug, $guide['thema'], $termin, basename( $file ) );
+	} else {
+		printf( "%-34s %-11s order %-3d %s\n", $slug, $guide['thema'], $guide['order'], basename( $file ) );
+	}
 }
 
 $out = array_values( $by_slug );
-usort( $out, function ( $a, $b ) {
+usort( $out, function ( $a, $b ) use ( $blog ) {
+	// Beiträge nach Termin, Guides nach Ordnung – beides so, wie sie
+	// hinterher auch erscheinen.
+	if ( $blog ) { return strcmp( (string) $a['datum'], (string) $b['datum'] ) ?: strcmp( $a['slug'], $b['slug'] ); }
 	return ( (int) $a['order'] <=> (int) $b['order'] ) ?: strcmp( $a['slug'], $b['slug'] );
 } );
 
-echo "\n$neu neu, $upd aktualisiert, " . count( $out ) . " Guides gesamt, $warn Warnung(en).\n";
+printf( "\n%d neu, %d aktualisiert, %d %s gesamt, %d Warnung(en).\n",
+	$neu, $upd, count( $out ), $blog ? 'Beiträge' : 'Guides', $warn );
 
 if ( $dry ) { echo "Trockenlauf – nichts geschrieben.\n"; exit( $warn ? 1 : 0 ); }
 
 $flags = JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE;
 file_put_contents( $json, json_encode( $out, $flags ) . "\n" );
 file_put_contents( $manifest, json_encode( $mani, $flags ) . "\n" );
-echo "geschrieben: content/_content/guides.json, content/MANIFEST.json\n";
+echo "geschrieben: content/_content/" . $art . ".json, content/MANIFEST.json\n";
 exit( $warn ? 1 : 0 );
