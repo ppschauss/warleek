@@ -685,7 +685,24 @@ function warleek_item_aeo( array $e ) {
 	if ( '' !== $rolle && ! in_array( mb_strtolower( $rolle ), array( 'bauwerk', 'fahrzeug', 'waffe', 'ausrüstung', 'emplacement', 'wurfwaffe' ), true ) ) {
 		$paare[] = array( sprintf( 'Welche Rolle hat %s in Wardogs?', $name ), rtrim( $rolle, '.' ) . '.' );
 	}
-	$paare = array_slice( $paare, 0, 3 );
+	/*
+	 * Eigene Fragen aus `items.json` hängen hinten an.
+	 *
+	 * Die drei oben entstehen aus den Feldern und treffen die häufigsten
+	 * Suchen („Was kostet die MP5 in Wardogs?“). Was sie nicht können, ist
+	 * abwägen: ob sich der Aufpreis gegenüber dem Nachbarn lohnt, wann man das
+	 * Ding stehen lässt, warum Season 3 die Stufe verschoben hat. Solche
+	 * Fragen stehen als `fragen: [{frage, antwort}]` am Eintrag.
+	 *
+	 * Reihenfolge mit Absicht: erst die Werte, dann die Einordnung. Wer nach
+	 * dem Preis sucht, soll ihn nicht unter einer Abwägung finden.
+	 */
+	foreach ( (array) ( $e['fragen'] ?? array() ) as $eigen ) {
+		$frage   = trim( (string) ( $eigen['frage'] ?? '' ) );
+		$antwort = trim( (string) ( $eigen['antwort'] ?? '' ) );
+		if ( '' !== $frage && '' !== $antwort ) { $paare[] = array( $frage, $antwort ); }
+	}
+	$paare = array_slice( $paare, 0, 6 );
 
 	$faq = '';
 	if ( $paare ) {

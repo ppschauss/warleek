@@ -671,16 +671,45 @@ add_filter( 'language_attributes', function ( $attr ) { return str_contains( $at
  * Index gestellt: `noindex, follow`, und raus aus der Sitemap. Die Links auf
  * ihnen zählen weiter, die Hub-Seite `/datenbank/` bleibt drin.
  *
- * **Das ist die halbe Miete, nicht die ganze.** Ein `noindex` räumt den Index
- * auf; ein Prüfer, der auf „Alle Einträge" klickt, sieht trotzdem 198 dünne
- * Seiten. Die eigentliche Lösung sind Vergleichsseiten je Kategorie, die die
- * Einzelseiten ersetzen. Bis dahin ist das hier die Zwischenstufe.
+ * **Seit 2.40.0 entscheidet die Länge, nicht der Beitragstyp.** Die Einträge
+ * werden Gruppe für Gruppe ausgebaut; wer `WARLEEK_ITEM_DICHT_AB` Wörter
+ * trägt, ist kein dünner Eintrag mehr und kommt von selbst zurück in den
+ * Index. Niemand muss eine Liste nachpflegen, und niemand vergisst einen.
+ *
+ * **Das ersetzt die Vergleichsseiten nicht.** Ein `noindex` räumt den Index
+ * auf; ein Prüfer, der auf „Alle Einträge" klickt, sieht trotzdem jede Seite.
+ * Die Gruppen aus `bin/gruppen-setzen.py` sind die Achse dafür.
  *
  * Über den Filter `warleek_noindex_objekt` lässt sich die Regel abschalten
  * oder erweitern, ohne diese Datei anzufassen.
  */
+/**
+ * Ab wie vielen Wörtern ein Datenbank-Eintrag als eigenständiger Inhalt gilt.
+ *
+ * Gezählt wird der gespeicherte Beitrag ohne Auszeichnung, also einschließlich
+ * Datenblatt und FAQ. Ein Eintrag mit drei Sätzen Beschreibung landet darunter,
+ * einer mit geschriebener Einordnung und eigenen Fragen darüber.
+ */
+const WARLEEK_ITEM_DICHT_AB = 220;
+
+/**
+ * Trägt dieser Eintrag genug eigenen Text, um indexiert zu werden?
+ *
+ * **Warum an der Länge und nicht an einer Liste.** Die Einträge werden
+ * nacheinander ausgebaut – Gruppe für Gruppe, über Wochen. Eine gepflegte
+ * Liste „diese sind fertig“ wäre nach dem zweiten Durchgang falsch. Die Länge
+ * des gespeicherten Beitrags weiß es von selbst: Wer geschrieben wurde, kommt
+ * zurück in den Index, ohne dass jemand eine Datei nachzieht.
+ */
+function warleek_item_dicht( $post_id = 0 ) {
+	$inhalt = (string) get_post_field( 'post_content', $post_id ?: get_queried_object_id() );
+	if ( '' === $inhalt ) { return false; }
+	$text = trim( preg_replace( '/\s+/u', ' ', wp_strip_all_tags( strip_shortcodes( $inhalt ) ) ) );
+	return '' !== $text && count( explode( ' ', $text ) ) >= WARLEEK_ITEM_DICHT_AB;
+}
+
 function warleek_duenne_seite() {
-	$duenn = is_singular( 'item' ) || is_tax( 'guide-thema' );
+	$duenn = ( is_singular( 'item' ) && ! warleek_item_dicht() ) || is_tax( 'guide-thema' );
 	return (bool) apply_filters( 'warleek_noindex_objekt', $duenn );
 }
 
